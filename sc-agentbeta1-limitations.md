@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics agent, agent, release, agent help and support, agent limitation
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} Agent limitation
 {: #agent-limitation}
 
-Currently the {{site.data.keyword.bpshort}} Agent usage has no cost involved, it will have a cost eventually in the General Availability (GA) timeframe. You will be updated in the documentation with the usage and the charges.
+Currently the {{site.data.keyword.bpshort}} Agent usage has no cost involved, it has a cost eventually in the General Availability (GA) timeframe. You can see the updation in the documentation with the usage and the charges.
 
 Join our GA program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to the Slack, [request an invitation to the Slack](https://cloud.ibm.com/schematics/slack){: external}.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-12"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -76,7 +76,7 @@ Rerun the create operation with the correct file name.
 When you create the configuration, the create fails before the config is created with an error that the requested resource group ID is invalid or needed permissions.  
 {: tsSymptoms}
 
-On creation, blueprints are assigned to the {{site.data.keyword.bpshort}} management resource group passed on the create. If the group is invalid or the user does not have the correct {{site.data.keyword.bpshort}} IAM permissions for the group the create operation will fail.
+On creation, blueprints are assigned to the {{site.data.keyword.bpshort}} management resource group passed on the create. If the group is invalid or the user does not have the correct {{site.data.keyword.bpshort}} IAM permissions for the group the create operation fails.
 {: tsCauses}
 
 Sample error

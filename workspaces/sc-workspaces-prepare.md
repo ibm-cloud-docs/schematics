@@ -40,7 +40,7 @@ Workspaces use Terraform templates from private or public Git repositories such 
 ### How many workspaces does my application environment need?
 {: #plan-number-of-workspaces}
 
-The number of workspaces you need in {{site.data.keyword.bplong_notm}} will be determined by the structure of your application and the environments that you need to develop, test, and publish your application or micro-service.
+The number of workspaces you need in {{site.data.keyword.bplong_notm}} are determined by the structure of your application and the environments that you need to develop, test, and publish your application or micro-service.
 {: shortdesc}
 
 As a rule of thumb, consider separate workspaces for each microservice and the environments that you use. For example, if you have a product app that consists of a search, payment, and review microservice components, consider creating separate workspaces for each microservice component and their development, staging, and production environments. With separate workspaces for each component and environment, you can develop, deploy, and update your Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting other components.

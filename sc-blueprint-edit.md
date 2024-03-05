@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints template, blueprints yaml, editing, edit, vscode, yaml 
 
@@ -76,12 +76,12 @@ Clone your new template repository to your local machine for editing:
 - Open the local folder containing the template repo contents as a new `VSCode` workspace
 - Optionally rename the template and input files for your blueprint. 
 - Select the blueprint template YAML file for editing
-   - The YAML language extension will provide YAML syntax and blueprint schema validation 
+   - The YAML language extension provides YAML syntax and blueprint schema validation 
 - Just above the top of the file contents, the selected blueprint schema is displayed. 
 - Select the blueprint input YAML file for editing
-   - The YAML language extension will provide YAML syntax validation 
+   - The YAML language extension provides YAML syntax validation 
 
-With the extension and schema configured, `VSCode` will provide assisted editing for blueprint templates.
+With the extension and schema configured, `VSCode` provides assisted editing for blueprint templates.
 
 ### Blueprint usage and configuration documentation
 {: #bp-usage-config-doc}

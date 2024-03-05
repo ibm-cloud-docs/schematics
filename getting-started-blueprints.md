@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -60,7 +60,7 @@ Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/o
 
         - Click **Done editing**, if the editing is done.
         - Click **Save draft** only if you need to save the draft to continue edit the input variables again later.
-4. Click **Create Blueprint** that will redirect to the blueprint overview page. 
+4. Click **Create Blueprint** that redirects to the blueprint overview page. 
 
 ### Applying the blueprint configuration to create cloud resources
 {: #get-started-blueprints-apply-ui}
@@ -76,7 +76,7 @@ You can follow these steps to generate a plan and apply a blueprint using the {{
     Generate plan execution can take few a minutes to execute. Once generated check if the plan is correct. You can see the **Resource summary**, and **Jobs history** that displays the `blueprint_create_init` and the respective module job details. If **Generate plan** fails, review the job logs to identify the cause of the failure. As required to resolve the failure, modify the template and update the blueprint configuration with the revised template and any input values. Then re-run Generate Plan.
     {: note}
 
-5. Click **Apply plan** to provision the resources configured in your modules. The blueprint will show an `In progress` status.
+5. Click **Apply plan** to provision the resources configured in your modules. The blueprint shows an `In progress` status.
     
     The apply plan execution takes a few minutes based on the resources. The execution jobs show the history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, review the module job logs for information relating to the Terraform execution errors. As required to resolve the failure, modify the template and update the blueprint configuration with the revised template and any input values. Then re-run Generate Plan.
     {: note}
@@ -91,7 +91,7 @@ You can follow these steps to generate a plan and apply a blueprint using the {{
     - Optional: From **Variables summary** card, Click **View details** to navigate to the variable summary page.
 3. Click **Modules** tab to see the list of blueprint modules and their current status. 
     - Optional: Click **Show details** to view more details about the blueprint module definition. 
-    - Optional: Click **Name** that will take you to the modules related {{site.data.keyword.bpshort}} `Workspace` page. 
+    - Optional: Click **Name** that takes you to the modules related {{site.data.keyword.bpshort}} `Workspace` page. 
 4. Click **Resources** tab to view the list of resources provisioned by the blueprint.
 5. Click **Variables** tab to view the blueprint **Inputs** and **Outputs** variables and values. Optional: on this page you can edit the input variable values and save. 
 6. Click **Jobs history** tab view the job logs of the blueprint and module jobs.
@@ -140,7 +140,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 #### Syntax
 {: #get-started-blueprints-syntax}
 
-The name of default resource group for the account is required for the blueprint creation. The blueprint config will be created in this resource group. 
+The name of default resource group for the account is required for the blueprint creation. The blueprint config creates in this resource group. 
 
 ```sh
 ibmcloud resource groups --default
@@ -195,7 +195,7 @@ Record the ID of the blueprint to use in the later commands.
 {: #get-started-blueprints-install}
 {: step}
 
-Use the [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply) command to perform Terraform apply operations by using the Terraform configurations specified in the blueprint template. This operation will create cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
+Use the [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply) command to perform Terraform apply operations by using the Terraform configurations specified in the blueprint template. This operation creates cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
 
 ```sh
 ibmcloud schematics blueprint apply -id <blueprint_ID>

@@ -15,7 +15,7 @@ subcollection: schematics
 # Adoption considerations
 {: #schematics-limitations}
 
-Review the following considerations when adopting {{site.data.keyword.bplong_notm}}. Additionally review the section on [workspace setup](/docs/schematics?topic=schematics-create-tf-config&interface=ui#configure-provider) for details of how to work with your Terraform configs stored in Git repositories.
+Review the following considerations when adopting {{site.data.keyword.bplong_notm}}. Additionally review the section on [workspace setup](/docs/schematics?topic=schematics-create-tf-config&interface=ui#configure-provider) for details of how to work with your Terraform configurations stored in Git repositories.
 {: shortdesc}
 
 ## Differences to native Terraform
@@ -51,14 +51,14 @@ With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars
 
 You can access workspace state information from other workspaces by using the {{site.data.keyword.bpshort}} `ibm_schematics_output` data source. This replaces the `remote_state` data source used by native Terraform in conjunction with remote backend support. It works in the same way allowing access to Terraform workspaces.
 
-With the [ibm_schematics_output](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_output){: external} data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly. See also the [ibm_schematics_state](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_state){: external} data source.
+With the [`ibm_schematics_output`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_output){: external} data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly. See also the [`ibm_schematics_state`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_state){: external} data source.
 
 For more information about how to use these data sources, see [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state).
 
 ### Why do local-exec and remote-exec provisioner terminate after 30 minutes?
 {: #local-remote-exec}
 
-The Terraform `local exec` and `remote exec` operations have a time limit of `30 minutes`. This is to ensure fair usage of the {{site.data.keyword.bpshort}} service for all users. If exceeded, the commands will be terminated and job execution fail.
+The Terraform `local exec` and `remote exec` operations have a time limit of `30 minutes`. This is to ensure fair usage of the {{site.data.keyword.bpshort}} service for all users. If exceeded, the commands terminated and job execution fail.
 
 ## What is the use of refresh token header?
 {: #refresh-token}
@@ -76,4 +76,4 @@ Branch names containing `/` (backslash) are not supported
 ## Cost estimate
 {: #cost-restrictions}
 
-Cost estimation is available for templates. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes. In the future, aggregate costs across projects that can be grouped by various criteria will be available. For more information, see [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation).
+Cost estimation is available for templates. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes. In the future, aggregate costs across projects that can be grouped by various criteria are available. For more information, see [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation).

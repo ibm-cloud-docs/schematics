@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-03-05"
 
 keywords: schematics, automation, terraform
 
@@ -61,7 +61,7 @@ Service roles can be assigned per-instance or for all instances in an account.
 
 * **Reader**: You can perform read-only actions within a service such as viewing service-specific resources. For example, read the action definition, KMS settings, workspace details, agent configuration settings, and so on.
 * **Writer**: You can perform create, edit, and read service specific resources operation. For example, create and update workspace, action, agent, and so on.
-* **Manager**: In addition to writer access, you have complete privilege as defined by the service. A _Manager_, for example, has all of the permissions that a _Reader_ has and more.
+* **Manager**: In addition to writer access, you have complete privilege as defined by the service. A _Manager_, for example, has all the permissions that a _Reader_ has and more.
 
 ## Roles and permissions about {{site.data.keyword.bpshort}} offerings 
 {: #iam-roles-permission-schematics}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -66,7 +66,7 @@ Blueprint templates can be edited in any editor or IDE. Follow the instructions 
 
 The default size of values that can be passed to Blueprints as inputs is set to 1KB. If the expected size is greater than 1KB, the  [`max_length` inputs meta-data](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len) can be defined to set the length that Blueprints should accept.  
 
- A value larger than 1KB or the specified length will result in the error `Length for variable <variable name> greater than the given length`   
+ A value larger than 1KB or the specified length results in the error `Length for variable <variable name> greater than the given length`   
 
 
 ## Why do blueprint operations require a `blueprint ID`?
@@ -167,7 +167,7 @@ The version of Terraform used for an environment is user determined by the bluep
 
 The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.  
 
-During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
+During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation are failed. 
 
 ## Is it possible to specify the CLI parameters as a file?
 {: #faqs-bp-cli-file}
@@ -204,7 +204,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 {: faq}
 {: support}
 
-The CLI uses geographic specific API endpoints which direct job requests to the first available region within a geography. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
+The CLI uses geographic specific API endpoints which direct job requests to the first available region within a geography. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config targeted to `us-south` during creation, are automatically run on `us-east` if `us-south` is not available. 
 
 This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} workspace creation page, you select `North America` region from the list.
 

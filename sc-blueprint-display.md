@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-26"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -41,7 +41,7 @@ You can follow these steps to list the blueprints in your account using {{site.d
 {: #listing-bp-cli}
 {: cli}
 
-To list the blueprints available in your account with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
+To list the blueprints available in your account with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and lists blueprints in the selected CLI region. 
 {: shortdesc}
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).

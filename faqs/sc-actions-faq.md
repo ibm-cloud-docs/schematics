@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -41,7 +41,7 @@ Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts 
 {: faq}
 {: support}
 
-Defining target hosts using short form host names is not supported for VSIs on a private network without public IP addresses. The connection will fail with the message `Could not resolve hostname`. Review the [actions docs](/docs/schematics?topic=schematics-inventories-setup#static-host-defs) for supported configurations. 
+Defining target hosts using short form host names is not supported for VSIs on a private network without public IP addresses. The connection fails with the message `Could not resolve hostname`. Review the [actions docs](/docs/schematics?topic=schematics-inventories-setup#static-host-defs) for supported configurations. 
 
  ```text
 ansible-playbook run | fatal: [worker-0]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host through ssh: ssh: Could not resolve hostname toraz3-worker-0001: Name or service not known", "unreachable": true}

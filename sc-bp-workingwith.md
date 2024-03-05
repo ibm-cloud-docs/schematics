@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -28,7 +28,7 @@ Blueprints enables users to define and deploy cloud environments using modules o
 ## Cloud infrastructure lifecycle 
 {: #cloud-infra-lifecycle}
 
-{{site.data.keyword.bpshort}} Blueprints follows an lifecycle operations model. Cloud environments, hosted applications or services all follow a lifecycle from creation to end-of-life. The life of a blueprint environment starts with the initial definition of an infrastructure architecture and configuration. Then, onto deployment of the environment and resources. It will be updated and maintained through its operational life. Which might be hours to years. Finally, to end-of-life when it is torn down, the cloud resources are destroyed, billing gets terminated and the configuration is removed. 
+{{site.data.keyword.bpshort}} Blueprints follows an lifecycle operations model. Cloud environments, hosted applications or services all follow a lifecycle from creation to end-of-life. The life of a blueprint environment starts with the initial definition of an infrastructure architecture and configuration. Then, onto deployment of the environment and resources. It are updated and maintained through its operational life. Which might be hours to years. Finally, to end-of-life when it is torn down, the cloud resources are destroyed, billing gets terminated and the configuration is removed. 
 {: shortdesc}
 
 The different stages of working with the blueprint lifecycle come under four headings, `define`, `deploy`, `maintain`, and `delete`. In software lifecycle terms these correspond to Day-0 define, Day-1 deploy, Day-2 operate, through to deletion of the environment. 
@@ -60,12 +60,12 @@ Explore the following sections to get into the details of working with blueprint
 ### Maintaining blueprints
 {: #bp-maintain}
 
-[Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints): During the operational life of a deployed environment, the templates, and inputs may be versioned and updated many times to satisfy changing application requirements. Changes will be applied to the environment to maintain platform currency and compliance as security policies evolve. Scheduled operations are run for compliance checks and drift detection. 
+[Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints): During the operational life of a deployed environment, the templates, and inputs may be versioned and updated many times to satisfy changing application requirements. Changes are applied to the environment to maintain platform currency and compliance as security policies evolve. Scheduled operations are run for compliance checks and drift detection. 
 
 ### Deleting blueprints
 {: #bp-delete}
 
-[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint): Finally the application or service that is hosted in the environment gets retired or rehost into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint): Finally the application or service that is hosted in the environment gets retired or host into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
   
 ## Next steps
 {: #working-bp-nextsteps}

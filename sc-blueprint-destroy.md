@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Destroy a blueprint environment 
 {: #destroy-blueprint}
 
-When a blueprint environment is no longer required, it can be deleted which will terminate billing for all deployed resources. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and second deletes the blueprint config in {{site.data.keyword.bpshort}}. See [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint) to understand the process of deleting blueprint environments. 
+When a blueprint environment is no longer required, it can be deleted which terminates billing for all deployed resources. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and second deletes the blueprint config in {{site.data.keyword.bpshort}}. See [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint) to understand the process of deleting blueprint environments. 
 {: shortdesc}
 
 The cloud resources that are created by a blueprint are destroyed by using the `blueprint destroy` command. The saved blueprint config can then be removed from {{site.data.keyword.bpshort}}. The delete can be performed after all resources are destroyed by using the [blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 

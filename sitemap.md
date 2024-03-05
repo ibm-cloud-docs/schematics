@@ -89,7 +89,7 @@ subcollection: schematics
 
     * [`Idempotence`](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
 
-    * [Immutablity](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
+    * [Immutable](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
 
 * [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
 
@@ -1546,7 +1546,7 @@ subcollection: schematics
 
 * [When does the job enter into the pending queue?](/docs/schematics?topic=schematics-job-queue-process#pending-job-queue)
 
-* [Job timesouts](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
+* [Job time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
 
 
 ## Deleting {{site.data.keyword.bpshort}} data
@@ -2169,7 +2169,7 @@ subcollection: schematics
 
 * [Files removed or missing from Terraform, or Ansible template repos](/docs/schematics?topic=schematics-general-faq#clone-file-extension)
 
-* [Is the use of symlinks supported in Git repos?](/docs/schematics?topic=schematics-general-faq#symlinks-ws)
+* [Is the use of `symlinks` supported in Git repos?](/docs/schematics?topic=schematics-general-faq#symlinks-ws)
 
 * [Is the use of Git sub-modules supported in Git repos or TGZ files?](/docs/schematics?topic=schematics-general-faq#git-submodules-ws)
 
@@ -2179,7 +2179,7 @@ subcollection: schematics
 
 * [How do I generate IAM access token, if client ID `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
-* [How do I rectify 'Failed to clone Git repository, might not find remote ref `refs/heads/master` (most likely invalid branch name is passed)'?](/docs/schematics?topic=schematics-general-faq#template-errors)
+* [How to rectify `Failed to clone Git repository, might not find remote ref refs/heads/master (most likely invalid branch name is passed)`?](/docs/schematics?topic=schematics-general-faq#template-errors)
 
 * [Can I increase the timeout for null-exec and remote-exec resource?](/docs/schematics?topic=schematics-general-faq#timeout-null-resource)
 
@@ -2221,7 +2221,7 @@ subcollection: schematics
 
 * [Can I always set Terraform to use the current or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0 continue to use even if Terraform version 2.0 or higher` are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
+* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, does `Terraform version 1.0 continues to use even if Terraform version 2.0 or higher` are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
 * [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 
@@ -2339,9 +2339,11 @@ subcollection: schematics
 
 * [How to use Tofu in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#tofu-usage-faq)
 
-* [Why does {{site.data.keyword.bpshort}} supports Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
+* [Why does {{site.data.keyword.bpshort}} supports Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-support-faq)
 
 * [Does Schematics supporting both Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-and-terraform-support-faq)
+
+* [What is the differemce between Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
 
 
 ## Troubleshooting

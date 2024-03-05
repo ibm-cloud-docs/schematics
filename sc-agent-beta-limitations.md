@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics agent, agent, beta release, agent beta release
 
@@ -15,9 +15,9 @@ subcollection: schematics
 # Beta code for {{site.data.keyword.bpshort}} agents
 {: #agent-beta-limitations}
 
-The Agent level of code is considered beta code as there will be changes in function and capabilities between now and the General Availability (GA) date.
+The Agent level of code is considered beta code as there are changes in function and capabilities between now and the General Availability (GA) date.
 
-Although Agent usage has no cost involved during beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
+Although Agent usage has no cost involved during beta, it has a cost eventually in the GA timeframe. You can see updation in the documentation with the usage and the charges.
 
 Join our beta program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}.
 
@@ -35,16 +35,16 @@ You can come back any time to your created thread to add information, ask questi
 ## Beta release limitations for Agent
 {: #sc-agent-beta-limitation}
 
-There will be multiple beta releases in short window period, this requires the users to update the Agent infrastructure and Agent services in your environment.
+There are multiple beta releases in short window period, this requires the users to update the Agent infrastructure and Agent services in your environment.
 {: note}
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
-| UI capabilities are not final and will be updated throughout the beta process.| | |
+| UI capabilities are not final and are updated throughout the beta process.| | |
 | Support for drift detection is not available in agents.| | |
 | Support to [store or persist user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in agents.| | |
 | Agents supports only `Terraform v1.0` or higher Terraform version. | | |
-| Agent customization is not finalized, will be communicated. | | |
+| Agent customization is not finalized. | | |
 | Support to monitor Agent health is limited in this release.| | |
 | Supports only `one Agent in one cluster`. | | |
 | Agents can be installed in a freshly provisioned Agent infrastructure, not in any other cluster.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-03-05"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Updating agents
 {: #update-agent-overview}
 
-Update an agent configuration in the currently selected {{site.data.keyword.bpshort}} region to work directly in your cloud infrastructure. Updating an agent does not revalidate or redeploy your agent. Select the right agent version to update. You can analyze the activity logs and recover the update.
+Update an agent configuration in the currently selected {{site.data.keyword.bpshort}} region to work directly in your cloud infrastructure. Updating an agent does not validate or deploy your agent. Select the right agent version to update. You can analyze the activity logs and recover the update.
 {: shortdesc}
 
 Following are the scenarios you must use agent upgrade.
@@ -25,7 +25,7 @@ Following are the scenarios you must use agent upgrade.
 - To update an agent metadata such as `name`, `description`, `tags`, `resource group`, `version`, and `agent_metadata` attributes.
 - You can use `agent update` to revoke the updated version to its existing version.
 
-Agent update cannot be done on a deployed agent when performing `terraform init`, `terraform plan` and `terrafom apply` on the workspace that are used with the deployed agent.
+Agent update cannot be done on a deployed agent when performing `terraform init`, `terraform plan` and `terraform apply` on the workspace that are used with the deployed agent.
 {: important}
 
 ## Before you begin
@@ -78,7 +78,7 @@ ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to update an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Update an agent](/apidocs/schematics/schematics#update-agent-data).
 
-You can use the refresh_token to get a new IAM access token if you IAM token is expired.
+You can use the `refresh_token` to get a new IAM access token if you IAM token is expired.
 {: important}
 
 Example

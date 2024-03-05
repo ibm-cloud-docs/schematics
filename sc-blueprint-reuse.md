@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -62,12 +62,12 @@ Blueprints best practice is to for templates to be reusable across the instances
 Blueprints is built around reuse. Blueprints' implements layers of configuration that build on reusable shared modules, with layers of customization targeting specific use cases. This provides for independent versioning of components, update and maintenance of templates and of the (externalized) configurations. These layers are described below in increasing order of customization: 
 
 - **Modules**: Reusable components, implementing the layers of an application architecture. Designed for reuse across multiple architectures, teams and organizations. Modules are lightly opinionated to implement security and organization best practices, while allowing for reuse. They are actively maintained and semantically versioned. Module version selection is determined at the template layer. 
-- **Templates**: Templates are written to address a range deployments for a specific architecture and application. It is an opinionated implementation of an application architecture out of reusable modules. Templates support external customization of infrastructure scaling, deployment region, application components, network and security configuration. They are semantically versioned and maintained through update of module versions.   
+- **Templates**: Templates are written to address a range deployments for a specific architecture and application. It is an opinionated implementation of an application architecture out of reusable modules. Templates support external customization of infrastructure scaling, deployment region, application components, network and security configuration. They are semantically `versioned` and maintained through update of module versions.   
     - User customizable inputs are externalized for configuration as `inputs`. Default template input values allow for use with minimal user configuration.
     - Versioning is defined by Git release tags and branches.
     - Template version selection is managed by Git release tags specified at blueprint config create time.      
-- **Inputs**: Inputs customize a template for a target environment: dev, stage, prod or regions. They provide configuration for scaling, region and networking and so on. Blueprints' supports two layers of input customization. Versioned input files for controlled change of environment specific configuration and un-versioned dynamic (override) inputs. 
-    - Versioned input files. These provide versioned control over environment configuration parameters in production and regulated environments. Versioned input files are optional and for less regulated development environments all parameters can be configured by dynamic (override) inputs. 
+- **Inputs**: Inputs customize a template for a target environment: dev, stage, prod or regions. They provide configuration for scaling, region and networking and so on. Blueprints' supports two layers of input customization. `Versioned` input files for controlled change of environment specific configuration and un-versioned dynamic (override) inputs. 
+    - `Versioned` input files. These provide versioned control over environment configuration parameters in production and regulated environments. `Versioned` input files are optional and for less regulated development environments all parameters can be configured by dynamic (override) inputs. 
       - Versioning is defined by Git release tags and branches.   
       - Input file version selection is managed by Git release tags specified at blueprint config create time.  
     - Dynamic (override) inputs. Typically sensitive input values, like API or SSH keys that should not be maintained in a version control system. In unregulated or development environments, all inputs can be supplied as dynamic inputs. 
@@ -98,7 +98,7 @@ The selection of inputs is determined in the following precedence order, lower t
    - Value **optionally** specified
    - Usage: SSH and API keys
 
-Inputs that are not satisfied at any level will result in an error at blueprint config create time. 
+Inputs that are not satisfied at any level results in an error at blueprint config create time. 
 
 ## Using versioned inputs
 {: #bp-version-input}
@@ -111,15 +111,15 @@ The use of input versioning is summarized in the table.
 | Blueprint layer	| Development and unregulated environments	|  Regulated environments | 
 | --- | --- | --- 
 | Dynamic (override) inputs	| Any input, no version control. Override values specified in input file	| Sensitive values only | 
-| Input files	Optional, un-versioned	Versioned (tag or branch) | 
-| Templates	| Un-versioned |	Versioned (tag or branch) | 
-| Modules	| Un-versioned | 	Versioned (tag) |
+| Input files	Optional, un-versioned	`Versioned` (tag or branch) | 
+| Templates	| Un-versioned |	`Versioned` (tag or branch) | 
+| Modules	| Un-versioned | 	`Versioned` (tag) |
 {: caption="Usage of input version" caption-side="bottom"}
 
 ## Blueprint input value precedence 
 {: #blueprint-input-precedence} 
 
-All template inputs must have an input value at blueprint config create time. Missing template input values will result in an error at config create time. 
+All template inputs must have an input value at blueprint config create time. Missing template input values results in an error at config create time. 
 
 A template input can have one of three value definitions:
 - No value 

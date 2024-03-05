@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-22"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -55,13 +55,13 @@ Blueprint commands have been renamed with the 1.12.3 release of the {{site.data.
 | Performance optimization - Plan and Apply only run against changed modules | Planned for 2023 release | | 
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in. | UI support planned for December 2022 | Delivered Dec 2022 | 
 | The Terraform Plan (all) operation for blueprint template. | Support planned for December 2022 | | 
-| Run operations are performed as a single operation against all modules (plan + apply).|  A future 2023 release will support single module operations  | | 
+| Run operations are performed as a single operation against all modules (plan + apply).|  A future 2023 release supports single module operations  | | 
 | Created Cloud resources tagged with blueprint, catalog and workspace IDs. | Planned for December 2022  | Delivered Dec 2022 | 
 | Only one input file is supported per blueprint configuration. | Multiple input files planned for a 2023 release | |
 | Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources must be destroyed to delete a blueprint. | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 
 | Operations must not be directly run against linked {{site.data.keyword.bpshort}} modules (workspaces) by using the workspace commands or UI. Operations must be run by using blueprint commands. | | |
-| Blueprint configuration validation command. | Support planned for November 2022 | VScode language extension delivered in November 2022  | 
+| Blueprint configuration validation command. | Support planned for November 2022 | `VScode` language extension delivered in November 2022  | 
 | Cost Estimation in CLI and UI | Planned for 2023 release | | 
 | Only blueprint templates and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | Planned  November  2022 | Delivered November 2022 | 
 | Only blueprint templates and modules in public repositories are formally supported. Testing is not complete for private repositories using Git tokens. | Planned in November 2022 | Delivered November 2022 | 

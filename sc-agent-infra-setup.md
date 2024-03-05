@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-03-05"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -41,7 +41,7 @@ The following prerequisites must be met before you begin deploying the agent inf
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
     - In the **Specify Template** section:
-        - **GitHub, GitLab, or Bitbucket repository URL** - `https://github.com/Cloud-Schematics/agent-infrastructure-sample/tree/main/templates/infrastructure`.
+        - **`GitHub`, `GitLab`, or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/agent-infrastructure-sample/tree/main/templates/infrastructure`.
         - **Personal access token** - `<leave it blank>`.
         - Terraform Version - `terraform_v1.5`. You need to select Terraform version 1.5 or greater than version.
         - Click `Next`.

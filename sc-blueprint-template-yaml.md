@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -116,7 +116,7 @@ Type: list
 
 Default: []
 
-An optional list of user tags to be attached to all deployed cloud resources, workspaces and the blueprint resource created using this template. These tags are additional to any tags defined at the module level or on the Terraform IaC resource definitions. All environments deployed using this template will have these tags. Environment specific tags can be specified at config create time, to uniquely identify the instance of environment deployed, e.g dev, stage, prod. 
+An optional list of user tags to be attached to all deployed cloud resources, workspaces and the blueprint resource created using this template. These tags are additional to any tags defined at the module level or on the Terraform IaC resource definitions. All environments deployed using this template has these tags. Environment specific tags can be specified at config create time, to uniquely identify the instance of environment deployed, e.g dev, stage, prod. 
 
 An immutable service tag with the `blueprint_id` for an environment is attached to all deployed resources and can be used to identify all resources associated with the environment.      
 
@@ -247,7 +247,7 @@ Type: Number
 Number specifying the maximum length of the input value. This attribute is used by the CLI and UI to perform validation and to signify the expected length of the value.  
 {: pre}
 
-If `max_length` is not specified, the default maximum length of a variable value allowed by Blueprints is 1000 bytes. A value larger than 1000 bytes, or the specified length will result in the error `Length for variable <variable name> greater than the given length`   
+If `max_length` is not specified, the default maximum length of a variable value allowed by Blueprints is 1000 bytes. A value larger than 1000 bytes, or the specified length results in the error `Length for variable <variable name> greater than the given length`   
 
 Example
 
@@ -316,9 +316,9 @@ Type:       number
 
 Optional
 
-Blueprint templates set the Terraform version to be used at module execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
+Blueprint templates set the Terraform version to be used at module execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value changes the Terraform version that is used on the next execution. 
 
-When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints will used the most recent version of Terraform supported by Schematics. 
+When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints used the most recent version of Terraform supported by Schematics. 
 
 Options:    Terraform version in `SemVer` format 
 
@@ -485,7 +485,7 @@ Type: string
 
 Default: `implicitly latest`
 
-If content type is `git`, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint update` operation. 
+If content type is `git`, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} defaults to always pulling the latest commit during a `blueprint update` operation. 
 
 Value:  Release in SemVer format 
 {: pre}
@@ -530,9 +530,9 @@ Type:       number
 
 Optional
 
-Blueprint templates set the Terraform version to be used at module execution time based on the value of `TF_Version`. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
+Blueprint templates set the Terraform version to be used at module execution time based on the value of `TF_Version`. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value changes the Terraform version that is used on the next execution. 
 
-When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints will used the most recent version of Terraform supported by Schematics. 
+When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints uses the most recent version of Terraform supported by Schematics. 
 
 Value:    Terraform version in `SemVer` format 
 
@@ -765,7 +765,7 @@ Type: list
 
 Required: true
 
-A list that defines the templating inputs as name-value pairs. At this time, only static values are supported. 
+A list that defines the template inputs as `name-value` pairs. At this time, only static values are supported. 
  
 Example
 

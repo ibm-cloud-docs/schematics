@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -17,9 +17,9 @@ subcollection: schematics
 
 {{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_short}}. This data-at-rest is encrypted using AES GCM 256 with an envelope encryption technique. As the {{site.data.keyword.cloud_notm}} account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 
 
-When you delete these {{site.data.keyword.bpshort}} objects, the corresponding data in {{site.data.keyword.cos_short}} is marked for deletion. The soft delete option enable you to recover the {{site.data.keyword.bpshort}} data by raising a [support ticket](/docs/schematics?topic=schematics-schematics-help). Further, your data will automatically be purged after 7 days of soft delete.  
+When you delete these {{site.data.keyword.bpshort}} objects, the corresponding data in {{site.data.keyword.cos_short}} is marked for deletion. The soft delete option enable you to recover the {{site.data.keyword.bpshort}} data by raising a [support ticket](/docs/schematics?topic=schematics-schematics-help). Further, your data are automatically purged after 7 days of soft delete.  
 
-Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data in a separate {{site.data.keyword.cos_short}} bucket. This backup copy is automatically overwritten, every 30 days. Hence, all backup copy of your data will be purged in 30 days.
+Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data in a separate {{site.data.keyword.cos_short}} bucket. This backup copy is automatically overwritten, every 30 days. Hence, all backup copy of your data are purged in 30 days.
 
 
 
@@ -31,7 +31,7 @@ The scope of deletion is limited to data stored in {{site.data.keyword.bpshort}}
 Following points does not include in the scope of deletion of {{site.data.keyword.bpshort}} objects.
 - The deletion or removal of the {{site.data.keyword.cloud_notm}} resources that were provisioned by using {{site.data.keyword.bpshort}}.
 - The data stored by the {{site.data.keyword.cloud_notm}} resources provisioned by the {{site.data.keyword.bpshort}}.  
-- At the time of {{site.data.keyword.bpshort}} object deletion, you will be provided with the option to destroy the Cloud resources. However, it is suggested to independently confirm and destroy the Cloud resources from the Cloud Services. You can explore the list of Cloud resources, from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external} page.
+- At the time of {{site.data.keyword.bpshort}} object deletion, you are provided with the option to destroy the cloud resources. However, it is suggested to independently confirm and destroy the Cloud resources from the cloud services. You can explore the list of Cloud resources, from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external} page.
 
 ## Deleting {{site.data.keyword.bpshort}} objects from UI
 {: #delete-schematics-data-ui}

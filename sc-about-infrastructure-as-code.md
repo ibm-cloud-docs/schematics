@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -45,7 +45,7 @@ When adopting IaC for provisioning and configuration management, there are numbe
 ### Codifying everything in IaC
 {: #iac-bp-codify}
 
-All the infrastructure specifications should be explicitly coded in a configuration file, for instance as Terraform configurations or Ansible playbooks. The configuration files are the single source of truth of your infrastructure specification and describe what infrastructure components will be used and their configuration?
+All the infrastructure specifications should be explicitly coded in a configuration file, for instance as Terraform configurations or Ansible playbooks. The configuration files are the single source of truth of your infrastructure specification and describe what infrastructure components are used in their configuration?
 {: shortdesc}
 
 ### Minimize documentation
@@ -85,7 +85,7 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 With adopting IaC, an aspect to consider is what approach your tooling takes. There are two different styles, declarative or imperative, also sometimes described as procedural.
 {: shortdesc}
 
-A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool will configure it for you. The tool itself will determine the operations to get to the desired state from any starting point. 
+A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool configures for you. The tool itself determines the operations to get to the desired state from any starting point. 
 
 An imperative approach instead defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order. 
 
@@ -103,11 +103,11 @@ Chef is thought of as an imperative tool. Terraform is classed as declarative. A
 A benefit of the declarative approached used by Terraform and Ansible is `idempotence`. Idempotent tasks can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
-How you use a tool and the modules used both have an impact on idempotency. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. In which case, the configuration may drift from the desired target state. With Terraform this form of drift is most likely when `null-resources` are used to extend provider functionality with custom scripts which are not idempotent.
+How you use a tool and the modules used both have an impact on `idempotency`. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. In which case, the configuration may drift from the desired target state. With Terraform this form of drift is most likely when `null-resources` are used to extend provider functionality with custom scripts which are not idempotent.
 
 Immutability is an IaC practice that minimizes the risk of drift from the target state. 
  
-### Immutablity
+### Immutable
 {: #iac-immutability}
 
 Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed (using scripts). The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of automated operations. Changes that make it harder to debug and resolve issues, and increase support costs.

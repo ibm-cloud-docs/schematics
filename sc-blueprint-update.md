@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -18,10 +18,10 @@ subcollection: schematics
 # Update a blueprint configuration
 {: #update-blueprint}
 
-Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and modules, a deployed environment loses currency, compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation.  
+Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and modules, a deployed environment loses currency, compliance, and ceases to be manageable through {{site.data.keyword.bpshort}} automation.  
 {: shortdesc}
 
-After the [deploy](/docs/schematics?topic=schematics-deploy-blueprints) lifecycle stage of a cloud environment, an environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules and inputs. Review the section on [updating blueprints](/docs/schematics?topic=schematics-update-op-blueprints) to understand more about the process of maintaining blueprint environments and the steps required to run regular updates. 
+After the [deploy](/docs/schematics?topic=schematics-deploy-blueprints) lifecycle stage of a cloud environment, an environment continues to evolve through managed change that is implemented as updates to the blueprint template, automation modules and inputs. Review the section on [updating blueprints](/docs/schematics?topic=schematics-update-op-blueprints) to understand more about the process of maintaining blueprint environments and the steps required to run regular updates. 
 
 ## Update process
 {: #update-blueprint-process} 

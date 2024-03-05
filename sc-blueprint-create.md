@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -135,7 +135,7 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
 
         - Click **Done editing**, if the editing is done.
         - Click **Save draft** only if you need to save the draft to continue edit the input variables again later.
-4. Click **Create Blueprint** that will redirect to the blueprint overview page. 
+4. Click **Create Blueprint** that redirects to the blueprint overview page. 
 
 ### Verifying blueprint config creation using the UI 
 {: #verify-blueprint-create-ui}
@@ -144,8 +144,8 @@ Here are the steps to verify your blueprint config creation was successful.
 {: shortdesc}
 
 1. Click your blueprint that is listed in the [Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
-2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` will show the summary details of the blueprint create job. 
-3. Click **Modules** tab to see the status of the resource modules. These will be in an `Initialised` state, indicating that the module workspaces have been created, but no resources created. 
+2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` shows the summary details of the blueprint create job. 
+3. Click **Modules** tab to see the status of the resource modules. These are in an `Initialised` state, indicating that the module workspaces have been created, but no resources created. 
 4. Click **Jobs history** tab view the result of the blueprint create job and the operations that are performed against the resource modules. 
 5. Click **Settings** tab to view the summary of the configuration.
 

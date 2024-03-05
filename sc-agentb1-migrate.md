@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-22"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics agent version migrate, migrate agent version, agent migrate, cli, api, ui
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Migrating agent version
 {: #migrate-agent-version}
 
-If you have already setup an agent on a {{site.data.keyword.cloud_notm}} cluster and you want to migrate the existing agent version to other supported version. For example, migrate to `1.0.0-beta1`
+If you have already setup an agent on the {{site.data.keyword.cloud_notm}} cluster and you want to migrate the existing agent version to other supported version. For example, migrate to `1.0.0-beta1`
 or `1.0.0-beta2`.
 
 Currently, The {{site.data.keyword.bpshort}} Agent does not support agent version upgrade through CLI or API interface.

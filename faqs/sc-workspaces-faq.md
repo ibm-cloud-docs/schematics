@@ -115,7 +115,7 @@ The test IDs are considered as a valid `IBM ID` to set the global catalog or res
 
 By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all subfolders. De-select the 'Use full repository' flag to limit the folders that are cloned and improve download performance. 
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `subfolders` in Git repositories. If the compact flag is set to **true** it will download and save `subfolders` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `subfolders` in Git repositories. If the compact flag is set to **true** it downloads and save `subfolders` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
 
 You can get the response by starting `get workspace API` to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but the URL is passed, the download is compact.
 
@@ -408,7 +408,7 @@ After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by
 
 Deleting a workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you delete the workspace before you remove your resources, you must manually remove all your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard.
 
-Removing {{site.data.keyword.cloud_notm}} resources cannot be undone. Make sure that you have backed up any data before you remove a resource. Resources will also be removed(deleted) if you remove the resource definition or comment out the resource in your Terraform configuration file. Review the Plan log file to verify that all your resources are included in the removal.
+Removing {{site.data.keyword.cloud_notm}} resources cannot be undone. Make sure that you have backed up any data before you remove a resource. Resources are removed (deleted) if you remove the resource definition or comment out the resource in your Terraform configuration file. Review the Plan log file to verify that all your resources are included in the removal.
 {: important}
 
 ## Can I set environment variables for workspaces?
@@ -571,7 +571,7 @@ The {{site.data.keyword.bpshort}} workspace list variables store value should al
 {: faq}
 {: support}
 
- Currently, the workaround to updating the `TF_VERSION` is to pass the `TF_VERSION` while updating the variable store. {{site.data.keyword.bpshort}} will auto detect what is specified in the Terraform version block in the `TF` files. This is the default behavior. 
+ Currently, the workaround to updating the `TF_VERSION` is to pass the `TF_VERSION` while updating the variable store. {{site.data.keyword.bpshort}} auto detects what is specified in the Terraform version block in the `TF` files. This is the default behavior. 
  
  For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
 
@@ -648,7 +648,7 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
 Refer to the {{site.data.keyword.bpshort}} examples to test by using [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api) and CLI.
 
 ## Why does {{site.data.keyword.bpshort}} supports Tofu?
-{: #tofu-vs-terraform-faq}
+{: #tofu-support-faq}
 {: faq}
 {: support}
 
@@ -660,3 +660,10 @@ HashiCorp Configuration Language (HCL) switches [Terraform version 1.6.x](https:
 {: support}
 		
 Yes, Schematics supports both Terraform version 1.5 and Tofu version 1.6. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+
+## What is the differemce between Terraform and Tofu?
+{: #tofu-vs-terraform-faq}
+{: faq}
+{: support}
+
+Technically Tofu v1.6.x is an open source and feature-wise similar to Terraform 1.6.x. The projects features sets might diverge in future.

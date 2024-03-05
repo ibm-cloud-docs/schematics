@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -61,7 +61,7 @@ The contents of the Terraform working directory for a blueprint module with prov
 
 ![Blueprint provider injection](/images/new/bp-injection.svg){: caption="Blueprint provider injection" caption-side="bottom"}
  
-The `main.tf` and `variables.tf` files are loaded from the module repo. The provider config is defined by an `injectors` block in the template module definition. This block defines the `.tf` files that contain the additional config statements. It also defines the specification of the additional Terraform language constructs that will be injected into the Terraform working directory. 
+The `main.tf` and `variables.tf` files are loaded from the module repo. The provider config is defined by an `injectors` block in the template module definition. This block defines the `.tf` files that contain the additional config statements. It also defines the specification of the additional Terraform language constructs that are injected into the Terraform working directory. 
 
 The two files `ibm_tft_provider_override.tf` and `ibm_tft_versions_override.tf` contain the additional injected config parameters.
 

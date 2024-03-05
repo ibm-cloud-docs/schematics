@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-03-05"
 
 keywords: schematics agent, agent policy, policies
 
@@ -494,7 +494,7 @@ You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansi
 - location
 - tags
 
-Note now, tags must be set at workspace or action create time. Any changes to tags performed through the {{site.data.keyword.bpshort}} UI will not be detected or considered during policy evaluation. 
+Note now, tags must be set at workspace or action create time. Any changes to tags performed through the {{site.data.keyword.bpshort}} UI do not detect or consider during policy evaluation. 
 {: attention}
 
 After execution, the workspace or action job logs contain a header indicating the agent that the job was executed on.  

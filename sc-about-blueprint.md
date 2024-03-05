@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-05-26"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -40,7 +40,7 @@ This modular approach to composition and configuration also eases the task of ma
 ## Features
 {: #blueprint-features}
 
-Blueprints is built around [IaC best practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices) to manage the lifecycle of large cloud environments. It provides cradle-to-grave management for modular environments. Modular and parameterized configuration support for reuse. Versioned deployments to control change to environments, as templates and modules are updated to meet new requirements and remain current, and compliant. 
+Blueprints is built around [IaC best practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices) to manage the lifecycle of large cloud environments. It provides cradle-to-grave management for modular environments. Modular and parameterized configuration support for reuse.
 {: shortdesc}
 
 These features are illustrated under the four headings below. 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -30,7 +30,7 @@ You can follow these steps to view your blueprints by using {{site.data.keyword.
 
     The detailed view of the blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
 
-    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job. For Terraform based modules, these are {{site.data.keyword.bpshort}} workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job. For Terraform based modules, these are {{site.data.keyword.bpshort}} workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure are typically caused by a module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
 
 4. Click on the name of a child job to review the job log. 
     - Optional: Click **Show more** to view the full job log. 
@@ -137,7 +137,7 @@ The first section of the job output shows the overall execution status of the bl
 
 Blueprint operations run under the control of a blueprint orchestration job. This is listed first in the job results list. Update, Apply and Destroy operations on modules are performed under the control of this blueprint orchestration job. Each module job listed contains the results of the Terraform operation performed against that module to deploy and configure cloud resources. 
 
-Most blueprint job failures are caused by failing module jobs and the job output will list the module jobs with errors. The module job error status reflected as the overall blueprint job status. The failing module log must be reviewed to identify the cause of the blueprint job failure. 
+Most blueprint job failures are caused by failing module jobs and the job output lists the module jobs with errors. The module job error status reflected as the overall blueprint job status. The failing module log must be reviewed to identify the cause of the blueprint job failure. 
 
 ### Blueprint job get summary log
 {: #blueprint-job-get-drilldown-cli} 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-03-05"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -26,7 +26,7 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
    When you bind the new workspace to the Agent, the Terraform templates are downloaded from the Git repositories by using Sandbox jobs that run in your Agent infrastructure (cluster). Further, the Terraform jobs are also run in your cluster.
 
 - Bind the existing workspace to the Agent
-   When you bind an existing workspace to the Agent, the Terraform templates may be downloaded by the shared {{site.data.keyword.bpshort}} service instance. However, the subsequent template operations such as, update the terraform template from the Git repositories will be done by using the Sandbox jobs that run in your Agent infrastructure (cluster). Further, the Terraform jobs are also run in your Cluster.
+   When you bind an existing workspace to the Agent, the Terraform templates may be downloaded by the shared {{site.data.keyword.bpshort}} service instance. However, the subsequent template operations such as, update the terraform template from the Git repositories are done by using the Sandbox jobs that run in your Agent infrastructure (cluster). Further, the Terraform jobs are also run in your Cluster.
 
 ## Steps to Bind an existing workspace to the Agent
 {: #steps-bind-exist-wks}

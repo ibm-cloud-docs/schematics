@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Maintaining blueprints
 {: #update-op-blueprints}
 
-Maintaining a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment will lose currency and compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation. 
+Maintaining a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment loses currency and compliance, and ceases to be manageable through {{site.data.keyword.bpshort}} automation. 
 {: shortdesc}
 
 Change occurs for many reasons:
@@ -32,11 +32,11 @@ Managing a blueprint environment is an iterative cycle of applying changes to th
 ## Updating blueprint environments
 {: #update-multistep}
 
-After deployment, blueprint environments will continue to evolve through managed change, implemented as updates to the blueprint template, automation modules, and inputs.
+After deployment, blueprint environments continues to evolve through managed change, implemented as updates to the blueprint template, automation modules, and inputs.
 
-Changes to the environment are first prepared as version updates to the blueprint template and input files. The blueprint configuration is updated in {{site.data.keyword.bpshort}} with the updated template and input versions. These changes are then applied to the blueprint environment. This two-step process ensures controlled application of change first to the blueprint configuration and template, then second to the cloud resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied.
+Changes to the environment are first prepared as version updates to the blueprint template and input files. The blueprint configuration is updated in {{site.data.keyword.bpshort}} with the updated template and input versions. These changes are then applied to the blueprint environment. This two-step process ensures controlled application of change first to the blueprint configuration and template, then second to the cloud resources. In a future release the deployment plan are presented for review in a separate step before it can be applied.
 
-During this lifecycle stage, the blueprint environment will be updated many times. Changes are applied to the cloud resources to satisfy changing application requirements. Additionally to maintain platform currency and compliance as security policies evolve. Scheduled operations will run compliance checks, and run drift detection on the environment. 
+During this lifecycle stage, the blueprint environment are updated many times. Changes are applied to the cloud resources to satisfy changing application requirements. Additionally to maintain platform currency and compliance as security policies evolve. Scheduled operations runs compliance checks, and run drift detection on the environment. 
 
 As noted earlier, {{site.data.keyword.IBM}} authored automation modules are maintained and refreshed by {{site.data.keyword.IBM}} to support new service features, maintain {{site.data.keyword.cloud}} currency and to address evolving security compliance requirements. It is suggested that blueprint configurations, and templates are regularly updated to use the current version of modules and these updates are applied to deployed environments. The risk of not performing regular updates is that the environments lose currency, compliance, and cease to be manageable through {{site.data.keyword.bpshort}} automation. 
 
@@ -56,7 +56,7 @@ The two-step process to update a blueprint environment is illustrated in the dia
 3. {{site.data.keyword.bpshort}} validates the changes made to the configuration.  
 4. On a successful config update, {{site.data.keyword.bpshort}} automatically reinitializes the modules with any updated input values and updates to the module IaC code.  
 5. Apply the changes to the updated configuration. The changes are applied with the `blueprint apply` command or UI apply operation.
-    - Based on your updated blueprint configuration, runs the IaC modules in dependency order to update the environment. In a future release the plan will be presented for review before apply. 
+    - Based on your updated blueprint configuration, runs the IaC modules in dependency order to update the environment. In a future release the plan are presented for review before apply. 
     - For more information on running this operation, see blueprint apply.  
 6. For each module, {{site.data.keyword.bpshort}} runs a Terraform Apply to create, modify, or delete cloud resources as determined by the configuration changes from the update. 
 7. On successful deployment of the updates, the blueprint output values are updated with any changed outputs.

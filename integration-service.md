@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-03-05"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -97,7 +97,7 @@ You can use your encryption keys from key management services (KMS), {{site.data
 ### Prerequisites
 {: #key-mgt-prerequisites}
 
-The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
+The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to your `KYOK`, or `BYOK` instance.

@@ -97,7 +97,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
       - [Creating policies](/docs/schematics?topic=schematics-policy-manage) 
       - [Monitoring health](/docs/schematics?topic=schematics-agentb1-health)
       - [Configuration in Kubernetes](/docs/schematics?topic=schematics-configure-k8s-cluster)
-      - [Private registry configuraiton](/docs/schematics?topic=schematics-agent-registry-overview)
+      - [Private registry configuration](/docs/schematics?topic=schematics-agent-registry-overview)
     - For any challenges or questions, see {{site.data.keyword.bpshort}} Agent:
       - [FAQs](/docs/schematics?topic=schematics-faqs-agent)
       - [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found)
@@ -556,7 +556,7 @@ Enhance resources tabular data view for resources.
 :   The {{site.data.keyword.bpshort}} command line lists the provisioned resources from your workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
 
 Deprecate and warning message when using `ibmcloud terraform` command.
-:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **`Alias 'terraform' will be deprecated. Use schematics or sch in your commands`**.
+:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **`Alias 'terraform' are deprecated. Use schematics or sch in your commands`**.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9 April 2022.
@@ -855,7 +855,7 @@ Review the release notes for March 2021.
 {: release-note}
 
 Terraform v0.14 support
-:   {{site.data.keyword.bplong_notm}} now supports Terraform v0.14 now. You can now select to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13` or `0.14`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. `Terraform v0.14` introduced new sensitive attribute in the variable metadata configuration. {{site.data.keyword.bpshort}} do not detect this sensitive attribute. Users should continue to use the sensitive checkbox in the {{site.data.keyword.bplong_notm}} console, and use secure flag in the API payload. {{site.data.keyword.bpshort}} already supports masking the sensitive updated values. `Terraform v0.14` introduced a lock file for versions with the name `.terraform.lock.hcl`. This file is created during `terraform init`. If you use `.terraform.lock.hcl` file in the Terraform commands, the versions stored in `.terraform.lock.hcl` file are used. {{site.data.keyword.bpshort}} doesn't support this feature. {{site.data.keyword.bpshort}} will not store this file for subsequent actions.
+:   {{site.data.keyword.bplong_notm}} now supports Terraform v0.14 now. You can now select to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13` or `0.14`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. `Terraform v0.14` introduced new sensitive attribute in the variable metadata configuration. {{site.data.keyword.bpshort}} do not detect this sensitive attribute. Users should continue to use the sensitive checkbox in the {{site.data.keyword.bplong_notm}} console, and use secure flag in the API payload. {{site.data.keyword.bpshort}} already supports masking the sensitive updated values. `Terraform v0.14` introduced a lock file for versions with the name `.terraform.lock.hcl`. This file is created during `terraform init`. If you use `.terraform.lock.hcl` file in the Terraform commands, the versions stored in `.terraform.lock.hcl` file are used. {{site.data.keyword.bpshort}} doesn't support this feature. {{site.data.keyword.bpshort}} do not store this file for subsequent actions.
 
 ## February 2021
 {: #feb-2021}

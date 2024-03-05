@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Creating blueprints through the CLI using a config file
 {: #create-blueprint-file}
 
-Alternative to creating a blueprint through the CLI using parameters and flags, a JSON config file can be provided to pass blueprint create API parameters directly. This is a direct interface through the API and the JSON file format is not guaranteed to remain compatible on API changes. Use the CLI With parameters and flags if long term compatibility is required. The CLI `-input-file` parameter provides an alternative way to pass complex input values as a YAML file and will retain long term compatibility.    
+Alternative to creating a blueprint through the CLI using parameters and flags, a JSON config file can be provided to pass blueprint create API parameters directly. This is a direct interface through the API and the JSON file format is not guaranteed to remain compatible on API changes. Use the CLI With parameters and flags if long term compatibility is required. The CLI `-input-file` parameter provides an alternative way to pass complex input values as a YAML file and retains long term compatibility.    
 {: shortdesc}
 
 The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional dynamic or override inputs. The file operation passes the configuration directly to the {{site.data.keyword.bpshort}} API and uses the API parameter definitions. The definition of the config file uses the [{{site.data.keyword.bpshort}} API payload](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, which differs from to the `schematics blueprint create` CLI syntax.  

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-08-01"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -38,10 +38,10 @@ Following are the tasks of the job when it enter into pending queue.
 - The environment variable parameters that are required by the job are not specified. Check that the environment variables are defined.
 - The commands or arguments that are passed to the job are not valid. Check that the argument flags specified are correct.
 
-## Job timesouts
+## Job time out
 {: #job-queue-timeout}
 
-Terraform jobs such as plan, apply, and destroy on a workspace should not generally take more than few hours to provision or deprovision resources. If you are provisioning many resources simultaneously, which will take many hours, it is suggested to split the resources into different workspaces. {{site.data.keyword.bpshort}} limits the execution time of a job to 24 hours. After 24 hours the jobs are terminated and the job is marked as `STOPPED` and the workspace will show `ACTIVE`, or `INACTIVE`.
+Terraform jobs such as plan, apply, and destroy on a workspace should not generally take more than few hours to provision or deprovision resources. If you are provisioning many resources simultaneously, which takes many hours, it is suggested to split the resources into different workspaces. {{site.data.keyword.bpshort}} limits the execution time of a job to 24 hours. After 24 hours the jobs are terminated and the job is marked as `STOPPED` and the workspace shows `ACTIVE`, or `INACTIVE`.
 
 After `24 hours`, an interrupt signal is sent to stop job execution. A grace period of `10 minutes` is given for the command to finish. If not completed in this time, a kill signal is sent and the job is terminated. A Terraform refresh is performed after stopping the job to ensure the state file and other data is collected. 
 
@@ -50,4 +50,4 @@ In a job, multiple commands such as `terraform init`, `terraform apply`, and `te
 Example 
 If a job is stuck forever on a Terraform apply, when the command is stopped, and if you run a refresh. If refresh is also stuck, after `15 minutes`, a kill is executed. 
 
-The Terraform `local exec` and `remote exec` have a time limit of `30 minutes` and will terminate job execution if exceeded. 
+The Terraform `local exec` and `remote exec` have a time limit of `30 minutes` and terminates job execution if exceeded. 
