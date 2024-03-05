@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-03-05"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -46,7 +46,7 @@ With {{site.data.keyword.bpshort}} workspaces, use Terraform, or Tofu to automat
 {: shortdesc}
 
 ### {{site.data.keyword.bpshort}} actions
-{: #sc-actions-overview}
+{: #sc-about-actions}
 
 With {{site.data.keyword.bpshort}} actions, use Ansible playbooks to perform complex day-2 operations on your cloud resources, cloud environment, and app workloads. Whether you want to deploy multitiered apps, start or stop virtual servers or clusters, rotate keys, backup and restore app data, perform security scans, manage database schemas, or manage users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks.For more information about managing {{site.data.keyword.bpshort}} actions and its features, see [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions).
 {: shortdesc}

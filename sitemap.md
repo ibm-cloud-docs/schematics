@@ -64,7 +64,7 @@ subcollection: schematics
 
     * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
-    * [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
+    * [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-about-actions)
 
     * [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
