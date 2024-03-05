@@ -11,6 +11,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+
 # Site map
 {: #sitemap}
 
