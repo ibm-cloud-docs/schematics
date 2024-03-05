@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-04"
+lastupdated: "2024-03-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -647,17 +647,16 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
 
 Refer to the {{site.data.keyword.bpshort}} examples to test by using [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api) and CLI.
 
-## What is the difference between Tofu and Terraform?
+## Why does {{site.data.keyword.bpshort}} supports Tofu?
 {: #tofu-vs-terraform-faq}
 {: faq}
 {: support}
 
-Terraform and Tofu are declarative languages used to build and manage the resources by using across providers. HashiCorp Configuration Language (HCL) has switched [Terraform version 1.6.x](https://www.hashicorp.com/license-faq){: external} onwards as a Business Source license (BUSL) tool, and introduced [Tofu version 1.6.x](https://opentofu.org/){: external} as an open source to the users.
-
+HashiCorp Configuration Language (HCL) switches [Terraform version 1.6.x](https://www.hashicorp.com/license-faq){: external} as a Business Source license (BUSL) tool and launched [Tofu version 1.6.x](https://opentofu.org/){: external} engine to provision the resources. Hence, the {{site.data.keyword.bpshort}} supports Tofu and Terraform. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 ## Does Schematics supporting both Terraform and Tofu?
 {: #tofu-and-terraform-support-faq}
 {: faq}
 {: support}
 		
-Yes, Schematics supports both Terraform version 1.5 and Tofu version 1.6.
+Yes, Schematics supports both Terraform version 1.5 and Tofu version 1.6. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).

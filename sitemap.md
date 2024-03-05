@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-04"
+lastupdated: "2024-03-05"
 
 keywords: schematics
 subcollection: schematics
@@ -2339,7 +2339,7 @@ subcollection: schematics
 
 * [How to use Tofu in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#tofu-usage-faq)
 
-* [What is the difference between Tofu and Terraform?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
+* [Why does {{site.data.keyword.bpshort}} supports Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
 
 * [Does Schematics supporting both Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-and-terraform-support-faq)
 
