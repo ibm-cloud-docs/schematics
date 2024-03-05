@@ -2337,14 +2337,6 @@ subcollection: schematics
 
 * [How do I fix authentication errors when using the API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
-* [How to use Tofu in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#tofu-usage-faq)
-
-* [Why does {{site.data.keyword.bpshort}} supports Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-support-faq)
-
-* [Does Schematics supporting both Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-and-terraform-support-faq)
-
-* [What is the differemce between Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
-
 
 ## Troubleshooting
 {: #sitemap_troubleshooting}

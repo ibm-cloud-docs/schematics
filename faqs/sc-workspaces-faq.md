@@ -640,30 +640,4 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     ```
     {: pre}
 
-## How to use Tofu in {{site.data.keyword.bpshort}}?
-{: #tofu-usage-faq}
-{: faq}
-{: support}
 
-Refer to the {{site.data.keyword.bpshort}} examples to test by using [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api) and CLI.
-
-## Why does {{site.data.keyword.bpshort}} supports Tofu?
-{: #tofu-support-faq}
-{: faq}
-{: support}
-
-HashiCorp Configuration Language (HCL) switches [Terraform version 1.6.x](https://www.hashicorp.com/license-faq){: external} as a Business Source license (BUSL) tool and launched [Tofu version 1.6.x](https://opentofu.org/){: external} engine to provision the resources. Hence, the {{site.data.keyword.bpshort}} supports Tofu and Terraform. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
-
-## Does Schematics supporting both Terraform and Tofu?
-{: #tofu-and-terraform-support-faq}
-{: faq}
-{: support}
-		
-Yes, Schematics supports both Terraform version 1.5 and Tofu version 1.6. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
-
-## What is the differemce between Terraform and Tofu?
-{: #tofu-vs-terraform-faq}
-{: faq}
-{: support}
-
-Technically Tofu v1.6.x is an open source and feature-wise similar to Terraform 1.6.x. The projects features sets might diverge in future.
