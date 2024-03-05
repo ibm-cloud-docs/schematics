@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-03-05"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -72,7 +72,7 @@ The workspace terraform version parameter is of the form `terraform_v1.1` or `te
 ## Upgrading the Terraform template version 0.x to 1.x
 {: #terraform-version-upgrade0x}
 
-At 0.x releases, Terraform version upgrade is a stepwise process, upgrading through each release. Upgrading does not support upgrading across multiple releases and must be performed, release by release. Some updates will require execution of Terraform `upgrade` commands to modify the config files also changes to the Terraform state file. These steps cannot be performed within {{site.data.keyword.bpshort}}. Workspace Terraform templates must be upgraded using a local copy of Terraform. Follow the steps below for upgrading the 0.x releases. 
+At 0.x releases, Terraform version upgrade is a stepwise process, upgrading through each release. Upgrading does not support upgrading across multiple releases and must be performed, release by release. Some updates requires execution of Terraform `upgrade` commands to modify the config files also changes to the Terraform state file. These steps cannot be performed within {{site.data.keyword.bpshort}}. Workspace Terraform templates must be upgraded using a local copy of Terraform. Follow the steps below for upgrading the 0.x releases. 
 
 | Version |	Recommendation|
 | --- | --- |
@@ -163,6 +163,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
             "type": "terraform_v0.13"
         }]
     }
+    ```
     {: codeblock}
 
 12. Run these commands through command-line to create a new Terraform `v0.13` workspace 

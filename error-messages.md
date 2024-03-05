@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -36,7 +36,7 @@ The error messages are categorized based on the error type, error code, and erro
 ### Parameter error
 {: #param-error}
 
-The parameter error represents that all the required or optional {{site.data.keyword.bpshort}} actions parameters has configured with the right input.
+The parameter error represents that all the required or optional {{site.data.keyword.bpshort}} actions parameters has configured with the input.
 {: shortdesc}
 
 #### Message
@@ -77,7 +77,7 @@ The {{site.data.keyword.bpshort}} actions instance and resources are overloaded 
 ### State error
 {: #state-error}
 
-While processing the create, delete, update action, the {{site.data.keyword.bpshort}} will run the Jobs are sent to pending state. The state flow and error message depends based on the template administrator. Following are the messages you can get in the process flow.
+While processing the create, delete, update action, the {{site.data.keyword.bpshort}} runs the Jobs are sent to pending state. The state flow and error message depends based on the template administrator. Following are the messages you can get in the process flow.
 
 #### Message
 {: #state-msg}

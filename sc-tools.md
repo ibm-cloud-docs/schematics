@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2023-12-13"
+lastupdated: "2024-03-05"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -53,7 +53,7 @@ The following table enlists the preinstalled software and tools in the {{site.da
 | `OpenShift client` | | Yes | {{site.data.keyword.redhat_openshift_notm}} CLI for your Terraform automation. It is recommended to use the Terraform provider plug-ins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
 | `Python` |	`v3.6` |	No	| For use in your Terraform automation. |
 | `Python libraries` |	`netaddr`	| No	| Red Hat OpenShift CLI for your Terraform automation. It is recommended to use the Terraform provider plug-ins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
-{: caption="{{site.data.keyword.bpshort}} runtime terrafom job image" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} runtime terraform job image" caption-side="top"}
 
 ## Runtime-ansible-job image
 {: #sch-runtime-ansible-job}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-05"
 
 keywords: schematics
 subcollection: schematics
@@ -89,7 +89,7 @@ subcollection: schematics
 
     * [`Idempotence`](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
 
-    * [Immutablity](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
+    * [Immutable](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
 
 * [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
 
@@ -279,6 +279,10 @@ subcollection: schematics
 * [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
 
     * Review the release notes for February 2024.
+
+    * [28 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2824)
+
+        * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`, `v1.4` template from 2nd week of April 2024.
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
@@ -1542,7 +1546,7 @@ subcollection: schematics
 
 * [When does the job enter into the pending queue?](/docs/schematics?topic=schematics-job-queue-process#pending-job-queue)
 
-* [Job timesouts](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
+* [Job time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
 
 
 ## Deleting {{site.data.keyword.bpshort}} data
@@ -2165,7 +2169,7 @@ subcollection: schematics
 
 * [Files removed or missing from Terraform, or Ansible template repos](/docs/schematics?topic=schematics-general-faq#clone-file-extension)
 
-* [Is the use of symlinks supported in Git repos?](/docs/schematics?topic=schematics-general-faq#symlinks-ws)
+* [Is the use of `symlinks` supported in Git repos?](/docs/schematics?topic=schematics-general-faq#symlinks-ws)
 
 * [Is the use of Git sub-modules supported in Git repos or TGZ files?](/docs/schematics?topic=schematics-general-faq#git-submodules-ws)
 
@@ -2175,7 +2179,7 @@ subcollection: schematics
 
 * [How do I generate IAM access token, if client ID `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
-* [How do I rectify 'Failed to clone Git repository, might not find remote ref `refs/heads/master` (most likely invalid branch name is passed)'?](/docs/schematics?topic=schematics-general-faq#template-errors)
+* [How to rectify `Failed to clone Git repository, might not find remote ref refs/heads/master (most likely invalid branch name is passed)`?](/docs/schematics?topic=schematics-general-faq#template-errors)
 
 * [Can I increase the timeout for null-exec and remote-exec resource?](/docs/schematics?topic=schematics-general-faq#timeout-null-resource)
 
@@ -2217,7 +2221,7 @@ subcollection: schematics
 
 * [Can I always set Terraform to use the current or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0 continue to use even if Terraform version 2.0 or higher` are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
+* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, does `Terraform version 1.0 continues to use even if Terraform version 2.0 or higher` are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
 * [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 
@@ -2243,27 +2247,27 @@ subcollection: schematics
 
 * [How do I update the Terraform version](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
-* [How do I `pull latest` code from a Git repo using the command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
+* [How do I `pull latest` code from a Git repo by using the command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
 
-* [What tools and utilities used in the runtime?](/docs/schematics?topic=schematics-workspaces-faq#schematics-tools)
+* [What tools and utilities are used in the runtime?](/docs/schematics?topic=schematics-workspaces-faq#schematics-tools)
 
-* [How can I fix Git token issues when creating workspaces using the CLI](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
+* [How can I fix Git token issues when creating workspaces by using the CLI](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
 * [How do I fix authorization issues when creating or updating a workspace?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
 
-* [How can I use {{site.data.keyword.bpshort}} services with a test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
+* [How to use {{site.data.keyword.bpshort}} services with a test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
 * [How to limit Git repo folder cloning](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
-* [How do I delete a workspace when the delete fails](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
+* [How to delete a workspace when the delete fails?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
-* [What is the best way to deploy a Helm chart using credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
+* [What is the best way to deploy a Helm chart by using credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
-* [How do I address job failures caused by maintenance activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
+* [How to address job failures that are caused by maintenance activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
 
 * [How do you set the Git release tag?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 
-* [Why do I get a 403 error instead of 404 error when using an invalid workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
+* [Why do I get a 403 error instead of a 404 error when using an invalid workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
 
 * [How can I enable Terraform debug logging](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
 
@@ -2281,7 +2285,7 @@ subcollection: schematics
 
 * [Can you enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
 
-* [How do I resolve errors listing workspaces](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
+* [How do I resolve errors in listing workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
 * [How can I use (IBM) GitLab repositories?](/docs/schematics?topic=schematics-workspaces-faq#gitlab-workspace-faq)
 
@@ -2307,7 +2311,7 @@ subcollection: schematics
 
 * [How can I initiate drift detection?](/docs/schematics?topic=schematics-workspaces-faq#drift-initiate-faq)
 
-* [Where can I see the status of a drift detection job ?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
+* [Where can I see the status of a drift detection job?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
 
 * [Can I `interrupt` or `terminate` running jobs?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
 
@@ -2319,9 +2323,9 @@ subcollection: schematics
 
 * [Are sensitive values in the state file encrypted?](/docs/schematics?topic=schematics-workspaces-faq#encrypt-state-file)
 
-* [Why do workspace variables defined by using CLI throw 400 errors?](/docs/schematics?topic=schematics-workspaces-faq#wks-list-var)
+* [Why do workspace variables that are defined by using CLI throw 400 errors?](/docs/schematics?topic=schematics-workspaces-faq#wks-list-var)
 
-* [Can I update the Terraform version (`TF_VERSION`) using a `JSON` file?](/docs/schematics?topic=schematics-workspaces-faq#tf-version-update)
+* [Can you update the Terraform version (`TF_VERSION`) using a `JSON` file?](/docs/schematics?topic=schematics-workspaces-faq#tf-version-update)
 
 * [Can start with a new Terraform state file on each job run?](/docs/schematics?topic=schematics-workspaces-faq#wks-job-trigger)
 

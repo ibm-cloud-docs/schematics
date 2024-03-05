@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-03-05"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -18,7 +18,7 @@ subcollection: schematics
 
 Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr). {: note}
 
-Performing post-configuration of deployed resources using workspace and action jobs requires IP network access to the resources private cloud network zones. Typically these private networks will be protected using a firewall or VPC access control policies. To allow the {{site.data.keyword.bpshort}} hosted instances of Terraform and Ansible to access these zones, firewall or VPC access policies must be configured to permit access to the {{site.data.keyword.bpshort}} originating IP addresses. 
+Performing post-configuration of deployed resources using workspace and action jobs requires IP network access to the resources private cloud network zones. Typically these private networks are protected using a firewall or VPC access control policies. To allow the {{site.data.keyword.bpshort}} hosted instances of Terraform and Ansible to access these zones, firewall or VPC access policies must be configured to permit access to the {{site.data.keyword.bpshort}} originating IP addresses. 
 
 Typically post-configuration is performed through SSH as illustrated with [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions) performing configuration operations over SSH using Ansible. With Ansible a bastion host must be configured to enable secure SSH access. Refer to the [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview) documentation for details of the required VPC network configuration and bastion host setup. 
 

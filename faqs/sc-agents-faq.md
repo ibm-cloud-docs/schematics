@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-03-05"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -51,7 +51,7 @@ Agent service execution:
 {: faq}
 {: support}
 
-You can install only one agent on the {{site.data.keyword.containerlong_notm}} cluster. Additional clusters are required to deploy additional agents. If you attempt to install more than one agent on a cluster, the deploy job will fail with a namespace conflict error.
+You can install only one agent on the {{site.data.keyword.containerlong_notm}} cluster. Additional clusters are required to deploy additional agents. If you attempt to install more than one agent on a cluster, the deploy job fails with a namespace conflict error.
 
 ## What Terraform versions are supported with agents? 
 {: #faqs-agent-terraform-versions}
@@ -102,7 +102,7 @@ Currently, you can assign any number of workspaces to an agent. The workspace jo
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} Agent can perform three Git downloads, workspace jobs (Terraform commands), and action jobs (Ansible playbooks) in parallel. Any additional jobs are queued and will run when prior jobs completes execution.
+{{site.data.keyword.bpshort}} Agent can perform three Git downloads, workspace jobs (Terraform commands), and action jobs (Ansible playbooks) in parallel. Any additional jobs are queued and runs when prior jobs completes execution.
 
 ## What is the default polling interval for agents?
 {: #faqs-agent-poll-interval}
@@ -116,9 +116,9 @@ Currently, you can assign any number of workspaces to an agent. The workspace jo
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} Agent relax the timeout limitation for `local-exec`, `remote-exec` and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilisation by all users. No duration is applied for jobs executed on agents. Long job execution times needs more user cluster capacity and worker nodes to ensure timely execution of all cluster jobs.
+{{site.data.keyword.bpshort}} Agent relax the timeout limitation for `local-exec`, `remote-exec` and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilization by all users. No duration is applied for jobs executed on agents. Long job execution times needs more user cluster capacity and worker nodes to ensure timely execution of all cluster jobs.
 
-It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started#terraform-version-upgrade1x-process) for long running jobs performing software installation tasks.
+It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started#terraform-version) for long running jobs performing software installation tasks.
 
 ## What is the difference between `agent-location` and `location` flag in agent service?
 {: #faqs-agent-diff-location}
@@ -141,9 +141,9 @@ Yes, an agent can run workspace or actions jobs associated with any resource gro
 {: faq}
 {: support}
 
-Agents deployments are associated with a {{site.data.keyword.bpshort}} home region and geo for job execution. They can only execute workspace or action jobs defined in the same home geo such as, North America, or Europe.
+Agents deployments are associated with a {{site.data.keyword.bpshort}} home region for job execution. They can only execute workspace or action jobs defined in the same region such as, `North America`, or `Europe`.
 
-The Agent periodically polls its home {{site.data.keyword.bpshort}} region to fetch and run jobs. It can only execute workspace or action jobs defined for the geo containing its home region. For example, an agent is deployed on a user cluster in Sydney is configured to with `eu-de` as it’s home location. The agent polls for jobs in the Europe geo, containing both the `eu-de` and `eu-gb` regions. To deploy resources using the Sydney agent, workspaces or actions must be created in the `eu-de` or `eu-gb` regions. 
+The Agent periodically polls its home {{site.data.keyword.bpshort}} region to fetch and run jobs. It can only execute workspace or action jobs defined for the region containing its home region. For example, an agent is deployed on a user cluster in Sydney is configured to with `eu-de` as it’s home location. The agent polls for jobs in the Europe geo, containing both the `eu-de` and `eu-gb` regions. To deploy resources using the Sydney agent, workspaces or actions must be created in the `eu-de` or `eu-gb` regions. 
 
 ## Is it possible to use an agent to execute jobs for multiple accounts?
 {: #faqs-agent-register}
@@ -157,9 +157,9 @@ No, agents are associated with a single parent {{site.data.keyword.bpshort}} acc
 {: faq}
 {: support}
 
-Yes. Workspaces and actions are selected by policy to execute on agents. A {{site.data.keyword.bpshort}} `agent-selection-policy` will assign existing (or new) workspaces or actions to run on an target agent, if they match the policy attributes for tags, resource-group, location.   
+Yes. Workspaces and actions are selected by policy to execute on agents. A {{site.data.keyword.bpshort}} `agent-selection-policy` assigns existing (or new) workspaces or actions to run on an target agent, if they match the policy attributes for tags, resource-group, location.   
 
-For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rules to pick `Agent-1` when the `tag == dev`. Later, the workspace job such as plan, apply, update will be dynamically routed to run on `Agent-1`.
+For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rules to pick `Agent-1` when the `tag == dev`. Later, the workspace job such as plan, apply, update are dynamically routed to run on `Agent-1`.
 
 ## What IAM permissions needed to deploy an agent?
 {: #faqs-agent-permission}
@@ -374,10 +374,10 @@ Perform this step only if an agent does not have metadata.
 {: important}
 
 ```curl
-curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>'
-    -H 'Authorization: Bearer <token\>'
+curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id>'
+    -H 'Authorization: Bearer <token>'
     -H 'X-Feature-Agents: true'
-    -H 'refresh_token: <refresh_token\>'
+    -H 'refresh_token: <refresh_token>'
     -d '{
 "agent_metadata": [
         {

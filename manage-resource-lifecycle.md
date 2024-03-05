@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-04"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -22,7 +22,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud}} resources using {{site.da
 {: #deploy-resources}
 {: ui}
 
-Deploy your Terraform configs to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}. 
+Deploy your `Terraform configs` to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 **Before you begin**: 
@@ -39,7 +39,7 @@ Deploy your Terraform configs to provision, or modify your {{site.data.keyword.c
 3. In the **Details** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. Optional: Review the variables that you set for your workspace. The values of your variables are used where ever the you reference the variable in your Terraform template.
 5. Click **Generate plan** to create a Terraform execution plan. After you click this button, the workspace **Jobs** page opens and {{site.data.keyword.bpshort}} runs a `terraform plan` to compare the state of the resources that you already provisioned in your {{site.data.keyword.cloud_notm}} account with the resources that you want to provision with your Terraform template. 
-6. Click **Jobs** to review the log of your execution plan. The execution plan includes a summary of the {{site.data.keyword.cloud_notm}} resources that will be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your Terraform configuration files, you can review the error message in the log file. 
+6. Click **Jobs** to review the log of your execution plan. The execution plan includes a summary of the {{site.data.keyword.cloud_notm}} resources that creates, modifies, or deletes to achieve the state that you described in your Terraform template. If you have syntax errors in your Terraform configuration files, you can review the error message in the log file. 
 7. Review available service plans and pricing information for each of the {{site.data.keyword.cloud_notm}} resources that {{site.data.keyword.bpshort}} is about to create or change. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first. 
 8. When you are ready, apply your Terraform template by clicking **Apply plan**. This action equals the `terraform apply` command. After you click the button, {{site.data.keyword.bplong_notm}} starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision or modify, this process might take couple of minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. After all updates are applied, the state of your {{site.data.keyword.cloud_notm}} resources is stored in a Terraform state file that {{site.data.keyword.bplong_notm}} uses to determine what resources exist in your {{site.data.keyword.cloud_notm}} account. 
 
@@ -56,7 +56,7 @@ Deploy your Terraform configs to provision, or modify your {{site.data.keyword.c
 To update {{site.data.keyword.cloud_notm}} resources, update your Terraform template with the required changes that must be performed on the resources.  
 {: shortdesc}
 
-Depending on the configuration change, Terraform may not be able to update your resource in place. Instead, Terraform need to first delete teh resource and create a new resource. If Terraform identifies a resource to be removed and recreated, make sure that you do not interrupt a working environment, or delete data. 
+Depending on the configuration change, Terraform may not be able to update your resource in place. Instead, Terraform need to first delete the resource and create a new resource. If Terraform identifies a resource to be removed and recreated, make sure that you do not interrupt a working environment, or delete data. 
 {: note}
 
 To update your resources: 
@@ -160,7 +160,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, find the workspace that includes the resources that you want to delete. 
 2. Click **Actions...** tab and select **Destroy resources** option. 
-3. Type your workspace name in **Type `workspace_name` to confirm** text box. Note that destroying resources will remove the resources from your workspace and {{site.data.keyword.cloud_notm}}. This action cannot be undone.
+3. Type your workspace name in **Type `workspace_name` to confirm** text box. Note that destroying resources removes the resources from your workspace and {{site.data.keyword.cloud_notm}}. This action cannot be undone.
 4. Click **Destroy** button.
 5. From the navigation, select **Jobs** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
 6. After successful job execution, from the navigation, select **Resources** and verify that your resources are removed. 
@@ -172,7 +172,7 @@ After the removal of your resources is complete, the {{site.data.keyword.bpshort
 {: #deploy-resources-cli}
 {: cli}
 
-Deploy your Terraform configs to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}. 
+Deploy your `Terraform configs` to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 **Before you begin**: 
@@ -202,7 +202,7 @@ Deploy your Terraform configs to provision, or modify your {{site.data.keyword.c
 To update {{site.data.keyword.cloud_notm}} resources, update your Terraform template with the required changes that must be performed on the resources. 
 {: shortdesc}
 
-Depending on the configuration change, Terraform may not be able to update your resource in place. Instead, Terraform need to first delete teh resource and create a new resource. If Terraform identifies a resource to be removed and recreated, make sure that you do not interrupt a working environment, or delete data. 
+Depending on the configuration change, Terraform may not be able to update your resource in place. Instead, Terraform need to first delete the resource and create a new resource. If Terraform identifies a resource to be removed and recreated, make sure that you do not interrupt a working environment, or delete data. 
 {: note}
 
 To update your resources: 

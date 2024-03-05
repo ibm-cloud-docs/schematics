@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-05"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -293,7 +293,7 @@ Output
                         },
                         {
                             "default": "0",
-                            "description": "How long our local-exec will take a nap.",
+                            "description": "How long our local-exec takes a nap.",
                             "name": "sleepy_time",
                             "type": "string"
                         }

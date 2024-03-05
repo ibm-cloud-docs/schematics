@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-03-05"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -54,13 +54,13 @@ With agents you are in control of the network security policies of the Kubernete
 
 {{site.data.keyword.bpshort}} is a multi-tenant service that supports concurrent usage by many users. The multi-tenant model imposes some restrictions to maintain fair usage across all users and maintain network isolation between users.  
 
-The following are some of the benefits of using agents with {{site.data.keyword.bpshort}}:
+The following are some benefits of using agents with {{site.data.keyword.bpshort}}:
 
 - **Agents extend the benefits of using the [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics) along with [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started):** to provision and configure hybrid cloud resources across multiple cloud providers.
 - **Agents give users their own execution queues.** With the multi-tenant shared {{site.data.keyword.bpshort}} service, jobs are placed in a shared queue for all users. Jobs that run on the agents waits in the shared queue and starts sooner. In other words, other tenants workloads do not affect your job performance and response time.
 - **If your automation needs special software or versions, or requires more capacity (CPU, memory) to run:** The multi-tenant {{site.data.keyword.bpshort}} service does not address your requirements. Agents can be deployed and configured to use dedicated infrastructure to run your automation that can be scaled up or down depending on the capacity needs. In a future release, agent images can be extended to include or use your own automation software and versions along with automation engine that is provided by the {{site.data.keyword.bpshort}} runtime.
 - **The multi-tenanted {{site.data.keyword.bpshort}} service uses network access policies:** that's common to all users. Agents enable you to implement fine-gained control over the network access policies when performing workspace or actions jobs that access your private network resources. You can configure the [ingress or egress](/docs/containers?topic=containers-vpc-kube-policies) rules of the agent cluster and [VPC security policies](/docs/vpc?topic=vpc-security-in-your-vpc&interface=ui) that are used by agents executing your jobs to connect to your private cloud infrastructure.
-- **Agents relieves several of the restrictions of running in a shared service:** that is necessary to ensure fair usage of the shared service. {{site.data.keyword.bpshort}} agents relax the timeout limitation for local-exec, remote-exec, and Ansible playbook execution. The timeout limitations in the multi-tenant service are removed to ensure fair service utilisation by all users. No duration is applied for jobs ran on agents.
+- **Agents relieves several of the restrictions of running in a shared service:** that is necessary to ensure fair usage of the shared service. {{site.data.keyword.bpshort}} agents relax the timeout limitation for local-exec, remote-exec, and Ansible playbook execution. The timeout limitations in the multi-tenant service are removed to ensure fair service utilization by all users. No duration is applied for jobs ran on agents.
 
 ## Next steps
 {: #nextsteps-agentb1-arch}

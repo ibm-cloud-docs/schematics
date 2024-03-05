@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-06-09"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics, generate plan, schematics workspace generate plan
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 # The Terraform script that contains Kubernetes cluster namespaces fails as connection refused?
 {: #wks-connection-refuse}
 
-When you `Generate Plan` for the Terraform script that contains cluster, used to work properly three months ago, but now the same Terraform script gets the following error:
+When you `Generate Plan` for the Terraform script that contains cluster, used to work properly three months ago, but now the same Terraform script gets the following error.
 {: tsSymptoms}
 
 ```text

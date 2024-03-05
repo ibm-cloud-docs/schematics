@@ -42,7 +42,7 @@ CBR rules do not apply to resource and service provisioning requests, only to th
 Currently, CBR is supported by {{site.data.keyword.bpshort}} public endpoints in both `US` and `EU` regions. CBR support with {{site.data.keyword.bpshort}} private endpoints is limited to `EU` region only.
 {: note}
 
-If a CBR rule is blocking access to {{site.data.keyword.bpshort}}, the  workspace page cannot list any workspaces. Other operations like workspace create, plan, and apply requests that are blocked by CBR will be failed as access denied errors.
+If a CBR rule is blocking access to {{site.data.keyword.bpshort}}, the  workspace page cannot list any workspaces. Other operations like workspace create, plan, and apply requests that are blocked by CBR are failed as access denied errors.
 {: important}
 
 ## Understanding network zones
@@ -79,7 +79,7 @@ After you create zones, they can also be [updated](/apidocs/context-based-restri
 ## Understanding network rules
 {: #cbr-network-rules}
 
-After you create your zones, you can apply the zones to {{site.data.keyword.bpshort}} to control access by creating rules. When you add zones to a rule, you can choose from the available [types of endpoints](/docs/account?topic=account-context-restrictions-whatis#context-restrictions-endpint-type) that are relevant to how you will access {{site.data.keyword.bpshort}}. 
+After you create your zones, you can apply the zones to {{site.data.keyword.bpshort}} to control access by creating rules. When you add zones to a rule, you can choose from the available [types of endpoints](/docs/account?topic=account-context-restrictions-whatis#context-restrictions-endpint-type) that are relevant to how you access {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 

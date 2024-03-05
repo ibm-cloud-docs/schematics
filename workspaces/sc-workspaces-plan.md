@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-05"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Running a workspace plan
 {: #sch-plan-wks}
 
-A workspace plan, performs a Terraform plan to determine the {{site.data.keyword.cloud}} resources that will be created, modified or deleted on any subsequent workspace apply operation. Run the {{site.data.keyword.bpshort}} plan job against your workspace. You can use the plan summary logs to verify any resource changes before the template is applied. 
+A workspace plan, performs a Terraform plan to determine the {{site.data.keyword.cloud}} resources that are created, modified or deleted on any subsequent workspace apply operation. Run the {{site.data.keyword.bpshort}} plan job against your workspace. You can use the plan summary logs to verify any resource changes before the template is applied. 
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
@@ -32,7 +32,7 @@ A workspace plan, performs a Terraform plan to determine the {{site.data.keyword
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
-- Run a {{site.data.keyword.bpshort}} plan job against your workspace. An plan job calculates which resources will be provisioned, modified, or removed. This process might take a few minutes. 
+- Run a {{site.data.keyword.bpshort}} plan job against your workspace. An plan job calculates which resources are provisioned, modified, or removed. This process might take a few minutes. 
 
 During workspace plan execution, you cannot edit your workspace. 
 {: note}
@@ -51,7 +51,7 @@ During workspace plan execution, you cannot edit your workspace.
 {: #verify-wks-plan-ui}
 
 1. Click on your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} 
-2. Click **Jobs** to see the job execution results. It will be listed under the heading `Generate Plan`
+2. Click **Jobs** to see the job execution results. It are listed under the heading `Generate Plan`
 3. On a successful plan, the cost for the proposed changes is reviewed by clicking on the `Cost Estimate` button. For more information, see [Infrastructure cost estimation](/docs/schematics?topic=schematics-cost-estimation).
 
 ## Generate a workspace plan using the CLI

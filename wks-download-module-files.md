@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
 
@@ -17,7 +17,7 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} and Terraform support downloading Terraform templates and modules from a variety of repository types: Terraform Registry, GitHub, GitLab, S3/COS buckets, IBM Catalog, Artifactory etc. See [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources#modules-in-package-sub-directories){: external} in the Terraform documentation. 
 
-When using {{site.data.keyword.bpshort}}, the downloading of Terraform templates and modules prior to performing a Terraform Plan or Apply operation is a two step process. At workspace create time, {{site.data.keyword.bpshort}} will clone only the repository containing your template and any embedded modules in sub-folders. Any modules referenced using the module `source` parameter are not downloaded at workspace create time. Credentials to access the templates/configs in private repositories, must be passed to {{site.data.keyword.bpshort}} at workspace create time. 
+When using {{site.data.keyword.bpshort}}, the downloading of Terraform templates and modules prior to performing a Terraform Plan or Apply operation is a two step process. At workspace create time, {{site.data.keyword.bpshort}} clones only the repository containing your template and any embedded modules in sub-folders. Any modules referenced using the module `source` parameter are not downloaded at workspace create time. Credentials to access the templates/configs in private repositories, must be passed to {{site.data.keyword.bpshort}} at workspace create time. 
 
 Modules referenced with the `source` parameter are downloaded during the `terraform init` phase of a plan or apply operation. The `terraform init` command parses the template files and downloads any modules from the repo's referenced by the `source` field. Modules residing in private repositories require additional credentials to be passed to Terraform. These credentials are defined and passed separately to those used by {{site.data.keyword.bpshort}}. 
 
