@@ -66,6 +66,7 @@ toc:
                                                     - workspaces/sc-workspaces-update.md
                                                     - workspaces/sc-workspaces-display.md
                                                     - workspaces/sc-workspaces-delete.md
+                                                    - workspaces/sc-migrate-terraform-tofu.md
                                                     - job-download-file.md
                                                     - job-force-stop.md
                                                     - workspaces/sc-workspaces-states.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-10"
 
 keywords: schematics
 subcollection: schematics
@@ -1047,6 +1047,20 @@ subcollection: schematics
 * [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#delete-wks-terraform)
 
 * [Next steps](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#sch-delete-wks-nextsteps)
+
+[Migrating Terraform template to Tofu by using Schematics](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#sch-migrate-tfwks-tofuwks)
+
+* [Before you begin by using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#prerequisites-create-cli)
+
+* [Migrate by using {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli)
+
+* [Rollback to Terraform in {{site.data.keyword.bpshort}} by using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli)
+
+* [Before you begin by using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#prerequisites-create-api)
+
+* [Migrate by using {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
+
+* [Rollback to Terraform in {{site.data.keyword.bpshort}} by using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
