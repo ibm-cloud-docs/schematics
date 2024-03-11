@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-10"
+lastupdated: "2024-03-11"
 
 keywords: schematics
 subcollection: schematics
@@ -277,13 +277,17 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [March 2024](/docs/schematics?topic=schematics-schematics-relnotes#March-2024)
+
+    * Review the release notes for March 2024.
+
+    * [11 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar1124)
+
 * [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
 
     * Review the release notes for February 2024.
 
-    * [28 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2824)
-
-        * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`, `v1.4` template from 2nd week of April 2024.
+    * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`, `v1.4` template from 2nd week of April 2024.
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
@@ -910,7 +914,11 @@ subcollection: schematics
 
 * [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-cli)
 
+    * [Creating a workspace to suppport Tofu using CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli)
+
 * [Creating a workspace using the API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
+
+    * [Creating a workspace to suppport Tofu using the API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
 
 * [Creating a workspace using a Terraform template](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
 
@@ -1048,19 +1056,19 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#sch-delete-wks-nextsteps)
 
-[Migrating Terraform template to Tofu by using Schematics](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#sch-migrate-tfwks-tofuwks)
+[Migrating Terraform template to support Tofu](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#sch-migrate-tfwks-tofuwks)
 
-* [Before you begin by using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#prerequisites-create-cli)
+* [Before you begin using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#prerequisites-create-cli)
 
-* [Migrate by using {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli)
+* [Migrate using {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli)
 
-* [Rollback to Terraform in {{site.data.keyword.bpshort}} by using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli)
+* [Rollback to Terraform using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli)
 
-* [Before you begin by using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#prerequisites-create-api)
+* [Before you begin using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#prerequisites-create-api)
 
-* [Migrate by using {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
+* [Migrate using {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
 
-* [Rollback to Terraform in {{site.data.keyword.bpshort}} by using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
+* [Rollback to Terraform using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 

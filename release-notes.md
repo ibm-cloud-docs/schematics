@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-11"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -26,17 +26,27 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
 {: important}
 
+## March 2024
+{: #March-2024}
+
+Review the release notes for March 2024.
+{: shortdesc}
+
+### 11 March 2024
+{: #schematics-mar1124}
+{: release-note}
+
+:   {{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics). See the following content to explore Tofu by using {{site.data.keyword.bpshort}}.
+    - Create workspace by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
+    - Migrate Terraform template to Tofu by using [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
+    - Rollback to Terraform by using [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
+    - For more information, see Tofu related [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq).
+
 ## February 2024
 {: #February-2024}
 
 Review the release notes for February 2024.
 {: shortdesc}
-
-
-
-### 28 February 2024
-{: #schematics-feb2824}
-{: release-note}
 
 
 
