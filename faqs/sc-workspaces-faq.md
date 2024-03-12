@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -640,4 +640,25 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     ```
     {: pre}
 
+## How to use Tofu in {{site.data.keyword.bpshort}}?
+{: #tofu-usage-faq}
+{: faq}
+{: support}
 
+Refer to the {{site.data.keyword.bpshort}} examples to test by using [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api) and CLI.
+
+
+
+## Does Schematics support both Terraform and Tofu?
+{: #tofu-and-terraform-support-faq}
+{: faq}
+{: support}
+
+Yes, {{site.data.keyword.bpshort}} supports both `Terraform v1.5` and `Tofu v1.6`. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+
+## What is the difference between Terraform and Tofu?
+{: #tofu-vs-terraform-faq}
+{: faq}
+{: support}
+
+[`Tofu v1.6`](https://opentofu.org/){: external} is an open source project and feature-wise, and is claimed to be equivalent to `Terraform 1.6.x`.
