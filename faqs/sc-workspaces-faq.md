@@ -645,7 +645,7 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
 {: faq}
 {: support}
 
-See {{site.data.keyword.bpshort}} workspace creation to suppport Tofu by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) or [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api). For more information, see the [release note](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar1224).
+Refer to, {{site.data.keyword.bpshort}} workspace creation to suppport Tofu by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) or [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api). For more information, see the [release note](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar1224).
 
 
 
