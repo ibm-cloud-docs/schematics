@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-11"
+lastupdated: "2024-03-12"
 
 keywords: schematics
 subcollection: schematics
@@ -281,7 +281,9 @@ subcollection: schematics
 
     * Review the release notes for March 2024.
 
-    * [11 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar1124)
+    * [12 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar1224)
+
+        * {{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics).
 
 * [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
 
@@ -1056,7 +1058,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#sch-delete-wks-nextsteps)
 
-[Migrating Terraform template to support Tofu](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#sch-migrate-tfwks-tofuwks)
+[Migrating Terraform template to Tofu](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#sch-migrate-tfwks-tofuwks)
 
 * [Before you begin using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#prerequisites-create-cli)
 

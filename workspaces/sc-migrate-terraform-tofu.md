@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-11"
+lastupdated: "2024-03-12"
 
 keywords: schematics workspaces, workspaces, migrate terraform tofu, tofu, 
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migrating Terraform template to support Tofu
+# Migrating Terraform template to Tofu
 {: #sch-migrate-tfwks-tofuwks}
 
-A customer is using Terraform v1.4.x template since 3 years. Now, the customer says that the organization is moving to Tofu v1.6.x and the customer wants to learn how to use Tofu and  migrate Terraform template by using {{site.data.keyword.bpshort}}. The following steps allow the customer to migrate the Terraform template to Tofu by using {{site.data.keyword.bpshort}} CLI, and API.
+A customer is using Terraform v1.4.x template since two years. Now, the customer says that the organization is moving to Tofu v1.6.x and the customer wants to learn how to use Tofu and  migrate Terraform template by using {{site.data.keyword.bpshort}}. The following steps allow the customer to migrate the Terraform template to Tofu by using {{site.data.keyword.bpshort}} CLI, and API.
 {: shortdesc}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-11"
+lastupdated: "2024-03-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,15 +32,16 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2024.
 {: shortdesc}
 
-### 11 March 2024
-{: #schematics-mar1124}
+### 12 March 2024
+{: #schematics-mar1224}
 {: release-note}
 
-:   {{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics). See the following content to explore Tofu by using {{site.data.keyword.bpshort}}.
-    - Create workspace by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
+{{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics).
+:   Use following content to explore the Tofu usage
+    - Create workspace by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
     - Migrate Terraform template to Tofu by using [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
     - Rollback to Terraform by using [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
-    - For more information, see Tofu related [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq).
+    - For more information, see Tofu related [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq)
 
 ## February 2024
 {: #February-2024}
@@ -85,7 +86,6 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.14](/docs/schematics?topic=schematics-cli_version-releases) released.
-
 
 
 
