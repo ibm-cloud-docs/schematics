@@ -285,6 +285,8 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics).
 
+        * For more information about Tofu, see [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq).
+
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
@@ -1070,11 +1072,11 @@ subcollection: schematics
 
 * [Migrate using {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli)
 
-* [Rollback your workspace using Tofu to Terraform](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-tfrm)
-
 * [Before you begin using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#prerequisites-create-api)
 
 * [Migrate using {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
+
+* [Rollback your workspace using Tofu to Terraform](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-tfrm)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
