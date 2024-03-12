@@ -37,10 +37,10 @@ Review the release notes for March 2024.
 {: release-note}
 
 {{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics).
-:   Use following content to explore the Tofu usage
-    - Create workspace by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
-    - Migrate from workspace using Terraform to Tofu through [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
-    - Rollback from Tofu to Terraform by using [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
+:   Use following content to explore the Tofu usage to
+    - Create {{site.data.keyword.bpshort}} workspace through [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
+    - Migrate workspace using Terraform to Tofu through [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
+    - Rollback workspace using Tofu to Terraform through [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#rollback-wks-tf-cli)
     - For more information, see Tofu related [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq)
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 

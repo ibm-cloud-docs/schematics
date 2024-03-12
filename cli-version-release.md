@@ -20,7 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.19 | 12 March 2024 | {{site.data.keyword.bpshort}} supports [Tofu v1.6.x](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar1224) engine.|
+| 1.12.19 | 12 March 2024 | {{site.data.keyword.bpshort}} CLI supports [Tofu v1.6.x](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar1224).|
 | 1.12.18 | 08 March 2024 | Display the Terraform deprecation warning message during workspace creation, Support for agent infrastructure update is removed, and fixed `index out of range` error by using `ibmcloud schematics state list` command.|
 | 1.12.17 | 14 February 2024 | {{site.data.keyword.bpshort}} plug-in installation supports Cloud Shell, and [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) command now supports the Cloud Shell commands.|
 | 1.12.16 | 7 February 2024 | [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=api#schematics-workspace-list) supports caching for API versions. `terraform_v1.2`, `terraform_v1.3`, `terraform_v1.4` depreciation message are populated for creating the [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=api#schematics-workspace-new) templates.|

@@ -922,13 +922,13 @@ subcollection: schematics
 
 * [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-cli)
 
-    * [Creating a workspace to suppport Tofu using CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli)
+    * [Creating workspace using Tofu through CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli)
 
-* [Creating a workspace using the API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
+* [Creating a workspace using API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
 
-    * [Creating a workspace to suppport Tofu using the API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
+    * [Creating workspace using Tofu through API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
 
-* [Creating a workspace using a Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
+* [Creating workspace using Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
 
 * [Next steps](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#sch-create-wks-nextsteps)
 
@@ -1070,13 +1070,11 @@ subcollection: schematics
 
 * [Migrate using {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli)
 
-* [Rollback to Terraform using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-cli)
+* [Rollback your workspace using Tofu to Terraform](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#rollback-wks-tf-tfrm)
 
 * [Before you begin using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#prerequisites-create-api)
 
 * [Migrate using {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
-
-* [Rollback to Terraform using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-api)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 

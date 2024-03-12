@@ -654,7 +654,7 @@ Refer to, {{site.data.keyword.bpshort}} workspace creation to suppport Tofu by u
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpshort}} supports both `Terraform v1.5` and `Tofu v1.6`. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+Yes, {{site.data.keyword.bpshort}} supports both `Terraform` and `Tofu`. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 ## What is the difference between Terraform and Tofu?
 {: #tofu-vs-terraform-faq}
