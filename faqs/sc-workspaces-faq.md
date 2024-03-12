@@ -668,4 +668,4 @@ Yes, {{site.data.keyword.bpshort}} supports both `Terraform` and `Tofu`. For mor
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpshort}} Workspace supports [migration](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks) and [rollback](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#rollback-wks-tf-cli) between the Terraform and Tofu.
+Yes, {{site.data.keyword.bpshort}} Workspace supports [migration](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks) and [rollback](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#rollback-wks-tf-tfrm) between the Terraform and Tofu.
