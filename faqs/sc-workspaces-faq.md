@@ -662,3 +662,10 @@ Yes, {{site.data.keyword.bpshort}} supports both `Terraform v1.5` and `Tofu v1.6
 {: support}
 
 [`Tofu v1.6`](https://opentofu.org/){: external} is an open source project and feature-wise is claimed to be equivalent to `Terraform 1.6.x`.
+
+## Does the {{site.data.keyword.bpshort}} Workspace support migration and rollback between Terraform and Tofu?
+{: #migrate-tofu-vs-terraform-faq}
+{: faq}
+{: support}
+
+Yes, {{site.data.keyword.bpshort}} Workspace supports [migration](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks) and [rollback](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#rollback-wks-tf-cli) between the Terraform and Tofu.

@@ -2372,6 +2372,8 @@ subcollection: schematics
 
 * [What is the difference between Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
 
+* [Does the {{site.data.keyword.bpshort}} Workspace support migration and rollback between Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#migrate-tofu-vs-terraform-faq)
+
 
 ## Troubleshooting
 {: #sitemap_troubleshooting}
