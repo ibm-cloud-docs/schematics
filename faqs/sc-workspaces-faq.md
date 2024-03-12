@@ -645,7 +645,7 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
 {: faq}
 {: support}
 
-Refer to the {{site.data.keyword.bpshort}} examples to test by using [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api) and CLI.
+See {{site.data.keyword.bpshort}} workspace creation to suppport Tofu by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) or [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api). For more information, see the [release note](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar1224).
 
 
 
@@ -661,4 +661,4 @@ Yes, {{site.data.keyword.bpshort}} supports both `Terraform v1.5` and `Tofu v1.6
 {: faq}
 {: support}
 
-[`Tofu v1.6`](https://opentofu.org/){: external} is an open source project and feature-wise, and is claimed to be equivalent to `Terraform 1.6.x`.
+[`Tofu v1.6`](https://opentofu.org/){: external} is an open source project and feature-wise is claimed to be equivalent to `Terraform 1.6.x`.

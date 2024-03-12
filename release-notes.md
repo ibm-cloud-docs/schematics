@@ -46,8 +46,8 @@ Review the release notes for March 2024.
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.19](/docs/schematics?topic=schematics-cli_version-releases) released.
 
-### 06 March 2024
-{: #schematics-mar0724}
+### 08 March 2024
+{: #schematics-mar0824}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 

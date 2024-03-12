@@ -287,7 +287,7 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-    * [06 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0724)
+    * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 

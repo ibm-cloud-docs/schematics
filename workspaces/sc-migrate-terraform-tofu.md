@@ -32,19 +32,19 @@ A customer uses {{site.data.keyword.bpshort}} workspace that supports `Terraform
 2. Make sure that you apply all the changes by using [`ibm schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply). 
 3. The [`ibm schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) must result as `no infrastructure changes`. If [`ibm schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) results as `pending changes`, you might experience unexpected issues when migrating your workspace using the Terraform state file to Tofu.
 4. Backup your existing Terraform state file
-    a. Take a backup of your Terraform state file and save as a file by using [`ibmcloud schematics workspace get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get) command to fetch the `TEMPLATE_ID` from the workspace response. 
+    a. Take a backup of your Terraform state file and save as a file by using [`ibmcloud schematics workspace get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get) command to fetch the `TEMPLATE_ID` from the workspace response.
 
-        ```sh
-        ibmcloud schematics workspace get --id WORKSPACE_ID
-        ```
-        {: pre}
+    ```sh
+    ibmcloud schematics workspace get --id WORKSPACE_ID
+    ```
+    {: pre}
 
     b. Run [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command to view the details of the state file.
 
-        ```sh
-        ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
-        ```
-        {: pre}
+    ```sh
+    ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
+    ```
+    {: pre}
 
 ## Migrate using {{site.data.keyword.bpshort}} CLI
 {: #migrate-wks-tofu-cli}
@@ -94,7 +94,7 @@ Follow the steps to migrate the {{site.data.keyword.bpshort}} workspace using Te
     ```
     {: codeblock}
 
-2. Run the [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) by using `rollback-terraform.json` as shown in the example.
+2. Run the [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) by using `rollback-terraform.json` file and state file.
 
     ```sh
     ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH 
@@ -142,7 +142,7 @@ Follow the steps to migrate the {{site.data.keyword.bpshort}} workspace using Te
     ]
     }
     ```
-    {: pre}
+    {: codeblock}
 
 2. Run the [Update workspace](/apidocs/schematics/schematics#replace-workspace).
 
