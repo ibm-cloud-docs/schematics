@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -107,6 +107,7 @@ The use of Git submodules is supported only for cloned Git repos. When {{site.da
 {: #rate-limit}
 {: faq}
 {: support}
+
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per region, and per user. The regions are `us-east`, `us-south`, `eu-gb`, or `eu-de`. Wait before calling the command again.
 
 ## Why are jobs waiting to be run placed in a queue?
@@ -364,16 +365,16 @@ No, you cannot [delete](/docs/schematics?topic=schematics-sch-delete-wks) and [d
 
 Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group. 
 
-For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B. 
+For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B.
 
-## What is the benefit by using IAM access group?
+## What is the benefit of using IAM access group?
 {: #faq-iam-accessgrp-benefit}
 {: faq}
 {: support}
 
-To minimize the number of IAM access policies you need to assign to an individual user, you can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
+To minimize the number of IAM access policies you need to assign to an individual user, you can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group.
 
-The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account. 
+The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account.
 
 <img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
 
