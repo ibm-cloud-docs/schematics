@@ -671,7 +671,7 @@ Review the release notes for November 2021.
 {: shortdesc}
 
 ### 30 November 2021
-{: #schematics-nov302021}
+{: #schematics-nov3021}
 {: release-note}
 
 Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
@@ -699,7 +699,7 @@ Review the release notes for October 2021.
 {: shortdesc}
 
 ### 22 October 2021
-{: #schematics-oct2021}
+{: #schematics-oct21}
 {: release-note}
 
 Onboarding Terraform templates to private catalog
@@ -721,7 +721,7 @@ Review the release notes for September 2021.
 {: shortdesc}
 
 ### 30 September 2021
-{: #schematics-sept302021}
+{: #schematics-sept3021}
 {: release-note}
 
 Inventory target feature support in {{site.data.keyword.bpshort}} actions API
@@ -752,7 +752,7 @@ Review the release notes for August 2021.
 {: shortdesc}
 
 ### 27 August 2021
-{: #schematics-aug272021}
+{: #schematics-aug2721}
 {: release-note}
 
 Workspace update command enhancement
@@ -765,7 +765,7 @@ Terraform v1.0 support
 :   For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
 
 ### 11 August 2021
-{: #schematics-aug112021}
+{: #schematics-aug1121}
 {: release-note}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform
@@ -778,7 +778,7 @@ Review the release notes for July 2021.
 {: shortdesc}
 
 ### 30 July 2021
-{: #schematics-jul302021}
+{: #schematics-jul3021}
 {: release-note}
 
 {{site.data.keyword.bplong_notm}} deprecates Terraform v0.11
@@ -789,7 +789,7 @@ Ansible v2.9.23 API and command-line support
 :   Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} action.
 
 ### 19 July 2021
-{: #schematics-jul192021}
+{: #schematics-jul1921}
 {: release-note}
 
 Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}
@@ -802,7 +802,7 @@ Review the release notes for June 2021.
 {: shortdesc}
 
 ### 30 June 2021
-{: #schematics-jun302021}
+{: #schematics-jun3021}
 {: release-note}
 
 Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
@@ -827,7 +827,7 @@ Review the release notes for May 2021.
 {: shortdesc}
 
 ### 26 May 2021
-{: #schematics-may262021}
+{: #schematics-may2621}
 {: release-note}
 
 Version constraints support in {{site.data.keyword.bplong_notm}}
@@ -846,7 +846,7 @@ Review the release notes for April 2021.
 {: shortdesc}
 
 ### 14 April 2021
-{: #schematics-apri142021}
+{: #schematics-apri1421}
 {: release-note}
 
 Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
@@ -859,7 +859,7 @@ Review the release notes for March 2021.
 {: shortdesc}
 
 ### 29 March 2021
-{: #schematics-mar142021}
+{: #schematics-mar1421}
 {: release-note}
 
 Terraform v0.14 support
@@ -872,7 +872,7 @@ Review the release notes for February 2021.
 {: shortdesc}
 
 ### 25 February 2021
-{: #schematics-feb252021}
+{: #schematics-feb2521}
 {: release-note}
 
 {{site.data.keyword.bpshort}} supports the ability to store the user-defined file
@@ -885,7 +885,7 @@ Allowed file extensions in {{site.data.keyword.bpshort}}
 :   {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=cli-schematics-cli-reference), and [view command-line commands](/docs/cli?topic=cli-schematics-cli-reference) in the CLI documentation.
 
 ### 12 February 2021
-{: #schematics-feb122021}
+{: #schematics-feb1221}
 {: release-note}
 
 Ansible open beta release
@@ -898,14 +898,14 @@ Review the release notes for January 2021.
 {: shortdesc}
 
 ### 29 January 2021
-{: #schematics-jan292021}
+{: #schematics-jan2921}
 {: release-note}
 
 Virtual Private Endpoint Gateways support
 :   {{site.data.keyword.bplong_notm}} supports Virtual Private Endpoint Gateways for secure connection. For more information, see [Virtual private endpoint gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-private-endpoints#endpoint-setup).
 
 ### 20 January 2021
-{: #schematics-jan202021}
+{: #schematics-jan2021}
 {: release-note}
 
 Terraform commands API support
@@ -918,7 +918,7 @@ command-line Commands
 :   {{site.data.keyword.bplong_notm}} supports command-line workspace and state commands such as [import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import), [show](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show), [state move](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv), [state remove](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm), [taint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint), and [`untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).
 
 ### 7 January 2021
-{: #schematics-jan072021}
+{: #schematics-jan0721}
 {: release-note}
 
 Multiple SDK support

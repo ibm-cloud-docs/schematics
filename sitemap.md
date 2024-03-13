@@ -617,7 +617,7 @@ subcollection: schematics
 
     * Review the release notes for November 2021.
 
-    * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov302021)
+    * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov3021)
 
         * Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
 
@@ -635,7 +635,7 @@ subcollection: schematics
 
     * Review the release notes for October 2021.
 
-    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2021)
+    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct21)
 
         * Onboarding Terraform templates to private catalog
 
@@ -649,7 +649,7 @@ subcollection: schematics
 
     * Review the release notes for September 2021.
 
-    * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept302021)
+    * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept3021)
 
         * Inventory target feature support in {{site.data.keyword.bpshort}} actions API
 
@@ -669,7 +669,7 @@ subcollection: schematics
 
     * Review the release notes for August 2021.
 
-    * [27 August 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug272021)
+    * [27 August 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2721)
 
         * Workspace update command enhancement
 
@@ -677,7 +677,7 @@ subcollection: schematics
 
         * {{site.data.keyword.bplong_notm}} support job queue logs enhancement
 
-    * [11 August 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug112021)
+    * [11 August 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1121)
 
         * {{site.data.keyword.bplong_notm}} deprecates older version of Terraform
 
@@ -685,7 +685,7 @@ subcollection: schematics
 
     * Review the release notes for July 2021.
 
-    * [30 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul302021)
+    * [30 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul3021)
 
         * {{site.data.keyword.bplong_notm}} deprecates Terraform v0.11
 
@@ -693,7 +693,7 @@ subcollection: schematics
 
         * Ansible v2.9.23 API and command-line support
 
-    * [19 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul192021)
+    * [19 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul1921)
 
         * Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}
 
@@ -701,7 +701,7 @@ subcollection: schematics
 
     * Review the release notes for June 2021.
 
-    * [30 June 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun302021)
+    * [30 June 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun3021)
 
         * Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
 
@@ -717,7 +717,7 @@ subcollection: schematics
 
     * Review the release notes for May 2021.
 
-    * [26 May 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may262021)
+    * [26 May 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may2621)
 
         * Version constraints support in {{site.data.keyword.bplong_notm}}
 
@@ -729,7 +729,7 @@ subcollection: schematics
 
     * Review the release notes for April 2021.
 
-    * [14 April 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apri142021)
+    * [14 April 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apri1421)
 
         * Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
 
@@ -737,7 +737,7 @@ subcollection: schematics
 
     * Review the release notes for March 2021.
 
-    * [29 March 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar142021)
+    * [29 March 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar1421)
 
         * Terraform v0.14 support
 
@@ -745,7 +745,7 @@ subcollection: schematics
 
     * Review the release notes for February 2021.
 
-    * [25 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb252021)
+    * [25 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2521)
 
         * {{site.data.keyword.bpshort}} supports the ability to store the user-defined file
 
@@ -753,7 +753,7 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation
 
-    * [12 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb122021)
+    * [12 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1221)
 
         * Ansible open beta release
 
@@ -761,11 +761,11 @@ subcollection: schematics
 
     * Review the release notes for January 2021.
 
-    * [29 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan292021)
+    * [29 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2921)
 
         * Virtual Private Endpoint Gateways support
 
-    * [20 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan202021)
+    * [20 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2021)
 
         * Terraform commands API support
 
@@ -773,7 +773,7 @@ subcollection: schematics
 
         * command-line Commands
 
-    * [7 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan072021)
+    * [7 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0721)
 
         * Multiple SDK support
 
@@ -2236,7 +2236,7 @@ subcollection: schematics
 
 * [What is a resource group and how does it help me organize my team?](/docs/schematics?topic=schematics-general-faq#faq-rg-team)
 
-* [What is the benefit by using IAM access group?](/docs/schematics?topic=schematics-general-faq#faq-iam-accessgrp-benefit)
+* [What is the benefit of using IAM access group?](/docs/schematics?topic=schematics-general-faq#faq-iam-accessgrp-benefit)
 
 * [What are the steps to create and restrict the fine-grained and classic personal access tokens (PAT).](/docs/schematics?topic=schematics-general-faq#faq-pat)
 

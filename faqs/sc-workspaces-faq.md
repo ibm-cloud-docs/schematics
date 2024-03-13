@@ -43,7 +43,6 @@ terraform{
 Currently, version 1.21.0 is released. For more information, see [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 {: note}
 
-
 ## How do I update the Terraform version 
 {: #migrate-terraform-v11}
 {: faq}
@@ -61,8 +60,6 @@ You can follow the topics to upgrade from one Terraform version to another versi
 - [Updating the workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
 - [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
 - [Upgrading a Terraform v0.12 workspace to v0.13 ](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
-
-
 
 ## How do I `pull latest` code from a Git repo by using the command line? 
 {: #latestcode-workspace-commandline}

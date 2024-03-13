@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-03-13"
 
 keywords: schematics actions, actions, schematics
 
@@ -46,8 +46,7 @@ To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create an acti
 
 1. **Add tasks to your playbook**: Use Ansible YAML syntax to describe the configuration tasks that you want to run on your cloud infrastructure, such as installing software or starting, stopping, and rebooting a virtual server. You add these tasks to an Ansible playbook and store the playbook in a GitHub, GitLab, or `Bitbucket` repository to ensure source control and enable collaboration, review, and auditing in your organization. If you are not familiar with Ansible, you can use one of the [{{site.data.keyword.IBM_notm}} provided playbooks](https://github.com/Cloud-Schematics){: external}, or browse the [Ansible Galaxy library](https://galaxy.ansible.com/){: external}.
 2. **Create a {{site.data.keyword.bpshort}} action**: When you create an action, you point your action to the repository that stores your Ansible playbook and select a target playbook to execute. 
-3. **Define your inventory**: 
-Then, you select the cloud resources where you want to run the tasks that are defined in your Ansible playbook. To protect your cloud resources, you can further set up a bastion host in front of your target hosts that proxies all Ansible SSH connections to the target hosts. See [creating resource inventories](/docs/schematics?topic=schematics-inventories-setup) for details of how to define an inventory.
+3. **Define your inventory**: Then, you select the cloud resources where you want to run the tasks that are defined in your Ansible playbook. To protect your cloud resources, you can further set up a bastion host in front of your target hosts that proxies all Ansible SSH connections to the target hosts. See [creating resource inventories](/docs/schematics?topic=schematics-inventories-setup) for details of how to define an inventory.
 4. **Run your action**: When you are ready to configure your cloud resources, you can run your action. {{site.data.keyword.bpshort}} uses the built-in Ansible engine to connect to your target hosts through SSH, and execute the tasks that are defined in your Ansible playbook. You can monitor the progress by reviewing the logs. 
 
 ## Next steps
