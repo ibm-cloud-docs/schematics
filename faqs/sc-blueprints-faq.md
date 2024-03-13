@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a beta feature that are available for evaluation and testing purposes. It is not intended for production usage. 
 {: beta}
 
 # Blueprints
@@ -133,7 +133,7 @@ Sensitive input variables like API Keys or SSH Keys should not be saved in bluep
 
 - Through the CLI using an input file
 
-   Dynamic inputs can be passed through the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
+   Dynamic inputs can be passed through the CLI using `-input-file` flag to pass values stored in a local YAML file.
 
 ## Why does the blueprint template, basic example, fail in the apply step?
 {: #faqs-bp-basic-example}
