@@ -21,7 +21,7 @@ subcollection: schematics
 ## IaC automation as-a-service
 {: #sc-IaCaas} 
 
-Building on open-source [Ansible](https://www.ansible.com/){: external}, [Terraform](https://www.terraform.io/){: external}, [Tofu](https://opentofu.org/), and related technologies like Git and Helm, {{site.data.keyword.bplong}} provides a powerful set of [IaC](/docs/schematics?topic=schematics-infrastructure-as-code) tools as a service to program your cloud infrastructure.
+Building on open-source [Ansible](https://www.ansible.com/){: external}, [Terraform](https://www.terraform.io/){: external}, and related technologies like Git and Helm, {{site.data.keyword.bplong}} provides a powerful set of [IaC](/docs/schematics?topic=schematics-infrastructure-as-code) tools as a service to program your cloud infrastructure.
 
 An IaC approach to infrastructure provisioning and automation improves consistency, speeds deployments, reduces manual errors, and avoids undocumented or ad hoc configuration changes.
 
