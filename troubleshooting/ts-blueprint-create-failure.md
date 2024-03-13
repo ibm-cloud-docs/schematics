@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-13"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a beta feature that are available for evaluation and testing purposes. It is not intended for production usage. 
 {: beta}
 
 # Blueprint create fails 
@@ -89,7 +89,7 @@ The requested resource group id is invalid or required permissions for performin
 ```
 {: screen}
 
-Check that the resource group that is specified on the `--resource_group` option is valid and that the user has the correct {{site.data.keyword.bpshort}} [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create blueprints.
+Check that the resource group that is specified on the `--resource_group` option is valid and that the user has the correct {{site.data.keyword.bpshort}} IAM permissions to create blueprints.
 {: tsResolve} 
 
 Rerun the blueprints create operation with the correct group name or permissions.
