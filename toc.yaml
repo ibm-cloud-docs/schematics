@@ -84,12 +84,10 @@ toc:
                                                                       - migrate-tfversion.md
                                                                       - solutions.md
                                                                       - compact-download.md
-                                                                      - shared-data-set.md
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
                                             label: Working with Actions
                                             topics:
-                                                    - action-working.md
                                                     - ansible-roles.md
                                                     - action-setup.md
                                                     - create-ansible-playbook.md
@@ -121,7 +119,6 @@ toc:
                                                                       - sc-agentb1-policy.md
                                                                       - sc-agentb1-confg-k8s-cluster.md
                                                                       - sc-agentb1-health.md
-                                                                      - sc-agentb1-proxy.md
                                                                       - sc-agentb1-registry.md
                                   - topicgroup:
                                             label: Logging and monitoring
@@ -215,7 +212,7 @@ toc:
                                                                       - troubleshooting/ts-workspace-failure.md
                                                                       - troubleshooting/ts-workspace-generateplan.md
                                                                       - troubleshooting/apply_nullresource.md
-                                                                      - troubleshooting/apply_timeout-taint.md
+                                                                      - troubleshooting/apply_timeout_taint.md
                                                                       - troubleshooting/apply_resource_group.md
                                                                       - troubleshooting/apply_500_errors.md
                                                     - topicgroup:

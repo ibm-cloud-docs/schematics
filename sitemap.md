@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-13"
 
 keywords: schematics
 subcollection: schematics
@@ -10,6 +10,7 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Site map
 {: #sitemap}
@@ -63,7 +64,7 @@ subcollection: schematics
 
     * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
-    * [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
+    * [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-about-actions)
 
     * [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
@@ -276,13 +277,19 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [March 2024](/docs/schematics?topic=schematics-schematics-relnotes#March-2024)
+
+    * Review the release notes for March 2024.
+
+    * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
 * [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
 
     * Review the release notes for February 2024.
 
-    * [28 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2824)
-
-        * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`, `v1.4` template from 2nd week of April 2024.
+    * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`, `v1.4` template from 2nd week of April 2024.
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
@@ -897,7 +904,7 @@ subcollection: schematics
 {: #sitemap_creating_a_workspace}
 
 
-[Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-sch-create-wks#sch-create-wks)
+[Creating workspaces and importing your Terraform](/docs/schematics?topic=schematics-sch-create-wks#sch-create-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-create-wks#prerequisites-create)
 
@@ -909,9 +916,9 @@ subcollection: schematics
 
 * [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-cli)
 
-* [Creating a workspace using the API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
+* [Creating a workspace using API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
 
-* [Creating a workspace using a Terraform template](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
+* [Creating workspace using Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
 
 * [Next steps](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#sch-create-wks-nextsteps)
 
@@ -2093,8 +2100,6 @@ subcollection: schematics
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
-* [](/docs/schematics?topic=schematics-actions-faq#)
-
 [Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
 * [What are the updates in the GA agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
@@ -2356,6 +2361,8 @@ subcollection: schematics
 [The Terraform script that contains Kubernetes cluster namespaces fails as connection refused?](/docs/schematics?topic=schematics-wks-connection-refuse#wks-connection-refuse)
 
 [How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
+
+[Why do timeout failures result in tainted {{site.data.keyword.cloud_notm}} resources?](/docs/schematics?topic=schematics-tainted-resources#tainted-resources)
 
 [Why can't {{site.data.keyword.bpshort}} find your resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 
