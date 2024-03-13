@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-12"
+lastupdated: "2024-03-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -176,50 +176,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
 4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to update or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-### Creating workspace using Tofu through CLI
-{: #create-wks-tofu-cli}
-{: cli}
 
-1. Create a JSON file on your local workstation and add your workspace configuration. For more configuration options when creating the workspace, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
-
-2. Create the workspace using `Tofu v1.6` as shown in the example `workspace_support_tofu.json`
-
-    ```json
-        {
-            "name": "<workspace_name>",
-            "type": [
-                "tofu_v1.6"
-            ],
-            "location": "<location>",
-            "resource_group": "<resource group>",
-            "description": "<workspace_description>",
-            "template_repo": {
-                "url": "<github_source_repo_url>",
-                "branch": "<branch_name>"
-            },
-            "template_data": [
-                {
-                    "folder": "<folder_name>",
-                    "type": "tofu_v1.6"
-                }
-            ]
-        }
-    ```
-    {: codeblock}
-
-    ```sh
-    ibmcloud schematics workspace new --file workspace_support_tofu.json
-    ```
-    {: pre}
-
-3. Verify that your workspace is created and is in an **Inactive** state.
-
-    ```sh
-    ibmcloud schematics workspace list
-    ```
-    {: pre}
-
-4. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to update, or delete the {{site.data.keyword.cloud_notm}} resource.
 
 ## Creating a workspace using API
 {: #create-wks-api}
@@ -256,45 +213,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
 4. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to update, or delete the {{site.data.keyword.cloud_notm}} resources.
 
-### Creating workspace using Tofu through API
-{: #create-wks-tofu-api}
-{: api}
 
-1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
-
-2. Create the workspace by using `Tofu v1.6`.
-
-    ```sh
-    curl --request POST --url https://<endpoint>/v1/workspaces -H "Authorization: <iam_access_token>" -d '{
-    "name": "<workspace_name>",
-    "type": [
-        "tofu_v1.6"
-    ],
-    "location": "<location>",
-    "resource_group": "<resource_group_name>",
-    "description": "<description>",
-    "template_repo": {
-        "url": "<github_source_repo_url>",
-        "branch": "<branch_name>"
-    },
-    "template_data": [
-        {
-            "folder": "<folder_name>",
-            "type": "tofu_v1.6"
-        }
-        ]
-    }'
-    ```
-    {: pre}
-
-3. Verify that the workspace is created successfully.
-
-    ```sh
-    curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>"
-    ```
-    {: pre}
-
-4. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to update, or delete the {{site.data.keyword.cloud_notm}} resource.
 
 ## Creating workspace using Terraform 
 {: #create-wks-terraform}

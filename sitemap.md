@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-12"
+lastupdated: "2024-03-13"
 
 keywords: schematics
 subcollection: schematics
@@ -280,14 +280,6 @@ subcollection: schematics
 * [March 2024](/docs/schematics?topic=schematics-schematics-relnotes#March-2024)
 
     * Review the release notes for March 2024.
-
-    * [12 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar1224)
-
-        * {{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics).
-
-        * For more information about Tofu, see [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq).
-
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
 
@@ -924,11 +916,7 @@ subcollection: schematics
 
 * [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-cli)
 
-    * [Creating workspace using Tofu through CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli)
-
 * [Creating a workspace using API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
-
-    * [Creating workspace using Tofu through API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
 
 * [Creating workspace using Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
 
@@ -1065,18 +1053,6 @@ subcollection: schematics
 * [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#delete-wks-terraform)
 
 * [Next steps](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#sch-delete-wks-nextsteps)
-
-[Migrating workspace using Terraform to Tofu](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#sch-migrate-tfwks-tofuwks)
-
-* [Before you begin using CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#prerequisites-create-cli)
-
-* [Migrate using {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli)
-
-* [Before you begin using API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#prerequisites-create-api)
-
-* [Migrate using {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
-
-* [Rollback your workspace using Tofu to Terraform](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#rollback-wks-tf-tfrm)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
@@ -2365,14 +2341,6 @@ subcollection: schematics
 * [What is the maximum state file size of import?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
 
 * [How do I fix authentication errors when using the API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
-
-* [How to use Tofu in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#tofu-usage-faq)
-
-* [Does Schematics support both Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-and-terraform-support-faq)
-
-* [What is the difference between Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#tofu-vs-terraform-faq)
-
-* [Does the {{site.data.keyword.bpshort}} Workspace support migration and rollback between Terraform and Tofu?](/docs/schematics?topic=schematics-workspaces-faq#migrate-tofu-vs-terraform-faq)
 
 
 ## Troubleshooting

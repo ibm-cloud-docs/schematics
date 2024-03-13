@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-12"
+lastupdated: "2024-03-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,20 +32,7 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2024.
 {: shortdesc}
 
-### 12 March 2024
-{: #schematics-mar1224}
-{: release-note}
 
-{{site.data.keyword.bpshort}} workspace creation supports [Tofu v1.6](/docs/schematics?topic=schematics-learn-about-schematics).
-:   Use following content to explore the Tofu usage to
-    - create {{site.data.keyword.bpshort}} workspace through [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api)
-    - migrate workspace using Terraform to Tofu through [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=cli#migrate-wks-tofu-cli) and [API](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks&interface=api#migrate-wks-tofu-api)
-    - rollback workspace using Tofu to Terraform through [CLI](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#rollback-wks-tf-tfrm). 
-    
-For more information about Tofu, see [FAQs](/docs/schematics?topic=schematics-workspaces-faq&interface=ui#tofu-usage-faq).
-
-Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.19](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 08 March 2024
 {: #schematics-mar0824}

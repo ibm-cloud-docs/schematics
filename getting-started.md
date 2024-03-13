@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-03-13"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -22,7 +22,7 @@ Review the following use cases to see how you can get started with {{site.data.k
 
 | Use case | Description | Get started |
 | :-------: |-----------| --------| 
-| ![Deploy cloud infrastructure](images/gs_cloud-service-management.svg) </br> IaC automation as-a-service | {{site.data.keyword.bpshort}} leverages open-source Infrastructure as Code (IaC) technologies, including Terraform, Tofu, Ansible, and GIT, to offer IaC automation as-a-service. Use Terraform, or Tofu to automate provisioning and lifecycle management of your cloud resources. | [Link](/docs/schematics?topic=schematics-get-started-terraform) |
+| ![Deploy cloud infrastructure](images/gs_cloud-service-management.svg) </br> IaC automation as-a-service | {{site.data.keyword.bpshort}} leverages open-source Infrastructure as Code (IaC) technologies, including Terraform, Ansible, and GIT, to offer IaC automation as-a-service. Use Terraform to automate provisioning and lifecycle management of your cloud resources. | [Link](/docs/schematics?topic=schematics-get-started-terraform) |
 | ![Configuration management](images/gs_dashboard-reference.svg) </br>Day 2 operations with Ansible | Configure cloud resources using {{site.data.keyword.redhat_notm}} Ansible, making it easy to run scripted day-2 operations.| [Link](/docs/schematics?topic=schematics-getting-started-ansible) | 
 | ![Software deployment](images/gs_virtual-desktop.svg) </br>Cloud Hosted Operations| Enable collaboration across teams by hosting your  IaC operations on {{site.data.keyword.cloud_notm}}. Centralize the storage of Terraform state, with access control and locking, increase visibility and control of provisioning operations, and generate a real-time previews of resource changes and cost impact.| [Link](/docs/schematics?topic=schematics-get-started-software)|
 {: caption="Use case" caption-side="bottom"}

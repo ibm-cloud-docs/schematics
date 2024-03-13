@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-12"
+lastupdated: "2024-03-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -640,32 +640,3 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     ```
     {: pre}
 
-## How to use Tofu in {{site.data.keyword.bpshort}}?
-{: #tofu-usage-faq}
-{: faq}
-{: support}
-
-Refer to, {{site.data.keyword.bpshort}} workspace creation to suppport Tofu by using [CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-tofu-cli) or [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api). For more information, see the [release note](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar1224).
-
-
-
-## Does Schematics support both Terraform and Tofu?
-{: #tofu-and-terraform-support-faq}
-{: faq}
-{: support}
-
-Yes, {{site.data.keyword.bpshort}} supports both `Terraform` and `Tofu`. For more information, about the Terraform depreciation, see [Terraform depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
-
-## What is the difference between Terraform and Tofu?
-{: #tofu-vs-terraform-faq}
-{: faq}
-{: support}
-
-[`Tofu v1.6`](https://opentofu.org/){: external} is an open source project and feature-wise is claimed to be equivalent to `Terraform 1.6.x`.
-
-## Does the {{site.data.keyword.bpshort}} Workspace support migration and rollback between Terraform and Tofu?
-{: #migrate-tofu-vs-terraform-faq}
-{: faq}
-{: support}
-
-Yes, {{site.data.keyword.bpshort}} Workspace supports [migration](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks) and [rollback](/docs/schematics?topic=schematics-sch-migrate-tfwks-tofuwks#rollback-wks-tf-tfrm) between the Terraform and Tofu.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-13"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -79,7 +79,6 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.2 |  March 2023 | March 2024	|	March 2025	|	
 | Terraform v1.3 |  End of December 2023 | Earliest July 2024	|  Earliest	July 2025	|	
 | Terraform v1.4 |	End of December 2023 | Earliest September 2024  |  Earliest September 2025 |	
-| Terraform v1.5 |	End of December 2023 | Earliest September 2024  |  Earliest September 2025 |
 {: caption="Deprecation timeline as on 26th September, 2023." caption-side="top"}
 
 ## User actions
