@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-03-14"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -216,11 +216,11 @@ Use the `ibmcloud schematics workspace import --options value, -o value : Option
 
 ``` sh
 
-ibmcloud {{site.data.keyword.bpshort}} workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
+ibmcloud schematics workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
 
 or 
 
-ibmcloud {{site.data.keyword.bpshort}} workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
+ibmcloud schematics workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
 ```
 {: pre}
 
@@ -598,7 +598,7 @@ The maximum length of characters that {{site.data.keyword.bpshort}} workspace va
 {: faq}
 {: support}
 
-The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You see an error message with `413 Request Entity Too Large error when creating a new {{site.data.keyword.bpshort}} workspace`.
+The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You see an error message with `413 Request Entity Too Large error when creating a new workspace`.
 
 ## How do I fix authentication errors when using the API?
 {: #createworkspace-authentication-error}

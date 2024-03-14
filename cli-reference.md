@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-14"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2753,16 +2753,13 @@ ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address n
 ### `ibmcloud schematics workspace state mv`
 {: #schematics-wks_statemv}
 
-Moves the record of an instance or resource within the Terraform state file. If you move the state for a resource within the state file, the {{site.data.keyword.bpshort}} workspace continue to function, but the next plan or apply operation do not find the resource in this state file. If no changes have been make to the template this may trigger Terraform to attempt to recreate the resource on the next operation.  
-{: shortdesc}
+Moves the record of an instance or resource within the Terraform state file. If you move the state for a resource within the state file. The workspace continues to function, but the next plan or apply operation do not find the resource in that state file. If no changes are made to the template, you can see recreation of the resource on the next operation by Terraform. 
 {: shortdesc}
 
 ```sh
 ibmcloud schematics workspace state mv --id WORKSPACE_ID --source SOURCE  --destination DESTINATION 
 ```
 {: pre}
-
-
 
 Command options
 
@@ -2784,15 +2781,13 @@ ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s test
 ### `ibmcloud schematics workspace state rm`
 {: #schematics-wks_staterm}
 
-Removes the record of an instance or resource from the Terraform state file. If you remove the state for a resource from the state file, the {{site.data.keyword.bpshort}} workspace continues to function, but the next plan or apply operation do not find the resource in this state file. If no changes have been make to the template this may trigger Terraform to recreate the resource on the next operation.  
+Removes the record of an instance or resource from the Terraform state file. If you remove the state for a resource from the state file. The workspace continues to function, but the next plan or apply operation do not find the resource in that state file. If no changes are made to the template, you can see re-creation of the resource on the next operation by Terraform.
 {: shortdesc}
 
 ```sh
 ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --address PARAMETER 
 ```
 {: pre}
-
-
 
 Command options
 
@@ -2809,11 +2804,6 @@ Example
 ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
 ```
 {: pre}
-
-
-
-
-
 
 ## Workspace Terraform commands
 {: #tf-cmds}
