@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-03-14"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -49,7 +49,7 @@ For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on t
 ## Adding the button to a website or page
 {: #add_an_image}
 
-You can add an image to your URL to create your `Deploy to {{site.data.keyword.cloud_notm}}` button.
+You can add an image to your URL to create your Deploy to {{site.data.keyword.cloud_notm}} button.
 
 ### Adding the button in HTML
 {: #add-button-html}
@@ -59,7 +59,7 @@ To add the button in an HTML page, such as a website, copy the following code in
 
 ```html
 <a href="<deployment URL>" target="_blank">
-  <img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to {{site.data.keyword.cloud_notm}} button">
+  <img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button">
 </a>
 ```
 {: codeblock}
