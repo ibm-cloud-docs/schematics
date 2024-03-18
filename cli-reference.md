@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-14"
+lastupdated: "2024-03-18"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1089,7 +1089,7 @@ You can use your encryption keys from the {{site.data.keyword.cloud_notm}} key m
 
 The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
-- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
@@ -2753,7 +2753,7 @@ ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address n
 ### `ibmcloud schematics workspace state mv`
 {: #schematics-wks_statemv}
 
-Moves the record of an instance or resource within the Terraform state file. If you move the state for a resource within the state file. The workspace continues to function, but the next plan or apply operation do not find the resource in that state file. If no changes are made to the template, you can see recreation of the resource on the next operation by Terraform. 
+Moves the record of an instance or resource within the Terraform state file. The workspace continues to function, but the next plan or apply operation will not find the resource or instance in the state file. If no changes are made to the template, you can see recreation of the resource on the next operation by Terraform. 
 {: shortdesc}
 
 ```sh
@@ -2781,7 +2781,7 @@ ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s test
 ### `ibmcloud schematics workspace state rm`
 {: #schematics-wks_staterm}
 
-Removes the record of an instance or resource from the Terraform state file. If you remove the state for a resource from the state file. The workspace continues to function, but the next plan or apply operation do not find the resource in that state file. If no changes are made to the template, you can see re-creation of the resource on the next operation by Terraform.
+Removes the record of an instance or resource from the Terraform state file. The workspace continues to function, but the next plan or apply operation will not find the resource or instance in the state file. If no changes are made to the template, you can see re-creation of the resource on the next operation by Terraform.
 {: shortdesc}
 
 ```sh
