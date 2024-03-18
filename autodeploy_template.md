@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-14"
+lastupdated: "2024-03-18"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -67,12 +67,9 @@ To add the button in an HTML page, such as a website, copy the following code in
 ### Adding the button in Markdown
 {: #add-button-markdown}
 
-To add the button into a Markdown file, such as in a repositories readme file, use the following syntax. Replace `<deployment URL>` with the URL for the deployment link.
+To add the button into a markdown file, such as in a repositories readme file, use the following syntax. Replace `<deployment URL>` with the URL for the deployment link.
 
-```markdown
 [![Deploy to {{site.data.keyword.cloud_notm}} button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](<deployment URL>)
-```
-{: codeblock}
 
 ## Next steps
 {: #sample-actions-nextsteps}
