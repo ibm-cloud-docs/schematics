@@ -1405,6 +1405,8 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#agent-delete-nextstep)
 
+[Agents version history](/docs/schematics?topic=schematics-agent_version-releases#agent_version-releases)
+
 
 ### Using agents
 {: #sitemap_using_agents}
