@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-20"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -34,9 +34,11 @@ The following prerequisites must be met before you begin deploying the agent inf
 {{site.data.keyword.bpshort}} provides a [sample template](https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure){: external} that you can use to provision the infrastructure needed by your agent. The Agent infrastructure is composed of the following resources.
 
 - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
-- [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
-- [LogDNA](/docs/log-analysis?topic=log-analysis-iam)
-- [{{site.data.keyword.cloudaccesstraillong}}](/docs/activity-tracker?topic=activity-tracker-iam)
+- [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-access_reference) or {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} as `vpc_kubernetes_cluster`.
+
+    For agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} you need to define any {{site.data.keyword.networksecuritygroups_short}} rules and access control lists (ACLs) at {{site.data.keyword.vpn_vpc_short}} level before deploying an agent on the cluster. For more information, see [define {{site.data.keyword.networksecuritygroups_short}} and ACLs on {{site.data.keyword.vpn_vpc_short}}](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
+    You can control egress traffic through {{site.data.keyword.networksecuritygroups_short}} and ACLs.
+    {: note}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
