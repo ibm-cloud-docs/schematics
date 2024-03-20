@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-03-20"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -50,7 +50,7 @@ Review and complete the steps that are described in [preparing for agent deploym
         - Select **Location** and **Resource group** from the drop down option.
         - Enter **Tags**, and **Description** for the agent.
     - In **Assign to cluster** section:
-        - Select the `{{site.data.keyword.containerlong_notm}}` or the `{{site.data.keyword.openshiftlong}}` service.
+        - Select the `{{site.data.keyword.containerlong_notm}}` or the `{{site.data.keyword.redhat_openshift_notm}}` service.
         - Select your cluster name.
         - In the **Define COS Instance**
             - Enter the **COS instance name**

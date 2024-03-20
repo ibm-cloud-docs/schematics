@@ -29,7 +29,7 @@ Review and complete the listed tasks to prepare your {{site.data.keyword.cloud}}
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
    - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
 
-    For agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} you need to define any {{site.data.keyword.networksecuritygroups_short}} rules and access control lists (ACLs) at {{site.data.keyword.vpn_vpc_short}} level before deploying an agent on the cluster. For more information, see [define {{site.data.keyword.networksecuritygroups_short}} and ACLs on {{site.data.keyword.vpn_vpc_short}}](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
+    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} you need to define any {{site.data.keyword.networksecuritygroups_short}} rules and access control lists (ACLs) at {{site.data.keyword.vpn_vpc_short}} level before deploying an agent on the cluster. For more information, see [Terraform script to define {{site.data.keyword.networksecuritygroups_short}} and ACLs on {{site.data.keyword.vpn_vpc_short}}](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
     You can control egress traffic through {{site.data.keyword.networksecuritygroups_short}} and ACLs.
     {: note}
 
