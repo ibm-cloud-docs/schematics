@@ -29,8 +29,8 @@ Review and complete the listed tasks to prepare your {{site.data.keyword.cloud}}
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
    - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
 
-    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} you need to define any {{site.data.keyword.networksecuritygroups_short}} rules and access control lists (ACLs) at {{site.data.keyword.vpn_vpc_short}} level before deploying an agent on the cluster. For more information, see [Terraform script to define {{site.data.keyword.networksecuritygroups_short}} and ACLs on {{site.data.keyword.vpn_vpc_short}}](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
-    You can control egress traffic through {{site.data.keyword.networksecuritygroups_short}} and ACLs.
+    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} based on the requirement, You can control egress traffic through security groups and network access control lists (ACLs).
+    You need to define any security group rules and ACLs at VPC level before deploying an agent on the cluster. For more information, see [Terraform script to define securityg groups and ACLs on a VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
     {: note}
 
 - **{{site.data.keyword.cos_full_notm}}:** The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 

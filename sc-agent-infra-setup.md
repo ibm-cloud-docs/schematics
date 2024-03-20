@@ -36,9 +36,9 @@ The following prerequisites must be met before you begin deploying the agent inf
 - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
 - [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-access_reference) or [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) as `vpc_kubernetes_cluster`.
 
-    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}:
-    - you need to define any {{site.data.keyword.networksecuritygroups_short}} rules and access control lists (ACLs) at {{site.data.keyword.vpn_vpc_short}} level before deploying an agent on the cluster. For more information, see [Terraform script to define {{site.data.keyword.networksecuritygroups_short}} and ACLs on {{site.data.keyword.vpn_vpc_short}}](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
-    - You can control egress traffic through {{site.data.keyword.networksecuritygroups_short}} and ACLs.
+    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}, based on the requirement, you can control egress traffic through Security Groups and Network access control lists (ACLs). 
+    You need to define any {{site.data.keyword.networksecuritygroups_short}} rules and ACLs at VPC level before deploying an agent on the cluster. For more information, see [Terraform script to define security groups and ACLs on VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
+    {: note}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
