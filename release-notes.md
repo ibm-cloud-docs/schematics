@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-03-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,23 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for March 2024.
 {: shortdesc}
+
+
+
+### 25 March 2024
+{: #schematics-mar2524}
+{: release-note}
+
+{{site.data.keyword.bpshort}} Agents supports {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}
+:   The {{site.data.keyword.bpshort}} Agents supports [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/schematics?topic=schematics-plan-agent-overview) cluster.
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.1.0](/docs/schematics?topic=schematics-agent_version-releases) released.
+
+Release {{site.data.keyword.bpshort}} command-line plug-in
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.20](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+
 
 
 
