@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-20"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -25,9 +25,14 @@ Review and complete the listed tasks to prepare your {{site.data.keyword.cloud}}
 
 - **Account and networks:** An agent provides {{site.data.keyword.bpshort}} the ability to run workspace and action jobs within a target account and the accounts private network. Network policies must be configured to allow the cluster that the agent is deployed on to communicate back to Schematics, also to the {{site.data.keyword.cloud_notm}} APIs, services and, for instance,  to a user private Git or Vault instances. For more information, see the section on [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config).
    - Record information about the allowed network zones and infrastructure accessible to the agent.
-- **Cluster:** A {{site.data.keyword.bpshort}} Agent can be deployed on existing private or public [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) and [Red Hat OpenShift {{site.data.keyword.containershort}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
+- **Cluster:** A {{site.data.keyword.bpshort}} Agent can be deployed on existing private or public [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) and [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
    - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
+
+    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} based on the requirement, You can control egress traffic through security groups and network access control lists (ACLs).
+    You need to define any security group rules and ACLs at VPC level before deploying an agent on the cluster. For more information, see [Terraform script to define securityg groups and ACLs on a VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
+    {: note}
+
 - **{{site.data.keyword.cos_full_notm}}:** The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 
     - To deploy an agent, you must have the necessary privileges to create the `HMAC credentials` for the {{site.data.keyword.objectstorageshort}} bucket and store the credential as a Kubernetes secret.
     - The {{site.data.keyword.cos_full_notm}} instance and bucket must be created for the successful deploy. 

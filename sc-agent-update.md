@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-20"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -44,8 +44,8 @@ Update your agent configuration by choosing the cluster and {{site.data.keyword.
 2. Access **Schematics** > [**Agents**](https://cloud.ibm.com/schematics/agents){: external}.
     - Select your agent:
         - Select **Actions** > **Edit Agent**
-        - You can edit the **Description**, **Cluster**, **COS instance name**, **COS bucket name**, or **COS bucket region** as in the requirement.
-3. Click ***Update and validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
+        - You can edit the **Description**, **Cluster**, **COS instance name**, **COS bucket name**, **COS bucket region**, or **Agent version** as in the requirement.
+3. Click **Update and validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
 4. Click **Deploy** to redeploy an agent.
 
 ## Creating an agent definition by using the CLI 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-18"
+lastupdated: "2024-03-25"
 
 keywords: schematics
 subcollection: schematics
@@ -280,6 +280,14 @@ subcollection: schematics
 * [March 2024](/docs/schematics?topic=schematics-schematics-relnotes#March-2024)
 
     * Review the release notes for March 2024.
+
+    * [25 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524)
+
+        * {{site.data.keyword.bpshort}} Agents supports {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}
+
+        * Release {{site.data.keyword.bpshort}} Agents version
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in
 
     * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
 
@@ -1404,6 +1412,8 @@ subcollection: schematics
 * [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#delete-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#agent-delete-nextstep)
+
+[Agents version history](/docs/schematics?topic=schematics-agent_version-releases#agent_version-releases)
 
 
 ### Using agents
