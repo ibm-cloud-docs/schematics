@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-14"
+lastupdated: "2024-03-27"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,9 +15,10 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.5.7`. It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
-{{site.data.keyword.bpshort}} supports Terraform_v1.5.7, Terraform_v1.4.6, Terraform_v1.3.6. For more information, about Terraform_v1.3.6, and Terraform_v1.4.6 depreciation, see [Depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+The `Terraform_v1.4.6`, `Terraform_v1.3.6` are deprecated, but the creation and execution of workspace by using these two versions are still allowed. For more information, see [Depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{: note}
 
 For more information about updating Terraform release, see [Upgrading the Terraform workspace version](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12). Terraform v1.0 was a major release for Terraform, marking the transition to a stable `1.x` release. HCL made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), for the core Terraform features and function. No changes needed to HCL templates to upgrade through the 1.x releases.
 {: shortdesc} 
