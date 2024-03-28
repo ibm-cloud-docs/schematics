@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-28"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -16,10 +16,10 @@ subcollection: schematics
 # Upgrading to a new Terraform version  
 {: #migrating-terraform-version}
 
-The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers. Over time it is necessary for long lived workspace environments to be upgraded to utilize the latest version of Terraform as older versions are depreciated and go out of support.    
+The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers. Over time it is necessary for long lived workspace environments to be upgraded to utilize the latest version of Terraform as older versions are deprecated and go out of support.    
 {: shortdesc}
 
-All {{site.data.keyword.bpshort}} users are encourage to regularly upgrade to the latest Terraform version to ensure continuity of operations and support. {{site.data.keyword.bpshort}} follows the Hashicorp support model for Terraform releases and depreciates versions to the in line with Hashicorp. 
+All {{site.data.keyword.bpshort}} users are encourage to regularly upgrade to the latest Terraform version to ensure continuity of operations and support. {{site.data.keyword.bpshort}} follows the Hashicorp support model for Terraform releases and deprecates versions to the in line with Hashicorp. 
 
 Terraform v1.0 was a major release for Terraform, marking the transition to a stable 1.x release. Hashicorp made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), that for core features, no additional changes are required to upgrade through the 1.x releases. 
 
