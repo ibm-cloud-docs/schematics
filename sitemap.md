@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-27"
+lastupdated: "2024-03-28"
 
 keywords: schematics
 subcollection: schematics
@@ -1177,7 +1177,7 @@ subcollection: schematics
 
 [Terraform version support and deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
 
-* [{{site.data.keyword.bpshort}} Terraform depreciation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
+* [{{site.data.keyword.bpshort}} Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
 
     * [Terraform maintenance and fixes](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-maintenance)
 

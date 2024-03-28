@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-28"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -30,13 +30,13 @@ The {{site.data.keyword.bpshort}} worker images are built by using the [Universa
 In the multi-tenant {{site.data.keyword.bpshort}} service instance, your Terraform or Ansible automation cannot install any software or tools in the {{site.data.keyword.bpshort}} worker pods. It is blocked by design.
 {: note}
 
-For more information about depreciation note, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
+For more information about deprecation note, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
 {: note}
 
 | From date | Deprecation notice |
 | --- | --- |
 | 21 September 2022 | Support for `Python v3.6` in runtime-ansible-job is deprecated. Instead the runtime-ansible job image uses `Python v3.8`. |
-{: caption="{{site.data.keyword.bpshort}} depreciation note" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} deprecation note" caption-side="top"}
 
 The following table enlists the preinstalled software and tools in the {{site.data.keyword.bpshort}} worker images.
 

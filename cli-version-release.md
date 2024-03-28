@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-25"
+lastupdated: "2024-03-28"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -23,7 +23,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.12.20 | 25 March 2024 | {{site.data.keyword.bpshort}} CLI plugin supports {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}.|
 | 1.12.18 | 08 March 2024 | Display the Terraform deprecation warning message during workspace commands using less than `terraform_v1.5`, Support for agent infrastructure update is removed, and fixed `index out of range` error by using `ibmcloud schematics state list` command.|
 | 1.12.17 | 14 February 2024 | {{site.data.keyword.bpshort}} plug-in installation supports Cloud Shell, and [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) command now supports the Cloud Shell commands.|
-| 1.12.16 | 7 February 2024 | [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=api#schematics-workspace-list) supports caching for API versions. `terraform_v1.2`, `terraform_v1.3`, `terraform_v1.4` depreciation message are populated for creating the [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=api#schematics-workspace-new) templates.|
+| 1.12.16 | 7 February 2024 | [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=api#schematics-workspace-list) supports caching for API versions. `terraform_v1.2`, `terraform_v1.3`, `terraform_v1.4` deprecation message are populated for creating the [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=api#schematics-workspace-new) templates.|
 | 1.12.15 | 24 January 2024 | Support for `refresh_token` in [agent update API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api) request, enhanced the version support for [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) command.|
 | 1.12.14 | 10 January 2024 | Added new commands and translations to support the agent and policy. The system workspaces from the workspace list command output are hidden. Enhanced the agent job display on command output. Usage of `/v1/versions` API for the agent versions.|
 | 1.12.12 | 17 September 2023 | {{site.data.keyword.bpshort}} Agent create and update added with a [`new flag --metadata`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-create) and a bug fix to configure an [HTTP timeout for request](/docs/schematics?topic=schematics-general-faq&interface=cli#http-api-call). |
@@ -49,7 +49,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.7.0 | 12 January 2022 | Displays Terraform v11.0 deprecation message after command execution. Fix command-line alias. Remove the appearance of the duplicate strings. Support global time in the log file. |
 | 1.6.2 | 2 December 2021 | Support for non-English translations. Fix apply command `--var-file` and actions `--target not setting` argument. Fix a pipeline vulnerability.|
 | 1.6.1 | 21 October 2021 | Supports `winrm` for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json` and `--credential-json` option value to the create and config updates. Updated non-English translations for the command-line. Fixed duplication display of `command-object` argument in `ibmcloud schematics jobs run` interactive mode.|
-| 1.6.0 | 29 September 2021 | Support for `linux-ppc64le`, and `linux-s390x` binaries. Lists `Terraform v1.0` in the details panel. Display `Terraform v0.11` depreciation message in {{site.data.keyword.bpshort}} workspace page. Fixed the resource query list command returns values as empty string.|
+| 1.6.0 | 29 September 2021 | Support for `linux-ppc64le`, and `linux-s390x` binaries. Lists `Terraform v1.0` in the details panel. Display `Terraform v0.11` deprecation message in {{site.data.keyword.bpshort}} workspace page. Fixed the resource query list command returns values as empty string.|
 | 1.5.12 | 02 September 2021 | Suppress status message for `--output json` flag.|
 | 1.5.11 | 27 August 2021 | Added a flag `--pull-latest` to existing workspace **update** command. Fixed `BNPP` issue. Fixed the locale translations.|
 | 1.5.10 | 11 August 2021 | Supports `Terraform v0.15`. Fixed locale translations.|

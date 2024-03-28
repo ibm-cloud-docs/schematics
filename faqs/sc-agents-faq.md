@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-03-28"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -65,7 +65,7 @@ Only the two most recent versions of Terraform supported by {{site.data.keyword.
 {: faq}
 {: support}
 
-The version of Terraform used by the workspace is not supported with agents. Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [depreciation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+The version of Terraform used by the workspace is not supported with agents. Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 
 ## What type of jobs can be run in an agent?
