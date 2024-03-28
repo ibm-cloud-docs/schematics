@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-18"
+lastupdated: "2024-03-28"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1864,7 +1864,7 @@ ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.acc
 ### `ibmcloud schematics workspace list`	
 {: #schematics-workspace-list}
 
-List the workspaces for the current region of your {{site.data.keyword.cloud_notm}} account and shows the details for your workspace. List workspace checks for the depreciation in a loop by invoking `versions` API every time for all the workspace through file cache.
+List the workspaces for the current region of your {{site.data.keyword.cloud_notm}} account and shows the details for your workspace. List workspace checks for the deprecation in a loop by invoking `versions` API every time for all the workspace through file cache.
 
 Syntax
 

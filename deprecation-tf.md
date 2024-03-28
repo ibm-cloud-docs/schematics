@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-27"
+lastupdated: "2024-03-28"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -23,7 +23,7 @@ The `Terraform_v1.4.6`, `Terraform_v1.3.6` are deprecated, but the creation and 
 For more information about updating Terraform release, see [Upgrading the Terraform workspace version](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12). Terraform v1.0 was a major release for Terraform, marking the transition to a stable `1.x` release. HCL made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), for the core Terraform features and function. No changes needed to HCL templates to upgrade through the 1.x releases.
 {: shortdesc} 
 
-## {{site.data.keyword.bpshort}} Terraform depreciation lifecycle 
+## {{site.data.keyword.bpshort}} Terraform deprecation lifecycle 
 {: #deprecate-phase}
 
 The table outlines the timetable of support that is provided by {{site.data.keyword.bpshort}} for Terraform releases. For more information about the maintenance and fixes, see the following sections.   
@@ -69,7 +69,7 @@ If you choose not to upgrade to the current version of Terraform beyond the **re
 You are suggested always to migrate from your in use version of Terraform to the current available version and to remain on Terraform versions with maintenance and security fixes. You can see the current in use version of Terraform in the drop down list of the [{{site.data.keyword.bpshort}} workspace](https://cloud.ibm.com/schematics/workspaces/create) configuration page. 
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date when you are using the {{site.data.keyword.bplong_notm}} service. The month that is provided in the table represents the last day of the Month to restrict workspace creation and execution. The depreciation timeline changes as new Terraform versions are released. 
+{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date when you are using the {{site.data.keyword.bplong_notm}} service. The month that is provided in the table represents the last day of the Month to restrict workspace creation and execution. The deprecation timeline changes as new Terraform versions are released. 
 
 | Versions | Terraform end of maintenance and security support | Phase 1: Restrict workspace creation </br> (End of marketing)|    Phase 2: Restrict workspace execution </br> (End of support)|
 | -- | -- | --| --|
