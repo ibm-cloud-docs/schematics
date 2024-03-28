@@ -1185,7 +1185,7 @@ subcollection: schematics
 
     * [Restrict workspace execution](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-wks-execute)
 
-* [Depreciation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
+* [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 

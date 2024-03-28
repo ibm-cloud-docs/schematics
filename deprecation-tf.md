@@ -17,7 +17,7 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} service supports `Terraform_v1.5.7`. It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
-The `Terraform_v1.4.6`, `Terraform_v1.3.6` are deprecated, but the creation and execution of workspace by using these two versions are still allowed. For more information, see [Depreciation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+The `Terraform_v1.4.6`, `Terraform_v1.3.6` are deprecated, but the creation and execution of workspace by using these two versions are still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}
 
 For more information about updating Terraform release, see [Upgrading the Terraform workspace version](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12). Terraform v1.0 was a major release for Terraform, marking the transition to a stable `1.x` release. HCL made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), for the core Terraform features and function. No changes needed to HCL templates to upgrade through the 1.x releases.
@@ -34,7 +34,7 @@ The table outlines the timetable of support that is provided by {{site.data.keyw
 | 6-12 months | Full operations | No  | Suggested. Upgrade if Terraform fix needed. |
 | 12 - 24 months |	Workspace creation restricted | No  | Suggested. Upgrade if Terraform fix needed. | 	
 | 24 months | Workspace execution restricted | No | Needed |
-{: caption="Depreciation lifecycle" caption-side="top"}
+{: caption="Deprecation lifecycle" caption-side="top"}
 
 ### Terraform maintenance and fixes
 {: #deprecate-maintenance}
@@ -63,7 +63,7 @@ If you choose not to upgrade to the current version of Terraform beyond the **re
 - Your {{site.data.keyword.bpshort}} workspace data continues to stay in {{site.data.keyword.bpshort}} until you delete these workspaces.
 - You cannot do operations on, or **destroy** the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI. 
 
-## Depreciation Schedule
+## Deprecation Schedule
 {: #deprecate-timeline}
 
 You are suggested always to migrate from your in use version of Terraform to the current available version and to remain on Terraform versions with maintenance and security fixes. You can see the current in use version of Terraform in the drop down list of the [{{site.data.keyword.bpshort}} workspace](https://cloud.ibm.com/schematics/workspaces/create) configuration page. 
