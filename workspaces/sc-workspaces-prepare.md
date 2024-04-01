@@ -49,7 +49,7 @@ Review the following image, observing the workspace structure {{site.data.keywor
 
 ![Workspace structure for {{site.data.keyword.bplong_notm}}](../images/workspace-structure.png){: caption="Figure 1. workspace structure for {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
-In organisations where infrastructure responsibilities are spread across multiple teams, it is not recommended to use one workspace to manage entire staging or production environments. When you deploy all your {{site.data.keyword.cloud_notm}} resources using a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources. Separate workspaces, sharing infrastructure definitions using remote-state data sources provides a mechanism to create separate out areas of responsibility.
+In organizations where infrastructure responsibilities are spread across multiple teams, it is not recommended to use one workspace to manage entire staging or production environments. When you deploy all your {{site.data.keyword.cloud_notm}} resources using a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources. Separate workspaces, sharing infrastructure definitions using remote-state data sources provides a mechanism to create separate out areas of responsibility.
 {: important}
 
 ### How do I structure my Git repositories to map my workspaces?

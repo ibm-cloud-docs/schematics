@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-04-01"
 
 keywords: schematics, generate plan, schematics workspace generate plan
 
@@ -43,7 +43,7 @@ Based on previous experience following are the two workaround solution to fix.
 
 Solution 1
 
-If you are using provider authentication to Kuberentes something like
+If you are using provider authentication to Kubernetes as shown in the codeblock.
 
 ```terraform
 provider "kubernetes" {
