@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-04-01"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -76,7 +76,7 @@ To protect our users from malicious actors, {{site.data.keyword.bpshort}} remove
 
 If it is desired to work with large files, these can be imported into {{site.data.keyword.bpshort}} at run time into `/tmp` or persisted in `/tmp/.schematics`. Only files less than 10MB are persisted between job runs. 
 
-When creating {{site.data.keyword.bpshort}} workspaces or actions {{site.data.keyword.bplong_notm}} clones a copy of the Terraform, or Ansible template from your Git repository and stores in a secured location. Before the template files are saved, {{site.data.keyword.bpshort}} analyses the content and files considered malicious or vulnerable are removed. A white listing approach is used to allow only authorised file. File removal is based on the following criteria:
+When creating {{site.data.keyword.bpshort}} workspaces or actions {{site.data.keyword.bplong_notm}} clones a copy of the Terraform, or Ansible template from your Git repository and stores in a secured location. Before the template files are saved, {{site.data.keyword.bpshort}} analyses the content and files considered malicious or vulnerable are removed. An allowlist is used to allow only authorised files. File removal is based on the following criteria:
 
 - The allowed file extensions are `.cer, .cfg, .conf, .crt, .der, .gitignore, .html, .j2, .jacl, .js, .json, .key, .md, .netrc, .pem, .properties, .ps1, .pub, .py, .service, .sh, .tf, .tf.json, .tfvars, .tmpl, .tpl, .txt, .yaml, .yml, .zip, _rsa, license`.
 - The allowed image extensions are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
