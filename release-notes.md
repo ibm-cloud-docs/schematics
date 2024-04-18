@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-25"
+lastupdated: "2024-04-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -23,8 +23,21 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
 
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## April 2024
+{: #April-2024}
+
+Review the release notes for April 2024.
+{: shortdesc}
+
+### 17 April 2024
+{: #schematics-apr1724}
+{: release-note}
+
+:   [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform version 0.13 through 1.3.6](https://cloud.ibm.com/status/announcement?component=schematics){: external} from 18th April 2024. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+
 
 ## March 2024
 {: #March-2024}
@@ -66,7 +79,7 @@ Review the release notes for February 2024.
 
 
 
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`, `v1.4` template from 2nd week of April 2024.
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`,  template from 2nd week of April 2024.
 
 ### 14 February 2024
 {: #schematics-feb1424}
