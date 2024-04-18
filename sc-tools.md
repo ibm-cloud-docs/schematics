@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2024-03-28"
+lastupdated: "2024-04-18"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -45,7 +45,7 @@ The following table enlists the preinstalled software and tools in the {{site.da
 
 | Software | Versions | In agent | Description |
 | --- | --- | ---| --- |
-|`Terraform CLI` |	`1.0.x`, `1.1.x`,</br>`1.2.x`, `1.3.x` |	`1.3.x` | Terraform CLI |
+|`Terraform CLI` |	`1.0.x`, `1.1.x`,</br>`1.2.x`, `1.3.x`, `1.4.x` | `1.5.x` | Terraform CLI |
 | `Ansible` |  `v2.9.27`	| `v2.9.27`	| For use by the [ansible-provisioner](https://github.com/radekg/terraform-provisioner-ansible){: external} for Terraform. </br>It is recommended to use the {{site.data.keyword.bpshort}} actions to run your Ansible automation.|
 | `{{site.data.keyword.cloud_notm}} CLI` |	Latest	 | Latest	| Latest version of the {{site.data.keyword.cloud_notm}} CLI plug-ins are pre-installed. For your Terraform automation, it is recommended to use the Terraform provider plugi-ns for {{site.data.keyword.cloud_notm}}. |
 | `JQ` |	`v1.6` |	Yes	| As the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Terraform automation. |
