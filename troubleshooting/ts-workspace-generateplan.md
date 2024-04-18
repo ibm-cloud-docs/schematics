@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-04-18"
 
 keywords: schematics, generate plan, schematics workspace generate plan
 
@@ -66,7 +66,7 @@ provider "kubernetes" {
 
 Solution 2
 
-You can [remove the state](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm) related to cluster config from the statefile by using {{site.data.keyword.bplong_notm}} CLI command and retrigger the `Terraform plan` or `Terraform apply` command.
+You can [remove the state](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm) related to cluster config from the statefile by using {{site.data.keyword.bplong_notm}} CLI command and re-run the `Terraform plan` or `Terraform apply` command.
 
 ```sh
 ibmcloud schematics workspace state rm --id --address <enter the workspace ID and the address of the resource to mark as taint>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-04-18"
 
 keywords: display resources with schematics, show resources, show schematics resources
 
@@ -29,7 +29,7 @@ The resources that are displayed are the Terraform resources defined for the wor
 
 | Data | Description |
 | --- | --- |
-| Resource | The name of the resource. The resource name can have a resource controller URL that appears as a anchor link, so that you can click on the link and navigate to the resource dashboard page. If a resource does not have a resource controller URL, it appears as plain text. The resource controller URL is derived from the Terraform state file. Note it is not possible to link to the resource directly, only to the resource list. |
+| Resource | The name of the resource. The resource name can have a resource controller URL that appears as a anchor link, so that you can click on the link and navigate to the resource dashboard page. If a resource does not have a resource controller URL, it appears as plain text. The resource controller URL is derived from the Terraform state file. Note you cannot link to the resource directly, only to the resource list. |
 | Type | The resource type. For example, `ibm_is_vpc`, `ibm_is_subnet`. |
 | Taint status | States the resource is `degraded` or `damaged`. When a resource is tainted the value displayed are`Tainted`. If a resource is not `degraded` or `damaged`, empty value is displayed. |
 | Resource group | Displays the [resource group](/docs/account?topic=account-rgs) that are used to provision your resource. |

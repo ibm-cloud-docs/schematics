@@ -21,7 +21,7 @@ When using {{site.data.keyword.bpshort}}, the downloading of Terraform templates
 
 Modules referenced with the `source` parameter are downloaded during the `terraform init` phase of a plan or apply operation. The `terraform init` command parses the template files and downloads any modules from the repositories referenced by the `source` field. Modules residing in private repositories require additional credentials to be passed to Terraform. These credentials are defined and passed separately to those used by {{site.data.keyword.bpshort}}. 
 
-To download modules from a private Git repository, an {{site.data.keyword.cloud_notm}} catalog, or any other repository, Terraform supports the use of a [netrc](https://everything.curl.dev/usingcurl/netrc.html){: external} configuration to pass any required access id's and tokens. 
+To download modules from a private Git repository, an {{site.data.keyword.cloud_notm}} catalog, or any other repository, Terraform supports the use of a [`netrc`](https://everything.curl.dev/usingcurl/netrc.html){: external} configuration to pass any required access id's and tokens. 
 
 |  Repository </br>  | Template </br> Public repo | Template </br>Private repo | Module </br>Public repo | Module </br>private repo | Comment </br>  |
 | --- |--- | --- | --- | --- | --- |

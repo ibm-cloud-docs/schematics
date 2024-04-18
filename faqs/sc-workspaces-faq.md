@@ -110,9 +110,9 @@ The test IDs are considered as a valid `IBM ID` to set the global catalog or res
 {: faq}
 {: support}
 
-By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all subfolders. De-select the 'Use full repository' flag to limit the folders that are cloned and improve download performance. 
+By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all sub directory. De-select the 'Use full repository' flag to limit the folders that are cloned and improve download performance. 
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `subfolders` in Git repositories. If the compact flag is set to **true** it downloads and save `subfolders` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `sub directories` in Git repositories. If the compact flag is set to **true** it downloads and save `sub directories` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
 
 You can get the response by starting `get workspace API` to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but the URL is passed, the download is compact.
 
