@@ -36,6 +36,7 @@ Review the release notes for April 2024.
 {: #schematics-apr1724}
 {: release-note}
 
+Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform version
 :   [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform version 0.13 through 1.3.6](https://cloud.ibm.com/status/announcement?component=schematics){: external} from 18th April 2024. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 
@@ -181,7 +182,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.12](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 Release {{site.data.keyword.bpshort}} Agent migration page 
-:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Updating agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui).
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Updating agent](/docs/schematics?topic=schematics-update-agent-overview#update-agent-ui).
 
 ## August 2023
 {: #August-2023}
@@ -194,7 +195,7 @@ Review the release notes for August 2023.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agent migration page 
-:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Upgrading agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui).
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Upgrading agent](/docs/schematics?topic=schematics-update-agent-overview#update-agent-ui).
 
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
@@ -729,7 +730,7 @@ Review the release notes for October 2021.
 {: shortdesc}
 
 ### 22 October 2021
-{: #schematics-oct21}
+{: #schematics-oct2221}
 {: release-note}
 
 Onboarding Terraform templates to private catalog
@@ -912,7 +913,7 @@ Allowed file extensions in {{site.data.keyword.bpshort}}
 :   Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension).
 
 {{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation
-:   {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=cli-schematics-cli-reference), and [view command-line commands](/docs/cli?topic=cli-schematics-cli-reference) in the CLI documentation.
+:   {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=cli-install-ibmcloud-cli#ibmcloud-cli-installer), and [list the command-line commands](/docs/cli?topic=cli-ibmcloud_commands_settings#ibmcloud_plugin_list) in the CLI documentation.
 
 ### 12 February 2021
 {: #schematics-feb1221}

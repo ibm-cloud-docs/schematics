@@ -66,7 +66,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 {: faq}
 {: support}
 
-Updating the {{site.data.keyword.bpshort}} workspaces through command line need the needed field `name`.
+Updating the {{site.data.keyword.bplong}} workspaces through command line need the needed field `name`.
 
 You need to run `ibmcloud schematics workspace update --id <workspace-id>  --file <updatefile.json>`  command. The sample `updatefile.json` contains the name field with the value.
 ```json
@@ -636,4 +636,5 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
     {: pre}
+
 
