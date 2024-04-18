@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-20"
+lastupdated: "2024-04-18"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -25,7 +25,7 @@ Agents for {{site.data.keyword.bplong}} extend its ability to work directly to c
 The following prerequisites must be met before you begin deploying the agent infrastructure.
 
 - You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
-- Check whether you have the permissions to [provision a VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), a [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-access_reference#cluster_create_permissions), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in the target resource group.
+- Check whether you have the permissions to [provision a VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), a [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-terraform-setup#terraform-cluster-IAM), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in the target resource group.
 - Check whether you have the [permission](/docs/schematics?topic=schematics-access#workspace-permissions) to create a workspace.
 
 ## Provisioning agent infrastructure using {{site.data.keyword.bpshort}}
@@ -34,7 +34,7 @@ The following prerequisites must be met before you begin deploying the agent inf
 {{site.data.keyword.bpshort}} provides a [sample template](https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure){: external} that you can use to provision the infrastructure needed by your agent. The Agent infrastructure is composed of the following resources.
 
 - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
-- [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-access_reference) or [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) as `vpc_kubernetes_cluster`.
+- [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-vpc-subnets) or [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) as `vpc_kubernetes_cluster`.
 
     To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}, based on the requirement, you can control egress traffic through Security Groups and Network access control lists (ACLs). 
     You need to define any {{site.data.keyword.networksecuritygroups_short}} rules and ACLs at VPC level before deploying an agent on the cluster. For more information, see [Terraform script to define security groups and ACLs on VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.

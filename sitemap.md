@@ -283,6 +283,8 @@ subcollection: schematics
 
     * [17 April 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1724)
 
+        * Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform version
+
 * [March 2024](/docs/schematics?topic=schematics-schematics-relnotes#March-2024)
 
     * Review the release notes for March 2024.
@@ -649,7 +651,7 @@ subcollection: schematics
 
     * Review the release notes for October 2021.
 
-    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct21)
+    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2221)
 
         * Onboarding Terraform templates to private catalog
 
