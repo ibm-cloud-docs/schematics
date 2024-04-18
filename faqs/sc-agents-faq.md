@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-01"
+lastupdated: "2024-04-18"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -161,7 +161,7 @@ Yes. Workspaces and actions are selected by policy to execute on agents. A {{sit
 
 For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rules to pick `Agent-1` when the `tag == dev`. Later, the workspace job such as plan, apply, update are dynamically routed to run on `Agent-1`.
 
-## What IAM permissions needed to deploy an agent?
+## What IAM permissions is needed to deploy an agent?
 {: #faqs-agent-permission}
 {: faq}
 {: support}

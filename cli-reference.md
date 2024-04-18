@@ -1943,8 +1943,7 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays wa
 You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as `"testworkspace"`.
 {: note}
 
-
-**example.json:**
+Example
 
 ```json
 {
@@ -2020,7 +2019,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ```
 {: codeblock}
 
-**Example JSON for uploading in a `.tar` file later.**
+Example JSON for uploading in a `.tar` file
 
 ```json
 {
@@ -2846,7 +2845,7 @@ Command options
 | `--file` or `--f` | Required | Path to the `JSON` file containing the list of Terraform commands.|
 {: caption="{{site.data.keyword.bpshort}} Terraform commands flags" caption-side="top"}
 
-**Sample payload of Test.JSON file:**
+Sample payload of `Test.JSON` file
 
 ```json
 {

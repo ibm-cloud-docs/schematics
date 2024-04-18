@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-04-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -64,7 +64,7 @@ Blueprint templates can be edited in any editor or IDE. Follow the instructions 
 {: faq}
 {: support}
 
-The default size of values that can be passed to Blueprints as inputs is set to 1KB. If the expected size is greater than 1KB, the  [`max_length` inputs meta-data](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len) can be defined to set the length that Blueprints should accept.  
+The default size of values that can be passed to Blueprints as inputs is set to `1KB`. If the expected size is greater than 1KB, the  [`max_length` inputs meta-data](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len) can be defined to set the length that Blueprints should accept.  
 
  A value larger than 1KB or the specified length results in the error `Length for variable <variable name> greater than the given length`   
 

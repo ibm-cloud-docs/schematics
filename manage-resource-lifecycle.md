@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-04-18"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -120,7 +120,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
     **Example to remove a resource by commenting out a resource definition:**
 
     ```terraform
-    ...
+    
     #resource ibm_is_instance "vsi1" {
     #  name    = "${local.BASENAME}-vsi2"
     #  vpc     = ibm_is_vpc.vpc.id
@@ -152,14 +152,14 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 11. From the navigation, select **Resources** and verify that your resources are removed. 
 12. Optional: After you removed all your resources, remove your workspace. 
     1. Open the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external} and find the workspace that you want to remove. 
-    2. Click **Actions...** tab and select **Delete workspace** option. 
+    2. Click **Actions** tab and select **Delete workspace** option. 
     3. Type your workspace name in **Type `workspace_name` to confirm** text box. 
     4. Click **Delete** button.
 
 **To remove resources using the {{site.data.keyword.bpshort}} console:**
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, find the workspace that includes the resources that you want to delete. 
-2. Click **Actions...** tab and select **Destroy resources** option. 
+2. Click **Actions** tab and select **Destroy resources** option. 
 3. Type your workspace name in **Type `workspace_name` to confirm** text box. Note that destroying resources removes the resources from your workspace and {{site.data.keyword.cloud_notm}}. This action cannot be undone.
 4. Click **Destroy** button.
 5. From the navigation, select **Jobs** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
@@ -266,7 +266,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
     **Example for commenting out a resource:**
 
     ```terraform
-    ...
+    
     #resource ibm_is_instance "vsi1" {
     #  name    = "${local.BASENAME}-vsi2"
     #  vpc     = ibm_is_vpc.vpc.id

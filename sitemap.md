@@ -2154,7 +2154,7 @@ subcollection: schematics
 
 * [Can an existing workspace run jobs on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
 
-* [What IAM permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
+* [What IAM permissions is needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
 
 * [Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
 
