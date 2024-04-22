@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-04-22"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -64,7 +64,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     {: pre}
 
     ```sh
-    ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE1] [--target RESOURCE2] [--force] [--output OUTPUT] [--json]
+    ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE1] [--target RESOURCE2] [--force] [--output OUTPUT]
     ```
     { pre}
 

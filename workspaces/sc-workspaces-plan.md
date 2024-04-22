@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-04-22"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -103,7 +103,7 @@ During workspace plan execution, you cannot edit your workspace.
 	Syntax
 
 	```sh
-	ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--var-file PATH_TO_VARIABLES_FILE] [--var-file PATH_TO_VARIABLES_FILE] [--json]
+	ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--var-file PATH_TO_VARIABLES_FILE] [--var-file PATH_TO_VARIABLES_FILE] []
 	```
 	{: pre}
 
