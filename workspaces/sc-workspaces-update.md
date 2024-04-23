@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-04-22"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -121,7 +121,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     Syntax
 
     ```sh
-    ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--github-token GITHUB_TOKEN] [--pull-latest]  [--output OUTPUT] [--json]
+    ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--github-token GITHUB_TOKEN] [--pull-latest]  [--output OUTPUT]
     ```
     {: pre}
 

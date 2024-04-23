@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-04-22"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -53,7 +53,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     Syntax
 
     ```sh
-    ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]
+    ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region]
     ```
     {: pre}
 

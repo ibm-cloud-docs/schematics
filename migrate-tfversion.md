@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-28"
+lastupdated: "2024-04-22"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -168,17 +168,17 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
 
 12. Run these commands through command-line to create a new Terraform `v0.13` workspace 
     -  `ibmcloud schematics workspace new --file workspace.json --state state.json`.
-    -  `ibmcloud schematics workspace get --id  <workspace-id> --json`.
+    -  `ibmcloud schematics workspace get --id  <workspace-id>`.
         If your workspace status is not `inactive`, wait for few seconds and retry the command.
         {: note}
 
     - `ibmcloud schematics plan id <workspace id>`.
-    - `ibmcloud schematics job get --id <job-id form plan> --json`.
+    - `ibmcloud schematics job get --id <job-id form plan>`.
         If your workspace plan status is not `success`, wait for few seconds and retry the command.
         {: note}
    
     - `ibmcloud schematics apply --id <workspace id>`.
-    - `ibmcloud schematics job get --id <job-id from apply> --json`.
+    - `ibmcloud schematics job get --id <job-id from apply>`.
 
     
 13. [Optional] you can delete the {{site.data.keyword.bpshort}} workspace that uses `Terraform v0.12`. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-04-22"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -87,7 +87,7 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
-2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
+2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region]` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
 3. Run `ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} workspaces delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) command.
 
 ### Actions
