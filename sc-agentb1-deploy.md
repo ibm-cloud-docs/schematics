@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-20"
+lastupdated: "2024-05-14"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -34,7 +34,8 @@ Review and complete the steps that are described in [preparing for agent deploym
 - The cluster, {{site.data.keyword.cos_full_notm}} instance, and {{site.data.keyword.cos_full_notm}} bucket are created in the same resource group.
 - Record the `cluster ID`, `cluster resource group`, and `region` of the {{site.data.keyword.containershort}} cluster the agent deploys.
 - The `{{site.data.keyword.cos_full}} instance name`, `{{site.data.keyword.cos_full_notm}} bucket name` of the {{site.data.keyword.objectstorageshort}} bucket is used for agent temporary data storage. The resource group and region of the {{site.data.keyword.cos_full_notm}} instance and bucket must be the same as the cluster.
-- If you are by using a private Git instance, you need to establish the connection with an agent through certificate. For more information, see [steps to associate an agent with private Git instance](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
+- Optional - if you need to expose or update the proxy server to an Agent microservices, refer to, [configuring {{site.data.keyword.bpshort}} agents to a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview).
+- Optional - if you are using a private Git instance, you need to establish the connection with an agent through certificate. For more information, see [steps to associate an agent with private Git instance](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
    
    You need to see that the `Cluster`, and the `{{site.data.keyword.cos_full_notm}} instance` are in the same resource group.
    {: important}

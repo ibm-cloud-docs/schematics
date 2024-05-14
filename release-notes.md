@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-05-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -87,6 +87,10 @@ Review the release notes for February 2024.
 {: shortdesc}
 
 
+
+### 28 February 2024
+{: #schematics-feb2824}
+{: release-note}
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`,  template from 2nd week of April 2024.
 

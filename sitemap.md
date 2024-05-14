@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-05-14"
 
 keywords: schematics
 subcollection: schematics
@@ -309,7 +309,9 @@ subcollection: schematics
 
     * Review the release notes for February 2024.
 
-    * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`,  template from 2nd week of April 2024.
+    * [28 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2824)
+
+        * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`,  template from 2nd week of April 2024.
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
@@ -1499,6 +1501,14 @@ subcollection: schematics
 * [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health&interface=api#health-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-health&interface=api#agent-health-nextstep)
+
+[Configuring {{site.data.keyword.bpshort}} agents to use a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-agent-overview)
+
+* [Before you begin](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-prereq)
+
+* [Configuring a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-configure)
+
+* [Verifying proxy server access](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-verify)
 
 [Configuring {{site.data.keyword.bpshort}} agents to use a private registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-overview)
 
