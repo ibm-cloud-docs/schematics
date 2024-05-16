@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2024-04-18"
+lastupdated: "2024-05-16"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -16,6 +16,8 @@ subcollection: schematics
 {: #sch-utilities}
 
 The {{site.data.keyword.bpshort}} worker runs your automation workload. The workload is deployed as a Kubernetes job pod that run only one {{site.data.keyword.bpshort}} automation command and self-destructs on completion. All your {{site.data.keyword.bpshort}} command such as `schematics plan`, `schematics apply`, `schematics run`, and `schematics destroy` runs by using the {{site.data.keyword.bpshort}} worker pods. In addition to the core Terraform CLI and Ansible CLI, the {{site.data.keyword.bpshort}} worker job images include several utilities and executables.
+
+Software can not be installed in the {{site.data.keyword.bpshort}} runtime. Any attempt to install a software in the `schematics-runtime-job` pod, is considered a violation and can cause vulnerability.
 
 Following are the {{site.data.keyword.bpshort}} type of workers.
 

@@ -2378,6 +2378,8 @@ subcollection: schematics
 
 * [How do I fix authentication errors when using the API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
+* [How to retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable?](/docs/schematics?topic=schematics-workspaces-faq#retrieve-wks-id-env-var-faq)
+
 
 ## Troubleshooting
 {: #sitemap_troubleshooting}

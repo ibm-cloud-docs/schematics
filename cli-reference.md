@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-05-16"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2726,7 +2726,7 @@ ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address n
 ### `ibmcloud schematics workspace state mv`
 {: #schematics-wks_statemv}
 
-Moves the record of an instance or resource within the Terraform state file. The workspace continues to function, but the next plan or apply operation will not find the resource or instance in the state file. If no changes are made to the template, you can see recreation of the resource on the next operation by Terraform. 
+If you move the state for a resource within the state file. The workspace continues to function, but the next plan or apply operation will not find the resource or instance in the state file. If no changes are made to the template, you can see recreation of the resource on the next operation by Terraform.
 {: shortdesc}
 
 ```sh
@@ -2754,8 +2754,9 @@ ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s test
 ### `ibmcloud schematics workspace state rm`
 {: #schematics-wks_staterm}
 
-Removes the record of an instance or resource from the Terraform state file. The workspace continues to function, but the next plan or apply operation will not find the resource or instance in the state file. If no changes are made to the template, you can see re-creation of the resource on the next operation by Terraform.
+If you remove the state for a resource or instance within the state file. The workspace continues to function, but the next plan or apply operation will not find the resource or instance in the state file. If no changes are made to the template, you can see recreation of the resource on the next operation by Terraform.
 {: shortdesc}
+
 
 ```sh
 ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --address PARAMETER 

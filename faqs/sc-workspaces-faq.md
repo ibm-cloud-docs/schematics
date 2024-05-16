@@ -69,11 +69,13 @@ You can follow the topics to upgrade from one Terraform version to another versi
 Updating the {{site.data.keyword.bplong}} workspaces through command line need the needed field `name`.
 
 You need to run `ibmcloud schematics workspace update --id <workspace-id>  --file <updatefile.json>`  command. The sample `updatefile.json` contains the name field with the value.
+
 ```json
 {
     "name":"testworkspace"
 }
 ```
+{: codeblock}
 
 ## What tools and utilities are used in the runtime?
 {: #schematics-tools}
@@ -206,6 +208,7 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
   ]
 }
 ```
+{: codeblock}
 
 ## How can I import Cloud resources into a workspace?
 {: #workspace-import-ibmcli}
@@ -447,7 +450,7 @@ Sample payload
   ]
 }
 ```
-{: pre}
+{: codeblock}
 
 ## Does drift detection run automatically?
 {: #drift-automatic-faq}
@@ -638,3 +641,23 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     {: pre}
 
 
+
+## How to retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable? 
+{: #retrieve-wks-id-env-var-faq}
+{: faq}
+{: support}
+
+You can retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable by using the following code. Before running plan or apply, `IC_SCHEMATICS_WORKSPACE_ID`, `TF_VAR_IC_SCHEMATICS_WORKSPACE_ID`, `TF_VAR_IC_SCHEMATICS_WORKSPACE_RG_I`, `IC_IAM_TOKEN`, and `IC_IAM_REFRESH_TOKEN` environment variables are automatically set to your Terraform scripts.
+
+```json
+data "external" "env" {
+  program = ["jq", "-n", "env"]
+}
+
+output "workspace_id" {
+value = "${lookup(data.external.env.result, "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID")}"
+```
+{: codeblock}
+
+If you want to see all the available environment variables in the workspace use `output "${jsonencode(data.external.env.result)}"` code.
+{: note}
