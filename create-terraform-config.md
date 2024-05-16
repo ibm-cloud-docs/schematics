@@ -280,7 +280,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
 | `list(string)` | ["us-south", "eu-gb"] |
 | `list` | ["value", 30] |
 | `list(list(string))` | See [list of String example](/docs/schematics?topic=schematics-create-tf-config#example-list-strings). |
-| `list(object({internal = number </br> external = number </br> protocol = string}))` | See [list of Object example](/docs/schematics?topic=schematics-create-tf-config#example-list-object). |
+| `list(object({internal = number external = number protocol = string}))` | See [list of Object example](/docs/schematics?topic=schematics-create-tf-config#example-list-object). |
 {: caption="Complex variable types with example" caption-side="bottom"}
 
 ### Example for list of Strings

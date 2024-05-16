@@ -1947,10 +1947,10 @@ Example
         "type": "<terraform_version>",
         "env_values":[
         {
-        "VAR1":"<val1>"
+          "env_values_1": "dummy_text"
         },
         {
-        "VAR2":"<val2>"
+          "env_values_2": "dummy_text"
         }
         ],
         "variablestore": [
@@ -2023,10 +2023,10 @@ Example JSON for uploading in a `.tar` file
         "type": "<terraform_version>",
         "env_values":[
         {
-        "VAR1":"<val1>"
+          "env_values_1": "dummy_text"
         },
         {
-        "VAR2":"<val2>"
+          "env_values_2": "dummy_text"
         }
         ],
         "variablestore": [
@@ -2298,10 +2298,10 @@ You need to replace the `<...>` placeholders with the actual values. For example
         "type": "<terraform_version>",
         "env_values":[
         {
-        "VAR1":"<val1>"
+           "env_values_1": "dummy_text"
         },
         {
-        "VAR2":"<val2>"
+           "env_values_2": "dummy_text"
         }
         ],
         "variablestore": [
