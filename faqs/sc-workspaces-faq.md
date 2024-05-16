@@ -59,7 +59,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 - [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version)
 - [Updating the workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
 - [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
-- [Upgrading a Terraform v0.12 workspace to v0.13 ](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+- [Upgrading a Terraform v0.12 workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
 
 ## How do I `pull latest` code from a Git repo by using the command line? 
 {: #latestcode-workspace-commandline}

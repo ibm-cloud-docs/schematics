@@ -1757,9 +1757,9 @@ subcollection: schematics
 
 * [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
 
-    * [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-continuous-deployment#about-)
+    * [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-continuous-deployment#wks-preqre-abt-sch)
 
-    * [About DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#about-devops-toolchain)
+    * [About DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#wks-preqre-abt-devops)
 
 * [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
 
