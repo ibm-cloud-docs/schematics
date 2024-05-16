@@ -638,3 +638,24 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     {: pre}
 
 
+
+## How to retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable? 
+{: #retrieve-wks-id-env-var-faq}
+{: faq}
+{: support}
+
+You can retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable by using the following code. Before running plan or apply, `IC_SCHEMATICS_WORKSPACE_ID`, `TF_VAR_IC_SCHEMATICS_WORKSPACE_ID`, `TF_VAR_IC_SCHEMATICS_WORKSPACE_RG_I`, `IC_IAM_TOKEN`, and `IC_IAM_REFRESH_TOKEN` environment variables are automatically set to your Terraform scripts.
+
+  ```json
+  data "external" "env" {
+    program = ["jq", "-n", "env"]
+  }
+
+  output "workspace_id" {
+  value = "${lookup(data.external.env.result, "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID")}"
+  ```
+  {: codeblock}
+
+  If you want to see all the available environment variables in the workspace use `output "${jsonencode(data.external.env.result)}"` code.
+  {: note}
+
