@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-29"
+lastupdated: "2024-05-16"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -55,7 +55,8 @@ Follow the instructions to configure the `provider` block.
 
 3. Create a `provider.tf` file or add the following code to your Terraform configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov).
 
-    Example for VPC infrastructure resources.
+    Example for VPC infrastructure resources
+
     ```terraform
     provider "ibm" {
         generation = 1
@@ -64,7 +65,8 @@ Follow the instructions to configure the `provider` block.
     ```
     {: codeblock}
 
-    Example for classic infrastructure resources.
+    Example for classic infrastructure resources
+
     ```terraform
     variable "iaas_classic_username" {
         type = "string"
@@ -81,14 +83,16 @@ Follow the instructions to configure the `provider` block.
     ```
     {: codeblock}
 
-    Example for all {{site.data.keyword.containerlong_notm}} resources.
+    Example for all {{site.data.keyword.containerlong_notm}} resources
+
     ```terraform
     provider "ibm" {
     }
     ```
     {: codeblock}
 
-    Example for all other resources.
+    Example for all other resources
+
     ```terraform
     provider "ibm" {
         region = "<region_name>"
@@ -104,7 +108,8 @@ Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources t
 
 To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command-line plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.terraform-provider_full_notm}} reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
 
-Example infrastructure code for provisioning a VPC.
+Example infrastructure code for provisioning a VPC
+
 ```terraform
 resource ibm_is_vpc "vpc" {
     name = "myvpc"
@@ -122,7 +127,8 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 - **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file. </br>
 
-    Example of an infrastructure code.
+    Example of an infrastructure code
+
     ```terraform
     resource ibm_is_vpc "vpc" {
         name = "myvpc"
@@ -137,7 +143,8 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 - **Data sources**: You can also use the data sources from the {{site.data.keyword.cloud_notm}} Provider plug-in reference to retrieve information about an existing {{site.data.keyword.cloud_notm}} resource. Review the **Argument reference** section in the {{site.data.keyword.cloud_notm}} Provider plug-in reference to see what input parameters you must provide to retrieve an existing resource. Then, review the **Attributes reference** section to find an overview of parameters that are made available to you and that you can reference in your `resource` blocks. Use this option if you want to access the details of a resource that is configured in another Terraform configuration file.
 
-    Example of an infrastructure code.
+    Example of an infrastructure code
+
     ```terraform
     data ibm_is_image "ubuntu" {
         name = "ubuntu-18.04-amd64"
@@ -186,7 +193,8 @@ When you declare an input variable, you must provide a name for your variable an
 
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters.
 
-Example variable declaration without a default value.
+Example variable declaration without a default value
+
 ```terraform
 variable "datacenter" {
     type        = "string"
@@ -195,7 +203,8 @@ variable "datacenter" {
 ```
 {: codeblock}
 
-Example variable declaration with a default value.
+Example variable declaration with a default value
+
 ```terraform
 variable "datacenter" {
     type        = "string"
@@ -211,7 +220,7 @@ variable "datacenter" {
 You can reference the value of the variable in other blocks of your Terraform configuration files by using the `"${var.<variable_name>}"` syntax.
 {: shortdesc}
 
-Example for referencing a `datacenter` variable.
+Example for referencing a `datacenter` variable
 
 ```terraform
 resource ibm_container_cluster "test_cluster" {

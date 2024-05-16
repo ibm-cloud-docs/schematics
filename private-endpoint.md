@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-05-16"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -68,7 +68,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
         ```
         {: pre}
 
-        Example output:
+        Example output
         ```text
         Retrieving account User's Account of user@email.com...
         OK

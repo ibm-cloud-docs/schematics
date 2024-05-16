@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-05-16"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -59,9 +59,9 @@ During this time {{site.data.keyword.bpshort}} supports only operations with the
 
 After 24 months from GA, users no longer be able to manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} workspaces by using this release. The workspace must first be updated to use a release of Terraform with HCL provided maintenance and security fixes. The content of the workspaces remains accessible and the Terraform release can be updated in {{site.data.keyword.bpshort}} to re-enable operations.
 
-If you choose not to upgrade to the current version of Terraform beyond the **restrict workspace execution** date:
+If you choose not to upgrade to the current version of Terraform beyond the `restrict workspace execution` date:
 - Your {{site.data.keyword.bpshort}} workspace data continues to stay in {{site.data.keyword.bpshort}} until you delete these workspaces.
-- You cannot do operations on, or **destroy** the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI. 
+- You cannot do operations on, or `destroy` the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI. 
 
 ## Deprecation Schedule
 {: #deprecate-timeline}

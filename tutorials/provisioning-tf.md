@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-05-16"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -187,7 +187,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     For more information about workspace creation, see [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
     {: note}
 
-    **Sample example output**
+    Sample example output
 
     ```text
     Creation Time   Mon Feb 15 19:18:55
@@ -221,7 +221,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     ```
     {: pre}
 
-    **Sample example output**
+    Sample example output
 
     ```text
     Name               ID                              Description     Status      Frozen
@@ -250,7 +250,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {: pre}
 
-    **Sample example output**
+    Sample example output
 
     ```text
     Activity ID 3886e3752a0a83b04732b6666533b464
@@ -282,7 +282,8 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {: pre}
 
-    **Sample example output**
+    Sample example output
+    
     ```text
     Do you really want to perform this action? [y/N]> y
 
