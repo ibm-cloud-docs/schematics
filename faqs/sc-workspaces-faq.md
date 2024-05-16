@@ -201,9 +201,9 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
       "type": "terraform_v0.12",
       "env_values":[
       {
-"TF_LOG":"debug"
+        "TF_LOG":"debug"
       }
-   ]
+    ]
     }
   ]
 }

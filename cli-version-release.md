@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-05-16"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -29,11 +29,11 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.12.14 | 10 January 2024 | Added new commands and translations to support the agent and policy. The system workspaces from the workspace list command output are hidden. Enhanced the agent job display on command output. Usage of `/v1/versions` API for the agent versions.|
 | 1.12.12 | 17 September 2023 | {{site.data.keyword.bpshort}} Agent create and update added with a [`new flag --metadata`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-create) and a bug fix to configure an [HTTP timeout for request](/docs/schematics?topic=schematics-general-faq&interface=cli#http-api-call). |
 | 1.12.10 | 22 May 2023 | {{site.data.keyword.bpshort}} [Agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) and [`agent list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list) command bug fixes to set the runtime errors. |
-| 1.12.9 | 6 April 2023 | {{site.data.keyword.bpshort}} Agent beta-1 and policy CLI commands are enhanced to include the -`-target-file`, and the `output` of [agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), [agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply), and [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).  |
+| 1.12.9 | 6 April 2023 | {{site.data.keyword.bpshort}} Agent beta-1 and policy CLI commands are enhanced to include the `-target-file`, and the `output` of [agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), [agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply), and [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).  |
 | 1.12.8 | 22 Mar 2023 | [{{site.data.keyword.bpshort}} Agent beta-1](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd) and [policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#policy-cmd) CLI commands are available in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.7 | 07 Feb 2023 | Bug fix to disable `API_AGENT_ATTACHMENT` in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.6 | 30 Jan 2023 | Enhanced complex input support through `yaml` file. Fixes related to the status output, index out of range for workspace action output, refresh token issue for long running and spinner panic fixes. |
-| 1.12.5 | 18 Dec 2022 | The subcommand usage, and support for specifying complex inputs through a local YAML file by using `-input-file` option.  
+| 1.12.5 | 18 Dec 2022 | The subcommand usage, and support for specifying complex inputs through a local YAML file by using `-input-file` option.|  
 | 1.12.3 | 18 Nov 2022 |  Fixed subcommand usage support `source type`. |
 | 1.12.3 | 3 Nov 2022 |  Enhanced CLI commands, with the latest SDK update, and the workspace action command update. |
 | 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for the commands in and released {{site.data.keyword.bpshort}} v1.12.2 plug-in.|
