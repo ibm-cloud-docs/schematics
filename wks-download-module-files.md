@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-05-16"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
 
@@ -86,7 +86,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 ```
 {: codeblock}
 
-**Example `testexample.json` with `netrc` payload:**
+Example `testexample.json` with `netrc` payload
 
 ```json
 {
@@ -116,11 +116,11 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 ```
 {: codeblock}
 
-**Example to create workspace:**
+Example to create workspace
+
 ```sh
 ibmcloud schematics workspace new --file testexample.json
 ```
 {: pre}
 
 Run `ibmcloud schematics workspace get --id WORKSPACE_ID` command to analyze the success workspace creation or use [user interface](https://cloud.ibm.com/schematics), to view all the files from the modules are cloned and used in your workspace to provision.
-

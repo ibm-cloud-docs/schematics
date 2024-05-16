@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-05-16"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, cli, setting up, api
 
@@ -40,7 +40,7 @@ To work with {{site.data.keyword.bplong_notm}} API, you must provide an {{site.d
 
 The request body for your API token request depends on the {{site.data.keyword.cloud_notm}} authentication method. 
 
-   You can find the {{site.data.keyword.cloud_notm}} IAM token in the **`access_token`** field of your API output. Note the {{site.data.keyword.cloud_notm}} IAM token to retrieve additional header information in the next steps.
+   You can find the {{site.data.keyword.cloud_notm}} IAM token in the `access_token` field of your API output. Note the {{site.data.keyword.cloud_notm}} IAM token to retrieve additional header information in the next steps.
     ```sh
     POST `https://iam.cloud.ibm.com/identity/token`
     ```
@@ -49,14 +49,14 @@ The request body for your API token request depends on the {{site.data.keyword.c
 
 | Input parameters | Values |
 | ---- | ---- |
-| Header | :`Content-Type: application/x-www-form-urlencoded`:Authorization: Basic Yng6Yng=[^] </br>`Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.|
+| Header | :`Content-Type: application/x-www-form-urlencoded`:Authorization: Basic Yng6Yng=[^] </br>`Yng6Yng=` equals the URL-encoded authorization for the username `bx` and the password `bx`.|
 | Body for {{site.data.keyword.cloud_notm}} username and password | :`grant_type: password`:`response_type: cloud_iam uaa`:`username`: Your {{site.data.keyword.cloud_notm}} username.:`password`: Your {{site.data.keyword.cloud_notm}} password.:`uaa_client_id: cf`:`uaa_client_secret:`</br> Add the `uaa_client_secret` key with no value specified. |
 | Body for {{site.data.keyword.cloud_notm}} API keys | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey`: Your {{site.data.keyword.cloud_notm}} API key:`uaa_client_id: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified. |
 | Body for {{site.data.keyword.cloud_notm}} one-time passcode | :`grant_type:urn:ibm:params:oauth:grant-type:passcode`:`response_type: cloud_iam uaa`:`passcode`: Your {{site.data.keyword.cloud_notm}} one-time passcode. Run `ibmcloud login --sso` and follow the instructions in your CLI output to retrieve your one-time passcode by using your web browser.:`uaa_client_id: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified. |
 {: caption="Table" caption-side="bottom"}
 
 
-    **Example output**
+    Example output
 
     ```text
         {
@@ -74,7 +74,7 @@ The request body for your API token request depends on the {{site.data.keyword.c
 
 2. Retrieve the account ID of the of the token you are working with. 
 
-Replace `<iam_access_token>` with the IAM token retrieved from the **`access_token`** field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the **resources.metadata.guid** field.
+Replace `<iam_access_token>` with the IAM token retrieved from the `access_token` field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the resources.metadata.guid field.
     ```sh
     GET https://accounts.cloud.ibm.com/coe/v2/accounts
     ```
@@ -85,7 +85,7 @@ Replace `<iam_access_token>` with the IAM token retrieved from the **`access_tok
     | Headers | :`Content-Type: application/json`:`Authorization: bearer <iam_access_token>`:`Accept: application/json` |
     {: caption="Input parameters to get an {{site.data.keyword.cloud_notm}} account ID." caption-side="top"}
 
-    **Example output**
+    Example output
 
     ```text
     {
@@ -122,13 +122,13 @@ Replace `<iam_access_token>` with the IAM token retrieved from the **`access_tok
 
     | Input parameters | Values |
     | ---- | --- |
-    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=`[^] </br> `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.|
+    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=`[^] </br> `Yng6Yng=` equals the URL-encoded authorization for the username `bx` and the password `bx`.|
     | Body for {{site.data.keyword.cloud_notm}} username and password | :`grant_type: password`:`response_type: cloud_iam uaa`:`username`: Your {{site.data.keyword.cloud_notm}} username. :`password`: Your {{site.data.keyword.cloud_notm}} password. :`uaa_client_ID: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified.:`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
     | Body for {{site.data.keyword.cloud_notm}} API keys | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey`: Your {{site.data.keyword.cloud_notm}} API key.:`uaa_client_ID: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified.:`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
     | Body for {{site.data.keyword.cloud_notm}} one-time passcode | :`grant_type:urn:ibm:params:oauth:grant-type:passcode`:`response_type: cloud_iam uaa`:`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. :`uaa_client_ID: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified. :`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
     {: caption="Input parameters to get IAM tokens." caption-side="top"}
 
-    **Example output**
+    `Example output`
 
     ```sh
     {
@@ -141,11 +141,12 @@ Replace `<iam_access_token>` with the IAM token retrieved from the **`access_tok
     ```
     {: screen}
 
-    You can find the {{site.data.keyword.cloud_notm}} IAM token in the **`access_token`** and the refresh token in the **`refresh_token`** field of your API output.
+    You can find the {{site.data.keyword.cloud_notm}} IAM token in the `access_token` and the refresh token in the `refresh_token` field of your API output.
 
 4. Use the {{site.data.keyword.bpshort}} API to list all the workspaces in your account. 
 
-    **Syntax to list all workspaces**
+    Syntax to list all workspaces
+    
     ```sh
         GET https://schematics.cloud.ibm.com/v1/workspaces/ 
     ```
@@ -157,7 +158,8 @@ Replace `<iam_access_token>` with the IAM token retrieved from the **`access_tok
         | Header | `Authorization: bearer <iam_token>`|
         {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
-    **Syntax to retrieve information about a specific workspace**:
+    Syntax to retrieve information about a specific workspace:
+    
     ```sh
     GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
     ```
@@ -198,12 +200,12 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
 
     | Input parameters | Values |
     | ---- | --- |
-    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=` </br></br>  `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**. |
+    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=` </br></br>  `Yng6Yng=` equals the URL-encoded authorization for the username `bx` and the password `bx`. |
     | Body when using the refresh token |:`grant_type: refresh_token`:`response_type: cloud_iam uaa`:`refresh_token:` Your {{site.data.keyword.cloud_notm}} IAM refresh token. :`uaa_client_ID: cf`:`uaa_client_secret:`:`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID. </br></br> Add the `uaa_client_secret` key with no value specified. |
     | Body when using the {{site.data.keyword.cloud_notm}} API key | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey:` Your {{site.data.keyword.cloud_notm}} API key. :`uaa_client_ID: cf`:`uaa_client_secret:`  Add the `uaa_client_secret` key with no value specified. |
     {: caption="Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token." caption-side="top"}
 
-    **Example API output**
+    Example API output
 
     ```text
     {
@@ -219,9 +221,6 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     {: screen}
 
 
-    You can find your new {{site.data.keyword.cloud_notm}} IAM token in the **`access_token`**, and the refresh token in the **`refresh_token`** field of your API output.
+    You can find your new {{site.data.keyword.cloud_notm}} IAM token in the `access_token`, and the refresh token in the `refresh_token` field of your API output.
 
 2. Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics){: external} using the token from the previous step.
-
-
-

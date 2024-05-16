@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-05-16"
 
 subcollection: schematics
 
@@ -22,7 +22,7 @@ Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Tr
 
 Before you begin, make sure that you have the [required access](/docs/schematics?topic=schematics-access) to create and work with {{site.data.keyword.bplong_notm}} workspace.
 
-## Example: Creating the {{site.data.keyword.bpshort}} workspaces by using Terraform 
+## Example - Creating the {{site.data.keyword.bpshort}} workspaces by using Terraform 
 {: #workspace-resource}
 
 Complete the following steps to create a {{site.data.keyword.bpshort}} workspace using Terraform:
@@ -38,7 +38,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
 
     Then create the {{site.data.keyword.bpshort}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
 
-    **versions.tf**
+    `versions.tf`
 
     The sample `versions.tf` file to specify the provider version that you need to create the workspace.
 
@@ -54,7 +54,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     ```
     {: codeblock}
 
-    **`terraform.tfvars`**
+    `terraform.tfvars`
 
     The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
@@ -69,11 +69,10 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     ```
     {: codeblock}
 
-    **main.tf**
+    `main.tf`
 
     Review the following sample `main.tf` file. This file invokes the variables from the `terraform.tfvars` file by using the Git URL, then creates a {{site.data.keyword.bpshort}} workspace by using your {{site.data.keyword.cloud_notm}} API key.
     
-
     ```terraform
     variable "schematics_workspace_name" {}
     variable "schematics_workspace_description" {}
@@ -156,6 +155,4 @@ Now that you successfully created your first {{site.data.keyword.bpshort}} works
 
 - Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
 - To run `Ansible playbooks` in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
-- Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or checkout other arguments and attributes that you can use for the Terraform resources that were used in this example.
-
-
+- Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or checkout other arguments and attributes that you can use for the Terraform resources that were used in the example.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-05-16"
 
 keywords: schematics
 subcollection: schematics
@@ -219,7 +219,7 @@ subcollection: schematics
 
 * [Best practices for creating Terraform Templates or modules in Git repositories](/docs/schematics?topic=schematics-bp-secure-objects#bp-secure-repo)
 
-    * [What are the best practices that you must follow in developing the Terraform templates, and publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
+    * [What are the best practices that you must follow in developing the Terraform templates and publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
 
     * [Can you create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-tfvars)
 
@@ -229,7 +229,7 @@ subcollection: schematics
 
     * [What are the best practices that you must follow in creating a workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
-    * [How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
+    * [How can you ensure that the sensitive data used by the Terraform automation do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
     * [How can you protect the access to workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
 
@@ -1644,7 +1644,7 @@ subcollection: schematics
 
 [Using Terraform to configure {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup#terraform-setup)
 
-* [Example: Creating the {{site.data.keyword.bpshort}} workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
+* [Example - Creating the {{site.data.keyword.bpshort}} workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
 
 * [What's next?](/docs/schematics?topic=schematics-terraform-setup#terraform-setup-next)
 
@@ -1756,6 +1756,10 @@ subcollection: schematics
 * [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
 
 * [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
+
+    * [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-continuous-deployment#about-)
+
+    * [About DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#about-devops-toolchain)
 
 * [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
 
@@ -2170,7 +2174,7 @@ subcollection: schematics
 
 * [What IAM permissions is needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
 
-* [Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
+* [Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
 
 * [What attributes of workspaces or actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
@@ -2186,7 +2190,7 @@ subcollection: schematics
 
 * [How can a user identify the job is created by an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job-id)
 
-* [Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-wks-job)
+* [Is it possible that a workspace is created by an agent and still do not have a reference in the workspace job log?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-wks-job)
 
 * [Can {{site.data.keyword.bpshort}} Agent establish a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-cert)
 
@@ -2216,11 +2220,11 @@ subcollection: schematics
 
 * [How do I generate IAM access token, if client ID `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
-* [How to rectify `Failed to clone Git repository, might not find remote ref refs/heads/master (most likely invalid branch name is passed)`?](/docs/schematics?topic=schematics-general-faq#template-errors)
+* [How to rectify failed to clone Git repository, might not find remote ref refs or heads or master most likely invalid branch name is passed?](/docs/schematics?topic=schematics-general-faq#template-errors)
 
 * [Can I increase the timeout for null-exec and remote-exec resource?](/docs/schematics?topic=schematics-general-faq#timeout-null-resource)
 
-* [How can I save user-defined files that are generated by the Terraform modules and use them across multiple Terraform plan, apply, destroy, refresh, or import commands?](/docs/schematics?topic=schematics-general-faq#persist-file)
+* [How can I save user-defined files that are generated by the Terraform modules and use them across multiple Terraform commands?](/docs/schematics?topic=schematics-general-faq#persist-file)
 
 * [How do I identify the best way to synchronize a deleted resource with the Terraform state?](/docs/schematics?topic=schematics-general-faq#sync-delresource-terraform)
 
@@ -2228,7 +2232,7 @@ subcollection: schematics
 
 * [While creating Red Hat OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?](/docs/schematics?topic=schematics-general-faq#resourcetimeout-warn-faq)
 
-* [How can I rectify the 403 Error while validating the location in the account. Verify you have permission to the location in the global catalog settings?](/docs/schematics?topic=schematics-general-faq#global-setting-location)
+* [How can I rectify the 403 Error while validating the location in the global catalog account?](/docs/schematics?topic=schematics-general-faq#global-setting-location)
 
 * [Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?](/docs/schematics?topic=schematics-general-faq#vm-tags-faq)
 
@@ -2258,9 +2262,9 @@ subcollection: schematics
 
 * [Can I always set Terraform to use the current or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, does `Terraform version 1.0 continues to use even if Terraform version 2.0 or higher` are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
+* [If I set `type: = terraform_v1.0` in the JSON file as shown in the code block, does Terraform version 1.0 continues to use even if Terraform version 2.0 or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
-* [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
+* [Can I specify only the provider version in the version parameter? Or is it mandatory to provide the required_version parameter in the versions.tf file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 
 * [What is the difference between delete, and destroy in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#faq-delete-destroy)
 

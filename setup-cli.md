@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-05-16"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -66,7 +66,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     ```
     {: pre}
 
-    Example output:
+    Example output
 
     ```text
     Listing installed plug-ins...
@@ -82,7 +82,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     ```
     {: pre}
 
-    Example output: 
+    Example output 
     ```text
     NAME:
     ibmcloud schematics - Automate the deployment and management of IBM Cloud resources using Infrastructure as Code
@@ -137,7 +137,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     ```
     {: pre}
 
-    Example output: 
+    Example output 
 
     ```text
     schematics                      1.12.15        Update Available           false
@@ -172,7 +172,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     ```
     {: pre}
 
-    Example output:
+    Example output
 
     ```text
     Plugin Name                              schematics[sch]
@@ -214,7 +214,7 @@ Uninstall the {{site.data.keyword.bplong_notm}} plug-in to remove the {{site.dat
     ```
     {: pre}
 
-    Example output:
+    Example output
 
     ```text
     Uninstalling plug-in 'schematics'...

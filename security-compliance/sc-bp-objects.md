@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-05-16"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -24,7 +24,7 @@ Take time to review the suggested practices to reduce the security risks for all
 ## Best practices for creating Terraform Templates or modules in Git repositories
 {: #bp-secure-repo}
 
-### What are the best practices that you must follow in developing the Terraform templates, and publishing the same in the Git repositories?
+### What are the best practices that you must follow in developing the Terraform templates and publishing the same in the Git repositories?
 {: #bp-template-strategy}
 
 Follow these practices in developing and publishing the Terraform template in the Git repositories.
@@ -61,7 +61,7 @@ Follow these practices in creating a workspace for the Terraform template.
 - Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-sch-delete-wks) and [destroy](/docs/schematics?topic=schematics-sch-destroy-wks) the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
 - Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
-### How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?
+### How can you ensure that the sensitive data used by the Terraform automation do not leak in the logs or outputs?
 {: #bp-security-leak-log}
 
 You need to set the variable or output parameter as sensitive to make sure that the data is not leaked in the logs or outputs.

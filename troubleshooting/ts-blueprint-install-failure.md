@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-05-16"
 
 keywords: blueprint apply failure, terraform error, terraform fails, install fails,
 
@@ -23,7 +23,7 @@ content-type: troubleshoot
 Review the following sections to help debugging `blueprint apply` failures. 
 
 
-## Blueprint apply fails with message "Install of module Failed"
+## Blueprint apply fails with message `Install of module Failed`
 {: #bp-apply-fails1}
 
 When you run the `blueprint apply` command, it fails with message that the install of a module fails.    

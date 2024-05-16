@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-05-16"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -56,13 +56,13 @@ This tutorial is intended for the developer and system administrators who want t
 ## Prerequisites
 {: #workspace-prereq}
 
-**`About {{site.data.keyword.bplong_notm}}`**
+### About {{site.data.keyword.bplong_notm}}
 
 [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) is an {{site.data.keyword.cloud_notm}} automation tool. It provides simplified provisioning, orchestrating Infrastructure as Code (IaC), templates, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using various resources tools such as Terraform, Helm.
 IaC helps you codify your cloud environment to automate the provisioning, speeds deployment, and managing your resources. The infrastructure is treated the same way as your app code, so that you can automate the DevOps core practices such as version control, testing, continuous integration, and deployment.
 {: shortdesc}
 
-**`About DevOps toolchain`**
+### About DevOps toolchain
 
 A DevOps toolchain is a set of tools that automates the tasks of developing and deploying your app. A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-05-16"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -150,14 +150,14 @@ The Agent periodically polls its home {{site.data.keyword.bpshort}} region to fe
 {: faq}
 {: support}
 
-No, agents are associated with a single parent {{site.data.keyword.bpshort}} account and can only execute jobs for workspaces or actions belonging to this account. 
+No, agents are associated with a single parent {{site.data.keyword.bpshort}} account and can only execute jobs for workspaces or actions belonging to this account.
 
 ## Can an existing workspace run jobs on an agent?
 {: #faqs-agent-conf}
 {: faq}
 {: support}
 
-Yes. Workspaces and actions are selected by policy to execute on agents. A {{site.data.keyword.bpshort}} `agent-selection-policy` assigns existing (or new) workspaces or actions to run on an target agent, if they match the policy attributes for tags, resource-group, location.   
+Yes. Workspaces and actions are selected by policy to execute on agents. A {{site.data.keyword.bpshort}} `agent-selection-policy` assigns existing (or new) workspaces or actions to run on an target agent, if they match the policy attributes for tags, resource-group, location.
 
 For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rules to pick `Agent-1` when the `tag == dev`. Later, the workspace job such as plan, apply, update are dynamically routed to run on `Agent-1`.
 
@@ -168,8 +168,7 @@ For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and y
 
 For information about access permissions, see [agent permissions](/docs/schematics?topic=schematics-access#agent-permissions).
 
-
-## Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?
+## Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container trusted CA root certificate store during agent runtime?
 {: #faqs-agent-certificate}
 {: faq}
 {: support}
@@ -286,7 +285,7 @@ For the {{site.data.keyword.vsi_is_full}} or {{site.data.keyword.containerlong}}
 
 You can identify that the workspace is created by an Agent through the workspace job logs.
 
-## Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?
+## Is it possible that a workspace is created by an agent and still do not have a reference in the workspace job log?
 {: #faqs-agent-wks-job}
 {: faq}
 {: support}
