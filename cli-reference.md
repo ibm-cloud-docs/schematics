@@ -2205,7 +2205,7 @@ ibmcloud schematics workspace taint --id myworkspace-lalalalalalala-11 --address
 ### `ibmcloud schematics workspace untaint`
 {: #schematics-workspace-untaint}
 
-Manually marks an instance or resources as untainted, by forcing the resources to be restored on the next apply. When you perform next plan the changes shows as restored and in the next apply the change is implemented.
+Manually marks an instance or resources as `untaint`, by forcing the resources to be restored on the next apply. When you perform next plan the changes shows as restored and in the next apply the change is implemented.
 {: shortdesc}
 
 You can execute [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to view the tainted status of your resources. `Taint Status` returns **tainted** for (true) or **blank** for (false).
@@ -2224,7 +2224,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show. |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as untaint.|
+| `--address` or `-adr` | Optional | Enter the address of the resource to mark as `untaint`.|
 {: caption="{{site.data.keyword.bpshort}} workspace `untaint` flags" caption-side="top"}
 
 Example

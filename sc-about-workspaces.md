@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-05-16"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -32,7 +32,7 @@ The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://
 
 ![Deploying infrastructure and services with workspaces](/images/new/sc-workspaces.svg){: caption="Deploying infrastructure and services with workspaces" caption-side="bottom"}
 
-Using your supplied Terraform template (config), {{site.data.keyword.bpshort}} executes the Terraform CLI engine to provision the resources defined in the config. {{site.data.keyword.bpshort}} provides a secure container environment to execute the Terraform engine, using the {{site.data.keyword.cloud_notm}} Terraform provider to provision and manage resources using the {{site.data.keyword.cloud_notm}}service APIs. 
+Using your supplied Terraform template (config), {{site.data.keyword.bpshort}} executes the Terraform CLI engine to provision the resources defined in the config. {{site.data.keyword.bpshort}} provides a secure container environment to execute the Terraform engine, using the {{site.data.keyword.cloud_notm}} Terraform provider to provision and manage resources using the {{site.data.keyword.cloud_notm}} service APIs. 
 
 ## Features
 {: #sc-wks-features}
