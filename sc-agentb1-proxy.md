@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-05-16"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -71,13 +71,13 @@ Confirm the following requirements are in place before you configure proxy serve
 Verify the cluster pods can access the Internet through the proxy server.
 {: shortdesc}
 
-  - Log into the `schematics-runtime` pod and run the following `curl` command to verify that the proxy environment variables are being correctly set in the container. 
-  - Under `Workloads > Pods` select the first `job-runtime` and `Exec` into it.  
+- Log into the `schematics-runtime` pod and run the following `curl` command to verify that the proxy environment variables are being correctly set in the container.
+- Under `Workloads > Pods` select the first `job-runtime` and `Exec` into it.  
     
-    ```curl
-    curl --head https://www.google.com
-    ```
-    {: codeblock}
+  ```curl
+  curl --head https://www.google.com
+  ```
+  {: codeblock}
 
 If the proxy is working for `HTTPS` the `curl` command returns a `200 OK HTTP response`.
 

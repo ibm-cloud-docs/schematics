@@ -20,7 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.21 | 19 April 2024 | {{site.data.keyword.bpshort}} CLI plugin deprecates `--json` flag in all the CLI commands. Also fixed the `CLI v1.12.20` deprecation bug in the `ibmcloud schematics workspace refresh or plan CLI commands.|
+| 1.12.21 | 19 April 2024 | {{site.data.keyword.bpshort}} CLI plugin deprecates `--json` flag in all the CLI commands. Also fixed the `CLI v1.12.20` deprecation bug in the `ibmcloud schematics workspace refresh` or plan CLI commands.|
 | 1.12.20 | 25 March 2024 | {{site.data.keyword.bpshort}} CLI plugin supports {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}.|
 | 1.12.18 | 08 March 2024 | Display the Terraform deprecation warning message during workspace commands using less than `terraform_v1.5`, Support for agent infrastructure update is removed, and fixed `index out of range` error by using `ibmcloud schematics state list` command.|
 | 1.12.17 | 14 February 2024 | {{site.data.keyword.bpshort}} plug-in installation supports Cloud Shell, and [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) command now supports the Cloud Shell commands.|
