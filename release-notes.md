@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-13"
+lastupdated: "2024-05-17"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## May 2024
+{: #May-2024}
+
+Review the release notes for May 2024.
+{: shortdesc}
+
+### 16 May 2024
+{: #schematics-may1624}
+{: release-note}
+
+Enhanced FAQ documentation
+:   Added a FAQ to retrieve the [{{site.data.keyword.bpshort}} Workspace ID environment variable](/docs/schematics?topic=schematics-workspaces-faq#retrieve-wks-id-env-var-faq).
 
 ## April 2024
 {: #April-2024}

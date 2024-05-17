@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-17"
 
 keywords: schematics
 subcollection: schematics
@@ -276,6 +276,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [May 2024](/docs/schematics?topic=schematics-schematics-relnotes#May-2024)
+
+    * Review the release notes for May 2024.
+
+    * [16 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may1624)
+
+        * Enhanced FAQ documentation
 
 * [April 2024](/docs/schematics?topic=schematics-schematics-relnotes#April-2024)
 
