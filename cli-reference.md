@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-31"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -635,6 +635,33 @@ ibmcloud schematics agent create --name agenttestcli10jan --location us-east --a
 {: pre}
 
 
+### `ibmcloud schematics agent delete`
+{: #schematics-agent-delete}
+
+Uninstall an agent. For more information about the steps to use the delete command, see [deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli).
+
+Syntax
+
+```sh
+ibmcloud schematics agent delete --id AGENT_ID [--force]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` | Required | The ID of an agent. |
+| `--force` or `-f` | Optional | The force action without confirmation. Set the `--force` parameter to **true** to delete all the agent flows to keep destroy parallel to workspace destroy flow. By default, this parameter is set to **false**.|
+{: caption="{{site.data.keyword.bpshort}} Agent delete flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent delete --id <AGENT_ID>
+```
+{: pre}
+
 ### `ibmcloud schematics agent deploy`
 {: #schematics-agent-apply}
 
@@ -664,15 +691,16 @@ ibmcloud schematics agent deploy --id <AGENT_ID>
 ```
 {: pre}
 
-### `ibmcloud schematics agent delete`
-{: #schematics-agent-delete}
+### `ibmcloud schematics agent destroy`
+{: #schematics-agent-destroy}
 
-Uninstall an agent. For more information about the steps to use the delete command, see [deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli).
+Destroy an agent destroys the {{site.data.keyword.cloud_notm}} resources associated with the {{site.data.keyword.bpshort}} agent deployment.
 
 Syntax
 
 ```sh
-ibmcloud schematics agent delete --id AGENT_ID [--force]
+ibmcloud schematics agent destroy --id AGENT_ID [--force]
+
 ```
 {: pre}
 
@@ -682,15 +710,14 @@ Command options
 | ----- | -------- | ------ |
 | `--id` | Required | The ID of an agent. |
 | `--force` or `-f` | Optional | The force action without confirmation. |
-{: caption="{{site.data.keyword.bpshort}} Agent delete flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent destroy flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics agent delete --id <AGENT_ID>
+ibmcloud schematics agent destroy --id <AGENT_ID>
 ```
 {: pre}
-
 
 ### `ibmcloud schematics agent get`
 {: #schematics-agent-get}
