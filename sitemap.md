@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-05-31"
 
 keywords: schematics
 subcollection: schematics
@@ -280,6 +280,8 @@ subcollection: schematics
 * [May 2024](/docs/schematics?topic=schematics-schematics-relnotes#May-2024)
 
     * Review the release notes for May 2024.
+
+    * [31 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may3124)
 
     * [16 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may1624)
 
@@ -1859,9 +1861,11 @@ subcollection: schematics
 
     * [`ibmcloud schematics agent create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-create)
 
+    * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
+
     * [`ibmcloud schematics agent deploy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
-    * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
+    * [`ibmcloud schematics agent destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-destroy)
 
     * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 

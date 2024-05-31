@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-31"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -338,7 +338,9 @@ You might have insufficient access for the workspaces in the specified location 
 {: support}
 
 Yes, You can access the private (IBM) GitLab repository by using {{site.data.keyword.bpshort}} with the privileges.
+
 - If the private (IBM) GitLab repository `git.cloud.ibm.com` access token is not needed as the IAM token is used.
+
 - If the public GitLab `gitlab.com`, `read_repository`, and `read_api` access are needed to validate the branch name for private repository.
 
 You can use the sample Terraform code block to configure the GitLab repository details.

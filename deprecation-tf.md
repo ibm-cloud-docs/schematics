@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-31"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,10 +15,12 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.5.7`. It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7` `Terraform_v1.6.6`. `Terraform_v1.5.7` is maintained as default version till the 4th July 2024. From 5th July 2024 `Terraform_v1.6.6` is set as default version.
 
 The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspace by using this version is still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}
+
+It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 For more information about updating Terraform release, see [Upgrading the Terraform workspace version](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12). Terraform v1.0 was a major release for Terraform, marking the transition to a stable `1.x` release. HCL made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), for the core Terraform features and function. No changes needed to HCL templates to upgrade through the 1.x releases.
 {: shortdesc} 
@@ -26,13 +28,13 @@ For more information about updating Terraform release, see [Upgrading the Terraf
 ## {{site.data.keyword.bpshort}} Terraform deprecation lifecycle 
 {: #deprecate-phase}
 
-The table outlines the timetable of support that is provided by {{site.data.keyword.bpshort}} for Terraform releases. For more information about the maintenance and fixes, see the following sections.   
+The table outlines the timetable of support that is provided by {{site.data.keyword.bpshort}} for Terraform releases. For more information about the maintenance and fixes, see the following sections.
 
-|Timescale | {{site.data.keyword.bpshort}} </br> operations | Terraform Maintenance and security fixes | Upgrade | 
-| -- | -- | -- | -- | 
+|Timescale | {{site.data.keyword.bpshort}} </br> operations | Terraform Maintenance and security fixes | Upgrade |
+| -- | -- | -- | -- |
 | 0-6 months  | Full operations | Yes | Suggested |
 | 6-12 months | Full operations | No  | Suggested. Upgrade if Terraform fix needed. |
-| 12 - 24 months |	Workspace creation restricted | No  | Suggested. Upgrade if Terraform fix needed. | 	
+| 12 - 24 months | Workspace creation restricted | No  | Suggested. Upgrade if Terraform fix needed. |
 | 24 months | Workspace execution restricted | No | Needed |
 {: caption="Deprecation lifecycle" caption-side="top"}
 
@@ -93,4 +95,4 @@ Follow these steps to upgrade to continue working with the latest versions of Te
 
 3. **Verification:** You can verify that a workspace has been migrated and is functional by performing a test operation. From the CLI you can run a [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) or [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands to verify that jobs for the the migrated workspace execute successfully.  
 
-Now you are at a current version of Terraform, and can continue using the {{site.data.keyword.bplong_notm}} workspaces.
+Now you are at a current version of Terraform, and can continue by using the {{site.data.keyword.bplong_notm}} workspaces.

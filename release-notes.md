@@ -32,6 +32,13 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for May 2024.
 {: shortdesc}
 
+### 31 May 2024
+{: #schematics-may3124}
+{: release-note}
+
+: Release {{site.data.keyword.bpshort}} command-line plug-in
+    The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.22](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 
 
 ### 16 May 2024

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-05-31"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -69,7 +69,7 @@ Following are the list of service security measures taken by the {{site.data.key
 ## Deletion of data
 {: #deletion-of-data}
 
-{{site.data.keyword.bplong_notm}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_full}}. For more information about how to delete your data in {{site.data.keyword.bpshort}}? see [deleting {{site.data.keyword.bplong_notm}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro).
+{{site.data.keyword.bplong_notm}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_full}}. For more information about how to delete your data in {{site.data.keyword.bpshort}}, see [deleting {{site.data.keyword.bplong_notm}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro).
 
 {{site.data.keyword.bpshort}} can completely remove all references and data for a client document when an operator-managed purging is run. Before you request that data to purge, it's important to understand that purged documents cannot recover the process is complete.
 
