@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-05-31"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,8 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for May 2024.
 {: shortdesc}
+
+
 
 ### 16 May 2024
 {: #schematics-may1624}
@@ -67,8 +69,6 @@ Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform version
 Review the release notes for March 2024.
 {: shortdesc}
 
-
-
 ### 25 March 2024
 {: #schematics-mar2524}
 {: release-note}
@@ -81,7 +81,6 @@ Release {{site.data.keyword.bpshort}} Agents version
 
 Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.20](/docs/schematics?topic=schematics-cli_version-releases) released.
-
 
 
 
