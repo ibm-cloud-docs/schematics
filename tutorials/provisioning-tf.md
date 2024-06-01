@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -98,8 +98,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later. 
     - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
     - **versions.tf**: This file includes the Terraform version that this template requires. 
-2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace. 
-
+2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace.
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
 {: #create-tut-wks}
@@ -113,7 +112,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     {
         "name": "mytest1_cluster",
         "type": [
-            "terraform_v1.0"
+            "terraform_v1.4"
         ],
         "description": "",
         "template_repo": {
@@ -122,7 +121,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
         "template_data": [
             {
             "folder": ".",
-            "type": "terraform_v1.0",
+            "type": "terraform_v1.4",
             "variablestore": [
             {
               "name": "worker_pool_name",

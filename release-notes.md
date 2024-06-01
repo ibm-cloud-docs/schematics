@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-01"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -36,8 +36,8 @@ Review the release notes for May 2024.
 {: #schematics-may3124}
 {: release-note}
 
-: Release {{site.data.keyword.bpshort}} command-line plug-in
-    The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.22](/docs/schematics?topic=schematics-cli_version-releases) released.
+Release {{site.data.keyword.bpshort}} command-line plug-in
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.22](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 
 
@@ -266,7 +266,7 @@ Review the release notes for April 2023.
 {: #schematics-apr1323}
 {: release-note}
 
-{{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
+{{site.data.keyword.bpshort}} updates the deprecation of Terraform versions
 :   The {{site.data.keyword.bpshort}} announces the timeline for the [deprecation of Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-06-01"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -39,15 +39,15 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Specify Template** section:
         - **GitHub, GitLab, or `Bitbucket` repository URL** - `<provide your Terraform template Git repository URL`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. You need to select Terraform version 1.0 or greater version. For example, if your Terraform templates are created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
-          You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0. When you specify `terraform_v1.1`means that users can have template that is of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
+        - Terraform Version - `terraform_v1.5`. You need to select Terraform version 1.5 or greater version. For example, if your Terraform templates are created by using Terraform v1.5, select the `Terraform version` parameter as **terraform_v1.5**. 
+          You can select `Terraform_v1.4` to use Terraform version 1.4, `terraform_v1.6` to use Terraform version 1.6. When you specify `terraform_v1.5` means that users can have template that is of Terraform `v1.5.0`, `v1.5.1`, or `v1.5.7`, so on. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
           {: note}
 
-          {{site.data.keyword.bpshort}} supports the current release of `Terraform v1.1`, through `terraform_v1.0`. The Terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the current version.
+          {{site.data.keyword.bpshort}} supports the current release of `Terraform v1.4`, through `terraform_v1.6`. The Terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the current version.
 
           ```terraform
           terraform {
-          required_version = "~> 1.1"
+          required_version = "~> 1.5"
           }
           ```
           {: pre}
@@ -81,7 +81,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     {
         "name":"testwspace03jan",
         "type":[
-            "terraform_v1.0"
+            "terraform_v1.4"
         ],
         "description":"terraform workspace",
         "location":"us-east",
@@ -99,7 +99,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         "template_data":[
             {
             "folder":".",
-            "type":"terraform_v1.0",
+            "type":"terraform_v1.4",
             "variablestore":[
             {
                 "name":"sample_var",
@@ -178,7 +178,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
     {
     "name":"testwspace03jan",
     "type":[
-        "terraform_v1.0"
+        "terraform_v1.4"
     ],
     "description":"terraform workspace updated",
     "location":"us-east",
@@ -196,7 +196,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
     "template_data":[
         {
             "folder":".",
-            "type":"terraform_v1.0",
+            "type":"terraform_v1.4",
         "variablestore":[
             {
                 "name":"sample_var",
@@ -238,7 +238,7 @@ Output
     "name": "testwspace03jan",
     "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:workspace:us-east.workspace.testwspace03jan.cf74cc48",
     "type": [
-        "terraform_v1.0"
+        "terraform_v1.4"
     ],
     "description": "terraform workspace updated successfully",
     "resource_group": "Default",
@@ -273,7 +273,7 @@ Output
             "id": "b44c147b-81fb-4e",
             "folder": ".",
             "compact": false,
-            "type": "terraform_v1.0",
+            "type": "terraform_v1.4",
             "values_url": "https://us.schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.testwspace03jan.cf74cc48/template_data/b44c147b-81fb-4e/values",
             "values": "",
             "values_metadata": [

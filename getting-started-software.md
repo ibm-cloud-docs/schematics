@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-01"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -42,7 +42,7 @@ Use one of the IBM provided software templates to set up and configure a classic
 
 1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. Click **Log in**, in case you haven't log in to your {{site.data.keyword.cloud_notm}} account.
 
-   Observe {{site.data.keyword.cloud_notm}} is specified in **Select your deployment target** and `Terraform Version 1.0.7` or `Terraform Version 2.0.0` is displayed in **Select a delivery method**.
+   Observe {{site.data.keyword.cloud_notm}} is specified in **Select your deployment target** and `Terraform Version 1.5.0` or `Terraform Version 2.0.0` is displayed in **Select a delivery method**.
    {: note}
 
 2. In the **Configure your workspace** section, enter **Name** for your {{site.data.keyword.bpshort}} workspace, select your **Resource group**, and the **Location** where you want to create the workspace.

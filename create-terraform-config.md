@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -187,7 +187,7 @@ You can decide to declare your variables within the same Terraform configuration
 **What information do I need to include in my variable declaration?**
 
 When you declare an input variable, you must provide a name for your variable and the data type according to the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string`, and `HCL` format for complex variables.
-- `Terraform v0.12` supports **string, list, map, `bool`, number, and complex data types such as list(type), map(type), object({attribute name=type,.}), set(type), tuple([type])**.
+    - `Terraform v1.5` supports **string, list, map, `bool`, number, and complex data types such as list(type), map(type), object({attribute name=type,.}), set(type), tuple([type])**.
 
 **Is there a character limit for input variables?**
 

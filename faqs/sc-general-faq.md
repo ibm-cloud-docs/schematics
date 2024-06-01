@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -309,7 +309,7 @@ You can see create [single and multizone {{site.data.keyword.openshiftshort}}, a
 Yes, in the payload or JSON file, if the value for the `type` and `template_type` parameter is not declared, at runtime, the default Terraform version is considered. For more information, see [specifying version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
 You can specify the Terraform version in the payload by using the `type` or `template_type` parameter. However, check whether the version value for the `type` and `template_type` contains the same version.
 
-## If I set `type: = terraform_v1.0` in the JSON file as shown in the code block, does Terraform version 1.0 continues to use even if Terraform version 2.0 or higher are released?
+## If I set `type: = terraform_v1.4` in the JSON file as shown in the code block, does Terraform version 1.4 continues to use even if Terraform version 2.0 or higher are released?
 {: #terraform-type-faq}
 {: faq}
 {: support}
@@ -318,7 +318,7 @@ You can specify the Terraform version in the payload by using the `type` or `tem
     //Sample JSON file
     {
     "name": "<workspace_name>",
-    "type": "terraform_v1.0",
+    "type": "terraform_v1.4",
     "resource_group": "<resource_group>",
     "location": "",
     "description": "<workspace_description>",
@@ -328,20 +328,20 @@ You can specify the Terraform version in the payload by using the `type` or `tem
     },
     "template_data": [{
     "folder": "",
-    "type": "terraform_v1.0"
+    "type": "terraform_v1.4"
     }]
     }
     ```
     {: codeblock}
 
-No, if the Terraform version is specified in the payload or template, only the version that is specified in `versions.tf` is considered during provisioning. To consider the current Terraform version, you can configure the `required_version` parameter as `required_version = ">=1.0.0. <2.0"`. For more information, see [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
+No, if the Terraform version is specified in the payload or template, only the version that is specified in `versions.tf` is considered during provisioning. To consider the current Terraform version, you can configure the `required_version` parameter as `required_version = ">=1.4 <2.0"`. For more information, see [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
 
 ## Can I specify only the provider version in the version parameter? Or is it mandatory to provide the required_version parameter in the versions.tf file?
 {: #terraform-reqparam-faq}
 {: faq}
 {: support}
 
-Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Whereas `required_version = ">1.0.0, <2.0"` signifies the Terraform version to provision. For more information, see [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
+Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Whereas `required_version = ">1.4, <2.0"` signifies the Terraform version to provision. For more information, see [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
 If the version parameter is not declared in your `versions.tf` file, the current version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. For more information, see [Version constraints for the Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint).
 
 ## What is the difference between delete, and destroy in {{site.data.keyword.bpshort}}?

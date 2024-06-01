@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-06-01"
 
 keywords: compact, subdirectory, schematics, download, directory
 
@@ -30,7 +30,7 @@ You can also activate **compact download** through the `API or CLI` by using `co
 {
         "name": "Testmyservice",
         "type": [
-                "terraform_v1.0"
+                "terraform_v1.4"
         ],
         "description": "Create Terraform workspace to test compact feature",
         "tags": [
@@ -42,7 +42,7 @@ You can also activate **compact download** through the `API or CLI` by using `co
         "template_data": [{
                 "folder": ".",
                 "compact": true,
-                "type": "terraform_v1.0"
+                "type": "terraform_v1.4"
     }]
 }
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-06-01"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -66,7 +66,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 	{
 		"name": "testwspace31jan",
 		"type": [
-			"terraform_v1.0"
+			"terraform_v1.4"
 		],
 		"description": "terraform workspace",
 		"location": "us-east",
@@ -83,7 +83,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 		},
 		"template_data": [{
 			"folder": ".",
-			"type": "terraform_v1.0",
+			"type": "terraform_v1.4",
 			"variablestore": [{
 					"name": "sample_var",
 					"secure": true,
@@ -164,7 +164,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 	{
 		"name": "testworkspacejanATTest",
 		"type": [
-			"terraform_v0.13"
+			"terraform_v1.4"
 		],
 		"description": "terraform workspace",
 		"tags": [
@@ -175,7 +175,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 		},
 		"template_data": [{
 			"folder": ".",
-			"type": "terraform_v0.13",
+			"type": "terraform_v1.4",
 		
 		"variablestore": [
 		{

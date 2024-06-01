@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-01"
 
 keywords: schematics
 subcollection: schematics
@@ -283,6 +283,8 @@ subcollection: schematics
 
     * [31 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may3124)
 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in
+
     * [16 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may1624)
 
         * Enhanced FAQ documentation
@@ -397,7 +399,7 @@ subcollection: schematics
 
     * [13 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1323)
 
-        * {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
+        * {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions
 
     * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
 
@@ -2274,7 +2276,7 @@ subcollection: schematics
 
 * [Can I always set Terraform to use the current or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `type: = terraform_v1.0` in the JSON file as shown in the code block, does Terraform version 1.0 continues to use even if Terraform version 2.0 or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
+* [If I set `type: = terraform_v1.4` in the JSON file as shown in the code block, does Terraform version 1.4 continues to use even if Terraform version 2.0 or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
 * [Can I specify only the provider version in the version parameter? Or is it mandatory to provide the required_version parameter in the versions.tf file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 

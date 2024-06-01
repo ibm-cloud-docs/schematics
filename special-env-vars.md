@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-06-01"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -46,7 +46,7 @@ The code block is the sample payload for creating workspace with the {{site.data
 {
     "name": "bb",
     "type": [
-        "terraform_v1.0"
+        "terraform_v1.4"
     ],
     "template_repo": {
         "url": "url"
@@ -54,7 +54,7 @@ The code block is the sample payload for creating workspace with the {{site.data
     "template_data": [
         {
         "folder": ".",
-        "type": "terraform_v1.0",
+        "type": "terraform_v1.4",
         "variablestore": [
         {
           "value": "<val>",

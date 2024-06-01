@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-01"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7` `Terraform_v1.6.6`. `Terraform_v1.5.7` is maintained as default version till the 4th July 2024. From 5th July 2024 `Terraform_v1.6.6` is set as default version.
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7` and `Terraform_v1.6.6`. `Terraform_v1.5.7` is maintained as default version till the 10 July 2024. From 10 July 2024, `Terraform_v1.6.6` will be set as default version.
 
 The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspace by using this version is still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}
@@ -62,26 +62,26 @@ During this time {{site.data.keyword.bpshort}} supports only operations with the
 After 24 months from GA, users no longer be able to manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} workspaces by using this release. The workspace must first be updated to use a release of Terraform with HCL provided maintenance and security fixes. The content of the workspaces remains accessible and the Terraform release can be updated in {{site.data.keyword.bpshort}} to re-enable operations.
 
 If you choose not to upgrade to the current version of Terraform beyond the `restrict workspace execution` date:
-- Your {{site.data.keyword.bpshort}} workspace data continues to stay in {{site.data.keyword.bpshort}} until you delete these workspaces.
-- You cannot do operations on, or `destroy` the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI. 
+    - Your {{site.data.keyword.bpshort}} workspace data continues to stay in {{site.data.keyword.bpshort}} until you delete these workspaces.
+    - You cannot do operations on, or `destroy` the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI.
 
 ## Deprecation Schedule
 {: #deprecate-timeline}
 
-You are suggested always to migrate from your in use version of Terraform to the current available version and to remain on Terraform versions with maintenance and security fixes. You can see the current in use version of Terraform in the drop down list of the [{{site.data.keyword.bpshort}} workspace](https://cloud.ibm.com/schematics/workspaces/create) configuration page. 
+You are suggested always to migrate from your in use version of Terraform to the current available version and to remain on Terraform versions with maintenance and security fixes. You can see the current in use version of Terraform in the drop down list of the [{{site.data.keyword.bpshort}} workspace](https://cloud.ibm.com/schematics/workspaces/create) configuration page.
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date when you are using the {{site.data.keyword.bplong_notm}} service. The month that is provided in the table represents the last day of the Month to restrict workspace creation and execution. The deprecation timeline changes as new Terraform versions are released. 
+{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date when you are using the {{site.data.keyword.bplong_notm}} service. The month that is provided in the table represents the last day of the Month to restrict workspace creation and execution. The deprecation timeline changes as new Terraform versions are released.
 
 | Versions | Terraform end of maintenance and security support | Phase 1: Restrict workspace creation </br> (End of marketing)|    Phase 2: Restrict workspace execution </br> (End of support)|
 | -- | -- | --| --|
-| Terraform v0.x  | 2021 and earlier | May 2022 |  September 2023 |     
-| Terraform v0.15 | July 2021 | September 2023  |	September 2024	|	
-| Terraform v1.0 |	May 2022 | September 2023 | September 2024	|	
-| Terraform v1.1 |  September 2022 | September 2023 | September 2024	|	
-| Terraform v1.2 |  March 2023 | March 2024	|	March 2025	|	
-| Terraform v1.3 |  End of December 2023 |  April 2024	|  Earliest	July 2025	|	
-| Terraform v1.4 |	End of December 2023 | Earliest September 2024  |  Earliest September 2025 |	
+| Terraform v0.x  | 2021 and earlier | May 2022 |  September 2023 |
+| Terraform v0.15 | July 2021 | September 2023  |September 2024|
+| Terraform v1.0 |May 2022 | September 2023 | September 2024|
+| Terraform v1.1 |  September 2022 | September 2023 | September 2024|
+| Terraform v1.2 |  March 2023 | March 2024|March 2025|
+| Terraform v1.3 |  End of December 2023 |  April 2024|  Earliest	July 2025|
+| Terraform v1.4 |End of December 2023 | Earliest September 2024  |  Earliest September 2025 |
 {: caption="Deprecation timeline as on 26th September, 2023." caption-side="top"}
 
 ## User actions
