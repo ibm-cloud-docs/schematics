@@ -124,7 +124,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     ```
     {: pre}
 
-    If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
+    If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step).
     {: note}
 
 4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.

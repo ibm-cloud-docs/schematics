@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-01"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,7 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.22 | 30 May 2024 | {{site.data.keyword.bpshort}} CLI plugin supports `ibmcloud schematics agent destroy` to destory the deployment resources. And set the `--force` parameter to **true** to delete all the agent flows to keep destroy parallel to workspace destroy flow.|
+| 1.12.22 | 30 May 2024 | {{site.data.keyword.bpshort}} CLI plugin supports `ibmcloud schematics agent destroy` to destroy the deployment resources. And set the `--force` parameter to **true** to delete all the agent flows to keep destroy parallel to workspace destroy flow.|
 | 1.12.21 | 19 April 2024 | {{site.data.keyword.bpshort}} CLI plugin deprecates `--json` flag in all the CLI commands. Also fixed the `CLI v1.12.20` deprecation bug in the `ibmcloud schematics workspace refresh` or plan CLI commands.|
 | 1.12.20 | 25 March 2024 | {{site.data.keyword.bpshort}} CLI plugin supports {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}.|
 | 1.12.18 | 08 March 2024 | Display the Terraform deprecation warning message during workspace commands using less than `terraform_v1.5`, Support for agent infrastructure update is removed, and fixed `index out of range` error by using `ibmcloud schematics state list` command.|
