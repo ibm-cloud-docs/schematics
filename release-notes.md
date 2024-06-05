@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-06-05"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,21 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## June 2024
+{: #June-2024}
+
+Review the release notes for June 2024.
+{: shortdesc}
+
+### 05 June 2024
+{: #schematics-june0524}
+{: release-note}
+
+Terraform_v1.6.6 support in {{site.data.keyword.bpshort}}
+:   {{site.data.keyword.bpshort}} service supports `Terraform_v1.6.6` from 5th June 2024. `Terraform_v1.5.7` is maintained as default version till 10th July 2024.
+
+:   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.6.6](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
 
 ## May 2024
 {: #May-2024}

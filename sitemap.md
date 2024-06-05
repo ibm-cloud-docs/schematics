@@ -277,6 +277,14 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [June 2024](/docs/schematics?topic=schematics-schematics-relnotes#June-2024)
+
+    * Review the release notes for June 2024.
+
+    * [05 June 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june0524)
+
+        * Terraform_v1.6.6 support in {{site.data.keyword.bpshort}}
+
 * [May 2024](/docs/schematics?topic=schematics-schematics-relnotes#May-2024)
 
     * Review the release notes for May 2024.
