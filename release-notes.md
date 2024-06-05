@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-05"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -26,11 +26,35 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
 
+## June 2024
+{: #June-2024}
+
+Review the release notes for June 2024.
+{: shortdesc}
+
+### 05 June 2024
+{: #schematics-june0524}
+{: release-note}
+
+Terraform_v1.6.6 support in {{site.data.keyword.bpshort}}
+:   {{site.data.keyword.bpshort}} service supports `Terraform_v1.6.6` from 5th June 2024. `Terraform_v1.5.7` is maintained as default version till 10th July 2024.
+
+:   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.6.6](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
+
 ## May 2024
 {: #May-2024}
 
 Review the release notes for May 2024.
 {: shortdesc}
+
+### 31 May 2024
+{: #schematics-may3124}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.22](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+
 
 ### 16 May 2024
 {: #schematics-may1624}
@@ -67,8 +91,6 @@ Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform version
 Review the release notes for March 2024.
 {: shortdesc}
 
-
-
 ### 25 March 2024
 {: #schematics-mar2524}
 {: release-note}
@@ -81,7 +103,6 @@ Release {{site.data.keyword.bpshort}} Agents version
 
 Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.20](/docs/schematics?topic=schematics-cli_version-releases) released.
-
 
 
 
@@ -260,7 +281,7 @@ Review the release notes for April 2023.
 {: #schematics-apr1323}
 {: release-note}
 
-{{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
+{{site.data.keyword.bpshort}} updates the deprecation of Terraform versions
 :   The {{site.data.keyword.bpshort}} announces the timeline for the [deprecation of Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 

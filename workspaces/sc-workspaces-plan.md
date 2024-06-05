@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-06-01"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -66,7 +66,7 @@ During workspace plan execution, you cannot edit your workspace.
 	{
 		"name": "testwspace31jan",
 		"type": [
-			"terraform_v1.0"
+			"terraform_v1.4"
 		],
 		"description": "terraform workspace",
 		"location": "us-east",
@@ -83,7 +83,7 @@ During workspace plan execution, you cannot edit your workspace.
 		},
 		"template_data": [{
 			"folder": ".",
-			"type": "terraform_v1.0",
+			"type": "terraform_v1.4",
 			"variablestore": [{
 					"name": "sample_var",
 					"secure": true,
@@ -164,7 +164,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 	{
 		"name": "testwspace31jan",
 		"type": [
-			"terraform_v1.0"
+			"terraform_v1.4"
 		],
 		"description": "terraform workspace",
 		"location": "us-east",
@@ -181,7 +181,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 		},
 		"template_data": [{
 			"folder": ".",
-			"type": "terraform_v1.0",
+			"type": "terraform_v1.4",
 			"variablestore": [{
 					"name": "sample_var",
 					"secure": true,

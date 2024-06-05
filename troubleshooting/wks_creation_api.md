@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -21,7 +21,7 @@ The {{site.data.keyword.bpshort}} create workspace fails when you attempt to cre
 {: tsSymptoms}
 
 ```sh
-curl --request POST --url https://cloud.ibm.com/schematics/workspaces -H "Authorization: Bearer scfQ" -d '{"name":"test_api","type": ["terraform_v0.12"],"location": "eu-de","description": "via api","resource_group": "5e1f06f5b2b24a319f6cd5be86f531dd","tags": [],"template_repo": {"url": "https://github.ibm.com/Rise-with-SAP/iac-hec-sap"},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": []}]}'
+curl --request POST --url https://cloud.ibm.com/schematics/workspaces -H "Authorization: Bearer scfQ" -d '{"name":"test_api","type": ["terraform_v1.4"],"location": "eu-de","description": "via api","resource_group": "5e1f06f5b2b24a319f6cd5be86f531dd","tags": [],"template_repo": {"url": "https://github.ibm.com/Rise-with-SAP/iac-hec-sap"},"template_data": [{"folder": ".","type": "terraform_v1.4","variablestore": []}]}'
 ```
 {: screen}
 

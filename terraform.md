@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 subcollection: schematics
 
@@ -36,7 +36,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information about the {{site.data.keyword.bpshort}} workspace locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
     {: note}
 
-    Then create the {{site.data.keyword.bpshort}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
+    Then create the {{site.data.keyword.bpshort}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.5`.
 
     `versions.tf`
 
@@ -61,7 +61,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     ```terraform
     schematics_workspace_name="tf-testwks-apigwy"
     schematics_workspace_description="Sample workspace created with terraform with URL"
-    schematics_workspace_type="terraform_v1.0"
+    schematics_workspace_type="terraform_v1.5"
     schematics_workspace_location="us-south"
     schematics_workspace_resource_group="default"
     ibmcloud_api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -124,7 +124,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     ```
     {: pre}
 
-    If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
+    If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step).
     {: note}
 
 4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-06-01"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -49,59 +49,43 @@ ibmcloud schematics version
 
 ```text
 
-Template Type   Version
-Terraform       terraform_v0.12
-Additional terraform Providers   Version
-Ansible                          v2.9.23
-Ansible Provisioner              v2.3.3
-Provider for REST API            v1.10.0
-IBM Cloud Provider               v1.38.2
-Open shift client                v3.11.0
-
-Template Type   Version
-Terraform       terraform_v0.13
-Additional terraform Providers   Version
-IBM Cloud Provider               v1.38.2
-Provider for REST API            v1.10.0
-Open shift client                v3.11.0
-Ansible                          v2.9.23
-Ansible Provisioner              v2.3.3
-
-Template Type   Version
-Terraform       terraform_v0.14
-Additional terraform Providers   Version
-Ansible                          v2.9.23
-Ansible Provisioner              v2.3.3
-IBM Cloud Provider               v1.38.2
-Open shift client                v3.11.0
-Provider for REST API            v1.10.0
-
-Template Type   Version
-Terraform       terraform_v0.15
-Additional terraform Providers   Version
-Ansible                          v2.9.23
-Ansible Provisioner              v2.3.3
-IBM Cloud Provider               v1.38.2
-Open shift client                v3.11.0
-Provider for REST API            v1.10.0
-
-Template Type   Version
-Terraform       terraform_v1.0
-Additional terraform Providers   Version
-Open shift client                v3.11.0
-Provider for REST API            v1.10.0
-IBM Cloud Provider               v1.38.2
-Ansible                          v2.9.23
-Ansible Provisioner              v2.3.3
-
-Template Type   Version
-Terraform       terraform_v1.1
-Additional terraform Providers   Version
-Ansible                          v2.9.23
-Open shift client                v3.11.0
-Provider for REST API            v1.10.0
-Ansible Provisioner              v2.3.3
-IBM Cloud Provider               v1.38.2
+  Template Type   Version
+  terraform       terraform_v1.3
+  Additional terraform Providers   Version
+  IBM Cloud Provider               v1.38.2
+  Red Hat OpenShift client         v3.11.0
+  ansible                          v2.9.23
+  Ansible Provisioner              v2.3.3
+  Provider for REST API            v1.10.0
+                                  
+  Template Type   Version
+  terraform       terraform_v1.4
+  Additional terraform Providers   Version
+  ansible                          v2.9.23
+  Red Hat OpenShift client         v3.11.0
+  Ansible Provisioner              v2.3.3
+  IBM Cloud Provider               v1.38.2
+  Provider for REST API            v1.10.0
+                                  
+  Template Type   Version
+  terraform       terraform_v1.5
+  Additional terraform Providers   Version
+  IBM Cloud Provider               v1.38.2
+  Provider for REST API            v1.10.0
+  ansible                          v2.9.23
+  Ansible Provisioner              v2.3.3
+  Red Hat OpenShift client         v3.11.0
+                                  
+  Template Type   Version
+  terraform       terraform_v1.6
+  Additional terraform Providers   Version
+  Red Hat OpenShift client         v3.11.0
+  ansible                          v2.9.23
+  IBM Cloud Provider               v1.38.2
+  Provider for REST API            v1.10.0
+  Ansible Provisioner              v2.3.3
+                                  
+  OK
 
 ```
 {: screen}
@@ -110,16 +94,16 @@ IBM Cloud Provider               v1.38.2
 ## Specifying version constraints for the Terraform CLI and Terraform providers
 {: #version-constraints-terraform}
 
-You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information about how to specify version constraints, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language/expressions/version-constraints){: external}. 
+You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information about how to specify version constraints, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language/expressions/version-constraints){: external}.
 {: shortdesc}
 
 ### Version constraints for the Terraform CLI
 {: #tf-version-constraint}
 
-When you create a {{site.data.keyword.bpshort}} workspaces and choose a Terraform version such as `v0.13`, your Terraform templates are executed by using the default patch version that is set in {{site.data.keyword.bpshort}}. For example, if you choose `terraform_v0.13`, your templates are applied by using Terraform v0.13.4. You can use the `required_providers` block in your `provider` definition to force the Terraform engine in {{site.data.keyword.bpshort}} to pull a later version. 
+When you create a {{site.data.keyword.bpshort}} workspaces and choose a Terraform version such as `v1.4`, your Terraform templates are executed by using the default patch version that is set in {{site.data.keyword.bpshort}}. For example, if you choose `terraform_v1.4`, your templates are applied by using Terraform v0.13.4. You can use the `required_providers` block in your `provider` definition to force the Terraform engine in {{site.data.keyword.bpshort}} to pull a later version.
 {: shortdesc}
 
-You can only specify versions that are higher than the default `MAJOR.MINOR.PATH` version that is set in {{site.data.keyword.bpshort}}. In the codeblock `version = "x.x.x"` signifies the {{site.data.keyword.cloud_notm}} provider version. 
+You can only specify versions that are higher than the default `MAJOR.MINOR.PATH` version that is set in {{site.data.keyword.bpshort}}. In the codeblock `version = "x.x.x"` signifies the {{site.data.keyword.cloud_notm}} provider version.
 
 ```terraform
 terraform {

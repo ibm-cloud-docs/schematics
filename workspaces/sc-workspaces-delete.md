@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-06-01"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -111,7 +111,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
    {
       "name":"testwspace03jan",
       "type":[
-         "terraform_v1.0"
+         "terraform_v1.4"
       ],
       "description":"terraform workspace",
       "location":"us-east",
@@ -129,7 +129,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
       "template_data":[
          {
             "folder":".",
-            "type":"terraform_v1.0",
+            "type":"terraform_v1.4",
          "variablestore":[
             {
                "name":"sample_var",

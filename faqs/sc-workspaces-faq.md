@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -187,7 +187,7 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
 {
   "name": "sample",
   "type": [
-    "terraform_v0.12"
+    "terraform_v1.4"
   ],
   "description": "terraform workspace",
   "tags": [
@@ -198,7 +198,7 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
   "template_data": [
     {
       "folder": ".",
-      "type": "terraform_v0.12",
+      "type": "terraform_v1.4",
       "env_values":[
       {
         "TF_LOG":"debug"
@@ -338,7 +338,9 @@ You might have insufficient access for the workspaces in the specified location 
 {: support}
 
 Yes, You can access the private (IBM) GitLab repository by using {{site.data.keyword.bpshort}} with the privileges.
+
 - If the private (IBM) GitLab repository `git.cloud.ibm.com` access token is not needed as the IAM token is used.
+
 - If the public GitLab `gitlab.com`, `read_repository`, and `read_api` access are needed to validate the branch name for private repository.
 
 You can use the sample Terraform code block to configure the GitLab repository details.
@@ -571,7 +573,7 @@ The {{site.data.keyword.bpshort}} workspace list variables store value should al
 {: faq}
 {: support}
 
- Currently, the workaround to updating the `TF_VERSION` is to pass the `TF_VERSION` while updating the variable store. {{site.data.keyword.bpshort}} auto detects what is specified in the Terraform version block in the `TF` files. This is the default behavior. 
+ Currently, the workaround to updating the `TF_VERSION` is to pass the `TF_VERSION` while updating the variable store. {{site.data.keyword.bpshort}} auto detects what is specified in the Terraform version block in the `TF` files. This is the default behavior.
  
  For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
 
@@ -636,7 +638,7 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
 3. Create workspace
 
     ```sh
-    curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
+    curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v1.4"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v1.4","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
     {: pre}
 

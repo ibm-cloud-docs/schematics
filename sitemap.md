@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-06-05"
 
 keywords: schematics
 subcollection: schematics
@@ -277,9 +277,21 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [June 2024](/docs/schematics?topic=schematics-schematics-relnotes#June-2024)
+
+    * Review the release notes for June 2024.
+
+    * [05 June 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june0524)
+
+        * Terraform_v1.6.6 support in {{site.data.keyword.bpshort}}
+
 * [May 2024](/docs/schematics?topic=schematics-schematics-relnotes#May-2024)
 
     * Review the release notes for May 2024.
+
+    * [31 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may3124)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in
 
     * [16 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may1624)
 
@@ -395,7 +407,7 @@ subcollection: schematics
 
     * [13 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1323)
 
-        * {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
+        * {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions
 
     * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
 
@@ -1859,9 +1871,11 @@ subcollection: schematics
 
     * [`ibmcloud schematics agent create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-create)
 
+    * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
+
     * [`ibmcloud schematics agent deploy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
-    * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
+    * [`ibmcloud schematics agent destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-destroy)
 
     * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 
@@ -2270,7 +2284,7 @@ subcollection: schematics
 
 * [Can I always set Terraform to use the current or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `type: = terraform_v1.0` in the JSON file as shown in the code block, does Terraform version 1.0 continues to use even if Terraform version 2.0 or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
+* [If I set `type: = terraform_v1.4` in the JSON file as shown in the code block, does Terraform version 1.4 continues to use even if Terraform version 2.0 or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
 * [Can I specify only the provider version in the version parameter? Or is it mandatory to provide the required_version parameter in the versions.tf file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 

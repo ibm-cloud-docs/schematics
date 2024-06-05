@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-06-01"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -148,7 +148,7 @@ Output
             "name": "testwspace03jan",
             "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:workspace:us-east.workspace.testwspace03jan.cf74cc48",
             "type": [
-                "terraform_v1.0"
+                "terraform_v1.4"
             ],
             "description": "terraform workspace updated successfully",
             "resource_group": "Default",
@@ -183,7 +183,7 @@ Output
                     "id": "b44c147b-81fb-4e",
                     "folder": ".",
                     "compact": false,
-                    "type": "terraform_v1.0",
+                    "type": "terraform_v1.4",
                     "values_url": "https://us.schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.testwspace03jan.cf74cc48/template_data/b44c147b-81fb-4e/values",
                     "values": "",
                     "values_metadata": [
@@ -249,7 +249,7 @@ Output
             "name": "teststagews-sleepy12",
             "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:workspace:us-east.workspace.teststagews-sleepy12.a92d1471",
             "type": [
-                "terraform_v1.0"
+                "terraform_v1.4"
             ],
             "description": "terraform workspace stage test",
             "resource_group": "Default",
@@ -281,7 +281,7 @@ Output
                     "id": "ff819de7-e084-4c",
                     "folder": "",
                     "compact": false,
-                    "type": "terraform_v1.0",
+                    "type": "terraform_v1.4",
                     "values_url": "https://us-east.schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.teststagews-sleepy12.a92d1471/template_data/ff819de7-e084-4c/values",
                     "values": "",
                     "values_metadata": [

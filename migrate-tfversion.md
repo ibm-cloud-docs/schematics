@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -13,15 +13,15 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Upgrading to a new Terraform version  
+# Upgrading to a new Terraform version
 {: #migrating-terraform-version}
 
-The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers. Over time it is necessary for long lived workspace environments to be upgraded to utilize the latest version of Terraform as older versions are deprecated and go out of support.    
+The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers. Over time it is necessary for long lived workspace environments to be upgraded to utilize the latest version of Terraform as older versions are deprecated and go out of support.
 {: shortdesc}
 
-All {{site.data.keyword.bpshort}} users are encourage to regularly upgrade to the latest Terraform version to ensure continuity of operations and support. {{site.data.keyword.bpshort}} follows the Hashicorp support model for Terraform releases and deprecates versions to the in line with Hashicorp. 
+All {{site.data.keyword.bpshort}} users are encourage to regularly upgrade to the latest Terraform version to ensure continuity of operations and support. {{site.data.keyword.bpshort}} follows the Hashicorp support model for Terraform releases and deprecates versions to the in line with Hashicorp.
 
-Terraform v1.0 was a major release for Terraform, marking the transition to a stable 1.x release. Hashicorp made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), that for core features, no additional changes are required to upgrade through the 1.x releases. 
+Terraform v1.0 was a major release for Terraform, marking the transition to a stable 1.x release. Hashicorp made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), that for core features, no additional changes are required to upgrade through the 1.x releases.
 
 In short, it aims to make upgrades between v1.x releases straightforward, requiring no changes to your configuration, no extra commands to run upgrade steps, and no changes to any automation you've set up around Terraform.
 
@@ -32,7 +32,7 @@ To upgrade to the 1.x releases requires no specific {{site.data.keyword.bpshort}
 
 Since Terraform 1.0, {{site.data.keyword.bpshort}} workspaces can be updated to more recent 1.x releases, through a simple change to the workspace version. To update from 0.x releases refer to section [Upgrading the Terraform template version 0.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
 
-{{site.data.keyword.bpshort}} supports `Terraform_v1.x` and plans to make releases available `45-60 days` after general availability. It is recommended that Terraform templates use a version range constraint, such as, `>`, `>=`, or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, that allows upgrade for minor and patch releases. This allows {{site.data.keyword.bpshort}} to automatically adopt the latest patch or minor release of Terraform version as set by the workspace version.   
+{{site.data.keyword.bpshort}} supports `Terraform_v1.x` and plans to make releases available `45-60 days` after general availability. It is recommended that Terraform templates use a version range constraint, such as, `>`, `>=`, or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, that allows upgrade for minor and patch releases. This allows {{site.data.keyword.bpshort}} to automatically adopt the latest patch or minor release of Terraform version as set by the workspace version.
 
 ```terraform
 terraform {
@@ -47,7 +47,7 @@ required_version = "~> 1.1"
 The in use version of Terraform for a workspace can be updated through the {{site.data.keyword.bpshort}} workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}.
 
 
-The workspace terraform version parameter is of the form `terraform_v1.1` or `terraform_v1.2`
+The workspace terraform version parameter is of the form `terraform_v1.4` or `terraform_v1.5`
 
 1. Select the workspace to be updated and verify that it is in `Normal` state and that a Plan operation does not generate any proposed resource changes. Save the `workspace_id` and note the region the workspace is hosted in.  
 2. Update the workspace terraform version using the {{site.data.keyword.cloud_notm}} CLI and API. These workspace operations are region specific. Note the workspace region from the UI as this is required for the following commands:
@@ -71,7 +71,7 @@ The workspace terraform version parameter is of the form `terraform_v1.1` or `te
 ## Upgrading the Terraform template version 0.x to 1.x
 {: #terraform-version-upgrade0x}
 
-At 0.x releases, Terraform version upgrade is a stepwise process, upgrading through each release. Upgrading does not support upgrading across multiple releases and must be performed, release by release. Some updates requires execution of Terraform `upgrade` commands to modify the config files also changes to the Terraform state file. These steps cannot be performed within {{site.data.keyword.bpshort}}. Workspace Terraform templates must be upgraded using a local copy of Terraform. Follow the steps below for upgrading the 0.x releases. 
+At 0.x releases, Terraform version upgrade is a stepwise process, upgrading through each release. Upgrading does not support upgrading across multiple releases and must be performed, release by release. Some updates requires execution of Terraform `upgrade` commands to modify the config files also changes to the Terraform state file. These steps cannot be performed within {{site.data.keyword.bpshort}}. Workspace Terraform templates must be upgraded using a local copy of Terraform. Follow the steps below for upgrading the 0.x releases.
 
 | Version |	Recommendation|
 | --- | --- |
@@ -138,9 +138,9 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
     ```
     {: pre}
 
-8. Verify that the updates are made to the `terraform.tfstate` file with Terraform version update from `0.12` to `>= 0.13` and the provider that is updated as `registry.terraform.io/ibm-cloud/ibm`.
+8. Verify that the updates are made to the `terraform.tfstate` file with Terraform version update from `1.3` to `>= 1.4` and the provider that is updated as `registry.terraform.io/ibm-cloud/ibm`.
 
-9.	Push the upgraded TF config files and `version.tf` back to your Git repository.
+9. Push the upgraded TF config files and `version.tf` back to your Git repository.
 10. Copy the content of modified `terraform.tfstate` file to `state.json` file.
 11. Create or update a `workspace.json` file as shown in the code block.
     
@@ -148,7 +148,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
     {
         "name": "gb",
         "type": [
-            "terraform_v0.13"
+            "terraform_v1.4"
         ],
         "description": "migration workspace",
         "template_repo": {
@@ -159,7 +159,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
         },
         "template_data": [{
             "folder": ".",
-            "type": "terraform_v0.13"
+            "type": "terraform_v1.4"
         }]
     }
     ```

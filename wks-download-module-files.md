@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-01"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
 
@@ -95,7 +95,7 @@ Example `testexample.json` with `netrc` payload
     "region": "us-south"
   },
   "type": [
-    "terraform_v1.0"
+    "terraform_v1.4"
   ],
   "description": "terraform workspace",
   "template_repo": {
@@ -104,7 +104,7 @@ Example `testexample.json` with `netrc` payload
   "template_data": [
     {
       "folder": ".",
-      "type": "terraform_v1.0",
+      "type": "terraform_v1.4",
       "env_values": [
         {
           "__netrc__":"[['github.com','testuser','ghp_x0000000xxxxxxxx000000efZxxxxxxxV']]"
