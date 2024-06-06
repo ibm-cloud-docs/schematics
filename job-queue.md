@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-06-06"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -34,7 +34,7 @@ If an `user-1` has 20 jobs waiting in the queue, and `user-2` submits a new job.
 
 Following are the tasks of the job when it enter into pending queue.
 - your job requires more time to complete. Check that enough time is specified for the job to execute.
-- your image that is used by your job run does not exist. Check that the provided image details exist and right name is specified.
+- your image that is used by your job run does not exist. Check that the provided image details exist and name is specified.
 - The environment variable parameters that are required by the job are not specified. Check that the environment variables are defined.
 - The commands or arguments that are passed to the job are not valid. Check that the argument flags specified are correct.
 

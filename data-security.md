@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-06-06"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -76,12 +76,12 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 
 |Geography/ location| API endpoint|Data stored|Data replicated|
 |------------|----------------|------|--------|
-|North America|**Public** </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> **Private** </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
-|Dallas|**Public** </br>`https://us-south.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
-|Washington|**Public** </br>`https://us-east.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
-|Europe|**Public** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
-|Frankfurt|**Public** </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
-|London|**Public** </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> **Private** </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
+|North America|**`Public`** </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> **`Private`** </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|Dallas|**`Public`** </br>`https://us-south.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
+|Washington|**`Public`** </br>`https://us-east.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
+|Europe|**`Public`** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
+|Frankfurt|**`Public`** </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
+|London|**`Public`** </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> **`Private`** </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
 {: caption="Location information" caption-side="bottom"}
 
 

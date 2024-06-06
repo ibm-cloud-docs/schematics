@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-06-06"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -106,7 +106,7 @@ A sample `env_values` block in the payload to update environment variables using
 #### Setting parallelism for Catalog deployments
 {: #parallelism-example-catalog}
 
-Environment variables can only be set at content onboarding time. Refer to the Catalog documentation to set the `TF_CLI_ARGS` environment variables as shown above. 
+Environment variables can only be set at content onboarding time. Refer to the Catalog documentation to set the `TF_CLI_ARGS` environment variables. 
 
 ## List of Terraform environment variables
 {: #list-special-env-vars}
@@ -121,7 +121,7 @@ Environment variables can only be set at content onboarding time. Refer to the C
 | `TF_CLI_ARGS` and `TF_CLI_ARGS_name` | The `TF_CLI_ARGS` specify additional arguments to the command-line. This allows easier automation in cloud infrastructure environments. Also to modify the default behavior of the Terraform on your own system. `TF_CLI_ARGS` and `TF_CLI_ARGS_name` is only for non content catalog.| `"TF_CLI_ARGS_apply": "-parallelism=20"`|
 | `TF_REGISTRY_DISCOVERY_RETRY` | Set the maximum number of request retries the remote registry client can attempt for client connection errors.| `"TF_REGISTRY_DISCOVERY_RETRY": "10"`|
 | `TF_REGISTRY_CLIENT_TIMEOUT` | Set to increase the extraneous circumstances. The default value for the remote registry is `10 seconds`.| `"TF_REGISTRY_CLIENT_TIMEOUT": "15"`|
-| `TF_IGNORE` | Output the debug messages to display ignored files and folders. This is useful when you debug large repositories with `.terraformignore` files. The default value is **trace**.| `"TF_IGNORE": "trace"`|
+| `TF_IGNORE` | Output the debug messages to display ignored files and folders. This is useful when you debug the repositories with `.terraformignore` files. The default value is **trace**.| `"TF_IGNORE": "trace"`|
 | `TF_PARALLELISM` | Read parallelism environment variable in runtime action and reset the parallelism value on all the {{site.data.keyword.bpshort}} actions only for content catalog. `TF_PARALLELISM` is only for content catalog. |`"TF_PARALLELISM": "20"`|
 {: caption="Supported environment variables" caption-side="top"}
 

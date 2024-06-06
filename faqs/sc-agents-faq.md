@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-06"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -67,7 +67,6 @@ Only the two most recent versions of Terraform supported by {{site.data.keyword.
 
 The version of Terraform used by the workspace is not supported with agents. Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
-
 ## What type of jobs can be run in an agent?
 {: #faqs-agent-jobs}
 {: faq}
@@ -81,7 +80,6 @@ You can run {{site.data.keyword.bpshort}} workspace Terraform and Actions jobs o
 {: support}
 
 The workspace job or action job logs are available in the {{site.data.keyword.bpshort}} UI console. You can also access the job logs by using the {{site.data.keyword.bpshort}} workspace API, or CLI.
-
 
 ## What is the minimum cluster configuration required in Agent release?
 {: #faqs-agent-min-cluster}
@@ -229,7 +227,7 @@ If your organization has three different network isolation zones (such as `Dev`,
 You can follow these steps to enable or disable the debug mode of an agent.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Click **Kubernetes** from the left navigator window, then click **Clusters** 
+2. Click **Kubernetes** from the navigator window, then click **Clusters** 
 3. On the **Kubernetes Clusters** page, click your **cluster** > **Kubernetes dashboard**.
     - Click the **default** drop down to view the list of **Namespaces**:
         - In the drop down, type the **{{site.data.keyword.bpshort}}-job-runtime** namespaces.
@@ -247,15 +245,12 @@ You can follow these steps to enable or disable the debug mode of an agent.
 No, you cannot upgrade agent beta setup to agent GA version.
 
 
-
-
 ## Are {{site.data.keyword.bpshort}} Agent the same as Terraform cloud agents?
 {: #faqs-agent-terraform-agent}
 {: faq}
 {: support}
 
 {{site.data.keyword.bpshort}} Agent performs a similar role to [Terraform Cloud agents](https://developer.hashicorp.com/terraform/cloud-docs/agents){: external}.
-
 
 ## Do the agents run on {{site.data.keyword.cloud_notm}} cloud resources?
 {: #faqs-agent-run}

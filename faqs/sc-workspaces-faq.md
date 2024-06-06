@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-06-06"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -25,7 +25,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} workspac
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add the Terraform provider block with the right provider version. By default the provider run current version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
+Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add the Terraform provider block with the provider version. By default the provider run current version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
 
 Example for a multiple provider configuration:
 
@@ -598,12 +598,12 @@ Yes, you can use `--state` flag option through the [ibmcloud schematics workspac
 
 The maximum length of characters that {{site.data.keyword.bpshort}} workspace variables support is 1 MB.
 
-## What is the maximum state file size of import? 
+## What is the maximum state file to import? 
 {: #wks-statefile-limit}
 {: faq}
 {: support}
 
-The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You see an error message with `413 Request Entity Too Large error when creating a new workspace`.
+The `terraform.tfstate` file must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file must be less than 16 MB. Greater than 16 MB state file is not supported in the {{site.data.keyword.bpshort}}. You see an error message with `413 Request Entity Too Large error when creating a new workspace`.
 
 ## How do I fix authentication errors when using the API?
 {: #createworkspace-authentication-error}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-06"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -311,7 +311,7 @@ Enhancement of {{site.data.keyword.bpshort}} worker runtime.
 IAM allowed IP addresses replaced with context based restrictions.
 :   Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
 
-The `terraform.tfstate` state file size maximum limit is less than 2 MB.
+The `terraform.tfstate` state file with maximum limit is less than 2 MB.
 :   The {{site.data.keyword.bpshort}} workspace creation by using `terraform.tfstate` file fails due to the limitation in state file size. Documentation includes [FAQ](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit), [troubleshooting guide](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1), and a note in [schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) --state argument.
 
 ### 22 March 2023
@@ -1076,7 +1076,7 @@ Review the release notes for August 2020.
 {: release-note}
 
 Support for multiple Terraform provider
-:   {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported. For more information about the provider configuration, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-workspaces-faq#provider-versions).
+:   {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions. You need to add Terraform provider block with the provider version. By default the provider executes latest version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported. For more information about the provider configuration, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-workspaces-faq#provider-versions).
 
 Time out set for local-exec and remote-exec users
 :   If you run local-exec or remote-exec users, make sure the execution completes within 30 minutes. Otherwise execution times out automatically.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-06-06"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -28,7 +28,7 @@ Answers to common questions about working with blueprints are classified under t
 {: faq}
 {: support}
 
-|  Repository </br>  | Template </br> Public repo | Template </br>Private repo | Module </br>Public repo | Module </br>private repo | Comment </br>  |
+|  Repository </br>  | Template </br> Public repository | Template </br>Private repository | Module </br>Public repository | Module </br>private repository | Comment </br>  |
 | --- |--- | --- | --- | --- | --- |
 | GitHub | Yes | Git token | Yes | Git token | 
 | GitLab | Yes | Git token | Yes | Git token | 
@@ -64,9 +64,9 @@ Blueprint templates can be edited in any editor or IDE. Follow the instructions 
 {: faq}
 {: support}
 
-The default size of values that can be passed to Blueprints as inputs is set to `1KB`. If the expected size is greater than 1KB, the  [`max_length` inputs meta-data](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len) can be defined to set the length that Blueprints should accept.  
+The default values that can be passed to Blueprints as inputs is set to `1KB`. If the expected is greater than 1KB, the  [`max_length` inputs meta-data](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len) can be defined to set the length that Blueprints should accept.  
 
- A value larger than 1KB or the specified length results in the error `Length for variable <variable name> greater than the given length`   
+ A value than 1KB or the specified length results in the error `Length for variable <variable name> greater than the given length`   
 
 
 ## Why do blueprint operations require a `blueprint ID`?
@@ -91,7 +91,7 @@ The link can point to the template file in the main branch, any other branch, or
 - Example for **blueprint.yaml in branches** - `https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml`
 - Example for **blueprint.yaml in subdirectory** - `https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml` 
 
-The required URLs to the files can be copied directly from the Github or Gitlab UI. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. Right click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
+The required URLs to the files can be copied directly from the Github or Gitlab UI. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
 
 ## How is resource provisioning performed?
 {: #faqs-bp-resource}

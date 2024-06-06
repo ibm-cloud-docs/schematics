@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-06-06"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -46,7 +46,7 @@ Use the {{site.data.keyword.IBM_notm}} provided Terraform template to provision 
 4. Click **Next**.
 5. In the **Workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
 
-    Ensure you provide the right resource group, and the location where you want to create the workspace.
+    Ensure you provide the resource group, and the location where you want to create the workspace.
     {: note}
 
 6. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspaces successfully.

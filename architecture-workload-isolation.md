@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-06-09"
+  years: 2017, 2024
+lastupdated: "2024-06-06"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -23,12 +23,13 @@ Learn about the {{site.data.keyword.bplong}} service architecture, service depen
 
 {{site.data.keyword.bpshort}} is a shared multi-tenant service. On initial use, a new {{site.data.keyword.bpshort}} service instance is automatically provisioned for each user account.
 
-The following {{site.data.keyword.bpshort}} architecture image depicts:  
-- Main {{site.data.keyword.bpshort}} components.
-- The interaction between service components.
-- Key Management services used. 
-- Usage of {{site.data.keyword.cloud}} observability services.
-- The role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} `APIs`, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on.
+The following {{site.data.keyword.bpshort}} architecture image depicts: 
+
+- Main {{site.data.keyword.bpshort}} components
+- The interaction between service components
+- Key Management services used
+- Usage of {{site.data.keyword.cloud}} observability services
+- The role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} `APIs`, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on
 {: shortdesc}
 
 ![{{site.data.keyword.bpshort}} architecture](images/schematics-enduser-architecture.png){: caption="Figure 1. {{site.data.keyword.bpshort}} architecture" caption-side="bottom"}

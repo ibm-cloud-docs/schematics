@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-06-06"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -30,7 +30,7 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 {: #action-working-prereq}
 
 - Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. Or you can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
-- Make sure that you have the [right permissions](/docs/schematics?topic=schematics-access) to create the {{site.data.keyword.bpshort}} action. 
+- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create the {{site.data.keyword.bpshort}} action. 
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is the information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 {: note}

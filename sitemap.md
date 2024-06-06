@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-06"
 
 keywords: schematics
 subcollection: schematics
@@ -425,7 +425,7 @@ subcollection: schematics
 
         * IAM allowed IP addresses replaced with context based restrictions.
 
-        * The `terraform.tfstate` state file size maximum limit is less than 2 MB.
+        * The `terraform.tfstate` state file with maximum limit is less than 2 MB.
 
     * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
 
@@ -1225,7 +1225,7 @@ subcollection: schematics
 
 [Upgrading to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
-* [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
+* [Upgrading the Terraform template version 1.x and higher](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
 
     * [Updating the workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
 
@@ -2396,7 +2396,7 @@ subcollection: schematics
 
 * [What is the maximum variable size?](/docs/schematics?topic=schematics-workspaces-faq#wks-name-maxlength)
 
-* [What is the maximum state file size of import?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
+* [What is the maximum state file to import?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
 
 * [How do I fix authentication errors when using the API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 

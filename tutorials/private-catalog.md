@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-06-06"
 
 keywords: schematics, automation, terraform
 
@@ -85,7 +85,7 @@ To upload a Terraform template to a private catalog, you must first compress all
     To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level preceding. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
     {: note}
 
-    If your `.tgz` file size if greater than 40 MB. Then, use `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
+    If your `.tgz` file is greater than 40 MB. Then, use `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
     {: tip}
 
     ```sh
