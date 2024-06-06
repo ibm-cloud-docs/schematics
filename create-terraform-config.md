@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-01-29"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -33,15 +33,15 @@ Before you start creating your Terraform template, make sure to review the [{{si
 Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
 
-**Do I need to provide the {{site.data.keyword.cloud_notm}} API key?**
+**{{site.data.keyword.cloud_notm}} API key**
 
 The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform. Also the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, always you must provide the {{site.data.keyword.cloud_notm}} API key. In {{site.data.keyword.bpshort}}, the IAM token is retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the IAM token is not retrieved for classic infrastructure resources and the API key must be provided in the `provider` block.
 
-**Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?**
+**Different {{site.data.keyword.cloud_notm}} API key in the `provider` block**
 
 If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.
 
-**Can I provide an API key for a service ID?**
+**An API key for a service ID**
 
 You can provide an API key for a service ID for all IAM-enabled services, including VPC infrastructure resources. You cannot use a service ID for classic infrastructure resources.
 
@@ -180,16 +180,16 @@ When running jobs through the UI without passing API keys, the identity of the l
 You can use `variable` blocks to create template for your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers. You simply reuse the same configuration with an input variable to define the data center.
 {: shortdesc}
 
-**Where do I store my variable declarations?**
+**Storing your variable**
 
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations.
 
-**What information do I need to include in my variable declaration?**
+**Variable declaration details**
 
 When you declare an input variable, you must provide a name for your variable and the data type according to the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string`, and `HCL` format for complex variables.
     - `Terraform v1.5` supports **string, list, map, `bool`, number, and complex data types such as list(type), map(type), object({attribute name=type,.}), set(type), tuple([type])**.
 
-**Is there a character limit for input variables?**
+**Character limit for input variables**
 
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters.
 

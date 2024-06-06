@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-06-06"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -99,7 +99,7 @@ You can customize by following the steps to [edit the default configuration](/do
 ## Agent sandbox allowed list
 {: #agent-sandbox-allowlist}
 
-Following are the default agent sandbox file type and size allowlist configuration set for the `schematics-sandbox` namespace. 
+Following are the default agent sandbox file type and allowlist configuration set for the `schematics-sandbox` namespace.
 
 | Parameter |	Description |
 | -- | -- |
@@ -107,7 +107,7 @@ Following are the default agent sandbox file type and size allowlist configurati
 | `SANDBOX_ANSIBLEACTIONWHITELISTEXTN` | From the Ansible Git repositories following are the allowed file extensions. </br> `.tf`, `.tfvars`, `.md`, `.yaml`, `.sh`, `.txt`, `.yml`, `.html`, `.gitignore`, `license`, `.js`, `.pub`, `.service`, `_rsa`, `.py`, `.json`, `.tpl`, `.cfg`, `.ps1`, `.j2`, `.zip`, `.conf`, `.crt`, `.key`, `.der`, `.cer`, `.pem`, `.bash`, `.tmpl`.|
 | `SANDBOX_BLACKLISTEXTN` |	From the Git repositories following are the blocked file extensions. </br> `.php5`, `.pht`, `.phtml`, `.shtml`, `.asa`, `.asax`, `.swf`, `.xap`, `.tfstate`, `.tfstate.backup`, `.exe`.|
 | `SANDBOX_IMAGEEXTN` |	From the Git repositories following are the allowed image file extensions. </br> `.tif`, `.tiff`, `.gif`, `.png`, `.bmp`, `.jpg`, `.jpeg`, `.so`. |
-| `SANDBOX_MAX_FILE_SIZE` |	Maximum size of a file that is allowed from the Git repositories is 2 MB. (Yet to be implemented) |
+| `SANDBOX_MAX_FILE_SIZE` |	Maximum file that is allowed from the Git repositories is 2 MB. (Yet to be implemented) |
 {: caption="Default agent sandbox allowlist configuration" caption-side="top"}
 
 You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
@@ -148,7 +148,7 @@ You can customize by following the steps to [edit the default configuration](/do
 You can follow these steps to edit the default configuration of an agent namespace.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Click **Kubernetes** from the left hand navigator pane, then click **Clusters** 
+2. Click **Kubernetes** from the navigator pane, then click **Clusters** 
 3. On the **Kubernetes Clusters** page, click your **cluster** > **Kubernetes dashboard**.
     - Click the **default** drop down to view the list of **Namespaces**:
         - In the drop down, type the **{{site.data.keyword.bpshort}}-runtime** Namespaces to view the Workload Status, Deployments, Pods, Replica sets, and so on.

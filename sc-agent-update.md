@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-20"
+lastupdated: "2024-06-06"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Updating agents
 {: #update-agent-overview}
 
-Update an agent configuration in the currently selected {{site.data.keyword.bpshort}} region to work directly in your cloud infrastructure. Updating an agent does not validate or deploy your agent. Select the right agent version to update. You can analyze the activity logs and recover the update.
+Update an agent configuration in the currently selected {{site.data.keyword.bpshort}} region to work directly in your cloud infrastructure. Updating an agent does not validate or deploy your agent. Select the agent version to update. You can analyze the activity logs and recover the update.
 {: shortdesc}
 
 Following are the scenarios you must use agent upgrade.

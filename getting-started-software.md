@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-06-06"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -31,7 +31,7 @@ Before you can use this template, you must complete the following tasks.
 
 - Make sure that you have the permissions to [create classic virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-device-access). 
 - [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure. 
-- Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full_notm}} instance](/docs/databases-for-postgresql?topic=databases-for-postgresql-pgadmin-code-engine-icd-postgresql). 
+- Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full_notm}} instance](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-pgadmin-code-engine-icd-postgresql#pgadmin-code-engine-icd-postgresql-before-start).
 
 
 ## Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}
@@ -40,7 +40,7 @@ Before you can use this template, you must complete the following tasks.
 Use one of the IBM provided software templates to set up and configure a classic VSI so that you can store data in an instance of {{site.data.keyword.databases-for-postgresql_full_notm}}.
 {: shortdesc}
 
-1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. Click **Log in**, in case you haven't log in to your {{site.data.keyword.cloud_notm}} account.
+1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. Click **Log in**, in case you haven`t log in to your {{site.data.keyword.cloud_notm}} account.
 
    Observe {{site.data.keyword.cloud_notm}} is specified in **Select your deployment target** and `Terraform Version 1.5.0` or `Terraform Version 2.0.0` is displayed in **Select a delivery method**.
    {: note}

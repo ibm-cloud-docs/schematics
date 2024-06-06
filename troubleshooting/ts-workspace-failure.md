@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-29"
+  years: 2017, 2024
+lastupdated: "2024-06-06"
 
 keywords: workspace create failure, terraform error, terraform fails, workspace fails
 
@@ -26,7 +26,7 @@ Review the following sections to help debugging `workspace new` failures.
 When you create a workspace from an existing `terraform.tfstate` file, it fails with error code `413` and a message `Required Entiry Too Large`.    
 {: tsSymptoms}
 
-Your workspace create did not reach the {{site.data.keyword.bpshort}}, due to the size limitation of the `terraform.tfstate` file.
+Your workspace create did not reach the {{site.data.keyword.bpshort}}, due to the limitation of the `terraform.tfstate` file.
 {: tsCauses}
 
 Example error message
@@ -42,5 +42,5 @@ Message:
 ```
 {: screen}
 
-The `terraform.tfstate` file size must be less than 2 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 2 MB. Greater than 2 MB state file size is not supported in the {{site.data.keyword.bpshort}}. Rerun the workspace create operation with a size that is less than 2 MB state file.
+The `terraform.tfstate` file must be less than 2 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file must be less than 2 MB. Greater than 2 MB state file is not supported in the {{site.data.keyword.bpshort}}. Rerun the workspace create operation with less than 2 MB state file.
 {: tsResolve} 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-06-06"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -87,7 +87,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 1. If you do not have one, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 2. Log in to your [GitHub](https://github.com/){: external} account. 
 3. Open the Terraform template to [create an {{site.data.keyword.cos_full_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external}.
-4. From the right side of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
+4. From the side of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
     
     You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your {{site.data.keyword.bpshort}} workspace.
     {: note}
@@ -112,7 +112,7 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
 5. Click **Next**.
 6. In the **workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
 
-   Ensure you provide the right resource group, and the location details where you want to create the workspace.
+   Ensure you provide the resource group, and the location details where you want to create the workspace.
     {: note}
 
 7. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspaces successfully.

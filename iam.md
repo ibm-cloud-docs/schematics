@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-06-06"
 
 keywords: schematics, automation, terraform
 
@@ -46,7 +46,7 @@ The user roles exist at both the platform (account) and service level. If you ar
 
 Platform roles be assigned over an entire account, over particular service instances, or within objects inside of a service instance.
 
-* **Administrator**: Has the full spectrum of rights over a particular action and its child actions. It includes the right to invite new users and assign roles over the object (only administrators can assign roles). Note that administrators do not have service roles by default. They can, however, assign roles to themselves.
+* **Administrator**: Has the full spectrum of rights over a particular action and its child actions. It includes to invite new users and assign roles over the object (only administrators can assign roles). Note that administrators do not have service roles by default. They can, however, assign roles to themselves.
 * **Editor**: Can view, create, and delete instances at the account level, except invite new users, manage the account, and assign access policies. Has limited use for actions within a service instance, beyond the ability to view them.
 * **Operator**: Can view instances at the account level, but cannot edit them. Has limited use for actions within a service instance, beyond the ability to view them.
 * **Viewer**: Can view instances at the account level, but cannot edit them. Has limited use for actions within a service instance, beyond the ability to view them.
@@ -89,7 +89,6 @@ Review the following table to see what permissions you need to work with {{site.
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} workspaces" caption-side="top"}
-{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### Action permissions
 {: #action-permissions}
@@ -109,7 +108,6 @@ Review the following table to see what permissions you need to work with {{site.
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
-{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### Agent permissions
 {: #agent-permissions}
@@ -179,8 +177,6 @@ Review the following table to see what permissions you need to work with {{site.
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} KMS" caption-side="top"}
-{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
-
 
 ## Setting up access for your users
 {: #access-setup}

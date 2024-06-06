@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-06-06"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -27,7 +27,7 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 {: shortdesc}
 
 ### Workspace events
-{: #schematics-wks-events} 
+{: #schematics-wks-events}
 
 | Action             | Description      | 
 | -------------------| -----------------|
@@ -41,12 +41,12 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 {: caption="Workspace events" caption-side="bottom"}
 
 ### Action events
-{: #schematics-action-events} 
+{: #schematics-action-events}
 
-| Action             | Description      | 
+| Action             | Description      |
 | -------------------| -----------------|
-| `schematics.action.create` | A {{site.data.keyword.bpshort}} action is created or failed to create. | 
-| `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. | 
+| `schematics.action.create` | A {{site.data.keyword.bpshort}} action is created or failed to create. |
+| `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. |
 | `schematics.action.read`| A {{site.data.keyword.bpshort}} action is viewed by a user.|
 | `schematics.action.update`| A {{site.data.keyword.bpshort}} action is updated successfully or failed to update.|
 {: caption="Action events" caption-side="bottom"}

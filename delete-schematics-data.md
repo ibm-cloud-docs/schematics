@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-22"
+lastupdated: "2024-06-06"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -115,7 +115,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 You can delete {{site.data.keyword.bpshort}} objects by using API. Following {{site.data.keyword.bpshort}} objects are used to store your data and helps to delete the {{site.data.keyword.bplong}} objects.
 
-You must have [Manager role](/docs/schematics?topic=schematics-access#access-roles) to delete from these {{site.data.keyword.bplong}} objects. And select the right {{site.data.keyword.bpshort}} endpoint to call the delete API.
+You must have [Manager role](/docs/schematics?topic=schematics-access#access-roles) to delete from these {{site.data.keyword.bplong}} objects. And select the {{site.data.keyword.bpshort}} endpoint to call the delete API.
 {: important}
 
 ### Workspaces

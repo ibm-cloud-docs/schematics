@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-01-04"
+  years: 2017, 2024
+lastupdated: "2024-06-06"
 
 keywords: schematics ansible roles, schematics action, create schematics galaxy, ansible playbooks
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Creating Ansible roles and galaxy
 {: #ansible-roles-galaxy}
  
-An [Ansible role](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html){: external} can be used to separate one significant Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
+An [Ansible role](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html){: external} can be used to separate one significant Ansible playbook into reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
 
 [Ansible Galaxy](https://galaxy.ansible.com/docs/?extIdCarryOver=true&sc_cid=701f2000001OH6uAAG){: external} is a repository for Ansible roles that are available to drop directly into your Playbooks to streamline your automation projects. A new sysadmin might start automating with Ansible in a matter of a few hours.
 {: shortdesc}

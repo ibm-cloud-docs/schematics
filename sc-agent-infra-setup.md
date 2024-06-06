@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-06-06"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -50,7 +50,7 @@ The following prerequisites must be met before you begin deploying the agent inf
     - In the **Workspace details** section:
         - **Workspace name** as `schematics-agent-infrastructure`.
         - **Tags** as `agents-infra`. 
-        - **Resource group** as `default` or other resource group for this workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the right access permission for the resource group.
+        - **Resource group** as `default` or other resource group for this workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group.
         - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. 
            If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
            {: note}
@@ -68,7 +68,7 @@ The following prerequisites must be met before you begin deploying the agent inf
     |--|--|--|--|
     | `agent_prefix` | String | `Required` | Provide the prefix for naming your agent VPC, cluster, and logging configuration.
     | `location`| String | `Required` | The region in the agent infrastructure VPC and cluster are created in. |
-    | `resource_group_name` | String | `Required` | Name for the resource group used the agent infrastructure and agent are associated to. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the right access permission for the resource group. |
+    | `resource_group_name` | String | `Required` | Name for the resource group used the agent infrastructure and agent are associated to. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group. |
     | `ibmcloud_api_key` | String | `Optional` | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
     | `tags` | List(String) | `Optional` | A list of user tags to be applied to the deployed, VPC, and cluster. For example, `myproject:agent`, `test:agentinfra`. You can see the provisioned resources of an Agent faster by using Tag name. |
     {: caption="{{site.data.keyword.bpshort}} Agent infrastructure inputs" caption-side="bottom"}

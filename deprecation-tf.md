@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-06"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -23,14 +23,14 @@ The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspac
 It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 For more information about updating Terraform release, see [Upgrading the Terraform workspace version](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12). Terraform v1.0 was a major release for Terraform, marking the transition to a stable `1.x` release. HCL made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), for the core Terraform features and function. No changes needed to HCL templates to upgrade through the 1.x releases.
-{: shortdesc} 
+{: shortdesc}
 
 ## {{site.data.keyword.bpshort}} Terraform deprecation lifecycle 
 {: #deprecate-phase}
 
 The table outlines the timetable of support that is provided by {{site.data.keyword.bpshort}} for Terraform releases. For more information about the maintenance and fixes, see the following sections.
 
-|Timescale | {{site.data.keyword.bpshort}} </br> operations | Terraform Maintenance and security fixes | Upgrade |
+|Timescale | {{site.data.keyword.bpshort}} </br> Functions | Terraform Maintenance and security fixes | Upgrade |
 | -- | -- | -- | -- |
 | 0-6 months  | Full operations | Yes | Suggested |
 | 6-12 months | Full operations | No  | Suggested. Upgrade if Terraform fix needed. |
@@ -73,7 +73,7 @@ You are suggested always to migrate from your in use version of Terraform to the
 
 {{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date when you are using the {{site.data.keyword.bplong_notm}} service. The month that is provided in the table represents the last day of the Month to restrict workspace creation and execution. The deprecation timeline changes as new Terraform versions are released.
 
-| Versions | Terraform end of maintenance and security support | Phase 1: Restrict workspace creation </br> (End of marketing)|    Phase 2: Restrict workspace execution </br> (End of support)|
+| Versions | Terraform end of maintenance and security support | Phase 1: Restrict workspace creation </br> (`End of marketing`)|    Phase 2: Restrict workspace execution </br> (`End of support`)|
 | -- | -- | --| --|
 | Terraform v0.x  | 2021 and earlier | May 2022 |  September 2023 |
 | Terraform v0.15 | July 2021 | September 2023  |September 2024|
