@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -25,7 +25,7 @@ Agents for {{site.data.keyword.bplong}} extend its ability to work directly to c
 The following prerequisites must be met before you begin deploying the agent infrastructure.
 
 - You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
-- Check whether you have the permissions to [provision a VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), a [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-terraform-setup#terraform-cluster-IAM), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in the target resource group.
+- Check whether you have the permissions to [provision a VPC](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources), a [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-terraform-setup#terraform-cluster-IAM), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in the target resource group.
 - Check whether you have the [permission](/docs/schematics?topic=schematics-access#workspace-permissions) to create a workspace.
 
 ## Provisioning agent infrastructure using {{site.data.keyword.bpshort}}
