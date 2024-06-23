@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -63,16 +63,16 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays wa
 Job failures may occur due to files missing from Git template repos after importing or cloning the repo to {{site.data.keyword.bpshort}}. 
 
 Files may be found to be missing at execution time for several reasons:
-- The files were referenced using file system `symlinks` to different files or folders in the repo, or to external file systems
-- The repo contents were uploaded as a TGZ and files referenced by Git submodules or `symlinks` were not included in the TGZ. 
-- The files were considered vulnerable or malicious by {{site.data.keyword.bpshort}}. 
+    - The files were referenced using file system `symlinks` to different files or folders in the repo, or to external file systems
+    - The repo contents were uploaded as a TGZ and files referenced by Git submodules or `symlinks` were not included in the TGZ.
+    - The files were considered vulnerable or malicious by {{site.data.keyword.bpshort}}.
 
 ## Files removed or missing from Terraform, or Ansible template repos
 {: #clone-file-extension}
 {: faq}
 {: support}
 
-To protect our users from malicious actors, {{site.data.keyword.bpshort}} removes files from users cloned Git repositories that might impact the security or integrity of the service. The intent is to protect users from execution of unauthorised modules or executables that could impact the service. Files packaged as zip or tar files are automatically excluded from user repos. The tar file contents are not inspected. Similarly the use of files higher than 500KB is not supported (allowed) in template repos, where typical IaC configuration files are KB in size. 
+To protect our users from malicious actors, {{site.data.keyword.bpshort}} removes files from users cloned Git repositories that might impact the security or integrity of the service. The intent is to protect users from execution of unauthorised modules or executables that could impact the service. Files packaged as zip or tar files are automatically excluded from user repos. The tar file contents are not inspected. Similarly the use of files higher than 500KB is not supported (allowed) in template repos, where typical IaC configuration files are KB.
 
 If it is desired to work with the files, these can be imported into {{site.data.keyword.bpshort}} at run time into `/tmp` or persisted in `/tmp/.schematics`. Only files less than 10MB are persisted between job runs. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -322,7 +322,7 @@ No, currently {{site.data.keyword.bpshort}} do not support this feature while ru
 {: faq}
 {: support}
 
-When listing or retrieving workspaces the following error may be received.  `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account`. 
+When listing or retrieving workspaces the following error may be received.  `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account`.
 
 
 ```text
@@ -591,7 +591,7 @@ No, you need to create new workspace. For more information, see [Workspace job e
 
 Yes, you can use `--state` flag option through the [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
-## What is the maximum variable size?
+## What is the maximum variable length of characters?
 {: #wks-name-maxlength}
 {: faq}
 {: support}

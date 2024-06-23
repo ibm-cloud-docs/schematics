@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -68,7 +68,7 @@ IaC helps you codify your cloud environment to automate the provisioning, speeds
 
 A DevOps toolchain is a set of tools that automates the tasks of developing and deploying your app. A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 
-For the information, see [DevOps toolchain](/docs/apps?topic=apps-devops-toolchains). The {{site.data.keyword.bpshort}} option enables the continuous delivery of your infrastructure configurations as well with {{site.data.keyword.cloud_notm}} toolchain.
+For the information, see [DevOps toolchain](/docs/devsecops?topic=devsecops-devsecops_intro). The {{site.data.keyword.bpshort}} option enables the continuous delivery of your infrastructure configurations as well with {{site.data.keyword.cloud_notm}} toolchain.
 
 Complete the following prerequisites for the tutorial:
 

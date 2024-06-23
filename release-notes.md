@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,13 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for June 2024.
 {: shortdesc}
+
+### 11 June 2024
+{: #schematics-june1124}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.23](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 05 June 2024
 {: #schematics-june0524}
@@ -312,7 +319,7 @@ IAM allowed IP addresses replaced with context based restrictions.
 :   Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
 
 The `terraform.tfstate` state file with maximum limit is less than 2 MB.
-:   The {{site.data.keyword.bpshort}} workspace creation by using `terraform.tfstate` file fails due to the limitation in state file size. Documentation includes [FAQ](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit), [troubleshooting guide](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1), and a note in [schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) --state argument.
+:   The {{site.data.keyword.bpshort}} workspace creation by using `terraform.tfstate` file fails due to the limitation in state file. Documentation includes [FAQ](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit), [troubleshooting guide](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1), and a note in [schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) --state argument.
 
 ### 22 March 2023
 {: #schematics-mar2223}

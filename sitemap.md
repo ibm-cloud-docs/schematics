@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: schematics
 subcollection: schematics
@@ -280,6 +280,10 @@ subcollection: schematics
 * [June 2024](/docs/schematics?topic=schematics-schematics-relnotes#June-2024)
 
     * Review the release notes for June 2024.
+
+    * [11 June 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june1124)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in
 
     * [05 June 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june0524)
 
@@ -2196,7 +2200,7 @@ subcollection: schematics
 
 * [What IAM permissions is needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
 
-* [Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
+* [Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cert)
 
 * [What attributes of workspaces or actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
@@ -2394,7 +2398,7 @@ subcollection: schematics
 
 * [Can I import an existing Terraform state file?](/docs/schematics?topic=schematics-workspaces-faq#tf-state-argument)
 
-* [What is the maximum variable size?](/docs/schematics?topic=schematics-workspaces-faq#wks-name-maxlength)
+* [What is the maximum variable length of characters?](/docs/schematics?topic=schematics-workspaces-faq#wks-name-maxlength)
 
 * [What is the maximum state file to import?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
 

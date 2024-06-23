@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-06-23"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -167,7 +167,7 @@ For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and y
 For information about access permissions, see [agent permissions](/docs/schematics?topic=schematics-access#agent-permissions).
 
 ## Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container trusted CA root certificate store during agent runtime?
-{: #faqs-agent-certificate}
+{: #faqs-agent-cert}
 {: faq}
 {: support}
 
