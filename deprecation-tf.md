@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-07-09"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -75,7 +75,10 @@ You are suggested always to migrate from your in use version of Terraform to the
 
 | Versions | Terraform support | Terraform end of maintenance and security support | Phase 1: Restrict workspace creation </br> (`End of marketing`)|    Phase 2: Restrict workspace execution </br> (`End of support`)|
 | -- | -- | --| --| -- |
-| Terraform v0.x  | Deprecated  | 2021 and earlier | May 2022 |  September 2023 |
+| Terraform v0.11 | Deprecated  | 2021 and earlier | May 2022 |  September 2021 |
+| Terraform v0.12 | Deprecated  | 2021 and earlier | May 2022 |  September 2021 |
+| Terraform  v0.13 | Deprecated  | 2021 and earlier | May 2022 |  September 2024 |
+| Terraform  v0.14 | Deprecated  | 2021 and earlier | May 2022 |  September 2024 |
 | Terraform v0.15 | Deprecated | July 2021 | September 2023  |September 2024|
 | Terraform v1.0 | Deprecated | May 2022 | September 2023 | September 2024|
 | Terraform v1.1 | Deprecated | September 2022 | September 2023 | September 2024|
@@ -86,7 +89,7 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.6 | Early June 2024 | Mid of November 2024 | End of February 2025 | Mid of September 2025 |
 | Terraform v1.7 | End of August 2024 | Mid of January 2025 | End of April 2025 | Mid of October 2025 |
 | Terraform v1.8 | End of August 2024 | Mid of March 2025 | End of June 2025 | Mid of January 2026 |
-| Terraform v.19 | Mid of August 2024 | Mid of May 2025 | End of August 2025 | Mid of March 2026 |
+| Terraform v1.9 | Mid of August 2024 | Mid of May 2025 | End of August 2025 | Mid of March 2026 |
 {: caption="Deprecation timeline" caption-side="top"}
 
 ## User actions

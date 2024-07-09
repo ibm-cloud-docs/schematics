@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-07-08"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,26 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## July 2024
+{: #July-2024}
+
+Review the release notes for July 2024.
+{: shortdesc}
+
+### 8 July 2024
+{: #schematics-july0824}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.24](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+### 3 July 2024
+{: #schematics-july0324}
+{: release-note}
+
+Update the {{site.data.keyword.bpshort}} Terraform version release plan
+:   The {{site.data.keyword.bpshort}} [Terraform version release plan](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 ## June 2024
 {: #June-2024}

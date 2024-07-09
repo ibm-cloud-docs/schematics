@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-07-09"
 
 keywords: schematics
 subcollection: schematics
@@ -276,6 +276,18 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [July 2024](/docs/schematics?topic=schematics-schematics-relnotes#July-2024)
+
+    * Review the release notes for July 2024.
+
+    * [8 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0824)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in
+
+    * [3 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0324)
+
+        * Update the {{site.data.keyword.bpshort}} Terraform version release plan
 
 * [June 2024](/docs/schematics?topic=schematics-schematics-relnotes#June-2024)
 
