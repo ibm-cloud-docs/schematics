@@ -77,19 +77,19 @@ You are suggested always to migrate from your in use version of Terraform to the
 | -- | -- | --| --| -- |
 | Terraform v0.11 | Deprecated  | 2021 and earlier | May 2022 |  September 2021 |
 | Terraform v0.12 | Deprecated  | 2021 and earlier | May 2022 |  September 2021 |
-| Terraform  v0.13 | Deprecated  | 2021 and earlier | May 2022 |  September 2024 |
-| Terraform  v0.14 | Deprecated  | 2021 and earlier | May 2022 |  September 2024 |
-| Terraform v0.15 | Deprecated | July 2021 | September 2023  |September 2024|
-| Terraform v1.0 | Deprecated | May 2022 | September 2023 | September 2024|
-| Terraform v1.1 | Deprecated | September 2022 | September 2023 | September 2024|
-| Terraform v1.2 | Deprecated | March 2023 | March 2024|March 2025|
-| Terraform v1.3 | Deprecated | End of December 2023 |  April 2024|  Earliest	July 2025|
-| Terraform v1.4 | July 2023 | End of September 2024 | End of December 2024  |  Mid of September 2025 |
-| Terraform v1.5 | End of December 2023 | End of October 2024 | End of December 2024 | Mid of September 2025 |
-| Terraform v1.6 | Early June 2024 | Mid of November 2024 | End of February 2025 | Mid of September 2025 |
-| Terraform v1.7 | End of August 2024 | Mid of January 2025 | End of April 2025 | Mid of October 2025 |
-| Terraform v1.8 | End of August 2024 | Mid of March 2025 | End of June 2025 | Mid of January 2026 |
-| Terraform v1.9 | Mid of August 2024 | Mid of May 2025 | End of August 2025 | Mid of March 2026 |
+| Terraform  v0.13 | Deprecated  | 2021 and earlier | May 2022 |  30 September 2024 |
+| Terraform  v0.14 | Deprecated  | 2021 and earlier | May 2022 |  30 September 2024 |
+| Terraform v0.15 | Deprecated | July 2021 | September 2023  | 30 September 2024|
+| Terraform v1.0 | Deprecated | May 2022 | September 2023 | 30 September 2024|
+| Terraform v1.1 | Deprecated | September 2022 | September 2023 | 30 September 2024|
+| Terraform v1.2 | Deprecated | March 2023 | March 2024| 31 March 2025|
+| Terraform v1.3 | Deprecated | End of December 2023 |  April 2024|  31	July 2025|
+| Terraform v1.4 | July 2023 | 30 September 2024 | 31 December 2024  |  30 September 2025 |
+| Terraform v1.5 | 6 September 2023 | 31 October 2024 | 31 December 2024 | 30 September 2025 |
+| Terraform v1.6 | 5 June 2024 | 29 November 2024 | 28 February 2025 | 30 September 2025 |
+| Terraform v1.7 | 30 August 2024 | 31 January 2025 | 30 April 2025 | 31 October 2025 |
+| Terraform v1.8 | 30 August 2024 | 31 March 2025 | 30 June 2025 | 30 January 2026 |
+| Terraform v1.9 | 30 August 2024 | 30 May 2025 | 29 August 2025 | 31 March 2026 |
 {: caption="Deprecation timeline" caption-side="top"}
 
 ## User actions
