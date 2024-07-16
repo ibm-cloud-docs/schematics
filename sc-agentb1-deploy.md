@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-07-16"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -387,6 +387,51 @@ Output
 }
 ```
 {: screen}
+
+## Creating an agent using the Terraform 
+{: #create-agent-terraform}
+{: terraform}
+
+To create the {{site.data.keyword.bpshort}} agent deployment using Terraform, you need to define the  `ibm_schematics_agent_deploy` resource in your Terraform configuration file. Complete the following steps to create the {{site.data.keyword.bpshort}} agent.
+
+1. Install the [Terrafrom CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
+2. [Configure the {{site.data.keyword.terraform-provider_full_notm}} plugin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step), 
+3. [Test your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#test-terraform-template) in your system.
+4. Define `ibm_schematics_agent_deploy` resource in `main.tf` file.
+    ```
+    provider "ibm" {
+    ibmcloud_api_key = "<YOUR_IBM_CLOUD_API_KEY>"
+    region           = "<YOUR_REGION>"
+    }
+
+    resource "ibm_schematics_agent_deploy" "example" {
+    name          = "example-agent-deploy"
+    resource_group = "<YOUR_RESOURCE_GROUP>"
+    agent_crn     = "<AGENT_CRN>"
+    zone          = "<ZONE>"
+  
+    # Define any other optional parameters here
+    }
+
+    ```
+    {: pre}
+
+5. Initialize 
+
+    ```sh
+    terraform init
+    ```
+    {: pre}
+
+6. Apply
+
+    ```sh
+    terraform apply
+    ```
+    {: pre}
+
+You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_agent_deploy){: external} documentation for additional parameters specific to the resource.
+{: note}
 
 ## Next steps
 {: #agent-create-nextsteps}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-07-16"
 
 keywords: tracking schematics services, activity tracking, integration services
 
@@ -34,10 +34,10 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
    In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.at_full_notm}} to view the {{site.data.keyword.at_full_notm}} service form.
    {: note}
 
-5. Analyze the configuration and click **Create**.
+7. Analyze the configuration and click **Create**.
     
     If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log {{site.data.keyword.at_short}} that is configured to receive platform service logs. For more information about viewing {{site.data.keyword.at_short}} logs, see [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
     {: important}
 
-6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details.
-7. Click `Open Dashboard` to track your services.
+8. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details.
+9. Click `Open Dashboard` to track your services.

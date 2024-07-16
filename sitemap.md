@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-16"
 
 keywords: schematics
 subcollection: schematics
@@ -1427,7 +1427,9 @@ subcollection: schematics
 
 * [Creating an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
 
-* [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#agent-create-nextsteps)
+* [Creating an agent using the Terraform](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#agent-create-nextsteps)
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
