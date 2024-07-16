@@ -16,7 +16,7 @@ subcollection: schematics
 # Deploying agents
 {: #deploy-agent-overview}
 
-Create an agent registration in the currently selected {{site.data.keyword.bplong}} region to work directly in your cloud infrastructure on private network or in any isolated network zones.
+Create an agent registration in the selected {{site.data.keyword.bplong}} region to work directly in your cloud infrastructure on private network or isolated network zones.
 {: shortdesc}
 
 Follow the steps to create and deploy an agent.
@@ -34,7 +34,7 @@ Review and complete the steps that are described in [preparing for agent deploym
 - The cluster, {{site.data.keyword.cos_full_notm}} instance, and {{site.data.keyword.cos_full_notm}} bucket are created in the same resource group.
 - Record the `cluster ID`, `cluster resource group`, and `region` of the {{site.data.keyword.containershort}} cluster the agent deploys.
 - The `{{site.data.keyword.cos_full}} instance name`, `{{site.data.keyword.cos_full_notm}} bucket name` of the {{site.data.keyword.objectstorageshort}} bucket is used for agent temporary data storage. The resource group and region of the {{site.data.keyword.cos_full_notm}} instance and bucket must be the same as the cluster.
-- Optional - if you need to expose or update the proxy server to an Agent microservices, refer to, [configuring {{site.data.keyword.bpshort}} agents to a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview).
+- Optional - if you need to update the proxy server to an Agent microservices, refer to [configuring {{site.data.keyword.bpshort}} agents to a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview).
 - Optional - if you are using a private Git instance, you need to establish the connection with an agent through certificate. For more information, see [steps to associate an agent with private Git instance](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
    
    You need to see that the `Cluster`, and the `{{site.data.keyword.cos_full_notm}} instance` are in the same resource group.
@@ -47,8 +47,8 @@ Review and complete the steps that are described in [preparing for agent deploym
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Access **Schematics** > **Agents** > [**Create Agent**](https://cloud.ibm.com/schematics/agents/create){: external}.
     - In **Define agent details** section:
-        - Enter unique **Agent name**.
-        - Select **Location** and **Resource group** from the drop down option.
+        - Enter a unique **Agent name**.
+        - Select **Location** and **Resource group** from the drop-down option.
         - Enter **Tags**, and **Description** for the agent.
     - In **Assign to cluster** section:
         - Select the `{{site.data.keyword.containerlong_notm}}` or the `{{site.data.keyword.redhat_openshift_notm}}` service.
@@ -61,14 +61,14 @@ Review and complete the steps that are described in [preparing for agent deploym
 4. Click **Validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
 5. Click **Deploy** to deploy an agent.
 
-## Creating an agent definition using the CLI 
+## Creating an agent definition through CLI 
 {: #create-agent-cli}
 {: cli}
 
-As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with the configuration that are used to deploy the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
+As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with the configuration that is used to deploy the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
-Select the {{site.data.keyword.cloud_notm}} region where you wish to define and manage your agent from. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. This must be the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name.
+Select the {{site.data.keyword.cloud_notm}} region where you want to define and manage your agent from. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. The region must be the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name.
 
 Example `agent create` syntax. The text between `< >` must add with your values:
 
@@ -124,11 +124,11 @@ Metadata         [Metadata]
 ```
 {: screen}
 
-## Verifying prerequisites for agent deployment using the CLI
+## Verifying prerequisites for agent deployment through CLI
 {: #verify-agent-cli}
 {: cli}
 
-You can verify the agent definition and cluster availability by using the agent validate command. The validate performs a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent validate command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the agent definition and cluster availability by using the agent validate command. The validate does a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent validate command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -183,7 +183,7 @@ VALIDATE     8b168c1e0e4b35708e95c2af9a99d9d4   Successful validation   2024-01-
 {: #apply-agent-cli}
 {: cli}
 
-You use the agent definition to deploy the agent with the `agent deploy` command. The `agent deploy` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
+You use the agent definition to deploy the agent with the `agent deploy` command. The `agent deploy` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the `force deploy` option.
 
 The agent deployment takes several minutes to complete. 
 {: shortdesc}
@@ -228,7 +228,7 @@ VALIDATE     8b168c1e0e4b35708e   Successful validation   2024-01-10T09:53:48.43
 ```
 {: screen}
 
-## Verifying the agent deployment using the CLI
+## Verifying the agent deployment through CLI
 {: #d-agent-cli}
 {: cli}
 
@@ -276,9 +276,9 @@ HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03
 ```
 {: screen}
 
-In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard of your cluster to view the status and logs of the agent related microservices, Pods, Deployment, Configmap, and Cluster bindings in the namespaces, `schematics-agent-observe`, `schematics-sandbox`, `schematics-runtime` and `schematics-job-runtime`.
+In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard of your cluster to view the status and logs of the agent-related microservices, pods, deployment, configmap, and Cluster bindings in the namespaces, `schematics-agent-observe`, `schematics-sandbox`, `schematics-runtime` and `schematics-job-runtime`.
 
-## Creating an agent using the {{site.data.keyword.bpshort}} API
+## Creating an agent through API
 {: #create-agent-api}
 {: api}
 
@@ -388,15 +388,15 @@ Output
 ```
 {: screen}
 
-## Creating an agent using the Terraform 
+## Creating an agent through Terraform 
 {: #create-agent-terraform}
 {: terraform}
 
-To create the {{site.data.keyword.bpshort}} agent deployment using Terraform, you need to define the  `ibm_schematics_agent_deploy` resource in your Terraform configuration file. Complete the following steps to create the {{site.data.keyword.bpshort}} agent.
+To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, define the  `ibm_schematics_agent_deploy` resource in your Terraform configuration file. Complete the following steps to create the {{site.data.keyword.bpshort}} Agent.
 
 1. Install the [Terrafrom CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
-2. [Configure the {{site.data.keyword.terraform-provider_full_notm}} plugin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step), 
-3. [Test your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#test-terraform-template) in your system.
+2. [Configure the {{site.data.keyword.terraform-provider_full_notm}} plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step).
+3. [Test your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#test-terraform-template).
 4. Define `ibm_schematics_agent_deploy` resource in `main.tf` file.
     ```
     provider "ibm" {
@@ -414,7 +414,7 @@ To create the {{site.data.keyword.bpshort}} agent deployment using Terraform, yo
     }
 
     ```
-    {: pre}
+    {: codeblock}
 
 5. Initialize 
 
@@ -430,7 +430,7 @@ To create the {{site.data.keyword.bpshort}} agent deployment using Terraform, yo
     ```
     {: pre}
 
-You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_agent_deploy){: external} documentation for additional parameters specific to the resource.
+You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_agent_deploy){: external} documentation for more parameters specific to the resource.
 {: note}
 
 ## Next steps
@@ -438,7 +438,7 @@ You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://r
 
 Deploying and configuration of an agent are complete.
 
-- If you are by using a private Git instance, then establish the connection with an agent through certificate. For more information, see [steps to associate an agent to connect](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
+- If you are using a private Git instance, then establish the connection with an agent through certificate. For more information, see [steps to associate an agent to connect](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
 - For configuring and provisioning your infrastructure through [agent policies](/docs/schematics?topic=schematics-policy-manage). The agent policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
 - Manage your [agent and Kubernetes cluster](/docs/schematics?topic=schematics-configure-k8s-cluster).
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions that are related to agents.

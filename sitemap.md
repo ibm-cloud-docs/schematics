@@ -1417,31 +1417,33 @@ subcollection: schematics
 
 * [Creating an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui#create-agent-ui)
 
-* [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli)
+* [Creating an agent definition through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli)
 
-* [Verifying prerequisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#verify-agent-cli)
+* [Verifying prerequisites for agent deployment through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#verify-agent-cli)
 
 * [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli)
 
-* [Verifying the agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#d-agent-cli)
+* [Verifying the agent deployment through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#d-agent-cli)
 
-* [Creating an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
+* [Creating an agent through API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
 
-* [Creating an agent using the Terraform](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform)
+* [Creating an agent through Terraform](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#agent-create-nextsteps)
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
-* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=ui#display-agentb1-get-ui)
+* [Displaying the agents through UI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=ui#display-agentb1-get-ui)
 
-* [Displaying the list of agents using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-list-cli)
+* [Displaying the agents through CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-list-cli)
 
-* [Displaying agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-get-cli)
+* [Displaying agent configuration through CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-get-cli)
 
-* [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
+* [Displaying agents through API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
 
-* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#agent-delete-nextsteps)
+* [Displaying agents through Terraform](/docs/schematics?topic=schematics-display-agentb1-overview&interface=terraform#display-agent-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=terraform#agent-delete-nextsteps)
 
 [Updating agents](/docs/schematics?topic=schematics-update-agent-overview#update-agent-overview)
 

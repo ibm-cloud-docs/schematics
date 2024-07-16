@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-07-16"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -15,18 +15,18 @@ subcollection: schematics
 # Displaying agents
 {: #display-agentb1-overview}
 
-You can view an agent using the agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account.
+You can view an agent by using the agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account.
 {: shortdesc}
 
-## Displaying the list of agents using UI
+## Displaying the agents through UI
 {: #display-agentb1-get-ui}
 {: ui}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
-2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+2. Click **{{site.data.keyword.bpshort}}** > **Agents**.
 3. Click your agent from the list to view the agent details.
 
-## Displaying the list of agents using the CLI
+## Displaying the agents through CLI
 {: #display-agentb1-list-cli}
 {: cli}
 
@@ -42,7 +42,7 @@ ibmcloud schematics agent list
 
 Output
 
-```textevruevgerrttrkjkednkjudtkhvdehdghl
+```text
 
 Retrieving agents...
 OK
@@ -63,11 +63,11 @@ Showing 1-11 of 11 items
 ```
 {: screen}
 
-## Displaying agent configuration using CLI
+## Displaying agent configuration through CLI
 {: #display-agentb1-get-cli}
 {: cli}
 
-You can view the configuration of an agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command. This command requires `agent_id` as an input argument.
+You can use the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command to view the configuration of an agent. This command requires `agent_id` as an input argument.
 {: shortdesc}
 
 To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-get).
@@ -99,7 +99,7 @@ DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2023-03-27T12:25:01.239
 ```
 {: screen}
 
-## Displaying agents using the API
+## Displaying agents through API
 {: #display-agentb1-api}
 {: api}
 
@@ -151,7 +151,6 @@ Output
 ```
 {: screen}
 
-The _agent get_ operation returns the agent configuration information based on your agent ID.
 
 Example
 
@@ -199,8 +198,49 @@ Output
 ```
 {: screen}
 
+## Displaying agents through Terraform 
+{: #display-agent-terraform}
+{: terraform}
+
+You can use the `ibm_schematics_agent` data source to fetch information about a {{site.data.keyword.bpshort}} Agent without changing your infrastructure.
+
+Make sure the [{{site.data.keyword.bpshort}} Agent is deployed](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform) to list an existing agent.
+
+1. Define `ibm_schematics_agent_deploy` resource in `main.tf` file.
+    ```
+    provider "ibm" {
+    ibmcloud_api_key = "<YOUR_IBM_CLOUD_API_KEY>"
+    region           = "<YOUR_REGION>"
+    }
+
+    data "ibm_schematics_agent" "example" {
+    name = "<AGENT_NAME>"
+    }
+
+    output "agent_details" {
+    value = data.ibm_schematics_agent.example
+    }
+    ```
+    {: codeblock}
+2. Initialize
+
+    ```sh
+    terraform init
+    ```
+    {: pre}
+
+3. Apply
+
+    ```sh
+    terraform apply
+    ```
+    {: pre}
+
+You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_agent){: external} documentation for more parameters specific to the data source.
+{: note}
+
 ## Next steps
 {: #agent-delete-nextsteps}
 
-- You can see [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
-- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.
+- You can [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions that are related to deleting an agent.
