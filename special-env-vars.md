@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-23"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -88,16 +88,10 @@ A sample `env_values` block in the payload to update environment variables using
 ```json
 "env_values": [
     {
-        "name": "TF_CLI_ARGS_plan",
-        "value": "-parallelism=20",
-        "secure": false,
-        "hidden": false
+        "TF_CLI_ARGS_plan": "-parallelism=20"
     },
     {
-        "name": "TF_CLI_ARGS_apply",
-        "value": "-parallelism=20",
-        "secure": false,
-        "hidden": false
+        "TF_LOG": "debug"
     }
     ]
 ```

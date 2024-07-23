@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-23"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -198,46 +198,6 @@ Output
 ```
 {: screen}
 
-## Displaying agents through Terraform 
-{: #display-agent-terraform}
-{: terraform}
-
-You can use the `ibm_schematics_agent` data source to fetch information about a {{site.data.keyword.bpshort}} Agent without changing your infrastructure.
-
-Make sure the [{{site.data.keyword.bpshort}} Agent is deployed](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform) to list an existing agent.
-
-1. Define `ibm_schematics_agent_deploy` resource in `main.tf` file.
-    ```
-    provider "ibm" {
-    ibmcloud_api_key = "<YOUR_IBM_CLOUD_API_KEY>"
-    region           = "<YOUR_REGION>"
-    }
-
-    data "ibm_schematics_agent" "example" {
-    name = "<AGENT_NAME>"
-    }
-
-    output "agent_details" {
-    value = data.ibm_schematics_agent.example
-    }
-    ```
-    {: codeblock}
-2. Initialize
-
-    ```sh
-    terraform init
-    ```
-    {: pre}
-
-3. Apply
-
-    ```sh
-    terraform apply
-    ```
-    {: pre}
-
-You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_agent){: external} documentation for more parameters specific to the data source.
-{: note}
 
 ## Next steps
 {: #agent-delete-nextsteps}

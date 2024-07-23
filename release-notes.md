@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-23"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,13 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for July 2024.
 {: shortdesc}
+
+### 23 July 2024
+{: #schematics-july2324}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.1.1](/docs/schematics?topic=schematics-agent_version-releases) released.
 
 ### 8 July 2024
 {: #schematics-july0824}

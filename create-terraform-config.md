@@ -288,16 +288,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
 
 ```yaml
 [
-    {
-        internal = 8300
-        external = 8300
-        protocol = "tcp"
-    },
-    {
-        internal = 8301
-        external = 8301
-        protocol = "ldp"
-    }
+        "test", "env:prod", "env:agent:test"
 ]
 ```
 {: pre}

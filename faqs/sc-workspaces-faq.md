@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-19"
+lastupdated: "2024-07-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -430,10 +430,10 @@ Sample payload
       "type": "<same_as_before>",
       "env_values": [
         {
-          "env_values_1": "dummy_text"
+          "env_key1": "dummy_text"
         },
         {
-          "env_values_2": "dummy_text"
+          "env_key2": "dummy_text"
         }
       ],
       "env_values_metadata": [

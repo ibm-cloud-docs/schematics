@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-23"
 
 keywords: schematics
 subcollection: schematics
@@ -254,23 +254,6 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-next-steps)
 
 
-## {{site.data.keyword.bpshort}} architecture
-{: #sitemap__architecture}
-
-
-[{{site.data.keyword.bpshort}} architecture](/docs/schematics?topic=schematics-compute-isolation#compute-isolation)
-
-* [Architectural flow](/docs/schematics?topic=schematics-compute-isolation#basic-architecture)
-
-* [Workload isolation](/docs/schematics?topic=schematics-compute-isolation#workload-isolation)
-
-    * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=schematics-compute-isolation#workload-api-isolation)
-
-    * [How is the information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?](/docs/schematics?topic=schematics-compute-isolation#workload-info-isolation)
-
-    * [How are cloud resources isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
-
-
 ## Release notes
 {: #sitemap_release_notes}
 
@@ -280,6 +263,10 @@ subcollection: schematics
 * [July 2024](/docs/schematics?topic=schematics-schematics-relnotes#July-2024)
 
     * Review the release notes for July 2024.
+
+    * [23 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2324)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
 
     * [8 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0824)
 
@@ -1421,15 +1408,13 @@ subcollection: schematics
 
 * [Verifying prerequisites for agent deployment through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#verify-agent-cli)
 
-* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli)
+* [Deploying an agent through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli)
 
 * [Verifying the agent deployment through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#d-agent-cli)
 
 * [Creating an agent through API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
 
-* [Creating an agent through Terraform](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform)
-
-* [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#agent-create-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#agent-create-nextsteps)
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
@@ -1441,9 +1426,7 @@ subcollection: schematics
 
 * [Displaying agents through API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
 
-* [Displaying agents through Terraform](/docs/schematics?topic=schematics-display-agentb1-overview&interface=terraform#display-agent-terraform)
-
-* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=terraform#agent-delete-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#agent-delete-nextsteps)
 
 [Updating agents](/docs/schematics?topic=schematics-update-agent-overview#update-agent-overview)
 
@@ -1451,19 +1434,21 @@ subcollection: schematics
 
 * [Updating an agent definition](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui)
 
-* [Creating an agent definition by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
+* [Creating an agent definition through CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
 
 * [Verifying agent update](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#verify-agent-update-cli)
 
-* [Updating an agent by using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
+* [Updating an agent through API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
+
+* [Next steps](/docs/schematics?topic=schematics-update-agent-overview&interface=api#agent-update-nextsteps)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
-* [Deleting an agent using the UI](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui#delete-agentb1-ui)
+* [Deleting an agent through UI](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui#delete-agentb1-ui)
 
-* [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli#delete-agentb1-cli)
+* [Deleting an agent through CLI](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli#delete-agentb1-cli)
 
-* [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#delete-agentb1-api)
+* [Deleting an agent through API](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#delete-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#agent-delete-nextstep)
 
@@ -1566,22 +1551,6 @@ subcollection: schematics
 ## Logging and monitoring
 {: #sitemap_logging_and_monitoring}
 
-
-[Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}](/docs/schematics?topic=schematics-monitoring-instances#monitoring-instances)
-
-* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-monitoring-instances#launch-dashboard)
-
-* [Creating service instance](/docs/schematics?topic=schematics-monitoring-instances#create-instance)
-
-* [Creating custom dashboard](/docs/schematics?topic=schematics-monitoring-instances#create-dashboard)
-
-* [{{site.data.keyword.bplong_notm}} metrics details](/docs/schematics?topic=schematics-monitoring-instances#metrics-details)
-
-    * [`ibm_schematics_workspace_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
-
-    * [`ibm_schematics_workspace_actions_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
-
-    * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
 
 [Auditing events](/docs/schematics?topic=schematics-at_events#at_events)
 
@@ -1716,8 +1685,6 @@ subcollection: schematics
 * [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
 
 * [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag)
-
-[User responsibilities by using {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-responsibilities#responsibilities)
 
 [Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
 

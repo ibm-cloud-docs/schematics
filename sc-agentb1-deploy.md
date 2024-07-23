@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-23"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -128,7 +128,7 @@ Metadata         [Metadata]
 {: #verify-agent-cli}
 {: cli}
 
-You can verify the agent definition and cluster availability by using the agent validate command. The validate does a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent validate command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the agent definition and cluster availability by using the agent validate command. The validate does a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent validates command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -179,7 +179,7 @@ VALIDATE     8b168c1e0e4b35708e95c2af9a99d9d4   Successful validation   2024-01-
 ```
 {: screen}
 
-## Deploying an agent using the CLI
+## Deploying an agent through CLI
 {: #apply-agent-cli}
 {: cli}
 
@@ -388,50 +388,7 @@ Output
 ```
 {: screen}
 
-## Creating an agent through Terraform 
-{: #create-agent-terraform}
-{: terraform}
 
-To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, define the  `ibm_schematics_agent_deploy` resource in your Terraform configuration file. Complete the following steps to create the {{site.data.keyword.bpshort}} Agent.
-
-1. Install the [Terrafrom CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
-2. [Configure the {{site.data.keyword.terraform-provider_full_notm}} plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step).
-3. [Test your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#test-terraform-template).
-4. Define `ibm_schematics_agent_deploy` resource in `main.tf` file.
-    ```
-    provider "ibm" {
-    ibmcloud_api_key = "<YOUR_IBM_CLOUD_API_KEY>"
-    region           = "<YOUR_REGION>"
-    }
-
-    resource "ibm_schematics_agent_deploy" "example" {
-    name          = "example-agent-deploy"
-    resource_group = "<YOUR_RESOURCE_GROUP>"
-    agent_crn     = "<AGENT_CRN>"
-    zone          = "<ZONE>"
-  
-    # Define any other optional parameters here
-    }
-
-    ```
-    {: codeblock}
-
-5. Initialize 
-
-    ```sh
-    terraform init
-    ```
-    {: pre}
-
-6. Apply
-
-    ```sh
-    terraform apply
-    ```
-    {: pre}
-
-You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_agent_deploy){: external} documentation for more parameters specific to the resource.
-{: note}
 
 ## Next steps
 {: #agent-create-nextsteps}
@@ -439,7 +396,7 @@ You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://r
 Deploying and configuration of an agent are complete.
 
 - If you are using a private Git instance, then establish the connection with an agent through certificate. For more information, see [steps to associate an agent to connect](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
-- For configuring and provisioning your infrastructure through [agent policies](/docs/schematics?topic=schematics-policy-manage). The agent policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
+- For configuring and provisioning your infrastructure by using, refer to [agent policies](/docs/schematics?topic=schematics-policy-manage). The agent policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
 - Manage your [agent and Kubernetes cluster](/docs/schematics?topic=schematics-configure-k8s-cluster).
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions that are related to agents.
 - When the agent is no longer in need, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).
