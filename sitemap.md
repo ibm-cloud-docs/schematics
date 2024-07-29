@@ -351,7 +351,7 @@ subcollection: schematics
 
     * [28 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2824)
 
-        * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, and `v1.3`template from 2nd week of April 2024.
+        * Deprecate creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2` and `v1.3`
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 

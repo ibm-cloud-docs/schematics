@@ -160,7 +160,8 @@ Review the release notes for February 2024.
 {: #schematics-feb2824}
 {: release-note}
 
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, and `v1.3`template from 2nd week of April 2024.
+Deprecate creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2` and `v1.3`
+:   {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, and `v1.3`template from 2nd week of April 2024.
 
 ### 14 February 2024
 {: #schematics-feb1424}
