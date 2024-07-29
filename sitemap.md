@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-07-29"
 
 keywords: schematics
 subcollection: schematics
@@ -252,6 +252,23 @@ subcollection: schematics
     * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
 * [Next steps](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-next-steps)
+
+
+## {{site.data.keyword.bpshort}} architecture
+{: #sitemap__architecture}
+
+
+[{{site.data.keyword.bpshort}} architecture](/docs/schematics?topic=schematics-compute-isolation#compute-isolation)
+
+* [Architectural flow](/docs/schematics?topic=schematics-compute-isolation#basic-architecture)
+
+* [Workload isolation](/docs/schematics?topic=schematics-compute-isolation#workload-isolation)
+
+    * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=schematics-compute-isolation#workload-api-isolation)
+
+    * [How is the information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?](/docs/schematics?topic=schematics-compute-isolation#workload-info-isolation)
+
+    * [How are cloud resources isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
 
 
 ## Release notes
@@ -1552,6 +1569,22 @@ subcollection: schematics
 {: #sitemap_logging_and_monitoring}
 
 
+[Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}](/docs/schematics?topic=schematics-monitoring-instances#monitoring-instances)
+
+* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-monitoring-instances#launch-dashboard)
+
+* [Creating service instance](/docs/schematics?topic=schematics-monitoring-instances#create-instance)
+
+* [Creating custom dashboard](/docs/schematics?topic=schematics-monitoring-instances#create-dashboard)
+
+* [{{site.data.keyword.bplong_notm}} metrics details](/docs/schematics?topic=schematics-monitoring-instances#metrics-details)
+
+    * [`ibm_schematics_workspace_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
+
+    * [`ibm_schematics_workspace_actions_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
+
+    * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
+
 [Auditing events](/docs/schematics?topic=schematics-at_events#at_events)
 
 * [{{site.data.keyword.bpshort}} events](/docs/schematics?topic=schematics-at_events#schematics-events)
@@ -1685,6 +1718,8 @@ subcollection: schematics
 * [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
 
 * [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag)
+
+[User responsibilities by using {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-responsibilities#responsibilities)
 
 [Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-29"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7` and `Terraform_v1.6.6`. `Terraform_v1.5.7` is maintained as default version till the 10th July 2024, post 10th July 2024, `Terraform_v1.6.6` will be set as default version.
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7` and `Terraform_v1.6.6`. `Terraform_v1.6.6` is set as default version from July 10th 2024.
 
 The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspace by using this version is still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}
@@ -86,10 +86,10 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.3 | Deprecated | End of December 2023 |  April 2024|  31	July 2025|
 | Terraform v1.4 | July 2023 | 30 September 2024 | 31 December 2024  |  30 September 2025 |
 | Terraform v1.5 | 6 September 2023 | 31 October 2024 | 31 December 2024 | 30 September 2025 |
-| Terraform v1.6 | 5 June 2024 | 29 November 2024 | 28 February 2025 | 30 September 2025 |
-| Terraform v1.7 | 30 August 2024 | 31 January 2025 | 30 April 2025 | 31 October 2025 |
-| Terraform v1.8 | 30 August 2024 | 31 March 2025 | 30 June 2025 | 30 January 2026 |
-| Terraform v1.9 | 30 August 2024 | 30 May 2025 | 29 August 2025 | 31 March 2026 |
+| Terraform v1.6 | 5 June 2024 | 29 November 2024 | 10 June 2025 | 30 September 2025 |
+| Terraform v1.7 | 30 August 2024 | 31 January 2025 | 10 September 2025 | 31 October 2025 |
+| Terraform v1.8 | 30 August 2024 | 31 March 2025 | 10 September 2025 | 30 January 2026 |
+| Terraform v1.9 | 30 August 2024 | 30 May 2025 | 10 September 2025 | 31 March 2026 |
 {: caption="Deprecation timeline" caption-side="top"}
 
 ## User actions

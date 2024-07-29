@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-29"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -40,7 +40,8 @@ Before you can use this template, you must complete the following tasks.
 Use one of the IBM provided software templates to set up and configure a classic VSI so that you can store data in an instance of {{site.data.keyword.databases-for-postgresql_full_notm}}.
 {: shortdesc}
 
-1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. Click **Log in**, in case you haven`t log in to your {{site.data.keyword.cloud_notm}} account.
+1. Login to your {{site.data.keyword.cloud_notm}} account.
+2. Open the **VSI database** software template from the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog). 
 
    Observe {{site.data.keyword.cloud_notm}} is specified in **Select your deployment target** and `Terraform Version 1.5.0` or `Terraform Version 2.0.0` is displayed in **Select a delivery method**.
    {: note}
