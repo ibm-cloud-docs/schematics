@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-23"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1973,10 +1973,10 @@ Example
         "type": "<terraform_version>",
         "env_values":[
         {
-          "env_values_1": "dummy_text"
+          "env_key1": "dummy_text"
         },
         {
-          "env_values_2": "dummy_text"
+          "env_key2": "dummy_text"
         }
         ],
         "variablestore": [
@@ -2049,10 +2049,10 @@ Example JSON for uploading in a `.tar` file
         "type": "<terraform_version>",
         "env_values":[
         {
-          "env_values_1": "dummy_text"
+          "env_key1": "dummy_text"
         },
         {
-          "env_values_2": "dummy_text"
+          "env_key2": "dummy_text"
         }
         ],
         "variablestore": [
@@ -2324,10 +2324,10 @@ You need to replace the `<...>` placeholders with the actual values. For example
         "type": "<terraform_version>",
         "env_values":[
         {
-           "env_values_1": "dummy_text"
+           "env_key1": "dummy_text"
         },
         {
-           "env_values_2": "dummy_text"
+           "env_key2": "dummy_text"
         }
         ],
         "variablestore": [

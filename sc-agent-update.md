@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-23"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -19,13 +19,13 @@ subcollection: schematics
 Update an agent configuration in the currently selected {{site.data.keyword.bpshort}} region to work directly in your cloud infrastructure. Updating an agent does not validate or deploy your agent. Select the agent version to update. You can analyze the activity logs and recover the update.
 {: shortdesc}
 
-Following are the scenarios you must use agent upgrade.
+Following are the scenarios that you must use agent upgrade.
 
-- To incorporate the issues, features, or vulnerable images that are released by {{site.data.keyword.bpshort}}. For example, you are using agent version is `1.0.0`. If {{site.data.keyword.bpshort}} releases `1.0.x` version, you can use agent update to upgrade `v1.0.0` - `v1.1.1`.
+- To incorporate the issues, features, or vulnerable images by {{site.data.keyword.bpshort}}. For example, you are using agent version is `1.0.0`. If {{site.data.keyword.bpshort}} releases `v1.0.x`, you can use agent update to upgrade `v1.0.0` - `v1.1.1`.
 - To update an agent metadata such as `name`, `description`, `tags`, `resource group`, `version`, and `agent_metadata` attributes.
 - You can use `agent update` to revoke the updated version to its existing version.
 
-Agent update cannot be done on a deployed agent when performing `terraform init`, `terraform plan` and `terraform apply` on the workspace that are used with the deployed agent.
+Agent update cannot be done on a deployed agent through `terraform init`, `terraform plan`, and `terraform apply` on the workspace with the deployed agent.
 {: important}
 
 ## Before you begin
@@ -48,11 +48,11 @@ Update your agent configuration by choosing the cluster and {{site.data.keyword.
 3. Click **Update and validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
 4. Click **Deploy** to redeploy an agent.
 
-## Creating an agent definition by using the CLI 
+## Creating an agent definition through CLI 
 {: #update-agent-cli}
 {: cli}
 
-Select the {{site.data.keyword.cloud_notm}} region where you want to update and manage your agent. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. Select the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name. For more information, see [agent update](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-update) command.
+Select the {{site.data.keyword.cloud_notm}} region where you want to update and manage your agent. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. Select the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name. For more information, see the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-update) command.
 
 Example
 
@@ -72,7 +72,7 @@ ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 {: pre}
 
 
-## Updating an agent by using the {{site.data.keyword.bpshort}} API
+## Updating an agent through API
 {: #update-agent-api}
 {: api}
 
@@ -146,3 +146,11 @@ Syntax
   Authorization: Bearer 
 ```
 {: codeblock}
+
+
+
+## Next steps
+{: #agent-update-nextsteps}
+
+- You can [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli), [display an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=terraform#display-agent-terraform), or [create an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform).
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions that are related to deleting an agent.

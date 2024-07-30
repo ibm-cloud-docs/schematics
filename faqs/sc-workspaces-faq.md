@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-07-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -322,12 +322,12 @@ No, currently {{site.data.keyword.bpshort}} do not support this feature while ru
 {: faq}
 {: support}
 
-When listing or retrieving workspaces the following error may be received.  `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account`.
+When listing or retrieving workspaces the following error may be received.  `Error while retrieving Schematics Instance for the given account`.
 
 
 ```text
 Error:
-Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account.","statuscode":400}
+Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
 ```
 
 You might have insufficient access for the workspaces in the specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is an information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
@@ -430,10 +430,10 @@ Sample payload
       "type": "<same_as_before>",
       "env_values": [
         {
-          "env_values_1": "dummy_text"
+          "env_key1": "dummy_text"
         },
         {
-          "env_values_2": "dummy_text"
+          "env_key2": "dummy_text"
         }
       ],
       "env_values_metadata": [

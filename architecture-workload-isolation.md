@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-07-29"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 

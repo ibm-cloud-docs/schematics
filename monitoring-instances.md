@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-07-29"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 

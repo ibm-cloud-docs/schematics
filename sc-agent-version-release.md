@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-07-23"
 
 keywords: schematics agent reference, agent commands, schematics agents, schematics reference,change log, agent releases
 
@@ -20,6 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agen
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.1.1 | 23 July 2024 | Enhanced the agent deletion timeout period and agent deploy issues are fixed. |
 | 1.1.0 | 19 March 2024 | Added support for the {{site.data.keyword.bpshort}} Agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}. |
 | 1.0.0 | 10 January 2024 | {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support. For more information, see [Release note](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524). |
 {: caption="{{site.data.keyword.bpshort}} Agents version history" caption-side="bottom"}

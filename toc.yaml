@@ -83,7 +83,7 @@ toc:
                                                                       - deprecation-tf.md
                                                                       - migrate-tfversion.md
                                                                       - solutions.md
-                                                                      - compact-download.md
+                                                                      - compact-download.md                                                                      
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
                                             label: Working with Actions

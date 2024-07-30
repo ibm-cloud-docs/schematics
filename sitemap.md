@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-30"
 
 keywords: schematics
 subcollection: schematics
@@ -281,6 +281,10 @@ subcollection: schematics
 
     * Review the release notes for July 2024.
 
+    * [23 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2324)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
+
     * [8 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0824)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in
@@ -347,7 +351,7 @@ subcollection: schematics
 
     * [28 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2824)
 
-        * {{site.data.keyword.bplong_notm}} deprecates creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2`, `v1.3`,  template from 2nd week of April 2024.
+        * Deprecate creation of workspace by using the {{site.data.keyword.terraform-provider_full_notm}} `v1.2` and `v1.3`
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
@@ -1417,27 +1421,27 @@ subcollection: schematics
 
 * [Creating an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui#create-agent-ui)
 
-* [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli)
+* [Creating an agent definition through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli)
 
-* [Verifying prerequisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#verify-agent-cli)
+* [Verifying prerequisites for agent deployment through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#verify-agent-cli)
 
-* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli)
+* [Deploying an agent through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli)
 
-* [Verifying the agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#d-agent-cli)
+* [Verifying the agent deployment through CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#d-agent-cli)
 
-* [Creating an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
+* [Creating an agent through API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#agent-create-nextsteps)
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
-* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=ui#display-agentb1-get-ui)
+* [Displaying the agents through UI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=ui#display-agentb1-get-ui)
 
-* [Displaying the list of agents using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-list-cli)
+* [Displaying the agents through CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-list-cli)
 
-* [Displaying agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-get-cli)
+* [Displaying agent configuration through CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-get-cli)
 
-* [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
+* [Displaying agents through API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#agent-delete-nextsteps)
 
@@ -1447,19 +1451,21 @@ subcollection: schematics
 
 * [Updating an agent definition](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui)
 
-* [Creating an agent definition by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
+* [Creating an agent definition through CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
 
 * [Verifying agent update](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#verify-agent-update-cli)
 
-* [Updating an agent by using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
+* [Updating an agent through API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
+
+* [Next steps](/docs/schematics?topic=schematics-update-agent-overview&interface=api#agent-update-nextsteps)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
-* [Deleting an agent using the UI](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui#delete-agentb1-ui)
+* [Deleting an agent through UI](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui#delete-agentb1-ui)
 
-* [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli#delete-agentb1-cli)
+* [Deleting an agent through CLI](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli#delete-agentb1-cli)
 
-* [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#delete-agentb1-api)
+* [Deleting an agent through API](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#delete-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#agent-delete-nextstep)
 
