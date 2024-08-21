@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-08-21"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -329,6 +329,7 @@ When listing or retrieving workspaces the following error may be received.  `Err
 Error:
 Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
 ```
+{: codeblock}
 
 You might have insufficient access for the workspaces in the specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is an information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
@@ -663,3 +664,15 @@ value = "${lookup(data.external.env.result, "TF_VAR_IC_SCHEMATICS_WORKSPACE_ID")
 
 If you want to see all the available environment variables in the workspace use `output "${jsonencode(data.external.env.result)}"` code.
 {: note}
+
+## How do I rectify 401 errors from the broker call when deleting the {{site.data.keyword.bpshort}} objects.
+{: #sch-obj-delete-faq}
+{: faq}
+{: support}
+
+```text
+resource-controller-5894ddb748-smxcf resource-controller ERROR [64209276-1b46-4c9d-8baa-b5ef4df1b265] [a2d441d2-d4a7-4e03-aeba-51c1c147a3b0] cf_v2_broker.go:1396 cfv2.parseError - DELETE https://eu-de.schematics.cloud.ibm.com/servicebroker/v2/service_instances/crn%3Av1%3Abluemix%3Apublic%3Aschematics%3Aeu-de%3Aa%2Fbb3aaaa231904abc951571e282d45e69%3A4c6cc6b9-cbbe-45e6-8db0-fb066e1072cb%3Aworkspace%3Aeu-de.workspace.iks_-_cluster_integrations.d235018d?service_id=schematics&plan_id=ab98f732-d6b2-4420-8899-e6e97b63669a&accepts_incomplete=true failed with error status 401.
+```
+{: screen}
+
+After the {{site.data.keyword.bpshort}} objects deletion, if the {{site.data.keyword.bpshort}} services fails to delete the objects in your account. You need to raise a [{{site.data.keyword.bpshort}} support ticket](/docs/schematics?topic=schematics-schematics-help) to remove from the resource controller.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-08-21"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7` and `Terraform_v1.6.6`. `Terraform_v1.6.6` is set as default version from July 10th 2024.
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`,  `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`. `Terraform_v1.6.6` is set as default version.
 
 The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspace by using this version is still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}

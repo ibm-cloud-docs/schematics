@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-08-21"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -126,5 +126,3 @@ Similar to the `remote_state` data source, you can only access information that 
     2020/02/21 19:49:30 Terraform show | vpc_id = a1a11aa1-a111-a11a-a111-aa1aa11a1a1a
     ```
     {: screen}
-
-
