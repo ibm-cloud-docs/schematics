@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-08-21"
 
 keywords: schematics
 subcollection: schematics
@@ -276,6 +276,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [August 2024](/docs/schematics?topic=schematics-schematics-relnotes#August-2024)
+
+    * Review the release notes for August 2024.
+
+    * [21 August 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2124)
+
+        * `Terraform_v1.7.5`, `Terraform_v1.8.5`, and `Terraform_v1.9.2` support in {{site.data.keyword.bpshort}}
 
 * [July 2024](/docs/schematics?topic=schematics-schematics-relnotes#July-2024)
 
@@ -2423,6 +2431,8 @@ subcollection: schematics
 * [How do I fix authentication errors when using the API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
 * [How to retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable?](/docs/schematics?topic=schematics-workspaces-faq#retrieve-wks-id-env-var-faq)
+
+* [How do I rectify 401 errors from the broker call when deleting the {{site.data.keyword.bpshort}} objects.](/docs/schematics?topic=schematics-workspaces-faq#sch-obj-delete-faq)
 
 
 ## Troubleshooting

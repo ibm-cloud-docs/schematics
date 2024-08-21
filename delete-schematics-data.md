@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-08-21"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -15,11 +15,14 @@ subcollection: schematics
 # Deleting {{site.data.keyword.bpshort}} data
 {: #delete-schematics-data-intro}
 
-{{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_short}}. This data-at-rest is encrypted using AES GCM 256 with an envelope encryption technique. As the {{site.data.keyword.cloud_notm}} account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 
+{{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_short}}. This data-at-rest is encrypted using AES GCM 256 with an envelope encryption technique. As the {{site.data.keyword.cloud_notm}} account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described.
 
 When you delete these {{site.data.keyword.bpshort}} objects, the corresponding data in {{site.data.keyword.cos_short}} is marked for deletion. The soft delete option enable you to recover the {{site.data.keyword.bpshort}} data by raising a [support ticket](/docs/schematics?topic=schematics-schematics-help). Further, your data are automatically purged after 7 days of soft delete.  
 
 Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data in a separate {{site.data.keyword.cos_short}} bucket. This backup copy is automatically overwritten, every 30 days. Hence, all backup copy of your data are purged in 30 days.
+
+After a soft or hard delete of the {{site.data.keyword.bpshort}} objects, if the {{site.data.keyword.bpshort}} services fails to delete the objects in your account. You need to raise a [{{site.data.keyword.bpshort}} support ticket](/docs/schematics?topic=schematics-schematics-help) to completely remove from the resource controller.
+{: note}
 
 
 
