@@ -87,9 +87,9 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.4 | July 2023 | 30 September 2024 | 31 December 2024  |  30 September 2025 |
 | Terraform v1.5 | 6 September 2023 | 31 October 2024 | 31 December 2024 | 30 September 2025 |
 | Terraform v1.6 | 5 June 2024 | 16 December 2024 | 15 July 2025 | 15 January 2026 |
-| Terraform v1.7 | 30 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
-| Terraform v1.8 | 30 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
-| Terraform v1.9 | 30 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
+| Terraform v1.7 | 21 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
+| Terraform v1.8 | 21 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
+| Terraform v1.9 | 21 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
 {: caption="Deprecation timeline" caption-side="top"}
 
 ## User actions
