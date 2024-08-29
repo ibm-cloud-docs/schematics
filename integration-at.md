@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-08-29"
 
 keywords: tracking schematics services, activity tracking, integration services
 
@@ -35,7 +35,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
    {: note}
 
 7. Analyze the configuration and click **Create**.
-    
+
     If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log {{site.data.keyword.at_short}} that is configured to receive platform service logs. For more information about viewing {{site.data.keyword.at_short}} logs, see [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
     {: important}
 

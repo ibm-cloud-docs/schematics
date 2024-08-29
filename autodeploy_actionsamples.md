@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-08-29"
 
 keywords: action templates, schematics template, terraform template
 
@@ -12,16 +12,15 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions
 {: #sample_actiontemplates}
 
 Explore the IBM provided Ansible playbooks to run cloud operations on target hosts or to get started with {{site.data.keyword.bpshort}} actions.
 {: shortdesc}
 
-Use the links on the page as follows: 
+Use the links on the page as follows:
 - `View GitHub repo`: Click the link to open the Git repository where the template is stored. You can review the file structure, the Ansible playbook instructions, and the `README` file that contains the steps to use the template in {{site.data.keyword.bpshort}}.
-- `Deploy to {{site.data.keyword.cloud_notm}}`: Button takes you to **Create an action** page with the **GitHub repository URL** and the **Action name** pre-populated. 
+- `Deploy to {{site.data.keyword.cloud_notm}}`: Button takes you to **Create an action** page with the **GitHub repository URL** and the **Action name** pre-populated.
 
 ## Running cloud operations on {{site.data.keyword.vsi_is_short}}
 {: #ansible-vpc}
@@ -49,7 +48,6 @@ Source
 Deploy
 :   <img usemap="#deploybutton_map2" alt="Auto deployment button"  src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map2" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&repository=https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="1,3,139,20"  shape="rect"></map>
-
 
 ## Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plug-in
 {: #ansible-databases}

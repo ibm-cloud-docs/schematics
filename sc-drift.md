@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-08-29"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -15,12 +15,13 @@ subcollection: schematics
 # Detecting drift in workspaces
 {: #drift-note}
 
-{{site.data.keyword.bplong}} enables users to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces using `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when your deployed infrastructure differs from the wanted (declarative) state defined by your template configuration. 
+{{site.data.keyword.bplong}} enables users to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces using `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when your deployed infrastructure differs from the wanted (declarative) state defined by your template configuration.
 
 Drift can occur for many reasons. The most frequent cause is changes made to your infrastructure manually outside of Terraform automation. The Terraform state file of your deployed workspace is then no longer synchronized with your deployed infrastructure resources, and the workspace is said to be in drift.
 {: shortdesc}
 
 Drift can happen for many reasons within the context of your configuration:
+
 - Adding, or removing resources from the Template configuration without applying the changes. 
 - Changing template resource definitions. 
 - External to your template configuration, drift occurs when changes are made manually. For example, from a command line operation on a cloud resource, or change through the cloud console. 
@@ -76,7 +77,8 @@ Use the following steps to view the drift job log.
     If the job fails, review the cause of the failure in the log, and correct the error condition by rerunning the job.
     {: note}
 
-    A failure example job log identifies the cause of the drift job failure. 
+    A failure example job log identifies the cause of the drift job failure.
+    
     ```text
     2022/04/13 13:05:46 -----  Terraform Commands  -----
     2022/04/13 13:05:46 Could not execute job: Error : Drift cannot be executed since state file doesn't exist. Please run terraform apply to generate state file.

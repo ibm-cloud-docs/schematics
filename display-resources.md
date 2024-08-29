@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-08-29"
 
 keywords: display resources with schematics, show resources, show schematics resources
 
@@ -22,7 +22,7 @@ The following features are supported in the {{site.data.keyword.bpshort}} worksp
 - You can sort the resources by using a table sort.
 - You can view the support of pagination.
 
-The resources that are displayed are the Terraform resources defined for the workspace, this includes related {{site.data.keyword.cloud}}resources and Terraform null resources. Null resources are used by Terraform to allow execution of scripts and commands. They do not represent {{site.data.keyword.cloud}} resources. 
+The resources that are displayed are the Terraform resources defined for the workspace, this includes related {{site.data.keyword.cloud}}resources and Terraform null resources. Null resources are used by Terraform to allow execution of scripts and commands. They do not represent {{site.data.keyword.cloud}} resources.
 {: note}
 
 **The table lists the resource data displayed.**
@@ -44,4 +44,3 @@ The state information shown in the list depends on workspace status. Following a
 | `Inprogress` | When your workspace state is in `Inprogress` means your job is in progress, and you need to check after sometime. |
 | `Active`| When your workspace state is in `Active` means your apply job is successful. Also you can view the resource related data, else you would see `Your plan did not generate any resource` message. |
 {: caption="{{site.data.keyword.bpshort}} workspace status versus resource state" caption-side="bottom"}
-

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2023-12-13"
+lastupdated: "2024-08-29"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Location based access
 {: #access-ibm-cloud-catalog}
@@ -23,10 +22,10 @@ An [account owner or administrator](/docs/account?topic=account-account-services
 
 Follow the steps to configure the {{site.data.keyword.bpshort}} resource based on the location.
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Catalogs** > **Settings**. 
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Catalogs** > **Settings**.
 2. Click **Edit** icon for the Location.
-3. Set one or more **Filter by Location** to customize which location you need to be restricted. 
-   
+3. Set one or more **Filter by Location** to customize which location you need to be restricted.
+
     {{site.data.keyword.bpshort}} supports only [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
     {: note}
 
@@ -39,7 +38,7 @@ Account owner can edit the location in {{site.data.keyword.cloud}} catalog setti
 
 Example
 
-- When the account owner restricts the `us-east` location for the user in the catalog settings. 
-- If that user creates a workspace and provisions the resources in the `North America` region, where North America consists `us-east` and `us-south`. 
-- In this case, the user can view the resources are provisioned only in `us-south` but not in the `us-east` region. 
+- When the account owner restricts the `us-east` location for the user in the catalog settings.
+- If that user creates a workspace and provisions the resources in the `North America` region, where North America consists `us-east` and `us-south`.
+- In this case, the user can view the resources are provisioned only in `us-south` but not in the `us-east` region.
 - The reason is that the location visibility is restricted to the user.

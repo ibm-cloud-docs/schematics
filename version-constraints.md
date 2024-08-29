@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-29"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Specifying version constraints 
 {: #version-constraints}
@@ -29,7 +28,7 @@ It is good practice to declare the version that your Terraform template, or Ansi
 Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in latest version is tested on `Terraform v1.1`.
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **{{site.data.keyword.terraform-provider_full_notm}}** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}. Following are some constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
+{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **{{site.data.keyword.terraform-provider_full_notm}}** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}. Following are some constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template.
 
 It is recommended to use Terraform v1.0 or higher.
 {: note}
@@ -184,6 +183,3 @@ roles:
     version: 1.1.50
 ```
 {: codeblock}
-
-
-

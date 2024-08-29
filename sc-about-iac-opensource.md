@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-08-29"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -18,32 +18,32 @@ subcollection: schematics
 The choice of IaC tool matters. Some tools are a better fit for the task in hand. Often the use of different tools for configuration management and provisioning is the most effective choice. The section [Understanding {{site.data.keyword.bpshort}} features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping) identifies the mapping of Ansible and Terraform, along with operators and Helm to related {{site.data.keyword.bpshort}} features. 
 {: shortdesc}
 
-But what is provisioning and configuration management? 
+But what is provisioning and configuration management?
 
 ## What is Provisioning?
 {: #sc-iac-provisioning}
 
-Provisioning is the process of setting up IT infrastructure. It can also refer to the steps needed to manage access to data and resources, and make them available to users and systems. If something is provisioned, the next step is configuration. [Red Hat](https://www.redhat.com/en/topics/automation/what-is-provisioning){: external} 
+Provisioning is the process of setting up IT infrastructure. It can also refer to the steps needed to manage access to data and resources, and make them available to users and systems. If something is provisioned, the next step is configuration. [Red Hat](https://www.redhat.com/en/topics/automation/what-is-provisioning){: external}
 {: shortdesc}
 
 Provisioning tools (including Terraform and Ansible) provision infrastructure such as servers (VMs), load balancers, databases, networking configuration, and so on. They leave configuration to configuration tools.
 
-“Provisioning” often implies it is an initial task. 
+“Provisioning” often implies it is an initial task.
 
 ## What is Configuration Management?
 {: #sc-iac-cm}
 
-[Configuration management](https://en.wikipedia.org/wiki/Configuration_management){: external} is a systems engineering process for establishing and maintaining computer systems, servers, and software in a wanted, consistent performance state. Managing IT system configurations involves defining a system’s state like server configuration then building and maintaining those systems. 
+[Configuration management](https://en.wikipedia.org/wiki/Configuration_management){: external} is a systems engineering process for establishing and maintaining computer systems, servers, and software in a wanted, consistent performance state. Managing IT system configurations involves defining a system’s state like server configuration then building and maintaining those systems.
 {: shortdesc}
 
-Config management tools install packages or software, manage software and configurations on existing provisioned servers, clusters, and infrastructure. Terraform and Ansible can be used for configuration management, along with Helm and Operators. 
+Config management tools install packages or software, manage software and configurations on existing provisioned servers, clusters, and infrastructure. Terraform and Ansible can be used for configuration management, along with Helm and Operators.
 
 Config management usually happens repeatedly.
 
 ## How to choose your IaC tool
 {: #sc-iac-choosing}
 
-Some tools are a better fit for the task in hand for provisioning or configuration management. The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/blog/end-to-end-application-provisioning-with-ansible-and-terraform/) provides an overview of several popular open source IaC tools and summarizes their capabilities and relative strengths. 
+Some tools are a better fit for the task in hand for provisioning or configuration management. The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/blog/end-to-end-application-provisioning-with-ansible-and-terraform/) provides an overview of several popular open source IaC tools and summarizes their capabilities and relative strengths.
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} uses Terraform and Ansible, and other open-source tools includes {{site.data.keyword.openshiftshort}}, Operators, and Helm to deliver IaC as a managed service. Rather than limiting you to a single tool, {{site.data.keyword.bpshort}} allow you to use the tool and approach that is best suited to the task. You declare the tasks that you want to run and {{site.data.keyword.bpshort}} run the tasks for you.
@@ -51,7 +51,7 @@ Some tools are a better fit for the task in hand for provisioning or configurati
 ### Understanding {{site.data.keyword.bpshort}} features and IaC tools
 {: #sc-iac-mapping}
 
- Review the tool descriptions to identify the {{site.data.keyword.bpshort}} feature that maps to the IaC capability you would like to use. 
+ Review the tool descriptions to identify the {{site.data.keyword.bpshort}} feature that maps to the IaC capability you would like to use.
 {: shortdesc}
 
 |Logo|Open-source project &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Actions|  Agents| Workspaces| IBM&nbsp;Catalog|
@@ -67,4 +67,4 @@ Some tools are a better fit for the task in hand for provisioning or configurati
 
 - Learn more about the [terminology](/docs/schematics?topic=schematics-sch-terms) used in {{site.data.keyword.bpshort}}.
 - Do you want to know how these open-source tools are used in {{site.data.keyword.bpshort}}? Explore these [use cases](/docs/schematics?topic=schematics-how-it-works).
-- Visit [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code) to understand more about Infrastructure as code and its best practices. 
+- Visit [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code) to understand more about Infrastructure as code and its best practices.

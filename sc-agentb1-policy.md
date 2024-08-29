@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-08-29"
 
 keywords: schematics agent, agent policy, policies
 
@@ -120,38 +120,37 @@ Before you begin:
 A sample JSON policy file is provided here. Replace the `<...>` placeholders with your actual values. 
 
 - The agent jobs are to be run on is defined by using the `target` block.
-- The attributes to select the workspace or actions to run on the agent are defined by the `parameter` block. 
+- The attributes to select the workspace or actions to run on the agent are defined by the `parameter` block.
 
 Policy JSON files can be edited in any editor or IDE. They must be valid JSON.  
- 
 
 **Policy JSON file syntax:**
 ```json
-{
-    "target": {
-		"selector_kind": "ids",
-		"selector_ids": [
-			"<agent id>"
-		]
-	},
-	"parameter": {
-		"agent_assignment_policy_parameter": {
-			"selector_kind": "scoped",
-			"selector_scope": [{
-				"kind": "workspace",
-				"tags": [
-					"<user_tag>"
-				],
-				"resource_groups": [
-					"<resource_group>"
-				],
-				"locations": [
-					"<region>"
-				]
-			}]
-		}
-	}
-}
+  {
+      "target": {
+      "selector_kind": "ids",
+      "selector_ids": [
+        "<agent id>"
+      ]
+    },
+    "parameter": {
+      "agent_assignment_policy_parameter": {
+        "selector_kind": "scoped",
+        "selector_scope": [{
+          "kind": "workspace",
+          "tags": [
+            "<user_tag>"
+          ],
+          "resource_groups": [
+            "<resource_group>"
+          ],
+          "locations": [
+            "<region>"
+          ]
+        }]
+      }
+    }
+  }
 
 ```
 {: codeblock}
@@ -159,37 +158,36 @@ Policy JSON files can be edited in any editor or IDE. They must be valid JSON.
 Example
 
 ```json
-{
-    "target": {
-		"selector_kind": "ids",
-		"selector_ids": [
-			"agent-prod-live.deA.e055"
-		]
-	},
-	"parameter": {
-		"agent_assignment_policy_parameter": {
-			"selector_kind": "scoped",
-			"selector_scope": [{
-				"kind": "workspace",
-				"tags": [
-					"live-prod"
-				],
-				"resource_groups": [
-					"Default"
-				],
-				"locations": [
-					"eu-de"
-				]
-			}]
-		}
-	}
-}
+  {
+      "target": {
+      "selector_kind": "ids",
+      "selector_ids": [
+        "agent-prod-live.deA.e055"
+      ]
+    },
+    "parameter": {
+      "agent_assignment_policy_parameter": {
+        "selector_kind": "scoped",
+        "selector_scope": [{
+          "kind": "workspace",
+          "tags": [
+            "live-prod"
+          ],
+          "resource_groups": [
+            "Default"
+          ],
+          "locations": [
+            "eu-de"
+          ]
+        }]
+      }
+    }
+  }
 ```
 {: codeblock}
 
 ### Create agent policy
 {: #agent-policy-CLI}
-
 
 Example
 
@@ -237,8 +235,7 @@ Name                                          ID                                
 agent-policy-testing-cli-jan-10               agent-policy-testing-cli-jan-10.deP.c737                                                                    workspace-policy:prod   
 policy-023e7204-c33d-49b8-a9f3-695ff085290d   policy-023e7204-c33d-49b8-a9f3-695ff085290d.gbP.8b3c   Created agent-assignment-policy for the ...             
 policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb   policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb.deP.796d   Created agent-assignment-policy for 
-
-                                                                                                     
+                                                                                       
 Showing 1-3 of 3 items
 ```
 {: screen}
@@ -272,7 +269,6 @@ Tags             [TAGS]
                   - workspace-policy:prod
 ```
 {: screen}
-
 
 ## Updating an agent policy using the CLI
 {: #agentb1-updatepolicy-cli}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-08-29"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Troubleshooting errors
 {: #handling-error}
@@ -57,7 +56,7 @@ You should read the error message carefully to rectify. You can check out the re
 ### Service error
 {: #svc-error}
 
-The {{site.data.keyword.bpshort}} actions instance and resources are overloaded or down for maintenance. 
+The {{site.data.keyword.bpshort}} actions instance and resources are overloaded or down for maintenance.
 
 #### Message
 {: #svc-msg}
@@ -72,7 +71,6 @@ The {{site.data.keyword.bpshort}} actions instance and resources are overloaded 
 - Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-working).
 - Check the firewall IP are enabled.
 - Check if your [{{site.data.keyword.cloud_notm}} environment notification](/docs/get-support?topic=get-support-viewing-notifications){: external} is in maintenance.
-
 
 ### State error
 {: #state-error}
@@ -122,6 +120,3 @@ The {{site.data.keyword.bpshort}} jobs displays a list of jobs and their state a
 
 You can also contact IBM support by opening a case or post a message in the Slack channel. To learn about opening an IBM support case, or about Slack channel, see [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
 {: note}
-
-
-

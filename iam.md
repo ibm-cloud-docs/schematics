@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-08-29"
 
 keywords: schematics, automation, terraform
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} workspaces and actions. 
+Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} workspaces and actions.
 {: shortdesc}
 
 As the {{site.data.keyword.cloud}} account owner, you need to ensure that you control user access to {{site.data.keyword.bpshort}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to the resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
@@ -39,7 +39,7 @@ No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role
 ## {{site.data.keyword.bpshort}} Platform roles and service roles
 {: #iam-platform-svc-roles}
 
-The user roles exist at both the platform (account) and service level. If you are unsure about what a platform or a service role allows a user to do remember that platform roles interact mainly with {{site.data.keyword.cloud_notm}} services like the [resource controller](/docs/account?topic=account-overview) or {{site.data.keyword.iamshort}}. Roles inside of a service, on the other hand, interact mainly with the relevant API, which in this case is the {{site.data.keyword.bpshort}} API. 
+The user roles exist at both the platform (account) and service level. If you are unsure about what a platform or a service role allows a user to do remember that platform roles interact mainly with {{site.data.keyword.cloud_notm}} services like the [resource controller](/docs/account?topic=account-overview) or {{site.data.keyword.iamshort}}. Roles inside of a service, on the other hand, interact mainly with the relevant API, which in this case is the {{site.data.keyword.bpshort}} API.
 
 ### Platform roles
 {: #iam-platform-roles}
@@ -113,9 +113,10 @@ Review the following table to see what permissions you need to work with {{site.
 {: #agent-permissions}
 
 The following are the different permissions that you an user need to create and deploy  the {{site.data.keyword.bpshort}} agent.
-- Permission to deploy an agent
-- Permission for agent to connect with {{site.data.keyword.bpshort}}
-- Permission to users to manage agents
+
+* Permission to deploy an agent
+* Permission for agent to connect with {{site.data.keyword.bpshort}}
+* Permission to users to manage agents
 
 #### Permission to deploy an agent
 {: #agent-deploy-permission}
@@ -139,8 +140,8 @@ Following are the maximum permission and roles that services should have to depl
 
 Consider the following access are provided for an agent to connect with {{site.data.keyword.bpshort}}.
 
-- You need administrator permission to access the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
-- You need Manager service role access, Operator role permission, and [assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
+* You need administrator permission to access the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
+* You need Manager service role access, Operator role permission, and [assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
 
 #### Permission for users to manage agents
 {: #agent-manage-permission}
@@ -148,7 +149,7 @@ Consider the following access are provided for an agent to connect with {{site.d
 Review the following table to see what identity and permissions you need to use the {{site.data.keyword.bpshort}} Agent.
 
 In addition to the listed agent activities and permission, you must ensure you have permissions to run `agent create`, `agent plan`, `agent apply`, `agent delete`, and `agent destroy` activities to execute successfully.
-{: important} 
+{: important}
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
@@ -186,22 +187,23 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv).
 
-2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups&interface=ui#create_ag) for each team. 
+2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups&interface=ui#create_ag) for each team.
 
-3. [Create a resource group](/docs/account?topic=account-rgs&interface=ui#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs&interface=ui#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups.
 
-4. [Assign access to your IAM access group](/docs/account?topic=account-groups&interface=ui#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
-    - Make sure to scope access of your group to the resource group that you created for this team. 
-    - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
-    - The resource group of the {{site.data.keyword.bpshort}} workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
-    - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy. 
+4. [Assign access to your IAM access group](/docs/account?topic=account-groups&interface=ui#access_ag). Consider the following guidelines when you assign access to an IAM access group:
+
+    * Make sure to scope access of your group to the resource group that you created for this team.
+    * If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies.
+    * The resource group of the {{site.data.keyword.bpshort}} workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
+    * For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy.
 
 ## Manage access tag in your account 
 {: #access-tag}
 
 You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
 
-- To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
-- To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
+* To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create).
+* To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
 
 For more information about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).

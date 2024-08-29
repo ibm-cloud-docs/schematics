@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-29"
+lastupdated: "2024-08-29"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate, adoption, considerations
 
@@ -71,7 +71,7 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 ## Git repo restrictions
 {: #git-restrictions}
 
-Branch names containing `/` (backslash) are not supported
+Branch names containing `/` (backslash) are not supported.
 
 ## Cost estimate
 {: #cost-restrictions}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-08-29"
 
 keywords: schematics agent health, agent health, health
 
@@ -38,7 +38,7 @@ Output
 
 ```text
 Initiating agent health...
-Job ID	.ACTIVITY.f6f77588
+Job ID .ACTIVITY.f6f77588
 ```
 {: screen}
 

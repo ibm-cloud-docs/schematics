@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-08-29"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -15,15 +15,15 @@ subcollection: schematics
 # Stopping or terminating running jobs
 {: #interrupt-job}
 
-After invoking a workspace job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
+After invoking a workspace job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete.
 
-{{site.data.keyword.bpshort}} provides a number of options to allows users to `(gracefully) stop`, `force-stop`, or `terminate` the running job in order of immediacy and impact of the stop operation. 
+{{site.data.keyword.bpshort}} provides a number of options to allows users to `(gracefully) stop`, `force-stop`, or `terminate` the running job in order of immediacy and impact of the stop operation.
 {: shortdesc}
 
 ## Stop job types
 {: #interrupt-types}
 
-The table provides the list of stop job types: 
+The table provides the list of stop job types:
 
 | Types | Description |
 | --- | --- |
@@ -47,12 +47,12 @@ If the job is in a `pending` state, any type of stop request causes the job to c
 You can follow these steps to stop a running workspace job by using the console.
 
 1. From the [Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace related to the running job.
-   
+
    You can stop or cancel the running job during a plan, an apply, or a destroy execution.
    {: note}
 
-2. Click **Job** tab to view **Stop**, **Force stop**, **Terminate**, and **Cancel** button. 
-     
+2. Click **Job** tab to view **Stop**, **Force stop**, **Terminate**, and **Cancel** button.
+
      | Button | Description |
      | --- | --- |
      | Stop  | Removes the job from the pending queue, if it is in pending state. Otherwise, sends an interrupt signal to the Terraform command. |
@@ -91,7 +91,6 @@ Command options
 {: caption="{{site.data.keyword.bpshort}} job stop flags" caption-side="bottom"}
 
 Example
-
 
 ```sh
 ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --stop --job-id <JOB_ID>
@@ -136,7 +135,7 @@ You can use following cURL commands to stop a running job for {{site.data.keywor
     {: codeblock}
 
 3. Use the example to `force-stop` the running job.
-   
+
    Example
 
    ```curl
@@ -145,7 +144,7 @@ You can use following cURL commands to stop a running job for {{site.data.keywor
    {: codeblock}
 
 4. Use the example to `terminate` the running job.
-   
+
    Example
 
    ```curl
@@ -163,8 +162,8 @@ You can use following cURL commands to stop a running job for {{site.data.keywor
 
 Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue).
 
-In the job log you can see a message such as: 
+In the job log you can see a message such as:
 
-- **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed. 
+- **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed.
 
 - **Your job was submitted and is in queue, at position x out of y**. Here `x` is the position of your job in the pending queue and `y` is a total pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equally distributed to the pending jobs. In case you are running a huge number of jobs, you can view the position increase along with the total.

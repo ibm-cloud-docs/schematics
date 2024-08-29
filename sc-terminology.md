@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-08-29"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -72,7 +72,7 @@ A collection of automation templates that can be ordered from {{site.data.keywor
 ## Inventories
 {: #sch-terms-inventory}
 
-A collection of cloud resources that are used as target for running the Ansible playbooks, modules, or roles. 
+A collection of cloud resources that are used as target for running the Ansible playbooks, modules, or roles.
 {: shortdesc}
 
 ### Resource inventory

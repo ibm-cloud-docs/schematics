@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-22"
+lastupdated: "2024-08-29"
 
 ---
 
@@ -11,7 +11,6 @@ lastupdated: "2024-05-22"
 
 Customer-facing documentation: /docs/schematics
 
-
 ## How to open issues
 
 When opening a GitHub issue, include the following:
@@ -19,9 +18,3 @@ When opening a GitHub issue, include the following:
 * Whether the content is in staging, production, or both.
 * A link to the content. 
 * Labels, if applicable: `bug`, `enhancement`, `question`, `user feedback`.
-
-
-
-
-
-

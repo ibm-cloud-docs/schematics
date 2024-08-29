@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-08-29"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Deleting an agent
 {: #delete-agent-overview}
 
-When an agent is no longer needed, you can delete the agent. 
+When an agent is no longer needed, you can delete the agent.
 
 
 

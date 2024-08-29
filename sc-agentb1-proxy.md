@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-08-29"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -26,7 +26,7 @@ The proxy configuration must be the same on each host in the cluster. Therefore,
 Confirm the following requirements are in place before you configure proxy server access. The example here uses a squid proxy on port 3128.
 {: shortdesc}
 
-- A proxy server that can reach www.google.com using HTTP or HTTPS and is accessible from the cluster. 
+- A proxy server that can reach www.google.com using HTTP or HTTPS and is accessible from the cluster.
 - The proxy server IP address and port for example, `http://53.25.191.193:3128`
 - The curl command-line tool is available on the cluster pods.
 
@@ -84,7 +84,6 @@ If the proxy is working for `HTTPS` the `curl` command returns a `200 OK HTTP re
 
 If the curl command fails to connect, verify that the proxy is accessible from the cluster and can route access to the target website. Use the following `curl` command with the proxy option to validate that the proxy is accessible.  
 
-
     ```curl
     curl --proxy http://<ipaddress>:<port> --head https://www.google.com
     ```
@@ -94,4 +93,4 @@ If the website is not accessible using the proxy parameter, verify the network e
 
 If the website is accessible using the proxy parameter, verify that the configmap was updated correctly and the `HTTPS/HTTP` proxy environment variables are set by running the `env` command.  
 
-The environment variables `HTTP_PROXY` and `HTTPS_PROXY` should be listed in the output. If not listed recheck the configmap definitions. 
+The environment variables `HTTP_PROXY` and `HTTPS_PROXY` should be listed in the output. If not listed recheck the configmap definitions.
