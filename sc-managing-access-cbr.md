@@ -21,7 +21,7 @@ Context-based restrictions give account owners and administrators the ability to
 ## Managing CBR settings
 {: #manage-cbr-settings}
 
-With [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis), you can define and enforce user and service access restrictions to {{site.data.keyword.bpshort}} based on specified criteria, for example IP address or {{site.data.keyword.cloud}} resources or services. 
+With [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis), you can define and enforce user and service access restrictions to {{site.data.keyword.bpshort}} based on specified criteria, for example IP address or {{site.data.keyword.cloud}} resources or services.
 {: shortdesc}
 
 To restrict access, you must be the account owner or have an access policy with the administrator role on all account management services.
@@ -30,7 +30,7 @@ To restrict access, you must be the account owner or have an access policy with 
 ## Overview
 {: #cbr-overview}
 
-To restrict access to {{site.data.keyword.bpshort}}, you create [network zones](/docs/account?topic=account-context-restrictions-create&interface=ui#network-zones-create) that contain the IP addresses and services that you desire to grant access. Then apply these using [rules](/docs/account?topic=account-context-restrictions-create&interface=ui#context-restrictions-create-rules). 
+To restrict access to {{site.data.keyword.bpshort}}, you create [network zones](/docs/account?topic=account-context-restrictions-create&interface=ui#network-zones-create) that contain the IP addresses and services that you desire to grant access. Then apply these using [rules](/docs/account?topic=account-context-restrictions-create&interface=ui#context-restrictions-create-rules).
 {: shortdesc}
 
 First, create a network zone containing the network IP addresses, VPCs, resources or services that you require to access {{site.data.keyword.bpshort}}. Then, attach that zone to {{site.data.keyword.bpshort}} to restrict access. You can create zones and rules by using a RESTful [API](/apidocs/context-based-restrictions#introduction) or with [context-based restrictions UI](https://cloud.ibm.com/context-based-restrictions/overview){: external}. After you create or update a zone or a rule, it might take a few minutes for the change to take effect.
@@ -79,9 +79,8 @@ After you create zones, they can also be [updated](/apidocs/context-based-restri
 ## Understanding network rules
 {: #cbr-network-rules}
 
-After you create your zones, you can apply the zones to {{site.data.keyword.bpshort}} to control access by creating rules. When you add zones to a rule, you can choose from the available [types of endpoints](/docs/account?topic=account-context-restrictions-whatis#context-restrictions-endpint-type) that are relevant to how you access {{site.data.keyword.bpshort}}. 
+After you create your zones, you can apply the zones to {{site.data.keyword.bpshort}} to control access by creating rules. When you add zones to a rule, you can choose from the available [types of endpoints](/docs/account?topic=account-context-restrictions-whatis#context-restrictions-endpint-type) that are relevant to how you access {{site.data.keyword.bpshort}}.
 {: shortdesc}
-
 
 ### Create network rules by using the CBR API
 {: #cbr-create-rules-api}

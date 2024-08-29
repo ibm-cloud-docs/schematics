@@ -12,7 +12,6 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Your responsibilities when using {{site.data.keyword.bpshort}} 
 {: #sc-responsibilities}
 

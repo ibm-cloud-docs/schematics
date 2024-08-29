@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-29"
 
 keywords: schematics
 subcollection: schematics
@@ -10,7 +10,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Site map
 {: #sitemap}
@@ -2491,4 +2490,3 @@ subcollection: schematics
 * [Joining public slack channel](/docs/schematics?topic=schematics-schematics-help#sc-join-public-slack)
 
     * [Steps to join public slack](/docs/schematics?topic=schematics-schematics-help#sc-join-slack)
-

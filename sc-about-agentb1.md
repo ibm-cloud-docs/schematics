@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-08-29"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -24,12 +24,12 @@ subcollection: schematics
 ## {{site.data.keyword.bpshort}} Agent overview
 {: #about-agentb1-architecture}
 
-Agents enable your {{site.data.keyword.bpshort}} workspace and actions jobs to run on your private cloud network or in any isolated network zone and directly work with your cloud infrastructure. Agents extend the existing {{site.data.keyword.bpshort}} shared multi-tenant service, with private dedicated workers (agents) running workspace and action jobs on your private network. The diagram illustrates agent-based job execution alongside the existing shared multi-tenant service. 
+Agents enable your {{site.data.keyword.bpshort}} workspace and actions jobs to run on your private cloud network or in any isolated network zone and directly work with your cloud infrastructure. Agents extend the existing {{site.data.keyword.bpshort}} shared multi-tenant service, with private dedicated workers (agents) running workspace and action jobs on your private network. The diagram illustrates agent-based job execution alongside the existing shared multi-tenant service.
 {: shortdesc}
 
 ![{{site.data.keyword.bpshort}} workspace and action operations with agents](images/sc-agents-architecture2.svg){: caption="{{site.data.keyword.bpshort}} agents architecture running workspaces and actions" caption-side="bottom"}
 
-Agent (assignment) policies dynamically route workspace and action jobs to run on an agent determined by user specified policy attributes. The default, without policies that are defined, are for all workspace and actions jobs to run on the {{site.data.keyword.bpshort}} shared infrastructure. When defined, [assignment policies](/docs/schematics?topic=schematics-policy-manage) route workspace and action jobs to agents deployed in specific private cloud or network locations. Policy selection attributes include workspace and action Resource Groups, region, and user assigned tags.    
+Agent (assignment) policies dynamically route workspace and action jobs to run on an agent determined by user specified policy attributes. The default, without policies that are defined, are for all workspace and actions jobs to run on the {{site.data.keyword.bpshort}} shared infrastructure. When defined, [assignment policies](/docs/schematics?topic=schematics-policy-manage) route workspace and action jobs to agents deployed in specific private cloud or network locations. Policy selection attributes include workspace and action Resource Groups, region, and user assigned tags.
 
 Without policy definitions, job execution is installed through the shared multi-tenant {{site.data.keyword.bpshort}} service. The shared environment is described for the deployment architectures in [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sc-workspaces) and [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions). The shared service runs jobs on the {{site.data.keyword.bpshort}} network to connect the {{site.data.keyword.cloud_notm}} APIs over the public or private network as needed. If you use the shared service, jobs that require access to resources on the private network, with the running SSH commands or Ansible, access to the users private network. It is done through the public internet by using a user-configured bastion host.  
 

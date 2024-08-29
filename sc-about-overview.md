@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-08-29"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -19,7 +19,7 @@ subcollection: schematics
 {: shortdesc}
 
 ## IaC automation as-a-service
-{: #sc-IaCaas} 
+{: #sc-IaCaas}
 
 Building on open-source [Ansible](https://www.ansible.com/){: external}, [Terraform](https://www.terraform.io/){: external}, and related technologies like Git and Helm, {{site.data.keyword.bplong}} provides a powerful set of [IaC](/docs/schematics?topic=schematics-infrastructure-as-code) tools as a service to program your cloud infrastructure.
 
@@ -27,7 +27,6 @@ An IaC approach to infrastructure provisioning and automation improves consisten
 
 With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad hoc configuration changes.
 Review the section on [IaC best practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices) to learn more about the core IaC principles and best practices that you can adopt when using {{site.data.keyword.bpshort}}. 
-
 
 ## {{site.data.keyword.bpshort}} IaC offerings
 {: #sc-offerings}

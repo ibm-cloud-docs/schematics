@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-08-29"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -34,7 +34,7 @@ Adopting an IaC approach to infrastructure deployment solves many common problem
 
 - **Tracking and accountability**: Changes to existing infrastructure are made in code, and the changes are tracked. Like any source code file, you have full traceability of the changes made to a configuration.
 
-- **Detect and correct environment drift**: If a part of the infrastructure is modified manually outside of the code, it can be brought back in line with the desired state on the next run. [Drift detection](/docs/schematics?topic=schematics-drift-note) is a feature of {{site.data.keyword.bpshort}} workspaces. 
+- **Detect and correct environment drift**: If a part of the infrastructure is modified manually outside of the code, it can be brought back in line with the desired state on the next run. [Drift detection](/docs/schematics?topic=schematics-drift-note) is a feature of {{site.data.keyword.bpshort}} workspaces.
 
 ## Best Practices 
 {: #iac-best-practices}
@@ -85,11 +85,11 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 With adopting IaC, an aspect to consider is what approach your tooling takes. There are two different styles, declarative or imperative, also sometimes described as procedural.
 {: shortdesc}
 
-A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool configures for you. The tool itself determines the operations to get to the desired state from any starting point. 
+A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool configures for you. The tool itself determines the operations to get to the desired state from any starting point.
 
-An imperative approach instead defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order. 
+An imperative approach instead defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order.
 
-Chef is thought of as an imperative tool. Terraform is classed as declarative. Ansible is declarative but also can be used with imperative commands. 
+Chef is thought of as an imperative tool. Terraform is classed as declarative. Ansible is declarative but also can be used with imperative commands.
 
 ### Declarative Terraform and lifecycle management
 {: #iac-declarative-lifecycle}
@@ -100,12 +100,12 @@ Chef is thought of as an imperative tool. Terraform is classed as declarative. A
 ### `Idempotence`
 {: #iac-idempotence}
 
-A benefit of the declarative approached used by Terraform and Ansible is `idempotence`. Idempotent tasks can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
+A benefit of the declarative approached used by Terraform and Ansible is `idempotence`. Idempotent tasks can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 How you use a tool and the modules used both have an impact on `idempotency`. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. In which case, the configuration may drift from the desired target state. With Terraform this form of drift is most likely when `null-resources` are used to extend provider functionality with custom scripts which are not idempotent.
 
-Immutability is an IaC practice that minimizes the risk of drift from the target state. 
+Immutability is an IaC practice that minimizes the risk of drift from the target state.
  
 ### Immutable
 {: #iac-immutability}
@@ -113,7 +113,7 @@ Immutability is an IaC practice that minimizes the risk of drift from the target
 Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed (using scripts). The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of automated operations. Changes that make it harder to debug and resolve issues, and increase support costs.
 {: shortdesc}
 
-To ensure immutability and eliminate drift, all changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and resources like VSIs should be redeployed when they need updating. 
+To ensure immutability and eliminate drift, all changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and resources like VSIs should be redeployed when they need updating.
 
 ## Next steps
 {: #iac-nextsteps}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-08-29"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -15,12 +15,12 @@ subcollection: schematics
 # Using environment variables with workspaces
 {: #set-parallelism}
 
-Terraform uses environment variables to customize aspects of its behavior. Environment variables are used to increase the output verbosity for debugging or to set rarely used runtime parameters. 
+Terraform uses environment variables to customize aspects of its behavior. Environment variables are used to increase the output verbosity for debugging or to set rarely used runtime parameters.
 
 For example, parallelism is one of the environment variable with a number flag range between `1 and 256`, the default value is `10`. Parallelism is used to configure infrastructure providers that error on concurrent operations or use during non-standard rate limiting, when you execute `terraform plan` and `terraform apply` at runtime.
 {: shortdesc}
 
-Environment variables can only be set using the workspace update API and the CLI passing a JSON file. See the [Workspace update CLI command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) for more details. 
+Environment variables can only be set using the workspace update API and the CLI passing a JSON file. See the [Workspace update CLI command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) for more details.
 
 ## Usage
 {: #env-var-usage}
@@ -28,9 +28,9 @@ Environment variables can only be set using the workspace update API and the CLI
 ### Passing TF_CLI_ARGS as env-vars
 {: #passing-cli-args}
 
-You can pass Terraform command-line arguments `TF_CLI_ARGS` as environment variables, like `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} workspace to customize operations. 
+You can pass Terraform command-line arguments `TF_CLI_ARGS` as environment variables, like `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} workspace to customize operations.
 
-Terraform reads these environment variables and applies them runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
+Terraform reads these environment variables and applies them runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}.
 
 ### Example setting parallelism or TF_LOGS 
 {: #parallelism-example}
@@ -100,12 +100,12 @@ A sample `env_values` block in the payload to update environment variables using
 #### Setting parallelism for Catalog deployments
 {: #parallelism-example-catalog}
 
-Environment variables can only be set at content onboarding time. Refer to the Catalog documentation to set the `TF_CLI_ARGS` environment variables. 
+Environment variables can only be set at content onboarding time. Refer to the Catalog documentation to set the `TF_CLI_ARGS` environment variables.
 
 ## List of Terraform environment variables
 {: #list-special-env-vars}
 
-{{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information about special environment variables, see [Environment variables](https://developer.hashicorp.com/terraform/cli/config/environment-variables). 
+{{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information about special environment variables, see [Environment variables](https://developer.hashicorp.com/terraform/cli/config/environment-variables).
 
 | Variable | Description | Usage |
 | ----  | ----- | ----- |
@@ -119,4 +119,4 @@ Environment variables can only be set at content onboarding time. Refer to the C
 | `TF_PARALLELISM` | Read parallelism environment variable in runtime action and reset the parallelism value on all the {{site.data.keyword.bpshort}} actions only for content catalog. `TF_PARALLELISM` is only for content catalog. |`"TF_PARALLELISM": "20"`|
 {: caption="Supported environment variables" caption-side="top"}
 
-Additional environment variables are supported for debugging Terraform provider issues, see [Managing Log Output](https://developer.hashicorp.com/terraform/plugin/log/managing){: external}. 
+Additional environment variables are supported for debugging Terraform provider issues, see [Managing Log Output](https://developer.hashicorp.com/terraform/plugin/log/managing){: external}.

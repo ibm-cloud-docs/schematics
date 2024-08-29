@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-08-29"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -26,7 +26,6 @@ Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the i
 - Linux&trade; 32-bit
 - PowerLinux&trade; 64-bit
 - System/390 Linux&trade; 64-bit
-
 
 ## Installing the {{site.data.keyword.cloud_notm}} command-line 
 {: #install-schematics-cli}

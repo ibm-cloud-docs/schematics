@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-29"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -152,7 +152,6 @@ Release {{site.data.keyword.bpshort}} Agents version
 
 Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.20](/docs/schematics?topic=schematics-cli_version-releases) released.
-
 
 
 
@@ -1205,4 +1204,3 @@ Terraform v0.12 support
 
 New workspace creation flow
 :   The workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). First, you create the workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the workspace creation flow, [new workspace states](/docs/schematics?topic=schematics-wks-state#states-overview) are introduced as well.
-

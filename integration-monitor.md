@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-08-29"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -24,14 +24,14 @@ subcollection: schematics
 Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} workspace. To set up {{site.data.keyword.monitoringshort_notm}}, create a {{site.data.keyword.monitoringshort_notm}} instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch {{site.data.keyword.monitoringshort_notm}}.
 {: shortdesc}
 
-1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integration** in the side navigation pane.
 4. Against your monitoring instance, click **Configure** and select your instance name based on your location.
 5. Click **Select**.
 6. Select your location and click **Connect** > **Activity tracking**. You are redirected to the {{site.data.keyword.at_full_notm}} service form to monitor your instance.
 7. Select your location and click **Connect** > **Monitoring**. You are redirected to the {{site.data.keyword.monitoringshort_notm}} service form to monitor your instance.
-   
+
    In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.monitoringshort_notm}} to view the {{site.data.keyword.monitoringshort_notm}} service form.
    {: note}
 

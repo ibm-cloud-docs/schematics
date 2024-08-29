@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-01"
+  years: 2017, 2024
+lastupdated: "2024-08-29"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -28,6 +28,7 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
 
 1. Open the `provider.tf` file or the Terraform configuration file that contains the `provider` block. 
 2. Specify the region where you want to deploy your services. Make sure that the region that you enter is supported by the service that you want to deploy with {{site.data.keyword.bpshort}}.
+
     ```terraform
     provider "ibm" {
         region = "<region_name>"
@@ -35,9 +36,9 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
     ```
     {: pre}
 
-3. Check if the service that you want to deploy requires a `location` parameter to be set in addition to the `region` parameter. For example, if you use the [`ibm_database`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database){: external} Terraform resource, you must set both the `region` parameter in the `provider` block and the `location` parameter in the `ibm_database` resource definition. 
+3. Check if the service that you want to deploy requires a `location` parameter to be set in addition to the `region` parameter. For example, if you use the [`ibm_database`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database){: external} Terraform resource, you must set both the `region` parameter in the `provider` block and the `location` parameter in the `ibm_database` resource definition.
 
-4. Follow the [steps](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) to deploy your {{site.data.keyword.cloud_notm}} resources. 
+4. Follow the [steps](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) to deploy your {{site.data.keyword.cloud_notm}} resources.
 
 ## Deploying services across regions
 {: #across-regions}
@@ -46,6 +47,7 @@ You can add multiple multiple provider configurations to the `provider` block to
 {: shortdesc}
 
 1. In the `provider` block of your Terraform configuration file or the `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. If you add more provider configurations, you must include an alias so that you can reference this provider from your resource definition in the Terraform configuration file. In the following example, the default provider configuration deploys resources in `us-south` while the provider configuration with the alias `east` deploys all resources in `us-east`.
+
     ```terraform
     provider "ibm" {
         region = "us-south"
@@ -59,6 +61,7 @@ You can add multiple multiple provider configurations to the `provider` block to
     {: codeblock}
 
 2. In your resource definition of your Terraform configuration file, specify the provider configuration that you want to use. If you do not specify a provider, the default provider configuration is used.
+
     ```terraform
     resource "ibm_container_cluster" "cluster" {
         provider = ibm.east

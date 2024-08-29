@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-08-29"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -84,7 +84,6 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 |London|**`Public`** </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> **`Private`** </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
 {: caption="Location information" caption-side="bottom"}
 
-
 ## How is my information encrypted?
 {: #pi-encrypt}
 
@@ -101,11 +100,14 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components 
 6. Workspace transactional data is encrypted using the DEKs, including logs and the Terraform `tf.state` file at rest. The encrypted data stored in an {{site.data.keyword.cos_full_notm}} bucket .
 7. Workspace operational data, workspace and job names, pointers to user data in {{site.data.keyword.cos_full_notm}} and search keys, are stored in {{site.data.keyword.cloudant}}. All information stored in Cloudant is encrypted with AES 256. For more information on Cloudant data security and encryption, see [Cloudant Security](/docs/Cloudant?topic=Cloudant-security).
 
-
 ## How can I delete my information?
 {: #delete-data}
 
-To remove your data from {{site.data.keyword.bplong_notm}}, choose among the following options: 
-- **Delete the workspace**: When you delete your workspace, all the data related to the workspace is permanently deleted. 
-- **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-using-avatar). 
-- **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored by IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated stored data is deleted. 
+To remove your data from {{site.data.keyword.bplong_notm}}, choose among the following options:
+
+Delete the workspace
+:   When you delete your workspace, all the data related to the workspace is permanently deleted.
+Open an {{site.data.keyword.cloud_notm}} support case
+:   Contact {{site.data.keyword.IBM_notm}} Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-using-avatar).
+End your {{site.data.keyword.cloud_notm}} subscription
+:   A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored by IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated stored data is deleted.

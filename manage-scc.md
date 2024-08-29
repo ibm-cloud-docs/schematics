@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-08-29"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
@@ -10,7 +10,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Managing security and compliance with {{site.data.keyword.bpshort}}
 {: #manage-security-compliance}
@@ -22,7 +21,6 @@ With the {{site.data.keyword.compliance_short}}, you can:
 
 * Monitor for controls and goals that pertain to {{site.data.keyword.bplong_notm}}.
 * Define rules for {{site.data.keyword.bplong_notm}} that can help to standardize resource configuration.
-
 
 ## Monitoring security and compliance posture with {{site.data.keyword.bpshort}}
 {: #monitor-schematics}
@@ -43,7 +41,3 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 * Check whether {{site.data.keyword.bpshort}} has role-based access control (RBAC) for users
 * Check whether {{site.data.keyword.bpshort}} is enabled with {{site.data.keyword.monitoringlong}}
 * Check whether {{site.data.keyword.bpshort}} workspaces is configured with a specific Terraform version
-
-
-
-

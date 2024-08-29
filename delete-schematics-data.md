@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-29"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -102,7 +102,6 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 2. Run `ibmcloud schematics action list` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} actions list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-action) command.
 3. Run `ibmcloud schematics action delete --id ACTION_ID [--force]` to delete an action. For more information about {{site.data.keyword.bpshort}} actions delete, see [{{site.data.keyword.bpshort}} actions delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action) command.
 
-
 ### Inventories
 {: #delete-schematics-data-cliinvcategory}
 
@@ -138,7 +137,6 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
 2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header "Authorization:  <access_token>"` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} actions list](/apidocs/schematics/schematics#list-actions) API.
 3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/actions/{action_id} --header "Authorization:  <access_token> "` to delete an action. For more information about {{site.data.keyword.bpshort}} actions delete, see [{{site.data.keyword.bpshort}} actions delete](/apidocs/schematics/schematics#delete-action) API.
-
 
 ### Inventories
 {: #delete-schematics-data-apicategory}

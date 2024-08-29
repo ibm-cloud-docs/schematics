@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-29"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -15,9 +15,9 @@ subcollection: schematics
 # Remote state and cross-workspace access
 {: #remote-state}
 
-{{site.data.keyword.cloud}} provides built in [remote-state](https://developer.hashicorp.com/terraform/language/state/remote){: external} management for Terraform. Terraform state files are automatically preserved between runs and are accessible by {{site.data.keyword.cloud}} commands and operations. {{site.data.keyword.cloud}} remote-state management enables team work and workspace shared operations, with built in state locking preventing concurrent operations against the same state file. 
+{{site.data.keyword.cloud}} provides built in [remote-state](https://developer.hashicorp.com/terraform/language/state/remote){: external} management for Terraform. Terraform state files are automatically preserved between runs and are accessible by {{site.data.keyword.cloud}} commands and operations. {{site.data.keyword.cloud}} remote-state management enables team work and workspace shared operations, with built in state locking preventing concurrent operations against the same state file.
 
-The built in workspace remote-state management supports a number of {{site.data.keyword.bpshort}} use cases: 
+The built in workspace remote-state management supports a number of {{site.data.keyword.bpshort}} use cases:
 - The sharing of resource information between workspaces. This allows your infrastructure to be broken down into smaller components, with read-only resource information passed between environments using {{site.data.keyword.bpshort}} remote-state data sources. Discrete environments linked by data sources allows responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces as read-only resources. 
 - Integration of workspace and action operations with [Actions](/docs/schematics?topic=schematics-action-working). Workspace resource information can be directly passed as an Ansible [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv) without the need for manual host inventory creation or use of inventory scripts.
 {: shortdesc}
@@ -55,12 +55,12 @@ Similar to the `remote_state` data source, you can only access information that 
 
     In this example, two output values are defined, the `sshcommand` to access the virtual server instance in your VPC and the `vpc_id`.
 
-2. Retrieve the ID of the VPC workspace that you created. 
+2. Retrieve the ID of the VPC workspace that you created.
 
     **Through console**:
     - From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the VPC workspace.
     - Select the **Settings** tab.
-    - Find the workspace ID in the **Summary** section. 
+    - Find the workspace ID in the **Summary** section.
 
     **Through CLI**:
     - List available workspaces in your account.
@@ -69,7 +69,7 @@ Similar to the `remote_state` data source, you can only access information that 
         ```
         {: pre}
 
-    - Find the workspace ID in the **ID** column of your command-line output. 
+    - Find the workspace ID in the **ID** column of your command-line output.
 
     The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' are deprecated. Use 'schematics' or 'sch' in your commands.**
     {: note}
@@ -110,7 +110,7 @@ Similar to the `remote_state` data source, you can only access information that 
 
 4. [Create a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) that points to the `remotestate.tf` file in your GitHub or GitLab repository. If you want to upload a tape archive file (`.tar`) from your local machine instead, use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.
 
-5. [Run your Terraform code in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). When you review your logs, you can see the output values from your VPC workspace in the **Output** section. 
+5. [Run your Terraform code in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). When you review your logs, you can see the output values from your VPC workspace in the **Output** section.
 
     Example output
     

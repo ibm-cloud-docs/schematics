@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-18"
+lastupdated: "2024-08-29"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -30,7 +30,7 @@ For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on t
 3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} actions create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
     Syntax
-    
+
     ```text
     https://cloud.ibm.com/schematics/actions/create?name=<action_name>&repository=<git_repository_url>
     ```

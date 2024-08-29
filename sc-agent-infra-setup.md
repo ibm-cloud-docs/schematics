@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-08-29"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Deploying agent prerequisite infrastructure
 {: #agent-infrastructure-overview}
@@ -61,7 +60,7 @@ The following prerequisites must be met before you begin deploying the agent inf
 
 3. On successful creation of the `schematics-agent-infrastructure` Workspace, review and edit the `agent infrastructure` input variables in the workspace **Settings** page.
 
-    The agent infrastructure and the workspace can be in different resource groups and locations. The agent infrastructure workspace can be defined in any {{site.data.keyword.bpshort}} supported region. 
+    The agent infrastructure and the workspace can be in different resource groups and locations. The agent infrastructure workspace can be defined in any {{site.data.keyword.bpshort}} supported region.
     {: note} 
 
     | Input variable  | Data type | Required/Optional | Description |
@@ -89,10 +88,9 @@ Follow the steps to view the Agent infrastructure workspace setup.
     - **VPC > Search** `<agent_prefix>-vpc` the status as **Available**.
     - **Services and Software** > `<agent_prefix>-logdna` the status as **Active**.
     - **Clusters** > `<agent_prefix>-iks` the status as **Normal**.
-   
+
     Optional, you can search the provisioned resources with the user tag you specified in the [Resources list](https://cloud.ibm.com/resources/){: external} page.
     {: note}
-
 
 ## Next steps
 {: #nextsteps-agent-infra}

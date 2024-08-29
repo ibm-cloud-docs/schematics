@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-08-29"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 # Service locations and endpoints
-{: #locations} 
+{: #locations}
 
 Review the {{site.data.keyword.bplong_notm}} supported locations and how {{site.data.keyword.bpshort}} differentiates between the user data and template storage location, and the deployment region of your {{site.data.keyword.cloud}} resources.
 
@@ -22,13 +22,13 @@ Review the {{site.data.keyword.bplong_notm}} supported locations and how {{site.
 
 You can choose to create a {{site.data.keyword.bpshort}} workspace in the US or Europe geographies by using one of the following API endpoints, or by using the **Location** drop-down menu in the {{site.data.keyword.cloud_notm}} console.
 
-For more information about the {{site.data.keyword.bpshort}} private service endpoint, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location). 
+For more information about the {{site.data.keyword.bpshort}} private service endpoint, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: tip}
 
 ## Where do my {{site.data.keyword.bpshort}} actions run?
 {: #where-do-locations-run}
 
-The location that you choose for your {{site.data.keyword.bpshort}} workspace determines the location where your {{site.data.keyword.bpshort}} jobs, such `plan` or `apply`, run. 
+The location that you choose for your {{site.data.keyword.bpshort}} workspace determines the location where your {{site.data.keyword.bpshort}} jobs, such `plan` or `apply`, run.
 
 |Geography/ location |Location to run {{site.data.keyword.bpshort}} actions|
 |------------|----------------|

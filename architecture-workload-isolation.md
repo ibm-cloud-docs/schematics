@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-08-29"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -23,7 +23,7 @@ Learn about the {{site.data.keyword.bplong}} service architecture, service depen
 
 {{site.data.keyword.bpshort}} is a shared multi-tenant service. On initial use, a new {{site.data.keyword.bpshort}} service instance is automatically provisioned for each user account.
 
-The following {{site.data.keyword.bpshort}} architecture image depicts: 
+The following {{site.data.keyword.bpshort}} architecture image depicts:
 
 - Main {{site.data.keyword.bpshort}} components
 - The interaction between service components
@@ -43,9 +43,9 @@ The following {{site.data.keyword.bpshort}} architecture image depicts:
 ### How are API requests to the service isolated from other API requests?
 {: #workload-api-isolation}
 
-All API requests to the {{site.data.keyword.bpshort}} api-server are handled as separate service processes. IAM requests are made to authenticate user access to Schematics, workspaces and operations. Authenticated API requests are processed and queued as {{site.data.keyword.bpshort}} internal messages. 
+All API requests to the {{site.data.keyword.bpshort}} api-server are handled as separate service processes. IAM requests are made to authenticate user access to Schematics, workspaces and operations. Authenticated API requests are processed and queued as {{site.data.keyword.bpshort}} internal messages.
 
-The {{site.data.keyword.bpshort}} job queue manager forwards the requests with the job ID and health check messages. At any particular time, a maximum of n API requests are processed by the {{site.data.keyword.bpshort}} engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload. 
+The {{site.data.keyword.bpshort}} job queue manager forwards the requests with the job ID and health check messages. At any particular time, a maximum of n API requests are processed by the {{site.data.keyword.bpshort}} engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload.
 
 For every queued request from a {{site.data.keyword.bpshort}} user, the {{site.data.keyword.bpshort}} engine creates a dedicated `runtime job` that runs to completion.  The request is removed from the queue when it is fully processed. The {{site.data.keyword.bpshort}} jobs are not shared between tenants or reused later.
 
@@ -57,7 +57,6 @@ For every queued request from a {{site.data.keyword.bpshort}} user, the {{site.d
 ### How are cloud resources isolated from other tenants? 
 {: #workload-tenant-isolation}
 
-When you use {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. {{site.data.keyword.cloud_notm}} resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user. 
+When you use {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. {{site.data.keyword.cloud_notm}} resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user.
 
 Because all resources are created in your personal account, resources are not shared with or reused by other {{site.data.keyword.cloud_notm}} tenants.
-

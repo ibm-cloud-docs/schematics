@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-08-29"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Agent and Kubernetes configuration 
 {: #configure-k8s-cluster}
@@ -29,8 +28,8 @@ The following network policies are configured to control network traffic on the 
 | Policy  |	Description |
 | --- | --- |
 | `deny-all-jobrunner` | `Namespace:schematics-job-runtime`, denies all the `Ingress` and `Egress` traffic. |
-| `deny-all-runtime` |	`Namespace:schematics-runtime`, denies all the `Ingress` and `Egress` traffic. |
-| `deny-all-sandbox` |	`Namespace:schematics-sandbox`, denies all the `Ingress` and `Egress` traffic. |
+| `deny-all-runtime` |`Namespace:schematics-runtime`, denies all the `Ingress` and `Egress` traffic. |
+| `deny-all-sandbox` |`Namespace:schematics-sandbox`, denies all the `Ingress` and `Egress` traffic. |
 | `whitelist-egress-jobrunner` | `Namespce:schematics-job-runtime`, allowed and needed ports for `egress TCP = 443`, `53`, `3000`, `3002`, and for `egress UDP = 443`,`53`.|
 | `runtime-ingress-job` | `Namespace:schematics-runtime`, allowed and needed ports for ingress is `3002`. |
 | `Whitelist-sandbox` |	`Namespace:schematics-sandbox`, allowed list, and needed ports for `ingress = 3000`, and for `egress TCP = 80`, `443`, `5986`, `22`, `53`, or `egress UDP = 53`, `443`. |
@@ -76,8 +75,8 @@ Following resource limits and replicas are the default configuration applied to 
 | Parameter	| Description |
 | --- | --- |
 | `resource-limits` |	Resource limit setting for the sandbox are `cpu = 500m`, and `memory = 1Gi`. |
-| `replicas` | Number of job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
-{: caption="Sandbox deployments" caption-side="top"} 
+| `replicas` | Number of job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.|
+{: caption="Sandbox deployments" caption-side="top"}
 
 You can customize the sandbox configuring following the steps, [editing the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-08-29"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}
 {: #monitoring-instances}
@@ -45,7 +44,6 @@ Complete these steps to view your services instances:
 
 
 
-
 ## Creating service instance
 {: #create-instance}
 
@@ -64,7 +62,7 @@ Complete these steps to create your services instance:
 8. Select the created Sysdig instance from the Monitoring page.
 9. Click `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 10. Click `View Sysdig` icon to view your workspace and action that you created.
-    
+
     You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information about monitoring the status, see [Monitoring workspace](#launch-dashboard). To create a custom dashboard, see [Creating custom dashboard](#create-dashboard).
     {: note}
 

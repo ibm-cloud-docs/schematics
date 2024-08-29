@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-18"
+lastupdated: "2024-08-29"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -34,6 +34,7 @@ The key management system lists the instance that are created from your specific
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to your `KYOK`, or `BYOK` instance.
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
+
     * In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
     * Select a **Source Service** as **{{site.data.keyword.bpshort}}**.
     * Select **Target Service** as **{{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}**. Select the instance you want to provide authorization.
@@ -57,7 +58,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 3. Click **Connect** > **Key Management** from the drop down.
 4. Select **Service** as **{{site.data.keyword.keymanagementserviceshort}}**, or **{{site.data.keyword.hscrypto}}**.
 5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, see [Create a key protect instance](#kms-key-prerequisites).
-    
+
     You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
     {: note}
 
@@ -73,18 +74,21 @@ Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to en
 
 1. [Download and install command-line](/docs/cli?topic=cli-install-ibmcloud-cli).
 2. List all the KMS instance in your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} instances.
+
     ```sh
     ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME
     ```
     {: pre}
 
 3. Integrate the root key with {{site.data.keyword.bpshort}} to encrypt your data in the specified location.
+
     ```sh
     ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHEME --group RESOURCE_GROUP --primary_name PRIMARY_KMS_NAME --primary_crn PRIMARY_KEY_CRN --primary_endpoint PRIMARY_KMSPRIVATEENDPOINT --secondary_name SECONDARY_KMS_NAME --secondary_crn SECONDARY_KEY_CRN --secondary_endpoint SECONDARY_KMSPRIVATEENDPOINT 
     ```
     {: pre}
 
 4. Get current root key information.
+
     ``` sh
     ibmcloud schematics kms info --location LOCATION_NAME
     ```
@@ -92,4 +96,3 @@ Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to en
 
     For more information about enabling the `BYOK` or `KYOK` commands, see [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands).
     {: note}
-
