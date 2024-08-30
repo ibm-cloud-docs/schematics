@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-08-30"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -28,7 +28,7 @@ completion-time: 60m
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full}} in the {{site.data.keyword.bpshort}} workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you use `ibm_cos_bucket` Terraform template example.
 
-The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}. 
+The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}.
 {: shortdesc}
 
 Costs are incurred based on your resource usage. For more information about the pricing, see [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, see [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
@@ -38,6 +38,7 @@ Costs are incurred based on your resource usage. For more information about the 
 {: #workspace-obj}
 
 In this tutorial, you can:
+
 - Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the {{site.data.keyword.IBM_notm}} resource instance, and {{site.data.keyword.IBM_notm}} resource group.
 - Learn how to create an {{site.data.keyword.bplong_notm}} workspace.
 - Learn to automate continuous deployment of a resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
@@ -84,11 +85,11 @@ Complete the following prerequisites for the tutorial:
 Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terraform templates from the GitHub:
 {: shortdesc}
 
-1. If you do not have one, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
+1. If you do not have one, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
 2. Log in to your [GitHub](https://github.com/){: external} account. 
 3. Open the Terraform template to [create an {{site.data.keyword.cos_full_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external}.
 4. From the side of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
-    
+
     You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your {{site.data.keyword.bpshort}} workspace.
     {: note}
 
@@ -101,7 +102,7 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
 
 1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
 2. In **Specify template** section. Enter **`GitHub, GitLab, or Bitbucket Repository URL`** as 
-    
+
     ```text
     https://github.com/IBM-Cloud/terraform-provider-ibm/blob/master/examples/ibm-cos-bucket
     ```
@@ -179,11 +180,9 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 2. Select `Navigation Menu > {{site.data.keyword.bpshort}} > Workspaces > Resources` to observe the apply state of the resources in your workspace.
 3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 
-You successfully created the {{site.data.keyword.bpshort}} workspaces and automated the end to end deployment by using the DevOps toolchain. 
+You successfully created the {{site.data.keyword.bpshort}} workspaces and automated the end to end deployment by using the DevOps toolchain.
 
 ## What's next?
 {: #automate-what-next}
 
 You can now learn how to set up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster. For more information, see [Setting up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
-
-

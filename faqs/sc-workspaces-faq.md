@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-30"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -37,8 +37,8 @@ terraform{
     ibm = "== 1.20.1" // Executes version v1.20.1. 
     }
 }
-
 ```
+{: codeblock}
 
 Currently, version 1.21.0 is released. For more information, see [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 {: note}
@@ -125,7 +125,7 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 {: faq}
 {: support}
 
-If a resource is deleted outside the {{site.data.keyword.bpshort}}, a workspace delete operation displays that as `resource no longer exists`. 
+If a resource is deleted outside the {{site.data.keyword.bpshort}}, a workspace delete operation displays that as `resource no longer exists`.
 
 You need to delete the workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks).
 
@@ -510,7 +510,6 @@ The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environme
 
 Use the [`state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) CLI command to view the same resources as in {{site.data.keyword.bplong_notm}} UI.
 
-
 ## How do I fix the `CreateworkspaceWithContext failed Bad request` error?
 {: #locationres-job-faq}
 {: faq}
@@ -561,7 +560,6 @@ provider "ibm" {
 
 {{site.data.keyword.bpshort}} encrypts the Terraform state file when stored and also in transit by using TLS. Terraform does not separately encrypt sensitive values. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
 
-
 ## Why do workspace variables that are defined by using CLI throw 400 errors?
 {: #wks-list-var}
 {: faq}
@@ -574,9 +572,9 @@ The {{site.data.keyword.bpshort}} workspace list variables store value should al
 {: faq}
 {: support}
 
- Currently, the workaround to updating the `TF_VERSION` is to pass the `TF_VERSION` while updating the variable store. {{site.data.keyword.bpshort}} auto detects what is specified in the Terraform version block in the `TF` files. This is the default behavior.
- 
- For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
+Currently, the workaround to updating the `TF_VERSION` is to pass the `TF_VERSION` while updating the variable store. {{site.data.keyword.bpshort}} auto detects what is specified in the Terraform version block in the `TF` files. This is the default behavior.
+
+For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
 
 ## Can start with a new Terraform state file on each job run?
 {: #wks-job-trigger}

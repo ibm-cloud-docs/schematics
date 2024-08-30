@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-08-30"
 
 keywords: schematics, automation, terraform
 
@@ -23,13 +23,13 @@ completion-time: 30m
 {: toc-services="schematics"}
 {: toc-completion-time="30m"}
 
-Understand how to [Create your private catalog](/docs/account?topic=account-restrict-by-user), [manage your private catalog](/docs/account?topic=account-filter-account), [assign access to the private catalog](/docs/account?topic=account-catalog-access) in {{site.data.keyword.cloud}}. And import your Terraform templates as products to make them available to your users. With a private catalog, you can limit the services that you want your users to see and the service settings that they can adjust. This way, you have more control over the type of service that is provisioned in your account and that naming conventions for services and service components are followed in your organization. 
+Understand how to [Create your private catalog](/docs/account?topic=account-restrict-by-user), [manage your private catalog](/docs/account?topic=account-filter-account), [assign access to the private catalog](/docs/account?topic=account-catalog-access) in {{site.data.keyword.cloud}}. And import your Terraform templates as products to make them available to your users. With a private catalog, you can limit the services that you want your users to see and the service settings that they can adjust. This way, you have more control over the type of service that is provisioned in your account and that naming conventions for services and service components are followed in your organization.
 {: shortdesc}
 
 ## Objectives
 {: #private-tut-obj}
 
-In this tutorial, you import the {{site.data.keyword.IBM_notm}} provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once: 
+In this tutorial, you import the {{site.data.keyword.IBM_notm}} provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once:
 
 - [**{{site.data.keyword.loganalysislong_notm}}**](/docs/log-analysis?topic=log-analysis-getting-started#getting-started) - Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
 - [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started) - Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
@@ -60,12 +60,12 @@ Before you begin, make sure that you are assigned the following permissions:
 {: #prepare-tf-templates}
 {: step}
 
-To upload a Terraform template to a private catalog, you must first compress all your Terraform configuration files to a `TGZ` file, and upload this file to a GitHub repository to create a release. 
+To upload a Terraform template to a private catalog, you must first compress all your Terraform configuration files to a `TGZ` file, and upload this file to a GitHub repository to create a release.
 {: shortdesc}
 
-1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by {{site.data.keyword.IBM_notm}}, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}. 
+1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by {{site.data.keyword.IBM_notm}}, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}.
 
-    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a `subfolder`. 
+    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a `subfolder`.
     {: tip}
 
     ```sh
@@ -80,9 +80,9 @@ To upload a Terraform template to a private catalog, you must first compress all
     {: pre}
 
 3. Optional: Review the `readme.md` file and the Terraform configuration files. 
-4. Compress your Terraform configuration files to create the `TGZ` file. The `TGZ` file is required to upload your Terraform template as a product to the private catalog. 
+4. Compress your Terraform configuration files to create the `TGZ` file. The `TGZ` file is required to upload your Terraform template as a product to the private catalog.
 
-    To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level preceding. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
+    To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level preceding. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory.
     {: note}
 
     If your `.tgz` file is greater than 40 MB. Then, use `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
@@ -121,7 +121,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 Create a release in your source code repository to deliver and manage versions of your software. You can create new releases with release notes.
 
-1. Find your existing repository in GitHub to upload your `TGZ` file. 
+1. Find your existing repository in GitHub to upload your `TGZ` file.
 2. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example. 
     ```sh
     https://github.com/<gh_org>/<gh_repo>/releases
@@ -134,8 +134,8 @@ Create a release in your source code repository to deliver and manage versions o
 6. Drag your `TGZ` file from your local machine to the **Attach binary file by dropping them here or selecting them** section. 
 7. Click **Publish release** to view your published releases feed for your repository.
 8. Optional: Right-click on your `TGZ` file and copy the link to the file. 
-9. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine. 
-10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the `subfolder`. 
+9. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine.
+10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the `subfolder`.
 
 ## Create a private catalog and add your Terraform template as a product
 {: #create-private-catalog}
@@ -144,22 +144,22 @@ Create a release in your source code repository to deliver and manage versions o
 1. Create a [private catalog in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-catalog-access).
 2. Import your {{site.data.keyword.bpshort}} template as a product into your private catalog.
     1. From the **Private catalogs** page, select the private catalog that you created.
-    2. Click **Add**. 
+    2. Click **Add**.
     3. Enter the URL to your `TGZ` file that you verified earlier. 
-    4. Click **Add**. 
+    4. Click **Add**.
 3. From the **Version list** of your product, select the product that you uploaded.
 4. Go to the **Configure product** tab.
-    1. In the **Configure the deployment details** section, click **Add deployment values**. The Terraform configuration files in your `TGZ` file are automatically scanned for any input variables that are defined in the template. 
-    2. Select all deployment values and click **Add deployment values**. 
-    3. Review the default values that are set for your deployment values. 
-    4. Enter values for the `activity_tracker_service_plan`, `logdna_service_plan`, `sysdig_service_plan`, and `region` variables by clicking **Edit** from the actions menu. You can optionally change any of the other default deployment variable values. 
+    1. In the **Configure the deployment details** section, click **Add deployment values**. The Terraform configuration files in your `TGZ` file are automatically scanned for any input variables that are defined in the template.
+    2. Select all deployment values and click **Add deployment values**.
+    3. Review the default values that are set for your deployment values.
+    4. Enter values for the `activity_tracker_service_plan`, `logdna_service_plan`, `sysdig_service_plan`, and `region` variables by clicking **Edit** from the actions menu. You can optionally change any of the other default deployment variable values.
     5. Save your changes by clicking **Update**.
-    6. Change to the **Add license agreement** tab, and add any license that the user needs to agree to. 
-    7. Change to the **Edit readme** tab, and add or edit the readme for your product. 
-    8. Change to the **Validate product** tab. 
-       - Enter a name for the {{site.data.keyword.bpshort}} workspaces that you want to create for the product validation. 
-       - In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
-       - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspaces is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
+    6. Change to the **Add license agreement** tab, and add any license that the user needs to agree to.
+    7. Change to the **Edit readme** tab, and add or edit the readme for your product.
+    8. Change to the **Validate product** tab.
+       - Enter a name for the {{site.data.keyword.bpshort}} workspaces that you want to create for the product validation.
+       - In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary.
+       - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspaces is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`.
     9. From the **actions** menu, click **Share** to make your product available to other users in your private catalog. To provide access group and assign your catalog to users, see [Setting up the access groups](/docs/account?topic=account-groups).
     10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 
@@ -171,6 +171,3 @@ In this tutorial, you learned how to create a private catalog in {{site.data.key
 - [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user&interface=ui#prereq-restrict-ui).
 - [Assign users access to your private catalog](/docs/account?topic=account-catalog-access).
 - [Explore other settings that you can apply to your private catalog](/docs/account?topic=account-filter-account).
-
-
-

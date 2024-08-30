@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-08-30"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -132,7 +132,7 @@ The `--location` parameter is a variable that specifies the region that is suppo
 {: faq}
 {: support}
 
-Yes, an agent can run workspace or actions jobs associated with any resource group, in an account. Agent (assignment) policies are used to assign the execution of jobs, based on resource group, region, and user tags to a specific agent. 
+Yes, an agent can run workspace or actions jobs associated with any resource group, in an account. Agent (assignment) policies are used to assign the execution of jobs, based on resource group, region, and user tags to a specific agent.
 
 ## Can an agent work with workspaces and actions belonging to different {{site.data.keyword.bpshort}} regions?
 {: #faqs-agent-diff-region}

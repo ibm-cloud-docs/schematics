@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-30"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -58,6 +58,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     {: pre}
 
 2. Verify that your workspace is updated. Make sure that your workspace is in an **Inactive** state.
+
     ```sh
     ibmcloud schematics workspace list
     ```
@@ -66,7 +67,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Verifying workspace list 
-{: #verify-wks-list-cli} 
+{: #verify-wks-list-cli}
 
 Confirm the details using the CLI command update where the parameters of your workspace were updated successfully that has been created earlier.
 
@@ -97,14 +98,13 @@ On successful update, it returns the updated details of an existing workspace.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
 
-
 ## Displaying the workspace list through API
 {: #list-wks-api}
 {: api}
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
-2. Displaying the details of list of all existing workspace. 
+2. Displaying the details of list of all existing workspace.
 
     Example:
 
@@ -118,7 +118,8 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
     ```
     {: codeblock}
 
-3. Verify that the workspace is successfully listed with list of all workspace that were created. 
+3. Verify that the workspace is successfully listed with list of all workspace that were created.
+
     ```sh
     curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>"
     ```
@@ -126,9 +127,8 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 4. see [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-
 ### verifying workspace update:
-{: #verify-wks-list-api} 
+{: #verify-wks-list-api}
 
 Verify the workspace update.
 
@@ -362,4 +362,4 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #sch-list-wks-nextsteps}
 
-The next stage of working with workspace is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks). 
+The next stage of working with workspace is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks).

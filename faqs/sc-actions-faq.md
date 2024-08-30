@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-08-30"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -25,23 +25,23 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} actions 
 {: faq}
 {: support}
 
-Classic VSI environments are not supported with actions.  Only {{site.data.keyword.cloud_notm}} VPC VSIs have been tested and are supported with actions. 
+Classic VSI environments are not supported with actions.  Only {{site.data.keyword.cloud_notm}} VPC VSIs have been tested and are supported with actions.
 
 ## What network configuration is suggested for use with actions? 
 {: #network-faq}
 {: faq}
 {: support}
 
-It is your responsibility as a user to ensure that suitable network policies and a bastion host configuration is in place for the cloud environment to allow {{site.data.keyword.bpshort}} to connect through SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. When using a bastion host, SSH forwarding is used to connect to the target VSIs. To validate access the command `ssh -J bastion-ip vsi-ip`. 
+It is your responsibility as a user to ensure that suitable network policies and a bastion host configuration is in place for the cloud environment to allow {{site.data.keyword.bpshort}} to connect through SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. When using a bastion host, SSH forwarding is used to connect to the target VSIs. To validate access the command `ssh -J bastion-ip vsi-ip`.
 
-Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance on creating a suitable network configuration. 
+Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance on creating a suitable network configuration.
 
 ## Why does the SSH connection fail with static inventory files?
 {: #ssh-faq}
 {: faq}
 {: support}
 
-Defining target hosts using short form host names is not supported for VSIs on a private network without public IP addresses. The connection fails with the message `Could not resolve hostname`. Review the [actions docs](/docs/schematics?topic=schematics-inventories-setup#static-host-defs) for supported configurations. 
+Defining target hosts using short form host names is not supported for VSIs on a private network without public IP addresses. The connection fails with the message `Could not resolve hostname`. Review the [actions docs](/docs/schematics?topic=schematics-inventories-setup#static-host-defs) for supported configurations.
 
  ```text
 ansible-playbook run | fatal: [worker-0]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host through ssh: ssh: Could not resolve hostname toraz3-worker-0001: Name or service not known", "unreachable": true}
@@ -98,5 +98,3 @@ After new Terraform and Ansible versions are released by the community, the IBM 
 {: support}
 
 Yes, you can run Ansible playbooks against your {{site.data.keyword.cloud_notm}} by using the {{site.data.keyword.bpshort}} actions or Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or set actions against your resources, such as shutting down a virtual server instance. For more information, see [sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates).
-
-

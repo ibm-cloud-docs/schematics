@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-30"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -12,7 +12,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Why do {{site.data.keyword.bpshort}} workspaces create using the API/UI/CLI fails?
 {: #wks-create-api}
@@ -25,10 +24,8 @@ curl --request POST --url https://cloud.ibm.com/schematics/workspaces -H "Author
 ```
 {: screen}
 
-
-When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the workspace create is marked with `Bad request` message. 
+When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the workspace create is marked with `Bad request` message.
 {: tsCauses}
-
 
 ```json
 {
@@ -40,7 +37,6 @@ When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.
 }
 ```
 {: screen}
-
 
 Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region where you want to create or update the workspace.
 {: tsResolve}

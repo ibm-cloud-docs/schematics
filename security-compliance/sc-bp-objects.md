@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-08-30"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Best practices for securing the {{site.data.keyword.bpshort}} objects
 {: #bp-secure-objects}
@@ -77,14 +76,14 @@ Your workspaces and actions data store depends on the location where you create 
 {: #bp-protect-data}
 
 Follow these practices to protect your workspace data through Terraform state file, or log files.
+
 - Use {{site.data.keyword.iamshort}} to control access to a {{site.data.keyword.bpshort}} workspace, and related {{site.data.keyword.cloud_notm}} resources.
 - Secure the source repository for your Terraform template, including access control, security settings, collaboration, and version control.
 - Secure the {{site.data.keyword.cloud_notm}} resources that you create by using the security features that are provided by the resource offering.
 - Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security fixes, access controls, and encryption to your resources.
 
-You need to specify the [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. For more information about {{site.data.keyword.bpshort}} service access roles and permissions for
-- [Workspace Permissions](/docs/schematics?topic=schematics-access#workspace-permissions) 
-- [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
+You need to specify the [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. 
+For more information about {{site.data.keyword.bpshort}} service access roles and permissions, see [Workspace Permissions](/docs/schematics?topic=schematics-access#workspace-permissions) and[KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
 ## Best practices of managing {{site.data.keyword.bpshort}} actions 
 {: #bp-actions}
@@ -108,6 +107,7 @@ Your workspaces and actions data store depends on the location where you create 
 {: #bp-security-protect}
 
 Follow these practices to protect your workspace data through input credentials state file, or log files.
+
 - Use Cloud Identity and Access Management to control access to a {{site.data.keyword.bpshort}} action.
 - Secure the source repository of your Terraform template, including access control, security settings, collaboration, and version control.
 - Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security fixes, access controls, and encryption to your resources.
@@ -119,6 +119,7 @@ Follow these practices to protect your workspace data through input credentials 
 {: #bp-protect}
 
 Following are the various ways that {{site.data.keyword.bpshort}} data can be protected.
+
 - Access protection by using {{site.data.keyword.iamshort}}.
 - Non-repudiation by using {{site.data.keyword.cloudaccesstrailshort}}.
 - Data protection by using Key Management Systems (KMS).
@@ -137,6 +138,7 @@ You can use IBM Cloud® Activity Tracker to track and audit how users and applic
 {: #bp-security-data-protection}
 
 You can safeguard and encrypt your information from corruption, compromise, or loss in {{site.data.keyword.bpshort}} by:
+
 - [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration)
 - [Managing data encryption](/docs/schematics?topic=schematics-secure-data#pi-encrypt)
 - Restrict network access for all the resources to provision by [Allowing specific IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
