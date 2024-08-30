@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-12"
+  years: 2017, 2024
+lastupdated: "2024-08-30"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -10,7 +10,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Compliance
 {: #compliance}
@@ -23,7 +22,7 @@ To monitor your resources with {{site.data.keyword.bpshort}}, see [Managing secu
 ## General Data Protection Regulation (GDPR) readiness
 {: #compliance-gdpr}
 
-About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Data Protection Regulation](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr). View [IBM's commitment to GDPR readiness](https://www.ibm.com/data-security) to learn about {{site.data.keyword.IBM_notm}}'s GDPR readiness journey and the GDPR capabilities and offerings to support your compliance journey. 
+About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Data Protection Regulation](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr). View [IBM's commitment to GDPR readiness](https://www.ibm.com/data-security) to learn about {{site.data.keyword.IBM_notm}}'s GDPR readiness journey and the GDPR capabilities and offerings to support your compliance journey.
 
 ## Privacy shield
 {: #compliance-privacy}
@@ -46,5 +45,4 @@ About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Dat
 
 {{site.data.keyword.IBM_notm}} provides a Service Organization Controls (SOC) two Type 2 report for {{site.data.keyword.bpshort}}. The reports evaluate IBM's operational controls according to the criteria set by the American Institute of Certified Public Accountants (AICPA) Trust Services Principles. The Trust Services Principles define adequate control systems and establish industry standards for service providers such as {{site.data.keyword.cloud_notm}} to safeguard their clients data and information.
 
-You can request an SOC 2 Type 2 report from the Client portal or contact your sales representative. Alternatively, you can open 
-a support ticket with [{{site.data.keyword.cloud_notm}} Support](https://www.ibm.com/cloud/support).
+You can request an SOC 2 Type 2 report from the Client portal or contact your sales representative. Alternatively, you can open a support ticket with [{{site.data.keyword.cloud_notm}} Support](https://www.ibm.com/cloud/support).

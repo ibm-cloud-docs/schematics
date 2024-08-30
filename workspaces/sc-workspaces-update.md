@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-30"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -16,7 +16,7 @@ subcollection: schematics
 {: #sch-update-wks}
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify IBM Cloud, see the ibmcloud schematics plan command.
-{: shortdesc} 
+{: shortdesc}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
@@ -69,7 +69,6 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Click **Jobs** tab to see the workspace logs. 
 3. Click **Jobs history** tab view the result of the update job operation that were run by the automation modules.
 4. Click **Settings** tab to view the summary of the configuration.
-
 
 ## Updating a workspace using the CLI
 {: #update-wks-cli}
@@ -137,12 +136,12 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```sh
     ibmcloud schematics workspace list
     ```
-    {: pre}   
+    {: pre}
 
 4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Verifying workspace update 
-{: #verify-wks-update-cli} 
+{: #verify-wks-update-cli}
 
 Confirm the details using the CLI command update where the parameters of your workspace were updated successfully that has been created earlier.
 
@@ -225,7 +224,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 4. see [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Verifying workspace update
-{: #verify-wks-update-api} 
+{: #verify-wks-update-api}
 
 Verify that the workspace update is successfully as shown in the output.
 {: shortdesc}
@@ -352,4 +351,4 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #sch-update-wks-nextsteps}
 
-The next stage of working with workspace is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks). 
+The next stage of working with workspace is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks).

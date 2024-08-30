@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-30"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -15,8 +15,8 @@ subcollection: schematics
 # Creating workspaces and importing your Terraform
 {: #sch-create-wks}
 
-Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_notm}} resources using Terraform. Workspace settings define the Terraform engine hosted in a Git repository to be used, along with any input variables to customize the template. 
-{: shortdesc} 
+Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_notm}} resources using Terraform. Workspace settings define the Terraform engine hosted in a Git repository to be used, along with any input variables to customize the template.
+{: shortdesc}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
@@ -27,8 +27,8 @@ Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_no
 ## Before you begin
 {: #prerequisites-create}
 
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API. 
-- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API.
+- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace.
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
@@ -162,13 +162,15 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     | `variable_type` | Optional, enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
     {: caption="JSON file component description" caption-side="bottom"}
 
-2. Create the workspace. 
+2. Create the workspace.
+
     ```sh
     ibmcloud schematics workspace new --file workspace.json
     ```
     {: pre}
 
 3. Verify that your workspace is created. Make sure that your workspace is in an **Inactive** state.
+
     ```sh
     ibmcloud schematics workspace list
     ```
@@ -226,4 +228,4 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 ## Next steps
 {: #sch-create-wks-nextsteps}
 
-The next stage of working with workspaces is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks). 
+The next stage of working with workspaces is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks).

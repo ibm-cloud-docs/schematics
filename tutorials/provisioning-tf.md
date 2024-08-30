@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-30"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -23,15 +23,15 @@ completion-time: 60m
 {: toc-services="schematics, containers, key-protect"}
 {: toc-completion-time="60m"}
 
-Use one of the {{site.data.keyword.IBM}} provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC). Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance. 
+Use one of the {{site.data.keyword.IBM}} provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC). Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance.
 {: shortdesc}
 
 ## Description
 {: #provisioning-desc}
 
-In this tutorial, you use the {{site.data.keyword.IBM}} provided [`vpc-gen2-cluster` Terraform template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create a Virtual Private Cloud (VPC) and to provision an {{site.data.keyword.containerlong_notm}} cluster on {{site.data.keyword.vsi_is_short}}. Then, you add the service credentials of an {{site.data.keyword.cos_full_notm}} service instance as a Kubernetes secret in your cluster. You can change the default values in this template to spread your cluster across multiple subnets and zones. However, the steps in this tutorial use the default values that are provided in the template. 
+In this tutorial, you use the {{site.data.keyword.IBM}} provided [`vpc-gen2-cluster` Terraform template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create a Virtual Private Cloud (VPC) and to provision an {{site.data.keyword.containerlong_notm}} cluster on {{site.data.keyword.vsi_is_short}}. Then, you add the service credentials of an {{site.data.keyword.cos_full_notm}} service instance as a Kubernetes secret in your cluster. You can change the default values in this template to spread your cluster across multiple subnets and zones. However, the steps in this tutorial use the default values that are provided in the template.
 
-The following image shows the cloud architecture components that you provision as part of this tutorial. 
+The following image shows the cloud architecture components that you provision as part of this tutorial.
 
 ![Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}](../images/vpcgen2cluster.png){: caption="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
@@ -56,6 +56,7 @@ The costs are incurred based on your resource usage. For more information about 
 {: #provisioning-tut-obj}
 
 In this tutorial, you can perform the following.
+
 - Learn how to use an IBM-provided Terraform template to create a Virtual Private Cloud (VPC) and provision an {{site.data.keyword.containerlong_notm}} cluster that runs on {{site.data.keyword.vsi_is_short}}. 
 - Create an {{site.data.keyword.cos_full_notm}} service instance and bind the service to your {{site.data.keyword.containerlong_notm}} cluster. 
 - Explore how to create an {{site.data.keyword.bplong_notm}} workspace.
@@ -75,29 +76,29 @@ This tutorial is intended for developers and system administrators who want to l
 ## Prerequisites
 {: #provisioning-tut-prereq}
 
-Before you begin, complete the following prerequisites. 
+Before you begin, complete the following prerequisites.
 {: shortdesc}
 
 - [Create the {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 - [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli). 
 - Make sure you set environment variables for [`IBMCLOUD_API_KEY`](/docs/cli?topic=cli-ibmcloud_env_var).
-- Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace. 
+- Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace.
 - Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources. 
-- Follow the [steps](/docs/containers?topic=containers-clusters#cluster_prepare) to get the required permissions to create an {{site.data.keyword.containerlong_notm}} cluster and to prepare your account for your cluster setup. 
-- Make sure that you have the required permissions to create an instance of [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-manage-access) and [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-iam). 
+- Follow the [steps](/docs/containers?topic=containers-clusters#cluster_prepare) to get the required permissions to create an {{site.data.keyword.containerlong_notm}} cluster and to prepare your account for your cluster setup.
+- Make sure that you have the required permissions to create an instance of [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-manage-access) and [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-iam).
 
 ## Creating your {{site.data.keyword.bpshort}} workspace
 {: #create-wkspace-for-cluster}
 {: step}
 
-Use the IBM-provided Terraform template to create and configure your {{site.data.keyword.bpshort}} workspace. 
+Use the IBM-provided Terraform template to create and configure your {{site.data.keyword.bpshort}} workspace.
 {: shortdesc}
 
-1. Review the [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure. 
-    - **main.tf**: This file includes the Terraform code that you run in {{site.data.keyword.bpshort}}. Your Terraform code includes data sources and resources to create a VPC with subnets in two different zones, create an {{site.data.keyword.containerlong_notm}} cluster, and configure the cluster to bind an {{site.data.keyword.cos_full_notm}} service instance. 
-    - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later. 
-    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
-    - **versions.tf**: This file includes the Terraform version that this template requires. 
+1. Review the [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure.
+    - **main.tf**: This file includes the Terraform code that you run in {{site.data.keyword.bpshort}}. Your Terraform code includes data sources and resources to create a VPC with subnets in two different zones, create an {{site.data.keyword.containerlong_notm}} cluster, and configure the cluster to bind an {{site.data.keyword.cos_full_notm}} service instance.
+    - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later.
+    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace.
+    - **versions.tf**: This file includes the Terraform version that this template requires.
 2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace.
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
@@ -183,7 +184,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     ```
     {: pre}
 
-    For more information about workspace creation, see [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+    For more information about workspace creation, see [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference).
     {: note}
 
     Sample example output
@@ -242,7 +243,7 @@ Your workspace must be in an `Active` state to perform a {{site.data.keyword.bps
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.
 {: note}
 
-1. Execute the {{site.data.keyword.bpshort}} plan command. This command prompts for `kube_version`, run `ibmcloud ks versions` command to list the supported Kubernetes version to provision. The plan command gives back an activity ID. 
+1. Execute the {{site.data.keyword.bpshort}} plan command. This command prompts for `kube_version`, run `ibmcloud ks versions` command to list the supported Kubernetes version to provision. The plan command gives back an activity ID.
 
     ```sh
     ibmcloud schematics plan --id mytest1_cluster-62183a6b-fbed-43
@@ -271,9 +272,9 @@ During the creation of the Terraform execution plan, you are not allowed to make
     You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace status.
     {: note}
 
-3.	Apply your Terraform template in {{site.data.keyword.cloud_notm}}. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account. 
+3.	Apply your Terraform template in {{site.data.keyword.cloud_notm}}. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account.
 
-    This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
+    This process takes a minute to complete. During this process, you cannot make any changes to your workspace.
     {: important}
 
     ```sh
@@ -313,12 +314,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard workspace jobs status.
     {: note}
 
-
-
 ## What's next?
 {: #tut_whats_next}
 
 Great job! You successfully provisioned a VPC cluster by using {{site.data.keyword.bplong_notm}}. You can now learn how to configure the cluster parameters to attach the key management services and load balancer. For more information about key management services and {{site.data.keyword.cloud_notm}} Kubernetes worker pool, see [Key Management services](/docs/containers?topic=containers-kubernetes-service-cli#ks_kms_enable) and [{{site.data.keyword.cloud_notm}} Kubernetes worker pool](/docs/containers?topic=containers-kubernetes-service-cli#cs_alb_create).
-
-
-

@@ -16,6 +16,7 @@ subcollection: schematics
 {: #workspaces-plan}
 
 Plan and design your workspaces using the following questions as prompts:
+
 - How do I relate workspaces to Git repositories?
 - How many workspaces does my application environment need?
 - How do I reuse Terraform configuration files across environments and workspaces?

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-05-26"
+  years: 2017, 2024
+lastupdated: "2024-08-30"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -59,8 +59,8 @@ The state of a workspace indicates if you have successfully created a Terraform 
 
 Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue).
 
-In the job log you can see a message such as: 
+In the job log you can see a message such as:
 
-- **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed. 
+- **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed.
 
 - **Your job was submitted and is in queue, at position x out of y**. Here `x` is the position of your job in the pending queue and `y` is a total pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equally distributed to the pending jobs. In case you are running a huge number of jobs, you can view the position increase along with the total.

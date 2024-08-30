@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-01"
+lastupdated: "2024-08-30"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -31,8 +31,8 @@ subcollection: schematics
 ## Before you begin
 {: #deploy-prerequisites}
 
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API. 
-- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API.
+- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace.
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
@@ -119,12 +119,12 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 	```sh
     ibmcloud schematics workspace list
     ```
-    {: pre} 
+    {: pre}
 
 4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs .
 
 ### Verifying workspace deploy 
-{: #verify-wks-deploy-cli} 
+{: #verify-wks-deploy-cli}
 
 Execute CLI command to check the status of the workspace deploy is success.
 
@@ -148,7 +148,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
-2. Perform deploy for the existing workspace. 
+2. Perform deploy for the existing workspace.
 
 	Example
 

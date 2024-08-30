@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-08-30"
 
 keywords: schematics, generate plan, schematics workspace generate plan
 
@@ -12,7 +12,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # The Terraform script that contains Kubernetes cluster namespaces fails as connection refused?
 {: #wks-connection-refuse}

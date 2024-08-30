@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-08-30"
 
 keywords: endpoint gateway failed, schematics endpoint gateway error, wrong number of segments in crn
 
@@ -12,7 +12,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Why are you getting create endpoint gateway failure with wrong number of segments in CRN?
 {: #agent-endpoint-error}

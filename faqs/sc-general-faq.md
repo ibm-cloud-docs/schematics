@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-23"
+lastupdated: "2024-08-30"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -51,7 +51,6 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays wa
 {: #saving-files}
 {: faq}
 {: support}
-
 
 {{site.data.keyword.bpshort}} persists files that are written to the path `/tmp/.schematics`, during action and workspace operations. The files are restored to the same path when running the next operation on the workspace. The file limit is 10MB.
 
@@ -197,7 +196,7 @@ You can verify the location access to create or view the resource in the catalog
 {: support}
 
  Yes, you can use {{site.data.keyword.openwhisk_short}} to set the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution){: external} GitHub repository.
- 
+
 ## Might I create a worker node in an existing worker node pool?
 {: #workernode-kubernetes-faq}
 {: faq}
@@ -217,11 +216,11 @@ You can view the list of public and private allowed IP addresses of `us-south`, 
 {: faq}
 {: support}
 
-When you provision resources with {{site.data.keyword.bplong_notm}}, the state of your resources is stored in a local {{site.data.keyword.bplong_notm}} state file. This state file is the single source of truth for {{site.data.keyword.bplong_notm}} to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without {{site.data.keyword.bplong_notm}}, this resource is not stored in the {{site.data.keyword.bplong_notm}} state file, and as a consequence cannot be managed with {{site.data.keyword.bplong_notm}}. 
+When you provision resources with {{site.data.keyword.bplong_notm}}, the state of your resources is stored in a local {{site.data.keyword.bplong_notm}} state file. This state file is the single source of truth for {{site.data.keyword.bplong_notm}} to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without {{site.data.keyword.bplong_notm}}, this resource is not stored in the {{site.data.keyword.bplong_notm}} state file, and as a consequence cannot be managed with {{site.data.keyword.bplong_notm}}.
 
 When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, {{site.data.keyword.bpshort}} verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured in your state file. If the resource is not found, the state file is updated, and the Terraform execution plan are changed.
 
-To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.keyword.cloud_notm}} resources in your account in sync, use {{site.data.keyword.bplong_notm}} to provision, or remove your resources. 
+To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.keyword.cloud_notm}} resources in your account in sync, use {{site.data.keyword.bplong_notm}} to provision, or remove your resources.
 {: important}
 
 ## What changes can I make to my resources?
@@ -363,7 +362,7 @@ No, you cannot [delete](/docs/schematics?topic=schematics-sch-delete-wks) and [d
 {: faq}
 {: support}
 
-Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group. 
+Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group.
 
 For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B.
 
@@ -378,7 +377,7 @@ The following image shows how you can leverage IAM access groups and resource gr
 
 <img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
 
-1. The account owner or an authorized administrator defines a team and creates an IAM access group for each team. 
+1. The account owner or an authorized administrator defines a team and creates an IAM access group for each team.
 2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B.
 3. The account owner or an authorized administrator adds users to the IAM access group. All users automatically inherit the permissions of the IAM access group.
 
@@ -390,7 +389,8 @@ The following image shows how you can leverage IAM access groups and resource gr
 To invoke the GitHub API and establish Git connections over HTTPs, and for creating quick scripts and testing integrations PAT are used. For more information, see [about PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#about-personal-access-tokens){: external}.
 {: shortdesc}
 
-GitHub currently supports two types of personal access tokens, organization owners can set a policy to restrict the access of personal access tokens to their organization.: 
+GitHub currently supports two types of personal access tokens, organization owners can set a policy to restrict the access of personal access tokens to their organization:
+
 - fine-grained personal access tokens  
 - personal access tokens (classic). GitHub recommends that you use fine-grained personal access tokens instead of personal access tokens (classic) whenever possible.
 
