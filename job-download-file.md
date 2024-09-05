@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-05"
 
 keywords: download job files, job files, schematics job
 
@@ -37,6 +37,7 @@ The response of this endpoint embeds the content of the file in the field `file_
     "updated_at": "2021-11-11T12:47:21.954546428Z"
 }
 ```
+{: screen}
 
 ## Note
 {: #job-note}

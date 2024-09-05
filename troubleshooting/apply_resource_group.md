@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-09-05"
 
 keywords: schematics resource group not found, schematics resource group error, schematics resource group does not exist, schematics resource group doesn't exist 
 
@@ -16,7 +16,7 @@ content-type: troubleshoot
 # Why can't {{site.data.keyword.bpshort}} find your resource group?
 {: #rg-not-found}
 
-When you run an {{site.data.keyword.bplong_notm}} plan or apply action, the resource group that you try to retrieve by using the `ibm_resource_group` data source cannot be found. Following error message are received.
+When you run an {{site.data.keyword.bplong_notm}} plan or apply action, the resource group that you try to retrieve by using the `ibm_resource_group` data source cannot be found. The following error message is thrown.
 {: tsSymptoms}
 
 ```text
@@ -29,5 +29,3 @@ You do not have the wanted permissions in {{site.data.keyword.iamshort}} to view
 
 Make sure that the **Viewer** permission on the resource group is assigned to you or the API key that you use. For more information, see [Adding resources to a resource group](/docs/account?topic=account-rgs&interface=ui#add_to_rgs).
 {: tsResolve}
-
-

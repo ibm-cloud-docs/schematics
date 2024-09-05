@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-09-05"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -23,13 +23,13 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{
  2022/05/31 09:02:30 Terraform plan | Error: No value for required variable
  2022/05/31 09:02:30 Terraform plan | 
  2022/05/31 09:02:30 Terraform plan |   on variables.tf line 48:
- 2022/05/31 09:02:30 Terraform plan |   48: variable "schematics_resource_crn" {
+ 2022/05/31 09:02:30 Terraform plan |   48: variable "schematics_resource_crn" 
  2022/05/31 09:02:30 Terraform plan | 
  2022/05/31 09:02:30 Terraform plan | The root module input variable "schematics_resource_crn" is not set, and has
  2022/05/31 09:02:30 Terraform plan | no default value. Use a -var or -var-file command line argument to provide a
  2022/05/31 09:02:30 Terraform plan | value for this variable.
- 2022/05/31 09:02:30 [1m[31mTerraform PLAN error: Terraform PLAN errorexit status 1[39m[0m
- 2022/05/31 09:02:30 [1m[31mCould not execute job: Error : Terraform PLAN errorexit status 1[39m[0m
+ 2022/05/31 09:02:30 1m 31mTerraform PLAN error: Terraform PLAN errorexit status 1 39m 0m
+ 2022/05/31 09:02:30  1m 31mCould not execute job: Error : Terraform PLAN errorexit status 139m 0m
 ```
 {: screen}
 

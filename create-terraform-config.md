@@ -230,7 +230,6 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}
 
@@ -263,7 +262,6 @@ You can provide the values after creating the workspace for the {{site.data.keyw
         ]
     ```
     {: codeblock}
-
 
 **Can I see how to declare complex variables in a file?**
 
