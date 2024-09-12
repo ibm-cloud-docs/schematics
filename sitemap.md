@@ -1602,6 +1602,8 @@ subcollection: schematics
 
     * [Workspace events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
 
+    * [Action events](/docs/schematics?topic=schematics-at_events#schematics-action-events)
+
     * [Job events](/docs/schematics?topic=schematics-at_events#schematics-job-events)
 
     * [`Shareddata` events](/docs/schematics?topic=schematics-at_events#schematics-shareddata-events)
