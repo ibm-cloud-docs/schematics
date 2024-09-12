@@ -31,10 +31,6 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: #at-locations}
 
 
-
-## Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search
-{: #at-legacy-locations}
-
 ### Regions
 {: #at}
 {: #sch-region-events}
@@ -58,11 +54,14 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 |---------------|---------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
-{: #at-table-3}
+{: #at-table-2}
 {: tab-title="Europe"}
 {: tab-group="at"}
 {: class="simple-tab-table"}
 {: row-headers}
+
+## Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search
+{: #at-legacy-locations}
 
 ### Workspace events
 {: #schematics-wks-events}
@@ -76,10 +75,12 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 | `schematics.workspace-resources.create` | An event is generated when a Terraform execution apply is created for a workspace. |
 | `schematics.workspace-resources.plan` | An event is generated when a Terraform execution plan is created for a workspace. |
 | `schematics.workspace-resources.delete` | An event is generated for a request to delete the {{site.data.keyword.cloud_notm}} resources that are provisioned through a Terraform plan and the workspace.|
-{: caption="Workspace events" caption-side="bottom"}
-
-### Action events
-{: #schematics-action-events}
+{: caption="Workspace events where activity tracking events are sent" caption-side="top"}
+{: #at-table-3}
+{: tab-title="Workspace events"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 | Action             | Description      |
 | -------------------| -----------------|
@@ -87,7 +88,12 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 | `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. |
 | `schematics.action.read`| A {{site.data.keyword.bpshort}} action is viewed by a user.|
 | `schematics.action.update`| A {{site.data.keyword.bpshort}} action is updated successfully or failed to update.|
-{: caption="Action events" caption-side="bottom"}
+{: caption="Action events where activity tracking events are sent" caption-side="top"}
+{: #at-table-4}
+{: tab-title="Action events"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 ### Job events
 {: #schematics-job-events}
@@ -142,14 +148,6 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 {: tab-group="atracker"}
 {: class="simple-tab-table"}
 {: row-headers}
-
-## Enabling activity tracking events for {{site.data.keyword.bpshort}}
-{: #at-enable}
-
-
-
-
-
 
 ## Viewing activity tracking events for {{site.data.keyword.bpshort}}
 {: #at-viewing}

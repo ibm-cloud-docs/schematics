@@ -1596,13 +1596,11 @@ subcollection: schematics
 
 * [Locations where activity tracking events are generated](/docs/schematics?topic=schematics-at_events#at-locations)
 
-* [Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
-
     * [Regions](/docs/schematics?topic=schematics-at_events#sch-region-events)
 
-    * [Workspace events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
+* [Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
 
-    * [Action events](/docs/schematics?topic=schematics-at_events#schematics-action-events)
+    * [Workspace events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
 
     * [Job events](/docs/schematics?topic=schematics-at_events#schematics-job-events)
 
@@ -1611,8 +1609,6 @@ subcollection: schematics
     * [Other events](/docs/schematics?topic=schematics-at_events#schematics-otherevents)
 
 * [Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}](/docs/schematics?topic=schematics-at_events#atracker-locations)
-
-* [Enabling activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-enable)
 
 * [Viewing activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-viewing)
 
