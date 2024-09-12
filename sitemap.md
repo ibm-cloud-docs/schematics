@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-12"
 
 keywords: schematics
 subcollection: schematics
@@ -1592,9 +1592,13 @@ subcollection: schematics
 
     * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
 
-[Auditing events](/docs/schematics?topic=schematics-at_events#at_events)
+[Activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at_events)
 
-* [{{site.data.keyword.bpshort}} events](/docs/schematics?topic=schematics-at_events#schematics-events)
+* [Locations where activity tracking events are generated](/docs/schematics?topic=schematics-at_events#at-locations)
+
+* [Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
+
+    * [Regions](/docs/schematics?topic=schematics-at_events#sch-region-events)
 
     * [Workspace events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
 
@@ -1606,11 +1610,17 @@ subcollection: schematics
 
     * [Other events](/docs/schematics?topic=schematics-at_events#schematics-otherevents)
 
-* [Viewing events](/docs/schematics?topic=schematics-at_events#at_ui)
+* [Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}](/docs/schematics?topic=schematics-at_events#atracker-locations)
 
-* [Analyzing events](/docs/schematics?topic=schematics-at_events#at_analyze)
+* [Enabling activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-enable)
 
-    * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_1)
+* [Viewing activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-viewing)
+
+    * [Launching {{site.data.keyword.logs_full_notm}} from the Observability page](/docs/schematics?topic=schematics-at_events#log-launch-standalone)
+
+* [Analyzing {{site.data.keyword.bpshort}} activity tracking events](/docs/schematics?topic=schematics-at_events#at_events_analyze)
+
+    * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_wks)
 
 
 ## Location based access

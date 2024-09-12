@@ -126,7 +126,7 @@ toc:
                                             label: Logging and monitoring
                                             topics:
                                                     - monitoring-instances.md
-                                                    - at.md
+                                                    - sc-observability-at.md
                                   - access.md
                                   - job-queue.md
                                   - delete-schematics-data.md
