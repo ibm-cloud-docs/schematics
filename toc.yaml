@@ -123,10 +123,11 @@ toc:
                                                                       - sc-agentb1-proxy.md
                                                                       - sc-agentb1-registry.md
                                   - topicgroup:
-                                            label: Logging and monitoring
+                                            label: Observability
                                             topics:
-                                                    - monitoring-instances.md
-                                                    - sc-observability-at.md
+                                                    - at-events.md
+                                                    - logging.md 
+                                                    - monitoring.md                                                  
                                   - access.md
                                   - job-queue.md
                                   - delete-schematics-data.md

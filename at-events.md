@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-14"
 
 keywords:
 
-subcollection: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs,
+subcollection: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
 ---
 
@@ -18,9 +18,9 @@ subcollection: schematics activity tracker events, schematics events, schematics
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.bpshort}}, generate activity tracking events.
 {: shortdesc}
 
-Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
+{{site.data.keyword.cloudaccesstrailshort}} events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
+You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
@@ -35,7 +35,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: #at}
 {: #sch-region-events}
 
-{{site.data.keyword.bpshort}} sends activity tracking events to {{site.data.keyword.at_full_notm}} hosted event search in the regions that are indicated in the following table.
+{{site.data.keyword.bpshort}} sends {{site.data.keyword.cloudaccesstrailshort}} events to {{site.data.keyword.at_full_notm}} hosted event search in the regions that are indicated in the following table.
 {: shortdesc}
 
 To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/activity-tracker?topic=activity-tracker-launch#launch_cloud_ui) to access your events.
@@ -43,7 +43,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) |
 |---------------------|-------------------------|-------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
-{: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
+{: caption="Regions where activity tracker events are sent in Americas locations" caption-side="top"}
 {: #at-table-1}
 {: tab-title="Americas"}
 {: tab-group="at"}
@@ -53,7 +53,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 | Frankfurt (`eu-de`)  | London (`eu-gb`) |
 |---------------|---------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
-{: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
+{: caption="Regions where activity tracker events are sent in Europe locations" caption-side="top"}
 {: #at-table-2}
 {: tab-title="Europe"}
 {: tab-group="at"}
@@ -63,7 +63,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 ## Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search
 {: #at-legacy-locations}
 
-{{site.data.keyword.bpshort}} sends activity tracking events to {{site.data.keyword.at_full_notm}} hosted event search are indicated in the following table.
+{{site.data.keyword.bpshort}} sends {{site.data.keyword.cloudaccesstrailshort}} events to {{site.data.keyword.at_full_notm}} hosted event search are indicated in the following table.
 {: shortdesc}
 
 ### Workspace events
@@ -87,7 +87,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 | -------------------| -----------------|
 | `schematics.action.create` | A {{site.data.keyword.bpshort}} action is created or failed to create. |
 | `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. |
-| `schematics.action.read`| A {{site.data.keyword.bpshort}} action is viewed by a user.|
+| `schematics.action.read`| A user views the {{site.data.keyword.bpshort}} action.|
 | `schematics.action.update`| A {{site.data.keyword.bpshort}} action is updated successfully or failed to update.|
 {: caption="Action events where activity tracking events are sent" caption-side="bottom"}
 
@@ -96,9 +96,9 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 
 | Action             | Description      |
 | -------------------| -----------------|
-| `schematics.job.create` | A {{site.data.keyword.bpshort}} job is created or failed to create. | 
-| `schematics.job.delete` | A {{site.data.keyword.bpshort}} job was deleted or failed to delete. | 
-| `schematics.job.read`| A {{site.data.keyword.bpshort}} job is viewed by a user.|
+| `schematics.job.create` | A {{site.data.keyword.bpshort}} job is created or failed to create. |
+| `schematics.job.delete` | A {{site.data.keyword.bpshort}} job was deleted or failed to delete. |
+| `schematics.job.read`| A user views the {{site.data.keyword.bpshort}} job.|
 | `schematics.job.update`| A {{site.data.keyword.bpshort}} job is updated successfully or failed to update.|
 {: caption="Job events" caption-side="bottom"}
 
@@ -107,9 +107,9 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 
 | Action             | Description      |
 | -------------------| -----------------|
-| `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} shared data set was created or failed to create. |
-| `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} shared data set was deleted or failed to delete. |
-| `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} shared data set was updated or failed to updated. |
+| `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} `shareddata` set was created or failed. |
+| `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} `shareddata` set was deleted or failed.|
+| `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} `shareddata` set was updated or failed.|
 {: caption="`Shareddata events`" caption-side="bottom"}
 
 ### Other events
@@ -150,7 +150,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
-### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
+### Launching {{site.data.keyword.logs_full_notm}}
 {: #log-launch-standalone}
 
 For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation](/docs/cloud-logs?topic=cloud-logs-instance-launch).
@@ -161,22 +161,22 @@ For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [L
 ### Creating a workspace
 {: #at_analyze_wks}
 
-When you create your first workspace, the following events are created by a {{site.data.keyword.bpshort}} owned service ID and sent to {{site.data.keyword.at_full_notm}}.
+When you create your first workspace, the following events are sent to {{site.data.keyword.bpshort}} owned service ID and {{site.data.keyword.at_full_notm}}.
 {: shortdesc}
 
-When you manage a workspace, the following events are created by the {{site.data.keyword.bpshort}} service:
+When you manage a workspace, the {{site.data.keyword.bpshort}} service creates the following events:
 
-- An event with an action `schematics.instance.create`, when a first workspace is created.
-- An event with an action `schematics.instance.update`, when a workspace is modified.
-- An event with an action `schematics.instance.delete`, when a workspace is deleted.
+- An event `schematics.instance.create`, when a first workspace is created.
+- An event `schematics.instance.update`, when a workspace is modified.
+- An event `schematics.instance.delete`, when a workspace is deleted.
 
-The `initiatorId` of the request for these actions is set to a service ID that is owned by the {{site.data.keyword.bpshort}} service.
+The `initiatorId` of the request for these actions is set to a service ID where the {{site.data.keyword.bpshort}} service owns.
 
 In addition, when a workspace is created, more events are also generated:
 
-- Event with action `schematics.tag.attach` to report tagging of the workspace
-- Event with action `schematics.instance.create` to report the creation of the workspace instance in your account
-- Event with action `schematics.instance.update` to report updates to the workspace properties
+- Event `schematics.tag.attach` to report tagging of the workspace
+- Event `schematics.instance.create` to report the creation of the workspace instance in your account
+- Event `schematics.instance.update` to report updates to the workspace properties
 
 You can search by `target.id` to identify all events that report actions on a workspace. For example, you can use a query such as, `crn:v1:bluemix:public:schematics:eu-de:a/xxxxxx:xxxxxxx:workspace:eu-de.workspace.observability-workspace.xxxxxxxx`.
 

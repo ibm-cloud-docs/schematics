@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-14"
 
 keywords: schematics
 subcollection: schematics
@@ -1572,25 +1572,9 @@ subcollection: schematics
     * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_3)
 
 
-## Logging and monitoring
-{: #sitemap_logging_and_monitoring}
+## Observability
+{: #sitemap_observability}
 
-
-[Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}](/docs/schematics?topic=schematics-monitoring-instances#monitoring-instances)
-
-* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-monitoring-instances#launch-dashboard)
-
-* [Creating service instance](/docs/schematics?topic=schematics-monitoring-instances#create-instance)
-
-* [Creating custom dashboard](/docs/schematics?topic=schematics-monitoring-instances#create-dashboard)
-
-* [{{site.data.keyword.bplong_notm}} metrics details](/docs/schematics?topic=schematics-monitoring-instances#metrics-details)
-
-    * [`ibm_schematics_workspace_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
-
-    * [`ibm_schematics_workspace_actions_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
-
-    * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
 
 [Activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at_events)
 
@@ -1614,11 +1598,27 @@ subcollection: schematics
 
 * [Viewing activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-viewing)
 
-    * [Launching {{site.data.keyword.logs_full_notm}} from the Observability page](/docs/schematics?topic=schematics-at_events#log-launch-standalone)
+    * [Launching {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-at_events#log-launch-standalone)
 
 * [Analyzing {{site.data.keyword.bpshort}} activity tracking events](/docs/schematics?topic=schematics-at_events#at_events_analyze)
 
     * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_wks)
+
+[Logging for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-logging#logging)
+
+* [Locations where platform logs are generated](/docs/schematics?topic=schematics-logging#log-locations)
+
+    * [Locations where logs are sent to {{site.data.keyword.la_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
+
+* [Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}](/docs/schematics?topic=schematics-logging#lr-locations)
+
+* [Platform logs that are generated](/docs/schematics?topic=schematics-logging#log-platform)
+
+* [Launching {{site.data.keyword.logs_full_notm}} from the Observability page](/docs/schematics?topic=schematics-logging#log-launch-standalone)
+
+* [Fields by log type](/docs/schematics?topic=schematics-logging#log-fields)
+
+* [Log messages](/docs/schematics?topic=schematics-logging#log_messages)
 
 
 ## Location based access
