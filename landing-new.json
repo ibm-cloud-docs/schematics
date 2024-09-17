@@ -1,0 +1,57 @@
+{
+    "version": 2,
+    "title": "<Product name>",
+    "introduction": "This is a description of what the user will be able to find in the content for your product.",
+    "product_page": "https://www.ibm.com/products/product-value",
+    "console_page": "/relative/console/path",
+    "section_topics": {
+      "links": [
+        {
+          "title": "Topic title",
+          "href": "/docs/overview?topic=overview-get-started-checklist"
+        },
+        {
+          "title": "Topic title",
+          "href": "/docs/overview?topic=overview-get-started-checklist"
+        },
+        {
+          "title": "Topic title",
+          "href": "/docs/overview?topic=overview-get-started-checklist"
+        },
+        {
+          "title": "Topic title",
+          "href": "/docs/overview?topic=overview-get-started-checklist"
+        },
+        {
+          "title": "Topic title",
+          "href": "/docs/overview?topic=overview-get-started-checklist"
+        }
+      ]
+    },
+    "section_devtools": {
+      "api": "/apidocs/acme-test-v1/acme-test-v1.2.0",
+      "cli": "/docs/acme-test",
+      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
+    },
+    "section_updates": {
+      "view_more": "/docs/overview?topic=overview-whatsnew",
+      "tiles": [
+        {
+          "date": "07 August 2024",
+          "title": "Experimental: Access resources from the Resources tab"
+        },
+        {
+          "date": "07 August 2024",
+          "title": "View counts for all resources in the resource summary widget"
+        },
+        {
+          "date": "17 June 2024",
+          "title": "Experimental: Using AI to answer your questions about IBM Cloud"
+        },
+        {
+          "date": "17 June 2024",
+          "title": "Changes to IBM Cloud projects API method to list all deployed resources"
+        }
+      ]
+    }
+  }

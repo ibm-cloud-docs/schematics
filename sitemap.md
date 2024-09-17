@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-14"
+lastupdated: "2024-09-17"
 
 keywords: schematics
 subcollection: schematics
@@ -1619,6 +1619,34 @@ subcollection: schematics
 * [Fields by log type](/docs/schematics?topic=schematics-logging#log-fields)
 
 * [Log messages](/docs/schematics?topic=schematics-logging#log_messages)
+
+[Monitoring metrics for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring#monitoring)
+
+* [Locations where metrics are generated](/docs/schematics?topic=schematics-monitoring#mon-locations)
+
+* [Enabling platform metrics for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring#monitoring-enable)
+
+* [Viewing metrics](/docs/schematics?topic=schematics-monitoring#monitoring-view)
+
+    * [Launching {{site.data.keyword.mon_full}} from the {{site.data.keyword.bpshort}} dashboard](/docs/schematics?topic=schematics-monitoring#monitoring-view-ui)
+
+* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-monitoring#launch-dashboard)
+
+    * [Launching {{site.data.keyword.mon_full}} from the Observability page](/docs/schematics?topic=schematics-monitoring#monitoring-view-ob)
+
+* [Monitoring {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring#monitoring-monitor)
+
+* [Creating a service instance](/docs/schematics?topic=schematics-monitoring#create-instance)
+
+* [Creating a custom dashboard](/docs/schematics?topic=schematics-monitoring#create-dashboard)
+
+* [{{site.data.keyword.bplong_notm}} metrics dictionary](/docs/schematics?topic=schematics-monitoring#monitoring-metrics-dictionary)
+
+    * [`ibm_schematics_workspace_count`](/docs/schematics?topic=schematics-monitoring#wkspace-count)
+
+    * [`ibm_schematics_workspace_actions_count`](/docs/schematics?topic=schematics-monitoring#wkspace-actions-count)
+
+    * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring#wkspace-vulnerability-count)
 
 
 ## Location based access
