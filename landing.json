@@ -4,6 +4,11 @@
     "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
     "product_page": "https://www.ibm.com/products?q=schematics",
     "console_page": "https://cloud.ibm.com/schematics/overview",
+    "section_devtools": {
+      "api": "/apidocs/schematics",
+      "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
+      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
+    },
     "section_topics": {
       "links": [
         {
@@ -63,11 +68,6 @@
         "type": "training"
       } 
     ],
-    "section_devtools": {
-      "api": "/apidocs/schematics",
-      "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
-    },
     "section_updates": {
       "view_more": "/docs/schematics?topic=schematics-schematics-relnotes",
       "tiles": [
