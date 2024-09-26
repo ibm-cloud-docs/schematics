@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-26"
 
 keywords: schematics
 subcollection: schematics
@@ -1598,7 +1598,7 @@ subcollection: schematics
 
 * [Viewing activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-viewing)
 
-    * [Launching {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-at_events#log-launch-standalone)
+    * [Launching {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-at_events#sc-log-launch-standalone)
 
 * [Analyzing {{site.data.keyword.bpshort}} activity tracking events](/docs/schematics?topic=schematics-at_events#at_events_analyze)
 

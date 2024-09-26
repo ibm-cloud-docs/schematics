@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-26"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -133,6 +133,7 @@ Use the {{site.data.keyword.bpshort}} actions job details to find a history of a
 {: shortdesc}
 
 Jobs are classified into the following categories:
+
 - **System jobs**: These jobs represent all {{site.data.keyword.bpshort}} internal activities and checks, for example, downloading your Ansible playbook from GitHub or verifying your playbook. You can find these jobs in the **All** tab on the action's **Jobs** page. 
 - **User jobs**: These jobs are created when you check or run an action. You can find a summary of all user-initiated jobs when you click the **User** tab on the action's **Jobs** page.
 
