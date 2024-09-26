@@ -53,19 +53,20 @@
         "title": "IBM Developer",
         "description": "Visit IBM Developer for technical articles, code patterns, tutorials, and more. ",
         "href": "https://developer.ibm.com/?q=schematics",
-        "type": "developer"
+        "recommend": true
       },   
       {
         "title": "Achitecture Center",
         "description": "Discover the architecture references available for this product. ",
         "href": "https://www.ibm.com/products/schematics",
-        "type": "architecture"
+        "recommend": true
       },
       {
         "title": "IBM Cloud training",
         "description": "Build your skill with IBM Cloud training. ",
         "href": "https://www.ibm.com/training/cloud",
-        "type": "training"
+        "type": "training",
+        "recommend": true
       } 
     ],
     "section_updates": {
