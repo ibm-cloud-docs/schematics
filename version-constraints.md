@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-05"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -133,12 +133,12 @@ required_version = ">=1.0.0, <2.0"
 
 To use any of the predefined [{{site.data.keyword.bpshort}} images](#schematics-image-ov), you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. 
 
-If {{site.data.keyword.cloud_notm}} Provider plug-in version is not declared in your Terraform template, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. 
+If {{site.data.keyword.cloud_notm}} Provider plug-in version is not declared in your Terraform template, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}.
 {: note}
 
 **Example to specify a predefined {{site.data.keyword.bpshort}} image**: </br>
 
-The following example shows how to use the {{site.data.keyword.bpshort}} image that was built for the {{site.data.keyword.cloud_notm}} Provider plug-in v1.39.1. This image includes specific versions for other providers, such as the REST API provider. 
+The following example shows how to use the {{site.data.keyword.bpshort}} image that was built for the {{site.data.keyword.cloud_notm}} Provider plug-in v1.39.1. This image includes specific versions for other providers, such as the REST API provider.
 
 ```terraform
 terraform {

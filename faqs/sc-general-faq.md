@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-26"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -406,7 +406,7 @@ The following are the steps to create and restrict the PAT tokens.
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} does not support you the ability to edit the Terraform [backend configuration](https://developer.hashicorp.com/terraform/language/settings/backends/configuration#partial-configuration). {{site.data.keyword.bpshort}} internally manages the [state-file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds), in its own COS bucket, that are encrypted by using [envelop encryption](/docs/key-protect?topic=key-protect-envelope-encryption).
+{{site.data.keyword.bpshort}} does not support you the ability to edit the Terraform [backend configuration](https://developer.hashicorp.com/terraform/language/providers/configuration). {{site.data.keyword.bpshort}} internally manages the [state-file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds), in its own COS bucket, that are encrypted by using [envelop encryption](/docs/key-protect?topic=key-protect-envelope-encryption).
 
 ## When do you specify the GitHub master or subdirectory branch?
 {: #gitbranch-faq}

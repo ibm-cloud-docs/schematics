@@ -1,6 +1,6 @@
 {
   "title": "IBM Cloud Schematics docs",
-  "lastupdated": "2024-09-27",
+  "lastupdated": "2024-09-26",
   "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
   "section_devtools": {
     "api": "/apidocs/schematics",
@@ -17,11 +17,6 @@
       "title": "Automate cloud operations with actions",
       "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
       "href": "/docs/schematics?topic=schematics-getting-started-ansible"
-    },
-    {
-      "title": "Extend provisioning through agents",
-      "description": "Learn how to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions.",
-      "href": "/docs/schematics?topic=schematics-agent-about-intro"
     },
     {
       "title": "Deploy cloud services with workspaces",
@@ -45,9 +40,8 @@
     },
     {
       "title": "Set up the Schematics CLI",
-      "description": "Install the Schematics CLI plug-in to perform Schematics actions in your IBM Cloud account.",
+      "description": "Install the Schematics CLI plug-in to run Schematics actions in your IBM Cloud account.",
       "href": "/docs/schematics?topic=schematics-setup-cli"
     }
   ]
 }
-  
