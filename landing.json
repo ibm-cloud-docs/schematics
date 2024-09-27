@@ -1,90 +1,53 @@
 {
-    "version": 2,
-    "title": "IBM Cloud Schematics docs",
-    "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
-    "product_page": "https://www.ibm.com/products?q=schematics",
-    "console_page": "https://cloud.ibm.com/schematics/overview",
-    "section_devtools": {
-      "api": "/apidocs/schematics",
-      "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
+  "title": "IBM Cloud Schematics docs",
+  "lastupdated": "2024-09-27",
+  "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
+  "section_devtools": {
+    "api": "/apidocs/schematics",
+    "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
+  },
+  "section_learn": {
+    "developer": "https://developer.ibm.com/?q=schematics",
+    "architecture": "https://www.ibm.com/products/schematics",
+    "training": "https://www.ibm.com/training/cloud"
+  },
+  "section_recommended": [
+    {
+      "title": "Automate cloud operations with actions",
+      "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
+      "href": "/docs/schematics?topic=schematics-getting-started-ansible"
     },
-    "section_topics": {
-      "links": [
-        {
-          "title": "Automate cloud operations with actions",
-          "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
-          "href": "/docs/schematics?topic=schematics-getting-started-ansible"
-        },
-        {
-          "title": "Extend provisioning through agents",
-          "description": "Learn how to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions.",
-          "href": "/docs/schematics?topic=schematics-agent-about-intro"
-        },
-        {
-          "title": "Deploy cloud services with workspaces",
-          "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to store your data in IBM Cloud.",
-          "href": "/docs/schematics?topic=schematics-get-started-terraform"
-        },
-        {
-          "title": "Explore the IBM Cloud software catalog",
-          "description": "Try out one of the IBM-provided software templates to quickly spin up a classic virtual server instance (VSI), and automatically configure the instance to connect to an IBM Cloud Database.",
-          "href": "/docs/schematics?topic=schematics-get-started-software"
-        },
-        {
-          "title": "Learn more about Schematics",
-          "description": "Learn about how Schematics works, integrated open source technologies, and the benefits of using the service.",
-          "href": "/docs/schematics?topic=schematics-learn-about-schematics"
-        },
-        {
-          "title": "Browse Terraform templates",
-          "description": "Explore the sample Terraform templates, onboard them to your private catalogs, and try them using Schematics.",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template"
-        },
-        {
-          "title": "Set up the Schematics CLI",
-          "description": "Install the Schematics CLI plug-in to perform Schematics actions in your IBM Cloud account.",
-          "href": "/docs/schematics?topic=schematics-setup-cli"
-        }
-      ]
+    {
+      "title": "Extend provisioning through agents",
+      "description": "Learn how to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions.",
+      "href": "/docs/schematics?topic=schematics-agent-about-intro"
     },
-    "section_highlights": [
-      {
-        "title": "IBM Developer",
-        "description": "Visit IBM Developer for technical articles, code patterns, tutorials, and more. ",
-        "href": "https://developer.ibm.com/?q=schematics",
-        "recommend": true
-      },   
-      {
-        "title": "Achitecture Center",
-        "description": "Discover the architecture references available for this product. ",
-        "href": "https://www.ibm.com/products/schematics",
-        "recommend": true
-      },
-      {
-        "title": "IBM Cloud training",
-        "description": "Build your skill with IBM Cloud training. ",
-        "href": "https://www.ibm.com/training/cloud",
-        "type": "training",
-        "recommend": true
-      } 
-    ],
-    "section_updates": {
-      "view_more": "/docs/schematics?topic=schematics-schematics-relnotes",
-      "tiles": [
-        {
-          "date": "21 August 2024",
-          "title": "Terraform_v1.7.5, Terraform_v1.8.5, and Terraform_v1.9.2 support in Schematics"
-        },
-        {
-          "date": "23 July 2024",
-          "title": "Release Schematics Agents version"
-        },
-        {
-          "date": "25 March 2024",
-          "title": "Experimental: Schematics Agents supports Red Hat OpenShift Kubernetes Service"
-        }
-      ]
+    {
+      "title": "Deploy cloud services with workspaces",
+      "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to store your data in IBM Cloud.",
+      "href": "/docs/schematics?topic=schematics-get-started-terraform"
+    },
+    {
+      "title": "Explore the IBM Cloud software catalog",
+      "description": "Try out one of the IBM-provided software templates to quickly spin up a classic virtual server instance (VSI), and automatically configure the instance to connect to an IBM Cloud Database.",
+      "href": "/docs/schematics?topic=schematics-get-started-software"
+    },
+    {
+      "title": "Learn more about Schematics",
+      "description": "Learn about how Schematics works, integrated open source technologies, and the benefits of using the service.",
+      "href": "/docs/schematics?topic=schematics-learn-about-schematics"
+    },
+    {
+      "title": "Browse Terraform templates",
+      "description": "Explore the sample Terraform templates, onboard them to your private catalogs, and try them using Schematics.",
+      "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template"
+    },
+    {
+      "title": "Set up the Schematics CLI",
+      "description": "Install the Schematics CLI plug-in to perform Schematics actions in your IBM Cloud account.",
+      "href": "/docs/schematics?topic=schematics-setup-cli"
     }
-  }
+  ]
+}
   
