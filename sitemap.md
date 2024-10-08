@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-10-08"
 
 keywords: schematics
 subcollection: schematics
@@ -1154,6 +1154,8 @@ subcollection: schematics
 * [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-wks-state#sch-create-deploy-to-schematics)
 
 * [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-state-logs)
+
+[Terraform version precedence](/docs/schematics?topic=schematics-sch-wks-tf-version-precedence#sch-wks-tf-version-precedence)
 
 [Planning for using workspaces](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
 
