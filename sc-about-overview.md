@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-15"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -69,3 +69,4 @@ You do not need to install the open source projects on your machine or learn the
 |{{site.data.keyword.bpshort}} is fully integrated with IAM | You can use service access roles to control who can access and collaborate on your workspaces and actions, or roll out changes. You can invite {{site.data.keyword.cloud_notm}} users to your account and leverage IAM access groups to streamline the access assignment process in your organization. As a multi-tenant solution, {{site.data.keyword.bpshort}} creates all resources in your personal account. Resources are not shared or reused by other {{site.data.keyword.cloud_notm}} tenants. Because {{site.data.keyword.bpshort}} is built on Kubernetes, IAM service access roles are mapped to role-based access controls (RBAC) in Kubernetes to enforce resource isolation within your account.|
 |Full {{site.data.keyword.IBM_notm}} support for the open-source tools and plug-ins related to {{site.data.keyword.cloud_notm}} | {{site.data.keyword.bpshort}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using the `{{site.data.keyword.terraform-provider_full_notm}}`, or the Ansible modules for {{site.data.keyword.cloud_notm}}, you can [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar#getting-support).|
 {: caption="{{site.data.keyword.bpshort}} benefits" caption-side="bottom"}
+{: #benefits-table}

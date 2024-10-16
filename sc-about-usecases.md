@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-10"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -38,7 +38,7 @@ To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, 
 
 To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}}, you create a workspace that points to the Terraform configuration files that you want to provision. The plug-in analyzes the resources that you specified and determines the order in which these resources including any dependencies that must be provisioned. Review the following image for the detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} workspaces. 
 
-![Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform](images/schematics_flow.png){: caption="Figure 1. Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform" caption-side="bottom"}
+![Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform](images/schematics_flow.png){: caption="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform" caption-side="bottom"}
 
 1. **Codify your {{site.data.keyword.cloud_notm}} resources**. Use Terraform HashiCorp Configuration Language (HCL) or JSON format to specify the {{site.data.keyword.cloud_notm}} resources that you want to provision in your {{site.data.keyword.cloud_notm}} environment. If you are not familiar with Terraform, you can select one of the default Terraform templates that {{site.data.keyword.bpshort}} provides to provision the {{site.data.keyword.cloud_notm}} resources that you want. Terraform templates can be stored in a GitHub, GitLab, or `Bitbucket` repository to ensure source control and enable collaboration, review, and auditing in your organization. You can save usage information in `readme` files to make the template shareable and usable across multiple teams. You can also upload tape archive files (`.tar`) from your local machine to provide the template to {{site.data.keyword.bpshort}}.
 2. **Create your workspace**. You can point your {{site.data.keyword.bpshort}} workspaces to a GitHub, GitLab, or `Bitbucket` repository where you store your Terraform template, or provide your template by uploading a `.tar` file. workspaces help to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.iamlong}}, you can control who has access to your workspaces? and who can run actions on your {{site.data.keyword.cloud_notm}} resources?
@@ -60,7 +60,7 @@ Ansible does not use agents or a custom security infrastructure that must be pre
 
 To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create a {{site.data.keyword.bpshort}} actions that points to the Ansible playbook that you want to run. Review the following image for the detailed information about how to run Ansible playbooks with {{site.data.keyword.bpshort}} actions.
 
-![Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible](images/ansible_flow.png){: caption="Figure 2. Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible" caption-side="bottom"}
+![Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible](images/ansible_flow.png){: caption="Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible" caption-side="bottom"}
 
 1. **Add tasks to your playbook**: Use Ansible YAML syntax to describe the configuration tasks that you want to run on your cloud infrastructure, such as installing software or starting, stopping, and rebooting a virtual server. You add these tasks to an Ansible playbook and store the playbook in a GitHub, GitLab, or `Bitbucket` repository to ensure source control and enable collaboration, review, and auditing in your organization. If you are not familiar with Ansible, you can use one of the [{{site.data.keyword.IBM_notm}} provided playbooks](https://github.com/Cloud-Schematics){: external}, or browse the [Ansible Galaxy library](https://galaxy.ansible.com/){: external}.
 2. **Create a {{site.data.keyword.bpshort}} action**: When you create a {{site.data.keyword.bpshort}} action, you point your action to the repository that stores your Ansible playbook. Then, you select the cloud resources where you want to run the tasks that are defined in your Ansible playbook. To protect your cloud resources, you can further set up a bastion host in front of your target hosts that proxies all Ansible SSH connections to the target hosts. 
@@ -79,7 +79,7 @@ You can also create your own software and infrastructure templates and import th
 To get started with software deployment in {{site.data.keyword.bpshort}}, see the [Getting started tutorial](/docs/schematics?topic=schematics-get-started-software). 
 {: tip}
 
-![Software deployments with {{site.data.keyword.bpshort}}](images/software_flow.png){: caption="Figure 3. Software deployments with {{site.data.keyword.bpshort}}" caption-side="bottom"}
+![Software deployments with {{site.data.keyword.bpshort}}](images/software_flow.png){: caption="Software deployments with {{site.data.keyword.bpshort}}" caption-side="bottom"}
 
 1. **Choose a template**: The [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of infrastructure and software templates that you can choose from. These templates help to quickly install software, such as {{site.data.keyword.cloud_notm}} Paks, {{site.data.keyword.appserver_full}}, or Kibana and Grafana into the target service of your choice. 
 2. **Configure your workspace and target**: When you choose one of the provided templates, you must select the target where you want to install the template. Depending on the template that you choose, the target can be an {{site.data.keyword.containerlong_notm}} cluster, a {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. Because {{site.data.keyword.bpshort}} is used to install the software, you must configure the workspace that is automatically created for you. 

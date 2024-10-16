@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-10"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -32,7 +32,7 @@ The following {{site.data.keyword.bpshort}} architecture image depicts:
 - The role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} `APIs`, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} architecture](images/schematics-enduser-architecture.png){: caption="Figure 1. {{site.data.keyword.bpshort}} architecture" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} architecture](images/schematics-enduser-architecture.png){: caption="{{site.data.keyword.bpshort}} architecture" caption-side="bottom"}
 
 ## Workload isolation
 {: #workload-isolation}

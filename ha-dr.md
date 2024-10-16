@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-10"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -37,7 +37,7 @@ Review the following image to find a general approach of how you can make your r
 Supported high availability features depend on the type of {{site.data.keyword.cloud_notm}} resource that you choose to provision with {{site.data.keyword.bplong_notm}}. Some high availability scenarios that are shown in this image might not be available for your resource. Make sure to review the resource documentation to find supported high availability features.
 {: note}
 
-![High availability for {{site.data.keyword.cloud_notm}} resources](images/schematics-ha-roadmap.png){: caption="Figure 1. High availability for {{site.data.keyword.cloud_notm}} resources" caption-side="bottom"}
+![High availability for {{site.data.keyword.cloud_notm}} resources](images/schematics-ha-roadmap.png){: caption="High availability for {{site.data.keyword.cloud_notm}} resources" caption-side="bottom"}
 
 1. **Single zone resources**: By default, your {{site.data.keyword.cloud_notm}} resource is deployed into one zone. This setup does not protect your workloads or data from a zonal or regional failure.
 2. **Multiple resources across zones**: You can create multiple instances and spread these instances across zones, such as [multizone clusters in {{site.data.keyword.containerlong_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters) or a [Virtual Private Cloud with subnets in different zones](/docs/vpc?topic=vpc-vpc-multi-region). This setup protects your workloads and data in case of a zonal failure. Note that this setup might not be available for your resource.
