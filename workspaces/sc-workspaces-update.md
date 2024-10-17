@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-17"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -38,7 +38,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Access **Schematics** > **Workspaces** > [**Update workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
     - In **Specify Template** section:
         - **GitHub, GitLab, or `Bitbucket` repository URL** - `<provide your Terraform template Git repository URL`.
-        - **Personal access token** - `<leave it blank>`.
+        - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
         - Terraform Version - `terraform_v1.5`. You need to select Terraform version 1.5 or greater version. For example, if your Terraform templates are created by using Terraform v1.5, select the `Terraform version` parameter as **terraform_v1.5**. 
           You can select `Terraform_v1.4` to use Terraform version 1.4, `terraform_v1.6` to use Terraform version 1.6. When you specify `terraform_v1.5` means that users can have template that is of Terraform `v1.5.0`, `v1.5.1`, or `v1.5.7`, so on. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
           {: note}

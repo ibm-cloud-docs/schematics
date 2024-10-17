@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-17"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -108,7 +108,8 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
     ```
     {: pre}
 
-3. For the private repository, provide your **GitHub personal access token**. See the steps to fetch the [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}.
+3. For the private repository, provide your **GitHub personal access token**. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
+ See the steps to fetch the [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}.
 4. Select `terraform_v1.4` from the **Terraform version** drop-down.
 5. Click **Next**.
 6. In the **workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
