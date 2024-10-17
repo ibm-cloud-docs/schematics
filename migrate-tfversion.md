@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-17"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -53,10 +53,23 @@ The workspace terraform version parameter is of the form `terraform_v1.4` or `te
    - Set the CLI target region with `ibmcloud target -r <region>` to be the same as the workspace you are updating. 
    - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens`.
    - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
-   - The workspace is updated by executing a `cURL` command to call the [{{site.data.keyword.bpshort}}](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace) Update API to update the Terraform version. This operation is region specific and must specify the desired [{{site.data.keyword.bpshort}} API region endpoint](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints) for the workspace target region. Replace the text `<schematics-region-endpoint>` in the command with the endpoint for the target workspace region. 
+   - The workspace is updated by executing a `cURL` command to call the [{{site.data.keyword.bpshort}}](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace) Update API to update the Terraform version. This operation is region specific and must specify the desired [{{site.data.keyword.bpshort}} API region endpoint](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints) for the workspace target region. Replace the text `<schematics-region-endpoint>` in the command with the endpoint for the target workspace region.
 
     ```sh
-    curl --request PUT --url https://<schematics-region-endpoint>.cloud.ibm.com/v1/workspaces/<workspace_id> -H  "Authorization: Bearer <token-data>" -d '{"template_data":[{"type":"<terraform_version>"}]}'
+        curl -X PUT https://<schematics-region-endpoint>.cloud.ibm.com/v1/workspaces/<w_id> \
+        -H 'Authorization: Bearer <token>' \
+        -H 'refresh_token: <token>' \
+        -d '{
+        "type": [
+            "<terraform_version>"
+        ],
+        "template_data": [
+            {
+                "folder": ".",
+                "type": "<terraform_version>"
+            }
+        ]
+        }'
     ```
     {: pre}
 

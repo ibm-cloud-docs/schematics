@@ -69,7 +69,6 @@ toc:
                                                     - job-download-file.md
                                                     - job-force-stop.md
                                                     - workspaces/sc-workspaces-states.md
-                                                    - workspaces/sc-workspace-tf-version-support.md
                                                     - workspaces/sc-workspaces-prepare.md
                                                     - topicgroup:
                                                               label: Managing workspaces and resources
