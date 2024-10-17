@@ -2469,8 +2469,6 @@ subcollection: schematics
 
 * [How do I rectify 401 errors from the broker call when deleting the {{site.data.keyword.bpshort}} objects?](/docs/schematics?topic=schematics-workspaces-faq#sch-obj-delete-faq)
 
-* [How to use the secret reference in {{site.data.keyword.bpshort}} Workspace creation flow and update the variables?](/docs/schematics?topic=schematics-workspaces-faq#sch-secret-ref-faq)
-
 
 ## Troubleshooting
 {: #sitemap_troubleshooting}

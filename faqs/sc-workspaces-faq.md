@@ -669,12 +669,3 @@ If you want to see all the available environment variables in the workspace use 
 {: support}
 
 After the {{site.data.keyword.bpshort}} objects deletion, if the {{site.data.keyword.bpshort}} services fails to delete the objects in your account. You need to raise a [{{site.data.keyword.bpshort}} support ticket](/docs/schematics?topic=schematics-schematics-help) to remove from the resource controller.
-
-## How to use the secret reference in {{site.data.keyword.bpshort}} Workspace creation flow and update the variables?
-{: #sch-secret-ref-faq}
-{: faq}
-{: support}
-
-Provide the. UI steps
-
-This is available in stage, request vishwa to get the allowlist to test the UI Steps
