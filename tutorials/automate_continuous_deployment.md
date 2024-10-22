@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-15"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -17,7 +17,7 @@ completion-time: 60m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
+# Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain
 {: #workspace-continuous-deployment}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics, continuous-deployment"}

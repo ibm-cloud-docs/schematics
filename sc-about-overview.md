@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-22"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Learning about {{site.data.keyword.bpshort}} 
+# What is {{site.data.keyword.bpshort}}?
 {: #learn-about-schematics} 
 
 {{site.data.keyword.bpshort}} is an {{site.data.keyword.cloud_notm}} service, that delivers [Infrastructure as Code](/docs/schematics?topic=schematics-infrastructure-as-code) (IaC) tools as a service. You can use the capabilities of {{site.data.keyword.bpshort}} to consistently deploy and manage your cloud infrastructure environments. From a single pane of glass, you can run end-to-end automation to build one or more stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
