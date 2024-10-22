@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-22"
 
 keywords: schematics cost, schematics cost estimation, cost estimation, cost, cost-estimation
 
@@ -27,7 +27,7 @@ Review the list of [supported and unsupported resources](https://github.com/IBM-
 After you add the template to your workspace, you can configure the input values. By doing so, you can tailor the template to match your needs. Adjusting the inputs might adjust the estimated cost.
 {: shortdesc}
 
-1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Schematics** > **Workspaces**.
+1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Terraform**.
 2. Select your workspace.
 3. Go to the workspace **Settings** page.
 4. Enter the input values and save to configure the template. For more information, see [running a workspace plan](/docs/schematics?topic=schematics-sch-plan-wks&interface=ui).

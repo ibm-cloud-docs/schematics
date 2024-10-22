@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-22"
 
 keywords: schematics
 subcollection: schematics
@@ -18,11 +18,16 @@ subcollection: schematics
 
 
 
-## Getting started
-{: #sitemap_getting_started}
+## Getting started with {{site.data.keyword.bplong_notm}}
+{: #sitemap_getting_started_with_}
 
 
-[Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
+[Getting started with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
+
+
+## Using workspaces to deploy infrastructure and cloud services
+{: #sitemap_using_workspaces_to_deploy_infrastructure_and_cloud_services}
+
 
 [Using workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
@@ -34,6 +39,11 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
+
+## Using actions to perform configuration management
+{: #sitemap_using_actions_to_perform_configuration_management}
+
+
 [Using actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
@@ -41,6 +51,11 @@ subcollection: schematics
 * [Starting and stopping {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-getting-started-ansible#ansible-vsi)
 
 * [What's next?](/docs/schematics?topic=schematics-getting-started-ansible#ansible-whats-next)
+
+
+## Software deployment in {{site.data.keyword.bplong_notm}}
+{: #sitemap_software_deployment_in_}
+
 
 [Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
 
@@ -51,11 +66,11 @@ subcollection: schematics
 * [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
 
-## About
-{: #sitemap_about}
+## What is {{site.data.keyword.bpshort}}?
+{: #sitemap_what_is_}
 
 
-[Learning about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
+[What is {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
 
 * [IaC automation as-a-service](/docs/schematics?topic=schematics-learn-about-schematics#sc-IaCaas)
 
@@ -68,6 +83,11 @@ subcollection: schematics
     * [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
 * [Benefits of using Schematics](/docs/schematics?topic=schematics-learn-about-schematics#sc-benefits)
+
+
+## What is Infrastructure as Code?
+{: #sitemap_what_is_infrastructure_as_code}
+
 
 [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
 
@@ -93,6 +113,11 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
 
+
+## Choosing your IaC tool
+{: #sitemap_choosing_your_iac_tool}
+
+
 [Choosing your IaC tool](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
 * [What is Provisioning?](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-provisioning)
@@ -105,39 +130,21 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
-[{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
 
-* [{{site.data.keyword.bpshort}} workspace overview](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
+## Estimating infrastructure costs
+{: #sitemap_estimating_infrastructure_costs}
 
-* [Features](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-features)
 
-* [Next steps](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-nextsteps)
+[Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
 
-[{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
+* [Viewing the infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
 
-* [{{site.data.keyword.bpshort}} actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
+* [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
 
-* [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
 
-* [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
+## Your responsibilities when using {{site.data.keyword.bpshort}}
+{: #sitemap_your_responsibilities_when_using_}
 
-[{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
-
-* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-architecture)
-
-* [Private network configuration when using agents](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-networking)
-
-* [Benefits of using agents](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage)
-
-* [Next steps](/docs/schematics?topic=schematics-agent-about-intro#nextsteps-agentb1-arch)
-
-[Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
-
-* [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
-
-* [Configuration management with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
-
-* [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
 [Your responsibilities when using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sc-responsibilities#sc-responsibilities)
 
@@ -152,8 +159,21 @@ subcollection: schematics
 * [Disaster recovery](/docs/schematics?topic=schematics-sc-responsibilities#disaster-recovery)
 
 
-## Security and compliance
-{: #sitemap_security_and_compliance}
+## Understanding {{site.data.keyword.bpshort}} use cases
+{: #sitemap_understanding_use_cases}
+
+
+[Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
+
+* [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
+
+* [Configuration management with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
+
+* [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
+
+
+## Managing security and compliance with Schematics
+{: #sitemap_managing_security_and_compliance_with_schematics}
 
 
 [Security](/docs/schematics?topic=schematics-security#security)
@@ -176,43 +196,27 @@ subcollection: schematics
 
     * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#schematics-available-goals)
 
-[Protecting {{site.data.keyword.bpshort}} services with context-based restrictions](/docs/schematics?topic=schematics-access-control-cbr#access-control-cbr)
 
-* [Managing CBR settings](/docs/schematics?topic=schematics-access-control-cbr#manage-cbr-settings)
+## {{site.data.keyword.bpshort}} architecture
+{: #sitemap__architecture}
 
-* [Overview](/docs/schematics?topic=schematics-access-control-cbr#cbr-overview)
 
-* [Understanding network zones](/docs/schematics?topic=schematics-access-control-cbr#cbr-network-zones)
+[{{site.data.keyword.bpshort}} architecture](/docs/schematics?topic=schematics-compute-isolation#compute-isolation)
 
-    * [Creating network zones by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr&interface=api#cbr-create-zones-api)
+* [Architectural flow](/docs/schematics?topic=schematics-compute-isolation#basic-architecture)
 
-    * [Creating network zones by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-create-zone-ui)
+* [Workload isolation](/docs/schematics?topic=schematics-compute-isolation#workload-isolation)
 
-* [Understanding network rules](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-network-rules)
+    * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=schematics-compute-isolation#workload-api-isolation)
 
-    * [Create network rules by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr&interface=api#cbr-create-rules-api)
+    * [How is the information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?](/docs/schematics?topic=schematics-compute-isolation#workload-info-isolation)
 
-    * [Creating network rules by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-create-rules-ui)
+    * [How are cloud resources isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
 
-* [Next steps](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-next-steps)
 
-[Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
+## Best practices for securing the {{site.data.keyword.bpshort}} objects
+{: #sitemap_best_practices_for_securing_the_objects}
 
-[General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
-
-* [How do you audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
-
-* [Supporting classifications of personal data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
-
-* [About user data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-about-me)
-
-* [Is the {{site.data.keyword.bpshort}} database encrypted?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#is-our-ibm-schematics-database-encrypted)
-
-* [Data locations](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-locations)
-
-* [Service security](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#service-security)
-
-* [Deletion of data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#deletion-of-data)
 
 [Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=schematics-bp-secure-objects#bp-secure-objects)
 
@@ -251,23 +255,6 @@ subcollection: schematics
     * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
 * [Next steps](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-next-steps)
-
-
-## {{site.data.keyword.bpshort}} architecture
-{: #sitemap__architecture}
-
-
-[{{site.data.keyword.bpshort}} architecture](/docs/schematics?topic=schematics-compute-isolation#compute-isolation)
-
-* [Architectural flow](/docs/schematics?topic=schematics-compute-isolation#basic-architecture)
-
-* [Workload isolation](/docs/schematics?topic=schematics-compute-isolation#workload-isolation)
-
-    * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=schematics-compute-isolation#workload-api-isolation)
-
-    * [How is the information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?](/docs/schematics?topic=schematics-compute-isolation#workload-info-isolation)
-
-    * [How are cloud resources isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
 
 
 ## Release notes
@@ -964,8 +951,8 @@ subcollection: schematics
 * [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
 
-## Working with Workspaces
-{: #sitemap_working_with_workspaces}
+## Working with Workspaces - sc-about-workspaces.md
+{: #sitemap_working_with_workspaces_sc-about-workspacesmd}
 
 
 
@@ -1226,12 +1213,6 @@ subcollection: schematics
 
 * [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-api)
 
-[Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
-
-* [Viewing the infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
-
-* [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
-
 [Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
 
 * [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
@@ -1291,8 +1272,8 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks&interface=terraform#sch-destroy-wks-nextsteps)
 
 
-## Working with Actions
-{: #sitemap_working_with_actions}
+## Working with Actions - sc-about-actions.md
+{: #sitemap_working_with_actions_sc-about-actionsmd}
 
 
 [Creating Ansible roles and galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#ansible-roles-galaxy)
@@ -1400,8 +1381,8 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration&interface=cli#integrate-byok-cli)
 
 
-## Working with Agents
-{: #sitemap_working_with_agents}
+## Working with Agents - sc-about-agentb1.md
+{: #sitemap_working_with_agents_sc-about-agentb1md}
 
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
@@ -1764,6 +1745,28 @@ subcollection: schematics
 
 [User responsibilities by using {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-responsibilities#responsibilities)
 
+[Protecting {{site.data.keyword.bpshort}} services with context-based restrictions](/docs/schematics?topic=schematics-access-control-cbr#access-control-cbr)
+
+* [Managing CBR settings](/docs/schematics?topic=schematics-access-control-cbr#manage-cbr-settings)
+
+* [Overview](/docs/schematics?topic=schematics-access-control-cbr#cbr-overview)
+
+* [Understanding network zones](/docs/schematics?topic=schematics-access-control-cbr#cbr-network-zones)
+
+    * [Creating network zones by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr&interface=api#cbr-create-zones-api)
+
+    * [Creating network zones by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-create-zone-ui)
+
+* [Understanding network rules](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-network-rules)
+
+    * [Create network rules by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr&interface=api#cbr-create-rules-api)
+
+    * [Creating network rules by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-create-rules-ui)
+
+* [Next steps](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-next-steps)
+
+[Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
+
 [Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
 
 [Using private endpoints](/docs/schematics?topic=schematics-private-endpoints#private-endpoints)
@@ -1796,6 +1799,22 @@ subcollection: schematics
 
 * [How can I delete my information?](/docs/schematics?topic=schematics-secure-data#delete-data)
 
+[General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
+
+* [How do you audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
+
+* [Supporting classifications of personal data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
+
+* [About user data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-about-me)
+
+* [Is the {{site.data.keyword.bpshort}} database encrypted?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#is-our-ibm-schematics-database-encrypted)
+
+* [Data locations](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-locations)
+
+* [Service security](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#service-security)
+
+* [Deletion of data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#deletion-of-data)
+
 [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
 
 * [{{site.data.keyword.bpshort}} IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses#ipaddresses)
@@ -1826,11 +1845,11 @@ subcollection: schematics
 * [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_whats_next)
 
 
-## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
-{: #sitemap_setting_up_continuous_deployment_with_and_devops_toolchain}
+## Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain
+{: #sitemap_setting_up_continuous_deployment_with_and_a_devops_toolchain}
 
 
-[Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
+[Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
 
 * [Description](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-desc)
 

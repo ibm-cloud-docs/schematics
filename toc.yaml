@@ -14,35 +14,24 @@ toc:
                 - navgroup:
                           id: learn
                           topics:
+                                  - getting-started.md
+                                  - getting-started-terraform.md
+                                  - getting-started-ansible-new.md
+                                  - getting-started-software.md
+                                  - sc-about-overview.md
+                                  - sc-about-infrastructure-as-code.md
+                                  - sc-about-iac-opensource.md
+                                  - cost-estimation.md
+                                  - sc-about-responsibilities.md
+                                  - sc-about-usecases.md
                                   - topicgroup:
-                                            label: Getting started
-                                            topics:
-                                                    - getting-started.md
-                                                    - getting-started-terraform.md
-                                                    - getting-started-ansible-new.md
-                                                    - getting-started-software.md
-                                  - topicgroup:
-                                            label: About
-                                            topics:
-                                                    - sc-about-overview.md
-                                                    - sc-about-infrastructure-as-code.md
-                                                    - sc-about-iac-opensource.md
-                                                    - sc-about-workspaces.md
-                                                    - sc-about-actions.md
-                                                    - sc-about-agentb1.md
-                                                    - sc-about-usecases.md
-                                                    - sc-about-responsibilities.md
-                                  - topicgroup:
-                                            label: Security and compliance
+                                            label: Managing security and compliance with Schematics
                                             topics:
                                                     - security-compliance/sc-security.md
                                                     - security-compliance/sc-compliance.md
                                                     - manage-scc.md
-                                                    - sc-managing-access-cbr.md
-                                                    - security-compliance/sc-dataprivacygovernance.md
-                                                    - security-compliance/sc-gdpr.md
-                                                    - security-compliance/sc-bp-objects.md
                                   - architecture-workload-isolation.md
+                                  - security-compliance/sc-bp-objects.md
                                   - release-notes.md
                 - navgroup:
                           id: howto
@@ -54,6 +43,7 @@ toc:
                                                     - setup-api.md
                                   - topicgroup:
                                             label: Working with Workspaces
+                                                    - sc-about-workspaces.md
                                             topics:
                                                     - topicgroup:
                                                               label: Creating a workspace
@@ -78,7 +68,6 @@ toc:
                                                                       - wks-download-module-files.md
                                                                       - manage-resource-lifecycle.md
                                                                       - sc-drift.md
-                                                                      - cost-estimation.md
                                                                       - remotestate.md
                                                                       - deprecation-tf.md
                                                                       - migrate-tfversion.md
@@ -87,6 +76,7 @@ toc:
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
                                             label: Working with Actions
+                                                    - sc-about-actions.md
                                             topics:
                                                     - ansible-roles.md
                                                     - action-setup.md
@@ -106,6 +96,7 @@ toc:
                                                     - integration-kms.md
                                   - topicgroup:
                                             label: Working with Agents
+                                                    - sc-about-agentb1.md
                                             topics:
                                                    - sc-agentb1-plan.md
                                                    - sc-agent-infra-setup.md
@@ -138,9 +129,12 @@ toc:
                                             topics:
                                                     - iam.md
                                                     - responsibilities.md
+                                                    - sc-managing-access-cbr.md
+                                                    - security-compliance/sc-dataprivacygovernance.md
                                                     - ha-dr.md
                                                     - private-endpoint.md
                                                     - data-security.md
+                                                    - security-compliance/sc-gdpr.md
                                                     - allowips.md
                 - navgroup:
                           id: tutorial
