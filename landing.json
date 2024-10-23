@@ -3,7 +3,7 @@
     "title": "IBM Cloud Schematics docs",
     "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
     "product_page": "https://www.ibm.com/products/schematics",
-    "console_page": "https://cloud.ibm.com/schematics/overview",
+    "console_page": "/schematics/overview",
     "section_topics": {
       "links": [
         {
