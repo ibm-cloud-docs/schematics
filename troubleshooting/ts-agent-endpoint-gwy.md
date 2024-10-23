@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-23"
 
 keywords: endpoint gateway failed, schematics endpoint gateway error, wrong number of segments in crn
 
@@ -13,7 +13,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are you getting create endpoint gateway failure with wrong number of segments in CRN?
+# Why am I getting a create endpoint gateway error with the wrong number of segments in CRN?
 {: #agent-endpoint-error}
 
 When you run an {{site.data.keyword.bplong_notm}} plan or apply action, {{site.data.keyword.bpshort}} workspaces produces the endpoint gateway that is failed with wrong number of segments in CRN. Following error message is received.

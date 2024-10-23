@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-10-23"
 
 keywords: schematics resource group not found, schematics resource group error, schematics resource group does not exist, schematics resource group doesn't exist 
 
@@ -13,7 +13,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why can't {{site.data.keyword.bpshort}} find your resource group?
+# Why can't {{site.data.keyword.bpshort}} find my resource group?
 {: #rg-not-found}
 
 When you run an {{site.data.keyword.bplong_notm}} plan or apply action, the resource group that you try to retrieve by using the `ibm_resource_group` data source cannot be found. The following error message is thrown.

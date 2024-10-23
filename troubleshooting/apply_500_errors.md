@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-23"
 
 keywords: schematics 500 errors, schematics 5xx errors, schematics server error
 
@@ -13,7 +13,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why are you getting 5xx HTTP errors?
+# Why am I receiving 5xx HTTP errors?
 {: #server-errors}
 
 When you run a {{site.data.keyword.bpshort}} apply action, the action fails with 5xx HTTP errors such as in the following example: 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-10-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Common for actions and workspaces 
+# General FAQs
 {: #general-faq}
 
 Answers to common questions about the {{site.data.keyword.bplong_notm}} are classified into following section.

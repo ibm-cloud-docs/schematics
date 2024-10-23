@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-23"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -13,7 +13,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?
+# Why is {{site.data.keyword.bpshort}} apply failing?
 {: #nullresource-errors}
 
 You want to apply a Terraform template in {{site.data.keyword.cloud_notm}} that runs scripts on a target resource. To run the script, you use the Terraform `null_resource` in your configuration file. However, when you run the {{site.data.keyword.bpshort}} apply action, the action fails and you receive an error message that can include internal, timeout, connection, or input errors.

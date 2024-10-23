@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-10-23"
 
 keywords: schematics license, schematics notices, schematics license notices
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Notices and information
+# {{site.data.keyword.bpshort}} notices
 {: #schematics-notices}
 
 The following notices are included in this document:
@@ -86,5 +86,3 @@ The URL to the license is https://creativecommons.org/licenses/by-sa/4.0/legalco
 
 - HYDRATION [facebook/react](https://github.com/facebook/react/releases)
 - DATA.GO [go-openapi/runtime](https://github.com/go-openapi/runtime/releases/tag/v0.19.15)
-
-
