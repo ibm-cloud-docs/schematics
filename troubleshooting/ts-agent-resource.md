@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-10-23"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -13,7 +13,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# How can you provide value to `schematics_resource_crn` variable?
+# How can I provide value for the `schematics_resource_crn` variable?
 {: #agent-crn-not-found}
 
 When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{site.data.keyword.bpshort}} infrastructure workspace setup, the resource group that you try to retrieve by using the `{{site.data.keyword.bpshort}}_resource_crn` cannot be found. Following error are received.

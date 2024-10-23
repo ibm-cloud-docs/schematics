@@ -44,13 +44,13 @@ toc:
                                   - topicgroup:
                                             label: Working with Workspaces
                                             topics:
-                                                    - sc-about-workspaces.md
                                                     - topicgroup:
                                                               label: Creating a workspace
                                                               topics:
                                                                       - workspaces/sc-workspaces-create.md
                                                                       - create-terraform-config.md
                                                                       - special-env-vars.md
+                                                    - sc-about-workspaces.md
                                                     - workspaces/sc-workspaces-plan.md
                                                     - workspaces/sc-workspaces-deploy.md
                                                     - workspaces/sc-workspaces-update.md
@@ -131,7 +131,6 @@ toc:
                                                     - responsibilities.md
                                                     - sc-managing-access-cbr.md
                                                     - security-compliance/sc-dataprivacygovernance.md
-                                                    - ha-dr.md
                                                     - private-endpoint.md
                                                     - data-security.md
                                                     - security-compliance/sc-gdpr.md
@@ -152,48 +151,60 @@ toc:
                           id: reference
                           topics:
                                   - topicgroup:
-                                            label: CLI reference
-                                            topics:
-                                                    - cli-reference.md
-                                                    - cli-version-release.md
+                                          label: High availability and disaster recovery 
+                                          topics:                                                     
+                                          - ha-dr.md
                                   - topicgroup:
                                             label: API reference
                                             links:
                                                     - link:
                                                               label: IBM Cloud Schematics API
                                                               href: https://cloud.ibm.com/apidocs/schematics
+                                  - topicgroup:
+                                            label: Schematics SDKs
+                                            topics: 
+                                            - schematics-sdk.md
+                                            - link: 
+                                                        label: IBM Cloud Schematics Go SDK
+                                                        href: https://github.com/IBM/schematics-go-sdk/blob/main/README.md
+                                            - link:
+                                                        label: IBM Cloud Schematics Java Admin SDK
+                                                        href: https://github.com/IBM/schematics-java-sdk/blob/main/README.md
+                                            - link:    
+                                                        label: IBM Cloud Schematics Node Admin SDK
+                                                        href: https://github.com/IBM/schematics-node-sdk/blob/main/README.md
+                                            - link:    
+                                                        label: IBM Cloud Schematics Python Admin SDK
+                                                        href: https://github.com/IBM/schematics-python-sdk/blob/main/README.md
+                                  - topicgroup: 
+                                            label: Terraform
+                                            links:
+                                                    - link:
+                                                                label: Sample Terraform templates
+                                                                href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
+                                                    - link:
+                                                                label: IBM Cloud provider for Terraform
+                                                                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+                                                    - link:
+                                                                label: Terraform documentation
+                                                                href: https://developer.hashicorp.com/terraform/docs
+                                  - topicgroup:
+                                            label: Ansible
+                                            links:
+                                                    - link:
+                                                                label: Ansible documentation
+                                                                href: https://docs.ansible.com/ansible/latest/index.html
                                   - sc-tools.md
-                                  - schematics-sdk.md
                                   - locations.md
                                   - limitations.md
                                   - sc-terminology.md
                                   - license-notices.md
-                                  - topicgroup:
-                                            label: Related links
-                                            topics:
-                                                    - topicgroup:
-                                                              label: Terraform
-                                                              links:
-                                                                      - link:
-                                                                                label: Sample Terraform templates
-                                                                                href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
-                                                                      - link:
-                                                                                label: IBM Cloud provider for Terraform
-                                                                                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
-                                                                      - link:
-                                                                                label: Terraform documentation
-                                                                                href: https://developer.hashicorp.com/terraform/docs
-                                                    - topicgroup:
-                                                              label: Ansible
-                                                              links:
-                                                                      - link:
-                                                                                label: Ansible documentation
-                                                                                href: https://docs.ansible.com/ansible/latest/index.html
                 - navgroup:
                           id: help
                           topics:
+                                  - ts_index.md
                                   - topicgroup:
-                                            label: FAQs
+                                            label: FAQs for Schematics
                                             topics:
                                                     - faqs/sc-actions-faq.md
                                                     - faqs/sc-agents-faq.md
@@ -203,7 +214,7 @@ toc:
                                             label: Troubleshooting
                                             topics:
                                                     - topicgroup:
-                                                              label: Troubleshooting Schematics workspace errors
+                                                              label: Troubleshooting workspace errors
                                                               topics:
                                                                       - troubleshooting/wks_creation_api.md
                                                                       - troubleshooting/ts-workspace-failure.md
@@ -218,5 +229,3 @@ toc:
                                                                       - troubleshooting/ts-agent-resource.md
                                                                       - troubleshooting/ts-agent-endpoint-gwy.md
                                                     - error-messages.md
-                                  - ts_index.md
-                                  - sitemap.md

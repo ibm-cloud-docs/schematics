@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-23"
 
 keywords: workspace create failure, terraform error, terraform fails, workspace fails
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Workspace failures
+# I tried to create a workspace, why did it fail? 
 {: #wks-failure}
 
 Review the following sections to help debugging `workspace new` failures. 
