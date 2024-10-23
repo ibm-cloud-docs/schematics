@@ -43,8 +43,8 @@ toc:
                                                     - setup-api.md
                                   - topicgroup:
                                             label: Working with Workspaces
-                                                    - sc-about-workspaces.md
                                             topics:
+                                                    - sc-about-workspaces.md
                                                     - topicgroup:
                                                               label: Creating a workspace
                                                               topics:
@@ -75,9 +75,9 @@ toc:
                                                                       - compact-download.md                                                                      
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
-                                            label: Working with Actions
-                                                    - sc-about-actions.md
+                                            label: Working with Actions    
                                             topics:
+                                                    - sc-about-actions.md
                                                     - ansible-roles.md
                                                     - action-setup.md
                                                     - create-ansible-playbook.md
@@ -96,8 +96,8 @@ toc:
                                                     - integration-kms.md
                                   - topicgroup:
                                             label: Working with Agents
-                                                    - sc-about-agentb1.md
                                             topics:
+                                                   - sc-about-agentb1.md
                                                    - sc-agentb1-plan.md
                                                    - sc-agent-infra-setup.md
                                                    - sc-agentb1-deploy.md

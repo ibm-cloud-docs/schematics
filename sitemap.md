@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-10-23"
 
 keywords: schematics
 subcollection: schematics
@@ -951,9 +951,17 @@ subcollection: schematics
 * [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
 
-## Working with Workspaces - sc-about-workspaces.md
-{: #sitemap_working_with_workspaces_sc-about-workspacesmd}
+## Working with Workspaces
+{: #sitemap_working_with_workspaces}
 
+
+[{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
+
+* [{{site.data.keyword.bpshort}} workspace overview](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
+
+* [Features](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-features)
+
+* [Next steps](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-nextsteps)
 
 
 ### Creating a workspace
@@ -1272,9 +1280,17 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks&interface=terraform#sch-destroy-wks-nextsteps)
 
 
-## Working with Actions - sc-about-actions.md
-{: #sitemap_working_with_actions_sc-about-actionsmd}
+## Working with Actions
+{: #sitemap_working_with_actions}
 
+
+[{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
+
+* [{{site.data.keyword.bpshort}} actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
+
+* [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
+
+* [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
 
 [Creating Ansible roles and galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#ansible-roles-galaxy)
 
@@ -1381,9 +1397,19 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration&interface=cli#integrate-byok-cli)
 
 
-## Working with Agents - sc-about-agentb1.md
-{: #sitemap_working_with_agents_sc-about-agentb1md}
+## Working with Agents
+{: #sitemap_working_with_agents}
 
+
+[{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
+
+* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-architecture)
+
+* [Private network configuration when using agents](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-networking)
+
+* [Benefits of using agents](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage)
+
+* [Next steps](/docs/schematics?topic=schematics-agent-about-intro#nextsteps-agentb1-arch)
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
 
