@@ -44,12 +44,6 @@
         "type": "training"
       },   
       {
-        "title": "Achitecture Center",
-        "description": "Discover the architecture references available for this product. ",
-        "href": "https://www.ibm.com/products/schematics",
-        "type": "training"
-      },
-      {
         "title": "Training",
         "description": "Build your skill with IBM Cloud training. ",
         "href": "https://www.ibm.com/training/cloud",
