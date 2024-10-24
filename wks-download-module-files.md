@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-24"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using modules in public and private repos
+# Using Terraform templates and modules in the repositories
 {: #download-modules-pvt-git}
 
 {{site.data.keyword.bpshort}} and Terraform support downloading Terraform templates and modules from a variety of repository types: Terraform Registry, GitHub, GitLab, S3/COS buckets, IBM Catalog, Artifactory so on. See [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources#modules-in-package-sub-directories){: external} in the Terraform documentation.
