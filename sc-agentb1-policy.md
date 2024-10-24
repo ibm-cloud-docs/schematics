@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-24"
 
 keywords: schematics agent, agent policy, policies
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Agent policies
+# Working with agent policies
 {: #policy-manage}
 
 Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to run workspace and action jobs in a specific network zone. Each agent has one or more policies associated with it to identify the workspace and action jobs that are run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:

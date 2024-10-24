@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-24"
 
 keywords: display resources with schematics, show resources, show schematics resources
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Displaying managed resources 
+# Displaying Terraform managed resources 
 {: #resource-features}
 
 The following features are supported in the {{site.data.keyword.bpshort}} workspaces resource view page.

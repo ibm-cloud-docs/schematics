@@ -39,41 +39,8 @@ toc:
                                   - topicgroup:
                                             label: Configuring the CLI and API
                                             topics:
-                                                    - setup-cli.md
                                                     - setup-api.md
-                                  - topicgroup:
-                                            label: Working with Workspaces
-                                            topics:
-                                                    - topicgroup:
-                                                              label: Creating a workspace
-                                                              topics:
-                                                                      - workspaces/sc-workspaces-create.md
-                                                                      - create-terraform-config.md
-                                                                      - special-env-vars.md
-                                                    - sc-about-workspaces.md
-                                                    - workspaces/sc-workspaces-plan.md
-                                                    - workspaces/sc-workspaces-deploy.md
-                                                    - workspaces/sc-workspaces-update.md
-                                                    - workspaces/sc-workspaces-display.md
-                                                    - workspaces/sc-workspaces-delete.md
-                                                    - job-download-file.md
-                                                    - job-force-stop.md
-                                                    - workspaces/sc-workspaces-states.md
-                                                    - workspaces/sc-workspaces-prepare.md
-                                                    - topicgroup:
-                                                              label: Managing workspaces and resources
-                                                              topics:
-                                                                      - display-resources.md
-                                                                      - cross_region_deployment.md
-                                                                      - wks-download-module-files.md
-                                                                      - manage-resource-lifecycle.md
-                                                                      - sc-drift.md
-                                                                      - remotestate.md
-                                                                      - deprecation-tf.md
-                                                                      - migrate-tfversion.md
-                                                                      - solutions.md
-                                                                      - compact-download.md                                                                      
-                                                    - workspaces/sc-workspaces-destroy.md
+                                                    - setup-cli.md
                                   - topicgroup:
                                             label: Working with Actions    
                                             topics:
@@ -83,17 +50,6 @@ toc:
                                                     - create-ansible-playbook.md
                                                     - autodeploy_actionsamples.md
                                                     - autodeploy_template.md
-                                  - topicgroup:
-                                            label: Working with Inventories
-                                            topics:
-                                                    - inventories.md
-                                  - topicgroup:
-                                            label: Working with Integrations
-                                            topics:
-                                                    - integration-logging.md
-                                                    - integration-monitor.md
-                                                    - integration-at.md
-                                                    - integration-kms.md
                                   - topicgroup:
                                             label: Working with Agents
                                             topics:
@@ -114,27 +70,65 @@ toc:
                                                                       - sc-agentb1-proxy.md
                                                                       - sc-agentb1-registry.md
                                   - topicgroup:
+                                            label: Working with Inventories
+                                            topics:
+                                                    - inventories.md
+                                  - topicgroup:
+                                            label: Working with Workspaces
+                                            topics:
+                                                    - sc-about-workspaces.md
+                                                    - workspaces/sc-workspaces-create.md
+                                                    - special-env-vars.md
+                                                    - create-terraform-config.md
+                                                    - terraform.md
+                                  - topicgroup:
+                                            label: Managing Workspaces
+                                            topics: 
+                                                    - workspaces/sc-workspaces-prepare.md
+                                                    - workspaces/sc-workspaces-plan.md
+                                                    - workspaces/sc-workspaces-deploy.md
+                                                    - workspaces/sc-workspaces-update.md
+                                                    - workspaces/sc-workspaces-display.md
+                                                    - workspaces/sc-workspaces-delete.md
+                                                    - job-download-file.md
+                                                    - job-force-stop.md
+                                                    - workspaces/sc-workspaces-states.md
+                                                    - topicgroup:
+                                                              label: Managing resources
+                                                              topics:
+                                                                      - display-resources.md
+                                                                      - cross_region_deployment.md
+                                                                      - wks-download-module-files.md
+                                                                      - manage-resource-lifecycle.md
+                                                                      - sc-drift.md
+                                                                      - remotestate.md
+                                                                      - deprecation-tf.md
+                                                                      - migrate-tfversion.md
+                                                                      - solutions.md
+                                                                      - compact-download.md                                                                      
+                                                    - workspaces/sc-workspaces-destroy.md
+                                  - topicgroup:
                                             label: Observability
                                             topics:
                                                     - at-events.md
                                                     - logging.md 
                                                     - monitoring.md                                                  
+                                  - integration-kms.md
                                   - access.md
                                   - job-queue.md
-                                  - delete-schematics-data.md
                                   - version-constraints.md
-                                  - terraform.md
                                   - topicgroup:
                                             label: Enhancing security for Schematics
                                             topics:
                                                     - iam.md
-                                                    - responsibilities.md
                                                     - sc-managing-access-cbr.md
-                                                    - security-compliance/sc-dataprivacygovernance.md
                                                     - private-endpoint.md
+                                                    - security-compliance/sc-dataprivacygovernance.md
                                                     - data-security.md
-                                                    - security-compliance/sc-gdpr.md
                                                     - allowips.md
+                                                    - security-compliance/sc-dataprivacygovernance.md
+                                                    - security-compliance/sc-gdpr.md
+                                  - delete-schematics-data.md
                 - navgroup:
                           id: tutorial
                           topics:

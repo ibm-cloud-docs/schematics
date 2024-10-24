@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-24"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -30,7 +30,7 @@ Agent update cannot be done on a deployed agent through `terraform init`, `terra
 ## Before you begin
 {: #update-prereq}
 
-Review and select your agent version to update.
+Review and select your [agent version](/docs/schematics?topic=schematics-agent_version-releases) to update.
 {: shortdesc}
 
 ## Updating an agent definition
@@ -147,6 +147,19 @@ Syntax
 {: codeblock}
 
 
+
+## Agents version history 
+{: #agent_version-releases}
+
+Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agents. Be sure to keep your {{site.data.keyword.bpshort}} Agents up-to-date so that you can use all the available features.
+{: shortdesc}
+
+| Version | Release date | Changes |
+| ----- | ------- | -------------- |
+| 1.1.1 | 23 July 2024 | Enhanced the agent deletion timeout period and agent deploy issues are fixed. |
+| 1.1.0 | 19 March 2024 | Added support for the {{site.data.keyword.bpshort}} Agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}. |
+| 1.0.0 | 10 January 2024 | {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support. For more information, see [Release note](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524). |
+{: caption="{{site.data.keyword.bpshort}} Agents version history" caption-side="bottom"}
 
 ## Next steps
 {: #agent-update-nextsteps}
