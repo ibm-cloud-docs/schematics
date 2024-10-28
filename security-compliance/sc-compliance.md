@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-28"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -11,13 +11,28 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Compliance
+# Understanding compliance with Schematics
 {: #compliance}
 
 {{site.data.keyword.bplong}} actively participates in several industry compliance programs. As compliance focal, you can use the {{site.data.keyword.bpshort}} goals to check that your organization is adhering to the external and internal standards for your industry. For more information about monitoring compliance, see [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
-
-To monitor your resources with {{site.data.keyword.bpshort}}, see [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring-instances).
 {: shortdesc}
+
+As a security or compliance focal, you can use the {{site.data.keyword.bplong_notm}} goals to help ensure that your organization is adhering to the external and internal standards for your industry. By using the {{site.data.keyword.compliance_short}} to validate the resource configurations in your account against a [profile](#x2034950){: term}, you can identify potential issues as they arise.
+
+All the goals for {{site.data.keyword.bplong_notm}} are added to the {{site.data.keyword.cloud}} Control Library but can also be mapped to other profiles.
+{: note}
+
+To start monitoring your resources, check out [Getting started with {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-getting-started).
+
+## Available goals for {{site.data.keyword.bplong_notm}}
+{: #schematics-available-goals}
+
+* Check whether {{site.data.keyword.bpshort}} resources and actions must run in a designated location
+* Check whether {{site.data.keyword.bpshort}} is enabled with encryption
+* Check whether {{site.data.keyword.bpshort}} is enabled with IBM Log Analysis
+* Check whether {{site.data.keyword.bpshort}} has role-based access control (RBAC) for users
+* Check whether {{site.data.keyword.bpshort}} is enabled with {{site.data.keyword.monitoringlong}}
+* Check whether {{site.data.keyword.bpshort}} workspaces is configured with a specific Terraform version
 
 ## General Data Protection Regulation (GDPR) readiness
 {: #compliance-gdpr}

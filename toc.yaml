@@ -15,21 +15,10 @@ toc:
                           id: learn
                           topics:
                                   - getting-started.md
-                                  - getting-started-terraform.md
-                                  - getting-started-ansible-new.md
-                                  - getting-started-software.md
                                   - sc-about-overview.md
                                   - sc-about-infrastructure-as-code.md
                                   - sc-about-iac-opensource.md
-                                  - cost-estimation.md
-                                  - sc-about-responsibilities.md
                                   - sc-about-usecases.md
-                                  - topicgroup:
-                                            label: Managing security and compliance with Schematics
-                                            topics:
-                                                    - security-compliance/sc-security.md
-                                                    - security-compliance/sc-compliance.md
-                                                    - manage-scc.md
                                   - architecture-workload-isolation.md
                                   - security-compliance/sc-bp-objects.md
                                   - release-notes.md
@@ -108,11 +97,12 @@ toc:
                                                                       - compact-download.md                                                                      
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
-                                            label: Observability
+                                            label: Managing logging and monitoring with Schematics
                                             topics:
                                                     - at-events.md
                                                     - logging.md 
                                                     - monitoring.md                                                  
+                                  - cost-estimation.md
                                   - integration-kms.md
                                   - access.md
                                   - job-queue.md
@@ -132,6 +122,12 @@ toc:
                 - navgroup:
                           id: tutorial
                           topics:
+                                  - topicgroup:
+                                            label: Getting started tutorial
+                                            topics:
+                                                    - getting-started-terraform.md
+                                                    - getting-started-ansible-new.md
+                                                    - getting-started-software.md
                                   - tutorials/provisioning-tf.md
                                   - tutorials/automate_continuous_deployment.md
                                   - tutorials/private-catalog.md
@@ -143,17 +139,24 @@ toc:
                                             href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
                 - navgroup:
                           id: reference
-                          topics:
-                                  - topicgroup:
-                                          label: High availability and disaster recovery 
-                                          topics:                                                     
-                                          - ha-dr.md
+                          topics:                                                  
+                                  - ha-dr.md
+                                  - sc-about-responsibilities.md
                                   - topicgroup:
                                             label: API reference
                                             links:
                                                     - link:
                                                               label: IBM Cloud Schematics API
                                                               href: https://cloud.ibm.com/apidocs/schematics
+                                  - topicgroup:
+                                            label: CLI reference
+                                            topics:
+                                                    - cli-reference.md
+                                  - topicgroup:
+                                            label: Understanding security and compliance with Schematics
+                                            topics:
+                                                    - security-compliance/sc-security.md
+                                                    - security-compliance/sc-compliance.md
                                   - topicgroup:
                                             label: Schematics SDKs
                                             topics: 
