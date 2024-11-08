@@ -49,7 +49,6 @@ toc:
                                                    - sc-agentb1-display.md
                                                    - sc-agent-update.md
                                                    - sc-agentb1-delete.md
-                                                   - sc-agent-version-release.md 
                                                    - topicgroup:
                                                               label: Using agents
                                                               topics:
@@ -93,7 +92,6 @@ toc:
                                                                       - remotestate.md
                                                                       - deprecation-tf.md
                                                                       - migrate-tfversion.md
-                                                                      - solutions.md
                                                                       - compact-download.md                                                                      
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
@@ -148,15 +146,13 @@ toc:
                                                     - link:
                                                               label: IBM Cloud Schematics API
                                                               href: https://cloud.ibm.com/apidocs/schematics
-                                  - topicgroup:
-                                            label: CLI reference
-                                            topics:
-                                                    - cli-reference.md
+                                  - cli-reference.md
                                   - topicgroup:
                                             label: Understanding security and compliance with Schematics
                                             topics:
                                                     - security-compliance/sc-security.md
                                                     - security-compliance/sc-compliance.md
+                                  - data-portability.md
                                   - topicgroup:
                                             label: Schematics SDKs
                                             topics: 
