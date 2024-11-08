@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-07"
+lastupdated: "2024-11-08"
 
 keywords: schematics
 subcollection: schematics
@@ -1012,8 +1012,6 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#agent-delete-nextstep)
 
-[Agents version history](/docs/schematics?topic=schematics-agent_version-releases#agent_version-releases)
-
 
 ### Using agents
 {: #sitemap_using_agents}
@@ -1438,8 +1436,6 @@ subcollection: schematics
 * [Upgrading a Terraform v0.12 workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
 
 * [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
-
-[Sample Terraform solutions](/docs/schematics?topic=schematics-sol-overview#sol-overview)
 
 [Downloading compact Git repositories](/docs/schematics?topic=schematics-compact-download#compact-download)
 
@@ -1905,8 +1901,8 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## CLI reference
-{: #sitemap_cli_reference}
+## {{site.data.keyword.bplong_notm}} CLI
+{: #sitemap__cli}
 
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
@@ -2091,6 +2087,21 @@ subcollection: schematics
 * [International Organization for Standardization (ISO)](/docs/schematics?topic=schematics-compliance#international-organization-for-standardization-iso)
 
 * [SOC 2 Type 2 Certification](/docs/schematics?topic=schematics-compliance#soc-2-type-2-certification)
+
+
+## Understanding data portability for {{site.data.keyword.bpshort}}
+{: #sitemap_understanding_data_portability_for_}
+
+
+[Understanding data portability for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-data-portability#data-portability)
+
+* [Responsibilities](/docs/schematics?topic=schematics-data-portability#data-portability-responsibilities)
+
+* [Data export procedures](/docs/schematics?topic=schematics-data-portability#data-portability-procedures)
+
+* [Exported data formats](/docs/schematics?topic=schematics-data-portability#data-portability-data-formats)
+
+* [Data ownership](/docs/schematics?topic=schematics-data-portability#data-portability-ownership)
 
 
 ## Schematics SDKs
@@ -2560,4 +2571,3 @@ subcollection: schematics
     * [State error](/docs/schematics?topic=schematics-handling-error#state-error)
 
     * [Job error](/docs/schematics?topic=schematics-handling-error#job-error)
-
