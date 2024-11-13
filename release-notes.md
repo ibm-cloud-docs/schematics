@@ -26,6 +26,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
 
+## November 2024
+{: #November-2024}
+
+Review the release notes for November 2024.
+{: shortdesc}
+
+### 14 November 2024
+{: #schematics-nov1424}
+{: release-note}
+
+{{site.data.keyword.bpshort}} in Platform automation UI
+:   Platform automation includes Terraform, Ansible, and Extensions. For more details about exploring Terraform, Ansible, and Extension, see [Working with Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [Working with Ansible](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working), and [Working with Extensions](/docs/schematics?topic=schematics-agent-infrastructure-overview&interface=ui#agents-infra-workspace).
+
 ## October 2024
 {: #October-2024}
 
