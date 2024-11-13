@@ -95,7 +95,7 @@ toc:
                                                                       - compact-download.md                                                                      
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
-                                            label: Managing logging and monitoring with Schematics
+                                            label: Logging and monitoring
                                             topics:
                                                     - at-events.md
                                                     - logging.md 
@@ -111,7 +111,6 @@ toc:
                                                     - iam.md
                                                     - sc-managing-access-cbr.md
                                                     - private-endpoint.md
-                                                    - security-compliance/sc-dataprivacygovernance.md
                                                     - data-security.md
                                                     - allowips.md
                                                     - security-compliance/sc-dataprivacygovernance.md

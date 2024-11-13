@@ -1476,8 +1476,8 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks&interface=terraform#sch-destroy-wks-nextsteps)
 
 
-## Managing logging and monitoring with Schematics
-{: #sitemap_managing_logging_and_monitoring_with_schematics}
+## Logging and monitoring
+{: #sitemap_logging_and_monitoring}
 
 
 [Activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at_events)
@@ -1667,8 +1667,6 @@ subcollection: schematics
     * [Before you begin](/docs/schematics?topic=schematics-private-endpoints#endpoint-prereq)
 
     * [Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-private-endpoints#endpoint-add)
-
-[Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
 
 [Securing your data with encryption](/docs/schematics?topic=schematics-secure-data#secure-data)
 
