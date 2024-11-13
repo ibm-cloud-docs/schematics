@@ -169,6 +169,14 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [November 2024](/docs/schematics?topic=schematics-schematics-relnotes#November-2024)
+
+    * Review the release notes for November 2024.
+
+    * [14 November 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1424)
+
+        * {{site.data.keyword.bpshort}} in Platform automation UI
+
 * [October 2024](/docs/schematics?topic=schematics-schematics-relnotes#October-2024)
 
     * Review the release notes for October 2024.
