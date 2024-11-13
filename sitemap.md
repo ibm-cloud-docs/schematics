@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-08"
+lastupdated: "2024-11-13"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,18 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [October 2024](/docs/schematics?topic=schematics-schematics-relnotes#October-2024)
+
+    * Review the release notes for October 2024.
+
+    * [24 October 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2424)
+
+        * New {{site.data.keyword.cloudaccesstrailshort}} topic
+
+        * Added logging topic
+
+        * New {{site.data.keyword.monitoringshort}} metrics topic
 
 * [August 2024](/docs/schematics?topic=schematics-schematics-relnotes#August-2024)
 
@@ -1472,25 +1484,21 @@ subcollection: schematics
 
 * [Locations where activity tracking events are generated](/docs/schematics?topic=schematics-at_events#at-locations)
 
-    * [Regions](/docs/schematics?topic=schematics-at_events#sch-region-events)
-
 * [Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
-
-    * [Workspace events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
-
-    * [Action events](/docs/schematics?topic=schematics-at_events#schematics-action-events)
-
-    * [Job events](/docs/schematics?topic=schematics-at_events#schematics-job-events)
-
-    * [`Shareddata` events](/docs/schematics?topic=schematics-at_events#schematics-shareddata-events)
-
-    * [Other events](/docs/schematics?topic=schematics-at_events#schematics-otherevents)
 
 * [Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}](/docs/schematics?topic=schematics-at_events#atracker-locations)
 
 * [Viewing activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at-viewing)
 
-    * [Launching {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-at_events#sc-log-launch-standalone)
+* [Launching {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-at_events#sc-log-launch-standalone)
+
+* [List of platform events](/docs/schematics?topic=schematics-at_events#at_actions_platform)
+
+    * [Terraform (Workspace) events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
+
+    * [Ansible events](/docs/schematics?topic=schematics-at_events#schematics-action-events)
+
+    * [Job events](/docs/schematics?topic=schematics-at_events#schematics-job-events)
 
 * [Analyzing {{site.data.keyword.bpshort}} activity tracking events](/docs/schematics?topic=schematics-at_events#at_events_analyze)
 
@@ -1510,8 +1518,6 @@ subcollection: schematics
 
 * [Fields by log type](/docs/schematics?topic=schematics-logging#log-fields)
 
-* [Log messages](/docs/schematics?topic=schematics-logging#log_messages)
-
 [Monitoring metrics for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring#monitoring)
 
 * [Locations where metrics are generated](/docs/schematics?topic=schematics-monitoring#mon-locations)
@@ -1520,15 +1526,7 @@ subcollection: schematics
 
 * [Viewing metrics](/docs/schematics?topic=schematics-monitoring#monitoring-view)
 
-    * [Launching {{site.data.keyword.mon_full}} from the {{site.data.keyword.bpshort}} dashboard](/docs/schematics?topic=schematics-monitoring#monitoring-view-ui)
-
-* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-monitoring#launch-dashboard)
-
-    * [Launching {{site.data.keyword.mon_full}} from the Observability page](/docs/schematics?topic=schematics-monitoring#monitoring-view-ob)
-
-* [Monitoring {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring#monitoring-monitor)
-
-* [Creating a service instance](/docs/schematics?topic=schematics-monitoring#create-instance)
+    * [Launching and monitoring {{site.data.keyword.mon_full}} from the Observability page](/docs/schematics?topic=schematics-monitoring#monitoring-view-ob)
 
 * [Creating a custom dashboard](/docs/schematics?topic=schematics-monitoring#create-dashboard)
 

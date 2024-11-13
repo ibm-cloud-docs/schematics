@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,25 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## October 2024
+{: #October-2024}
+
+Review the release notes for October 2024.
+{: shortdesc}
+
+### 24 October 2024
+{: #schematics-oct2424}
+{: release-note}
+
+New {{site.data.keyword.cloudaccesstrailshort}} topic
+:   See [{{site.data.keyword.cloudaccesstrailshort}} events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events).
+
+Added logging topic
+:   See [Logging events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-logging).
+
+New {{site.data.keyword.monitoringshort}} metrics topic
+:   See [{{site.data.keyword.monitoringshort}} events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring).
 
 ## August 2024
 {: #August-2024}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-09-14"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -34,9 +34,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 {{site.data.keyword.bpshort}} sends platform logs to {{site.data.keyword.la_full_notm}} in the regions indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) |
-|---------------------|-------------------------|-------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Dallas (`us-south`) | Washington (`us-east`)  | 
+|---------------------|-------------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #at-table-1}
 {: tab-title="Americas"}
@@ -105,13 +105,3 @@ For information about fields included in every platform log, see [Fields for pla
 | `resolution`      | `Optional`   | Guidance on how to proceed if you receive this log record. |
 | `documentsURL`    | `Optional`   | More information on how to proceed if you receive this log record. |
 {: caption="Log record fields" caption-side="bottom"}
-
-## Log messages
-{: #log_messages}
-
-The following tables list the message IDs that are generated and additional information available about these messages.
-
-| Message ID | Type | Learn More |
-|------------|------|------------|
-| `is.flow-log-collector.00001E` | error | Failed to write a Flow log file for the past 24 hours. Dropping flow log for Virtual Server {{site.data.keyword.bpshort}}. |
-{: caption="Additional information about message IDs" caption-side="top"}
