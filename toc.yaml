@@ -31,7 +31,7 @@ toc:
                                                     - setup-api.md
                                                     - setup-cli.md
                                   - topicgroup:
-                                            label: Working with Actions    
+                                            label: Working with Ansible    
                                             topics:
                                                     - sc-about-actions.md
                                                     - ansible-roles.md
@@ -40,7 +40,7 @@ toc:
                                                     - autodeploy_actionsamples.md
                                                     - autodeploy_template.md
                                   - topicgroup:
-                                            label: Working with Agents
+                                            label: Working with Extensions
                                             topics:
                                                    - sc-about-agentb1.md
                                                    - sc-agentb1-plan.md
@@ -57,12 +57,10 @@ toc:
                                                                       - sc-agentb1-health.md
                                                                       - sc-agentb1-proxy.md
                                                                       - sc-agentb1-registry.md
+                                                   - inventories.md
+                                                   - integration-kms.md                   
                                   - topicgroup:
-                                            label: Working with Inventories
-                                            topics:
-                                                    - inventories.md
-                                  - topicgroup:
-                                            label: Working with Workspaces
+                                            label: Working with Terraform
                                             topics:
                                                     - sc-about-workspaces.md
                                                     - workspaces/sc-workspaces-create.md
@@ -70,7 +68,7 @@ toc:
                                                     - create-terraform-config.md
                                                     - terraform.md
                                   - topicgroup:
-                                            label: Managing Workspaces
+                                            label: Managing Terraform
                                             topics: 
                                                     - workspaces/sc-workspaces-prepare.md
                                                     - workspaces/sc-workspaces-plan.md
@@ -101,7 +99,6 @@ toc:
                                                     - logging.md 
                                                     - monitoring.md                                                  
                                   - cost-estimation.md
-                                  - integration-kms.md
                                   - access.md
                                   - job-queue.md
                                   - version-constraints.md
@@ -206,7 +203,7 @@ toc:
                                             label: Troubleshooting
                                             topics:
                                                     - topicgroup:
-                                                              label: Troubleshooting workspace errors
+                                                              label: Troubleshooting Terraform errors
                                                               topics:
                                                                       - troubleshooting/wks_creation_api.md
                                                                       - troubleshooting/ts-workspace-failure.md
@@ -216,7 +213,7 @@ toc:
                                                                       - troubleshooting/apply_resource_group.md
                                                                       - troubleshooting/apply_500_errors.md
                                                     - topicgroup:
-                                                              label: Troubleshooting Agents
+                                                              label: Troubleshooting Extensions
                                                               topics:
                                                                       - troubleshooting/ts-agent-resource.md
                                                                       - troubleshooting/ts-agent-endpoint-gwy.md

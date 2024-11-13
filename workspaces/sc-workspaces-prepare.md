@@ -107,7 +107,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
     3. Select a pricing plan.
     4. Enter a name for your service instance, select a resource group, and enter any tags that you want to associate with your service instance.
     5. Click **Create** to create the service instance in your account.
-2. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select a workspace.
+2. From the [workspace dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, select a workspace.
 3. Select the **Settings** tab.
 4. In the **Summary** section, click **Enable continuous delivery**.
 5. Configure your toolchain.

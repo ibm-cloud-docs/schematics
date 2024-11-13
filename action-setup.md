@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-11-13"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Working with {{site.data.keyword.bpshort}} actions
+# Working with Ansible
 {: #action-working}
 
 {{site.data.keyword.bpshort}} actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure.
@@ -35,16 +35,17 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is the information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 {: note}
 
-### To create an action
+### To create an Ansible playbook
 {: #create-action-working}
 
-1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions), click **Create action**.
-2. Configure your action. 
-    1. Enter an **Action name** and an **Action description** for your action. Note that the name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
-    2. Optional, enter the **Tags** that you want to add to your action. Tags help in quick search operation of your action.
-    3. Select the **Resource group** where you want to create the action.
-    4. Select the **Location** where you want to create the action. The location determines where your action runs and action data are stored. You can choose a geography, such as `North America`, or a location, such as `Frankfurt` or `London`. If you select a geography, {{site.data.keyword.bpshort}} decides on a location within this geography based on availability. Be sure that you can store your action data in this location as you cannot change the location after the action is created. For more information, see [where is the information stored?](/docs/schematics?topic=schematics-secure-data#pi-location) Note that the location of your action is independent from the location of your {{site.data.keyword.cloud_notm}} resource where you want to run your Ansible playbook.
-    5. Click **Create**. Your action is created with a `Normal` state, and you are directed to the `Details` section.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Ansible**](https://cloud.ibm.com/automation/schematics/ansible){: external} > **Create playbook**.
+   - Configure your action. 
+      1. Enter a playbook **Name** and an **Description** for your action. Note that the name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
+      2. Optional, enter the **Tags** that you want to add to your action. Tags help in quick search operation of your action.
+      3. Select the **Resource group** where you want to create the action.
+      4. Select the **Location** where you want to create the action. The location determines where your action runs and action data are stored. You can choose a geography, such as `North America`, or a location, such as `Frankfurt` or `London`. If you select a geography, {{site.data.keyword.bpshort}} decides on a location within this geography based on availability. Be sure that you can store your action data in this location as you cannot change the location after the action is created. For more information, see [where is the information stored?](/docs/schematics?topic=schematics-secure-data#pi-location) Note that the location of your action is independent from the location of your {{site.data.keyword.cloud_notm}} resource where you want to run your Ansible playbook.
+      5. Click **Create**. Your action is created with a `Normal` state, and you are directed to the `Details` section.
 3. In the **Ansible playbook** section, click **Edit icon** to import your Ansible playbook. 
     1. Enter the **GitHub or GitLab repository URL** where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
         - Example for master branch - `https://github.com/myorg/myrepo`
@@ -62,7 +63,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     7. Optional, click the **Advanced options** to define input variables that you want to pass to the playbook. Input variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users after the action is created. If you use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}, all input variables can be found in the `readme.md` file. 
     8. Click **Save** to save the action details.
 4. Configure your resource inventory. The resource inventory includes all target hosts where you want to run your Ansible playbook.
-    1. In the **Choose your inventory** section, click the **Edit icon**. 
+    1. In the **Choose your inventory** section, click the **Edit icon**.
     2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information about creating resource inventories, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
     3. Action supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
        - Select **SSH** tab to enter the **username** and **{{site.data.keyword.cloud_notm}} resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 

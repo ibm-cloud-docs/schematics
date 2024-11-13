@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -52,7 +52,7 @@ You can initiate drift detection for workspaces from the {{site.data.keyword.bps
 
 Use the following steps to view the drift job log.
 
-1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want check for drift. 
+1. From the [workspace dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, select the workspace that you want check for drift. 
 2. Select and open your workspace.
 3. Select the **Actions** drop down list.
 4. Select **Detect drift** option to initiate the detect drift job. 

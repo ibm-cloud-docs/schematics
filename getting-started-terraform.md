@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -34,7 +34,7 @@ Before you can use this template, you must complete the following tasks.
 Use the {{site.data.keyword.IBM_notm}} provided Terraform template to provision an {{site.data.keyword.cos_full_notm}} instance with a {{site.data.keyword.bpshort}} workspace.
 {: shortdesc}
 
-1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, click **Create workspace**.
 2. In **Specify template** section. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as shown in the example.
 
     ```text

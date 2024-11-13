@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -46,7 +46,7 @@ If the job is in a `pending` state, any type of stop request causes the job to c
 
 You can follow these steps to stop a running workspace job by using the console.
 
-1. From the [Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace related to the running job.
+1. From the [Workspaces dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, select the workspace related to the running job.
 
    You can stop or cancel the running job during a plan, an apply, or a destroy execution.
    {: note}

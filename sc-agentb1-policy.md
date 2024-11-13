@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-24"
+lastupdated: "2024-11-13"
 
 keywords: schematics agent, agent policy, policies
 
@@ -44,8 +44,8 @@ If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=
 {: #agentb1-createpolicy-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Policies** > [**Create policy**](https://cloud.ibm.com/schematics/policies){: external}.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Extensions** > **Policies** tab > [**Create policy**](https://cloud.ibm.com/schematics/policies){: external}.
     - In **Create a policy** section:
         - Enter unique **Policy name**.
         - Enter **Description**.
@@ -69,15 +69,15 @@ If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=
 {: #agentb1-listpolicy-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Policies**.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Extensions** > **Policies** tab.
 
 ## Displaying a policy using the UI
 {: #agentb1-getpolicy-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Policies**.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Extensions** > **Policies** tab.
 3. Click your policy from the list to view the policy details.
 4. In the **Assigned agent** window, click **Agent details** to view your agent configurations.
 
@@ -87,8 +87,8 @@ If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=
 
 You can update an agent policy to change the selection tags, or description, by referencing the agent with the `AGENT_ID`.
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Policies**.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Extensions** > **Policies** tab.
 3. Click your policy from the list to view the policy details.
 4. Click **Actions** > **Edit policy** to update the parameters.
 
@@ -96,8 +96,8 @@ You can update an agent policy to change the selection tags, or description, by 
 {: #agentb1-deletepolicy-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Policies**.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Extensions** > **Policies** tab.
 3. Click your policy from the list to view the policy details.
 4. Click **Actions** > **Delete policy** to delete the parameters.
 

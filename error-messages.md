@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-13"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Troubleshooting Action
+# Troubleshooting Ansible
 {: #handling-error}
 
 When {{site.data.keyword.bpshort}} actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behavior, output.

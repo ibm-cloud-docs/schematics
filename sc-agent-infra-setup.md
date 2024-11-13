@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-11-13"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -39,8 +39,8 @@ The following prerequisites must be met before you begin deploying the agent inf
     You need to define any {{site.data.keyword.networksecuritygroups_short}} rules and ACLs at VPC level before deploying an agent on the cluster. For more information, see [Terraform script to define security groups and ACLs on VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
     {: note}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Terraform** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
     - In the **Specify Template** section:
         - **`GitHub`, `GitLab`, or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/agent-infrastructure-sample/tree/main/templates/infrastructure`.
         - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance).

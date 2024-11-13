@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-11-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -33,20 +33,21 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 ## Starting and stopping {{site.data.keyword.vsi_is_short}}
 {: #ansible-vsi}
 
-1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page. Click **Create action**.
-2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
-3. In the **Ansible playbook** section, click **Edit icon** and enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field.
-4. Click **Retrieve playbooks**.
-5. Select the **`stop-vsi-playbook.yaml`** playbook. see [floating IP address](/docs/vpc?topic=vpc-using-instance-vnics&interface=ui#editing-network-interfaces){: external} of the VSI to set your input variable.
-6. Expand the **Advanced options**.
-7. In the **Define your variables** section, enter `instance_ip` as the **key** and the floating IP address of your {{site.data.keyword.vsi_is_short}} as the **value**.
-8. Click **Save**.
-9. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs.
-10. Click **Run action** to stop the {{site.data.keyword.vsi_is_short}}. You can monitor the progress of this action by reviewing the logs on the **Jobs** page.
-11. Verify that your {{site.data.keyword.vsi_is_short}} stopped.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Ansible**](https://cloud.ibm.com/automation/schematics/ansible){: external}.
+3. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
+4. Click **Edit icon** and enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field.
+5. Click **Retrieve playbooks**.
+6. Select the **`stop-vsi-playbook.yaml`** playbook. see [floating IP address](/docs/vpc?topic=vpc-using-instance-vnics&interface=ui#editing-network-interfaces){: external} of the VSI to set your input variable.
+7. Expand the **Advanced options**.
+8. In the **Define your variables** section, enter `instance_ip` as the **key** and the floating IP address of your {{site.data.keyword.vsi_is_short}} as the **value**.
+9. Click **Save**.
+10. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs.
+11. Click **Run action** to stop the {{site.data.keyword.vsi_is_short}}. You can monitor the progress of this action by reviewing the logs on the **Jobs** page.
+12. Verify that your {{site.data.keyword.vsi_is_short}} stopped.
     1. From the [{{site.data.keyword.vsi_is_short}} dashboard](https://cloud.ibm.com/infrastructure/compute/vs){: external}, find your {{site.data.keyword.vsi_is_short}}.
     2. Verify that your instance shows a `Stopped` status.
-12. Optional: Repeat the steps in this getting started tutorial to create another action, and select the **`start-vsi-playbook.yaml`** Ansible playbook to start your {{site.data.keyword.vsi_is_short}} again.
+13. Optional: Repeat the steps in this getting started tutorial to create another action, and select the **`start-vsi-playbook.yaml`** Ansible playbook to start your {{site.data.keyword.vsi_is_short}} again.
 
 You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a {{site.data.keyword.vsi_is_short}} instance.
 

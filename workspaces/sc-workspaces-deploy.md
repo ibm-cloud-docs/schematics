@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-11-13"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -43,16 +43,15 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #deploy-wks-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Workspaces** > [**Workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
-3. Search your workspace in specific location.
-4. Click **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
-5. Click **Apply plan** to provision the configured resources.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Terraform**](https://cloud.ibm.com/automation/schematics/terraform){: external}.
+3. Search your workspace in specific location and click your workspace name.
+4. Click **Apply plan** to provision the configured resources.
 
 ### Verifying workspace apply 
 {: #verify-wks-deploy-ui}
 
-1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the workspace apply job.
+1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the workspace apply job.
 
 ## Perform a workspace apply using the CLI
 {: #deploy-wks-cli}

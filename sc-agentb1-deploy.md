@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -43,8 +43,8 @@ Review and complete the steps that are described in [preparing for agent deploym
 {: #create-agent-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Agents** > [**Create Agent**](https://cloud.ibm.com/schematics/agents/create){: external}.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Extensions** > [**Create Agent**](https://cloud.ibm.com/schematics/agents/create){: external}.
     - In **Define agent details** section:
         - Enter a unique **Agent name**.
         - Select **Location** and **Resource group** from the drop-down option.
