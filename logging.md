@@ -59,9 +59,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 {{site.data.keyword.bpshort}} sends logs by {{site.data.keyword.logs_routing_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) |
-|---------------------|-------------------------|-------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Dallas (`us-south`) | Washington (`us-east`)  | 
+|---------------------|-------------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #at-table-1}
 {: tab-title="Americas"}
