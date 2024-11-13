@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-11-13"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -37,21 +37,21 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #delete-wks-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Workspaces** > [**Delete workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
-    - In **workspace List** section:
-        - Click required **Workspace** to delete. If you do not see the required workspace in the list, check your navigation page.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Terraform**.
+    - In **Terraform List**:
+        - Click required **Workspace** to delete.
+        - Select **Actions** > **Delete workspace**.
         - Click `Next`.
-    - In **Workspace list** section. Click workspace name and click delete icon. Enter a name of your `workspace name` for confirmation before delete. Enter the name while creation and click delete.
+    - In **Delete workspace** dialog box.  Enter a name of your `workspace name` for confirmation before delete.
     - Click `Delete`. Your workspace can be deleted with a **Draft**, **Inactive**, **Active** state.
 
 ### Verifying workspace delete 
 {: #verify-wks-delete-ui}
 
-1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the destroyed operation. 
-2. Click **Workspaces** tab to see the workspace list. 
+1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the destroyed operation.
+2. Click **Workspaces** tab to see the workspace list.
 3. Type **Workspace** name in the search box to get confirmation about your workspace is deleted.
-
 
 ## Deleting the workspace through CLI
 {: #delete-wks-cli}

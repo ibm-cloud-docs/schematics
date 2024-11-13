@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-11-13"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -37,19 +37,19 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #destroy-wks-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Terraform**](https://cloud.ibm.com/automation/schematics/terraform){: external}.
     - In **workspace List** section:
         - Click required **Workspace** to destroy a required workspace. If you do not see the required workspace in the list, check your navigation page.
         - Click `Next`.
-    - In **Workspace list** section. Click workspace name and click actions dropdown icon. Click `Destroy resources` and enter workspace name for confirmation before delete. Enter the name while creation and click destroy.
+    - In **Workspace list** section. Click workspace name and click **Actions** dropdown. Click `Destroy resources` and enter workspace name for confirmation before delete. Enter the name while creation and click destroy.
     - Click `Destroy`. Your resource of workspace are destroyed.
 
 ### Verifying a workspace destroy operation 
 {: #verify-wks-destroy-ui}
 
-1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the destroy operation.
-2. Click **Jobs** tab to see the workspace logs. 
+1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the destroy operation.
+2. Click **Jobs** tab to see the workspace logs.
 3. Click **Jobs history** tab view the result of the destroy job and operations that were run by the automation modules.
 
 ## Destroying workspace resources using the CLI

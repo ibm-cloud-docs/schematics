@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-11-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Actions
+# Ansible
 {: #actions-faq}
 
 Answers to common questions about the {{site.data.keyword.bplong_notm}} actions are classified into following section.

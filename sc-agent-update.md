@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-24"
+lastupdated: "2024-11-13"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -39,8 +39,8 @@ Review and select your [agent version](/docs/schematics?topic=schematics-agent_v
 
 Update your agent configuration by choosing the cluster and {{site.data.keyword.cos_full_notm}} of your choice.
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > [**Agents**](https://cloud.ibm.com/schematics/agents){: external}.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Extensions**](https://cloud.ibm.com/automation/schematics/extensions/agents){: external}.
     - Select your agent:
         - Select **Actions** > **Edit Agent**
         - You can edit the **Description**, **Cluster**, **COS instance name**, **COS bucket name**, **COS bucket region**, or **Agent version** as in the requirement.

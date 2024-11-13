@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-11-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -37,8 +37,8 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #create-wks-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Terraform** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
     - In **Specify Template** section:
         - **GitHub, GitLab, or `Bitbucket` repository URL** - `<provide your Terraform Git repository URL`.
         - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance).

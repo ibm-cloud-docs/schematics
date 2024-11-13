@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -50,7 +50,7 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, select the workspace that you want to delete.
 2. Click **actions** tab and select **Delete workspace** option.
 3. Type your workspace name in **Type `workspace_name` to confirm** text box.
 4. Click **Delete** button.

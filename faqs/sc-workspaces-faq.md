@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-11-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Workspaces
+# Terraform
 {: #workspaces-faq}
 
 Answers to common questions about the {{site.data.keyword.bplong_notm}} workspaces are classified into the following section.

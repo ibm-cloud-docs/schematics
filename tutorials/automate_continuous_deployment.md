@@ -100,7 +100,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
 {: shortdesc}
 
-1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, click **Create workspace**.
 2. In **Specify template** section. Enter **`GitHub, GitLab, or Bitbucket Repository URL`** as 
 
     ```text
@@ -177,7 +177,7 @@ Observe the pipeline dashboard and view the status of your workspace execution.
 Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace.
 {: shortdesc}
 
-1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}.
 2. Select `Navigation Menu > {{site.data.keyword.bpshort}} > Workspaces > Resources` to observe the apply state of the resources in your workspace.
 3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 

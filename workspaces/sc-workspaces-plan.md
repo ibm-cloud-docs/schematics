@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-11-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -41,16 +41,15 @@ During workspace plan execution, you cannot edit your workspace.
 {: #plan-wks-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Access **Schematics** > **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
-3. Search your workspace in specific location.
-4. Click **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
-5. Click **Generate Plan** to create a plan for the workspace.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Terraform**](https://cloud.ibm.com/automation/schematics/terraform){: external}.
+3. Click your workspace name.
+4. Click **Generate Plan** to create a plan for the workspace.
 
 ### Verifying workspace plan 
 {: #verify-wks-plan-ui}
 
-1. Click on your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} 
+1. Click on your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} 
 2. Click **Jobs** to see the job execution results. It are listed under the heading `Generate Plan`
 3. On a successful plan, the cost for the proposed changes is reviewed by clicking on the `Cost Estimate` button. For more information, see [Infrastructure cost estimation](/docs/schematics?topic=schematics-cost-estimation).
 

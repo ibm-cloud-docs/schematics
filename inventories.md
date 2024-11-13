@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-11-13"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -40,12 +40,15 @@ The use of (short form) hostnames is not supported.
 ### Creating the host file
 {: #static-inv-create}
 
-1. From the [{{site.data.keyword.bpshort}} inventories dashboard](https://cloud.ibm.com/schematics/inventories){: external}. Click **Create Inventory**.
-2. Enter a name for your inventory, verify your location, and select your `Resource group` where you want to create an inventory.
-3. Select the **Define manually** tab.
-4. In the **File** field, enter the target hosts where you want to run the Ansible playbook. Make sure to specify your hosts in an `INI` syntax. For a sample syntax, see [File format](#inv-file-format). Review the [limitations](#inv-file-limitation) to ensure that your inventory definition is supported in {{site.data.keyword.bpshort}}.
-5. Click **Create inventory**.
-6. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create a {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Ansible**.
+3. Click the playbook name.
+4. Click **Inventory** > **Create Inventory**.
+5. Enter a name for your inventory, verify your location, and select your `Resource group` where you want to create an inventory.
+6. Select the **Define manually** tab.
+7. In the **File** field, enter the target hosts where you want to run the Ansible playbook. Make sure to specify your hosts in an `INI` syntax. For a sample syntax, see [File format](#inv-file-format). Review the [limitations](#inv-file-limitation) to ensure that your inventory definition is supported in {{site.data.keyword.bpshort}}.
+8. Click **Create inventory**.
+9. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create a {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
 
 ### File format
 {: #inv-file-format}
@@ -92,16 +95,19 @@ You can dynamically build your resource inventory from the {{site.data.keyword.c
 
 Dynamic resource inventories references {{site.data.keyword.cloud_notm}} resources that you provisioned with {{site.data.keyword.bpshort}} workspaces. To retrieve the {{site.data.keyword.cloud_notm}} resources from your workspaces, use predefined resource queries. You do not need to keep track of the IP addresses that were assigned to your target resources as {{site.data.keyword.bpshort}} automatically determines the target hosts when you use this inventory in the {{site.data.keyword.bpshort}} action.
 
-1. From the [{{site.data.keyword.bpshort}} inventories dashboard](https://cloud.ibm.com/schematics/inventories){: external}, click **Create Inventory**. 
-2. Enter a name for your inventory, verify your location, and select your `Resource group` where you want to create an inventory.
-3. Select the **Host groups** tab.
-4. Click **Create host group**. 
-5. Enter a name for your host group and select the {{site.data.keyword.bpshort}} workspace that provisioned the target hosts that you want to add to your host group.
-6. Optional: Click **Add query** to add another condition to your query and limit the number of target hosts that are added to your host group. You can choose to identify your hosts by using the resource name or a tag. For more information, see [supported resource queries](#supported-queries).
-7. Repeat step 4-6 to add more host groups.
-8. From the table list, select the host groups that you want to include in your resource inventory.
-9. Click **Create inventory**.
-10. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create the {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Ansible**](https://cloud.ibm.com/automation/schematics/ansible){: external}.
+3. Click the playbook name.
+4. Click **Inventory** > **Create Inventory**.
+5. Enter a name for your inventory, verify your location, and select your `Resource group` where you want to create an inventory.
+6. Select the **Host groups** tab.
+7. Click **Create host group**.
+8. Enter a name for your host group and select the {{site.data.keyword.bpshort}} workspace that provisioned the target hosts that you want to add to your host group.
+9. Optional: Click **Add query** to add another condition to your query and limit the number of target hosts that are added to your host group. You can choose to identify your hosts by using the resource name or a tag. For more information, see [supported resource queries](#supported-queries).
+10. Repeat step 5-8 to add more host groups.
+11. From the table list, select the host groups that you want to include in your resource inventory.
+12. Click **Create inventory**.
+13. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create the {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
 
 ### Supported resource queries
 {: #supported-queries}

@@ -869,8 +869,8 @@ subcollection: schematics
 * [Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli#uninstall-schematics-plugin)
 
 
-## Working with Actions
-{: #sitemap_working_with_actions}
+## Working with Ansible
+{: #sitemap_working_with_ansible}
 
 
 [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
@@ -887,13 +887,13 @@ subcollection: schematics
 
 * [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
 
-[Working with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-action-working#action-working)
+[Working with Ansible](/docs/schematics?topic=schematics-action-working#action-working)
 
 * [Creating and running a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action)
 
     * [Prerequisites](/docs/schematics?topic=schematics-action-working#action-working-prereq)
 
-    * [To create an action](/docs/schematics?topic=schematics-action-working#create-action-working)
+    * [To create an Ansible playbook](/docs/schematics?topic=schematics-action-working#create-action-working)
 
 * [Editing the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
 
@@ -936,8 +936,8 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
 
 
-## Working with Agents
-{: #sitemap_working_with_agents}
+## Working with Extensions
+{: #sitemap_working_with_extensions}
 
 
 [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
@@ -1117,11 +1117,6 @@ subcollection: schematics
 
     * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_3)
 
-
-## Working with Inventories
-{: #sitemap_working_with_inventories}
-
-
 [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
 
 * [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
@@ -1140,9 +1135,19 @@ subcollection: schematics
 
     * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
 
+[KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#kms-integration)
 
-## Working with Workspaces
-{: #sitemap_working_with_workspaces}
+* [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
+
+    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
+
+    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration&interface=ui#integrate-byok-ui)
+
+    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration&interface=cli#integrate-byok-cli)
+
+
+## Working with Terraform
+{: #sitemap_working_with_terraform}
 
 
 [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
@@ -1212,8 +1217,8 @@ subcollection: schematics
 * [What's next?](/docs/schematics?topic=schematics-terraform-setup#terraform-setup-next)
 
 
-## Managing Workspaces
-{: #sitemap_managing_workspaces}
+## Managing Terraform
+{: #sitemap_managing_terraform}
 
 
 [Planning for using workspaces](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
@@ -1548,21 +1553,6 @@ subcollection: schematics
 * [Viewing the infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
 
 * [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
-
-
-## KMS integration for BYOK or KYOK
-{: #sitemap_kms_integration_for_byok_or_kyok}
-
-
-[KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#kms-integration)
-
-* [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
-
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration&interface=ui#integrate-byok-ui)
-
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration&interface=cli#integrate-byok-cli)
 
 
 ## Location based access
@@ -2259,7 +2249,7 @@ subcollection: schematics
 {: #sitemap_faqs_for_schematics}
 
 
-[Actions](/docs/schematics?topic=schematics-actions-faq#actions-faq)
+[Ansible](/docs/schematics?topic=schematics-actions-faq#actions-faq)
 
 * [Are Classic VSIs supported for use with actions?](/docs/schematics?topic=schematics-actions-faq#Classic-vsi-faq)
 
@@ -2275,7 +2265,7 @@ subcollection: schematics
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
-[Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
+[Extensions](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
 * [What are the updates in the GA agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
@@ -2421,7 +2411,7 @@ subcollection: schematics
 
 * [Can you configure the activeness of the {{site.data.keyword.bpshort}} API call?](/docs/schematics?topic=schematics-general-faq#http-api-call)
 
-[Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
+[Terraform](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
 * [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=schematics-workspaces-faq#provider-versions)
 
@@ -2527,8 +2517,8 @@ subcollection: schematics
 
 
 
-### Troubleshooting workspace errors
-{: #sitemap_troubleshooting_workspace_errors}
+### Troubleshooting Terraform errors
+{: #sitemap_troubleshooting_terraform_errors}
 
 
 [Why do {{site.data.keyword.bpshort}} workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
@@ -2548,15 +2538,15 @@ subcollection: schematics
 [Why am I receiving 5xx HTTP errors?](/docs/schematics?topic=schematics-server-errors#server-errors)
 
 
-### Troubleshooting Agents
-{: #sitemap_troubleshooting_agents}
+### Troubleshooting Extensions
+{: #sitemap_troubleshooting_extensions}
 
 
 [How can I provide value for the `schematics_resource_crn` variable?](/docs/schematics?topic=schematics-agent-crn-not-found#agent-crn-not-found)
 
 [Why am I getting a create endpoint gateway error with the wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
 
-[Troubleshooting Action](/docs/schematics?topic=schematics-handling-error#handling-error)
+[Troubleshooting Ansible](/docs/schematics?topic=schematics-handling-error#handling-error)
 
 * [Action error messages](/docs/schematics?topic=schematics-handling-error#action-errmsg)
 
