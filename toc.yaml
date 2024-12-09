@@ -160,7 +160,11 @@ toc:
           - link:
               label: IBM Cloud Schematics API
               href: https://cloud.ibm.com/apidocs/schematics
-      - cli-reference.md
+      - topicgroup:
+          label: IBM Cloud Schematics CLI
+          topics:
+          - cli-reference.md
+          - cli-version-release.md
       - topicgroup:
           label: Understanding security and compliance
           topics:
@@ -197,7 +201,7 @@ toc:
   - navgroup:
       id: help
       topics:
-      - ts-index.md
+      - ts_index.md
       - topicgroup:
           label: FAQs
           topics: 

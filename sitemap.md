@@ -1996,8 +1996,8 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## {{site.data.keyword.bplong_notm}} CLI
-{: #sitemap__cli}
+## IBM Cloud Schematics CLI
+{: #sitemap_ibm_cloud_schematics_cli}
 
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
@@ -2161,6 +2161,8 @@ subcollection: schematics
     * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
 * [CLI version history](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases)
+
+[CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
 
 ## Understanding security and compliance
@@ -2330,6 +2332,17 @@ subcollection: schematics
 * [Creative Commons Attribution Share Alike 3.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-3.0)
 
 * [Creative Commons Attribution Share Alike 4.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-4.0)
+
+
+## Getting help and support
+{: #sitemap_getting_help_and_support}
+
+
+[Getting help and support](/docs/schematics?topic=schematics-schematics-help#schematics-help)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-schematics-help#sc-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-schematics-help#sc-join-slack)
 
 
 ## FAQs
