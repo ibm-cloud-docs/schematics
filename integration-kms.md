@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-11"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -76,7 +76,7 @@ Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to en
 2. List all the KMS instance in your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} instances.
 
     ```sh
-    ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME
+    ibmcloud schematics kms instances ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME
     ```
     {: pre}
 
