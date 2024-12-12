@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-09"
 
 keywords: schematics
 subcollection: schematics
@@ -856,6 +856,132 @@ subcollection: schematics
         * New workspace creation flow
 
 
+## Getting started
+{: #sitemap_getting_started}
+
+
+[Using workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
+
+* [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
+
+* [Creating an {{site.data.keyword.cos_full_notm}} instance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-terraform#create-cos)
+
+    * [Output](/docs/schematics?topic=schematics-get-started-terraform#create-cos-output)
+
+* [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
+
+[Using actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+
+* [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
+
+* [Starting and stopping {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-getting-started-ansible#ansible-vsi)
+
+* [What's next?](/docs/schematics?topic=schematics-getting-started-ansible#ansible-whats-next)
+
+[Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
+
+* [Before you begin](/docs/schematics?topic=schematics-get-started-software#vsi-postgres-prereq)
+
+* [Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-software#vsi-postgres)
+
+* [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
+
+
+## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
+{: #sitemap_creating_an_cluster_on_vpc_infrastructure}
+
+
+[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
+
+* [Description](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-desc)
+
+* [Objectives](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-obj)
+
+* [Time required](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-timereq)
+
+* [Audience](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-audience)
+
+* [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
+
+* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
+
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
+
+* [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
+
+* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_whats_next)
+
+
+## Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain
+{: #sitemap_setting_up_continuous_deployment_with_and_a_devops_toolchain}
+
+
+[Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
+
+* [Description](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-desc)
+
+* [Objectives](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-obj)
+
+* [Time needed](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-timereq)
+
+* [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
+
+* [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
+
+    * [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-continuous-deployment#wks-preqre-abt-sch)
+
+    * [About DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#wks-preqre-abt-devops)
+
+* [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
+
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
+
+* [Configuring variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-the-variables)
+
+* [Automating the continuous deployment process](/docs/schematics?topic=schematics-workspace-continuous-deployment#continuous-deployment)
+
+* [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
+
+* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
+
+* [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
+
+
+## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
+{: #sitemap_importing_templates_into_the_catalog}
+
+
+[Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
+
+* [Objectives](/docs/schematics?topic=schematics-private-catalog#private-tut-obj)
+
+* [Time required](/docs/schematics?topic=schematics-private-catalog#private-timereq)
+
+* [Audience](/docs/schematics?topic=schematics-private-catalog#private-tut-audience)
+
+* [Prerequisites](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
+
+* [Prepare your Terraform template for the private catalog](/docs/schematics?topic=schematics-private-catalog#prepare-tf-templates)
+
+* [Creating a release](/docs/schematics?topic=schematics-private-catalog#create-release)
+
+* [Create a private catalog and add your Terraform template as a product](/docs/schematics?topic=schematics-private-catalog#create-private-catalog)
+
+* [What's next?](/docs/schematics?topic=schematics-private-catalog#private_what's_next)
+
+
+## Deploying a VPC environment with bastion host on IBM Cloud
+{: #sitemap_deploying-a-vpc-environment-with-bastion-host-on-ibm-cloud}
+
+[Deploying a VPC environment with bastion host on IBM Cloud](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
+
+
+## Deploying a multitiered VPC with bastion host on IBM Cloud
+{: #sitemap_deploying-a-multitiered-vpc-with-bastion-host-on-ibm-cloud}
+
+[Deploying a multitiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+
+
 ## Configuring the CLI and API
 {: #sitemap_configuring_the_cli_and_api}
 
@@ -1489,7 +1615,7 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks&interface=terraform#sch-destroy-wks-nextsteps)
 
 
-## Logging and monitoring
+### Logging and Monitoring
 {: #sitemap_logging_and_monitoring}
 
 
@@ -1551,30 +1677,15 @@ subcollection: schematics
 
     * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring#wkspace-vulnerability-count)
 
-
-## Estimating infrastructure costs
-{: #sitemap_estimating_infrastructure_costs}
-
-
 [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
 
 * [Viewing the infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
 
 * [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
 
-
-## Location based access
-{: #sitemap_location_based_access}
-
-
 [Location based access](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
 
 * [Manage location settings in the catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
-
-
-## Job execution and queuing
-{: #sitemap_job_execution_and_queuing}
-
 
 [Job execution and queuing](/docs/schematics?topic=schematics-job-queue-process#job-queue-process)
 
@@ -1585,11 +1696,6 @@ subcollection: schematics
 * [When does the job enter into the pending queue?](/docs/schematics?topic=schematics-job-queue-process#pending-job-queue)
 
 * [Job time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
-
-
-## Specifying version constraints
-{: #sitemap_specifying_version_constraints}
-
 
 [Specifying version constraints](/docs/schematics?topic=schematics-version-constraints#version-constraints)
 
@@ -1604,8 +1710,8 @@ subcollection: schematics
 * [Specifying version constraints in Ansible](/docs/schematics?topic=schematics-version-constraints#version-constraints-ansible)
 
 
-## Enhancing security for Schematics
-{: #sitemap_enhancing_security_for_schematics}
+### Enhancing security
+{: #sitemap_enhancing_security}
 
 
 [Managing user access](/docs/schematics?topic=schematics-access#access)
@@ -1704,11 +1810,6 @@ subcollection: schematics
 
 * [Deletion of data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#deletion-of-data)
 
-
-## Deleting {{site.data.keyword.bpshort}} data
-{: #sitemap_deleting_data}
-
-
 [Deleting {{site.data.keyword.bpshort}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-intro)
 
 * [Scope](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-scope)
@@ -1738,8 +1839,8 @@ subcollection: schematics
     * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=api#delete-schematics-data-apicategory)
 
 
-## Getting started tutorial
-{: #sitemap_getting_started_tutorial}
+## Getting started
+{: #sitemap_getting_started1}
 
 
 [Using workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
@@ -1770,7 +1871,7 @@ subcollection: schematics
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
-{: #sitemap_creating_an_cluster_on_vpc_infrastructure}
+{: #sitemap_creating_an_cluster_on_vpc_infrastructure1}
 
 
 [Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
@@ -1795,7 +1896,7 @@ subcollection: schematics
 
 
 ## Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain
-{: #sitemap_setting_up_continuous_deployment_with_and_a_devops_toolchain}
+{: #sitemap_setting_up_continuous_deployment_with_and_a_devops_toolchain1}
 
 
 [Setting up continuous deployment with {{site.data.keyword.bpshort}} and a DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
@@ -1830,7 +1931,7 @@ subcollection: schematics
 
 
 ## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
-{: #sitemap_importing_templates_into_the_catalog}
+{: #sitemap_importing_templates_into_the_catalog1}
 
 
 [Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
@@ -1853,13 +1954,13 @@ subcollection: schematics
 
 
 ## Deploying a VPC environment with bastion host on IBM Cloud
-{: #sitemap_deploying-a-vpc-environment-with-bastion-host-on-ibm-cloud}
+{: #sitemap_deploying-a-vpc-environment-with-bastion-host-on-ibm-cloud1}
 
 [Deploying a VPC environment with bastion host on IBM Cloud](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 
 
 ## Deploying a multitiered VPC with bastion host on IBM Cloud
-{: #sitemap_deploying-a-multitiered-vpc-with-bastion-host-on-ibm-cloud}
+{: #sitemap_deploying-a-multitiered-vpc-with-bastion-host-on-ibm-cloud1}
 
 [Deploying a multitiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
@@ -1895,8 +1996,8 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## {{site.data.keyword.bplong_notm}} CLI
-{: #sitemap__cli}
+## IBM Cloud Schematics CLI
+{: #sitemap_ibm_cloud_schematics_cli}
 
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
@@ -2061,9 +2162,11 @@ subcollection: schematics
 
 * [CLI version history](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases)
 
+[CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
-## Understanding security and compliance with Schematics
-{: #sitemap_understanding_security_and_compliance_with_schematics}
+
+## Understanding security and compliance
+{: #sitemap_understanding_security_and_compliance}
 
 
 [Understanding security with Schematics](/docs/schematics?topic=schematics-security#security)
@@ -2111,17 +2214,6 @@ subcollection: schematics
 [IBM Cloud Schematics Node Admin SDK](https://github.com/IBM/schematics-node-sdk/blob/main/README.md){: external}
 
 [IBM Cloud Schematics Python Admin SDK](https://github.com/IBM/schematics-python-sdk/blob/main/README.md){: external}
-
-
-## Terraform
-{: #sitemap_terraform}
-
-
-[Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}
-
-[IBM Cloud provider for Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}
-
-[Terraform documentation](https://developer.hashicorp.com/terraform/docs){: external}
 
 
 ## Ansible
@@ -2253,8 +2345,8 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-schematics-help#sc-join-slack)
 
 
-## FAQs for Schematics
-{: #sitemap_faqs_for_schematics}
+## FAQs
+{: #sitemap_faqs}
 
 
 [Ansible](/docs/schematics?topic=schematics-actions-faq#actions-faq)
@@ -2525,8 +2617,8 @@ subcollection: schematics
 
 
 
-### Troubleshooting Terraform errors
-{: #sitemap_troubleshooting_terraform_errors}
+### Terraform errors
+{: #sitemap_terraform_errors}
 
 
 [Why do {{site.data.keyword.bpshort}} workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
