@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-18"
 
-keywords:
+keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
-subcollection: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
+subcollection: schematics
 
 ---
 

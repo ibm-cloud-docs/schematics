@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-12-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -444,3 +444,10 @@ On the workspace **Settings** page, enter the edit icon to edit your `Repository
 {: support}
 
 Yes, the [{{site.data.keyword.bpshort}} plugin](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) allows you to configure the timeout to `30 seconds` for the {{site.data.keyword.bpshort}} API calls through [ibmcloud config --http-timeout](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_config) flag. For example, `ibmcloud config --http-timeout=30`. The default value of the HTTP requests is `60 seconds`.
+
+## Does {{site.data.keyword.bpshort}} supports region-based access?
+{: #rba-faq-access}
+{: faq}
+{: support}
+
+Yes, the {{site.data.keyword.bpshort}} supports region-based access. For more information, see [Region-based access](/docs/schematics?topic=schematics-access#rba-role), and the steps [to set up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup).

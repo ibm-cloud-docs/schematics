@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## December 2024
+{: #December-2024}
+
+Review the release notes for December 2024.
+{: shortdesc}
+
+### 18 December 2024
+{: #schematics-nov1424}
+{: release-note}
+
+{{site.data.keyword.bpshort}} supports region-based access
+:   [Region-based access feature](/docs/schematics?topic=schematics-access#rba-role) support in {{site.data.keyword.bpshort}} workspace or an action. For more information about configuration, see the steps [to set up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup).
 
 ## November 2024
 {: #November-2024}
@@ -84,7 +97,7 @@ Review the release notes for July 2024.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.1.1](/docs/schematics?topic=schematics-agent_version-releases) released.
+:   The {{site.data.keyword.bpshort}} [agent version v1.1.1](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) released.
 
 ### 8 July 2024
 {: #schematics-july0824}
@@ -180,7 +193,7 @@ Review the release notes for March 2024.
 :   The {{site.data.keyword.bpshort}} Agents supports [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/schematics?topic=schematics-plan-agent-overview) cluster.
 
 Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.1.0](/docs/schematics?topic=schematics-agent_version-releases) released.
+:   The {{site.data.keyword.bpshort}} [agent version v1.1.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) released.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.20](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -995,7 +1008,7 @@ Troubleshooting guide support
 :   For more information about the debugging {{site.data.keyword.bpshort}} apply errors, see [Why do timeout failures result in tainted {{site.data.keyword.cloud_notm}} resources?](/docs/schematics?topic=schematics-server-errors), [Why am I getting 5xx HTTP errors?]/docs/schematics?topic=schematics-server-errors), [Why can't {{site.data.keyword.bpshort}} find the resource group?](/docs/schematics?topic=schematics-rg-not-found), and [How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors)
 
 {{site.data.keyword.bpshort}} supports sample solutions
-:   Sample solutions by using Terraform templates and modules to set up the infrastructure. For more information, see [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview).
+:   Sample solutions by using Terraform templates and modules to set up the infrastructure. For more information, see [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-create-tf-config#sol-overview).
 
 ## April 2021
 {: #april-2021}
@@ -1122,7 +1135,7 @@ Review the release notes for October 2020.
 {: release-note}
 
 Monitoring
-:   {{site.data.keyword.bplong_notm}} now supports monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.cloud_notm}} Monitoring. For more information about the monitoring {{site.data.keyword.bpshort}} workspaces, see [Monitoring {{site.data.keyword.bpshort}} instances](/docs/schematics?topic=schematics-monitoring-instances).
+:   {{site.data.keyword.bplong_notm}} now supports monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.cloud_notm}} Monitoring. For more information about the monitoring {{site.data.keyword.bpshort}} workspaces, see [Monitoring {{site.data.keyword.bpshort}} instances](/docs/schematics?topic=schematics-monitoring).
 
 Files and resources for your workspace actions
 :   {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository.

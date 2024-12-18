@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-18"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -30,7 +30,7 @@ Agent update cannot be done on a deployed agent through `terraform init`, `terra
 ## Before you begin
 {: #update-prereq}
 
-Review and select your [agent version](/docs/schematics?topic=schematics-agent_version-releases) to update.
+Review and select your [agent version](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) to update.
 {: shortdesc}
 
 ## Updating an agent definition
