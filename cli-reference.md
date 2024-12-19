@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-12-18"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1113,7 +1113,7 @@ The key management system lists the instance that are created from your specific
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
 
-KMS setting is a one time settings. You need to open a [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
+KMS setting is a one time settings. You need to open a [support ticket](https://cloud.ibm.com/docs/account?topic=account-using-avatar) to update KMS settings.
 {: note}
 
 ### `ibmcloud schematics kms instance ls`
@@ -2964,5 +2964,3 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.5.7 | 04 June 2021 | Enhanced `ibmcloud schematics state list` command to display as tabular data with a new column `taint` status. Fixed `ibmcloud schematics job run` command with `--input` flag description. Fixed `ibmcloud schematics job run` command with `--output json` flag description. Fixed `ibmcloud schematics action update` command with `--credentials` flag and the locale translations.|
 | 1.5.6 | 03 June 2021 | Updated `ibmcloud schematics workspace new` command to support `Terraform v0.14` and the locale translations.|
 {: caption="Command line version history" caption-side="bottom"}
-
-

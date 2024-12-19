@@ -65,7 +65,7 @@ Use `GET /v1/zones` to list the zones. By using `POST /v1/zones`, you can create
 You can determine which services are available to include in a zone by checking the [reference targets](/apidocs/context-based-restrictions#list-available-serviceref-targets).
 {: note}
 
-After you create zones, you can [update](/apidocs/context-based-restrictions#replace-zone) or [delete](/docs/account?topic=account-context-restrictions-remove&interface=ui) them.
+After you create zones, you can [update](/apidocs/context-based-restrictions#replace-zone) or [delete](/docs/account?topic=account-context-restrictions-update&interface=ui#context-restrictions-remove-rules) them.
 
 ### Creating network zones by using the CBR UI
 {: #cbr-create-zone-ui}
@@ -74,7 +74,7 @@ After you create zones, you can [update](/apidocs/context-based-restrictions#rep
 After you set the prerequisites and requirements, you can create zones in the UI. For more information about the steps to follow, see [Creating context-based restrictions](/docs/account?topic=account-context-restrictions-create&interface=ui#network-zones-create).
 {: shortdesc}
 
-After you create zones, they can also be [updated](/apidocs/context-based-restrictions#replace-zone) and [deleted](/docs/account?topic=account-context-restrictions-remove&interface=ui).
+After you create zones, they can also be [updated](/apidocs/context-based-restrictions#replace-zone) and [deleted](/docs/account?topic=account-context-restrictions-update&interface=ui#context-restrictions-remove-rules).
 
 ## Understanding network rules
 {: #cbr-network-rules}

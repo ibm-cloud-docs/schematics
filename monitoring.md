@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-12-18"
 
 keywords: IBM Cloud, observability, schematics monitoring events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
-subcollection: observability-ibm
+subcollection: schematics
 
 ---
 

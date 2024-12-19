@@ -31,7 +31,7 @@ In this tutorial, you can learn to use your credentials and an API key to use a 
 The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}.
 {: shortdesc}
 
-Costs are incurred based on your resource usage. For more information about the pricing, see [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, see [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
+Costs are incurred based on your resource usage. For more information about the pricing, see [Pricing](/docs/account?topic=account-charges). About the support and help, see [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
 
 ## Objectives

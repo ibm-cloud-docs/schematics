@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-19"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [December 2024](/docs/schematics?topic=schematics-schematics-relnotes#December-2024)
+
+    * Review the release notes for December 2024.
+
+    * [18 December 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1424)
+
+        * {{site.data.keyword.bpshort}} supports region-based access
 
 * [November 2024](/docs/schematics?topic=schematics-schematics-relnotes#November-2024)
 
@@ -1716,7 +1724,11 @@ subcollection: schematics
 
 [Managing user access](/docs/schematics?topic=schematics-access#access)
 
-* [Overview of {{site.data.keyword.bpshort}} service access roles and required permissions](/docs/schematics?topic=schematics-access#access-roles)
+* [Overview of {{site.data.keyword.bpshort}} service access roles and permissions](/docs/schematics?topic=schematics-access#access-roles)
+
+* [Region-based access](/docs/schematics?topic=schematics-access#rba-role)
+
+    * [Setting up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup)
 
 * [{{site.data.keyword.bpshort}} Platform roles and service roles](/docs/schematics?topic=schematics-access#iam-platform-svc-roles)
 
@@ -1736,7 +1748,7 @@ subcollection: schematics
 
 * [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
 
-* [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag)
+* [Manage the access tag in your account](/docs/schematics?topic=schematics-access#access-tag)
 
 [Protecting {{site.data.keyword.bpshort}} services with context-based restrictions](/docs/schematics?topic=schematics-access-control-cbr#access-control-cbr)
 
@@ -2510,6 +2522,8 @@ subcollection: schematics
 * [When do you specify the GitHub master or subdirectory branch?](/docs/schematics?topic=schematics-general-faq#gitbranch-faq)
 
 * [Can you configure the activeness of the {{site.data.keyword.bpshort}} API call?](/docs/schematics?topic=schematics-general-faq#http-api-call)
+
+* [Does {{site.data.keyword.bpshort}} supports region-based access?](/docs/schematics?topic=schematics-general-faq#rba-faq-access)
 
 [Terraform](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
