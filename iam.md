@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-18"
+lastupdated: "2024-12-19"
 
 keywords: schematics, automation, terraform
 
@@ -39,15 +39,15 @@ No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role
 ## Region-based access
 {: #rba-role}
 
-Region-based access is a {{site.data.keyword.bpshort}} feature that enables you to securely authenticate users and consistently control access to entities such as a workspace or an action in the {{site.data.keyword.bloud_notm}}. To assign access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+Region-based access is a {{site.data.keyword.bpshort}} feature that enables you to securely authenticate invited users and consistently control access to the {{site.data.keyword.bpshort}} entities such as workspace, action, agent, and so on. To assign access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 {: short}
 
-If a user wants to select the `eu-de` region attribute on each IAM policy that is applied to the {{site.data.keyword.bpshort}} service, so that the invited user can access only in `eu-de` region.
+For example, if an account owner wanted to restrict the Region-based access is a {{site.data.keyword.bpshort}} resource access to the invited users only for a specific region, like `eu-de`. Then, an account owner can define the region-based access policy that are applied to the {{site.data.keyword.bpshort}} service, so that the invited user can access the resources only from `eu-de` region. For more information, see the [setting up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup).
 
-## Setting up region-based access to invite a user
+### Setting up region-based access to invite a user
 {: #rba-access-setup}
 
-As the {{site.data.keyword.cloud_notm}} account owner or authorized account administrator. Create a region-based access policy for your users to the {{site.data.keyword.bplong_notm}} and the resources that you want your users to work.
+As the {{site.data.keyword.cloud_notm}} account owner or authorized account administrator. Create a region-based access policy for your users to the {{site.data.keyword.bplong_notm}} resources that you want your users to access.
 {: shortdesc}
 
 1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv&interface=ui#invitations).
@@ -58,9 +58,9 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 4. Select **Access Policy**.
    * Select `Schematics` as **Services** parameter.
-   * Select `Specific resources` as Resources parameter.
+   * Select `Specific resources` as **Resources** parameter for providing region-based access. **Note** if you select `All resources`, user can access all the resources from all the regions.
    * To enable the scope access to a particular region select the same region that you want the user to access, for example `Frankfurt (eu-de)`. Click **Next**.
-   * Check `Manager` and `Operator` for the Roles and actions. Click **Next**.
+   * Provide the **Roles and actions** for the `Service access` and `Platform access` as per the requirement. Click **Next**.
 
 5. Click **Review** to review the settings. Click **Add**.
 
@@ -228,10 +228,10 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
     * The resource group of the {{site.data.keyword.bpshort}} workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
     * For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are needed for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy.
 
-## Manage the the access tag in your account 
+## Manage the access tag in your account 
 {: #access-tag}
 
-You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspaces in your account at scale. Tags contain the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. The following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
+You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspaces in your account at scale. Tags contain the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. The following step helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
 
 * To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create).
 * To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)

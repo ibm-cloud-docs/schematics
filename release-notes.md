@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-18"
+lastupdated: "2024-12-19"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -37,7 +37,7 @@ Review the release notes for December 2024.
 {: release-note}
 
 {{site.data.keyword.bpshort}} supports region-based access
-:   [Region-based access feature](/docs/schematics?topic=schematics-access#rba-role) support in {{site.data.keyword.bpshort}} workspace or an action. For more information about configuration, see the steps [to set up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup).
+:    {{site.data.keyword.bpshort}} supports [Region-based access](/docs/schematics?topic=schematics-access#rba-role) feature. For more information about configuration, see the steps [to set up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup).
 
 ## November 2024
 {: #November-2024}
