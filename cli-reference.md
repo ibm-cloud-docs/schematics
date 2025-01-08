@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -214,7 +214,7 @@ ibmcloud schematics action update --id us-south.workspace.101010101 --descriptio
 ### `ibmcloud schematics action get`
 {: #schematics-get-action}
 
-Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} Action using an `action_id`. 
+Retrieve the details of an existing {{site.data.keyword.bpshort}} Action such as action ID, Name, Status, Creation Time, Encryption status, and Encryption CRN, including the values of all the input variables.
 {: shortdesc}
 
 Syntax
@@ -721,7 +721,7 @@ ibmcloud schematics agent destroy --id <AGENT_ID>
 ### `ibmcloud schematics agent get`
 {: #schematics-agent-get}
 
-Retrieves the details of an agent. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
+Retrieve the details of an existing agent such as agent ID, Name, Status, Version, Creation Time, Encryption status and Encryption CRN, including the values of all input variables. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
 
 Syntax
 
@@ -1811,7 +1811,7 @@ ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics workspace get`
 {: #schematics-workspace-get}
 
-Retrieve the details of an existing workspace, including the values of all input variables.	
+Retrieve the details of an existing workspace such as workspace ID, Name, Status, Version, Creation Time, Template ID, Commit ID, Encryption status and Encryption CRN, including the values of all input variables.
 {: shortdesc}	
 
 Syntax
@@ -2399,6 +2399,69 @@ ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file my
 ```
 {: pre}
 
+### `ibmcloud schematics workspace update variables`
+{: #schematics-workspace-update-variables}
+
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{: deprecated}
+
+Update variables allows you to update one or more input variables for an existing workspace. You cannot update the workspace metadata variables such as name, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) command.
+
+Syntax
+
+```sh
+ibmcloud schematics workspace update-variables --id WORKSPACE_ID --template TEMPLATE_ID --file FILE_NAME [--output OUTPUT]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to update the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
+| `--file` or `-f` | Required | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace variables to update. For more information about the sample JSON file with the details, see [JSON file update template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-update-template).|
+| `--template` or `-tid` | Required |  Enter the template ID. Use [ibmcloud schematics workspace get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get) to fetch the template ID.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
+{: caption="{{site.data.keyword.bpshort}} workspace update flags" caption-side="top"}
+
+#### Example for variable store
+{: #syntax_of_variablestore}
+
+**exampleupdatevar.json:**
+
+```json
+{
+    "variablestore":
+    [
+                {
+                    "name": "vpc_name",
+                    "secure": true,
+                    "value": "vpc_name_snsitive_updated",
+                    "type": "string",
+                    "description": ""
+                },
+                {
+                    "name": "IC_SCHEMATICS_WORKSPACE_ID",
+                    "secure": false,
+                    "value": "test_updated",
+                    "type": "string",
+                    "description": ""
+                }
+    ]
+}
+```
+{: pre}
+
+
+Example
+
+```sh
+ibmcloud schematics workspace update-variables --id myworkspace-a1aa1a1a-a11a-11 --template myworkspacetemplateid-1000 --file exampleupdatevar.json 
+```
+{: pre}
+
+
+
 ### `ibmcloud schematics workspace upload`
 {: #schematics-workspace-upload}
 
@@ -2499,8 +2562,8 @@ ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --target ibm_is_inst
 ### `ibmcloud schematics destroy`
 {: #schematics-destroy}
 
-Remove {{site.data.keyword.cloud_notm}} resources that you provisioned using your {{site.data.keyword.bpshort}} workspace, even if these resources are active.
-{: shortdesc}	
+Remove {{site.data.keyword.cloud_notm}} resources that you provisioned using your {{site.data.keyword.bpshort}} workspace, even if these resources are active. By default, the command lists all the resources to preview and then receives confirmation to destroy. If you use `--force or -f` flag in the destroy command, you cannot see the preview of the resources that you want to destory. 
+{: shortdesc}
 
 Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you have written data to provisioned storage or databases, ensure that you create a backup to persist your data
 {: important} 	
@@ -2522,7 +2585,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 | `--target` or `-t` | Optional | Target the deletion of a specific resource by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well.|
-| `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
+| `--force` or `-f` | Optional | Force the execution of this command without user prompts. You cannot see the preview of the resources that you want to destory. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} destroy flags" caption-side="top"}
 
@@ -2920,8 +2983,10 @@ ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /
 Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI plug-in. Be sure to keep your CLI up-to-date so that you can use all the available commands and their options.
 {: shortdesc}
 
+
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.25 | 08 January 2025 | {{site.data.keyword.bpshort}} CLI plugin supports [ibmcloud schematics workspace update variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables) CLI command to update only the required input variables for an existing workspace. It also enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview feature to list all the job resources. The {{site.data.keyword.bplong_notm}} [workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get), [an action](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action), and [an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) get commands fetches the encryption CRN and encryption status such as `IBM Default` or `BYOK` or `KYOK` details.|
 | 1.12.24 | 8 July 2024 | {{site.data.keyword.bpshort}} CLI plugin fixes the support to target Toronto endpoints through `ca-tor` region.|
 | 1.12.23 | 11 June 2024 | {{site.data.keyword.bpshort}} CLI plugin enhances the display of `terraform.tfvars` file format during `--var-file` argument usage in [ibmcloud workspace apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) and [ibmcloud workspace plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) command. The support for Internationalization (I18n) translation is updated.|
 | 1.12.22 | 30 May 2024 | {{site.data.keyword.bpshort}} CLI plugin supports [`ibmcloud schematics agent destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-destroy) to destroy the deployment resources. And set the `--force` parameter to **true** to delete all the agent flows to keep destroy parallel to workspace destroy flow.|

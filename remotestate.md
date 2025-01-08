@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-08"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -113,7 +113,7 @@ Similar to the `remote_state` data source, you can only access information that 
 5. [Run your Terraform code in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). When you review your logs, you can see the output values from your VPC workspace in the **Output** section.
 
     Example output
-    
+
     ```text
     ...
     2020/02/21 19:49:30 Terraform show | Outputs:

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-19"
+  years: 2017, 2025
+lastupdated: "2025-01-08"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,31 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## January 2025
+{: #January-2025}
+
+Review the release notes for January 2025.
+{: shortdesc}
+
+### 08 January 2025
+{: #schematics-jan0825}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.25](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) released.
+
+Workspace update variable command feature upgrade
+:   The {{site.data.keyword.bplong_notm}} supports ibmcloud schematics [workspace update variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables) CLI command to update only the required input variables for an existing workspace.
+
+{{site.data.keyword.bpshort}} enhances the destory with preview feature
+:   The {{site.data.keyword.bplong_notm}} enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview to lists all the job resources.
+
+{{site.data.keyword.bpshort}} workspace, an action, and an agent get enhancements the destory with preview feature
+:   The {{site.data.keyword.bplong_notm}} enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview to lists all the job 
+
+{{site.data.keyword.bpshort}} supports encryption status in get commands
+:   The {{site.data.keyword.bplong_notm}} [workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get), [an action](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action), and [an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) get commands is enhanced to fetch the `Encryption CRN` and `Encryption Status` such as `IBM Default` or `BYOK` or `KYOK` details.
 
 ## December 2024
 {: #December-2024}
