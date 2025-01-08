@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-19"
+  years: 2017, 2025
+lastupdated: "2025-01-08"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,22 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [January 2025](/docs/schematics?topic=schematics-schematics-relnotes#January-2025)
+
+    * Review the release notes for January 2025.
+
+    * [08 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0825)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in
+
+        * Workspace update variable command feature upgrade
+
+        * {{site.data.keyword.bpshort}} enhances the destory with preview feature
+
+        * {{site.data.keyword.bpshort}} workspace, an action, and an agent get enhancements the destory with preview feature
+
+        * {{site.data.keyword.bpshort}} supports encryption status in get commands
 
 * [December 2024](/docs/schematics?topic=schematics-schematics-relnotes#December-2024)
 
@@ -2139,6 +2155,8 @@ subcollection: schematics
     * [`ibmcloud schematics workspace untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint)
 
     * [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update)
+
+    * [`ibmcloud schematics workspace update variables`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables)
 
     * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
