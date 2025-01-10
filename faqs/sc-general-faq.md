@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-10"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -267,14 +267,14 @@ Although the state file is updated before new changes to your {{site.data.keywor
 {: faq}
 {: support}
 
-Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning message as `Alias Terraform are deprecated. Use schematics or sch in your commands`. For more information, see [CLI version history](/docs/schematics?topic=schematics-cli_version-releases).
+Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning message as `Alias Terraform are deprecated. Use schematics or sch in your commands`. For more information, see [CLI version history](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## Can I access private network through {{site.data.keyword.bpshort}}?
 {: #private-endpoint-faq}
 {: faq}
 {: support}
 
-Yes, from [CLI release v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) {{site.data.keyword.bpshort}} supports private {{site.data.keyword.bpshort}} endpoint to access your private network. For more information, see [private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+Yes, from [CLI release v1.8.0](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) {{site.data.keyword.bpshort}} supports private {{site.data.keyword.bpshort}} endpoint to access your private network. For more information, see [private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
 
 ## How can I resolve the error message when connecting to Bastion host IP addresses through {{site.data.keyword.bplong_notm}}?
 {: #bastion-ipaddress-faq}

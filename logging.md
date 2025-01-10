@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-12-18"
+  years: 2018, 2025
+lastupdated: "2025-01-10"
 
 keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging, ibm cloud logs, cloud logs
 
@@ -63,7 +63,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|-------------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
-{: #at-table-1}
+{: #loc-table-1}
 {: tab-title="Americas"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}
@@ -73,7 +73,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------|---------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
-{: #at-table-2}
+{: #loc-table-2}
 {: tab-title="Europe"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}

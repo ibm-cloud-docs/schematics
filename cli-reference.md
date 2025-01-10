@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-10"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -29,7 +29,7 @@ To run {{site.data.keyword.bpshort}} commands, use `ibmcloud schematics` or `ibm
 - Set up your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 
-Be sure to keep your CLI up-to-date so that you can use the current released commands and their options. For more information about the current command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
+Be sure to keep your CLI up-to-date so that you can use the current released commands and their options. For more information about the current command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 {: important}
 
 ## Actions commands
@@ -2425,7 +2425,7 @@ Command options
 {: caption="{{site.data.keyword.bpshort}} workspace update flags" caption-side="top"}
 
 #### Example for variable store
-{: #syntax_of_variablestore}
+{: #syntax_of_update_variablestore}
 
 **exampleupdatevar.json:**
 
@@ -2986,7 +2986,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.25 | 08 January 2025 | {{site.data.keyword.bpshort}} CLI plugin supports [ibmcloud schematics workspace update variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables) CLI command to update only the required input variables for an existing workspace. It also enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview feature to list all the job resources. The {{site.data.keyword.bplong_notm}} [workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get), [an action](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action), and [an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) get commands fetches the encryption CRN and encryption status such as `IBM Default` or `BYOK` or `KYOK` details.|
+| 1.12.25 | 10 January 2025 | {{site.data.keyword.bpshort}} CLI plugin supports [ibmcloud schematics workspace update variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables) CLI command to update only the required input variables for an existing workspace. It also enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview feature to list all the job resources with confirmation. The {{site.data.keyword.bplong_notm}} [workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get), [an action](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action), and [an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) get commands fetches the encryption CRN and encryption status such as `IBM Default` or `BYOK` or `KYOK` details.|
 | 1.12.24 | 8 July 2024 | {{site.data.keyword.bpshort}} CLI plugin fixes the support to target Toronto endpoints through `ca-tor` region.|
 | 1.12.23 | 11 June 2024 | {{site.data.keyword.bpshort}} CLI plugin enhances the display of `terraform.tfvars` file format during `--var-file` argument usage in [ibmcloud workspace apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) and [ibmcloud workspace plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) command. The support for Internationalization (I18n) translation is updated.|
 | 1.12.22 | 30 May 2024 | {{site.data.keyword.bpshort}} CLI plugin supports [`ibmcloud schematics agent destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-destroy) to destroy the deployment resources. And set the `--force` parameter to **true** to delete all the agent flows to keep destroy parallel to workspace destroy flow.|

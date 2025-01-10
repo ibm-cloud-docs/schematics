@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-08"
+  years: 2017, 2025
+lastupdated: "2025-01-10"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -50,7 +50,7 @@ IAM access permission
 :   Use the recent version of {{site.data.keyword.cloud_notm}} CLI and the [{{site.data.keyword.bpshort}} CLI v1.12.12](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) or higher plug-in to install an agent. For more information about plug-in installation, see [installing {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 
 Terraform version support
-:   Agent supports the workspace by using Terraform `v1.5`, and `v1.6`. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+:   Agent supports the workspace by using Terraform `v1.5`, `v1.6`, and `v1.9`. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 You can deploy only one agent instance on a Kubernetes cluster. To deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account, they must be deployed to different Kubernetes clusters. Each agent and cluster can cater to different network isolation zones in your Cloud environment.
 {: note}
