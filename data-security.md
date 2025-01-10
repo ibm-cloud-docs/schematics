@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-10"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Securing your data with encryption
 {: #secure-data}
 
-Review what data is stored and encrypted when you use {{site.data.keyword.bplong_notm}}, and how you can delete any stored user data. 
+Review what data is stored and encrypted when you use {{site.data.keyword.bplong_notm}}, and how you can delete any stored user data.
 {: shortdesc}
 
 To ensure that you can securely manage your data when you use {{site.data.keyword.bpshort}}, it is important to know what data is stored and encrypted and how you can delete any stored data. Data encryption is performed with keys managed by {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}. 
@@ -23,7 +23,6 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 ## How your data is stored and encrypted in {{site.data.keyword.bpshort}}
 {: #data-storage}
-
 
 All data, user inputs and the data generated at runtime during execution of Terraform or Ansible automation code is stored in {{site.data.keyword.cos_full_notm}}. Data is encrypted at rest with AES GCM 256 encryption using an [envelope encryption](/docs/key-protect?topic=key-protect-envelope-encryption) technique with {{site.data.keyword.cloud_notm}} managed root keys. {{site.data.keyword.keymanagementserviceshort}} managed root keys are secured by `FIPS 140-2 Level 3` certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. 
 
@@ -76,12 +75,12 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 
 |Geography/ location| API endpoint|Data stored|Data replicated|
 |------------|----------------|------|--------|
-|North America|**`Public`** </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> **`Private`** </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
-|Dallas|**`Public`** </br>`https://us-south.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
-|Washington|**`Public`** </br>`https://us-east.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
-|Europe|**`Public`** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
-|Frankfurt|**`Public`** </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> **`Private`** </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
-|London|**`Public`** </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> **`Private`** </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
+|North America|`Public` </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> `Private` </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|Dallas| `Public` </br>`https://us-south.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
+|Washington| `Public` </br>`https://us-east.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
+|Europe| `Public` </br> `https://eu.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
+|Frankfurt| `Public` </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
+|London| `Public` </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> `Private` </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
 {: caption="Location information" caption-side="bottom"}
 
 ## How is my information encrypted?

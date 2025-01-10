@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-24"
+  years: 2017, 2025
+lastupdated: "2025-01-10"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
 
@@ -23,7 +23,7 @@ Modules referenced with the `source` parameter are downloaded during the `terraf
 
 To download modules from a private Git repository, an {{site.data.keyword.cloud_notm}} catalog, or any other repository, Terraform supports the use of a [`netrc`](https://everything.curl.dev/usingcurl/netrc.html){: external} configuration to pass any required access id's and tokens.
 
-|  Repository </br>  | Template </br> Public repo | Template </br>Private repo | Module </br>Public repo | Module </br>private repo | Comment </br>  |
+|  Repository </br>  | Template </br> Public repo | Template </br>Private repository | Module </br>Public repository | Module </br>private repository | Comment </br>  |
 | --- |--- | --- | --- | --- | --- |
 | GitHub | Yes | Git token - 1  | Yes | Git token - 2 | 
 | GitLab | Yes | Git token - 1 | Yes | Git token - 2 | 

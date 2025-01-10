@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-10"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -26,6 +26,7 @@ Answers to common questions about the Agent for {{site.data.keyword.bplong_notm}
 {: support}
 
 The following are the features in the agent release.
+
 - Improvements to the agent deployment experience through CLI and UI.
 - Support to run Ansible playbooks on the agent.
 - Dynamic assignment of workspace or action jobs to the agent.
@@ -37,14 +38,16 @@ The following are the features in the agent release.
 
 The following is the cost break-down for deploying and using a {{site.data.keyword.bpshort}} agent.
 
-The prerequisite infrastructure required to deploy and run an agent is chargeable: 
+The prerequisite infrastructure required to deploy and run an agent is chargeable:
+
 - Cost of VPC infrastructure elements such as subnet, public gateways.
 - Cost of {{site.data.keyword.containerlong_notm}} (cluster) on VPC, with three-node worker pool.
 - Cost of IBM Cloud Object Storage
 
 Agent service execution:
+
 - There is no cost to running jobs on agents.  
-- The {{site.data.keyword.bpshort}} version 1 agent capability is a non-chargeable feature. Future versions may be chargeable. 
+- The {{site.data.keyword.bpshort}} version 1 agent capability is a non-chargeable feature. Future versions may be chargeable.
 
 ## Is it possible to install more than one Agent on a cluster?
 {: #faqs-agent-install}
@@ -244,7 +247,6 @@ You can follow these steps to enable or disable the debug mode of an agent.
 
 No, you cannot upgrade agent beta setup to agent GA version.
 
-
 ## Are {{site.data.keyword.bpshort}} Agent the same as Terraform cloud agents?
 {: #faqs-agent-terraform-agent}
 {: faq}
@@ -304,6 +306,7 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
      {: pre}
 
    - Use configmap as volume and mount as shared in the deployment file in `Jobrunner`, `Sandbox`, and `Runtime-ws` microservices.
+   
      ```text
         apiVersion: apps/v1
         kind: Deployment

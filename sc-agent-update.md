@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-10"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -156,6 +156,8 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agen
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.3.0 | 30 October 2024 | Supports `schematics-agent-ansible-job` instead of an existing `schematics-ansible-job` and Terraform version 1.9 |
+| 1.2.0 | 23 September 2024 | Supports Terraform version 1.5 and 1.6 |
 | 1.1.1 | 23 July 2024 | Enhanced the agent deletion timeout period and agent deploy issues are fixed. |
 | 1.1.0 | 19 March 2024 | Added support for the {{site.data.keyword.bpshort}} Agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}. |
 | 1.0.0 | 10 January 2024 | {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support. For more information, see [Release note](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524). |

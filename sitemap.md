@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-10"
 
 keywords: schematics
 subcollection: schematics
@@ -173,15 +173,15 @@ subcollection: schematics
 
     * Review the release notes for January 2025.
 
-    * [08 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0825)
+    * [10 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1025)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in
 
+    * [08 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0825)
+
         * Workspace update variable command feature upgrade
 
-        * {{site.data.keyword.bpshort}} enhances the destory with preview feature
-
-        * {{site.data.keyword.bpshort}} workspace, an action, and an agent get enhancements the destory with preview feature
+        * {{site.data.keyword.bpshort}} enhances the destory feature
 
         * {{site.data.keyword.bpshort}} supports encryption status in get commands
 
@@ -189,7 +189,7 @@ subcollection: schematics
 
     * Review the release notes for December 2024.
 
-    * [18 December 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1424)
+    * [18 December 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1424)
 
         * {{site.data.keyword.bpshort}} supports region-based access
 
@@ -205,6 +205,10 @@ subcollection: schematics
 
     * Review the release notes for October 2024.
 
+    * [30 October 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct3024)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
+
     * [24 October 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2424)
 
         * New {{site.data.keyword.cloudaccesstrailshort}} topic
@@ -212,6 +216,14 @@ subcollection: schematics
         * Added logging topic
 
         * New {{site.data.keyword.monitoringshort}} metrics topic
+
+* [September 2024](/docs/schematics?topic=schematics-schematics-relnotes#September-2024)
+
+    * Review the release notes for September 2024.
+
+    * [23 September 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept2324)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
 
 * [August 2024](/docs/schematics?topic=schematics-schematics-relnotes#August-2024)
 
@@ -2191,8 +2203,6 @@ subcollection: schematics
     * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
 * [CLI version history](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases)
-
-[CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
 
 ## Understanding security and compliance
