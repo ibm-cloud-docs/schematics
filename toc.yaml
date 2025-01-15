@@ -31,9 +31,6 @@ toc:
           - getting-started-terraform.md
           - getting-started-ansible-new.md
           - getting-started-software.md
-  - navgroup:
-      id: tutorial
-      topics:
       - tutorials/provisioning-tf.md
       - tutorials/automate_continuous_deployment.md
       - tutorials/private-catalog.md
