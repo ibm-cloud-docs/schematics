@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-12-18"
+  years: 2018, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Activity tracking events for {{site.data.keyword.bpshort}}
 {: #at_events}
 
-You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.bplong_full}} service instance by using the {{site.data.keyword.cloudaccesstraillong}} service. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
+You can view, manage, and audit user-initiated activities made in your {{site.data.keyword.bplong}} service instance by using the {{site.data.keyword.cloudaccesstraillong}} service. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 {: shordesc}
 
 {{site.data.keyword.cloudaccesstraillong_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to follow regulatory audit requirements. You can also be alerted about actions as they happen. The events that are collected follow the Cloud Auditing Data Federation (CADF) standard. For more information, see the [Getting Started tutorial for {{site.data.keyword.cloudaccesstraillong_notm}}](/docs/atracker?topic=atracker-getting-started).

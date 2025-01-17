@@ -135,6 +135,8 @@ toc:
       id: reference
       topics:
       - ha-dr.md
+      - topic: service-dependency.md
+        navtitle: Service dependency map
       - sc-about-responsibilities.md
       - topicgroup:
           label: API reference
