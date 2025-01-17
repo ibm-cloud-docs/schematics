@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-24"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: compact, subdirectory, schematics, download, directory
 
@@ -45,6 +45,7 @@ You can also activate **compact download** through the `API or CLI` by using `co
                 "type": "terraform_v1.4"
     }]
 }
+
 ```
 {: pre}
 

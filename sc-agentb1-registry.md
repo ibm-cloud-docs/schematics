@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -82,6 +82,7 @@ provider_installation {
                         exclude = ["user_namespace/provider_name"]
                 }
         }
+        
 ```
 {: pre}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, cli, setting up, api
 
@@ -30,7 +30,7 @@ Learn how to use the {{site.data.keyword.bplong}} API using an Identity and Acce
 To work with {{site.data.keyword.bplong_notm}} API, you must provide an {{site.data.keyword.iamlong}} (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
 
 |Authentication option  | Description|
-|-----------------------------------|----------|
+|-----------------------------------|---------- |
 | {{site.data.keyword.cloud_notm}} username and password | You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token. If you authenticate with {{site.data.keyword.cloud_notm}} using [MFA](/docs/account?topic=account-types), you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because MFA requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must use an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
 | {{site.data.keyword.cloud_notm}} API key | As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are specific to the {{site.data.keyword.cloud_notm}} account they are generated for. To access workspaces that were created in a different account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must generate an API key for that account. </ul>|
 {: caption="ID types and options" caption-side="top"}

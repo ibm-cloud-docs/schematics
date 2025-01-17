@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -46,7 +46,7 @@ Terraform jobs such as plan, apply, and destroy on a workspace should not genera
 
 After `24 hours`, an interrupt signal is sent to stop job execution. A grace period of `10 minutes` is given for the command to finish. If not completed in this time, a kill signal is sent and the job is terminated. A Terraform refresh is performed after stopping the job to ensure the state file and other data is collected.
 
-In a job, multiple commands such as `terraform init`, `terraform apply`, and `terraform refresh` are executed. If the job times out in a command, all further commands only get the additional `10 minutes` to finish. At the end of `10 minutes`, each command is killed. 
+In a job, multiple commands such as `terraform init`, `terraform apply`, and `terraform refresh` are executed. If the job times out in a command, all further commands only get the additional `10 minutes` to finish. At the end of `10 minutes`, each command is killed.
 
 Example
 If a job is stuck forever on a Terraform apply, when the command is stopped, and if you run a refresh. If refresh is also stuck, after `15 minutes`, a kill is executed.

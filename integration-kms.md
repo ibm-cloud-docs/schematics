@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -35,11 +35,11 @@ The key management system lists the instance that are created from your specific
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to your `KYOK`, or `BYOK` instance.
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
 
-    * In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
-    * Select a **Source Service** as **{{site.data.keyword.bpshort}}**.
-    * Select **Target Service** as **{{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}**. Select the instance you want to provide authorization.
-    * Select the **Role** as **Reader**.
-    * Click **Authorize**.
+    1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
+    2. Select a **Source Service** as **{{site.data.keyword.bpshort}}**.
+    3. Select **Target Service** as **{{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}**. Select the instance you want to provide authorization.
+    4. Select the **Role** as **Reader**.
+    5. Click **Authorize**.
 
       For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth&interface=cli#auth-cli), and [API](/docs/account?topic=account-serviceauth&interface=ui#create-auth).
       {: note}

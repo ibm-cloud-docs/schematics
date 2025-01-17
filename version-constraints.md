@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-09-05"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -85,7 +85,6 @@ ibmcloud schematics version
   Ansible Provisioner              v2.3.3
                                   
   OK
-
 ```
 {: screen}
 

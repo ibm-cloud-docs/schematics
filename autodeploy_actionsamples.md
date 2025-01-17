@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: action templates, schematics template, terraform template
 
@@ -20,7 +20,7 @@ Explore the IBM provided Ansible playbooks to run cloud operations on target hos
 
 Use the links on the page as follows:
     - `View GitHub repo`: Click the link to open the Git repository where the template is stored. You can review the file structure, the Ansible playbook instructions, and the `README` file that contains the steps to use the template in {{site.data.keyword.bpshort}}.
-    - `Deploy to {{site.data.keyword.cloud_notm}}`: Button takes you to **Create an action** page with the **GitHub repository URL** and the **Action name** pre-populated.
+    - `Deploy to {{site.data.keyword.cloud_notm}}`: Takes you to **Create an action** page with the **GitHub repository URL** and the **Action name** pre-populated.
 
 ## Running cloud operations on {{site.data.keyword.vsi_is_short}}
 {: #ansible-vpc}

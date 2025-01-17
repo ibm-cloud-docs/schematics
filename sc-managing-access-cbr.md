@@ -37,7 +37,7 @@ First, create a network zone containing the network IP addresses, VPCs, resource
 
 You need to allowlist {{site.data.keyword.bpshort}} in the CBR rules for other services if you require {{site.data.keyword.bpshort}} to connect to the service to perform post-configuration of service resources, for instance {{site.data.keyword.cloud}} PostgreSQL Database. If you configure a CBR rule for a service, for instance {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.bpshort}} cannot access a cluster in your account unless you include {{site.data.keyword.bpshort}} in the CBR allowlist.
 
-CBR rules do not apply to resource and service provisioning requests, only to the post-configuration of provisioned services. 
+CBR rules do not apply to resource and service provisioning requests, only to the post-configuration of provisioned services.
 
 Currently, CBR is supported by {{site.data.keyword.bpshort}} public endpoints in both `US` and `EU` regions. CBR support with {{site.data.keyword.bpshort}} private endpoints is limited to `EU` region only.
 {: note}

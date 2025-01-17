@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -106,7 +106,7 @@ A benefit of the declarative approached used by Terraform and Ansible is `idempo
 How you use a tool and the modules used both have an impact on `idempotency`. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. In which case, the configuration may drift from the desired target state. With Terraform this form of drift is most likely when `null-resources` are used to extend provider functionality with custom scripts which are not idempotent.
 
 Immutability is an IaC practice that minimizes the risk of drift from the target state.
- 
+
 ### Immutable
 {: #iac-immutability}
 

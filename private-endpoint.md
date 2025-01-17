@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -80,6 +80,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
         Linked Softlayer Account:     000000
         VRF Enabled:                  true  
         Service Endpoint Enabled:     true
+        
         ```
         {: screen}
 

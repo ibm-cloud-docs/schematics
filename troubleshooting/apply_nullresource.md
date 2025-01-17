@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -35,6 +35,7 @@ To troubleshoot the error in the script, follow these steps:
       2021/05/24 05:03:42 Terraform apply | 
       2021/05/24 05:03:42 Terraform apply | 
       2021/05/24 05:03:42 Terraform apply | Error: timeout - last error: ssh: rejected: connect failed (Connection timed out)
+      
     ```
     {: screen}
 

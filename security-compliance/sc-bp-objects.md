@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-30"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -27,6 +27,7 @@ Take time to review the suggested practices to reduce the security risks for all
 {: #bp-template-strategy}
 
 Follow these practices in developing and publishing the Terraform template in the Git repositories.
+
 - Create Terraform template by using `Terraform version1.4` or higher and current [{{site.data.keyword.cloud_notm}} provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
 - Create environment variables for all your credentials.
 - Check whether pre-commit hooks are run to inspect your code meets Terraform standards, see [sample repository that contains pre-commit hook](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.pre-commit-config.yaml).

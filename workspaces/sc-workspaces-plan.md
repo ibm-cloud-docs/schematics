@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -61,8 +61,8 @@ During workspace plan execution, you cannot edit your workspace.
 
 	Example
 
-	```json
-	{
+    ```json
+		{
 		"name": "testwspace31jan",
 		"type": [
 			"terraform_v1.4"
@@ -101,7 +101,7 @@ During workspace plan execution, you cannot edit your workspace.
 
 	Syntax
 
-	```sh
+    ```sh
 	ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--var-file PATH_TO_VARIABLES_FILE] [--var-file PATH_TO_VARIABLES_FILE] []
 	```
 	{: pre}
@@ -110,6 +110,7 @@ During workspace plan execution, you cannot edit your workspace.
 	{: note}
 
 2. Verify that your workspace plan is applied. Make sure that your workspace is in an **Inactive** state.
+
     ```sh
     ibmcloud schematics workspace list
     ```

@@ -80,6 +80,7 @@ Follow the instructions to configure the `provider` block.
         iaas_classic_username = var.iaas_classic_username
         iaas_classic_api_key  = var.iaas_classic_api_key
     }
+    
     ```
     {: codeblock}
 

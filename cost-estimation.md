@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-22"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics cost, schematics cost estimation, cost estimation, cost, cost-estimation
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Estimating infrastructure costs
 {: #cost-estimation}
 
-Cost estimation is available for the {{site.data.keyword.bpshort}} templates in `Generate Plan` operation. This estimate is meant to be a starting point to help you determine how much your account might be charged for deploying {{site.data.keyword.cloud_notm}} resources and services. This estimated amount is subject to change as the template is customized, and it does not include all resources, usage, licenses, fees, discounts, or taxes. 
+Cost estimation is available for the {{site.data.keyword.bpshort}} templates in `Generate Plan` operation. This estimate is meant to be a starting point to help you determine how much your account might be charged for deploying {{site.data.keyword.cloud_notm}} resources and services. This estimated amount is subject to change as the template is customized, and it does not include all resources, usage, licenses, fees, discounts, or taxes.
 {: shortdesc}
 
 Review the list of [supported and unsupported resources](https://github.com/IBM-Cloud/terraform-cost-estimator/blob/main/supportedResources.md#list-of-resources-supported){: external} for cost estimation.

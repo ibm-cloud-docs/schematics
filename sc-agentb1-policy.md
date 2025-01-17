@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agent, agent policy, policies
 
@@ -25,7 +25,7 @@ Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to us
 
 Only a single policy can be associated with a workspace or action. Policy creation fails if there is an existing policy that targets the same workspaces or actions.  
 
-You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI. 
+You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI.
 
 The `agent-assignment-policy` for an agent is defined by using the following attributes of a workspace or action. The selection attributes can be a combination of the following flags:
 

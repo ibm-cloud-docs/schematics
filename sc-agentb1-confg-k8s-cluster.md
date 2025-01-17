@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -25,7 +25,7 @@ When an agent is deployed, by default the following configuration options are ap
 
 The following network policies are configured to control network traffic on the cluster.
 
-| Policy  |	Description |
+| Policy  |  Description |
 | --- | --- |
 | `deny-all-jobrunner` | `Namespace:schematics-job-runtime`, denies all the `Ingress` and `Egress` traffic. |
 | `deny-all-runtime` |`Namespace:schematics-runtime`, denies all the `Ingress` and `Egress` traffic. |

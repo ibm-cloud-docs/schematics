@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-24"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: display resources with schematics, show resources, show schematics resources
 
@@ -27,7 +27,7 @@ The resources that are displayed are the Terraform resources defined for the wor
 
 **The table lists the resource data displayed.**
 
-| Data | Description |
+| Data | Description  |
 | --- | --- |
 | Resource | The name of the resource. The resource name can have a resource controller URL that appears as a anchor link, so that you can click on the link and navigate to the resource dashboard page. If a resource does not have a resource controller URL, it appears as plain text. The resource controller URL is derived from the Terraform state file. Note you cannot link to the resource directly, only to the resource list. |
 | Type | The resource type. For example, `ibm_is_vpc`, `ibm_is_subnet`. |

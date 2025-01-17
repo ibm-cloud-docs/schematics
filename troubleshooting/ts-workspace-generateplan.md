@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics, generate plan, schematics workspace generate plan
 
@@ -22,6 +22,7 @@ When you `Generate Plan` for the Terraform script that contains cluster, used to
 ```text
 "Error: Get "http://localhost/api/v1/namespaces/external-secrets": 
 dial tcp [::1]:80: connect: connection refused".
+
 ```
 {: screen}
 

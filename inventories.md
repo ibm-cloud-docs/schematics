@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -41,7 +41,7 @@ The use of (short form) hostnames is not supported.
 {: #static-inv-create}
 
 1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
-2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Ansible**.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation**  >  **Schematics** > **Ansible**.
 3. Click the playbook name.
 4. Click **Inventory** > **Create Inventory**.
 5. Enter a name for your inventory, verify your location, and select your `Resource group` where you want to create an inventory.

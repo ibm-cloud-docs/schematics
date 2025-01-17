@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -152,6 +152,7 @@ Do you really want to perform this action? [y/N]> y
 Activity ID   c10fc92ddfd2d9ec645fc5dbece5e341   
                 
 OK
+
 ```
 {: screen}
 

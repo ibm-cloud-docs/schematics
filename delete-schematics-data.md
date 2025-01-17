@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -23,8 +23,6 @@ Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data
 
 After a soft or hard delete of the {{site.data.keyword.bpshort}} objects, if the {{site.data.keyword.bpshort}} services fails to delete the objects in your account. You need to raise a [{{site.data.keyword.bpshort}} support ticket](/docs/schematics?topic=schematics-schematics-help) to completely remove from the resource controller.
 {: note}
-
-
 
 ## Scope
 {: #delete-schematics-data-scope}

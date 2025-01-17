@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -357,6 +357,7 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
                 readyReplicas: 1
                 replicas: 1
                 updatedReplicas: 1
+                
      ```
      {: screen}
 

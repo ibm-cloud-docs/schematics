@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2024-05-16"
+lastupdated: "2025-01-17"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -51,7 +51,7 @@ The following table enlists the preinstalled software and tools in the {{site.da
 | `Ansible` |  `v2.9.27`	| `v2.9.27`	| For use by the [ansible-provisioner](https://github.com/radekg/terraform-provisioner-ansible){: external} for Terraform. </br>It is recommended to use the {{site.data.keyword.bpshort}} actions to run your Ansible automation.|
 | `{{site.data.keyword.cloud_notm}} CLI` |	Latest	 | Latest	| Latest version of the {{site.data.keyword.cloud_notm}} CLI plug-ins are pre-installed. For your Terraform automation, it is recommended to use the Terraform provider plugi-ns for {{site.data.keyword.cloud_notm}}. |
 | `JQ` |	`v1.6` |	Yes	| As the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Terraform automation. |
-| `Kubectl client` | | Yes |	For use in your Terraform automation. It is recommended to use the Terraform provider plug-ins for Kubernetes. |
+| `Kubectl client` | | Yes |For use in your Terraform automation. It is recommended to use the Terraform provider plug-ins for Kubernetes. |
 | `OpenShift client` | | Yes | {{site.data.keyword.redhat_openshift_notm}} CLI for your Terraform automation. It is recommended to use the Terraform provider plug-ins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
 | `Python` |	`v3.6` |	No	| For use in your Terraform automation. |
 | `Python libraries` |	`netaddr`	| No	| Red Hat OpenShift CLI for your Terraform automation. It is recommended to use the Terraform provider plug-ins for {{site.data.keyword.cloud_notm}} and Kubernetes. |

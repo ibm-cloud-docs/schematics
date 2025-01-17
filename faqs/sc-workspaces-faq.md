@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -328,6 +328,7 @@ When listing or retrieving workspaces the following error may be received.  `Err
 ```text
 Error:
 Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
+
 ```
 {: codeblock}
 

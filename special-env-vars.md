@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -107,7 +107,7 @@ Environment variables can only be set at content onboarding time. Refer to the C
 
 {{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information about special environment variables, see [Environment variables](https://developer.hashicorp.com/terraform/cli/config/environment-variables).
 
-| Variable | Description | Usage |
+| Variable | Description | Usage  |
 | ----  | ----- | ----- |
 | `TF_LOG` | The detailed logs that appear on standard error. Support values are **TRACE, DEBUG, INFO, WARN, or ERROR** | `"TF_LOG": "TRACE"` |
 | `TF_LOG_PROVIDER` | For debugging Terraform provider issues, see [Managing Log Output](https://developer.hashicorp.com/terraform/plugin/log/managing){: external}. | `"TF_LOG_PROVIDER": "TRACE"` |

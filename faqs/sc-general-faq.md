@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -242,7 +242,7 @@ To create a deviation report and view the changes between the infrastructure and
 {: faq}
 {: support}
 
-- A Terraform execution plan is based on the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds) that is created when you run your first {{site.data.keyword.bpshort}} apply action. 
+- A Terraform execution plan is based on the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds) that is created when you run your first {{site.data.keyword.bpshort}} apply action.
 - Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces by using automation tools such as `Ansible`, or `Chef` that are added without {{site.data.keyword.bpshort}} are not considered included in the Terraform execution plan.
 
 ## How must I remove resources with {{site.data.keyword.bplong_notm}}?

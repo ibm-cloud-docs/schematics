@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -93,6 +93,7 @@ Output
     "message": "The requested object cannot be located. Check that the ID is correct and try your request again.",
     "statuscode": 404
 }
+
 ```
 {: screen}
 

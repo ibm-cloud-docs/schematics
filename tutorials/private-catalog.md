@@ -48,7 +48,8 @@ This tutorial is intended for developers and system administrators who want to l
 ## Prerequisites
 {: #private-prerequisites}
 
-Before you begin, make sure that you are assigned the following permissions: 
+Before you begin, make sure that you are assigned the following permissions:
+
 - [To create a private catalog](/docs/account?topic=account-create-private-catalog#prereq-create) in {{site.data.keyword.cloud_notm}}.
 - [To create a {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-access#workspace-permissions).
 - [To create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/log-analysis?topic=log-analysis-iam#platform).

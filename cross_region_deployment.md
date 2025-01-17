@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -33,6 +33,7 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
     provider "ibm" {
         region = "<region_name>"
     }
+
     ```
     {: pre}
 
@@ -74,4 +75,4 @@ You can add multiple multiple provider configurations to the `provider` block to
     ```
     {: codeblock}
 
-3. Follow the [steps](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) to deploy your {{site.data.keyword.cloud_notm}} resources. 
+3. Follow the [steps](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) to deploy your {{site.data.keyword.cloud_notm}} resources.

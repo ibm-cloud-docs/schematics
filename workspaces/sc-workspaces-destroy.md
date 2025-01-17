@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -168,6 +168,7 @@ Output
 {
     "activityid": "6e5c84b58100472395b53a056cc27edc"
 }
+
 ```
 {: screen}
 

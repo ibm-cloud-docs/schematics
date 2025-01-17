@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -154,7 +154,7 @@ Syntax
 Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agents. Be sure to keep your {{site.data.keyword.bpshort}} Agents up-to-date so that you can use all the available features.
 {: shortdesc}
 
-| Version | Release date | Changes |
+| Version | Release date | Changes  |
 | ----- | ------- | -------------- |
 | 1.3.0 | 30 October 2024 | Supports `schematics-agent-ansible-job` instead of an existing `schematics-ansible-job` and Terraform version 1.9 |
 | 1.2.0 | 23 September 2024 | Supports Terraform version 1.5 and 1.6 |

@@ -35,7 +35,7 @@ The following image shows the cloud architecture components that you provision a
 
 ![Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}](../images/vpcgen2cluster.png){: caption="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
-| Component | Description |
+| Component | Description  |
 | -------- | -------- |
 | `Region` | Region increases the availability of cluster's master node and its nodes by replicating across multiple zones of a region. |
 | `VPC` | VPC provides you the security of a private cloud environment with the dynamic scalability of a public cloud. |

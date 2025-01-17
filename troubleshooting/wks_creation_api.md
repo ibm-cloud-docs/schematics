@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-30"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -41,7 +41,7 @@ When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.
 Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region where you want to create or update the workspace.
 {: tsResolve}
 
-For example
+For Example
 
 - For creating workspace in `US` region: Use `location` as **`us-east`** or **`us-south`** and `url` as **`https://us-south.schematics.cloud.ibm.com/`** or **`https://us-east.schematics.cloud.ibm.com/`**. By default **`https://cloud.ibm.com/schematics/workspaces`** points to **`https://cloud.ibm.com/schematics/overview`** endpoint.
 - For workspace in the `EU` region: Use `location` as **`eu-de`** or **`eu-gb`** and `url` as **`https://eu-de.schematics.cloud.ibm.com`** and **`https://eu-gb.schematics.cloud.ibm.com`** endpoint.

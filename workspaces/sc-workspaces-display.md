@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -16,7 +16,7 @@ subcollection: schematics
 {: #sch-display-wks}
 
 List the workspaces in your {{site.data.keyword.cloud}} account and optionally, show the details for your workspace.
-{: shortdesc} 
+{: shortdesc}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}

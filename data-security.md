@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -18,7 +18,7 @@ subcollection: schematics
 Review what data is stored and encrypted when you use {{site.data.keyword.bplong_notm}}, and how you can delete any stored user data.
 {: shortdesc}
 
-To ensure that you can securely manage your data when you use {{site.data.keyword.bpshort}}, it is important to know what data is stored and encrypted and how you can delete any stored data. Data encryption is performed with keys managed by {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}. 
+To ensure that you can securely manage your data when you use {{site.data.keyword.bpshort}}, it is important to know what data is stored and encrypted and how you can delete any stored data. Data encryption is performed with keys managed by {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## How your data is stored and encrypted in {{site.data.keyword.bpshort}}

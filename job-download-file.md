@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-09-05"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: download job files, job files, schematics job
 
@@ -36,6 +36,7 @@ The response of this endpoint embeds the content of the file in the field `file_
     "file_content": "{\n  \"version\": 4,\n  \"terraform_version\": \"0.15.5\",\n  \"serial\": 1,\n  \"lineage\": \"d415374e-08a8-7770-f009-f24a9c65b2e2\",\n  \"outputs\": {},\n  \"resources\": [\n    {\n      \"mode\": \"managed\",\n      \"type\": \"null_resource\",\n      \"name\": \"sleep\",\n      \"provider\": \"provider[\\\"registry.terraform.io/hashicorp/null\\\"]\",\n      \"instances\": [\n        {\n          \"schema_version\": 0,\n          \"attributes\": {\n            \"id\": \"5881126972189801242\",\n            \"triggers\": {\n              \"uuid\": \"78596474-ab23-91d4-0542-f4f75cdcb65a\"\n            }\n          },\n          \"sensitive_attributes\": [],\n          \"private\": \"bnVsbA==\"\n        }\n      ]\n    }\n  ]\n}\n",
     "updated_at": "2021-11-11T12:47:21.954546428Z"
 }
+
 ```
 {: screen}
 

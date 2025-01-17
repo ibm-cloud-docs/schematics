@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-30"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -40,6 +40,7 @@ For more information about data security in {{site.data.keyword.bpshort}}, see [
 {: #data-about-me}
 
 {{site.data.keyword.bpshort}} records few data about its users, which is limited to basic contact information such as email address, and name. {{site.data.keyword.bpshort}} is a data processor for said Personal Information (PI) data. {{site.data.keyword.bpshort}} processes the limited client PI in the course of running the service and optimizing the user experience. {{site.data.keyword.bpshort}} uses email for contacting clients. Monitoring client interactions with {{site.data.keyword.bpshort}} is another way {{site.data.keyword.bpshort}} processes PI.
+{: shortdesc}
 
 Do not enter sensitive data for {{site.data.keyword.bpshort}}. For example, do not use any Personal Information (PI), Personal Identifying Information (PII), and customer-specific data in a workspace name.
 

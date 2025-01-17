@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Creating an auto deploy button for {{site.data.keyword.bpshort}} actions
 {: #auto-deploy-url}

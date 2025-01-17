@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: endpoint gateway failed, schematics endpoint gateway error, wrong number of segments in crn
 
@@ -70,6 +70,7 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action, {{site.d
  2022/05/31 12:19:31 Terraform apply |             "1; mode=block"
  2022/05/31 12:19:31 Terraform apply |         ]
  2022/05/31 12:19:31 Terraform apply |     }
+ 
 ```
 {: screen}
 

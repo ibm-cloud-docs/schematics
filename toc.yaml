@@ -148,7 +148,6 @@ toc:
           label: IBM Cloud Schematics CLI
           topics:
           - cli-reference.md
-          - cli-version-release.md
       - topicgroup:
           label: Understanding security and compliance
           topics:

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -30,7 +30,7 @@ For more information about updating Terraform release, see [Upgrading the Terraf
 
 The table outlines the timetable of support that is provided by {{site.data.keyword.bpshort}} for Terraform releases. For more information about the maintenance and fixes, see the following sections.
 
-|Timescale | {{site.data.keyword.bpshort}} </br> Functions | Terraform Maintenance and security fixes | Upgrade |
+|Timescale | {{site.data.keyword.bpshort}} </br> Functions | Terraform Maintenance and security fixes | Upgrade  |
 | -- | -- | -- | -- |
 | 0-6 months  | Full operations | Yes | Suggested |
 | 6-12 months | Full operations | No  | Suggested. Upgrade if Terraform fix needed. |

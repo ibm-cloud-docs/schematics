@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 subcollection: schematics
 
@@ -64,7 +64,6 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     schematics_workspace_location="us-south"
     schematics_workspace_resource_group="default"
     ibmcloud_api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
     ```
     {: codeblock}
 

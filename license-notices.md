@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics license, schematics notices, schematics license notices
 
@@ -30,7 +30,7 @@ The following notices are included in this document:
 {: #CC-BY-3.0}
 
 The Program includes some or all the following works licensed under the Creative Commons. \n
-The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode. 
+The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode.
 
 - `GO GOPHER` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
 - `THE LOGO AND MASCOT` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)

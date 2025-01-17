@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-19"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics, automation, terraform
 
@@ -25,7 +25,7 @@ As the {{site.data.keyword.cloud}} account owner, you need to make sure that you
 {: help}
 {: support}
 
-Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keyword.iamlong}} (IAM) service access roles to your users. 
+Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keyword.iamlong}} (IAM) service access roles to your users.
 {: shortdesc}
 
 Who must grant access to {{site.data.keyword.bplong_notm}}?

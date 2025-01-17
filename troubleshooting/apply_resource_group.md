@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics resource group not found, schematics resource group error, schematics resource group does not exist, schematics resource group doesn't exist 
 
@@ -21,6 +21,7 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action, the reso
 
 ```text
 Error retrieving resource group <resource-group>: ResourceGroupDoesnotExist: Given resource Group : "<resource-group>" doesn't exist
+
 ```
 {: screen}
 

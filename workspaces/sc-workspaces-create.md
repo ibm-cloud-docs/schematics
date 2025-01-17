@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -86,7 +86,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 
 6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Workspace actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
 
-    | Type | Example |
+    | Type | Example  |
     | --- | -- |
     | `number` | 4.56 |
     | `string` | example value |

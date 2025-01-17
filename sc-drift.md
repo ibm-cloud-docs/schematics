@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -23,8 +23,8 @@ Drift can occur for many reasons. The most frequent cause is changes made to you
 Drift can happen for many reasons within the context of your configuration:
 
 - Adding, or removing resources from the Template configuration without applying the changes. 
-- Changing template resource definitions. 
-- External to your template configuration, drift occurs when changes are made manually. For example, from a command line operation on a cloud resource, or change through the cloud console. 
+- Changing template resource definitions.
+- External to your template configuration, drift occurs when changes are made manually. For example, from a command line operation on a cloud resource, or change through the cloud console.
 - Can occur through other automation tools.
 
 ## Example drift scenario

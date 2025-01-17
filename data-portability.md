@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-08"
+lastupdated: "2025-01-17"
 
 keywords:
 
@@ -24,7 +24,7 @@ Data portability involves a set of tools and procedures that enable customers to
 {{site.data.keyword.cloud_notm}} services provide interfaces and instructions to guide the customer to copy and store the service customer content, including the related configuration, on their own selected location.
 {: shortdesc}
 
-The customer is responsible for the use of the exported data and configuration for data portability to other infrastructures, which includes:
+The customer is responsible for the use of the exported data and configuration for data portability to other infrastructures, that includes:
 
 - The planning and execution for setting up alternative infrastructure on different cloud providers or on-premises software that provide similar capabilities to the {{site.data.keyword.IBM_notm}} services.
 - The planning and execution for the porting of the required application code on the alternative infrastructure, including the adaptation of customer's application code, deployment automation.

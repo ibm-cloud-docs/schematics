@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: dbaas data protection, tier 1 physical platforms, secure access control, data loss, corruption, byok, encryption, protection 
 
@@ -31,7 +31,7 @@ With the {{site.data.keyword.compliance_short}}, you can:
 The list of feature in the table states {{site.data.keyword.bpshort}} has a multitude of built-in security features for you to control access to data.
 
 |Feature | Description|
-| ---- | -----|
+| ---- | ----- |
 |Authentication | {{site.data.keyword.bpshort}} is accessed by using the API endpoint. The user gets authenticated for every request that it receives. {{site.data.keyword.bpshort}} supports IAM access controls. For more information, see [Authentication](/apidocs/schematics/schematics#authentication).|
 |Authorization | Use IAM roles to control access to {{site.data.keyword.bpshort}}. For more information, see the [Managing user access](/docs/schematics?topic=schematics-access).|
 |At-rest encryption | All data that is stored in {{site.data.keyword.bpshort}} instance is encrypted using envelope encryption with 971838 GCM 256. By default, {{site.data.keyword.bpshort}} manages the encryption keys in its own Key Protect instances for all environments. If you require bring-your-own-key (BYOK) encryption for encryption-at-rest, BYOK is enabled by using your encryption key that is stored in an {{site.data.keyword.cloud_notm}} Key Protect instance in your account. For more information, see [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui). |
