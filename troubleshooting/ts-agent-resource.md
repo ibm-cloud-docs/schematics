@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -30,6 +30,7 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{
  2022/05/31 09:02:30 Terraform plan | value for this variable.
  2022/05/31 09:02:30 1m 31mTerraform PLAN error: Terraform PLAN errorexit status 1 39m 0m
  2022/05/31 09:02:30  1m 31mCould not execute job: Error : Terraform PLAN errorexit status 139m 0m
+ 
 ```
 {: screen}
 

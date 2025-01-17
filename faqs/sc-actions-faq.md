@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -80,6 +80,7 @@ In the action settings page you, need to set the input variable as `ansible_pyth
   2021/12/06 10:15:49 Terraform apply |
   2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
   2021/12/06 10:15:50 Could not execute action
+  
 ```
 {: screen}
 

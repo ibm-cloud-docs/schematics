@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging, ibm cloud logs, cloud logs
 
@@ -93,7 +93,7 @@ For more information about launching the {{site.data.keyword.logs_full_notm}} UI
 ## Fields by log type
 {: #log-fields}
 
-For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd). The {{site.data.keyword.bpshort}} follows the [guidelines for log types and log records](/docs/logs-router?topic=logs-router-target-cloud-logs).
+For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs). The {{site.data.keyword.bpshort}} follows the [guidelines for log types and log records](/docs/logs-router?topic=logs-router-target-cloud-logs).
 
 | Field             | Type       | Description             |
 |-------------------|------------|-------------------------|

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -43,7 +43,8 @@ The agent runtime includes `Terraform`, `Ansible`, and more micro-services. For 
 ## Private network configuration when using agents
 {: #about-agentb1-networking}
 
-The following diagram illustrates a possible agent deployment on a cluster environment with multiple VPCs connected through a transit gateway. Here an agent, running workspace and action jobs, has a direct connection to cloud resources over the private cloud network. In this deployment model, your job can directly configure your cloud resources by using SSH, without the need for bastion hosts to gain access through the public network.  
+The following diagram illustrates a possible agent deployment on a cluster environment with multiple VPCs connected through a transit gateway. Here an agent, running workspace and action jobs, has a direct connection to cloud resources over the private cloud network. In this deployment model, your job can directly configure your cloud resources by using SSH, without the need for bastion hosts to gain access through the public network.
+{: shortdesc}
 
 ![{{site.data.keyword.bpshort}} agents connectivity](images/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} agents connectivity" caption-side="bottom"}
 

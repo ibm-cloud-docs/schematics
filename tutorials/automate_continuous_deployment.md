@@ -86,7 +86,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 {: shortdesc}
 
 1. If you do not have one, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
-2. Log in to your [GitHub](https://github.com/){: external} account. 
+2. Log in to your [GitHub](https://github.com/){: external} account.
 3. Open the Terraform template to [create an {{site.data.keyword.cos_full_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external}.
 4. From the side of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
 

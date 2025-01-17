@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -54,7 +54,7 @@ Some tools are a better fit for the task in hand for provisioning or configurati
  Review the tool descriptions to identify the {{site.data.keyword.bpshort}} feature that maps to the IaC capability you would like to use.
 {: shortdesc}
 
-|Logo|Open-source project &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Ansible |  Extensions | Terraform | IBM&nbsp;Catalog|
+|Logo|Open-source project &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Ansible |  Extensions | Terraform | IBM&nbsp;Catalog |
 |---|---|:--:|:--:|:--:|:--:|
 |<img src="images/ansible.png" alt="Ansible" width="10" style="width: 50px; border-style: none"/>|[Ansible](https://www.redhat.com/en/ansible-collaborative?intcmp=7015Y000003t7aWQAQ){: external} is a configuration management and provisioning tool, similar to Chef and Puppet. It is designed to automate the configuration and management of environments, and deploy app workloads in the cloud. |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>| | |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |<img src="images/helm.svg" alt="Helm" width="10" style="width: 50px; border-style: none"/>|[Helm](https://helm.sh/){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in an {{site.data.keyword.containerlong_notm}} cluster.|| ||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|

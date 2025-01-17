@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -65,7 +65,7 @@ Use one of the IBM provided software templates to set up and configure a classic
     - Select the **Delete workspace** and **Delete all associated resources** option.
     - Enter the name of your workspace, and click **Delete**.
 
-You used the capabilities of {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} infrastructure and database services, and automatically configured your services to allow network communication.
+Now, you used the capabilities of {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} infrastructure and database services, and automatically configured your services to allow network communication.
 
 ## What's next? 
 {: #whats-next}

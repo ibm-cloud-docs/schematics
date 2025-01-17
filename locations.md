@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -31,7 +31,7 @@ For more information about the {{site.data.keyword.bpshort}} private service end
 The location that you choose for your {{site.data.keyword.bpshort}} workspace determines the location where your {{site.data.keyword.bpshort}} jobs, such `plan` or `apply`, run.
 
 |Geography/ location |Location to run {{site.data.keyword.bpshort}} actions|
-|------------|----------------|
+|------------|---------------- |
 |North America|{{site.data.keyword.bpshort}} jobs run in either the `us-south` or `us-east` location.|
 |Dallas|{{site.data.keyword.bpshort}} jobs run in the `us-south` location.|
 |Washington|{{site.data.keyword.bpshort}} jobs run in the `us-east` location.|

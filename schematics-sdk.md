@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics, python sdk, python, go, golang, java server sdk, java, go admin sdk, npm, node sdk, integrate sdk, sdk, 
 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 Following are the list of {{site.data.keyword.bplong_notm}} server SDKs that are available for Node, Python, Go, and Java. For more information about installation and technical concepts, see readme file in the SDK documentation.
 
-|Server SDKs | SDK Documentation |
+|Server SDKs | SDK Documentation  |
 |------- |   -------- |
 |[Go SDK](https://github.com/IBM/schematics-go-sdk){: external} | [Go SDK documentation](https://github.com/IBM/schematics-go-sdk/blob/main/README.md){: external} |
 |[Java SDK](https://github.com/IBM/schematics-java-sdk){: external} | [Java SDK documentation](https://github.com/IBM/schematics-java-sdk/blob/main/README.md){: external} |

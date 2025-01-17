@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-23"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: workspace create failure, terraform error, terraform fails, workspace fails
 
@@ -33,6 +33,7 @@ Example error message
 ```text
 FAILED
 Could not create the workspace. Please verify that your request is correct. If the problem persists, contact IBM Cloud support.
+
 
 Status Code: 413
 Message:

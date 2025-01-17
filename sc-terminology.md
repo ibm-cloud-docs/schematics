@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2024
-lastupdated: "2024-10-23"
+  years: 2016, 2025
+lastupdated: "2025-01-17"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -45,6 +45,7 @@ Method or service to bind {{site.data.keyword.bpshort}} Agent with {{site.data.k
 {: #agentsa2}
 
 A collection of Agent related microservices deployed on the Agent infrastructure. It is composed of the following microservices.
+
 - `Jobrunner` microservice
 - `Sandbox` microservice
 - `Runtimeworkspace` Job
@@ -54,6 +55,7 @@ A collection of Agent related microservices deployed on the Agent infrastructure
 {: #agentsa3}
 
 A Kubernetes cluster used to deploy and run the Agent services. It is composed of the following resources.
+
 - VPC infrastructure as `public_gateways`, subnets
 - Kubernetes Service as vpc_kubernetes_cluster
 - IBM LogDNA instance 

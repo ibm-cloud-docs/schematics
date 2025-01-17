@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -64,7 +64,7 @@ The following prerequisites must be met before you begin deploying the agent inf
     {: note} 
 
     | Input variable  | Data type | Required/Optional | Description |
-    |--|--|--|--|
+    |--|--|--|-- |
     | `agent_prefix` | String | `Required` | Provide the prefix for naming your agent VPC, cluster, and logging configuration.
     | `location`| String | `Required` | The region in the agent infrastructure VPC and cluster are created in. |
     | `resource_group_name` | String | `Required` | Name for the resource group used the agent infrastructure and agent are associated to. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group. |

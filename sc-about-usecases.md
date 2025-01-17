@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -24,14 +24,13 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 - [Configuration management with {{site.data.keyword.bpshort}} actions](#how-to-actions)
 - [Software deployments with IBM-provided templates](#how-to-software)
 
-
 ## Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces
 {: #how-to-workspaces}
 
-{{site.data.keyword.bpshort}} workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. 
+{{site.data.keyword.bpshort}} workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments.
 {: shortdesc}
 
-To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform). 
+To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform).
 {: tip}
 
 [Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. The complexity of using `APIs`, provisioning, and managing your cloud resources is removed from the user. The cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider. And what `APIs` to invoke with a certain cloud resource? IBM's plug-in is called the [{{site.data.keyword.terraform-provider_full_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 

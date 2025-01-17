@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -65,6 +65,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     {: pre}
 
 2. Verify that your workspace is deleted.
+
     ```sh
     ibmcloud schematics workspace list
     ```

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -62,7 +62,7 @@ Agents extends the existing {{site.data.keyword.bpshort}} shared multi-tenant se
 You do not need to install the open source projects on your machine or learn their API and command-line. You need to simply point {{site.data.keyword.bpshort}} to your IaC code repository and let {{site.data.keyword.bpshort}} run the specified tasks.
 {: shortdesc}
 
-| Benefits | Description |
+| Benefits | Description  |
 | --- | --- |
 | The open source projects used by {{site.data.keyword.bpshort}} | Terraform, Ansible, Helm provisioning engine, and execution platform are tested, maintained, and monitored by {{site.data.keyword.IBM_notm}}. {{site.data.keyword.IBM_notm}} automatically applies the latest security standards and patches to {{site.data.keyword.bpshort}} to ensure reliability and availability of the service. You do not need to manually apply updates to the {{site.data.keyword.bpshort}} platform.|
 |All versions are tested by {{site.data.keyword.IBM_notm}}. |As new versions of workspace and action become available, {{site.data.keyword.IBM_notm}} begins with hardening and testing these versions, so that they can be supported in the {{site.data.keyword.bpshort}} platform. For more information, see [when are new Terraform, and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions) |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-30"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: data privacy, move data from eu to us, transfer personal data outside eu
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Data privacy and governance
 {: #data-privacy-and-governance}
 
-{{site.data.keyword.bplong}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your app workloads. {{site.data.keyword.bplong_notm}} allows clients to locate data in multiple supported {{site.data.keyword.cloud}} regions. By providing clients with data mobility to serve the local needs of clients, {{site.data.keyword.IBM_notm}}, and {{site.data.keyword.bpshort}} take data privacy and governance seriously.
+{{site.data.keyword.bplong}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your app workloads. {{site.data.keyword.bplong_notm}} allows clients to locate data in multiple supported {{site.data.keyword.cloud}} regions. By providing clients with data mobility to serve the local needs of clients, {{site.data.keyword.IBM}}, and {{site.data.keyword.bpshort}} take data privacy and governance seriously.
 
 {{site.data.keyword.cloud_notm}} data privacy processing processes and procedures are documented within the {{site.data.keyword.cloud_notm}} DPA. This Data Processing Addendum (DPA) and its applicable DPA Exhibits apply to the processing of personal data by {{site.data.keyword.cloud_notm}} on behalf of Client (Client Personal Data). The processing of personal data is subject to the General Data Protection Regulation 2016/679 (GDPR). It is also subject to any other data protection laws that are identified at [Data Protection Laws](https://www.ibm.com/support/customer/csol/terms/?id=DPA-DPL&lc=en#detail-document){: external}. To provide services according to the agreement between Client and {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.cloud_notm}} DPA can be found at [Data Processing Addendum](https://www.ibm.com/support/customer/csol/terms/?cat=dpa){: external}.
 

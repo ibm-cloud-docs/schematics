@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2024-08-29"
+lastupdated: "2025-01-17"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -18,7 +18,7 @@ subcollection: schematics
 ## Manage location settings in the catalog
 {: #configure-location}
 
-An [account owner or administrator](/docs/account?topic=account-account-services#catalog-management-account-management), can manage the settings for {{site.data.keyword.bpshort}} resource based on the location. The Account owner can restrict the location in the catalog for the invited users in the catalog. If the location is restricted for the user, then user cannot access or create new resources in the {{site.data.keyword.bpshort}} for that particular location.
+An [account owner or administrator](/docs/account?topic=account-account-services#catalog-management-account-management), can manage the settings for {{site.data.keyword.bpshort}} resource based on the location. The Account owner can restrict the location in the catalog for the invited users in the catalog. If the location is restricted for a user, then user cannot access or create new resources in the {{site.data.keyword.bpshort}} for that particular location.
 
 Follow the steps to configure the {{site.data.keyword.bpshort}} resource based on the location.
 

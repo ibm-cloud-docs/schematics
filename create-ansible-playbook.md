@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -14,7 +14,7 @@ subcollection: schematics
 
 # Creating an Ansible playbook
 {: #create-playbook}
- 
+
 Follow these [prerequisites](#plan-ansible-playbook) and general steps to create your Ansible playbook. For detailed information about how to structure your playbook, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html){: external} or [playbook creation](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html){: external}.
 {: shortdesc}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -27,7 +27,7 @@ The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://
 ## {{site.data.keyword.bpshort}} workspace overview
 {: #sch-wks-overview}
 
-{{site.data.keyword.bplong_notm}} is a multi-tenant service delivering Terraform as a service. {{site.data.keyword.bpshort}} provides a shared environment, where each user can securely execute `Terraform configs` to deploy services and resources on {{site.data.keyword.cloud}}.
+{{site.data.keyword.bplong_notm}} is a multi-tenant service delivering Terraform as a service. {{site.data.keyword.bpshort}} provides a shared environment, where each user can securely run `Terraform configs` to deploy services and resources on {{site.data.keyword.cloud}}.
 
 ![Deploying infrastructure and services with workspaces](/images/new/sc-workspaces.svg){: caption="Deploying infrastructure and services with workspaces" caption-side="bottom"}
 

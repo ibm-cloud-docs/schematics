@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -54,7 +54,7 @@ You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to s
 ## What's next? 
 {: #ansible-whats-next}
 
-Now that you ran your first operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
+Now that you ran first operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
 
 - Learn how to [create your own Ansible playbooks](/docs/schematics?topic=schematics-create-playbook).
 - Explore other [IBM-provided playbooks](https://github.com/Cloud-Schematics){: external}.

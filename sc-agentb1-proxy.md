@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -26,7 +26,7 @@ The proxy configuration must be the same on each host in the cluster. Therefore,
 Confirm the following requirements are in place before you configure proxy server access. The example here uses a squid proxy on port 3128.
 {: shortdesc}
 
-- A proxy server that can reach www.google.com using HTTP or HTTPS and is accessible from the cluster.
+- A proxy server that can reach [Google](https://www.google.com){: external} using HTTP or HTTPS and is accessible from the cluster.
 - The proxy server IP address and port for example, `http://53.25.191.193:3128`
 - The curl command-line tool is available on the cluster pods.
 

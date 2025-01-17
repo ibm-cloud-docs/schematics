@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate, adoption, considerations
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Adoption considerations
 {: #schematics-limitations}
 
-Review the following considerations when adopting {{site.data.keyword.bplong_notm}}. Additionally review the section on [workspace setup](/docs/schematics?topic=schematics-create-tf-config&interface=ui#configure-provider) for details of how to work with your Terraform configurations stored in Git repositories.
+Review the following considerations when adopting {{site.data.keyword.bplong_notm}}. Additionally review the section on [workspace setup](/docs/schematics?topic=schematics-create-tf-config&interface=ui#configure-provider) for the details of how to work with your Terraform configurations stored in Git repositories.
 {: shortdesc}
 
 ## Differences to native Terraform

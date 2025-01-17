@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-13"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -61,50 +61,53 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
    Example
 
-	```json
-	{
-		"name": "testwspace31jan",
-		"type": [
-			"terraform_v1.4"
-		],
-		"description": "terraform workspace",
-		"location": "us-east",
-		"tags": [
-			"department:HR",
-			"application:compensation",
-			"environment:production"
-		],
-		"template_repo": {
-			"url": "https://github.com/Anil-CM/newrepo"
-		},
-		"workspace_status": {
-			"frozen": true
-		},
-		"template_data": [{
-			"folder": ".",
-			"type": "terraform_v1.4",
-			"variablestore": [{
-					"name": "sample_var",
-					"secure": true,
-					"value": "THIS IS IBM CLOUD TERRAFORM CLI DEMO",
-					"description": "Description of sample_var"
-				},
-				{
-					"name": "sleepy_time",
-					"value": "15"
-				}
-			]
-		}]
-	}
-	```
-	{: codeblock}
+   ```json
+   {
+    "name": "testwspace31jan",
+    "type": [
+        "terraform_v1.4"
+    ],
+    "description": "terraform workspace",
+    "location": "us-east",
+    "tags": [
+        "department:HR",
+        "application:compensation",
+        "environment:production"
+    ],
+    "template_repo": {
+        "url": "https://github.com/Anil-CM/newrepo"
+    },
+    "workspace_status": {
+        "frozen": true
+    },
+    "template_data": [
+        {
+            "folder": ".",
+            "type": "terraform_v1.4",
+            "variablestore": [
+                {
+                    "name": "sample_var",
+                    "secure": true,
+                    "value": "THIS IS IBM CLOUD TERRAFORM CLI DEMO",
+                    "description": "Description of sample_var"
+                },
+                {
+                    "name": "sleepy_time",
+                    "value": "15"
+                }
+            ]
+        }
+    ]
+   }
+   ```
+   {: codeblock}
 
-	Syntax
+    Syntax
 
-	```sh
-	ibmcloud schematics apply --id <Provide your workspace ID>
-	```
-	{: pre}
+    ```sh
+    ibmcloud schematics apply --id <Provide your workspace ID>
+    ```
+    {: pre}
 
 2. Apply the workspace. For more information about the apply argument flag, see [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) command.
 

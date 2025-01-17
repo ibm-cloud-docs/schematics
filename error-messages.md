@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-18"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -66,7 +66,7 @@ The {{site.data.keyword.bpshort}} actions instance and resources are overloaded 
 #### Resolve
 {: #svc-resolve}
 
-- Check the user jobs and all jobs logs. For more information, see [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
+- Check the user jobs and all jobs logs. For more information, see [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 - Wait for a minute and check your configuration and execute the action again.
 - Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-working).
 - Check the firewall IP are enabled.

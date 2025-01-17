@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics agent health, agent health, health
 
@@ -66,6 +66,7 @@ Resource Group   Default
 Recent Job   Job ID                             Status                   Last modified   
 DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               2024-01-10T10:00:00.000Z   
 HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2024-01-10T12:31:15.326Z 
+
 ```
 {: screen}
 

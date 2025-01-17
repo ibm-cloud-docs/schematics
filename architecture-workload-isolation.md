@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-10"
+  years: 2017, 2025
+lastupdated: "2025-01-17"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -43,7 +43,7 @@ The following {{site.data.keyword.bpshort}} architecture image depicts:
 ### How are API requests to the service isolated from other API requests?
 {: #workload-api-isolation}
 
-All API requests to the {{site.data.keyword.bpshort}} api-server are handled as separate service processes. IAM requests are made to authenticate user access to Schematics, workspaces and operations. Authenticated API requests are processed and queued as {{site.data.keyword.bpshort}} internal messages.
+All API requests to the {{site.data.keyword.bpshort}} API server are handled as separate service processes. IAM requests are made to authenticate user access to Schematics, workspaces and operations. Authenticated API requests are processed and queued as {{site.data.keyword.bpshort}} internal messages.
 
 The {{site.data.keyword.bpshort}} job queue manager forwards the requests with the job ID and health check messages. At any particular time, a maximum of n API requests are processed by the {{site.data.keyword.bpshort}} engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload.
 

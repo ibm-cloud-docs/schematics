@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-12-18"
+  years: 2018, 2025
+lastupdated: "2025-01-17"
 
 keywords: IBM Cloud, observability, schematics monitoring events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
@@ -30,7 +30,7 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 {{site.data.keyword.bpshort}} sends metrics in the regions that are indicated in the following table.
 
 | Dallas (`us-south`) | Washington (`us-east`)  |
-|---------------------|-------------------------|
+|---------------------|------------------------- |
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where  metrics are sent in Americas locations" caption-side="top"}
 {: #at-table-1}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -80,6 +80,7 @@ With agents, you need to do the network security policies for the Kubernetes clu
 {: #agent-capacity-planning}
 
 You need to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster based on the number of concurrent jobs. To make the following changes, you can use the Kubernetes dashboard or [kubectl](/docs/containers?topic=containers-cli-install) commands.
+
     - The number of concurrent Terraform, and Ansible jobs.
     - The number of Terraform and Ansible pods.
     - The resource limits for the agent deployment.
