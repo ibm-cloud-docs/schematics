@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-17"
 
 keywords: schematics
 subcollection: schematics
@@ -1884,6 +1884,13 @@ subcollection: schematics
 
 
 [Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
+
+
+## Service dependency map
+{: #sitemap_service_dependency_map}
+
+
+[Service dependency map](/docs/schematics?topic=schematics-service-dependencies#service-dependencies)
 
 
 ## Your responsibilities when using {{site.data.keyword.bpshort}}
