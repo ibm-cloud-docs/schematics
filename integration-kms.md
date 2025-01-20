@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -44,7 +44,7 @@ The key management system lists the instance that are created from your specific
       For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth&interface=cli#auth-cli), and [API](/docs/account?topic=account-serviceauth&interface=ui#create-auth).
       {: note}
 
-KMS setting is a one time settings. You need to open the [support ticket](https://cloud.ibm.com/docs/account?topic=account-using-avatar) to update KMS settings.
+KMS setting is a one time settings. You need to open the [support ticket](/docs/account?topic=account-using-avatar) to update KMS settings.
 {: note}
 
 ### Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI

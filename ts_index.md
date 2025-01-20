@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
@@ -17,39 +17,19 @@ subcollection: schematics
 {: help}
 {: support}
 
-If you have problems or questions when you use {{site.data.keyword.bplong_notm}}, you can get help by joining the {{site.data.keyword.bpshort}} community in Slack, asking questions through a forum, or opening an {{site.data.keyword.cloud}} support case.
+If you have problems or questions about {{site.data.keyword.bplong_notm}}, you can get help by joining the {{site.data.keyword.bpshort}} community in Slack, asking questions through a forum, or opening an {{site.data.keyword.cloud}} support case.
 {: shortdesc}
 
-* Post a question in the [{{site.data.keyword.bplong_notm}} Slack](https://ibm-cloud-schematics.slack.com){: external}. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}.
+* Review the [FAQs](/docs/schematics?topic=schematics-workspaces-faq) in the product documentation.
+* Review the [troubleshooting](/docs/schematics?topic=schematics-wks-create-api) documentation to troubleshoot and resolve common issues.
 * Post your question on [Stack Overflow ![External link icon](../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/ibm-cloud-infrastructure) and tag your question with `ibm-cloud-schematics`.
-* Get help from the open source community by searching information on the internet or by asking questions in forums and on websites that support these tools.
-* You can also contact IBM Support by opening a case. To learn about opening an IBM support case, or about support levels and case severities, see [Contacting support](https://cloud.ibm.com/docs/account?topic=account-using-avatar).
+* Get help from the open source community by searching in the internet or by asking questions in forums, and on websites that support these tools.
+* You can also contact {{site.data.keyword.IBM}} support by opening a case. To learn about opening an IBM support case, or about support levels and case severities, see [Contacting support](/docs/account?topic=account-using-avatar){: external}.
 
-## Joining public slack channel
-{: #sc-join-public-slack}
+## Providing support case details
+{: #support-case-details}
 
-Join the public slack channel, and post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to the Slack, [request an invitation to the Slack](https://cloud.ibm.com/schematics/slack){: external}.
+To ensure that the support team can start investigating your case to provide a timely resolution, you must include detailed information along with steps to re-create the issue, if applicable. Review the following types of information to include in your support case for issues with {{site.data.keyword.bplong}}.
 
-Join the `#schematics-users` slack channel and post a message include the following information.
-
-- Your name
-- email address
-- Your Company/Organization name
-- Your level of experience with cloud automation, specifically regarding Terraform, Ansible, or {{site.data.keyword.bplong_notm}}
-- Any initial questions or comments
-
-You can come back any time to your created thread to add information, ask questions, or give feedback.
-{: important}
-
-### Steps to join public slack
-{: #sc-join-slack}
-
-Following steps allows you to join the {{site.data.keyword.bpshort}} agents beta public Slack channel.
-
-1. Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
-2. Select **Request to join Slack** > **Request Invite**.
-3. A support case page is opened.
-4. Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} agents beta**.
-5. Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} agents beta public Slack channel**
-6. Click **Next**.
-7. Click **Submit case**. Wait for 10 - 15 minutes to get an access.
+* Name of the targeted region. See [Regions for {{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-multi-region-deployment#single-region).
+* Name of your [Workspace](/docs/schematics?topic=schematics-sch-display-wks&interface=ui), [Agents](/docs/schematics?topic=schematics-display-agentb1-overview&interface=ui). See [Working with {{site.data.keyword.bpshort}} jobs](/docs/schematics?topic=schematics-job-queue-process), and [Managing jobs](/docs/schematics?topic=schematics-interrupt-job&interface=ui).

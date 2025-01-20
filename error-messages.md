@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -61,7 +61,7 @@ The {{site.data.keyword.bpshort}} actions instance and resources are overloaded 
 #### Message
 {: #svc-msg}
 
-- Internal Service Error occurred during Method request, wait a minute and try again. If you still encounter this problem contact the [{{site.data.keyword.cloud}} support](https://cloud.ibm.com/docs/account?topic=account-using-avatar).
+- Internal Service Error occurred during Method request, wait a minute and try again. If you still encounter this problem contact the [{{site.data.keyword.cloud}} support](/docs/account?topic=account-using-avatar).
 
 #### Resolve
 {: #svc-resolve}

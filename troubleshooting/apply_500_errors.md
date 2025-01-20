@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: schematics 500 errors, schematics 5xx errors, schematics server error
 
@@ -28,5 +28,5 @@ Error: Request failed with status code: 500, ServerErrorResponse: {"incidentID":
 5xx HTTP errors indicate an issue with the {{site.data.keyword.cloud_notm}} service that you try to create, update, or delete, and usually cannot be resolved by the user. These issues can include networking errors, timeouts, or the service temporarily unavailable.
 {: tsCauses}
 
-Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes to rerun the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, note the incident ID and find more detailed logs for this incident ID in your {{site.data.keyword.loganalysislong_notm}} service instance. If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](https://cloud.ibm.com/docs/account?topic=account-using-avatar).
+Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes to rerun the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, note the incident ID and find more detailed logs for this incident ID in your {{site.data.keyword.loganalysislong_notm}} service instance. If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/account?topic=account-using-avatar).
 {: tsResolve}

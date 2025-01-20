@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -41,7 +41,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Terraform** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
     - In **Specify Template** section:
         - **GitHub, GitLab, or `Bitbucket` repository URL** - `<provide your Terraform Git repository URL`.
-        - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
+        - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
         - Terraform Version - `terraform_v1.4`. You need to select Terraform version 1.4 or greater version. For example, if your Terraform templates are created by using Terraform v1.4, select the `Terraform version` parameter as **terraform_v1.4**.
           You can select `Terraform_v1.5` to use Terraform version 1.5, `terraform_v1.4` to use Terraform version 1.4. When you specify `terraform_v1.5` means that users can have Terraform `v1.5.0`, `v1.5.1`, or `v1.5.7`, so on. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
           {: note}
@@ -76,7 +76,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
-2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [Creating a personal access token for the command-line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and [Creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension) for cloning.
+2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [Creating a personal access token for the command-line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). And to securely validate and clone the template, you can click the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
 3. Select the `Terraform version` that your Terraform configuration files are written in.
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
 5. Click **Save**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.

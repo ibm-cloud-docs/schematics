@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -43,7 +43,7 @@ The following prerequisites must be met before you begin deploying the agent inf
 2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Terraform** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
     - In the **Specify Template** section:
         - **`GitHub`, `GitLab`, or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/agent-infrastructure-sample/tree/main/templates/infrastructure`.
-        - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your Secret Manager key reference. For more information, see [creating a Secret Manager instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
+        - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
         - Terraform Version - `terraform_v1.5`. You need to select Terraform version 1.5 or greater than version.
         - Click `Next`.
     - In the **Workspace details** section:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-20"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1113,7 +1113,7 @@ The key management system lists the instance that are created from your specific
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
 
-KMS setting is a one time settings. You need to open a [support ticket](https://cloud.ibm.com/docs/account?topic=account-using-avatar) to update KMS settings.
+KMS setting is a one time settings. You need to open a [support ticket](/docs/account?topic=account-using-avatar) to update KMS settings.
 {: note}
 
 ### `ibmcloud schematics kms instance ls`
