@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-29"
+  years: 2017, 2025
+lastupdated: "2025-01-20"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -15,7 +15,8 @@ subcollection: schematics
 # Firewall access - allowed IP addresses 
 {: #allowed-ipaddresses}
 
-Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr). {: note}
+Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
+{: note}
 
 Performing post-configuration of deployed resources using workspace and action jobs requires IP network access to the resources private cloud network zones. Typically these private networks are protected using a firewall or VPC access control policies. To allow the {{site.data.keyword.bpshort}} hosted instances of Terraform and Ansible to access these zones, firewall or VPC access policies must be configured to permit access to the {{site.data.keyword.bpshort}} originating IP addresses.
 

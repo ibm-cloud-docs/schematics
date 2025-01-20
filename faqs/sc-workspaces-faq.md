@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -323,7 +323,6 @@ No, currently {{site.data.keyword.bpshort}} do not support this feature while ru
 {: support}
 
 When listing or retrieving workspaces the following error may be received.  `Error while retrieving Schematics Instance for the given account`.
-
 
 ```text
 Error:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-20"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -55,13 +55,14 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         Don't have a playbook that you can use? Try out one of your [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
         {: tip}
 
-    2. Optional, if you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate private GitHub repository to access your Ansible playbook. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}. If you need see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension) for cloning from the Git repository.
+    2. Optional, if you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate private GitHub repository to access your Ansible playbook. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}. If you need see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension) for cloning from the Git repository. To securely validate and clone the template, you can click the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
     3. Review the default Ansible version that is used to run your playbook. This version cannot be changed. If you use your own Ansible playbook, make sure that your playbook uses the specified Ansible version. For example, `Ansible v2.9.23`.
     4. Click **Retrieve playbooks** to connect to your repository and retrieve all Ansible playbooks from your Git repository.
     5. Select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
     6. Select the **Verbosity** level. The verbosity level determines the depth of information that is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible runs, select a high verbosity level. You can view the logs when your playbook runs.
     7. Optional, click the **Advanced options** to define input variables that you want to pass to the playbook. Input variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users after the action is created. If you use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}, all input variables can be found in the `readme.md` file.
-    8. Click **Save** to save the action details.
+    8. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension) for cloning. You can edit a variable referencing to a {{site.data.keyword.secrets-manager_short}} with the input key value to [Create a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
+    9. Click **Save** to save the action details.
 4. Configure your resource inventory. The resource inventory includes all target hosts where you want to run your Ansible playbook.
     1. In the **Choose your inventory** section, click the **Edit icon**.
     2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information about creating resource inventories, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
