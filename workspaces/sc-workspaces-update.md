@@ -38,9 +38,9 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Terraform**](https://cloud.ibm.com/automation/schematics/terraform){: external}.
 3. Click your workspace to edit.
 4. Click **Settings**. In **Details** > **Repository URL**, click **Edit** icon to edit the following parameters.
-    - **GitHub, GitLab, or `Bitbucket` repository URL** - `<provide your Terraform template Git repository URL`.
-    - **Personal access token** - `<leave it blank>`. To securely validate and clone the template, you can click the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
-    - Terraform Version - `terraform_v1.6`. You need to select Terraform version 1.6 or greater version. For example, if your Terraform templates are created by using Terraform v1.6, select the `Terraform version` parameter as **terraform_v1.6**.
+    - For **GitHub, GitLab, or `Bitbucket` repository URL**  `<provide your Terraform template Git repository URL`.
+    - For **Personal access token** `<leave it blank>`. To securely validate and clone the template, you can click the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
+    - For Terraform Version  `terraform_v1.6`. You need to select Terraform version 1.6 or greater version. For example, if your Terraform templates are created by using Terraform v1.6, select the `Terraform version` parameter as **terraform_v1.6**.
         You can select `Terraform_v1.4` to use Terraform version 1.4, `terraform_v1.6` to use Terraform version 1.6. When you specify `terraform_v1.5` means that users can have template that is of Terraform `v1.5.0`, `v1.5.1`, or `v1.5.7`, so on. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
         {: note}
 
