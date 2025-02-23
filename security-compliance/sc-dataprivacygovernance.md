@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-23"
 
 keywords: data privacy, move data from eu to us, transfer personal data outside eu
 
@@ -23,6 +23,6 @@ In addition to the DPA, the cloud services contain DPA exhibits that detail the 
 
 {{site.data.keyword.cloud_notm}} relies on Standard Contractual Clauses (as the primary data transfer mechanism) in the client contracts. {{site.data.keyword.cloud_notm}} also relies on numerous supplementary measures to help clients ensure an adequate level of protection when they transfer personal data outside of the EU/EEA. For more information, see EU Standard Contractual Clauses that are signed by all [{{site.data.keyword.cloud_notm}} Data Importers](https://www.ibm.com/support/customer/csol/terms/?id=SW-EUSSC){: external}, if applicable.
 
-For {{site.data.keyword.cloud_notm}}'s position on trust and transparency, in relation to client data, see [Trust principles](https://www.ibm.com/policy/trust-transparency-new/){: external}.
+For {{site.data.keyword.cloud_notm}}'s position on trust and transparency, in relation to client data, see [Trust principles](https://www.ibm.com/policy/trust-transparency){: external}.
 
 If more questions that are associated with {{site.data.keyword.cloud_notm}}'s data privacy policies arise, email `DPA.Help.project@uk.ibm.com`.

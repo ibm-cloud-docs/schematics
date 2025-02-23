@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-02-23"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -82,10 +82,16 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To  change your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again.
     {: note}
 
-## Editing the {{site.data.keyword.bpshort}} actions settings
+## Updating the {{site.data.keyword.bpshort}} actions settings
 {: #action-settings}
 
-The **Settings** option edits the action **Details**, **Ansible action**, and **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Finally, you click **Check action** and **Run action** to validate and rerun your action playbook.
+1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Ansible**](https://cloud.ibm.com/automation/schematics/ansible){: external} > `click your Ansible Action name`.
+3. In the **Details** section, click `Edit` icon.
+4. Edit the action **Description**, `GitHub` URL, `Personal access token` and other parameters. Then, you can click `Update` to save the edited configuration. Finally, you click **Check action** and **Run action** to validate and rerun your action playbook.
+
+To securely validate and clone the template, in `Personal access token` you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
+{: note}
 
 You can monitor the progress of an action by reviewing the logs on the **Jobs** page. You can use [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
 

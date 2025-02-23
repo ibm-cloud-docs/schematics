@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-02-23"
 
 keywords: schematics
 subcollection: schematics
@@ -173,17 +173,21 @@ subcollection: schematics
 
     * Review the release notes for January 2025.
 
+    * [20 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2025)
+
+        * To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working#create-action-working) action, and [update](/docs/schematics?topic=schematics-action-working#action-settings) action.
+
     * [10 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1025)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [08 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0825)
 
-        * Workspace update variable command feature upgrade
+        * Update workspace feature upgrade
 
         * {{site.data.keyword.bpshort}} enhances the destory feature
 
-        * {{site.data.keyword.bpshort}} supports encryption status in get commands
+        * {{site.data.keyword.bpshort}} get command supports encryption status
 
 * [December 2024](/docs/schematics?topic=schematics-schematics-relnotes#December-2024)
 
@@ -243,7 +247,7 @@ subcollection: schematics
 
     * [8 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0824)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [3 July 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0324)
 
@@ -255,7 +259,7 @@ subcollection: schematics
 
     * [11 June 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june1124)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [05 June 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june0524)
 
@@ -267,7 +271,7 @@ subcollection: schematics
 
     * [31 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may3124)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [16 May 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may1624)
 
@@ -279,7 +283,7 @@ subcollection: schematics
 
     * [19 April 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1924)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [17 April 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1724)
 
@@ -291,15 +295,15 @@ subcollection: schematics
 
     * [25 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524)
 
-        * {{site.data.keyword.bpshort}} Agents supports {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}
+        * {{site.data.keyword.bpshort}} Agents support {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}
 
         * Release {{site.data.keyword.bpshort}} Agents version
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
 
@@ -311,11 +315,11 @@ subcollection: schematics
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [07 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0724)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [January 2024](/docs/schematics?topic=schematics-schematics-relnotes#January-2024)
 
@@ -323,11 +327,11 @@ subcollection: schematics
 
     * [24 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2424)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [18 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1824)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [10 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1024)
 
@@ -351,7 +355,7 @@ subcollection: schematics
 
     * [12 September 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1723)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
         * Release {{site.data.keyword.bpshort}} Agent migration page 
 
@@ -371,7 +375,7 @@ subcollection: schematics
 
     * [22 May 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may222023)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr23)
 
@@ -387,7 +391,7 @@ subcollection: schematics
 
     * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar23)
 
@@ -399,7 +403,7 @@ subcollection: schematics
 
         * Enhancement of {{site.data.keyword.bpshort}} worker runtime.
 
-        * IAM allowed IP addresses replaced with context based restrictions.
+        * IAM allowed IP addresses replaced with context-based restrictions.
 
         * The `terraform.tfstate` state file with maximum limit is less than 2 MB.
 
@@ -407,7 +411,7 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} Agent beta-1 release.
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+        * Release {{site.data.keyword.bpshort}} CLI plug-in.
 
 * [February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb23)
 
@@ -419,7 +423,7 @@ subcollection: schematics
 
     * [7 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0723)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+        * Release {{site.data.keyword.bpshort}} CLI plug-in.
 
     * [3 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0323)
 
@@ -431,7 +435,7 @@ subcollection: schematics
 
     * [30 January 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan3023)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+        * Release {{site.data.keyword.bpshort}} CLI plug-in.
 
 * [December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec22)
 
@@ -441,7 +445,7 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} agents GitHub repository.
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+        * Release {{site.data.keyword.bpshort}} CLI plug-in.
 
 * [November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
 
@@ -453,7 +457,7 @@ subcollection: schematics
 
     * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+        * Release {{site.data.keyword.bpshort}} CLI plug-in.
 
     * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
 
@@ -461,7 +465,7 @@ subcollection: schematics
 
     * [03 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0322)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+        * Release {{site.data.keyword.bpshort}} CLI plug-in.
 
 * [September 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept22)
 
@@ -483,7 +487,7 @@ subcollection: schematics
 
     * [11 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1122)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [04 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2022)
 
@@ -495,7 +499,7 @@ subcollection: schematics
 
     * [26 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2622)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
 
@@ -505,11 +509,11 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} agents beta release in production.
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june22)
 
@@ -531,11 +535,11 @@ subcollection: schematics
 
         * Enhance documentation with the security and compliance section
 
-        * Enhance documentation with the best practices 
+        * Documentation enhancement
 
     * [5 May 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may0522)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr22)
 
@@ -553,17 +557,17 @@ subcollection: schematics
 
     * [26 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2622)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [17 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2722)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
         * Support array of injectable Terraform blocks in create workspace API
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
     * [12 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr3122)
 
@@ -575,7 +579,7 @@ subcollection: schematics
 
         * Deprecate and warning message when using `ibmcloud terraform` command.
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar22)
 
@@ -597,7 +601,7 @@ subcollection: schematics
 
         * Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb22)
 
@@ -605,13 +609,13 @@ subcollection: schematics
 
     * [16 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1622)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
-        * Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries 
+        * Supports installer for Linux&trade; arm64 and Mac OS arm64 libraries 
 
     * [11 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1122)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan22)
 
@@ -619,9 +623,9 @@ subcollection: schematics
 
     * [31 January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan3122)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
-        * Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
+        * Supports installer for PowerLinux&trade; and `S/390` Linux&trade; 
 
 * [December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec21)
 
@@ -629,7 +633,7 @@ subcollection: schematics
 
     * [30 December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec3021)
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in 
 
 * [November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov21)
 
@@ -661,7 +665,7 @@ subcollection: schematics
 
         * Support `WinRM` in command line
 
-        * Documentation lists the Command-line version change log history
+        * The documentation lists the Command-line version change log history
 
 * [September 2021](/docs/schematics?topic=schematics-schematics-relnotes#sept30-2021)
 
@@ -679,7 +683,7 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} actions `APIs` enhances the credentials parameter
 
-        * {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
+        * {{site.data.keyword.bpshort}} introduces a compact flag in the workspace create and update API
 
         * Importance of location and URL endpoint in workspace creation
 
@@ -723,11 +727,11 @@ subcollection: schematics
 
         * Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
 
-        * Documentation support to deploy resources in specific region or across multiple region
+        * Documentation support to deploy resources in a specific region or across multiple regions
 
         * Documentation support to create workspace by using {{site.data.keyword.bplong_notm}} resources
 
-        * One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
+        * One-page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
 
         * Temporarily {{site.data.keyword.bplong_notm}} workspaces stop activity API is deactivated
 
@@ -789,7 +793,7 @@ subcollection: schematics
 
         * Terraform commands command-line support
 
-        * command-line Commands
+        * Command-line commands
 
     * [7 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0721)
 
@@ -823,7 +827,7 @@ subcollection: schematics
 
         * Files and resources for your workspace actions
 
-        * Creating a deploy to {{site.data.keyword.bplong_notm}} link
+        * Creating a deployment to {{site.data.keyword.bplong_notm}} link
 
 * [September 2020](/docs/schematics?topic=schematics-schematics-relnotes#sept-2020)
 
@@ -841,7 +845,7 @@ subcollection: schematics
 
     * [14 August 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug142020)
 
-        * Support for multiple Terraform provider
+        * Support for multiple Terraform providers
 
         * Time out set for local-exec and remote-exec users
 
@@ -871,7 +875,7 @@ subcollection: schematics
 
     * [22 June 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun222020)
 
-        * Upload Terraform templates as TAR files
+        * Upload Terraform templates as `TAR` files
 
 * [May 2020](/docs/schematics?topic=schematics-schematics-relnotes#may-2020)
 
@@ -1065,7 +1069,7 @@ subcollection: schematics
 
     * [To create an Ansible playbook](/docs/schematics?topic=schematics-action-working#create-action-working)
 
-* [Editing the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
+* [Updating the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
 
 * [Deleting an action](/docs/schematics?topic=schematics-action-working#delete-ansible-actions)
 
