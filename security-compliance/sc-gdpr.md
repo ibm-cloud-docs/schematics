@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-23"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -18,7 +18,7 @@ subcollection: schematics
 The GDPR seeks to create a harmonized data protection law framework across the `EU`. It aims to give citizens back the control of their personal data, while it imposes strict rules on the host and process the data, anywhere in the world. The Regulation also introduces rules that relate to the movement of personal data within and outside the `EU`.
 {: shortdesc}
 
-With the [General Data Protection Regulation](https://gdpr.eu/){: external}, {{site.data.keyword.bpshort}} clients can rely on the {{site.data.keyword.bpshort}} team's understanding and compliance with emerging data privacy standards and legislation. Clients can also rely on {{site.data.keyword.IBM_notm}}'s wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
+With the [General Data Protection Regulation](https://gdpr-info.eu/){: external}, {{site.data.keyword.bpshort}} clients can rely on the {{site.data.keyword.bpshort}} team's understanding and compliance with emerging data privacy standards and legislation. Clients can also rely on {{site.data.keyword.IBM_notm}}'s wider ability to provide a comprehensive suite of solutions to assist businesses of all sizes with their own internal data governance requirements.
 
 ## How do you audit access to {{site.data.keyword.bpshort}}?
 {: #how-do-i-audit-access-to-ibm-schematics}

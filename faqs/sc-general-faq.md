@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-02-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -313,7 +313,7 @@ You can specify the Terraform version in the payload by using the `type` or `tem
 {: faq}
 {: support}
 
-    ```terraform
+```terraform
     //Sample JSON file
     {
     "name": "<workspace_name>",
@@ -330,8 +330,8 @@ You can specify the Terraform version in the payload by using the `type` or `tem
     "type": "terraform_v1.4"
     }]
     }
-    ```
-    {: codeblock}
+```
+{: codeblock}
 
 No, if the Terraform version is specified in the payload or template, only the version that is specified in `versions.tf` is considered during provisioning. To consider the current Terraform version, you can configure the `required_version` parameter as `required_version = ">=1.4 <2.0"`. For more information, see [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
 
@@ -421,7 +421,7 @@ In the workspace creation page, for the `Repository URL`. The link can point to 
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory` 
 
 Branch names contains `/` (backslash) are not supported.
-{: note} 
+{: note}
 
 Action creation
 

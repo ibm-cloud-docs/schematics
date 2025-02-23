@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-02-23"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2424,7 +2424,7 @@ Command options
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} workspace update flags" caption-side="top"}
 
-#### Example for variable store
+#### Example for variable store and environment values
 {: #syntax_of_update_variablestore}
 
 **exampleupdatevar.json:**
@@ -2446,6 +2446,21 @@ Command options
                     "value": "test_updated",
                     "type": "string",
                     "description": ""
+                }
+    ],
+    "env_values": 
+    [
+                {
+                    "name": "TF_LOG",
+                    "value": "debug_working",
+                    "secure": false,
+                    "hidden": false
+                },
+                {
+                    "name": "TF_ENV",
+                    "value": "test_working",
+                    "secure": false,
+                    "hidden": false
                 }
     ]
 }
