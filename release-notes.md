@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-03-05"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## February 2025
+{: #February-2025}
+
+Review the release notes for February 2025.
+{: shortdesc}
+
+### 28 February 2025
+{: #schematics-feb2025}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.3.1](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) release fixes the Ansible inventory generation in the UI for Windows system.
 
 ## January 2025
 {: #January-2025}
