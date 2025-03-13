@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
@@ -107,7 +107,7 @@ The following table lists the actions that generate an event for the {{site.data
 | `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace-resources.create` | An event is generated when a Terraform execution apply is created for a workspace. |
 | `schematics.workspace-resources.plan` | An event is generated when a Terraform execution plan is created for a workspace. |
-| `schematics.workspace-resources.delete` | An event is generated for a request to delete the {{site.data.keyword.cloud_notm}} resources that are provisioned through a Terraform plan and the workspace.|
+| `schematics.workspace-resources.delete` | An event is generated for a request to delete the Cloud resources that are provisioned through a Terraform plan and the workspace.|
 {: caption="Workspace events where activity tracking events are sent" caption-side="bottom"}
 
 ### Ansible events

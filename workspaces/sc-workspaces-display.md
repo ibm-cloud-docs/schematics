@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -63,7 +63,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}   
 
-3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+3. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting Cloud resources with Terraform.
 
 ### Verifying workspace list 
 {: #verify-wks-list-cli}
@@ -124,7 +124,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
     ```
     {: pre}
 
-4. see [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+4. see [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting Cloud resources with Terraform.
 
 ### verifying workspace update:
 {: #verify-wks-list-api}
@@ -356,7 +356,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 1. Follow the steps in [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup) to create your workspace with Terraform.
 
-2. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+2. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete Cloud resources with Terraform.
 
 ## Next steps
 {: #sch-list-wks-nextsteps}

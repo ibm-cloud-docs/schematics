@@ -42,7 +42,7 @@ In this tutorial, you can:
 - Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the {{site.data.keyword.IBM_notm}} resource instance, and {{site.data.keyword.IBM_notm}} resource group.
 - Learn how to create an {{site.data.keyword.bplong_notm}} workspace.
 - Learn to automate continuous deployment of a resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
-- Review the {{site.data.keyword.cloud_notm}} resources that you create.
+- Review the Cloud resources that you create.
 
 ## Time needed
 {: #workspace-timereq}
@@ -60,7 +60,7 @@ This tutorial is intended for the developer and system administrators who want t
 ### About {{site.data.keyword.bplong_notm}}
 {: #wks-preqre-abt-sch}
 
-[{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) is an {{site.data.keyword.cloud_notm}} automation tool. It provides simplified provisioning, orchestrating Infrastructure as Code (IaC), templates, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using various resources tools such as Terraform, Helm.
+[{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) is an {{site.data.keyword.cloud_notm}} automation tool. It provides simplified provisioning, orchestrating Infrastructure as Code (IaC), templates, and managing Cloud resources in your {{site.data.keyword.cloud_notm}} environment by using various resources tools such as Terraform, Helm.
 IaC helps you codify your cloud environment to automate the provisioning, speeds deployment, and managing your resources. The infrastructure is treated the same way as your app code, so that you can automate the DevOps core practices such as version control, testing, continuous integration, and deployment.
 {: shortdesc}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-03-13"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -94,7 +94,7 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components 
 1. A user sends a request to create a {{site.data.keyword.bpshort}} workspace to the {{site.data.keyword.bpshort}} API server. An IAM request is made to check if the user is authorized to perform {{site.data.keyword.bpshort}} operations for the workspace. 
 2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or a tape archive file (`.tar`) that you uploaded from your local machine. User data in transit is protected with TLS.  
 3. All user-initiated actions, creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. The {{site.data.keyword.bpshort}} engine retrieves requests from RabbitMQ and executes the actions. User data in transit is protected with TLS.  
-4. The {{site.data.keyword.bpshort}} engine runs the tasks to provision, modify, or delete {{site.data.keyword.cloud_notm}} resources.
+4. The {{site.data.keyword.bpshort}} engine runs the tasks to provision, modify, or delete Cloud resources.
 5. To protect user data at rest, {{site.data.keyword.bplong_notm}} encrypts data with AES GCM 256 encryption. Envelope encryption with root keys managed with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} is used to generate and encrypt unique data encryption keys (DEK) for the data objects. 
 6. Workspace transactional data is encrypted using the DEKs, including logs and the Terraform `tf.state` file at rest. The encrypted data stored in an {{site.data.keyword.cos_full_notm}} bucket .
 7. Workspace operational data, workspace and job names, pointers to user data in {{site.data.keyword.cos_full_notm}} and search keys, are stored in {{site.data.keyword.cloudant}}. All information stored in Cloudant is encrypted with AES 256. For more information on Cloudant data security and encryption, see [Cloudant Security](/docs/Cloudant?topic=Cloudant-security).

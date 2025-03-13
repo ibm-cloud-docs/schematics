@@ -235,7 +235,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: #tut-plan-wks}
 {: step}
 
-Create a {{site.data.keyword.bpshort}} execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
+Create a {{site.data.keyword.bpshort}} execution plan. The execution plan shows the Cloud resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
 Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information about the workspace state, see [workspace states](/docs/schematics?topic=schematics-wks-state#states-overview).
 {: note}
@@ -262,7 +262,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     The activity ID is used to retrieve the logs of the execution plan.
     {: note}
 
-2. Review the execution plan to view the {{site.data.keyword.cloud_notm}} resources. To retrieve the logs with the activity ID use the generated activity ID from step 1.
+2. Review the execution plan to view the Cloud resources. To retrieve the logs with the activity ID use the generated activity ID from step 1.
 
     ```sh
     ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-4
@@ -272,7 +272,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace status.
     {: note}
 
-3.	Apply your Terraform template in {{site.data.keyword.cloud_notm}}. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account.
+3.	Apply your Terraform template in {{site.data.keyword.cloud_notm}}. When you apply your Terraform template, all the Cloud resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account.
 
     This process takes a minute to complete. During this process, you cannot make any changes to your workspace.
     {: important}
@@ -294,7 +294,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 4. Review the logs of your workspace. See step 2 to view the logs with the workspace ID or  activity ID.
 
-5. Verify that the {{site.data.keyword.cloud_notm}} resources are successfully created in your {{site.data.keyword.cloud_notm}}.
+5. Verify that the Cloud resources are successfully created in your {{site.data.keyword.cloud_notm}}.
 
     ```sh
     ibmcloud schematics workspace get --id <WORKSPACE_ID>

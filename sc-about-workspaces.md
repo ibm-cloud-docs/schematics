@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} workspaces
 {: #sc-workspaces}
 
-{{site.data.keyword.bpshort}} workspaces delivers Terraform as a service capabilities to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments.
+{{site.data.keyword.bpshort}} workspaces delivers Terraform as a service capabilities to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your Cloud resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments.
 
 [Terraform](https://www.terraform.io){: external} is an open source project that allows you to specify your cloud infrastructure resources and services as code. It applies the concept of [Infrastructure as Code (IaC)](/docs/schematics?topic=schematics-infrastructure-as-code), using code to manage and provision infrastructure (networks, virtual machines, load-balancers, clusters, services and connection topology) in a descriptive model instead of manual processes.
 {: shortdesc}

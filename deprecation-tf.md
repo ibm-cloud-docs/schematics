@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -59,11 +59,11 @@ During this time {{site.data.keyword.bpshort}} supports only operations with the
 ### Restrict workspace execution
 {: #deprecate-wks-execute}
 
-After 24 months from GA, users no longer be able to manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} workspaces by using this release. The workspace must first be updated to use a release of Terraform with HCL provided maintenance and security fixes. The content of the workspaces remains accessible and the Terraform release can be updated in {{site.data.keyword.bpshort}} to re-enable operations.
+After 24 months from GA, users no longer be able to manage Cloud resources with {{site.data.keyword.bplong_notm}} workspaces by using this release. The workspace must first be updated to use a release of Terraform with HCL provided maintenance and security fixes. The content of the workspaces remains accessible and the Terraform release can be updated in {{site.data.keyword.bpshort}} to re-enable operations.
 
 If you choose not to upgrade to the current version of Terraform beyond the `restrict workspace execution` date:
     - Your {{site.data.keyword.bpshort}} workspace data continues to stay in {{site.data.keyword.bpshort}} until you delete these workspaces.
-    - You cannot do operations on, or `destroy` the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI.
+    - You cannot do operations on, or `destroy` the Cloud resources by using {{site.data.keyword.bpshort}}. The resources can still be deleted through the {{site.data.keyword.cloud_notm}} console or CLI.
 
 ## Deprecation Schedule
 {: #deprecate-timeline}

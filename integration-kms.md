@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-03-13"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # KMS integration for BYOK or KYOK
 {: #kms-integration}
 
-{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade key management to manage the lifecycle of your encryption keys that are used in your {{site.data.keyword.cloud_notm}} resources, services, and applications.
+{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade key management to manage the lifecycle of your encryption keys that are used in your Cloud resources, services, and applications.
 {: shortdesc}
 
 ## Launching key management

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -17,7 +17,7 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} uses workspaces to deploy and manage resources in {{site.data.keyword.cloud}} accounts.
 
-{{site.data.keyword.bplong_notm}} enables you to deploy and manage resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you create and work with your {{site.data.keyword.bpshort}} workspaces and actions is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
+{{site.data.keyword.bplong_notm}} enables you to deploy and manage resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you create and work with your {{site.data.keyword.bpshort}} workspaces and actions is independent of the region where your Cloud resources are deployed or configured.
 {: shortdesc}
 
 {{site.data.keyword.bplong_notm}} runs your jobs from the {{site.data.keyword.bpshort}} region hosting the workspace and remotely accesses services to provision resources in the target regions determined by your Terraform templates. Workspace operations in remote regions are unaffected by network latency between the management and target regions.
@@ -36,7 +36,7 @@ subcollection: schematics
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
-- Run a {{site.data.keyword.bpshort}} apply job against your workspace. An apply job provisions, modifies, or removes the {{site.data.keyword.cloud_notm}} resources that you describe in the Terraform template that your workspace points. Depending on the type and number of resources that you want to provision or modify, this process might take a few minutes, or hours to complete. During this time, you cannot edit your workspace. After all updates are applied, the state of the files persists to determine what resources exist in your {{site.data.keyword.cloud_notm}} account.
+- Run a {{site.data.keyword.bpshort}} apply job against your workspace. An apply job provisions, modifies, or removes the Cloud resources that you describe in the Terraform template that your workspace points. Depending on the type and number of resources that you want to provision or modify, this process might take a few minutes, or hours to complete. During this time, you cannot edit your workspace. After all updates are applied, the state of the files persists to determine what resources exist in your {{site.data.keyword.cloud_notm}} account.
 {: note}
 
 ## Perform a workspace apply using the UI 
@@ -123,7 +123,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}
 
-4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs .
+4. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs .
 
 ### Verifying workspace deploy 
 {: #verify-wks-deploy-cli}
@@ -198,7 +198,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
     ```
     {: pre}
 
-4. see [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+4. see [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting Cloud resources with Terraform.
 
 
 ### Verifying workspace deploy
@@ -224,7 +224,7 @@ On successful workspace apply, it returns the job activity id performed on the w
 
 1. Follow the steps in [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup) to create your workspace with Terraform.
 
-2. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+2. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete Cloud resources with Terraform.
 
 ## Next steps
 {: #sch-deploy-wks-nextsteps}

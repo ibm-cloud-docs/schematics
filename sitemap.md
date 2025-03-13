@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-13"
 
 keywords: schematics
 subcollection: schematics
@@ -1376,7 +1376,7 @@ subcollection: schematics
 
 * [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider)
 
-* [Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block](/docs/schematics?topic=schematics-create-tf-config#configure-resources)
+* [Adding Cloud resources to the `resource` block](/docs/schematics?topic=schematics-create-tf-config#configure-resources)
 
     * [Referencing resources in other resource blocks](/docs/schematics?topic=schematics-create-tf-config#reference-resource-info)
 
@@ -2183,7 +2183,7 @@ subcollection: schematics
 
 * [Where is my {{site.data.keyword.bpshort}} and template data stored?](/docs/schematics?topic=schematics-locations#where-is-data-stored)
 
-* [Where are my {{site.data.keyword.cloud_notm}} resources provisioned?](/docs/schematics?topic=schematics-locations#where-are-resources-provisioned)
+* [Where are my Cloud resources provisioned?](/docs/schematics?topic=schematics-locations#where-are-resources-provisioned)
 
 
 ## Adoption considerations
@@ -2570,7 +2570,7 @@ subcollection: schematics
 
 [Why is {{site.data.keyword.bpshort}} apply failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
 
-[Why do timeout failures cause tainted {{site.data.keyword.cloud_notm}} resources?](/docs/schematics?topic=schematics-tainted-resources#tainted-resources)
+[Why do timeout failures cause tainted Cloud resources?](/docs/schematics?topic=schematics-tainted-resources#tainted-resources)
 
 [Why can't {{site.data.keyword.bpshort}} find my resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -13,10 +13,10 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do timeout failures cause tainted {{site.data.keyword.cloud_notm}} resources?
+# Why do timeout failures cause tainted Cloud resources?
 {: #tainted-resources}
 
-You attempted to create an {{site.data.keyword.cloud_notm}} resource that takes a long time to fully provision, such as {{site.data.keyword.messagehub}} or {{site.data.keyword.databases-for}}. When you run the {{site.data.keyword.bpshort}} apply action, the action fails due to timeouts results in a tainted resource.
+You attempted to create an Cloud resource that takes a long time to fully provision, such as {{site.data.keyword.messagehub}} or {{site.data.keyword.databases-for}}. When you run the {{site.data.keyword.bpshort}} apply action, the action fails due to timeouts results in a tainted resource.
 {: tsSymptoms}
 
 The {{site.data.keyword.terraform-provider_full_notm}} sets certain timeouts when the provisioning, update, or deletion of a resource must be completed before it is considered failed. Because some resources such as {{site.data.keyword.messagehub}} or {{site.data.keyword.databases-for}} take longer to fully provision, they might exceed these timeouts. If the provisioning cannot be completed before the timeout is reached, the {{site.data.keyword.cloud_notm}} Provider plug-in marks the provisioning process as failed and taints the resource. However, the actual provisioning of the resource is not canceled and continues in the background, which can result in a successfully provisioned resource after all. Because the resource is tainted, the resource is automatically deleted and re-created when you run the next {{site.data.keyword.bpshort}} apply action. 
@@ -32,7 +32,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-2. Refresh your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform state file of your workspace. This process might take a few minutes to complete.
+2. Refresh your workspace. A refresh action validates the Cloud resources in your account against the state that is stored in the Terraform state file of your workspace. This process might take a few minutes to complete.
 
     ```sh
     ibmcloud schematics refresh --id <workspace_ID>

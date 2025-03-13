@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -75,7 +75,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}
 
-3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+3. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting Cloud resources with Terraform.
 
 ### Verifying a workspace destroy operation
 {: #verify-workspace-destroy-cli}
@@ -152,7 +152,7 @@ For more information, see [workspace FAQs](/docs/schematics?topic=schematics-wor
    ```
    {: codeblock}
 
-3. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+3. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting Cloud resources with Terraform.
 
 ### Verifying a workspace destroy operation
 {: #verify-workspace-destroy-api}
@@ -182,7 +182,7 @@ For more information, see [workspace FAQs](/docs/schematics?topic=schematics-wor
 
 1. Follow the steps in [Deleting {{site.data.keyword.bpshort}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui) to destroy your workspace with Terraform.
 
-2. See [Managing {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-manage-lifecycle) with {{site.data.keyword.bpshort}} to create, update, or delete the {{site.data.keyword.cloud_notm}} resources.
+2. See [Managing Cloud resources](/docs/schematics?topic=schematics-manage-lifecycle) with {{site.data.keyword.bpshort}} to create, update, or delete the Cloud resources.
 
 ## Next steps
 {: #sch-destroy-wks-nextsteps}
