@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -41,7 +41,7 @@ The three core {{site.data.keyword.bpshort}} offerings are:
 ### {{site.data.keyword.bpshort}} workspaces
 {: #sch-workspaces}
 
-With {{site.data.keyword.bpshort}} workspaces, use Terraform to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. For more information, see [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces).
+With {{site.data.keyword.bpshort}} workspaces, use Terraform to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your Cloud resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. For more information, see [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces).
 {: shortdesc}
 
 ### {{site.data.keyword.bpshort}} actions

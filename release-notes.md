@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -1045,7 +1045,7 @@ Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_
 :   You can run `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and `untaint` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and see [Time out errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/blog/timeout-errors-with-ibm-cloud-schematics/){: external}.
 
 Documentation support to deploy resources in a specific region or across multiple regions
-:   For more information, see [Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
+:   For more information, see [Deploying Cloud resources in a specific region or across multiple regions Cloud resources](/docs/schematics?topic=schematics-multi-region-deployment).
 
 Documentation support to create workspace by using {{site.data.keyword.bplong_notm}} resources
 :   For more information, see [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup).
@@ -1070,7 +1070,7 @@ Version constraints support in {{site.data.keyword.bplong_notm}}
 :   Specifying version constraints for Terraform and Ansible. For more information, see [specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-version-constraints).
 
 Troubleshooting guide support
-:   For more information about the debugging {{site.data.keyword.bpshort}} apply errors, see [Why do timeout failures result in tainted {{site.data.keyword.cloud_notm}} resources>](/docs/schematics?topic=schematics-server-errors) [Why am I getting 5xx HTTP errors?]/docs/schematics?topic=schematics-server-errors), [Why can't {{site.data.keyword.bpshort}} find the resource group?](/docs/schematics?topic=schematics-rg-not-found), and [How to find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors)
+:   For more information about the debugging {{site.data.keyword.bpshort}} apply errors, see [Why do timeout failures result in tainted Cloud resources>](/docs/schematics?topic=schematics-server-errors) [Why am I getting 5xx HTTP errors?]/docs/schematics?topic=schematics-server-errors), [Why can't {{site.data.keyword.bpshort}} find the resource group?](/docs/schematics?topic=schematics-rg-not-found), and [How to find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors)
 
 {{site.data.keyword.bpshort}} supports sample solutions
 :   Sample solutions by using Terraform templates and modules to set up the infrastructure. For more information, see [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-create-tf-config#sol-overview).
@@ -1270,14 +1270,14 @@ Review the release notes for June 2020.
 {: release-note}
 
 Ansible provisioner support
-:   You can now use the Ansible provisioner with {{site.data.keyword.bplong_notm}} to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information about how to use the Ansible provisioner, see [Discover the VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/), and [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/).
+:   You can now use the Ansible provisioner with {{site.data.keyword.bplong_notm}} to deploy software on Cloud resources or perform actions against your resources, such as shutting down a virtual server instance. For more information about how to use the Ansible provisioner, see [Discover the VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/), and [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/).
 
 ### 25 June 2020
 {: #schematics-jun252020}
 {: release-note}
 
 Version 1.8.0 of the {{site.data.keyword.cloud_notm}} Provider plug-in available
-:   The {{site.data.keyword.terraform-provider_full_notm}} version 1.8.0 is now enabled in {{site.data.keyword.bplong_notm}}. For more information about the version, see the [release notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.8.0){: external}. For an overview of supported {{site.data.keyword.cloud_notm}} resources and data sources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
+:   The {{site.data.keyword.terraform-provider_full_notm}} version 1.8.0 is now enabled in {{site.data.keyword.bplong_notm}}. For more information about the version, see the [release notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.8.0){: external}. For an overview of supported Cloud resources and data sources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
 
 ### 22 June 2020
 {: #schematics-jun222020}

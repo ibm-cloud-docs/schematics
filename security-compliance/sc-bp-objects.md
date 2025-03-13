@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -59,7 +59,7 @@ Follow these practices in creating a workspace for the Terraform template.
 - Check whether you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information about location and endpoint, see [Where is the information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 - Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-sch-delete-wks) and [destroy](/docs/schematics?topic=schematics-sch-destroy-wks) the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
-- Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
+- Do not use one workspace to manage an entire staging or production environment. When you deploy all your Cloud resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
 ### How can you ensure that the sensitive data used by the Terraform automation do not leak in the logs or outputs?
 {: #bp-security-leak-log}
@@ -78,10 +78,10 @@ Your workspaces and actions data store depends on the location where you create 
 
 Follow these practices to protect your workspace data through Terraform state file, or log files.
 
-- Use {{site.data.keyword.iamshort}} to control access to a {{site.data.keyword.bpshort}} workspace, and related {{site.data.keyword.cloud_notm}} resources.
+- Use {{site.data.keyword.iamshort}} to control access to a {{site.data.keyword.bpshort}} workspace, and related Cloud resources.
 - Secure the source repository for your Terraform template, including access control, security settings, collaboration, and version control.
-- Secure the {{site.data.keyword.cloud_notm}} resources that you create by using the security features that are provided by the resource offering.
-- Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security fixes, access controls, and encryption to your resources.
+- Secure the Cloud resources that you create by using the security features that are provided by the resource offering.
+- Use the provided tools of your Cloud resources to apply security fixes, access controls, and encryption to your resources.
 
 You need to specify the [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. 
 For more information about {{site.data.keyword.bpshort}} service access roles and permissions, see [Workspace Permissions](/docs/schematics?topic=schematics-access#workspace-permissions) and[KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
@@ -111,7 +111,7 @@ Follow these practices to protect your workspace data through input credentials 
 
 - Use Cloud Identity and Access Management to control access to a {{site.data.keyword.bpshort}} action.
 - Secure the source repository of your Terraform template, including access control, security settings, collaboration, and version control.
-- Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security fixes, access controls, and encryption to your resources.
+- Use the provided tools of your Cloud resources to apply security fixes, access controls, and encryption to your resources.
 - You need to specify the [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. For more information about {{site.data.keyword.bpshort}} service access roles and permissions for 
 - [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 - [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -30,9 +30,9 @@ After a soft or hard delete of the {{site.data.keyword.bpshort}} objects, if the
 The scope of deletion is limited to data stored in {{site.data.keyword.bpshort}} service and its backup.
 
 Following points does not include in the scope of deletion of {{site.data.keyword.bpshort}} objects.
-- The deletion or removal of the {{site.data.keyword.cloud_notm}} resources that were provisioned by using {{site.data.keyword.bpshort}}.
-- The data stored by the {{site.data.keyword.cloud_notm}} resources provisioned by the {{site.data.keyword.bpshort}}.  
-- At the time of {{site.data.keyword.bpshort}} object deletion, you are provided with the option to destroy the cloud resources. However, it is suggested to independently confirm and destroy the Cloud resources from the cloud services. You can explore the list of Cloud resources, from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external} page.
+- The deletion or removal of the Cloud resources that were provisioned by using {{site.data.keyword.bpshort}}.
+- The data stored by the Cloud resources provisioned by the {{site.data.keyword.bpshort}}.  
+- At the time of {{site.data.keyword.bpshort}} object deletion, you are provided with the option to destroy the cloud resources. However, it is suggested to independently confirm and destroy the Cloud resources from the cloud services. You can explore the list of Cloud resources, from the [Cloud resource list](https://cloud.ibm.com/resources){: external} page.
 
 ## Deleting {{site.data.keyword.bpshort}} objects from UI
 {: #delete-schematics-data-ui}

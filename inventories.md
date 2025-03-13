@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -90,10 +90,10 @@ Review the following limitations of static inventory files in {{site.data.keywor
 ## Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces
 {: #dynamic-inv}
 
-You can dynamically build your resource inventory from the {{site.data.keyword.cloud_notm}} resources that you provisioned with {{site.data.keyword.bpshort}} workspaces.
+You can dynamically build your resource inventory from the Cloud resources that you provisioned with {{site.data.keyword.bpshort}} workspaces.
 {: shortdesc}
 
-Dynamic resource inventories references {{site.data.keyword.cloud_notm}} resources that you provisioned with {{site.data.keyword.bpshort}} workspaces. To retrieve the {{site.data.keyword.cloud_notm}} resources from your workspaces, use predefined resource queries. You do not need to keep track of the IP addresses that were assigned to your target resources as {{site.data.keyword.bpshort}} automatically determines the target hosts when you use this inventory in the {{site.data.keyword.bpshort}} action.
+Dynamic resource inventories references Cloud resources that you provisioned with {{site.data.keyword.bpshort}} workspaces. To retrieve the Cloud resources from your workspaces, use predefined resource queries. You do not need to keep track of the IP addresses that were assigned to your target resources as {{site.data.keyword.bpshort}} automatically determines the target hosts when you use this inventory in the {{site.data.keyword.bpshort}} action.
 
 1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
 2. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Ansible**](https://cloud.ibm.com/automation/schematics/ansible){: external}.
@@ -114,7 +114,7 @@ Dynamic resource inventories references {{site.data.keyword.cloud_notm}} resourc
 
 |Supported query|Description|
 |--|--|
-|Workspace name|Select all the {{site.data.keyword.cloud_notm}} resources from a specific workspace.|
+|Workspace name|Select all the Cloud resources from a specific workspace.|
 |Workspace name AND resource name|Select a specific resource from a specific workspace by using the resource name. To select multiple resources from the same workspace, you can add multiple queries of this type. |
 |Workspace name AND tag|Select a specific resource from a specific workspace by using tags. Tags are added to the resource when you create the workspace and provision your resource. To select multiple resources with different tags from the same workspace, you can add multiple queries of this type. |
 {: caption="Resource query" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-03-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -388,7 +388,7 @@ North America always indicates both `us-south`, and `us-east` location during th
 {: faq}
 {: support}
 
-With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}. You can use the VPC console, API, or command-line to `stop`, `reboot`, and `power on` your virtual server instance. However, to remove the virtual server instance, you can use {{site.data.keyword.bplong_notm}}.
+With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of Cloud resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}. You can use the VPC console, API, or command-line to `stop`, `reboot`, and `power on` your virtual server instance. However, to remove the virtual server instance, you can use {{site.data.keyword.bplong_notm}}.
 
 ## Are changes to Git repos refreshed in {{site.data.keyword.bpshort}}?
 {: #edit-resource-confg-faq}
@@ -402,16 +402,16 @@ No, if you change the code of your Terraform template in GitHub, these changes a
 {: faq}
 {: support}
 
-After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform state file (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this state file as the single source of truth to determine what resources exist in your account. The state file maps the resources that you specified in your Terraform configuration file to the {{site.data.keyword.cloud_notm}} resource that you provisioned.
+After you successfully provisioned Cloud resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform state file (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this state file as the single source of truth to determine what resources exist in your account. The state file maps the resources that you specified in your Terraform configuration file to the Cloud resource that you provisioned.
 
 ## Are resources removed on delete workspace?
 {: #delete-resource-wks-faq}
 {: faq}
 {: support}
 
-Deleting a workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you delete the workspace before you remove your resources, you must manually remove all your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard.
+Deleting a workspace from {{site.data.keyword.bplong_notm}} does not remove any of your Cloud resources. If you delete the workspace before you remove your resources, you must manually remove all your Cloud resources from the individual resource dashboard.
 
-Removing {{site.data.keyword.cloud_notm}} resources cannot be undone. Make sure that you have backed up any data before you remove a resource. Resources are removed (deleted) if you remove the resource definition or comment out the resource in your Terraform configuration file. Review the Plan log file to verify that all your resources are included in the removal.
+Removing Cloud resources cannot be undone. Make sure that you have backed up any data before you remove a resource. Resources are removed (deleted) if you remove the resource definition or comment out the resource in your Terraform configuration file. Review the Plan log file to verify that all your resources are included in the removal.
 {: important}
 
 ## Can I set environment variables for workspaces?

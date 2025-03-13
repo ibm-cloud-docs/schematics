@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Deleting a workspace
 {: #sch-delete-wks}
 
-Deletes a workspace from the {{site.data.keyword.bplong_notm}}. Deleting a workspace does not automatically remove the {{site.data.keyword.cloud_notm}} resources that the workspace manages. Use workspace destroy to remove all resources that are associated with the workspace.
+Deletes a workspace from the {{site.data.keyword.bplong_notm}}. Deleting a workspace does not automatically remove the Cloud resources that the workspace manages. Use workspace destroy to remove all resources that are associated with the workspace.
 {: shortdesc}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
@@ -71,7 +71,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}
 
-3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+3. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting Cloud resources with Terraform.
 
 ### Verifying workspace delete 
 {: #verify-wks-delete-cli}
@@ -149,7 +149,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
    ```
    {: codeblock}
 
-3. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to deploy, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+3. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to deploy, update, or delete Cloud resources with Terraform.
 
 ### Verifying workspace delete 
 {: #verify-wks-delete-api}
@@ -170,7 +170,7 @@ Output
 
 1. Follow the steps in [Deleting {{site.data.keyword.bpshort}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui) to delete your workspace with Terraform.
 
-2. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, and delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+2. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, and delete Cloud resources with Terraform.
 
 ## Next steps
 {: #sch-delete-wks-nextsteps}

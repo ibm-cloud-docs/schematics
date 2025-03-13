@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -57,6 +57,6 @@ For every queued request from a {{site.data.keyword.bpshort}} user, the {{site.d
 ### How are cloud resources isolated from other tenants? 
 {: #workload-tenant-isolation}
 
-When you use {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. {{site.data.keyword.cloud_notm}} resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user.
+When you use {{site.data.keyword.bpshort}} to provision Cloud resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. Cloud resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user.
 
 Because all resources are created in your personal account, resources are not shared with or reused by other {{site.data.keyword.cloud_notm}} tenants.

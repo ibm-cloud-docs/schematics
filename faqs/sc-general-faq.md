@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-03-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -42,7 +42,7 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking `Apply plan` from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
+{{site.data.keyword.bplong_notm}} workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking `Apply plan` from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the Cloud resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
 
 The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays a warning and deprecation message as `Alias Terraform are deprecated. Use schematics or sch` in your command.
 {: note}
@@ -163,7 +163,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the limit is set 
 {: faq}
 {: support}
 
-Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the {{site.data.keyword.cloud_notm}} resource state into the {{site.data.keyword.bpshort}} workspace. It is planned in the future roadmap.
+Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the Cloud resource state into the {{site.data.keyword.bpshort}} workspace. It is planned in the future roadmap.
 
 ## How do I overcome the request that exceeds the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
@@ -218,9 +218,9 @@ You can view the list of public and private allowed IP addresses of `us-south`, 
 
 When you provision resources with {{site.data.keyword.bplong_notm}}, the state of your resources is stored in a local {{site.data.keyword.bplong_notm}} state file. This state file is the single source of truth for {{site.data.keyword.bplong_notm}} to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without {{site.data.keyword.bplong_notm}}, this resource is not stored in the {{site.data.keyword.bplong_notm}} state file, and as a consequence cannot be managed with {{site.data.keyword.bplong_notm}}.
 
-When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, {{site.data.keyword.bpshort}} verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured in your state file. If the resource is not found, the state file is updated, and the Terraform execution plan are changed.
+When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, {{site.data.keyword.bpshort}} verifies that the Cloud resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured in your state file. If the resource is not found, the state file is updated, and the Terraform execution plan are changed.
 
-To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.keyword.cloud_notm}} resources in your account in sync, use {{site.data.keyword.bplong_notm}} to provision, or remove your resources.
+To keep your {{site.data.keyword.bplong_notm}} state file and the Cloud resources in your account in sync, use {{site.data.keyword.bplong_notm}} to provision, or remove your resources.
 {: important}
 
 ## What changes can I make to my resources?
@@ -235,7 +235,7 @@ You can choose to add, modify, or remove infrastructure code in your Terraform t
 {: faq}
 {: support}
 
-To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files. You can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
+To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files. You can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing Cloud resources.
 
 ## What are the deviations that cannot be detected?
 {: #edit-resource-faq}
@@ -257,9 +257,9 @@ You can use the {{site.data.keyword.bplong_notm}} console or CLI to remove all t
 {: faq}
 {: support}
 
-When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create next Terraform execution plan, or apply a new template version. The {{site.data.keyword.bpshort}} verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated, and the Terraform execution plan is changed. 
+When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create next Terraform execution plan, or apply a new template version. The {{site.data.keyword.bpshort}} verifies that the Cloud resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated, and the Terraform execution plan is changed. 
 
-Although the state file is updated before new changes to your {{site.data.keyword.cloud_notm}} resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.bplong_notm}} console or CLI to remove your resources, or remove the associated infrastructure code from your Terraform template. 
+Although the state file is updated before new changes to your Cloud resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.bplong_notm}} console or CLI to remove your resources, or remove the associated infrastructure code from your Terraform template. 
 {: important}
 
 ## Does {{site.data.keyword.bpshort}} support `ibmcloud terraform` command?
@@ -364,7 +364,7 @@ No, you cannot [delete](/docs/schematics?topic=schematics-sch-delete-wks) and [d
 
 Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group.
 
-For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B.
+For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their Cloud resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B.
 
 ## What is the benefit of using IAM access group?
 {: #faq-iam-accessgrp-benefit}

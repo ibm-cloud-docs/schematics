@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -80,7 +80,7 @@ A collection of cloud resources that are used as target for running the Ansible 
 ### Resource inventory
 {: #rir1}
 
-A resource inventory can be defined by using a static inventory file, or dynamically retrieve to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} workspaces in your {{site.data.keyword.cloud_notm}} account.
+A resource inventory can be defined by using a static inventory file, or dynamically retrieve to your target Cloud resources from {{site.data.keyword.bpshort}} workspaces in your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 ## Jobs

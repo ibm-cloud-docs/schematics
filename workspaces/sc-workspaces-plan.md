@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-03-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -116,7 +116,7 @@ During workspace plan execution, you cannot edit your workspace.
     ```
     {: pre}
 
-3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs.
+3. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs.
 
 ### Verifying workspace plan execution
 {: #verify-wks-plan-cli}
@@ -199,7 +199,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 	```
 	{: codeblock}
 
-3. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+3. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete Cloud resources with Terraform.
 
 ### Verifying workspace plan execution
 {: #verify-wks-plan-api} 
@@ -231,7 +231,7 @@ For more information, see [FAQ](/docs/schematics?topic=schematics-workspaces-faq
 
 1. Follow the steps in [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup) to create your workspace with Terraform.
 
-2. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+2. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting Cloud resources with Terraform.
 
 ## Next steps
 {: #sch-plan-wks-nextsteps}

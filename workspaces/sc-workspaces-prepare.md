@@ -44,13 +44,13 @@ Workspaces use Terraform templates from private or public Git repositories such 
 The number of workspaces you need in {{site.data.keyword.bplong_notm}} are determined by the structure of your application and the environments that you need to develop, test, and publish your application or micro-service.
 {: shortdesc}
 
-As a rule of thumb, consider separate workspaces for each microservice and the environments that you use. For example, if you have a product app that consists of a search, payment, and review microservice components, consider creating separate workspaces for each microservice component and their development, staging, and production environments. With separate workspaces for each component and environment, you can develop, deploy, and update your Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting other components.
+As a rule of thumb, consider separate workspaces for each microservice and the environments that you use. For example, if you have a product app that consists of a search, payment, and review microservice components, consider creating separate workspaces for each microservice component and their development, staging, and production environments. With separate workspaces for each component and environment, you can develop, deploy, and update your Terraform configuration files and associated Cloud resources without affecting other components.
 
 Review the following image, observing the workspace structure {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
 
 ![Workspace structure for {{site.data.keyword.bplong_notm}}](../images/workspace-structure.png){: caption="workspace structure for {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
-In organizations where infrastructure responsibilities are spread across multiple teams, it is not recommended to use one workspace to manage entire staging or production environments. When you deploy all your {{site.data.keyword.cloud_notm}} resources using a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources. Separate workspaces, sharing infrastructure definitions using remote-state data sources provides a mechanism to create separate out areas of responsibility.
+In organizations where infrastructure responsibilities are spread across multiple teams, it is not recommended to use one workspace to manage entire staging or production environments. When you deploy all your Cloud resources using a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources. Separate workspaces, sharing infrastructure definitions using remote-state data sources provides a mechanism to create separate out areas of responsibility.
 {: important}
 
 ### How do I structure my Git repositories to map my workspaces?

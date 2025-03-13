@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-03-13"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -693,7 +693,7 @@ ibmcloud schematics agent deploy --id <AGENT_ID>
 ### `ibmcloud schematics agent destroy`
 {: #schematics-agent-destroy}
 
-Destroy an agent destroys the {{site.data.keyword.cloud_notm}} resources associated with the {{site.data.keyword.bpshort}} agent deployment.
+Destroy an agent destroys the Cloud resources associated with the {{site.data.keyword.bpshort}} agent deployment.
 
 Syntax
 
@@ -1250,7 +1250,7 @@ ibmcloud schematics help
 ### `ibmcloud schematics version`
 {: #schematics-version}
 
-List the versions of all supported open source projects in {{site.data.keyword.bpshort}}, such as the {{site.data.keyword.terraform-provider_full_notm}}, Ansible, Helm, and Kubernetes that are used to run {{site.data.keyword.bpshort}} actions on {{site.data.keyword.cloud_notm}} resources.
+List the versions of all supported open source projects in {{site.data.keyword.bpshort}}, such as the {{site.data.keyword.terraform-provider_full_notm}}, Ansible, Helm, and Kubernetes that are used to run {{site.data.keyword.bpshort}} actions on Cloud resources.
 {: shortdesc}
 
 Syntax
@@ -1307,7 +1307,7 @@ Command options
 | `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
 |`resource-group` or `-r`| Optional | The name of the resource group where you want to create the action.|
 |`--inventories-ini` or `-y` | Optional |The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. For more information about how to create a static resource inventory file, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv). |
-|`--resource-query` | Optional |Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the {{site.data.keyword.cloud_notm}} resources that you created with a {{site.data.keyword.bpshort}} workspace. To create a resource query, see the `ibmcloud schematics resource-query create` [command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq). To enter multiple resource query IDs, use `--resource-query id1 --resource-query id2`.|
+|`--resource-query` | Optional |Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. To create a resource query, see the `ibmcloud schematics resource-query create` [command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq). To enter multiple resource query IDs, use `--resource-query id1 --resource-query id2`.|
 | `--file` or `-f` | Optional |The path to the JSON file where you specified the resource inventory that you want to create.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--no-prompt` | Optional | Set this flag to create an inventory without an interactive command-line session. |
@@ -1772,7 +1772,7 @@ ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics workspace delete`
 {: #schematics-workspace-delete}
 
-Delete a workspace from the current region for your account. The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
+Delete a workspace from the current region for your account. The deletion of your workspace does not remove any Cloud resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
 {: shortdesc}
 
 Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
@@ -2138,7 +2138,7 @@ ibmcloud schematics workspace new --file example.json
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
 
-Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform state file of your workspace. If differences are found, the Terraform state file is updated accordingly. 
+Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the Cloud resources in your account against the state that is stored in the Terraform state file of your workspace. If differences are found, the Terraform state file is updated accordingly. 
 {: shortdesc}
 
 Syntax
@@ -2166,7 +2166,7 @@ ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics state list`
 {: #state-list}
 
-List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform state file (`terraform.tfstate`). 
+List the `Name`, `Type`, `URL`, and `Taint Status` of the Cloud resources that are documented in your Terraform state file (`terraform.tfstate`). 
 {: shortdesc}	
 
 `Taint Status` returns **tainted** for (true) or **blank** for (false).
@@ -2183,7 +2183,7 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform state file. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the Cloud resources that are documented in the Terraform state file. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} state list flags" caption-side="top"}
 
@@ -2533,7 +2533,7 @@ Create the `TAR` file of your template repo by using the `TAR` command given `ta
 ## Workspace job commands
 {: #schematics-resource-commands}
 
-Run {{site.data.keyword.bpshort}} operations, to create, update, and delete {{site.data.keyword.cloud_notm}} resources. Using familiar Terraform semantics, plan, apply and destroy Terraform workspaces to manage the lifecycle of cloud resources. 
+Run {{site.data.keyword.bpshort}} operations, to create, update, and delete Cloud resources. Using familiar Terraform semantics, plan, apply and destroy Terraform workspaces to manage the lifecycle of cloud resources. 
 
 ### `ibmcloud schematics apply`
 {: #schematics-apply}
@@ -2577,10 +2577,10 @@ ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --target ibm_is_inst
 ### `ibmcloud schematics destroy`
 {: #schematics-destroy}
 
-Remove {{site.data.keyword.cloud_notm}} resources that you provisioned using your {{site.data.keyword.bpshort}} workspace, even if these resources are active. By default, the command lists all the resources to preview and then receives confirmation to destroy. If you use `--force or -f` flag in the destroy command, you cannot see the preview of the resources that you want to destory. 
+Remove Cloud resources that you provisioned using your {{site.data.keyword.bpshort}} workspace, even if these resources are active. By default, the command lists all the resources to preview and then receives confirmation to destroy. If you use `--force or -f` flag in the destroy command, you cannot see the preview of the resources that you want to destory. 
 {: shortdesc}
 
-Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you have written data to provisioned storage or databases, ensure that you create a backup to persist your data
+Use this command with caution. After you run the command, you cannot reverse the removal of your Cloud resources. If you have written data to provisioned storage or databases, ensure that you create a backup to persist your data
 {: important} 	
 
 Your workspace must be in an **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} destroy action. 
@@ -2598,7 +2598,7 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the Cloud resources that you want to remove. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 | `--target` or `-t` | Optional | Target the deletion of a specific resource by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. You cannot see the preview of the resources that you want to destory. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
@@ -2671,7 +2671,7 @@ ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
 ### `ibmcloud schematics plan`
 {: #schematics-plan}
 
-Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The command-line output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, [persisted](/docs/schematics?topic=schematics-general-faq#persist-file), or removed to achieve the state that is described in your configuration file.
+Scan the Terraform template in your source repository and compare this template against the Cloud resources that are already deployed. The command-line output shows the Cloud resources that must be added, modified, [persisted](/docs/schematics?topic=schematics-general-faq#persist-file), or removed to achieve the state that is described in your configuration file.
 {: shortdesc}
 
 Your workspace must be in an **Inactive**, **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} plan action. 
@@ -2886,7 +2886,7 @@ ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --addre
 ## Workspace Terraform commands
 {: #tf-cmds}
 
-You can run Terraform commands to manipulate {{site.data.keyword.cloud_notm}} resources and modify {{site.data.keyword.bpshort}} state.
+You can run Terraform commands to manipulate Cloud resources and modify {{site.data.keyword.bpshort}} state.
 {: shortdesc}
 
 Workspace Terraform commands are not supported in the UI. 
