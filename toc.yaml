@@ -179,7 +179,6 @@ toc:
       - sc-tools.md
       - locations.md
       - limitations.md
-      - sc-terminology.md
       - license-notices.md
   - navgroup:
       id: help

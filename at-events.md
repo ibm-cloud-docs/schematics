@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
 
@@ -54,6 +54,16 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 {: class="simple-tab-table"}
 {: row-headers}
 
+| Toronto (`ca-tor`)  |
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where activity tracker events are sent in Toronto locations" caption-side="top"}
+{: #at-table-3}
+{: tab-title="Toronto"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
+
 ## Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
 {: #atracker-locations}
 
@@ -73,8 +83,18 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 |---------------|-------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
-{: #atracker-table-3}
+{: #atracker-table-2}
 {: tab-title="Europe"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Toronto (`ca-tor`)  | 
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where activity tracking events are sent in Toronto locations" caption-side="top"}
+{: #atracker-table-3}
+{: tab-title="Toronto"}
 {: tab-group="atracker"}
 {: class="simple-tab-table"}
 {: row-headers}

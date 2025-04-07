@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -24,7 +24,7 @@ High availability is a core discipline in an IT infrastructure to keep your reso
 
 **How is {{site.data.keyword.bplong_notm}} set up to ensure high availability of the service?**
 
-{{site.data.keyword.bpshort}} is deployed as two highly available service instances in two separate geographical locations, the US and Europe. Within each geography, the service is deployed across two multizone regions, such as `us-south` and `us-east` in the US geography, and `eu-de` and `eu-gb` for the Europe geography. This setup ensures that the service is still available, even if one region within a geography fails. Data is not shared across geographical locations.
+{{site.data.keyword.bpshort}} is deployed as two highly available service instances in two separate geographical locations, the US and Europe. Within each geography, the service is deployed across two multizone regions, such as `us-south` and `us-east` in the US geography, `eu-de` and `eu-gb` for the Europe geography, and `ca-tor` in the Toronto geography. This setup ensures that the service is still available, even if one region within a geography fails. Data is not shared across geographical locations.
 
 Who is responsible to set up high availability for my resources?
 

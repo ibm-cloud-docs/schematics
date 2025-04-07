@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-04-07"
 
 keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging, ibm cloud logs, cloud logs
 
@@ -27,7 +27,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 ## Locations where platform logs are generated
 {: #log-locations}
-
 
 ### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
 {: #la-legacy-locations}
@@ -54,6 +53,16 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
+| Toronto (`ca-tor`)  | 
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where platform logs are sent in Toronto locations" caption-side="top"}
+{: #at-table-3}
+{: tab-title="Toronto"}
+{: tab-group="la"}
+{: class="simple-tab-table"}
+{: row-headers}
+
 ## Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}
 {: #lr-locations}
 
@@ -75,6 +84,16 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
 {: #loc-table-2}
 {: tab-title="Europe"}
+{: tab-group="lr"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Toronto (`ca-tor`)  | 
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where platform logs are sent in Toronto locations" caption-side="top"}
+{: #loc-table-3}
+{: tab-title="Toronto"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}
 {: row-headers}

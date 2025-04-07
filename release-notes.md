@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,26 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## April 2025
+{: #April-2025}
+
+Review the release notes for April 2025.
+{: shortdesc}
+
+### 08 April 2025
+{: #schematics-apr0825}
+{: release-note}
+
+{{site.data.keyword.bpshort}} supports `Toronto` region
+:   You can now create the {{site.data.keyword.bpshort}} service instances in the Toronto (`ca-tor`) region.
+
+### 07 April 2025
+{: #schematics-apr0725}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} CLI plug-in
+:   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.26](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## February 2025
 {: #February-2025}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-04-07"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -84,10 +84,10 @@ If the proxy is working for `HTTPS` the `curl` command returns a `200 OK HTTP re
 
 If the curl command fails to connect, verify that the proxy is accessible from the cluster and can route access to the target website. Use the following `curl` command with the proxy option to validate that the proxy is accessible.  
 
-    ```curl
-    curl --proxy http://<ipaddress>:<port> --head https://www.google.com
-    ```
-    {: codeblock}
+  ```curl
+  curl --proxy http://<ipaddress>:<port> --head https://www.google.com
+  ```
+  {: codeblock}
 
 If the website is not accessible using the proxy parameter, verify the network egress rule for the cluster is set correctly and that there is network access to the proxy.
 

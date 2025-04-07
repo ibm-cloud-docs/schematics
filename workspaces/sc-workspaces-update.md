@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -51,12 +51,10 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         required_version = "~> 1.5"
         }
         ```
-        {: pre}
+        {: codeblock}
 
     - Click **Save**.
-
     - In **Variables** section. Click the **Edit** from the overflow menu to edit the variables. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
-
     - Click **Save**.
 
 ### Verifying workspace update 

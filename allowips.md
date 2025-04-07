@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-04-07"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -35,6 +35,7 @@ At run time {{site.data.keyword.bpshort}} dynamically selects a worker node and 
 | `EU Central` | `fra02`, `fra04`,`fra05` | `149.81.123.64/27`,`149.81.135.64/28`,</br>`158.177.210.176/28`,`158.177.216.144/28`,</br>`161.156.138.80/28`,`159.122.111.224/27`,</br>`161.156.37.160/27`| `10.123.76.192/26`,`10.194.127.64/26`,`10.75.204.128/26` |
 | `UK South` | `lon04`,`lon05`,`lon06` | `158.175.106.64/27`,`158.175.138.176/28`,</br>`141.125.79.160/28`,`141.125.142.96/27`,</br>`158.176.111.64/27`,`158.176.134.80/28` | `10.45.215.128/26`,</br>`10.196.59.0/26`,`10.72.173.0/26` |
 | `US` | `wdc04`,`wdc06`,`wdc07` and `dal10`,`dal12`,`dal13`| `169.45.235.176/28`,`169.55.82.128/27`,</br>`169.60.115.32/27`,`169.63.150.144/28`,`169.62.1.224/28`,`169.62.53.64/27` and `150.238.230.128/27`,`169.63.254.64/28`,</br>`169.47.104.160/28`,`169.61.191.64/27`,</br>`169.60.172.144/28`,`169.62.204.32/27` | `10.148.98.0/26`,`10.189.2.128/26`,</br>`10.190.16.128/26`,`10.191.181.64/26`,</br>`10.95.173.64/26`,`10.185.16.64/26`,</br>`10.220.38.64/26` |
+| `Toronto` | `ca-tor-1`, `ca-tor-2`, `ca-tor-3` |  | `192.168.16.0/22`,`192.168.36.0/22`,`192.168.8.0/22`,`192.168.32.0/22`, </br> `192.168.20.0/22`,`192.168.24.0/22`,`192.168.0.0/22`,`192.168.4.0/22`</br> `192.168.40.0/22`, `163.74.95.217`,`163.66.91.30`,`163.75.88.96`,`10.223.153.6`, `10.223.168.102`, `10.223.183.79`|
 {: caption="Region and supported public and private IPs" caption-side="bottom"}
 
 You can collapse down the ranges into security group rules. For example, `us-south` and `us-east` as two security group rules like `[169.45.235.176/28, 150.238.230.128/27]`. For more information about creating security group rules, see [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).

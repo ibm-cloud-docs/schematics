@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -25,13 +25,17 @@ Deploy, modify, and remove {{site.data.keyword.cloud}} resources using {{site.da
 Deploy your `Terraform configs` to provision, or modify your Cloud resources with {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
-**Before you begin**: 
+### Before you begin
+{: #deploy-resources-prereq}
+
 - [Create a workspace from UI](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) or create a [workspace through CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload). 
 - Make sure that you have the required [IAM permissions](/docs/schematics?topic=schematics-access) to deploy the resources in the target{{site.data.keyword.cloud_notm}} account.
 
-**To deploy your resources**:
+### To deploy your resources
+{: #to-deploy-resources}
 
-1. From the [workspace dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, select the workspace for the Terraform template that you want to apply. 
+1. From the [workspace dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, select the workspace for the Terraform template that you want to apply.
+
    Sample templates examples are listed in [Cloud {{site.data.keyword.bpshort}}](https://github.com/Cloud-Schematics){: external} GitHub, you can use one of the template for testing. For example, [Easy multizone VPC](https://github.com/Cloud-Schematics/easy-multizone-vpc){: external}.
    {: note}
 
@@ -120,8 +124,7 @@ Removing an Cloud resource cannot be undone. Make sure that you backed up your d
     **Example to remove a resource by commenting out a resource definition:**
 
     ```terraform
-    
-    #resource ibm_is_instance "vsi1" {
+    # resource ibm_is_instance "vsi1" {
     #  name    = "${local.BASENAME}-vsi2"
     #  vpc     = ibm_is_vpc.vpc.id
     #  zone    = "${local.ZONE}"
@@ -166,7 +169,6 @@ Removing an Cloud resource cannot be undone. Make sure that you backed up your d
 6. After successful job execution, from the navigation, select **Resources** and verify that your resources are removed.
 
 After the removal of your resources is complete, the {{site.data.keyword.bpshort}} workspace can be deleted.
-
 
 ## Deploying your resources through CLI
 {: #deploy-resources-cli}

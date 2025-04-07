@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-04-07"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -37,9 +37,8 @@ Since Terraform 1.0, {{site.data.keyword.bpshort}} workspaces can be updated to 
 terraform {
 required_version = "~> 1.1"
 }
-
 ```
-{: pre}
+{: codeblock}
 
 ### Updating the workspace Terraform 1.x version
 {: #terraform-version-upgrade1x-process}

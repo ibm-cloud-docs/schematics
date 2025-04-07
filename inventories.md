@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -57,22 +57,22 @@ Review the following sample `hosts.ini` file to see the structure of the static 
 
 This example references both publicly accessible hosts through host name and private hosts through IP address.  
 
-    ```text
-    mail.example.com
+```text
+mail.example.com
 
-    [webservers]
-    web1.mydomain.com
-    web2.mydomain.com
+[webservers]
+web1.mydomain.com
+web2.mydomain.com
 
-    [dbservers]
-    172.16.5.9
-    172.16.5.10
-    172.16.5.11
+[dbservers]
+172.16.5.9
+172.16.5.10
+172.16.5.11
 
-    [datacenters]
-    172.15.4.0
-    ```
-    {: screen}
+[datacenters]
+172.15.4.0
+```
+{: screen}
 
 ### Limitations
 {: #inv-file-limitation}
