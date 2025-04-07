@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-04-07"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -48,43 +48,61 @@ ibmcloud schematics version
 
 ```text
 
-  Template Type   Version
-  terraform       terraform_v1.3
-  Additional terraform Providers   Version
-  IBM Cloud Provider               v1.38.2
-  Red Hat OpenShift client         v3.11.0
-  ansible                          v2.9.23
-  Ansible Provisioner              v2.3.3
-  Provider for REST API            v1.10.0
-                                  
-  Template Type   Version
-  terraform       terraform_v1.4
-  Additional terraform Providers   Version
-  ansible                          v2.9.23
-  Red Hat OpenShift client         v3.11.0
-  Ansible Provisioner              v2.3.3
-  IBM Cloud Provider               v1.38.2
-  Provider for REST API            v1.10.0
-                                  
-  Template Type   Version
-  terraform       terraform_v1.5
-  Additional terraform Providers   Version
-  IBM Cloud Provider               v1.38.2
-  Provider for REST API            v1.10.0
-  ansible                          v2.9.23
-  Ansible Provisioner              v2.3.3
-  Red Hat OpenShift client         v3.11.0
-                                  
-  Template Type   Version
-  terraform       terraform_v1.6
-  Additional terraform Providers   Version
-  Red Hat OpenShift client         v3.11.0
-  ansible                          v2.9.23
-  IBM Cloud Provider               v1.38.2
-  Provider for REST API            v1.10.0
-  Ansible Provisioner              v2.3.3
-                                  
-  OK
+Template Type   Version
+terraform       terraform_v1.4
+Additional terraform Providers   Version
+Ansible Provisioner              v2.3.3
+Red Hat OpenShift client         v3.11.0
+Provider for REST API            v1.10.0
+ansible                          v2.9.23
+IBM Cloud Provider               v1.38.2
+                                 
+Template Type   Version
+terraform       terraform_v1.5
+Additional terraform Providers   Version
+Ansible Provisioner              v2.3.3
+IBM Cloud Provider               v1.38.2
+Provider for REST API            v1.10.0
+ansible                          v2.9.23
+Red Hat OpenShift client         v3.11.0
+                                 
+Template Type   Version
+terraform       terraform_v1.6
+Additional terraform Providers   Version
+IBM Cloud Provider               v1.38.2
+Red Hat OpenShift client         v3.11.0
+ansible                          v2.9.23
+Ansible Provisioner              v2.3.3
+Provider for REST API            v1.10.0
+                                 
+Template Type   Version
+terraform       terraform_v1.7
+Additional terraform Providers   Version
+Ansible Provisioner              v2.3.3
+IBM Cloud Provider               v1.38.2
+Provider for REST API            v1.10.0
+ansible                          v2.9.23
+Red Hat OpenShift client         v3.11.0
+                                 
+Template Type   Version
+terraform       terraform_v1.8
+Additional terraform Providers   Version
+Red Hat OpenShift client         v3.11.0
+Provider for REST API            v1.10.0
+Ansible Provisioner              v2.3.3
+IBM Cloud Provider               v1.38.2
+ansible                          v2.9.23
+                                 
+Template Type   Version
+terraform       terraform_v1.9
+Additional terraform Providers   Version
+ansible                          v2.9.23
+IBM Cloud Provider               v1.38.2
+Red Hat OpenShift client         v3.11.0
+Provider for REST API            v1.10.0
+Ansible Provisioner              v2.3.3
+                                 
+OK
 ```
 {: screen}
 

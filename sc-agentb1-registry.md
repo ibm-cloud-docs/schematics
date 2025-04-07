@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-04-07"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -31,13 +31,13 @@ In agents, the following two workspace environment variables can be used to conf
 
 ```json
 provider_installation {
-  network_mirror {
-    url = "${TF_NETWORK_MIRROR_URL}"
-    include = ["${TF_NETWORK_MIRROR_PROVIDER_NAME}"]
-  }
-  direct {
-     exclude = ["TF_NETWORK_MIRROR_PROVIDER_NAME"]
-  }
+network_mirror {
+url = "${TF_NETWORK_MIRROR_URL}"
+include = ["${TF_NETWORK_MIRROR_PROVIDER_NAME}"]
+}
+direct {
+exclude = ["TF_NETWORK_MIRROR_PROVIDER_NAME"]
+}
 }
 ```
 {: pre}
@@ -81,8 +81,7 @@ provider_installation {
                 direct {
                         exclude = ["user_namespace/provider_name"]
                 }
-        }
-        
+}  
 ```
 {: pre}
 

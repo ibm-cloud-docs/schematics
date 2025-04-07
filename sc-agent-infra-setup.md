@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-04-07"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -35,7 +35,7 @@ The following prerequisites must be met before you begin deploying the agent inf
 - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
 - [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-vpc-subnets) or [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) as `vpc_kubernetes_cluster`.
 
-    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}, based on the requirement, you can control egress traffic through Security Groups and Network access control lists (ACLs). 
+    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}, based on the requirement, you can control egress traffic through Security Groups and Network access control lists (ACLs).
     You need to define any {{site.data.keyword.networksecuritygroups_short}} rules and ACLs at VPC level before deploying an agent on the cluster. For more information, see [Terraform script to define security groups and ACLs on VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
     {: note}
 
@@ -46,33 +46,31 @@ The following prerequisites must be met before you begin deploying the agent inf
         - **Personal access token** - `<leave it blank>`. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
         - Terraform Version - `terraform_v1.5`. You need to select Terraform version 1.5 or greater than version.
         - Click `Next`.
-    - In the **Workspace details** section:
+    - In the **Workspace details** section enter
         - **Workspace name** as `schematics-agent-infrastructure`.
         - **Tags** as `agents-infra`. 
         - **Resource group** as `default` or other resource group for this workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group.
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. 
-           If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
-           {: note}
-
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
         - Click `Next`.
         - Check the information that is entered are correct to create a workspace.
     - Click `Create`.
 
 3. On successful creation of the `schematics-agent-infrastructure` Workspace, review and edit the `agent infrastructure` input variables in the workspace **Settings** page.
 
-    The agent infrastructure and the workspace can be in different resource groups and locations. The agent infrastructure workspace can be defined in any {{site.data.keyword.bpshort}} supported region.
-    {: note} 
+The agent infrastructure and the workspace can be in different resource groups and locations. The agent infrastructure workspace can be defined in any {{site.data.keyword.bpshort}} supported region.
+{: note} 
 
-    | Input variable  | Data type | Required/Optional | Description |
-    |--|--|--|-- |
-    | `agent_prefix` | String | `Required` | Provide the prefix for naming your agent VPC, cluster, and logging configuration.
-    | `location`| String | `Required` | The region in the agent infrastructure VPC and cluster are created in. |
-    | `resource_group_name` | String | `Required` | Name for the resource group used the agent infrastructure and agent are associated to. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group. |
-    | `ibmcloud_api_key` | String | `Optional` | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
-    | `tags` | List(String) | `Optional` | A list of user tags to be applied to the deployed, VPC, and cluster. For example, `myproject:agent`, `test:agentinfra`. You can see the provisioned resources of an Agent faster by using Tag name. |
-    {: caption="{{site.data.keyword.bpshort}} Agent infrastructure inputs" caption-side="bottom"}
+| Input variable  | Data type | Required/Optional | Description |
+|--|--|--|-- |
+| `agent_prefix` | String | `Required` | Provide the prefix for naming your agent VPC, cluster, and logging configuration.
+| `location`| String | `Required` | The region in the agent infrastructure VPC and cluster are created in. |
+| `resource_group_name` | String | `Required` | Name for the resource group used the agent infrastructure and agent are associated to. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group. |
+| `ibmcloud_api_key` | String | `Optional` | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
+| `tags` | List(String) | `Optional` | A list of user tags to be applied to the deployed, VPC, and cluster. For example, `myproject:agent`, `test:agentinfra`. You can see the provisioned resources of an Agent faster by using Tag name. |
+{: caption="{{site.data.keyword.bpshort}} Agent infrastructure inputs" caption-side="bottom"}
 
-4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the agent infrastructure. It takes up to 45 - 90 minutes to provision all the resources.  
+4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the agent infrastructure. It takes up to 45 - 90 minutes to provision all the resources. 
+ 
 5. View the **Jobs** logs and **Resources** page to monitor the resources are provisioned successfully and verify that the workspace status is now `ACTIVE`.
 
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information is used when deploying the agent. If the job fails and you do not observe the `cluster_id` details in the Jobs log, you must have the IAM permissions to create `VPC Infrastructure`, and `Kubernetes cluster` services. Then, click **Apply plan** to redeploy the agent infrastructure. 

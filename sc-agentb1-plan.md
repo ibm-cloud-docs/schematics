@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-04-07"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -32,9 +32,10 @@ Cluster
     - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
     - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
 
-    To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} based on the requirement, You can control egress traffic through security groups and network access control lists (ACLs).
-    You need to define any security group rules and ACLs at the VPC level before deploying an agent on the cluster. For more information, see the [Terraform script to define security groups and ACLs on a VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
-    {: note}
+To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} based on the requirement, You can control egress traffic through security groups and network access control lists (ACLs).
+    
+You need to define any security group rules and ACLs at the VPC level before deploying an agent on the cluster. For more information, see the [Terraform script to define security groups and ACLs on a VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
+{: note}
 
 {{site.data.keyword.cos_full_notm}}
 :   The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster.

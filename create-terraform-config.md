@@ -290,7 +290,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
         "test", "env:prod", "env:agent:test"
 ]
 ```
-{: pre}
+{: codeblock}
 
 ### Example for list of Objects
 {: #example-list-object}
@@ -309,7 +309,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
     }
 ]
 ```
-{: pre}
+{: codeblock}
 
 ## Storing your Terraform templates
 {: #store-template}

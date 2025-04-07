@@ -95,24 +95,25 @@ To upload a Terraform template to a private catalog, you must first compress all
     {: pre}
 
     Example output
-    ```text
-    a .
-    a ./output.tf
-    a ./main.tf
-    a ./.README.md.swp
-    a ./LICENSE
-    a ./observability.png
-    a ./diagrams
-    a ./observability.tgztar: ./observability.tgz: Can't add archive to itself
 
-    a ./README.md
-    a ./.secrets.baseline
-    a ./observability.drawio
-    a ./variables.tf
-    a ./local.tf
-    a ./version.tf
-    a ./diagrams/observability.png
-    a ./diagrams/observability.drawio
+    ```text
+    .
+    ./output.tf
+    ./main.tf
+    ./.README.md.swp
+    ./LICENSE
+    ./observability.png
+    ./diagrams
+    ./observability.tgztar: ./observability.tgz: Can't add archive to itself
+
+    ./README.md
+    ./.secrets.baseline
+    ./observability.drawio
+    ./variables.tf
+    ./local.tf
+    ./version.tf
+    ./diagrams/observability.png
+    ./diagrams/observability.drawio
     ```
     {: screen}
 

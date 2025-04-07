@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,18 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [April 2025](/docs/schematics?topic=schematics-schematics-relnotes#April-2025)
+
+    * Review the release notes for April 2025.
+
+    * [08 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0825)
+
+        * {{site.data.keyword.bpshort}} supports `Toronto` region
+
+    * [07 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0725)
+
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [February 2025](/docs/schematics?topic=schematics-schematics-relnotes#February-2025)
 
@@ -1576,6 +1588,10 @@ subcollection: schematics
 
 * [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#deploy-resources)
 
+    * [Before you begin](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#deploy-resources-prereq)
+
+    * [To deploy your resources](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#to-deploy-resources)
+
 * [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#update-resources)
 
 * [Managing drift between your cloud environment and Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#drift-report)
@@ -2207,47 +2223,6 @@ subcollection: schematics
 * [Git repo restrictions](/docs/schematics?topic=schematics-schematics-limitations#git-restrictions)
 
 * [Cost estimate](/docs/schematics?topic=schematics-schematics-limitations#cost-restrictions)
-
-
-## Glossary terms for {{site.data.keyword.bpshort}}
-{: #sitemap_glossary_terms_for_}
-
-
-[Glossary terms for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sch-terms#sch-terms)
-
-* [Actions](/docs/schematics?topic=schematics-sch-terms#sch-terms-actions)
-
-* [Agents](/docs/schematics?topic=schematics-sch-terms#sch-terms-agents)
-
-    * [Agent](/docs/schematics?topic=schematics-sch-terms#agentsa1)
-
-    * [Agent service](/docs/schematics?topic=schematics-sch-terms#agentsa2)
-
-    * [Agent Infrastructure](/docs/schematics?topic=schematics-sch-terms#agentsa3)
-
-* [Catalog](/docs/schematics?topic=schematics-sch-terms#sch-terms-catalog)
-
-* [Inventories](/docs/schematics?topic=schematics-sch-terms#sch-terms-inventory)
-
-    * [Resource inventory](/docs/schematics?topic=schematics-sch-terms#rir1)
-
-* [Jobs](/docs/schematics?topic=schematics-sch-terms#sch-terms-job)
-
-* [Templates or Modules](/docs/schematics?topic=schematics-sch-terms#sch-terms-template)
-
-* [Workspaces](/docs/schematics?topic=schematics-sch-terms#sch-terms-workspace)
-
-    * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
-
-    * [Jobs](/docs/schematics?topic=schematics-sch-terms#wksj1)
-
-    * [Resources](/docs/schematics?topic=schematics-sch-terms#wksr1)
-
-    * [Readme file](/docs/schematics?topic=schematics-sch-terms#wksr2)
-
-    * [Settings](/docs/schematics?topic=schematics-sch-terms#wkss2)
-
-    * [Workspace](/docs/schematics?topic=schematics-sch-terms#wksw1)
 
 
 ## {{site.data.keyword.bpshort}} notices

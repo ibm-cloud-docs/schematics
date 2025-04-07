@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-07"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -35,7 +35,7 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
     }
 
     ```
-    {: pre}
+    {: codeblock}
 
 3. Check if the service that you want to deploy requires a `location` parameter to be set in addition to the `region` parameter. For example, if you use the [`ibm_database`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database){: external} Terraform resource, you must set both the `region` parameter in the `provider` block and the `location` parameter in the `ibm_database` resource definition.
 
