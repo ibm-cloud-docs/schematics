@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
 keywords: schematics
 subcollection: schematics
@@ -175,7 +175,7 @@ subcollection: schematics
 
     * [08 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0825)
 
-        * {{site.data.keyword.bpshort}} supports `Toronto` region
+        * New {{site.data.keyword.bpshort}} locations
 
     * [07 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0725)
 

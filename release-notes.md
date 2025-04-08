@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -36,8 +36,8 @@ Review the release notes for April 2025.
 {: #schematics-apr0825}
 {: release-note}
 
-{{site.data.keyword.bpshort}} supports `Toronto` region
-:   You can now create the {{site.data.keyword.bpshort}} service instances in the Toronto (`ca-tor`) region.
+New {{site.data.keyword.bpshort}} locations
+:   You can now create {{site.data.keyword.bpshort}} service isntances in the Toronto (`ca-tor`) location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) and [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 ### 07 April 2025
 {: #schematics-apr0725}
