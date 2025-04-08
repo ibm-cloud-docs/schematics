@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
-keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging, ibm cloud logs, cloud logs
+keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging
 
 subcollection: schematics
 

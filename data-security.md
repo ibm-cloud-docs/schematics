@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-08"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -75,12 +75,13 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 
 |Geography/ location| API endpoint|Data stored|Data replicated|
 |------------|----------------|------|--------|
-|North America|`Public` </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> `Private` </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
-|Dallas| `Public` </br>`https://us-south.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
-|Washington| `Public` </br>`https://us-east.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
-|Europe| `Public` </br> `https://eu.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
-|Frankfurt| `Public` </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
-|London| `Public` </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> `Private` </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
+|North America|`Public` </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> `Private` </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |All data objects are stored in the US location. | Data is replicated between two locations in the US.|
+|Dallas| `Public` </br>`https://us-south.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-us-south.schematics.cloud.ibm.com` |All data objects are stored in the Dallas location.|Data is replicated between two locations in the US.|
+|Washington| `Public` </br>`https://us-east.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-us-east.schematics.cloud.ibm.com` | All data objects are stored in the Washington location.|Data is replicated between two locations in the US.|
+|Europe| `Public` </br> `https://eu.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | All data objects are stored in the Europe location. | Data is replicated between two locations in Europe. |
+|Frankfurt| `Public` </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu-de.schematics.cloud.ibm.com`| All data objects are stored in the Frankfurt location. | Data is replicated between two locations in Europe. |
+|London| `Public` </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> `Private` </br> `https://private-eu-gb.schematics.cloud.ibm.com` | All data objects are stored in the London location.| Data is replicated between two locations in Europe. |
+|Toronto|`Public` </br> `https://ca-tor.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-ca-tor.schematics.cloud.ibm.com`| All data objects are stored in the Toronto (`ca-tor`) location.| All metadata for the service features are stored in the Toronto location.| Data is replicated between three zones in Toronto location.|
 {: caption="Location information" caption-side="bottom"}
 
 ## How is my information encrypted?

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
-keywords: IBM Cloud, observability, schematics monitoring events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker, ibm cloud logs, cloud logs
+keywords: IBM Cloud, observability, schematics monitoring events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker
 
 subcollection: schematics
 
@@ -49,7 +49,7 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Frankfurt (`eu-de`)  | 
+| Toronto (`ca-tor`)  | 
 |---------------|
 | [Yes]{: tag-green} | 
 {: caption="Regions where metrics are sent in Toronto locations" caption-side="top"}
