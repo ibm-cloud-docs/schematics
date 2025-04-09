@@ -1691,7 +1691,7 @@ subcollection: schematics
 
 * [Locations where activity tracking events are generated](/docs/schematics?topic=schematics-at_events#at-locations)
 
-* [Locations where activity tracking events are sent to {{site.data.keyword.atracker_full}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
+* [Locations where activity tracking events are sent to {{site.data.keyword.atracker_full_notm}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
 
 * [Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}](/docs/schematics?topic=schematics-at_events#atracker-locations)
 
@@ -1715,7 +1715,7 @@ subcollection: schematics
 
 * [Locations where platform logs are generated](/docs/schematics?topic=schematics-logging#log-locations)
 
-    * [Locations where logs are sent to {{site.data.keyword.logs_full}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
+    * [Locations where logs are sent to {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
 
 * [Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}](/docs/schematics?topic=schematics-logging#lr-locations)
 

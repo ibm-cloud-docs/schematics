@@ -104,7 +104,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the Cl
 3. Review the logs of previous Terraform execution plans and the plans that you applied. 
 4. From the navigation, select **Resources** to review the state of the Cloud resources that you created with this workspace. 
 5. To review who made a change to your Terraform template, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes.
-6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.atracker_full_notm}}, see [{{site.data.keyword.atracker_full}} events](/docs/schematics?topic=schematics-at_events).
+6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.atracker_full_notm}}, see [{{site.data.keyword.atracker_full_notm}} events](/docs/schematics?topic=schematics-at_events).
 
 ## Removing your resources
 {: #destroy-resources}
@@ -247,7 +247,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the Cl
 1. From your [command line interface](/docs/schematics?topic=schematics-setup-cli){: external} set up your CLI and {{site.data.keyword.bpshort}} plug-in.
 2. From the [navigation pane](https://cloud.ibm.com/resources), select **Resources** to find a summary of Cloud resources that are available in your {{site.data.keyword.cloud_notm}} account.
 3. To review who made a change to your Terraform template, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes.
-4. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.atracker_full}}, see [{{site.data.keyword.atracker_full}} events](/docs/schematics?topic=schematics-at_events).
+4. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.atracker_full_notm}}, see [{{site.data.keyword.atracker_full_notm}} events](/docs/schematics?topic=schematics-at_events).
 
 ## Removing your resources through CLI
 {: #destroy-resources-cli}
