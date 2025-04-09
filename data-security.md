@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-09"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -43,7 +43,7 @@ Key protect offers manual and automatic key rotation. When you rotate a root key
 {: #key-delete}
 
 
-Key Deletion is a destructive action. When you disable or delete a root key that is used to encrypt your {{site.data.keyword.bpshort}} resources, you cannot access transactional data such as activity or job logs, resource list, variable store. However, you can access the metadata details. Furthermore any subsequent deployment or configuration operation through {{site.data.keyword.bpshort}} result in failure. Key deletion or disable events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}.
+Key Deletion is a destructive action. When you disable or delete a root key that is used to encrypt your {{site.data.keyword.bpshort}} resources, you cannot access transactional data such as activity or job logs, resource list, variable store. However, you can access the metadata details. Furthermore any subsequent deployment or configuration operation through {{site.data.keyword.bpshort}} result in failure. Key deletion or disable events are sent to the {{site.data.keyword.logs_full}} {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 ### Key enable or restore
@@ -51,7 +51,7 @@ Key Deletion is a destructive action. When you disable or delete a root key that
 
 
 
-When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that is inaccessible due to disabled or deleted root key is now accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}. 
+When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that is inaccessible due to disabled or deleted root key is now accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.logs_full}} {{site.data.keyword.at_short}}. 
 {: shortdesc}
 
 
