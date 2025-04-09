@@ -477,6 +477,22 @@ Instead, of `eval` command considers by using safer alternatives such as conditi
 Instead, of `uname` use predefined environment variables or system metadata services that are provided by {{site.data.keyword.cloud_notm}} for retrieving necessary system information.
 If you have questions, comments, or concerns, you can always contact the team through [{{site.data.keyword.cloud}} support](/docs/schematics?topic=schematics-schematics-help).
 
+Example to replace `eval` command depending on your context.
+
+```sh
+command="ls -l /home/user"
+$command
+```
+{: codeblock}
+
+Example to replace `uname` command depending on your context.
+
+```sh
+import platform
+print(platform.system())
+```
+{: codeblock}
+
 ## Does the change of `eval` and `uname` commands impact Terraform execution within {{site.data.keyword.bpshort}}?
 {: #evalcmd-impact-faq}
 {: faq}
