@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-25"
 
 keywords: schematics
 subcollection: schematics
@@ -172,6 +172,12 @@ subcollection: schematics
 * [April 2025](/docs/schematics?topic=schematics-schematics-relnotes#April-2025)
 
     * Review the release notes for April 2025.
+
+    * [25 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2525)
+
+        * `Terraform_v1.10.5` support in {{site.data.keyword.bpshort}}
+
+        * Release {{site.data.keyword.bpshort}} Agents version
 
     * [08 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0825)
 

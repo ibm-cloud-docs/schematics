@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,16 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for April 2025.
 {: shortdesc}
+
+### 25 April 2025
+{: #schematics-apr2525}
+{: release-note}
+
+`Terraform_v1.10.5` support in {{site.data.keyword.bpshort}}
+:   {{site.data.keyword.bpshort}} Workspace now supports `Terraform_v1.10.5`. `Terraform_v1.9.2` is maintained as default version till further announcement.
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.4.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on `ca-tor` region.
 
 ### 08 April 2025
 {: #schematics-apr0825}

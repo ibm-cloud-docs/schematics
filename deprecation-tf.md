@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-25"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`,  `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`. `Terraform_v1.6.6` is set as default version.
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`,  `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`, `Terraform_v1.10.5`. `Terraform_v1.9.2` is set as default version.
 
 The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspace by using this version is still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}
@@ -87,9 +87,10 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.4 | July 2023 | 30 September 2024 | 31 December 2024  |  30 September 2025 |
 | Terraform v1.5 | 6 September 2023 | 31 October 2024 | 31 December 2024 | 30 September 2025 |
 | Terraform v1.6 | 5 June 2024 | 16 December 2024 | 15 July 2025 | 15 January 2026 |
-| Terraform v1.7 | 21 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
-| Terraform v1.8 | 21 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
-| Terraform v1.9 | 21 August 2024 | 28 February 2025 | 29 August 2025 | 27 February 2026 |
+| Terraform v1.7 | 21 August 2024 | 30 May 2025 | 28 November 2025 | 29 May 2026 |
+| Terraform v1.8 | 21 August 2024 | 30 May 2025 | 28 November 2025 | 29 May 2026 |
+| Terraform v1.9 | 21 August 2024 | 30 May 2025 | 28 November 2025 | 29 May 2026 |
+| Terraform v1.10 | 30 May 2024 | 30 December 2025 | 30 June 2026 | 29 January 2027 |
 {: caption="Deprecation timeline" caption-side="top"}
 
 ## User actions
