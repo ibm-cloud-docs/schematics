@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-05-23"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -17,12 +17,12 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} workspaces delivers Terraform as a service capabilities to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your Cloud resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments.
 
-[Terraform](https://www.terraform.io){: external} is an open source project that allows you to specify your cloud infrastructure resources and services as code. It applies the concept of [Infrastructure as Code (IaC)](/docs/schematics?topic=schematics-infrastructure-as-code), using code to manage and provision infrastructure (networks, virtual machines, load-balancers, clusters, services and connection topology) in a descriptive model instead of manual processes.
+[Terraform](https://developer.hashicorp.com/terraform){: external} is an open source project that allows you to specify your cloud infrastructure resources and services as code. It applies the concept of [Infrastructure as Code (IaC)](/docs/schematics?topic=schematics-infrastructure-as-code), using code to manage and provision infrastructure (networks, virtual machines, load-balancers, clusters, services and connection topology) in a descriptive model instead of manual processes.
 {: shortdesc}
 
 With Terraform, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad hoc configuration changes.
 
-The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/think/topics/application-provisioning-ansible-terraform){: external} provides an overview of several of the most popular open-source IaC tools and summarizes their capabilities and relative strengths.
+The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/think/topics){: external} provides an overview of several of the most popular open-source IaC tools and summarizes their capabilities and relative strengths.
 
 ## {{site.data.keyword.bpshort}} workspace overview
 {: #sch-wks-overview}

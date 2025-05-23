@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-05-23"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker
 
@@ -20,7 +20,7 @@ You can view, manage, and audit user-initiated activities made in your {{site.da
 
 {{site.data.keyword.cloudaccesstraillong_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to follow regulatory audit requirements. You can also be alerted about actions as they happen. The events that are collected follow the Cloud Auditing Data Federation (CADF) standard. For more information, see the [Getting Started tutorial for {{site.data.keyword.cloudaccesstraillong_notm}}](/docs/atracker?topic=atracker-getting-started).
 
-As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.atracker_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.atracker_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
+As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.atracker_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.atracker_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-getting-started).
 {: important}
 
 ## Locations where activity tracking events are generated

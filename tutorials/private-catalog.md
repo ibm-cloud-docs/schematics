@@ -31,9 +31,9 @@ Understand how to [Create your private catalog](/docs/account?topic=account-rest
 
 In this tutorial, you import the {{site.data.keyword.IBM_notm}} provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once:
 
-- [**{{site.data.keyword.loganalysislong_notm}}**](/docs/log-analysis?topic=log-analysis-getting-started#getting-started) - Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
+- [**{{site.data.keyword.loganalysislong_notm}}**](/docs/cloud-logs?topic=cloud-logs-atla) - Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
 - [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started) - Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
-- [**{{site.data.keyword.cloudaccesstraillong_notm}}**](/docs/activity-tracker?topic=activity-tracker-getting-started) - Use this service to track any activity for a service so that you can comply with regulatory audit requirements.
+- [**{{site.data.keyword.cloudaccesstraillong_notm}}**](/docs/cloud-logs?topic=cloud-logs-atla) - Use this service to track any activity for a service so that you can comply with regulatory audit requirements.
 
 ## Time required
 {: #private-timereq}
@@ -52,9 +52,9 @@ Before you begin, make sure that you are assigned the following permissions:
 
 - [To create a private catalog](/docs/account?topic=account-create-private-catalog#prereq-create) in {{site.data.keyword.cloud_notm}}.
 - [To create a {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-access#workspace-permissions).
-- [To create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/log-analysis?topic=log-analysis-iam#platform).
+- [To create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/cloud-logs?topic=cloud-logs-atla).
 - [To create an {{site.data.keyword.monitoringlong_notm}} instance](/docs/monitoring?topic=monitoring-iam#iam_platform).
-- [To create an {{site.data.keyword.cloudaccesstraillong_notm}} instance](/docs/activity-tracker?topic=activity-tracker-iam#platform).
+- [To create an {{site.data.keyword.cloudaccesstraillong_notm}} instance](/docs/cloud-logs?topic=cloud-logs-atla).
 - Write access to a GitHub repository on `github.com`. This repository is needed to upload the Terraform template that you want to add as a product to your private catalog.
 
 ## Prepare your Terraform template for the private catalog
