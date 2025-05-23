@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-05-23"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -26,7 +26,7 @@ Before you can use this template, you must complete the following tasks.
 {: shortdesc}
 
 - Make sure that you have the permissions to [create a {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-access#access-roles). 
-- Make sure that you have the permissions to [create an {{site.data.keyword.cos_full_notm}} instance](/docs/cloud-object-storage?topic=cloud-object-storage-iam).
+- Make sure that you have the permissions to [create an {{site.data.keyword.cos_full_notm}} instance](/docs/cloud-object-storage?topic=cloud-object-storage-fgac-iam-access-conditions).
 
 ## Creating an {{site.data.keyword.cos_full_notm}} instance with {{site.data.keyword.bpshort}}
 {: #create-cos}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-25"
+lastupdated: "2025-05-23"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -975,7 +975,7 @@ Sample templates to deploy into {{site.data.keyword.cloud_notm}}
 :   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services by using {{site.data.keyword.bpshort}} workspaces.
 
 Support `WinRM` in command line
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool/9.2.0) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
 
 The documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
@@ -991,7 +991,7 @@ Review the release notes for September 2021.
 {: release-note}
 
 Inventory target feature support in {{site.data.keyword.bpshort}} actions API
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool/9.2.0) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
 :   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `winrm`.
@@ -1072,7 +1072,7 @@ Review the release notes for June 2021.
 {: release-note}
 
 Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
-:   You can run `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and `untaint` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and see [Time out errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/blog/timeout-errors-with-ibm-cloud-schematics/){: external}.
+:   You can run `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and `untaint` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and see [Time out errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/think){: external}.
 
 Documentation support to deploy resources in a specific region or across multiple regions
 :   For more information, see [Deploying Cloud resources in a specific region or across multiple regions Cloud resources](/docs/schematics?topic=schematics-multi-region-deployment).
@@ -1155,7 +1155,7 @@ Allowed file extensions in {{site.data.keyword.bpshort}}
 {: release-note}
 
 Ansible open beta release
-:   {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and clients. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch a [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/blog/announcement/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics/) blog.
+:   {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and clients. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch a [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/new) blog.
 
 ## January 2021
 {: #jan-2021}

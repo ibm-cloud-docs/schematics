@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-05-23"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -33,7 +33,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform).
 {: tip}
 
-[Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. The complexity of using `APIs`, provisioning, and managing your cloud resources is removed from the user. The cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider. And what `APIs` to invoke with a certain cloud resource? IBM's plug-in is called the [{{site.data.keyword.terraform-provider_full_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
+[Terraform](https://developer.hashicorp.com/terraform){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. The complexity of using `APIs`, provisioning, and managing your cloud resources is removed from the user. The cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider. And what `APIs` to invoke with a certain cloud resource? IBM's plug-in is called the [{{site.data.keyword.terraform-provider_full_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
 To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}}, you create a workspace that points to the Terraform configuration files that you want to provision. The plug-in analyzes the resources that you specified and determines the order in which these resources including any dependencies that must be provisioned. Review the following image for the detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} workspaces. 
 
