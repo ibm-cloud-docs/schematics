@@ -501,7 +501,7 @@ $command
 Terraform execution doesn't have a direct impact unless your scripts or modules explicitly use commands such as `eval` or `uname`. If used explicitly, then [modification](/docs/schematics?topic=schematics-general-faq#evalcmd-alt-faq) is necessary.
 
 ## What are the endpoints supported by {{site.data.keyword.bpshort}}?
-{: #sch-enpoint-faq}
+{: #sch-endpoint-faq}
 {: faq}
 {: support}
 
