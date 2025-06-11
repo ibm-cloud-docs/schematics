@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-06-11"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -17,20 +17,20 @@ subcollection: schematics
 {: help}
 {: support}
 
-Understand the high availability features of the {{site.data.keyword.cloud}} resources that you want to provision with {{site.data.keyword.bpfull}} and design your resources to meet the availability requirements that your business and clients need.
+{{site.data.keyword.bpshort}} is a service that fulfills the defined [Service Level Objectives (SLO)](/docs/resiliency?topic=resiliency-slo) with the Standard plan. For more information about the available {{site.data.keyword.cloud}} regions and data centers for {{site.data.keyword.bpshort}}, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 {: shortdesc}
 
 High availability is a core discipline in an IT infrastructure to keep your resources healthy and your app workloads up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failure in an IT infrastructure. For example, you can prepare for the failure of one system by adding redundancy and setting up failover mechanisms.
 
 **How is {{site.data.keyword.bplong_notm}} set up to ensure high availability of the service?**
 
-{{site.data.keyword.bpshort}} is deployed as two highly available service instances in two separate geographical locations, the US and Europe. Within each geography, the service is deployed across two multizone regions, such as `us-south` and `us-east` in the US geography, `eu-de` and `eu-gb` for the Europe geography, and `ca-tor` in the Toronto geography. This setup ensures that the service is still available, even if one region within a geography fails. Data is not shared across geographical locations.
+{{site.data.keyword.bpshort}} is deployed as two highly available service instances in two separate geographical locations, the `US` and `EU`. Within each geography, the service is deployed across two multizone regions, such as `us-south` and `us-east` in the US geography, `eu-de` and `eu-gb` for the `EU` geography, and `ca-tor` in the Toronto geography. This setup ensures that the service is still available, even if one region within a geography fails. Data is not shared across geographical locations.
 
-Who is responsible to set up high availability for my resources?
+**Who is responsible to set up high availability for my resources?**
 
 While {{site.data.keyword.bplong_notm}} is responsible to ensure that your workspace information is available, backed up, and replicated across multiple regions so that information can be recovered after a failure, {{site.data.keyword.bpshort}} does not set up high availability for your Cloud resources. Instead, you must understand the features that each resource offering provides to decide what level of availability is the one for your needs. Then, you use {{site.data.keyword.bplong_notm}} to provision and configure your Cloud resources in a highly available setup.
 
-How can I implement high availability for my resources?
+**How can I implement high availability for my resources?**
 
 Review the following image to find a general approach of how you can make your resource highly available and add resiliency to account for a site or region failure. The level of availability for you depends on several factors, such as the high availability features that are available for your resource, your business requirements, the [Service Level Agreements](/docs/overview?topic=overview-slas) that you have with your clients, and the money that you need to expense. In your Terraform configuration file, you have the option to configure multiple `provider` blocks for the different regions, zones, or locations where you want to provision your resources. For more information, see [Creating multiple `provider` configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers).
 
