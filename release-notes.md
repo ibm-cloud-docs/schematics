@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-06-11"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## June 2025
+{: #June-2025}
+
+Review the release notes for June 2025.
+{: shortdesc}
+
+### 12 June 2025
+{: #schematics-june1225}
+{: release-note}
+
+Added an endpoint FAQ
+:   Added the [{{site.data.keyword.bpshort}} endpoint support FAQ](/docs/schematics?topic=schematics-general-faq#sch-enpoint-faq).
 
 ## April 2025
 {: #April-2025}

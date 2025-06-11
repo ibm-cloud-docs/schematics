@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-25"
+lastupdated: "2025-06-11"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [June 2025](/docs/schematics?topic=schematics-schematics-relnotes#June-2025)
+
+    * Review the release notes for June 2025.
+
+    * [12 June 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june1225)
+
+        * Added an endpoint FAQ
 
 * [April 2025](/docs/schematics?topic=schematics-schematics-relnotes#April-2025)
 
@@ -2361,7 +2369,7 @@ subcollection: schematics
 
 * [Is there a rate limit?](/docs/schematics?topic=schematics-general-faq#rate-limit)
 
-* [Why are jobs waiting in a run queue?](/docs/schematics?topic=schematics-general-faq#job-queue-faq)
+* [Why are jobs waits in a run queue?](/docs/schematics?topic=schematics-general-faq#job-queue-faq)
 
 * [How do I generate IAM access token, if client ID `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
@@ -2375,7 +2383,7 @@ subcollection: schematics
 
 * [How do I overcome the request that exceeds the Cluster resource quota of '100' for the account in any region?](/docs/schematics?topic=schematics-general-faq#clusterquota-warn-faq)
 
-* [While creating Red Hat OpenShift or Kubernetes resources, can I tune 90-minutes time out to higher?](/docs/schematics?topic=schematics-general-faq#resourcetimeout-warn-faq)
+* [While creating Red Hat OpenShift or Kubernetes resources, can I tune the 90-minute time out to higher?](/docs/schematics?topic=schematics-general-faq#resourcetimeout-warn-faq)
 
 * [How can I rectify the 403 Error while validating the location in the global catalog account?](/docs/schematics?topic=schematics-general-faq#global-setting-location)
 
@@ -2436,6 +2444,8 @@ subcollection: schematics
 * [What alternative solutions can replace `eval` and `uname` commands?](/docs/schematics?topic=schematics-general-faq#evalcmd-alt-faq)
 
 * [Does the change of `eval` and `uname` commands impact Terraform execution within {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#evalcmd-impact-faq)
+
+* [What are the endpoints supported by {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#sch-enpoint-faq)
 
 [Terraform](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
