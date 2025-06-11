@@ -37,7 +37,7 @@ Review the release notes for June 2025.
 {: release-note}
 
 Added an endpoint FAQ
-:   Added the [{{site.data.keyword.bpshort}} endpoint support FAQ](/docs/schematics?topic=schematics-general-faq#sch-enpoint-faq).
+:   Added the [{{site.data.keyword.bpshort}} endpoint support FAQ](/docs/schematics?topic=schematics-general-faq#sch-endpoint-faq).
 
 ## April 2025
 {: #April-2025}
