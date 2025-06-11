@@ -2445,7 +2445,7 @@ subcollection: schematics
 
 * [Does the change of `eval` and `uname` commands impact Terraform execution within {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#evalcmd-impact-faq)
 
-* [What are the endpoints supported by {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#sch-enpoint-faq)
+* [What are the endpoints supported by {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#sch-endpoint-faq)
 
 [Terraform](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
