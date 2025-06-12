@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -520,5 +520,5 @@ endpoint_type = "private"
 ```
 {: codeblock}
 
-Currently, Virtual Private Endpoint (VPE) is not support in {{site.data.keyword.bpshort}}. If you select `endpoint_type` variable as `vpe`, {{site.data.keyword.bpshort}} jobs fails. Alternatively, you need to deploy {{site.data.keyword.bpshort}} Agents in {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}} clusters and run {{site.data.keyword.bpshort}} jobs, or tasks by using VPE. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-about-intro).
+Currently, {{site.data.keyword.bpshort}} do not support Virtual Private Endpoint (VPE). If you select `endpoint_type` variable as `vpe`, {{site.data.keyword.bpshort}} jobs fails. Alternatively, you need to deploy {{site.data.keyword.bpshort}} Agents in {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}} clusters and run {{site.data.keyword.bpshort}} jobs, or tasks by using VPE. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-about-intro).
 {: note}
