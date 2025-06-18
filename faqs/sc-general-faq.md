@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-12"
+lastupdated: "2025-06-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -461,12 +461,21 @@ Yes, Workspace and Action support {{site.data.keyword.secrets-manager_short}} wh
 
 You can enter the personal access token, or can use {{site.data.keyword.secrets-manager_short}} by using the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance). The key value of the {{site.data.keyword.secrets-manager_short}} is used during the runtime to clone the templates from the Git repository.
 
+## Why are `eval` and `uname` commands being restricted?
+{: #eval-restrict-faq}
+{: faq}
+{: support}
+
+The `eval` command can introduce security vulnerabilities, such as code injection risks, while the `uname` command can expose system information that attackers exploit.
+
+Restrictions helps to maintain a secure execution environment within {{site.data.keyword.bpshort}}.
+
 ## How do `eval` and `uname` command restriction affect existing scripts and automation?
 {: #evalcmd-faq}
 {: faq}
 {: support}
 
-If your scripts or automation workflows rely on `eval` or `uname` command, it fails post 16 April 2025. You need to modify your scripts to remove or replace these commands with alternative methods.
+If your scripts or automation workflows rely on `uname` command, it fails post 16 April 2025. For `eval` command, {{site.data.keyword.bpshort}} allows execution of safe eval operations. Execution of OS-level commands through `eval` command in scripts or automation flows is restricted. You need to modify your scripts to remove or replace these commands with alternative methods.
 
 ## What alternative solutions can replace `eval` and `uname` commands?
 {: #evalcmd-alt-faq}

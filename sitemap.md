@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-18"
 
 keywords: schematics
 subcollection: schematics
@@ -2438,6 +2438,8 @@ subcollection: schematics
 * [Does {{site.data.keyword.bpshort}} support region-based access?](/docs/schematics?topic=schematics-general-faq#rba-faq-access)
 
 * [Does Workspace and Action support {{site.data.keyword.secrets-manager_short}}?](/docs/schematics?topic=schematics-general-faq#secmgr-faq)
+
+* [Why are `eval` and `uname` commands being restricted?](/docs/schematics?topic=schematics-general-faq#eval-restrict-faq)
 
 * [How do `eval` and `uname` command restriction affect existing scripts and automation?](/docs/schematics?topic=schematics-general-faq#evalcmd-faq)
 
