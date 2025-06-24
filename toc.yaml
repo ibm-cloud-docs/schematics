@@ -74,7 +74,7 @@ toc:
               - sc-agentb1-confg-k8s-cluster.md
               - sc-agentb1-health.md
               - sc-agentb1-proxy.md
-              - sc-agentb1-registry.md 
+              - sc-agentb1-registry.md
           - inventories.md
           - integration-kms.md
       - topicgroup:
@@ -97,7 +97,7 @@ toc:
           - job-download-file.md
           - job-force-stop.md
           - workspaces/sc-workspaces-states.md
-          - topicgroup: 
+          - topicgroup:
               label: Managing resources
               topics:
               - display-resources.md
@@ -135,8 +135,6 @@ toc:
       id: reference
       topics:
       - ha-dr.md
-      - topic: service-dependency.md
-        navtitle: Service dependency map
       - sc-about-responsibilities.md
       - topicgroup:
           label: API reference
@@ -164,13 +162,13 @@ toc:
           - link:
               label: IBM Cloud Schematics Java Admin SDK
               href: https://github.com/IBM/schematics-java-sdk/blob/main/README.md
-          - link:    
+          - link:
               label: IBM Cloud Schematics Node Admin SDK
               href: https://github.com/IBM/schematics-node-sdk/blob/main/README.md
-          - link:    
+          - link:
               label: IBM Cloud Schematics Python Admin SDK
               href: https://github.com/IBM/schematics-python-sdk/blob/main/README.md
-      - topicgroup: 
+      - topicgroup:
           label: Ansible
           links:
           - link:
@@ -186,7 +184,7 @@ toc:
       - ts_index.md
       - topicgroup:
           label: FAQs
-          topics: 
+          topics:
           - faqs/sc-actions-faq.md
           - faqs/sc-agents-faq.md
           - faqs/sc-general-faq.md
