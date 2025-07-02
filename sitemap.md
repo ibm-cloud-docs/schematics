@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-24"
 
 keywords: schematics
 subcollection: schematics
@@ -1932,13 +1932,6 @@ subcollection: schematics
 [Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
 
 
-## Service dependency map
-{: #sitemap_service_dependency_map}
-
-
-[Service dependency map](/docs/schematics?topic=schematics-service-dependencies#service-dependencies)
-
-
 ## Your responsibilities when using {{site.data.keyword.bpshort}}
 {: #sitemap_your_responsibilities_when_using_}
 
@@ -2438,6 +2431,8 @@ subcollection: schematics
 * [Does {{site.data.keyword.bpshort}} support region-based access?](/docs/schematics?topic=schematics-general-faq#rba-faq-access)
 
 * [Does Workspace and Action support {{site.data.keyword.secrets-manager_short}}?](/docs/schematics?topic=schematics-general-faq#secmgr-faq)
+
+* [Why are `eval` and `uname` commands being restricted?](/docs/schematics?topic=schematics-general-faq#eval-restrict-faq)
 
 * [How do `eval` and `uname` command restriction affect existing scripts and automation?](/docs/schematics?topic=schematics-general-faq#evalcmd-faq)
 
