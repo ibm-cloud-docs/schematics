@@ -32,7 +32,7 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for July 2025.
 {: shortdesc}
 
-### 12 July 2025
+### 2 July 2025
 {: #schematics-july0225}
 {: release-note}
 

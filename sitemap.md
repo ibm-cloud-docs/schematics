@@ -173,7 +173,7 @@ subcollection: schematics
 
     * Review the release notes for July 2025.
 
-    * [12 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0225)
+    * [2 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0225)
 
 * [June 2025](/docs/schematics?topic=schematics-schematics-relnotes#June-2025)
 
