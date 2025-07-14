@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-07-02"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -17,7 +17,7 @@ content-type: release-note
 # Release notes
 {: #schematics-relnotes}
 
-Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation are grouped  month-wise.
+Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation are grouped month-wise.
 {: shortdesc}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
@@ -25,6 +25,18 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## July 2025
+{: #July-2025}
+
+Review the release notes for July 2025.
+{: shortdesc}
+
+### 2 July 2025
+{: #schematics-july0225}
+{: release-note}
+
+
 
 ## June 2025
 {: #June-2025}
@@ -60,7 +72,7 @@ Release {{site.data.keyword.bpshort}} Agents version
 {: release-note}
 
 New {{site.data.keyword.bpshort}} locations
-:   You can now create {{site.data.keyword.bpshort}} service isntances in the Toronto (`ca-tor`) location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) and [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+:   You can now create {{site.data.keyword.bpshort}} service instances in Toronto (`ca-tor`) using the {{site.data.keyword.bpshort}} console location selector or by targeting the matching {{site.data.keyword.cloud_notm}} region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) and [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 ### 07 April 2025
 {: #schematics-apr0725}
@@ -712,7 +724,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
 :   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
     - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro).
-    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent-data), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-plan-agent-overview) through UI.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
 

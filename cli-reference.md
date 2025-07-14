@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-07-02"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1933,7 +1933,7 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
+| `--file` or `-f` | Required | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
 | `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: </br> **1.** Show the content of an existing Terraform state file by using the [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.</br> **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. </br> **3.** Use the relative path to the file in the `--state` command parameter. **Note** The {{site.data.keyword.bpshort}} workspace supports the `terraform.tfstate` file of less than 2 MB.|
 | `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
 | `--agent-id` or `--aid` | Optional | The ID of an Agent where your workspace is created. The agent help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).|
