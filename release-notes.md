@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-07-30"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,23 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for July 2025.
 {: shortdesc}
+
+### 30 July 2025
+{: #schematics-jul3025}
+{: release-note}
+
+New {{site.data.keyword.bpshort}} locations
+:   Starting 1 August 2025, you can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) or [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on `ca-mon` region.
+
+### 29 July 2025
+{: #schematics-jul2925}
+{: release-note}
+
+{{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.11`
+:   The {{site.data.keyword.bpshort}} Workspace supports `Terraform_v1.11`. `Terraform_v1.12`. For more information, see [Announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
 
 ### 2 July 2025
 {: #schematics-july0225}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-07-30"
 
 keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging
 
@@ -63,6 +63,17 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
+| Toronto (`ca-mon`)  | 
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where platform logs are sent in Montreal locations" caption-side="top"}
+{: #at-table-4}
+{: tab-title="Montreal"}
+{: tab-group="la"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
 ## Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}
 {: #lr-locations}
 
@@ -94,6 +105,16 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: caption="Regions where platform logs are sent in Toronto locations" caption-side="top"}
 {: #loc-table-3}
 {: tab-title="Toronto"}
+{: tab-group="lr"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Toronto (`ca-mon`)  | 
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where platform logs are sent in Montreal locations" caption-side="top"}
+{: #loc-table-4}
+{: tab-title="Montreal"}
 {: tab-group="lr"}
 {: class="simple-tab-table"}
 {: row-headers}

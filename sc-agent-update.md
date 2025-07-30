@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-25"
+lastupdated: "2025-07-30"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -156,7 +156,8 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agen
 
 | Version | Release date | Changes  |
 | ----- | ------- | -------------- |
-| 1.4.0 | 25 April 2025 | {{site.data.keyword.bpshort}} [agent version v1.4.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on `ca-tor` region.|
+| 1.5.0 | 31 July 2025 | {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-mon` region.|
+| 1.4.0 | 25 April 2025 | {{site.data.keyword.bpshort}} [agent version v1.4.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-tor` region.|
 | 1.3.1 | 28 February 2025 | Fixes the Ansible inventory generation in the UI for Windows system credentials.|
 | 1.3.0 | 30 October 2024 | Supports `schematics-agent-ansible-job` instead of an existing `schematics-ansible-job` and Terraform version 1.9 |
 | 1.2.0 | 23 September 2024 | Supports Terraform `version 1.5` and `version 1.6` |

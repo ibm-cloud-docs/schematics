@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-07-30"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -3001,6 +3001,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.27 | 30 July 2025 | {{site.data.keyword.bpshort}} CLI plugin fixes the support to target Montreal endpoints through `ca-mon` region.|
 | 1.12.26 | 07 April 2025 | {{site.data.keyword.bpshort}} CLI plugin enhanced [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-destroy) preview, updated one pipeline base image, fixed `nil pointer exception` in [ibmcloud schematics action create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-create-action), [ibmcloud schematics action update](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-update-action), and [ibmcloud schematics action get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-get-action) operations.|
 | 1.12.25 | 10 January 2025 | {{site.data.keyword.bpshort}} CLI plugin supports [ibmcloud schematics workspace update variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables) CLI command to update only the required input variables for an existing workspace. It also enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview feature to list all the job resources with confirmation. The {{site.data.keyword.bplong_notm}} [workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get), [an action](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action), and [an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) get commands fetches the encryption CRN and encryption status such as `IBM Default` or `BYOK` or `KYOK` details.|
 | 1.12.24 | 8 July 2024 | {{site.data.keyword.bpshort}} CLI plugin fixes the support to target Toronto endpoints through `ca-tor` region.|

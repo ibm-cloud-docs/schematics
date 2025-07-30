@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-07-30"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -39,6 +39,7 @@ The location that you choose for your {{site.data.keyword.bpshort}} workspace de
 |Frankfurt|{{site.data.keyword.bpshort}} jobs run in the `eu-de` location.|
 |London|{{site.data.keyword.bpshort}} jobs run in the `eu-gb` location.|
 |Toronto|{{site.data.keyword.bpshort}} jobs run in the `ca-tor` location.|
+|Montreal|{{site.data.keyword.bpshort}} jobs run in the `ca-mon` location.|
 {: caption="Regions where an action is?" caption-side="bottom"}
 
 ## Where is my {{site.data.keyword.bpshort}} and template data stored?

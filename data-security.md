@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-07-30"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -81,7 +81,8 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 |Europe| `Public` </br> `https://eu.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | All data objects are stored in the Europe location. | Data is replicated between two locations in Europe. |
 |Frankfurt| `Public` </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-eu-de.schematics.cloud.ibm.com`| All data objects are stored in the Frankfurt location. | Data is replicated between two locations in Europe. |
 |London| `Public` </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> `Private` </br> `https://private-eu-gb.schematics.cloud.ibm.com` | All data objects are stored in the London location.| Data is replicated between two locations in Europe. |
-|Toronto|`Public` </br> `https://ca-tor.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-ca-tor.schematics.cloud.ibm.com`| All data objects are stored in the Toronto (`ca-tor`) location.| All metadata for the service features are stored in the Toronto location.| Data is replicated between three zones in Toronto location.|
+|Toronto|`Public` </br> `https://ca-tor.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-ca-tor.schematics.cloud.ibm.com`| All data objects are stored in the Toronto (`ca-tor`) location.| All metadata for the service features are stored in the Toronto location. Data is replicated between three zones in Toronto location. |
+|Montreal|`Public` </br> `https://ca-mon.schematics.cloud.ibm.com` </br></br> `Private` </br> `https://private-ca-mon.schematics.cloud.ibm.com`| All data objects are stored in the Montreal (`ca-mon`) location.| All metadata for the service features are stored in the Montreal location. Data is replicated between three zones in Montreal location. |
 {: caption="Location information" caption-side="bottom"}
 
 ## How is my information encrypted?

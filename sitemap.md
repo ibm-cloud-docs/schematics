@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-07-30"
 
 keywords: schematics
 subcollection: schematics
@@ -172,6 +172,16 @@ subcollection: schematics
 * [July 2025](/docs/schematics?topic=schematics-schematics-relnotes#July-2025)
 
     * Review the release notes for July 2025.
+
+    * [30 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul3025)
+
+        * New {{site.data.keyword.bpshort}} locations
+
+        * Release {{site.data.keyword.bpshort}} Agents version
+
+    * [29 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2925)
+
+        * {{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.11`
 
     * [2 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0225)
 
