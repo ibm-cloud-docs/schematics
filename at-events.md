@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-07-30"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker
 
@@ -64,6 +64,16 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 {: class="simple-tab-table"}
 {: row-headers}
 
+| Toronto (`ca-mon`)  |
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where activity tracker events are sent in Montreal locations" caption-side="top"}
+{: #at-table-3}
+{: tab-title="Montreal"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
+
 ## Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
 {: #atracker-locations}
 
@@ -95,6 +105,16 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 {: caption="Regions where activity tracking events are sent in Toronto locations" caption-side="top"}
 {: #atracker-table-3}
 {: tab-title="Toronto"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Toronto (`ca-mon`)  | 
+|---------------|
+| [Yes]{: tag-green} | 
+{: caption="Regions where activity tracking events are sent in Montreal locations" caption-side="top"}
+{: #atracker-table-4}
+{: tab-title="Montreal"}
 {: tab-group="atracker"}
 {: class="simple-tab-table"}
 {: row-headers}
