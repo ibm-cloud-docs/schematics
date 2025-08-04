@@ -173,7 +173,7 @@ subcollection: schematics
 
     * Review the release notes for August 2025.
 
-    * [5 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0525)
+    * [4 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0425)
 
         * New {{site.data.keyword.bpshort}} locations
 

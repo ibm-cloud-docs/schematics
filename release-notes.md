@@ -32,8 +32,8 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for August 2025.
 {: shortdesc}
 
-### 5 August 2025
-{: #schematics-aug0525}
+### 4 August 2025
+{: #schematics-aug0425}
 {: release-note}
 
 New {{site.data.keyword.bpshort}} locations
