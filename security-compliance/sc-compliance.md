@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-08-04"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -37,7 +37,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 ## General Data Protection Regulation (GDPR) readiness
 {: #compliance-gdpr}
 
-About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Data Protection Regulation](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr). View [IBM's commitment to GDPR readiness](https://www.ibm.com/data-security){: external} to learn about {{site.data.keyword.IBM_notm}}'s GDPR readiness journey and the GDPR capabilities and offerings to support your compliance journey.
+About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Data Protection Regulation](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr). View [IBM's commitment to GDPR readiness](https://www.ibm.com/solutions/data-security){: external} to learn about {{site.data.keyword.IBM_notm}}'s GDPR readiness journey and the GDPR capabilities and offerings to support your compliance journey.
 
 ## Privacy shield
 {: #compliance-privacy}

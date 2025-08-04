@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-04"
 
 keywords: schematics
 subcollection: schematics
@@ -169,19 +169,31 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [August 2025](/docs/schematics?topic=schematics-schematics-relnotes#August-2025)
+
+    * Review the release notes for August 2025.
+
+    * [5 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0525)
+
+        * New {{site.data.keyword.bpshort}} locations
+
+        * Logging and monitoring in Montreal region
+
+    * [1 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0125)
+
+        * Release {{site.data.keyword.bpshort}} CLI plug-in to update the metadata for subnamespaces and subcommands.
+
 * [July 2025](/docs/schematics?topic=schematics-schematics-relnotes#July-2025)
 
     * Review the release notes for July 2025.
 
-    * [30 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul3025)
+    * [31 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul3125)
 
-        * New {{site.data.keyword.bpshort}} locations
-
-        * Release {{site.data.keyword.bpshort}} Agents version
+        * Release {{site.data.keyword.bpshort}} CLI plug-in to support Montreal endpoints
 
     * [29 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2925)
 
-        * {{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.11`
+        * {{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.12`
 
     * [2 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0225)
 
@@ -206,6 +218,8 @@ subcollection: schematics
     * [08 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0825)
 
         * New {{site.data.keyword.bpshort}} locations
+
+        * Logging and monitoring in Toronto region
 
     * [07 April 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr0725)
 

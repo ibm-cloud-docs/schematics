@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-04"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -26,27 +26,49 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
 
+## August 2025
+{: #August-2025}
+
+Review the release notes for August 2025.
+{: shortdesc}
+
+### 5 August 2025
+{: #schematics-aug0525}
+{: release-note}
+
+New {{site.data.keyword.bpshort}} locations
+:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) or [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+
+Logging and monitoring in Montreal region
+:   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.
+
+### 1 August 2025
+{: #schematics-aug0125}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} CLI plug-in to update the metadata for subnamespaces and subcommands.
+:   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.28](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
+
 ## July 2025
 {: #July-2025}
 
 Review the release notes for July 2025.
 {: shortdesc}
 
-### 30 July 2025
-{: #schematics-jul3025}
+### 31 July 2025
+{: #schematics-jul3125}
 {: release-note}
 
-New {{site.data.keyword.bpshort}} locations
-:   Starting 1 August 2025, you can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) or [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Release {{site.data.keyword.bpshort}} CLI plug-in to support Montreal endpoints
+:   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.27](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) to support Montreal endpoints through `ca-mon` region.
 
-Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on `ca-mon` region.
+
 
 ### 29 July 2025
 {: #schematics-jul2925}
 {: release-note}
 
-{{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.11`
+{{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.12`
 :   The {{site.data.keyword.bpshort}} Workspace supports `Terraform_v1.11`. `Terraform_v1.12`. For more information, see [Announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
 
 ### 2 July 2025
@@ -90,6 +112,9 @@ Release {{site.data.keyword.bpshort}} Agents version
 
 New {{site.data.keyword.bpshort}} locations
 :   You can now create {{site.data.keyword.bpshort}} service instances in Toronto (`ca-tor`) using the {{site.data.keyword.bpshort}} console location selector or by targeting the matching {{site.data.keyword.cloud_notm}} region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) and [API](/apidocs/schematics/schematics#api-endpoints). For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+
+Logging and monitoring in Toronto region
+:   {{site.data.keyword.bpshort}} now supports [Activity Tracking events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Toronto region.
 
 ### 07 April 2025
 {: #schematics-apr0725}
