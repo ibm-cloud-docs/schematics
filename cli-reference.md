@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-04"
+lastupdated: "2025-08-05"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -62,7 +62,7 @@ Command options
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | A unique name for the action. |
 | `--description` or `-d` | Optional | The short description for an action.|
-| `--location` or `-l` | Required | The geography or location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. The geography or location determines where your action runs and where your action data is stored. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.|
+| `--location` or `-l` | Required | The geography or location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. The geography or location determines where your action runs and where your action data is stored. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.|
 | `--resource-group` or `-r` | Required | The name of the resource group where you want to create the action. |
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name` or `--pn` | Optional| The name of the Ansible playbook. |
@@ -182,7 +182,7 @@ Command options
 | `--id` or `-i` | Required | The ID of an action that you want to update. |
 | `--name` or `-n` | Optional | A new unique name for your action. |
 | `--description` or `-d` | Optional | The short description for an action.|
-| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`.|
+| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`.|
 | `--resource-group` or `-r` | Required | Resource-group name for an action.|
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name` or  `--pn` | Optional | Name of the playbook.|
@@ -607,7 +607,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of an agent. Must be descriptive of the agent role, location and usage.  |
-| `--location` or `-l` | Required | The {{site.data.keyword.bpshort}} location where the agent are defined, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for execution. |
+| `--location` or `-l` | Required | The {{site.data.keyword.bpshort}} location where the agent are defined, `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. Jobs are picked up from this location for execution. |
 | `--agent-location` or `--al` | Required | A descriptive user defined label to identify where the agent is deployed in the user environment. This could be a Cloud region or a user data center.  For example, `London MZR`. |
 | `--cluster-id` or `-c` | Required | The ID of the Kubernetes cluster for deploying an Agent.|
 | `--cluster-resource-group` or `--cg` | Required | The name of the clusters' resource group. |
@@ -789,7 +789,7 @@ Command options
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--location` or `-l` | Optional |  Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. |
+| `--location` or `-l` | Optional |  Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. |
 | `--limit` or `-lm` | Optional | Maximum number of agents to list. Ignored if a negative number is set. Maximum limit is 200, (default is -1). |
 | `--offset` or `-m`| Optional | Offset in list. Ignored if a negative number is set (default: -1). |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
@@ -890,7 +890,7 @@ Command options
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of the policy. |
 | `--kind` or `-K` | Required | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
-| `--location` or `-l` | Optional | Geographic location of {{site.data.keyword.bpshort}} service where the agent is defined. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
+| `--location` or `-l` | Optional | Geographic location of {{site.data.keyword.bpshort}} service where the agent is defined. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. Jobs are picked up from this location for processing. |
 | `--resource-group` or `-r` | Required | Resource group name or ID for the policy. |
 | `--target-file` or `tf` | Optional | Path to the JSON file containing the definition of the policy. |
 | `--description` or `-d` | Optional |  The description of the {{site.data.keyword.bpshort}} policy. |
@@ -1304,7 +1304,7 @@ Command options
 | ----- | -------- | ------- |
 | `--name` or `-n` | Required | The unique name of a resource inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
+| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
 |`resource-group` or `-r`| Optional | The name of the resource group where you want to create the action.|
 |`--inventories-ini` or `-y` | Optional |The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. For more information about how to create a static resource inventory file, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv). |
 |`--resource-query` | Optional |Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. To create a resource query, see the `ibmcloud schematics resource-query create` [command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq). To enter multiple resource query IDs, use `--resource-query id1 --resource-query id2`.|
@@ -1488,7 +1488,7 @@ Command options
 | `--id`  or `-i` | Required | Enter the ID of a resource inventory that you want to update. |
 | `--name` or `-n` | Required | The unique name of an inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The geographic locations supported by {{site.data.keyword.bplong_notm}} service, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`.|
+| `--location` or `-l` | Optional | The geographic locations supported by {{site.data.keyword.bplong_notm}} service, such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`.|
 |`resource-group` or `-r`| Optional | The resource group name for an action.|
 |`--inventories-ini` or `-y` | Optional |  File path of `INI` format file that contains the host details.|
 |`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|
@@ -3001,8 +3001,8 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.28 | 1 August 2025 | {{site.data.keyword.bpshort}} CLI plugin to updata subnamespaces and subcommands in the metadata.|
-| 1.12.27 | 31 July 2025 | {{site.data.keyword.bpshort}} CLI plugin fixes the support to target Montreal endpoints through `ca-mon` region.|
+| 1.12.28 | 1 August 2025 | {{site.data.keyword.bpshort}} CLI plugin to update subnamespaces and subcommands in the metadata.|
+| 1.12.27 | 31 July 2025 | {{site.data.keyword.bpshort}} CLI plugin supports to target [Montreal (`ca-mon`) region](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).|
 | 1.12.26 | 07 April 2025 | {{site.data.keyword.bpshort}} CLI plugin enhanced [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-destroy) preview, updated one pipeline base image, fixed `nil pointer exception` in [ibmcloud schematics action create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-create-action), [ibmcloud schematics action update](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-update-action), and [ibmcloud schematics action get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-get-action) operations.|
 | 1.12.25 | 10 January 2025 | {{site.data.keyword.bpshort}} CLI plugin supports [ibmcloud schematics workspace update variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update-variables) CLI command to update only the required input variables for an existing workspace. It also enhances the [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy) command with the preview feature to list all the job resources with confirmation. The {{site.data.keyword.bplong_notm}} [workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get), [an action](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action), and [an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) get commands fetches the encryption CRN and encryption status such as `IBM Default` or `BYOK` or `KYOK` details.|
 | 1.12.24 | 8 July 2024 | {{site.data.keyword.bpshort}} CLI plugin fixes the support to target Toronto endpoints through `ca-tor` region.|
