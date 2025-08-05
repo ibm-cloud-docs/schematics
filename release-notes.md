@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-04"
+lastupdated: "2025-08-05"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -70,10 +70,6 @@ Release {{site.data.keyword.bpshort}} CLI plug-in to support Montreal endpoints
 
 {{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.12`
 :   The {{site.data.keyword.bpshort}} Workspace supports `Terraform_v1.11`. `Terraform_v1.12`. For more information, see [Announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external}.
-
-### 2 July 2025
-{: #schematics-july0225}
-{: release-note}
 
 
 
