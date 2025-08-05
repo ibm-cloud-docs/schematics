@@ -179,6 +179,8 @@ subcollection: schematics
 
         * Logging and monitoring in Montreal region
 
+        * Release {{site.data.keyword.bpshort}} Agents version
+
     * [1 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0125)
 
         * Release {{site.data.keyword.bpshort}} CLI plug-in to update the metadata for subnamespaces and subcommands.
