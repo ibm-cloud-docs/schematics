@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-04"
+lastupdated: "2025-08-05"
 
 keywords: schematics
 subcollection: schematics
@@ -193,9 +193,7 @@ subcollection: schematics
 
     * [29 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2925)
 
-        * {{site.data.keyword.bpshort}} support `Terraform_v1.11` and `Terraform_v1.12`
-
-    * [2 July 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0225)
+        * {{site.data.keyword.bpshort}} support `Terraform_v1.11.2` and `Terraform_v1.12.4`
 
 * [June 2025](/docs/schematics?topic=schematics-schematics-relnotes#June-2025)
 
