@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-07"
 
 keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging
 
@@ -24,9 +24,6 @@ You can use {{site.data.keyword.logs_full}} to visualize and alert on platform l
 
 As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.la_full}} along with {{site.data.keyword.logs_full_notm}}. Logging is the same for both services. For information about migrating from {{site.data.keyword.la_full}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-getting-started).
 {: important}
-
-## Locations where platform logs are generated
-{: #log-locations}
 
 ### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
 {: #la-legacy-locations}
@@ -63,7 +60,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Toronto (`ca-mon`)  | 
+| Montreal (`ca-mon`)  | 
 |---------------|
 | [Yes]{: tag-green} | 
 {: caption="Regions where platform logs are sent in Montreal locations" caption-side="top"}
@@ -109,7 +106,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Toronto (`ca-mon`)  | 
+| Montreal (`ca-mon`)  | 
 |---------------|
 | [Yes]{: tag-green} | 
 {: caption="Regions where platform logs are sent in Montreal locations" caption-side="top"}
