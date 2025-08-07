@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-08-07"
 
 keywords: schematics
 subcollection: schematics
@@ -1733,8 +1733,6 @@ subcollection: schematics
 
 [Activity tracking events for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-at_events#at_events)
 
-* [Locations where activity tracking events are generated](/docs/schematics?topic=schematics-at_events#at-locations)
-
 * [Locations where activity tracking events are sent to {{site.data.keyword.atracker_full_notm}} hosted event search](/docs/schematics?topic=schematics-at_events#at-legacy-locations)
 
 * [Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}](/docs/schematics?topic=schematics-at_events#atracker-locations)
@@ -1756,8 +1754,6 @@ subcollection: schematics
     * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_wks)
 
 [Logging for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-logging#logging)
-
-* [Locations where platform logs are generated](/docs/schematics?topic=schematics-logging#log-locations)
 
     * [Locations where logs are sent to {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
 
