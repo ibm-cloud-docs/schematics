@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-07"
+lastupdated: "2025-08-19"
 
 keywords: schematics
 subcollection: schematics
@@ -239,7 +239,7 @@ subcollection: schematics
 
     * [20 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2025)
 
-        * To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working#create-action-working) action, and [update](/docs/schematics?topic=schematics-action-working#action-settings) action.
+        * {{site.data.keyword.bpshort}} releases Open reference picker in Git repository URL
 
     * [10 January 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1025)
 
@@ -367,7 +367,7 @@ subcollection: schematics
 
     * [08 March 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0824)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
 
@@ -379,11 +379,11 @@ subcollection: schematics
 
     * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [07 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0724)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [January 2024](/docs/schematics?topic=schematics-schematics-relnotes#January-2024)
 
@@ -391,11 +391,11 @@ subcollection: schematics
 
     * [24 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2424)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [18 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1824)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [10 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1024)
 
@@ -411,7 +411,7 @@ subcollection: schematics
 
     * [04 October 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct0423)
 
-        * Release {{site.data.keyword.bpshort}} infrastructure cost estimator 
+        * Release {{site.data.keyword.bpshort}} infrastructure cost estimator
 
 * [September 2023](/docs/schematics?topic=schematics-schematics-relnotes#September-2023)
 
@@ -419,9 +419,9 @@ subcollection: schematics
 
     * [12 September 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1723)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
-        * Release {{site.data.keyword.bpshort}} Agent migration page 
+        * Release {{site.data.keyword.bpshort}} Agent migration page
 
 * [August 2023](/docs/schematics?topic=schematics-schematics-relnotes#August-2023)
 
@@ -429,7 +429,7 @@ subcollection: schematics
 
     * [28 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2823)
 
-        * Release {{site.data.keyword.bpshort}} Agent migration page 
+        * Release {{site.data.keyword.bpshort}} Agent migration page
 
     * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2323)
 
@@ -439,7 +439,7 @@ subcollection: schematics
 
     * [22 May 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may222023)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr23)
 
@@ -455,7 +455,7 @@ subcollection: schematics
 
     * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar23)
 
@@ -539,7 +539,7 @@ subcollection: schematics
 
     * [21 September 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept2222)
 
-        * The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` 
+        * The {{site.data.keyword.bpshort}} Job image supports `Python v3.8`
 
 * [August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug22)
 
@@ -551,7 +551,7 @@ subcollection: schematics
 
     * [11 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1122)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [04 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2022)
 
@@ -563,7 +563,7 @@ subcollection: schematics
 
     * [26 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2622)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
 
@@ -573,11 +573,11 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} agents beta release in production.
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june22)
 
@@ -603,7 +603,7 @@ subcollection: schematics
 
     * [5 May 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may0522)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr22)
 
@@ -615,23 +615,23 @@ subcollection: schematics
 
         * Support stopping or terminating the running job
 
-        * Support more frequently asked questions (FAQs) 
+        * Support more frequently asked questions (FAQs)
 
         * Support enhanced {{site.data.keyword.bpshort}} resource view
 
     * [26 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2622)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [17 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2722)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
         * Support array of injectable Terraform blocks in create workspace API
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
     * [12 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr3122)
 
@@ -643,7 +643,7 @@ subcollection: schematics
 
         * Deprecate and warning message when using `ibmcloud terraform` command.
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar22)
 
@@ -651,7 +651,7 @@ subcollection: schematics
 
     * [31 March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3122)
 
-        * Support deleting {{site.data.keyword.bpshort}} data objects 
+        * Support deleting {{site.data.keyword.bpshort}} data objects
 
         * Fixes related to {{site.data.keyword.bpshort}} actions and workspace
 
@@ -663,9 +663,9 @@ subcollection: schematics
 
     * [4 March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar422)
 
-        * Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
+        * Support `Terraform v1.1` in {{site.data.keyword.bpshort}}
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb22)
 
@@ -673,13 +673,13 @@ subcollection: schematics
 
     * [16 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1622)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
-        * Supports installer for Linux&trade; arm64 and Mac OS arm64 libraries 
+        * Supports installer for Linux&trade; arm64 and Mac OS arm64 libraries
 
     * [11 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1122)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan22)
 
@@ -687,9 +687,9 @@ subcollection: schematics
 
     * [31 January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan3122)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
-        * Supports installer for PowerLinux&trade; and `S/390` Linux&trade; 
+        * Supports installer for PowerLinux&trade; and `S/390` Linux&trade;
 
 * [December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec21)
 
@@ -697,7 +697,7 @@ subcollection: schematics
 
     * [30 December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec3021)
 
-        * Release {{site.data.keyword.bpshort}} CLI plug-in 
+        * Release {{site.data.keyword.bpshort}} CLI plug-in
 
 * [November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov21)
 
@@ -715,7 +715,7 @@ subcollection: schematics
 
         * About {{site.data.keyword.bpshort}} Job files
 
-        * ResourceQuery attribute deprecated 
+        * ResourceQuery attribute deprecated
 
 * [October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct21)
 

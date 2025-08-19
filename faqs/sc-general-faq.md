@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-18"
+lastupdated: "2025-08-19"
 
-keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
+keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
 subcollection: schematics
 
@@ -20,7 +20,7 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bplong_notm}} are classified into the following section.
 {: shortdesc}
 
-## What is {{site.data.keyword.bplong_notm}} and how does it work? 
+## What is {{site.data.keyword.bplong_notm}} and how does it work?
 {: #what-is-schematics}
 {: faq}
 {: support}
@@ -59,7 +59,7 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays a 
 {: faq}
 {: support}
 
-Job failures occur due to files removed or missed from Git template repository after importing or cloning the repo to {{site.data.keyword.bpshort}}. 
+Job failures occur due to files removed or missed from Git template repository after importing or cloning the repo to {{site.data.keyword.bpshort}}.
 
 Files might be missing at the time of execution for several reasons:
     - The files are referenced by using file system `symlinks` to different files or folders in the repository, or to external file systems.
@@ -81,7 +81,7 @@ When creating {{site.data.keyword.bpshort}} workspaces or actions {{site.data.ke
 - The allowed image extensions are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
 - The files that are explicitly removed are `.asa, .asax, .exe, .php5, .pht, .phtml, .shtml, .swf, .tfstate, .tfstate.backup, .xap, .zip, .tar`.
 - All files greater than 500 KB are removed. This file limit does not apply to the allowed image file types.
-- Where the folder name starts with a (period) `.` it is treated as malicious and removed.  
+- Where the folder name starts with a (period) `.` it is treated as malicious and removed.
 
 The allowed extension list is continuously monitored and updated in every release. You can raise a [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a file extension to the list.
 {: note}
@@ -129,14 +129,14 @@ curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: applic
 ```
 {: pre}
 
-For more information, see [IAM access token](/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](/apidocs/iam-identity-token-api#create-api-key). You can set the environment values `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
+For more information, see [IAM access token](/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](/apidocs/iam-identity-token-api#create-api-key). You can set the environment values `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`.
 
 ## How to rectify failed to clone Git repository, might not find remote reference or heads or master most likely invalid branch name is passed?
 {: #template-errors}
 {: faq}
 {: support}
 
-Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/` repository, after 1 October 2020, can see this error message. 
+Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/` repository, after 1 October 2020, can see this error message.
 
 If the repository is created after 1 October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
 
@@ -250,16 +250,16 @@ To create a deviation report and view the changes between the infrastructure and
 {: faq}
 {: support}
 
-You can use the {{site.data.keyword.bplong_notm}} console or CLI to remove all the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in synchronize with your Terraform template, make sure to remove the associated infrastructure code from your Terraform template. So that your resources are not added again when you apply a new version of your Terraform template. 
+You can use the {{site.data.keyword.bplong_notm}} console or CLI to remove all the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in synchronize with your Terraform template, make sure to remove the associated infrastructure code from your Terraform template. So that your resources are not added again when you apply a new version of your Terraform template.
 
 ## What happens if I choose to delete my resource directly from the resource dashboard?
 {: #delete-resource-directly-faq}
 {: faq}
 {: support}
 
-When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create next Terraform execution plan, or apply a new template version. The {{site.data.keyword.bpshort}} verifies that the Cloud resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated, and the Terraform execution plan is changed. 
+When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create next Terraform execution plan, or apply a new template version. The {{site.data.keyword.bpshort}} verifies that the Cloud resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated, and the Terraform execution plan is changed.
 
-Although the state file is updated before new changes to your Cloud resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.bplong_notm}} console or CLI to remove your resources, or remove the associated infrastructure code from your Terraform template. 
+Although the state file is updated before new changes to your Cloud resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.bplong_notm}} console or CLI to remove your resources, or remove the associated infrastructure code from your Terraform template.
 {: important}
 
 ## Does {{site.data.keyword.bpshort}} support `ibmcloud terraform` command?
@@ -286,7 +286,7 @@ Error
 ```text
 timeout - last error: Error connecting to bastion: dial tcp
  2022/03/02 03:59:37 Terraform apply | 52.118.101.204:22: connect: connection timed out
- 2022/03/02 03:59:37 Terraform apply | 
+ 2022/03/02 03:59:37 Terraform apply |
  2022/03/02 03:59:37 Terraform apply | Error: file provisioner error
 ```
 {: screen}
@@ -391,7 +391,7 @@ To start the GitHub API and establish Git connections over HTTPs, and create qui
 
 GitHub currently supports two types of personal access tokens, and organization owners can set a policy to restrict the access of personal access tokens to their organization:
 
-- fine-grained personal access tokens  
+- fine-grained personal access tokens
 - personal access tokens (classic). GitHub recommends that you use fine-grained personal access tokens instead of personal access tokens (classic) whenever possible.
 
 The following are the steps to create and restrict the PAT tokens.
@@ -415,10 +415,10 @@ The following are the steps to create and restrict the PAT tokens.
 
 Workspace creation
 
-In the workspace creation page, for the `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. For more details about workspace create, refer to [Creating a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). The link can point to the `master` branch, any other branch, or a subdirectory. 
+In the workspace creation page, for the `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. For more details about workspace create, refer to [Creating a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). The link can point to the `master` branch, any other branch, or a subdirectory.
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
-    - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory` 
+    - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
 
 Branch name contains `/` (backslash) are not supported.
 {: note}
@@ -430,13 +430,13 @@ In the action creation page, the URL can point to the master branch, any other b
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
         - Example for subdirectory - `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
 
-Don't have a playbook that you can use? Try out one of your [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
+Don't have a playbook that you can use? Try out one of your [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
 {: tip}
 
-On the workspace **Settings** page, enter the edited icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. 
+On the workspace **Settings** page, enter the edited icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory.
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
-    - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory` 
+    - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
 
 ## Can you configure the activeness of the {{site.data.keyword.bpshort}} API call?
 {: #http-api-call}
