@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-08-07"
+lastupdated: "2025-08-25"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs, atracker
 
@@ -53,7 +53,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 
 | Toronto (`ca-tor`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where activity tracker events are sent in Toronto locations" caption-side="top"}
 {: #at-table-3}
 {: tab-title="Toronto"}
@@ -63,9 +63,9 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 
 | Montreal (`ca-mon`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where activity tracker events are sent in Montreal locations" caption-side="top"}
-{: #at-table-3}
+{: #at-table-4}
 {: tab-title="Montreal"}
 {: tab-group="at"}
 {: class="simple-tab-table"}
@@ -76,7 +76,7 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 
 {{site.data.keyword.bpshort}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  |  
+| Dallas (`us-south`) | Washington (`us-east`)  |
 |---------------------|-------------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
@@ -96,9 +96,9 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Toronto (`ca-tor`)  | 
+| Toronto (`ca-tor`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Toronto locations" caption-side="top"}
 {: #atracker-table-3}
 {: tab-title="Toronto"}
@@ -106,9 +106,9 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/clou
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Montreal (`ca-mon`)  | 
+| Montreal (`ca-mon`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Montreal locations" caption-side="top"}
 {: #atracker-table-4}
 {: tab-title="Montreal"}
@@ -136,7 +136,7 @@ Following are the activity tracking event actions that the {{site.data.keyword.c
 
 The following table lists the actions that generate an event for the {{site.data.keyword.bpshort}} Workspace that are associated with a service instance.
 
-| Action             | Description      | 
+| Action             | Description      |
 | -------------------| -----------------|
 | `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} workspace by a user.|
 | `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} workspace. |

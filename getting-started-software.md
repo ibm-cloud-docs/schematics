@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-08-25"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
+
 subcollection: schematics
 
 ---
@@ -30,8 +31,8 @@ This getting started tutorial incurs costs. You must have an [{{site.data.keywor
 Before you can use this template, you must complete the following tasks.
 
 - Make sure that you have the permissions to [create classic virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-device-access).
-- [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure. 
-- Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full_notm}} instance](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-pgadmin-code-engine-icd-postgresql#pgadmin-code-engine-icd-postgresql-before-start).
+- [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure.
+- Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full_notm}} instance](/docs/databases-for-postgresql?topic=databases-for-postgresql-pgadmin-code-engine-icd-postgresql#pgadmin-code-engine-icd-postgresql-before-start).
 
 ## Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}
 {: #vsi-postgres}
@@ -47,19 +48,19 @@ Use one of the IBM provided software templates to set up and configure a classic
 
 3. In the **Configure your workspace** section, enter **Name** for your {{site.data.keyword.bpshort}} workspace, select your **Resource group**, and the **Location** where you want to create the workspace.
 4. Check **Override default Terraform version** to configure the template to support your Terraform version.
-5. In the **Set the deployment values** section, enter the following information. 
+5. In the **Set the deployment values** section, enter the following information.
     - Click **Yes** toggle button to enter value for **admin-password** as `user123`, and **db-user-password** as `user123` that you want to use to log in to your PostgreSQL instance.
 
-      The `admin-password` and `db-user-password` must be between 10 and 32 characters long and do not support any special characters. 
+      The `admin-password` and `db-user-password` must be between 10 and 32 characters long and do not support any special characters.
       {: note}
 
     - Enter the **iaas_classic_username** as `<your classic_username>` that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).
     - Select the resource group where you want to provision your virtual server and `PostgresSQL` instance.
 
-6. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
-7. Verify your virtual server and PostgreSQL setup. 
+6. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete.
+7. Verify your virtual server and PostgreSQL setup.
     - From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you.
-    - Click the link to see the details of your instances. 
+    - Click the link to see the details of your instances.
 8. Optional: Remove your {{site.data.keyword.bpshort}} workspace and all related Cloud resources.
     - Select the **Actions** drop down list, click **Delete**.
     - Select the **Delete workspace** and **Delete all associated resources** option.
@@ -67,7 +68,7 @@ Use one of the IBM provided software templates to set up and configure a classic
 
 Now, you used the capabilities of {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} infrastructure and database services, and automatically configured your services to allow network communication.
 
-## What's next? 
+## What's next?
 {: #whats-next}
 
 - Explore the capabilities of [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started).

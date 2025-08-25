@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-08-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,18 +32,26 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for August 2025.
 {: shortdesc}
 
+### 25 August 2025
+{: #schematics-aug2525}
+{: release-note}
+
+The newly allowed IP address for `London (eu-gb)` and `Frankfurt (eu-de)` region.
+:   {{site.data.keyword.bpshort}} lists the newly allowed IP addresses to support [London (`eu-gb`) and Frankfurt (`eu-de`) region endpoints](/docs/schematics?topic=schematics-allowed-ipaddresses).
+
 ### 4 August 2025
 {: #schematics-aug0425}
 {: release-note}
 
 New {{site.data.keyword.bpshort}} locations
-:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+
 
 Logging and monitoring in Montreal region
 :   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.
 
 Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on `ca-mon` region.
+:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on Montreal (`ca-mon`) region.
 
 ### 1 August 2025
 {: #schematics-aug0125}
@@ -145,7 +153,8 @@ Review the release notes for January 2025.
 {: #schematics-jan2025}
 {: release-note}
 
-To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working#create-action-working) action, and [update](/docs/schematics?topic=schematics-action-working#action-settings) action.
+{{site.data.keyword.bpshort}} releases Open reference picker in Git repository URL
+:    To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working#create-action-working) action, and [update](/docs/schematics?topic=schematics-action-working#action-settings) action.
 
 ### 10 January 2025
 {: #schematics-jan1025}
@@ -365,7 +374,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
 {: #schematics-mar0824}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.18](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## February 2024
@@ -387,14 +396,14 @@ Deprecate creation of workspace by using the {{site.data.keyword.terraform-provi
 {: #schematics-feb1424}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.17](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 07 February 2024
 {: #schematics-feb0724}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.16](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## January 2024
@@ -407,14 +416,14 @@ Review the release notes for January 2024.
 {: #schematics-jan2424}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.15](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 18 January 2024
 {: #schematics-jan1824}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.14](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 
@@ -434,7 +443,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
       - [Displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview)
       - [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview)
     - To use an agent by:
-      - [Creating policies](/docs/schematics?topic=schematics-policy-manage) 
+      - [Creating policies](/docs/schematics?topic=schematics-policy-manage)
       - [Monitoring health](/docs/schematics?topic=schematics-agentb1-health)
       - [Configuration in Kubernetes](/docs/schematics?topic=schematics-configure-k8s-cluster)
       - [Private registry configuration](/docs/schematics?topic=schematics-agent-registry-overview)
@@ -464,7 +473,7 @@ The {{site.data.keyword.bpshort}} Agent supports private catalog
 {: #schematics-oct0423}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} infrastructure cost estimator 
+Release {{site.data.keyword.bpshort}} infrastructure cost estimator
 :   The {{site.data.keyword.bpshort}} [infrastructure cost estimator](/docs/schematics?topic=schematics-cost-estimation) is released. You can now [verify your workspace plan](/docs/schematics?topic=schematics-sch-plan-wks&interface=ui) to view the results of the workspace apply job.
 
 ## September 2023
@@ -479,10 +488,10 @@ Review the release notes for September 2023.
 {: #schematics-sept1723}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.12](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
-Release {{site.data.keyword.bpshort}} Agent migration page 
+Release {{site.data.keyword.bpshort}} Agent migration page
 :   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Updating agent](/docs/schematics?topic=schematics-update-agent-overview#update-agent-ui).
 
 ## August 2023
@@ -495,7 +504,7 @@ Review the release notes for August 2023.
 {: #schematics-aug2823}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} Agent migration page 
+Release {{site.data.keyword.bpshort}} Agent migration page
 :   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Upgrading agent](/docs/schematics?topic=schematics-update-agent-overview#update-agent-ui).
 
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
@@ -516,7 +525,7 @@ Review the release notes for May 2023.
 {: #schematics-may222023}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.10](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## April 2023
@@ -544,7 +553,7 @@ Review the release notes for April 2023.
 {: #schematics-apr623}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.9](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## March 2023
@@ -578,7 +587,7 @@ The `terraform.tfstate` state file with maximum limit is less than 2 MB.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 is supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
-    - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
+    - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by
       - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
       - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
@@ -663,10 +672,10 @@ Review the release notes for November 2022.
 {: release-note}
 
 Enhance {{site.data.keyword.bpshort}} documentation
-:   {{site.data.keyword.bpshort}} enhances its documentation with 
+:   {{site.data.keyword.bpshort}} enhances its documentation with
     - [What is Infrastructure as Code (IaC) regarding {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?
     - [Relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings).
-    
+
 
 ### 18 November 2022
 {: #schematics-nov1822}
@@ -707,7 +716,7 @@ Review the release notes for September 2022.
 {: #schematics-sept2222}
 {: release-note}
 
-The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` 
+The {{site.data.keyword.bpshort}} Job image supports `Python v3.8`
 :   The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21 September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
 ## August 2022
@@ -727,7 +736,7 @@ Review the release notes for August 2022.
 {: #schematics-aug1122}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.2](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 04 August 2022
@@ -747,7 +756,7 @@ Review the release notes for July 2022.
 {: #schematics-jul2622}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.1](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 20 July 2022
@@ -769,7 +778,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
     - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-plan-agent-overview) through UI.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.0](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 8 July 2022
@@ -778,7 +787,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
 
 
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.3](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 
@@ -797,9 +806,9 @@ Review the release notes for June 2022.
 {: release-note}
 
 Enhanced FAQ documentation
-:   {{site.data.keyword.bpshort}} FAQ documentation content is now enhanced by grouping the FAQs based on the {{site.data.keyword.bpshort}} objects, such as, 
+:   {{site.data.keyword.bpshort}} FAQ documentation content is now enhanced by grouping the FAQs based on the {{site.data.keyword.bpshort}} objects, such as,
     - [Actions FAQ](/docs/schematics?topic=schematics-actions-faq)
-    - [General FAQ](/docs/schematics?topic=schematics-general-faq) 
+    - [General FAQ](/docs/schematics?topic=schematics-general-faq)
     - [Workspaces FAQ](/docs/schematics?topic=schematics-workspaces-faq)
 
 ### 15 June 2022
@@ -833,7 +842,7 @@ Documentation enhancement
 {: #schematics-may0522}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.10.0](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ## April 2022
@@ -852,7 +861,7 @@ Support detecting drift
 Support stopping or terminating the running job
 :   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
-Support more frequently asked questions (FAQs) 
+Support more frequently asked questions (FAQs)
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq).
 
 Support enhanced {{site.data.keyword.bpshort}} resource view
@@ -862,14 +871,14 @@ Support enhanced {{site.data.keyword.bpshort}} resource view
 {: #schematics-apr2622}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.9.0](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 17 April 2022
 {: #schematics-apr2722}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.8.1](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 18 April 2022
@@ -879,7 +888,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
 Support array of injectable Terraform blocks in create workspace API
 :   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.9.1](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
 
 ### 12 April 2022
@@ -898,7 +907,7 @@ Enhance resources tabular data view for resources.
 Deprecate and warning message when using `ibmcloud terraform` command.
 :   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays a warning and deprecation message as **`Alias 'terraform' are deprecated. Use schematics or sch in your commands`**.
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.8.0](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) on 9 April 2022.
 
 ## March 2022
@@ -912,7 +921,7 @@ Review the release notes for March 2022.
 {: #schematics-mar3122}
 {: release-note}
 
-Support deleting {{site.data.keyword.bpshort}} data objects 
+Support deleting {{site.data.keyword.bpshort}} data objects
 :   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro) for workspace, action, and inventories objects.
 
 Fixes related to {{site.data.keyword.bpshort}} actions and workspace
@@ -937,10 +946,10 @@ Support `__netrc__` environment values in private Git repository
 {: #schematics-mar422}
 {: release-note}
 
-Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
+Support `Terraform v1.1` in {{site.data.keyword.bpshort}}
 :   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [command-line, and [`APIs`](/apidocs/schematics/schematics#create-workspace).
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.7.3](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) on 4 March 2022.
 
 ## February 2022
@@ -953,17 +962,17 @@ Review the release notes for February 2022.
 {: #schematics-feb1622}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.7.2](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) on 16 February 2022.
 
-Supports installer for Linux&trade; arm64 and Mac OS arm64 libraries 
+Supports installer for Linux&trade; arm64 and Mac OS arm64 libraries
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [Linux&trade; arm64 and Mac OS arm64 libraries](/docs/schematics?topic=schematics-setup-cli) Operating System.
 
 ### 11 February 2022
 {: #schematics-feb1122}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.7.1](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) on 11 February 2022.
 
 
@@ -977,10 +986,10 @@ Review the release notes for January 2022.
 {: #schematics-jan3122}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} [CLI plug-in v1.7.0](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) released on 18 January 2022.
 
-Supports installer for PowerLinux&trade; and `S/390` Linux&trade; 
+Supports installer for PowerLinux&trade; and `S/390` Linux&trade;
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-setup-cli) Operating System.
 
 ## December 2021
@@ -993,7 +1002,7 @@ Review the release notes for December 2021.
 {: #schematics-dec3021}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} CLI plug-in 
+Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.6.2](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) on 2 December 2021.
 
 ## November 2021
@@ -1021,7 +1030,7 @@ About `compact` download
 About {{site.data.keyword.bpshort}} Job files
 :   You can now download the state-file at every job level, with the current state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
-ResourceQuery attribute deprecated 
+ResourceQuery attribute deprecated
 :   The ResourceQuery attribute is replaced as [`resource_queries`](/apidocs/schematics/schematics#list-resource-query) in the API.
 
 ## October 2021
