@@ -36,9 +36,8 @@ Review the release notes for August 2025.
 {: #schematics-aug2525}
 {: release-note}
 
-The newly allowed IP address for `EU Central` region are updated
-:   {{site.data.keyword.bpshort}} lists the allowed UP addresses to support [`EU Central` region](/docs/schematics?topic=schematics-allowed-ipaddresses) allowed IP addresses to support `EU Central` region endpoint such as `London (eu-gb)` and `Frankfurt (eu-de)`.
-
+The newly allowed IP address for `London (eu-gb)` and `Frankfurt (eu-de)` region.
+:   {{site.data.keyword.bpshort}} lists the newly allowed IP addresses to support [London (`eu-gb`) and Frankfurt (`eu-de`) region endpoints](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ### 4 August 2025
 {: #schematics-aug0425}

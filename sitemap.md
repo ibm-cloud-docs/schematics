@@ -175,7 +175,7 @@ subcollection: schematics
 
     * [25 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2525)
 
-        * The newly allowed IP address for `EU Central` region are updated
+        * The newly allowed IP address for `London (eu-gb)` and `Frankfurt (eu-de)` region.
 
     * [4 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0425)
 
