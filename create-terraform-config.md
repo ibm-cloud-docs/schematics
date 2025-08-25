@@ -33,15 +33,15 @@ Before you start creating your Terraform template, make sure to review the [{{si
 Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
 
-**{{site.data.keyword.cloud_notm}} API key**
+**IBM Cloud API key**
 
 The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform. Also the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, always you must provide the {{site.data.keyword.cloud_notm}} API key. In {{site.data.keyword.bpshort}}, the IAM token is retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the IAM token is not retrieved for classic infrastructure resources and the API key must be provided in the `provider` block.
 
-**Different {{site.data.keyword.cloud_notm}} API key in the `provider` block**
+**Different IBM Cloud API key in the `provider` block**
 
 If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.
 
-**{{site.data.keyword.cloud_notm}} API key for a service ID**
+**IBM Cloud API key for a service ID**
 
 You can provide an API key for a service ID for all IAM-enabled services, including VPC infrastructure resources. You cannot use a service ID for classic infrastructure resources.
 
@@ -80,7 +80,7 @@ Follow the instructions to configure the `provider` block.
         iaas_classic_username = var.iaas_classic_username
         iaas_classic_api_key  = var.iaas_classic_api_key
     }
-    
+
     ```
     {: codeblock}
 
@@ -328,7 +328,7 @@ The directory structure of the Terraform template in the GitHub repository is li
 | `variables.tf` | Create `variables.tf` |
 {: caption="Terraform template directory structure" caption-side="bottom"}
 
-## Sample Terraform solutions 
+## Sample Terraform solutions
 {: #sol-overview}
 
 Various solutions show the strength of {{site.data.keyword.bplong}} and {{site.data.keyword.cloud}} services when used together. These solutions use a simple Terraform template or module to set up the infrastructure. Even though each solution is presented through the lens of a particular use case, these infrastructures are typical across various industries.

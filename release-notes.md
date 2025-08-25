@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-19"
+lastupdated: "2025-08-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,18 +32,27 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for August 2025.
 {: shortdesc}
 
+### 25 August 2025
+{: #schematics-aug2525}
+{: release-note}
+
+The newly allowed IP address for `EU Central` region are updated
+:   {{site.data.keyword.bpshort}} lists the allowed UP addresses to support [`EU Central` region](/docs/schematics?topic=schematics-allowed-ipaddresses) allowed IP addresses to support `EU Central` region endpoint such as `London (eu-gb)` and `Frankfurt (eu-de)`.
+
+
 ### 4 August 2025
 {: #schematics-aug0425}
 {: release-note}
 
 New {{site.data.keyword.bpshort}} locations
-:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference) or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+
 
 Logging and monitoring in Montreal region
 :   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.
 
 Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on `ca-mon` region.
+:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on Montreal (`ca-mon`) region.
 
 ### 1 August 2025
 {: #schematics-aug0125}

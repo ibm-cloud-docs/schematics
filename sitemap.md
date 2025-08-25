@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-19"
+lastupdated: "2025-08-25"
 
 keywords: schematics
 subcollection: schematics
@@ -172,6 +172,10 @@ subcollection: schematics
 * [August 2025](/docs/schematics?topic=schematics-schematics-relnotes#August-2025)
 
     * Review the release notes for August 2025.
+
+    * [25 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2525)
+
+        * The newly allowed IP address for `EU Central` region are updated
 
     * [4 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0425)
 
