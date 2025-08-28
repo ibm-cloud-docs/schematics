@@ -37,7 +37,7 @@ Review the release notes for August 2025.
 {: release-note}
 
 Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and Frankfurt (`eu-de`) region
-:   Addition of IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the [`London (eu-gb)` and `Frankfurt (eu-de)` region endpoints](/docs/schematics?topic=schematics-allowed-ipaddresses).
+:   Addition of IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the `London (eu-gb)` and `Frankfurt (eu-de)` region endpoints. For more information, refer [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses)
 
 ### 4 August 2025
 {: #schematics-aug0425}
