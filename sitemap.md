@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-08-28"
 
 keywords: schematics
 subcollection: schematics
@@ -175,7 +175,7 @@ subcollection: schematics
 
     * [25 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2525)
 
-        * The newly allowed IP address for `London (eu-gb)` and `Frankfurt (eu-de)` region.
+        * Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and Frankfurt (`eu-de`) region
 
     * [4 August 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug0425)
 
