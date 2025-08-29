@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-08-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -36,8 +36,8 @@ Review the release notes for August 2025.
 {: #schematics-aug2525}
 {: release-note}
 
-The newly allowed IP address for `London (eu-gb)` and `Frankfurt (eu-de)` region.
-:   {{site.data.keyword.bpshort}} lists the newly allowed IP addresses to support [London (`eu-gb`) and Frankfurt (`eu-de`) region endpoints](/docs/schematics?topic=schematics-allowed-ipaddresses).
+Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and Frankfurt (`eu-de`) region
+:   Addition of IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the `London (eu-gb)` and `Frankfurt (eu-de)` region endpoints. For more information, refer [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses)
 
 ### 4 August 2025
 {: #schematics-aug0425}
