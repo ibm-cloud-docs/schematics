@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-09-01"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -22,11 +22,11 @@ subcollection: schematics
 ## Deploying services in a specific region
 {: #single-region}
 
-If all your services can be deployed to the same region, you can specify the region in the `provider` block of your Terraform template. 
+If all your services can be deployed to the same region, you can specify the region in the `provider` block of your Terraform template.
 
 If no region is specified in the `provider` block, {{site.data.keyword.bpshort}} automatically attempts to create your Cloud resources in the `us-south` region.
 
-1. Open the `provider.tf` file or the Terraform configuration file that contains the `provider` block. 
+1. Open the `provider.tf` file or the Terraform configuration file that contains the `provider` block.
 2. Specify the region where you want to deploy your services. Make sure that the region that you enter is supported by the service that you want to deploy with {{site.data.keyword.bpshort}}.
 
     ```terraform
@@ -44,7 +44,7 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
 ## Deploying services across regions
 {: #across-regions}
 
-You can add multiple multiple provider configurations to the `provider` block to specify the regions where you want to deploy your Cloud resources. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/terraform/language/providers/configuration#alias-multiple-provider-configurations){: external}.
+You can add multiple multiple provider configurations to the `provider` block to specify the regions where you want to deploy your Cloud resources. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/hcp){: external}.
 {: shortdesc}
 
 1. In the `provider` block of your Terraform configuration file or the `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. If you add more provider configurations, you must include an alias so that you can reference this provider from your resource definition in the Terraform configuration file. In the following example, the default provider configuration deploys resources in `us-south` while the provider configuration with the alias `east` deploys all resources in `us-east`.
