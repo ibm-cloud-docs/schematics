@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-09-08"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -34,7 +34,7 @@ terraform{
     required_providers{
     ibm = ">= 1.21.0" // Error !! version unavailable.
     ibm = ">= 1.20.0" // Execute against latest version.
-    ibm = "== 1.20.1" // Executes version v1.20.1. 
+    ibm = "== 1.20.1" // Executes version v1.20.1.
     }
 }
 ```
@@ -43,7 +43,7 @@ terraform{
 Currently, version 1.21.0 is released. For more information, see [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 {: note}
 
-## How do I update the Terraform version 
+## How do I update the Terraform version
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -61,7 +61,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 - [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
 - [Upgrading a Terraform v0.12 workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
 
-## How do I `pull latest` code from a Git repo by using the command line? 
+## How do I `pull latest` code from a Git repo by using the command line?
 {: #latestcode-workspace-commandline}
 {: faq}
 {: support}
@@ -84,7 +84,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 
 {{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime `utilities/softwares` that come with the UBI-8 are available for Terraform provisions and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) that are used in {{site.data.keyword.bpshort}} runtime.
 
-## How can I fix Git token issues when creating workspaces by using the CLI 
+## How can I fix Git token issues when creating workspaces by using the CLI
 {: #create-workspace-cli-tokens}
 {: faq}
 {: support}
@@ -107,12 +107,12 @@ You see authorization issues when the role and permission access is insufficient
 
 The test IDs are considered as a valid `IBM ID` to set the global catalog or resource controller-related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
-## How to limit Git repo folder cloning 
+## How to limit Git repo folder cloning
 {: #compact-faq}
 {: faq}
 {: support}
 
-By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all sub directory. De-select the `Use full repository` flag to limit the folders that are cloned and improve download performance. 
+By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all sub directory. De-select the `Use full repository` flag to limit the folders that are cloned and improve download performance.
 
 {{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `sub directories` in Git repositories. If the compact flag is set to **true** it downloads and save `sub directories` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
 
@@ -136,14 +136,14 @@ You need to delete the workspace and NOT destroying the resources as if resource
 
 The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the Helm charts where inside the catalog you can keep the credentials and mark it as secured. For more information, see [List of catalog that is related to Helm](https://cloud.ibm.com/catalog?search=label%3Ahelm).
 
-## How to address job failures that are caused by maintenance activities? 
+## How to address job failures that are caused by maintenance activities?
 {: #impact-downtime-workspace}
 {: faq}
 {: support}
 
 The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-run the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram).
 
-## How do you set the Git release tag? 
+## How do you set the Git release tag?
 {: #releasetag-warn-faq}
 {: faq}
 {: support}
@@ -176,7 +176,7 @@ curl -X GET https://schematics.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Au
 
 Yes there is a change in the API that checks for the location first and if it doesn’t get the proper location for the workspace it returns a 403 error instead of 404 error.
 
-## How can I enable Terraform debug logging 
+## How can I enable Terraform debug logging
 {: #terraform-debug-ibmcli}
 {: faq}
 {: support}
@@ -221,7 +221,7 @@ Use the `ibmcloud schematics workspace import --options value, -o value : Option
 
 ibmcloud schematics workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
 
-or 
+or
 
 ibmcloud schematics workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
 ```
@@ -234,7 +234,7 @@ ibmcloud schematics workspaces import --id <workspace_id> --address <my terrafor
 
 Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
-##	How can I resolve Terraform resource timeout failures? 
+##	How can I resolve Terraform resource timeout failures?
 {: #logdnainstance-faq}
 {: faq}
 {: support}
@@ -242,7 +242,7 @@ Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more info
  You need to update or increase the timeout value by 5 minutes or 10 minutes depending upon the service as shown in the Terraform block. Or you need to send `null value` to use the default values.
 
  ```terraform
- variable "create_timeout" 
+ variable "create_timeout"
  {
   type = String
   description = "Timeout duration to create LogDNA instance in Schematics."
@@ -263,7 +263,7 @@ Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more info
          {
            "TF_LOG": "debug"
          },
-   ]    
+   ]
  ```
  {: codeblock}
 
@@ -315,7 +315,7 @@ resource "ibm_cos_bucket" "smart-us-south" {
 {: faq}
 {: support}
 
-No, currently {{site.data.keyword.bpshort}} do not support this feature while running `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command. 
+No, currently {{site.data.keyword.bpshort}} do not support this feature while running `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command.
 
 ## How do I resolve errors in listing workspaces?
 {: #badstatus-workspace-faq}
@@ -361,14 +361,14 @@ You can use the sample Terraform code block to configure the GitLab repository d
 
 Yes, {{site.data.keyword.bpshort}} supports the full {{site.data.keyword.cloud_notm}} provider resource set. For more information about How IAM access group works? see [ibm_iam_access_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group).
 
-## How do I work with resources in another account? 
+## How do I work with resources in another account?
 {: #account-resource-faq}
 {: faq}
 {: support}
 
 Yes, you can create {{site.data.keyword.bpshort}} workspaces in {{site.data.keyword.cloud_notm}} source account. Then, run Terraform providing resources in target account to provision, through CLI, and API calls by using the target account service ID with the authentication, appropriate cross account authorization, or API key. For more information, see [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
 
-## What does `North America` location indicate?  
+## What does `North America` location indicate?
 {: #location-faq}
 {: faq}
 {: support}
@@ -381,7 +381,7 @@ North America always indicates both `us-south`, and `us-east` location during th
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} communicates with the ports that are specified by the related resources. For example, VPC related ports, see [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
+{{site.data.keyword.bpshort}} communicates with the ports that are specified by the related resources. For example, VPC related ports, see [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall).
 
 ## When do I use {{site.data.keyword.bpshort}} versus the individual resource dashboards?
 {: #schematics-vs-cloud-resource-faq}
@@ -469,7 +469,7 @@ No, the drift detection is not an automatic method of detection in the {{site.da
 
 You can initiate drift detection by using the UI and CLI. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note).
 
-## Where can I see the status of a drift detection job? 
+## Where can I see the status of a drift detection job?
 {: #drift-status-faq}
 {: faq}
 {: support}
@@ -501,7 +501,7 @@ Error
 ```
 {: screen}
 
-The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environment. Therefore, you need to use [regional endpoints](/apidocs/schematics/schematics#api-endpoints) to point your location to a `eu-de` region. 
+The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environment. Therefore, you need to use [regional endpoints](/apidocs/schematics/schematics#api-endpoints) to point your location to a `eu-de` region.
 
 ## How can I view workspace resources?
 {: #clicmdresource-job-faq}
@@ -553,12 +553,12 @@ provider "ibm" {
 ```
 {: codeblock}
 
-## Are sensitive values in the state file encrypted? 
+## Are sensitive values in the state file encrypted?
 {: #encrypt-state-file}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} encrypts the Terraform state file when stored and also in transit by using TLS. Terraform does not separately encrypt sensitive values. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
+{{site.data.keyword.bpshort}} encrypts the Terraform state file when stored and also in transit by using TLS. Terraform does not separately encrypt sensitive values. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/manage-sensitive-data) in state file.
 
 ## Why do workspace variables that are defined by using CLI throw 400 errors?
 {: #wks-list-var}
@@ -567,7 +567,7 @@ provider "ibm" {
 
 The {{site.data.keyword.bpshort}} workspace list variables store value should always be an HCL string. The `value` field must contain an escaped string for the variable store for the list, map, or complex variable. For more information, see [Providing values to {{site.data.keyword.bpshort}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable).
 
-## Can you update the Terraform version (`TF_VERSION`) using a `JSON` file? 
+## Can you update the Terraform version (`TF_VERSION`) using a `JSON` file?
 {: #tf-version-update}
 {: faq}
 {: support}
@@ -597,7 +597,7 @@ Yes, you can use `--state` flag option through the [ibmcloud schematics workspac
 
 The maximum length of characters that {{site.data.keyword.bpshort}} workspace variables support is 1 MB.
 
-## What is the maximum state file to import? 
+## What is the maximum state file to import?
 {: #wks-statefile-limit}
 {: faq}
 {: support}
@@ -643,7 +643,7 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
 
 
 
-## How to retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable? 
+## How to retrieve the {{site.data.keyword.bpshort}} Workspace ID as environment variable?
 {: #retrieve-wks-id-env-var-faq}
 {: faq}
 {: support}
