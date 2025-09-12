@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-28"
+lastupdated: "2025-09-12"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#August-2025)
+
+    * Review the release notes for September 2025.
+
+    * [12 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1225)
+
+        * Additional IP addresses for {{site.data.keyword.bpshort}} Washington DC (us-east) region
 
 * [August 2025](/docs/schematics?topic=schematics-schematics-relnotes#August-2025)
 
