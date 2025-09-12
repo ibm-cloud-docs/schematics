@@ -175,7 +175,7 @@ subcollection: schematics
 
     * [12 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1225)
 
-        * Additional IP addresses for {{site.data.keyword.bpshort}} Washington DC (us-east) region
+        * Additional IP addresses for {{site.data.keyword.bpshort}} Washington DC (us-east) region from 9th October 2025
 
 * [August 2025](/docs/schematics?topic=schematics-schematics-relnotes#August-2025)
 
