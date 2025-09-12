@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-09-08"
 
-keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
+keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token
 
 subcollection: schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Using Terraform templates and modules in the repositories
 {: #download-modules-pvt-git}
 
-{{site.data.keyword.bpshort}} and Terraform support downloading Terraform templates and modules from a variety of repository types: Terraform Registry, GitHub, GitLab, S3/COS buckets, IBM Catalog, Artifactory so on. See [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources#modules-in-package-sub-directories){: external} in the Terraform documentation.
+{{site.data.keyword.bpshort}} and Terraform support downloading Terraform templates and modules from a variety of repository types: Terraform Registry, GitHub, GitLab, S3/COS buckets, IBM Catalog, Artifactory so on. See [Module Sources](https://developer.hashicorp.com/terraform/language/modules/configuration#modules-in-package-sub-directories){: external} in the Terraform documentation.
 
 When using {{site.data.keyword.bpshort}}, the downloading of Terraform templates and modules before performing a Terraform Plan or Apply operation is a two step process. At workspace create time, {{site.data.keyword.bpshort}} clones only the repository containing your template and any embedded modules in sub-folders. Any modules referenced using the module `source` parameter are not downloaded at workspace create time. Credentials to access the templates/configs in private repositories, must be passed to {{site.data.keyword.bpshort}} at workspace create time.
 
@@ -25,9 +25,9 @@ To download modules from a private Git repository, an {{site.data.keyword.cloud_
 
 |  Repository </br>  | Template </br> Public repo | Template </br>Private repository | Module </br>Public repository | Module </br>private repository | Comment </br>  |
 | --- |--- | --- | --- | --- | --- |
-| GitHub | Yes | Git token - 1  | Yes | Git token - 2 | 
-| GitLab | Yes | Git token - 1 | Yes | Git token - 2 | 
-| IBM GitLab | Yes | Git token - 1 | Yes | Git token - 2 | 
+| GitHub | Yes | Git token - 1  | Yes | Git token - 2 |
+| GitLab | Yes | Git token - 1 | Yes | Git token - 2 |
+| IBM GitLab | Yes | Git token - 1 | Yes | Git token - 2 |
 | Terraform.io | No | No | Yes | NA |
 {: caption="Supported Git repositories" caption-side="top"}}
 
@@ -37,7 +37,7 @@ To download modules from a private Git repository, an {{site.data.keyword.cloud_
 
 When using {{site.data.keyword.bpshort}}, `netrc`support for module credentials can be configured using the `__netrc__` environment variable to the pass credentials. The `__netrc__` environment variable accepts the list of `hostname`, `username` and the `password` argument. The setting of environment variables is supported only using the {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided using the `env_values` parameter in the JSON payload file.
 
-The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax. 
+The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax.
 {: important}
 
 **Syntax of `env_values` with list of `__netrc__`:**

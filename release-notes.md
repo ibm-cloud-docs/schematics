@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-28"
+lastupdated: "2025-09-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -26,6 +26,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
 
+## September 2025
+{: #August-2025}
+
+Review the release notes for September 2025.
+{: shortdesc}
+
+### 12 September 2025
+{: #schematics-sept1225}
+{: release-note}
+
+Additional IP addresses for {{site.data.keyword.bpshort}} Washington DC (us-east) region
+:   Additional IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the Washington DC (us-east) region. For more information about the public and private IP addresses, refer to [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses). 
+
 ## August 2025
 {: #August-2025}
 
@@ -37,7 +50,7 @@ Review the release notes for August 2025.
 {: release-note}
 
 Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and Frankfurt (`eu-de`) region
-:   Addition of IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the `London (eu-gb)` and `Frankfurt (eu-de)` region endpoints. For more information, refer [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses)
+:   Addition of IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the `London (eu-gb)` and `Frankfurt (eu-de)` region endpoints. For more information, refer [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ### 4 August 2025
 {: #schematics-aug0425}
