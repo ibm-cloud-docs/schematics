@@ -37,7 +37,7 @@ Review the release notes for September 2025.
 {: release-note}
 
 Additional IP addresses for {{site.data.keyword.bpshort}} Washington DC (us-east) region
-:   Additional IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the Washington DC (us-east) region. For more information about public and private IP addresses, refer to [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses). 
+:   Additional IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the Washington DC (us-east) region. For more information about the public and private IP addresses, refer to [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses). 
 
 ## August 2025
 {: #August-2025}
