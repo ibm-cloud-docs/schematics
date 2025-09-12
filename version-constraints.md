@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-09-12"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Specifying version constraints 
+# Specifying version constraints
 {: #version-constraints}
 
 Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use for your Terraform template, or Ansible playbook.
@@ -48,61 +48,87 @@ ibmcloud schematics version
 
 ```text
 
-Template Type   Version
-terraform       terraform_v1.4
-Additional terraform Providers   Version
-Ansible Provisioner              v2.3.3
-Red Hat OpenShift client         v3.11.0
-Provider for REST API            v1.10.0
-ansible                          v2.9.23
-IBM Cloud Provider               v1.38.2
-                                 
-Template Type   Version
-terraform       terraform_v1.5
-Additional terraform Providers   Version
-Ansible Provisioner              v2.3.3
-IBM Cloud Provider               v1.38.2
-Provider for REST API            v1.10.0
-ansible                          v2.9.23
-Red Hat OpenShift client         v3.11.0
-                                 
-Template Type   Version
-terraform       terraform_v1.6
-Additional terraform Providers   Version
-IBM Cloud Provider               v1.38.2
-Red Hat OpenShift client         v3.11.0
-ansible                          v2.9.23
-Ansible Provisioner              v2.3.3
-Provider for REST API            v1.10.0
-                                 
-Template Type   Version
-terraform       terraform_v1.7
-Additional terraform Providers   Version
-Ansible Provisioner              v2.3.3
-IBM Cloud Provider               v1.38.2
-Provider for REST API            v1.10.0
-ansible                          v2.9.23
-Red Hat OpenShift client         v3.11.0
-                                 
-Template Type   Version
-terraform       terraform_v1.8
-Additional terraform Providers   Version
-Red Hat OpenShift client         v3.11.0
-Provider for REST API            v1.10.0
-Ansible Provisioner              v2.3.3
-IBM Cloud Provider               v1.38.2
-ansible                          v2.9.23
-                                 
-Template Type   Version
-terraform       terraform_v1.9
-Additional terraform Providers   Version
-ansible                          v2.9.23
-IBM Cloud Provider               v1.38.2
-Red Hat OpenShift client         v3.11.0
-Provider for REST API            v1.10.0
-Ansible Provisioner              v2.3.3
-                                 
-OK
+  Template Type   Version
+  terraform       terraform_v1.4
+  Additional terraform Providers   Version
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+  ansible                          v2.9.23
+  Ansible Provisioner              v2.3.3
+  IBM Cloud Provider               v1.38.2
+
+  Template Type   Version
+  terraform       terraform_v1.5
+  Additional terraform Providers   Version
+  IBM Cloud Provider               v1.38.2
+  Ansible Provisioner              v2.3.3
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+  ansible                          v2.9.23
+
+  Template Type   Version
+  terraform       terraform_v1.6
+  Additional terraform Providers   Version
+  Ansible Provisioner              v2.3.3
+  IBM Cloud Provider               v1.38.2
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+  ansible                          v2.9.23
+
+  Template Type   Version
+  terraform       terraform_v1.7
+  Additional terraform Providers   Version
+  Provider for REST API            v1.10.0
+  ansible                          v2.9.23
+  IBM Cloud Provider               v1.38.2
+  Red Hat OpenShift client         v3.11.0
+  Ansible Provisioner              v2.3.3
+
+  Template Type   Version
+  terraform       terraform_v1.8
+  Additional terraform Providers   Version
+  ansible                          v2.9.23
+  IBM Cloud Provider               v1.38.2
+  Ansible Provisioner              v2.3.3
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+
+  Template Type   Version
+  terraform       terraform_v1.9
+  Additional terraform Providers   Version
+  ansible                          v2.9.23
+  Ansible Provisioner              v2.3.3
+  IBM Cloud Provider               v1.38.2
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+
+  Template Type   Version
+  terraform       terraform_v1.10
+  Additional terraform Providers   Version
+  IBM Cloud Provider               v1.38.2
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+  Ansible Provisioner              v2.3.3
+  ansible                          v2.9.23
+
+  Template Type   Version
+  terraform       terraform_v1.11
+  Additional terraform Providers   Version
+  IBM Cloud Provider               v1.38.2
+  Red Hat OpenShift client         v3.11.0
+  Provider for REST API            v1.10.0
+  ansible                          v2.9.23
+  Ansible Provisioner              v2.3.3
+
+  Template Type   Version
+  terraform       terraform_v1.12
+  Additional terraform Providers   Version
+  ansible                          v2.9.23
+  Ansible Provisioner              v2.3.3
+  Red Hat OpenShift client         v3.11.0
+  IBM Cloud Provider               v1.38.2
+  Provider for REST API            v1.10.0
+  OK
 ```
 {: screen}
 
@@ -148,7 +174,7 @@ required_version = ">=1.0.0, <2.0"
 ### Version constraints for Terraform providers
 {: #provider-version-contraint}
 
-To use any of the predefined [{{site.data.keyword.bpshort}} images](#schematics-image-ov), you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. 
+To use any of the predefined [{{site.data.keyword.bpshort}} images](#schematics-image-ov), you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want.
 
 If {{site.data.keyword.cloud_notm}} Provider plug-in version is not declared in your Terraform template, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}.
 {: note}
@@ -170,7 +196,7 @@ terraform {
 
 **Example to use specific Terraform provider versions**: </br>
 
-To use a different {{site.data.keyword.cloud_notm}} Provider plug-in version, or to pin your Terraform configuration file to a specific version of another external provider, such as AWS, Helm or Kubernetes, use the following syntax. 
+To use a different {{site.data.keyword.cloud_notm}} Provider plug-in version, or to pin your Terraform configuration file to a specific version of another external provider, such as AWS, Helm or Kubernetes, use the following syntax.
 
 ```terraform
 terraform {
@@ -190,7 +216,7 @@ terraform {
 ## Specifying version constraints in Ansible
 {: #version-constraints-ansible}
 
-{{site.data.keyword.bpshort}} currently supports the latest Ansible version v2.9.23 only. When you create a {{site.data.keyword.bpshort}} action, you must ensure that your Ansible playbooks can be run with this version. You cannot specify a specific Ansible version for your playbook. 
+{{site.data.keyword.bpshort}} currently supports the latest Ansible version v2.9.23 only. When you create a {{site.data.keyword.bpshort}} action, you must ensure that your Ansible playbooks can be run with this version. You cannot specify a specific Ansible version for your playbook.
 
 However, if you use existing Ansible roles or collections in your playbook, you can specify the version of the role or collection that you want to run by using a `requirements.yml` file. For more information about how to reference roles and collections in your playbook, see [Referencing Ansible roles in your playbook](/docs/schematics?topic=schematics-ansible-roles-galaxy) and [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections). To learn more about how to specify versions for roles and collections, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}.
 
