@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-12"
+lastupdated: "2025-09-18"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1141,7 +1141,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics kms instances ls -l US -s byok
+ibmcloud schematics kms instances ls --location US --scheme byok
 ```
 {: pre}
 

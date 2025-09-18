@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-12"
+lastupdated: "2025-09-18"
 
 keywords: schematics
 subcollection: schematics
@@ -169,9 +169,13 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
-* [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#August-2025)
+* [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#September-2025)
 
     * Review the release notes for September 2025.
+
+    * [17 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1725)
+
+        * Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}}
 
     * [12 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1225)
 
@@ -1398,6 +1402,20 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration&interface=ui#integrate-byok-ui)
 
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration&interface=cli#integrate-byok-cli)
+
+[Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sm-integration#sm-integration)
+
+* [Before you begin](/docs/schematics?topic=schematics-sm-integration#sm-integration-prerequisites)
+
+* [Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}} Terraform by using console](/docs/schematics?topic=schematics-sm-integration&interface=ui#sm-integrate-wks)
+
+    * [Integrating {{site.data.keyword.secrets-manager_short}} in variable](/docs/schematics?topic=schematics-sm-integration&interface=ui#sm-integrate-variable)
+
+* [Steps to integrate {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}} by using CLI](/docs/schematics?topic=schematics-sm-integration&interface=cli#sm-cli)
+
+* [Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}} Terraform by using API](/docs/schematics?topic=schematics-sm-integration&interface=api#sm-api)
+
+* [Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}} Terraform by using Terraform](/docs/schematics?topic=schematics-sm-integration&interface=terraform#sm-terraform)
 
 
 ## Working with Terraform
