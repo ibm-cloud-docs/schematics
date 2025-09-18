@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-12"
+lastupdated: "2025-09-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -27,10 +27,17 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {: important}
 
 ## September 2025
-{: #August-2025}
+{: #September-2025}
 
 Review the release notes for September 2025.
 {: shortdesc}
+
+### 17 September 2025
+{: #schematics-sept1725}
+{: release-note}
+
+Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}}
+:   {{site.data.keyword.bpshort}} supports [integration with {{site.data.keyword.secrets-manager_short}}](/docs/schematics?topic=schematics-sm-integration&interface=ui) that allows you to securely manage sensitive information without displaying actual secret values in {{site.data.keyword.bpshort}} automation stacks.
 
 ### 12 September 2025
 {: #schematics-sept1225}
