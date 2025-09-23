@@ -177,6 +177,8 @@ subcollection: schematics
 
         * Additional IP addresses for {{site.data.keyword.bpshort}} Dallas (us-south) region from 23 October 2025
 
+        * Agent deployment in `ca-mon` cluster
+
     * [17 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1725)
 
         * Integrating {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}}
@@ -1243,6 +1245,8 @@ subcollection: schematics
 * [Creating an agent through API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
 
 * [Creating an agent through Terraform](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#create-agent-terraform)
+
+* [Note](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#agent-create-note)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=terraform#agent-create-nextsteps)
 

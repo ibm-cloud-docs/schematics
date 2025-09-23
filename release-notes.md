@@ -39,6 +39,9 @@ Review the release notes for September 2025.
 Additional IP addresses for {{site.data.keyword.bpshort}} Dallas (us-south) region from 23 October 2025
 :   Additional IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the Dallas (us-south) region. For more information about the public and private IP addresses, refer to [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
+Agent deployment in `ca-mon` cluster
+:   When upgrading an Agent in the `ca-mon` cluster, both the `private` and `public` service endpoints must be enabled. These endpoints are required only during installation or upgrade. For more information, refer to [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview&interface=ui), [prerequisites](/docs/schematics?topic=schematics-agent-infrastructure-overview&interface=ui#agents-setup-prereq), [deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui#agent-create-note), and [updating agents](/docs/schematics?topic=schematics-update-agent-overview&interface=ui).
+
 ### 17 September 2025
 {: #schematics-sept1725}
 {: release-note}

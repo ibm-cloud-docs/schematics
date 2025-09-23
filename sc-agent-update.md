@@ -33,6 +33,9 @@ Agent update cannot be done on a deployed agent through `terraform init`, `terra
 Review and select your [agent version](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) to update.
 {: shortdesc}
 
+When upgrading an Agent in the `ca-mon` cluster, make sure both the `private` and `public` service endpoints are enabled. These endpoints are required only during installation or upgrade. After the successful installation or upgrade, you can disable the `public` service endpoint. However, you must re-enable the `public` service endpoint for future Agent upgrades.
+{: note}
+
 ## Updating an agent definition
 {: #update-agent-ui}
 {: ui}
