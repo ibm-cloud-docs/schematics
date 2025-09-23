@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-09-23"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -47,7 +47,7 @@ Update your agent configuration by choosing the cluster and {{site.data.keyword.
 3. Click **Update and validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
 4. Click **Deploy** to redeploy an agent.
 
-## Creating an agent definition through CLI 
+## Creating an agent definition through CLI
 {: #update-agent-cli}
 {: cli}
 
@@ -117,7 +117,7 @@ Example
   "secure": true
   }
   },
-  {   
+  {
   "name": "devops_api_key",
   "value": "api_key where you want to create agent and run fvts",
   "metadata": {
@@ -142,13 +142,13 @@ Syntax
   PUT /v2/agents/<enter your agentID>/deploy HTTP/1.1
   Host: schematics.cloud.ibm.com
   Content-Type: application/json
-  Authorization: Bearer 
+  Authorization: Bearer
 ```
 {: codeblock}
 
 
 
-## Agents version history 
+## Agents version history
 {: #agent_version-releases}
 
 Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agents. Be sure to keep your {{site.data.keyword.bpshort}} Agents up-to-date so that you can use all the available features.
@@ -156,7 +156,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agen
 
 | Version | Release date | Changes  |
 | ----- | ------- | -------------- |
-| 1.5.0 | 31 July 2025 | {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-mon` region.|
+| 1.5.0 | 31 July 2025 | {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-mon` region and supports Terraform version `1.10`, `1.11`, `1.12`.|
 | 1.4.0 | 25 April 2025 | {{site.data.keyword.bpshort}} [agent version v1.4.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-tor` region.|
 | 1.3.1 | 28 February 2025 | Fixes the Ansible inventory generation in the UI for Windows system credentials.|
 | 1.3.0 | 30 October 2024 | Supports `schematics-agent-ansible-job` instead of an existing `schematics-ansible-job` and Terraform version 1.9 |

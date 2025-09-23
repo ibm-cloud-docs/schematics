@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-09-23"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -31,6 +31,13 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for September 2025.
 {: shortdesc}
+
+### 23 September 2025
+{: #schematics-sept2325}
+{: release-note}
+
+Additional IP addresses for {{site.data.keyword.bpshort}} Dallas (us-south) region from 23 October 2025
+:   Additional IP addresses for allowlisting {{site.data.keyword.bpshort}} endpoints in the Dallas (us-south) region. For more information about the public and private IP addresses, refer to [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ### 17 September 2025
 {: #schematics-sept1725}
@@ -71,7 +78,7 @@ Logging and monitoring in Montreal region
 :   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.
 
 Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on Montreal (`ca-mon`) region.
+:   The {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) supports on Montreal (`ca-mon`) region and supports Terraform version `1.10`, `1.11`, `1.12`.
 
 ### 1 August 2025
 {: #schematics-aug0125}
