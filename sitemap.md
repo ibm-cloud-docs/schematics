@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-09-23"
 
 keywords: schematics
 subcollection: schematics
@@ -172,6 +172,10 @@ subcollection: schematics
 * [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#September-2025)
 
     * Review the release notes for September 2025.
+
+    * [23 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept2325)
+
+        * Additional IP addresses for {{site.data.keyword.bpshort}} Dallas (us-south) region from 23 October 2025
 
     * [17 September 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1725)
 
