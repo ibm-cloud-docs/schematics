@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-09-23"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -32,15 +32,18 @@ Cluster
     - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
     - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
 
+When upgrading an Agent in the `ca-mon` cluster, make sure both the `private` and `public` service endpoints are enabled. These endpoints are required only during installation or upgrade. After the successful installation or upgrade, you can disable the `public` service endpoint. However, you must re-enable the `public` service endpoint for future Agent upgrades.
+{: note}
+
 To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}} based on the requirement, You can control egress traffic through security groups and network access control lists (ACLs).
-    
+
 You need to define any security group rules and ACLs at the VPC level before deploying an agent on the cluster. For more information, see the [Terraform script to define security groups and ACLs on a VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
 {: note}
 
 {{site.data.keyword.cos_full_notm}}
 :   The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster.
     - To deploy an agent, you must have the necessary privileges to create the `HMAC credentials` for the {{site.data.keyword.objectstorageshort}} bucket and store the credential as a Kubernetes secret.
-    - The {{site.data.keyword.cos_full_notm}} instance and bucket must be created for the successful deployment. 
+    - The {{site.data.keyword.cos_full_notm}} instance and bucket must be created for the successful deployment.
     - Record information about the {{site.data.keyword.cos_full_notm}} resources such as `COS instance name`, `COS bucket name`, and `bucket region` for the later use.
 
 IAM access permission
@@ -77,7 +80,7 @@ Access to data center resources can be configured by using [Direct Link](/docs/d
 
 With agents, you need to do the network security policies for the Kubernetes cluster, and any VPC Security Group or Access Control List policies for the running agent. Therefore, determining the ability of workspace and action jobs to access private cloud resources and the {{site.data.keyword.cloud_notm}} APIs for the service provisioning and configuration.
 
-## Agent capacity planning 
+## Agent capacity planning
 {: #agent-capacity-planning}
 
 You need to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster based on the number of concurrent jobs. To make the following changes, you can use the Kubernetes dashboard or [kubectl](/docs/containers?topic=containers-cli-install) commands.

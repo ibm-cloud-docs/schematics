@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-09-23"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -30,7 +30,13 @@ The following prerequisites must be met before you begin deploying the agent inf
 ## Provisioning agent infrastructure using {{site.data.keyword.bpshort}}
 {: #agents-infra-workspace}
 
-{{site.data.keyword.bpshort}} provides a [sample template](https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure){: external} that you can use to provision the infrastructure needed by your agent. The Agent infrastructure is composed of the following resources.
+{{site.data.keyword.bpshort}} provides a [sample template](https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure){: external} that you can use to provision the infrastructure needed by your agent.
+{: shortdesc}
+
+When installing an Agent in the `ca-mon` cluster, make sure both the `private` and `public` service endpoints are enabled. These endpoints are required only during installation or upgrade. After the successful installation or upgrade, you can disable the `public` service endpoint. However, you must re-enable the public service endpoint before performing any future Agent upgrades.
+{: note}
+
+The Agent infrastructure is composed of the following resources.
 
 - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
 - [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-vpc-subnets) or [{{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}](/docs/openshift?topic=openshift-learning-path-admin#admin_cluster) as `vpc_kubernetes_cluster`.
@@ -48,7 +54,7 @@ The following prerequisites must be met before you begin deploying the agent inf
         - Click `Next`.
     - In the **Workspace details** section enter
         - **Workspace name** as `schematics-agent-infrastructure`.
-        - **Tags** as `agents-infra`. 
+        - **Tags** as `agents-infra`.
         - **Resource group** as `default` or other resource group for this workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). You must have the access permission for the resource group.
         - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
         - Click `Next`.
@@ -58,7 +64,7 @@ The following prerequisites must be met before you begin deploying the agent inf
 3. On successful creation of the `schematics-agent-infrastructure` Workspace, review and edit the `agent infrastructure` input variables in the workspace **Settings** page.
 
 The agent infrastructure and the workspace can be in different resource groups and locations. The agent infrastructure workspace can be defined in any {{site.data.keyword.bpshort}} supported region.
-{: note} 
+{: note}
 
 | Input variable  | Data type | Required/Optional | Description |
 |--|--|--|-- |
@@ -69,11 +75,11 @@ The agent infrastructure and the workspace can be in different resource groups a
 | `tags` | List(String) | `Optional` | A list of user tags to be applied to the deployed, VPC, and cluster. For example, `myproject:agent`, `test:agentinfra`. You can see the provisioned resources of an Agent faster by using Tag name. |
 {: caption="{{site.data.keyword.bpshort}} Agent infrastructure inputs" caption-side="bottom"}
 
-4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the agent infrastructure. It takes up to 45 - 90 minutes to provision all the resources. 
- 
+4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the agent infrastructure. It takes up to 45 - 90 minutes to provision all the resources.
+
 5. View the **Jobs** logs and **Resources** page to monitor the resources are provisioned successfully and verify that the workspace status is now `ACTIVE`.
 
-    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information is used when deploying the agent. If the job fails and you do not observe the `cluster_id` details in the Jobs log, you must have the IAM permissions to create `VPC Infrastructure`, and `Kubernetes cluster` services. Then, click **Apply plan** to redeploy the agent infrastructure. 
+    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information is used when deploying the agent. If the job fails and you do not observe the `cluster_id` details in the Jobs log, you must have the IAM permissions to create `VPC Infrastructure`, and `Kubernetes cluster` services. Then, click **Apply plan** to redeploy the agent infrastructure.
     {: important}
 
 ### Expected outcome
@@ -94,4 +100,4 @@ Follow the steps to view the Agent infrastructure workspace setup.
 {: #nextsteps-agent-infra}
 
 You have completed the {{site.data.keyword.bpshort}} Agent infrastructure set up.
-- Now, you need to [Deploy your Agent](/docs/schematics?topic=schematics-deploy-agent-overview) 
+- Now, you need to [Deploy your Agent](/docs/schematics?topic=schematics-deploy-agent-overview)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-09-24"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -60,7 +60,7 @@ Review and complete the steps that are described in [preparing for agent deploym
 4. Click **Validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
 5. Click **Deploy** to deploy an agent.
 
-## Creating an agent definition through CLI 
+## Creating an agent definition through CLI
 {: #create-agent-cli}
 {: cli}
 
@@ -81,7 +81,7 @@ Output
 ```text
 Creating agent...
 OK
-                    
+
 ID               agent-ga-prod-cli-jan-10.soA.cd1c
 Name             agent-ga-prod-cli-jan-10
 Status           Defined
@@ -91,7 +91,7 @@ Agent Location   us-south
 Resource Group   aac37f57b20142dba1a435c70aeb12df
 Metadata         [Metadata]
                  - [git]
-                 - [github.com] 
+                 - [github.com]
 ```
 {: screen}
 
@@ -109,10 +109,10 @@ Output
 ```text
 Retrieving agent...
 OK
-                    
-ID               agent-ga-prod-cli-jan-10.soA.cd1c  
-Name             agent-ga-prod-cli-jan-10   
-Status           ACTIVE   
+
+ID               agent-ga-prod-cli-jan-10.soA.cd1c
+Name             agent-ga-prod-cli-jan-10
+Status           ACTIVE
 Version          1.0.0
 Location         us-south
 Agent Location   us-south
@@ -132,7 +132,7 @@ You can verify the agent definition and cluster availability by using the agent 
 Example
 
 ```sh
-ibmcloud schematics agent validate --id agent-ga-prod-cli-jan-10.soA.cd1c  
+ibmcloud schematics agent validate --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -154,7 +154,7 @@ Status	job_finished
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c   
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -163,14 +163,14 @@ Output
 ```text
 Retrieving agent...
 OK
-                    
-ID               agent-ga-prod-cli-jan-10.soA.cd1c    
-Name             agent-ga-prod-cli-jan-10   
-Status           ACTIVE   
-Version             
-Location         us-south   
-Agent Location   us-south  
-Resource Group   Default   
+
+ID               agent-ga-prod-cli-jan-10.soA.cd1c
+Name             agent-ga-prod-cli-jan-10
+Status           ACTIVE
+Version
+Location         us-south
+Agent Location   us-south
+Resource Group   Default
 
 Recent Job   Job ID                             Status                  Last modified
 DEPLOY       -                                  Deploy in progress      2024-01-10T09:54:32.607Z
@@ -184,11 +184,11 @@ VALIDATE     8b168c1e0e4b35708e95c2af9a99d9d4   Successful validation   2024-01-
 
 You use the agent definition to deploy the agent with the `agent deploy` command. The `agent deploy` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the `force deploy` option.
 
-The agent deployment takes several minutes to complete. 
+The agent deployment takes several minutes to complete.
 {: shortdesc}
 
 ```sh
-ibmcloud schematics agent deploy --id agent-ga-prod-cli-jan-10.soA.cd1c  
+ibmcloud schematics agent deploy --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -203,7 +203,7 @@ Job ID	.ACTIVITY.465e9716
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c 
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -212,16 +212,16 @@ Output
 ```text
 Retrieving agent...
 OK
-                    
-ID               agent-ga-prod-cli-jan-10.soA.cd1c   
-Name             agent-ga-prod-cli-jan-10  
-Status           ACTIVE   
-Version          1.0.0   
-Location         us-south  
-Agent Location   us-south  
-Resource Group   Default   
-                 
-Recent Job   Job ID               Status                 Last modified   
+
+ID               agent-ga-prod-cli-jan-10.soA.cd1c
+Name             agent-ga-prod-cli-jan-10
+Status           ACTIVE
+Version          1.0.0
+Location         us-south
+Agent Location   us-south
+Resource Group   Default
+
+Recent Job   Job ID               Status                 Last modified
 DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2024-01-10T10:20:48.435Z
 VALIDATE     8b168c1e0e4b35708e   Successful validation   2024-01-10T09:53:48.435Z
 ```
@@ -236,7 +236,7 @@ You can verify the health of the recently deployed agent by using the `agent hea
 Example
 
 ```sh
-ibmcloud schematics agent health --id agent-ga-prod-cli-jan-10.soA.cd1c  
+ibmcloud schematics agent health --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -251,7 +251,7 @@ Job ID	.ACTIVITY.f6f77588
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c  
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -260,18 +260,18 @@ Output
 ```text
 Retrieving agent...
 OK
-                    
-ID               agent-ga-prod-cli-jan-10.soA.cd1c   
-Name             agent-ga-prod-cli-jan-10   
-Status           ACTIVE   
-Version             
-Location         us-south  
-Agent Location   us-south  
-Resource Group   Default   
-                 
-Recent Job   Job ID                             Status                   Last modified   
-DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               0001-01-01T00:00:00.000Z   
-HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03-27T12:31:15.326Z 
+
+ID               agent-ga-prod-cli-jan-10.soA.cd1c
+Name             agent-ga-prod-cli-jan-10
+Status           ACTIVE
+Version
+Location         us-south
+Agent Location   us-south
+Resource Group   Default
+
+Recent Job   Job ID                             Status                   Last modified
+DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               0001-01-01T00:00:00.000Z
+HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03-27T12:31:15.326Z
 ```
 {: screen}
 
@@ -289,7 +289,7 @@ Example
   POST /v2/agents HTTP/1.1
   Host: schematics.cloud.ibm.com
   Content-Type: application/json
-  Authorization: Bearer 
+  Authorization: Bearer
 
   {
     "name": "agentb1-gsmforvpc",
@@ -359,7 +359,7 @@ Syntax
   PUT /v2/agents/<enter your agentID>/deploy HTTP/1.1
   Host: schematics.cloud.ibm.com
   Content-Type: application/json
-  Authorization: Bearer 
+  Authorization: Bearer
 ```
 {: codeblock}
 
@@ -369,7 +369,7 @@ Example
   PUT /v2/agents/agentb1-gsmforvpc.soA.115c/deploy HTTP/1.1
   Host: schematics.cloud.ibm.com
   Content-Type: application/json
-  Authorization: Bearer 
+  Authorization: Bearer
 ```
 {: codeblock}
 
@@ -387,7 +387,7 @@ Output
 ```
 {: screen}
 
-## Creating an agent through Terraform 
+## Creating an agent through Terraform
 {: #create-agent-terraform}
 {: terraform}
 
@@ -423,7 +423,7 @@ To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, de
     ```
     {: codeblock}
 
-5. Initialize 
+5. Initialize
 
     ```sh
     terraform init
@@ -448,6 +448,12 @@ To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, de
 
 You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_agent_deploy){: external} documentation for more parameters specific to the resource.
 {: note}
+
+## Note
+{: #agent-create-note}
+
+After the Agent deployment is completed for `ca-mon`, it will initially show an error status. To resolve this, you need to [create a  Virtual Private Endpoint Gateway (VPE Gateway)](/docs/vpc?topic=vpc-vpc-reference#command-examples-endpoint-gateway-create) for the Schematics `private` region by targeting the `kube-vpeg-<cluster_IDxxxx>` security group in the `schematics-runtime` namespace. This process takes around 5 minutes. Once completed, the Agent deployment status changes to complete.
+
 
 ## Next steps
 {: #agent-create-nextsteps}
