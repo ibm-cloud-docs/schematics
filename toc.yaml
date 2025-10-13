@@ -135,7 +135,7 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - ha-dr.md
+      - sch-ha-dr.md
       - sc-about-responsibilities.md
       - topicgroup:
           label: API reference
@@ -178,6 +178,7 @@ toc:
       - sc-tools.md
       - locations.md
       - limitations.md
+      - ha-dr.md
       - license-notices.md
   - navgroup:
       id: help

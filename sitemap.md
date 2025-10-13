@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-10-13"
 
 keywords: schematics
 subcollection: schematics
@@ -1993,7 +1993,37 @@ subcollection: schematics
 {: #sitemap_understanding_high_availability_and_disaster_recovery_for_}
 
 
-[Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
+[Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-ha-dr#ha-dr)
+
+* [High availability architecture](/docs/schematics?topic=schematics-ha-dr#ha-architecture)
+
+    * [High availability features](/docs/schematics?topic=schematics-ha-dr#ha-features)
+
+* [Disaster recovery architecture](/docs/schematics?topic=schematics-ha-dr#disaster-recovery-intro)
+
+    * [Disaster recovery features](/docs/schematics?topic=schematics-ha-dr#dr-features)
+
+    * [Planning for DR](/docs/schematics?topic=schematics-ha-dr#features-for-disaster-recovery)
+
+* [Backup and restore customer-provided feature](/docs/schematics?topic=schematics-ha-dr#feature-backup-restore-feature)
+
+    * [Live syrnchorization](/docs/schematics?topic=schematics-ha-dr#live-syrnchorization)
+
+    * [Planning for disaster recovery](/docs/schematics?topic=schematics-ha-dr#features-for-disaster-recovery-feature)
+
+* [Your responsibilities for HA and DR](/docs/schematics?topic=schematics-ha-dr#feature-responsibilities)
+
+* [Recovery time objective (RTO) and recovery point objective (RPO)](/docs/schematics?topic=schematics-ha-dr#rto-rpo-features)
+
+* [Change management](/docs/schematics?topic=schematics-ha-dr#change-management)
+
+* [How {{site.data.keyword.IBM_notm}} supports disaster recovery planning](/docs/schematics?topic=schematics-ha-dr#ibm-disaster-recovery)
+
+    * [How {{site.data.keyword.IBM_notm}} recovers from zone failures](/docs/schematics?topic=schematics-ha-dr#ibm-zone-failure)
+
+    * [How {{site.data.keyword.IBM_notm}} recovers from regional failures](/docs/schematics?topic=schematics-ha-dr#ibm-regional-failure)
+
+* [How {{site.data.keyword.IBM_notm}} maintains services](/docs/schematics?topic=schematics-ha-dr#ibm-service-maintenance)
 
 
 ## Your responsibilities when using {{site.data.keyword.bpshort}}
@@ -2294,6 +2324,13 @@ subcollection: schematics
 * [Git repo restrictions](/docs/schematics?topic=schematics-schematics-limitations#git-restrictions)
 
 * [Cost estimate](/docs/schematics?topic=schematics-schematics-limitations#cost-restrictions)
+
+
+## High availability and disaster recovery
+{: #sitemap_high_availability_and_disaster_recovery}
+
+
+[High availability and disaster recovery](/docs/schematics?topic=schematics-high-availability#high-availability)
 
 
 ## {{site.data.keyword.bpshort}} notices

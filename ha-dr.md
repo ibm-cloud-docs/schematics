@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-10-13"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}
+# High availability and disaster recovery
 {: #high-availability}
 {: help}
 {: support}
