@@ -107,7 +107,7 @@ You need to follow these steps to manually back up your workspace in {{site.data
 
 If the workspace details are extracted and you want to restore the workspace with terraform state file, use [Workspace Create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command. The restore creates a workspace in your account for your reference.
 
-### Live syrnchorization
+### Live synchorization
 {: #features-live-sync-feature}
 
 You can write a script to download the workspaces and import to backup instances or your {{site.data.keyword.cos_full}} bucket.
@@ -137,7 +137,6 @@ Interruptions in network connectivity and short periods of unavailability of a s
 
 For more information about responsibility ownership between you and {{site.data.keyword.cloud_notm}} for {{site.data.keyword.bpshort}}, see [Your responsibilities in using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sc-responsibilities&interface=ui).
 
-198779
 
 ## Recovery time objective (RTO) and recovery point objective (RPO)
 {: #rto-rpo-features}
