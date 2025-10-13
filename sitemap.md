@@ -2007,7 +2007,7 @@ subcollection: schematics
 
 * [Backup and restore customer-provided feature](/docs/schematics?topic=schematics-ha-dr#feature-backup-restore-feature)
 
-    * [Live syrnchorization](/docs/schematics?topic=schematics-ha-dr#features-live-sync-feature)
+    * [Live synchorization](/docs/schematics?topic=schematics-ha-dr#features-live-sync-feature)
 
     * [Planning for disaster recovery](/docs/schematics?topic=schematics-ha-dr#features-for-disaster-recovery-feature)
 
