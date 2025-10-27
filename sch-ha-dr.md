@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-10-13"
+lastupdated: "2025-10-27"
 
 keywords: HA for Schematics, DR for Schematics, Schematics recovery time objective, Schematics recovery point objective
 
@@ -77,7 +77,7 @@ The DR steps must be practiced regularly. As you build your plan, consider the f
 | Zone failure | IBM provides an instance that is resilient from a zone failure - no configuration required.|
 | Data corruption | Restore a point in time uncorrupted version from the external source of truth or backup and restore. |
 | Regional failure | Switch critical workloads to use the restored version in a recovery region. Restore the instance by using external source of truth, backup and restore. |
-{: caption="DR scenarios for {{site.data.keyword.bpshort}}" caption-side="bottom"}
+{: caption="DR planning scenario for {{site.data.keyword.bpshort}}" caption-side="bottom"}
 
 ## Backup and restore customer-provided feature
 {: #feature-backup-restore-feature}
@@ -111,20 +111,6 @@ If the workspace details are extracted and you want to restore the workspace wit
 {: #features-live-sync-feature}
 
 You can write a script to download the workspaces and import to backup instances or your {{site.data.keyword.cos_full}} bucket.
-
-### Planning for disaster recovery
-{: #features-for-disaster-recovery-feature}
-
-The disaster recovery steps must be practiced regularly. As you build your plan, consider the following failure scenarios and resolutions.
-
-| Failure | Resolution |
-| -------------- | -------------- |
-| Hardware failure (single point) | IBM provides an instance that is resilient from single point of hardware failure within a zone - no configuration required. |
-| Zone failure | IBM provides an instance that is resilient from a zone failure - no configuration required. |
-| Data corruption | Use rotation to restore the previous secret version in an available service instance. |
-| Data corruption | Restore a point in time uncorrupted version from the backup and restore. |
-| Regional failure | Switch critical workloads to use the restored version in a recovery region. Restore the instance by using backup and restore, or live synchronization. |
-{: caption="DR scenarios for {{site.data.keyword.bp_short}}" caption-side="bottom"}
 
 ## Your responsibilities for HA and DR
 {: #feature-responsibilities}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-13"
+lastupdated: "2025-10-27"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,18 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [October 2025](/docs/schematics?topic=schematics-schematics-relnotes#October-2025)
+
+    * Review the release notes for October 2025.
+
+    * [27 October 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2725)
+
+        * Enhanced Ansible management in {{site.data.keyword.bpshort}} Action
+
+        * Secure credential and variable management
+
+        * Inventory management
 
 * [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#September-2025)
 
@@ -1147,29 +1159,68 @@ subcollection: schematics
 
 * [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
 
-[Working with Ansible](/docs/schematics?topic=schematics-action-working#action-working)
-
-* [Creating and running a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-action-working#action-working-prereq)
-
-    * [To create an Ansible playbook](/docs/schematics?topic=schematics-action-working#create-action-working)
-
-* [Updating the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
-
-* [Deleting an action](/docs/schematics?topic=schematics-action-working#delete-ansible-actions)
-
-* [Action state](/docs/schematics?topic=schematics-action-working#action-state-diagram)
-
-    * [State diagram flow](/docs/schematics?topic=schematics-action-working#state-diagram-flow)
-
-* [Reviewing actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
-
 [Creating an Ansible playbook](/docs/schematics?topic=schematics-create-playbook#create-playbook)
 
 * [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections)
 
-* [Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
+* [Preparing Your Ansible Playbook for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
+
+* [Next steps](/docs/schematics?topic=schematics-create-playbook#create-playbook-nextsteps)
+
+[Creating {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-working#action-working)
+
+* [Prerequisites](/docs/schematics?topic=schematics-action-working#action-working-prereq)
+
+* [Creating an action by using UI](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-ui)
+
+* [Next steps](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-nextsteps)
+
+[Updating a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working-update#action-working-update)
+
+* [Prerequisites](/docs/schematics?topic=schematics-action-working-update#action-working-prereq)
+
+* [Updating an action by using UI](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-settings)
+
+* [Next steps](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-working-update-nextsteps)
+
+[Deleting {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-delete-ansible-actions#delete-ansible-actions)
+
+* [Deleting an action using UI](/docs/schematics?topic=schematics-delete-ansible-actions&interface=ui#create-action-working-ui)
+
+
+### Managing Ansible
+{: #sitemap_managing_ansible}
+
+
+[Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
+
+* [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
+
+    * [Defining static hosts](/docs/schematics?topic=schematics-inventories-setup#static-host-defs)
+
+    * [Creating the host file](/docs/schematics?topic=schematics-inventories-setup#static-inv-create)
+
+    * [File format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format)
+
+    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
+
+* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
+
+    * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
+
+    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
+
+[Secure and streamline Ansible automation with {{site.data.keyword.bpshort}} multihost credentials and variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-setup)
+
+* [Managing Credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials)
+
+* [Types of credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credential-types)
+
+* [Managing variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable)
+
+* [Managing credentials and variables by using UI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-mange)
+
+* [Managing credentials and variables by using CLI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-manage-cli)
 
 [Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
@@ -1194,6 +1245,12 @@ subcollection: schematics
     * [Adding the button in Markdown](/docs/schematics?topic=schematics-auto-deploy-url#add-button-markdown)
 
 * [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
+
+[Managing {{site.data.keyword.bpshort}} Action state](/docs/schematics?topic=schematics-action-state-diagram#action-state-diagram)
+
+* [State diagram flow](/docs/schematics?topic=schematics-action-state-diagram#state-diagram-flow)
+
+[Reviewing actions job](/docs/schematics?topic=schematics-action-jobs#action-jobs)
 
 
 ## Working with Extensions
@@ -1382,24 +1439,6 @@ subcollection: schematics
     * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_2)
 
     * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_3)
-
-[Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
-
-* [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
-
-    * [Defining static hosts](/docs/schematics?topic=schematics-inventories-setup#static-host-defs)
-
-    * [Creating the host file](/docs/schematics?topic=schematics-inventories-setup#static-inv-create)
-
-    * [File format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format)
-
-    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
-
-* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
-
-    * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
-
-    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
 
 [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#kms-integration)
 
@@ -2008,8 +2047,6 @@ subcollection: schematics
 * [Backup and restore customer-provided feature](/docs/schematics?topic=schematics-ha-dr#feature-backup-restore-feature)
 
     * [Live synchorization](/docs/schematics?topic=schematics-ha-dr#features-live-sync-feature)
-
-    * [Planning for disaster recovery](/docs/schematics?topic=schematics-ha-dr#features-for-disaster-recovery-feature)
 
 * [Your responsibilities for HA and DR](/docs/schematics?topic=schematics-ha-dr#feature-responsibilities)
 

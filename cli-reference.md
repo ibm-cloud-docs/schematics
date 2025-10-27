@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-10-27"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1285,33 +1285,38 @@ Review the commands to create, update, list, delete and work with your {{site.da
 ### `ibmcloud schematics inventory create`
 {: #schematics-create-inv}
 
-Create a [resource inventory](/docs/schematics?topic=schematics-inventories-setup) in {{site.data.keyword.bplong_notm}} that you can use with a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
+To create a [resource inventory](/docs/schematics?topic=schematics-inventories-setup) in {{site.data.keyword.bpshort}} for use with an Ansible action, you can either use a payload file or the interactive mode. The inventory includes all target hosts where you intend to run your Ansible playbook.
 {: shortdesc}
 
 Syntax
 
 ```sh
-ibmcloud schematics inventory create --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics inventory create --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--connection-type CONNECTION_TYPE] [--bastion-ip-address BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--inventory-view-json INVENTORY_VIEW_JSON_FILE] [--inventory-ini-file INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
-You need to pass either `--inventories-ini` file path or `--resource-query` ID for the inventory to use the target host details.
-{: note}
-
-Command options
+Command Options
 
 | Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
+| --- | -------- | ------- |
 | `--name` or `-n` | Required | The unique name of a resource inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
-|`resource-group` or `-r`| Optional | The name of the resource group where you want to create the action.|
-|`--inventories-ini` or `-y` | Optional |The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. For more information about how to create a static resource inventory file, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv). |
-|`--resource-query` | Optional |Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. To create a resource query, see the `ibmcloud schematics resource-query create` [command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq). To enter multiple resource query IDs, use `--resource-query id1 --resource-query id2`.|
-| `--file` or `-f` | Optional |The path to the JSON file where you specified the resource inventory that you want to create.|
-| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
+| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`. |
+| `resource-group` or `-r` | Optional | The name of the resource group where you want to create the action. |
+| `--connection-type` or `--ct` | Optional | Type of an inventory connection. Supports both `ssh` and `winrm`. |
+| `--bastion-ip-address` or `-b` | Optional | Enter the IP address of the Bastion host. |
+| `--bastion-credential-json` or `--bj` | Optional | Provide the path of the JSON file that contains the Bastion credential payload to access the Bastion host. |
+| `--credential-json` or `--cj` | Optional | Provide the JSON file path that contains the common credential JSON payload to access the target hosts. |
+| `--inventory-view-json` or `--inv` | Optional | Path to JSON file that contains the host details. |
+| `--inventories-ini-file` or `-y` | Optional | The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. |
+| `--resource-query` | Optional | Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. |
+| `--file` or `-f` | Optional | The path to the JSON file where you specified the resource inventory that you want to create. |
+| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported. |
 | `--no-prompt` | Optional | Set this flag to create an inventory without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} inventory create flags" caption-side="top"}
+
+You must pass either `--inventories-ini` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error.
+{: note}
 
 #### Using the payload file
 {: #inv-create-payload}
@@ -1322,38 +1327,97 @@ You can provide a payload file to specify certain parameters for the `inventory 
 You need to replace the `<...>` placeholders with the actual values. For example, `"<INVENTORY_NAME>"` as `"myinventory"`.
 {: note}
 
-
 Syntax
 
 ```json
 {
-    "name": "<INVENTORY_NAME>",
-    "description": "<DESCRIPTION",
-    "location": "<GEOGRAPHY>",
-    "resource_group": "<RESOURCE_GROUP>",
-    "resource_queries": [
-    "<RESOURCE_QUERY_ID>"
-    ]
+"inventory_view": {
+        "groups": [
+            {
+                "name": "g1",
+                "vars": [
+                    {
+                        "name": "varforweb2bvhewbvhei3GGGGG",
+                        "value": "varvalueforw2vrehbqiovrybuipqvebipqvrqpbibrv hvprqe",
+                        "metadata": {}
+                    }
+                ],
+                "credentials": {
+                    "name": "somevalUserG1",
+                    "value": "newvalueG1",
+                    "metadata": {}
+                },
+                "hosts": [
+                    {
+                        "alias": "aliasname",
+                        "name": "web1.com",
+                        "credential": {
+                            "metadata": {}
+                        }
+                    },
+                    {
+                        "alias": "web2.com",
+                        "name": "web2.com",
+                        "credential": {
+                            "metadata": {}
+                        },
+                        "vars": [
+                            {
+                                "name": "varforweb2",
+                                "value": "varvalueforw2vrehbqiovrybuipqvebipqvrqpbibrv hvprqe",
+                                "metadata": {}
+                            }
+                        ]
+                    },
+                    {
+                        "alias": "web3.com",
+                        "name": "web3.com",
+                        "credential": {
+                            "metadata": {}
+                        },
+                        "vars": [
+                            {
+                                "name": "varforwe23f",
+                                "value": "vqe",
+                                "metadata": {}
+                            },
+                            {
+                                "name": "varforweb233333",
+                                "value": "varvalueforw2vrehbqcecee",
+                                "metadata": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "group2",
+                "credentials": {
+                    "metadata": {}
+                },
+                "hosts": [
+                    {
+                        "alias": "group.com1",
+                        "name": "group.com1",
+                        "credential": {
+                            "metadata": {}
+                        }
+                    },
+                    {
+                        "alias": "group.com2",
+                        "name": "group.com2",
+                        "credential": {
+                            "metadata": {}
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }
-
 ```
 {: codeblock}
 
-Example
-
-```json
-{
-    "name": "myinventory",
-    "description": "This is the resource inventory for production",
-    "location": "us-east",
-    "resource_group": "default",
-        "resource_queries": [
-    "default.RESOURCEQUERY.string.df3d8a47"
-    ]
-
-}
-```
-{: codeblock}
 
 ```sh
 ibmcloud schematics inventory create --file inventory.json
@@ -1368,15 +1432,23 @@ Instead of entering your inventory details by using the command options or a pay
 {: shortdesc}
 
 1. Enter the command to create the inventory without any command options.
+
     ```sh
-    ibmcloud schematics inventory create
+    ibmcloud schematics inventory create ....
     ```
     {: pre}
 
 2. Enter a name for your inventory and press the return key.
 3. Enter the resource group where you want to create the inventory and press the return key.
-4. Enter the location where you want to create the inventory, such as **`us-south`**, **us-east**, **eu-de**, or **eu-gb**. Then, press the return key.
+4. Enter the location where you want to create the inventory, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. Then, press the return key.
 5. Review the details of the inventory that was created.
+
+Example
+
+```sh
+ibmcloud sch inventory create --name test_inv_hosts --description "Testing of Inventory multihost" --location us-south --resource-group Default --connection-type ssh --bastion-ip-address 1.1.0.0 --bastion-credential-json <JSON file path>
+```
+{: pre}
 
 ### `ibmcloud schematics inventory delete`
 {: #schematics-delete-inventory}
@@ -1478,6 +1550,8 @@ Syntax
 
 ```sh
 ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
+
+update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--connection-type CONNECTION_TYPE] [--bastion-ip-address BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--inventory-view-json INVENTORY_VIEW_JSON_FILE]  [--inventory-ini-file INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -1490,7 +1564,13 @@ Command options
 | `--description` or `-d` | Optional | The short description of an inventory. |
 | `--location` or `-l` | Optional | The geographic locations supported by {{site.data.keyword.bplong_notm}} service, such as `us-south`, `us-east`, `eu-de`, `eu-gb`, `ca-tor`, or `ca-mon`.|
 |`resource-group` or `-r`| Optional | The resource group name for an action.|
-|`--inventories-ini` or `-y` | Optional |  File path of `INI` format file that contains the host details.|
+| `--connection-type` or `--ct` | Optional | Type of an inventory connection. Supports both `ssh` and `winrm`. |
+| `--bastion-ip-address` or `-b` | Optional | Enter the IP address of the Bastion host. |
+| `--bastion-credential-json` or `--bj` | Optional | Provide the path of the JSON file that contains the Bastion credential payload to access the Bastion host. |
+| `--credential-json` or `--cj` | Optional | Provide the JSON file path that contains the common credential JSON payload to access the target hosts. |
+| `--inventory-view-json` or `--inv` | Optional | Path to JSON file that contains the host details. |
+| `--inventories-ini-file` or `-y` | Optional | File path of `INI` format file that contains the host details. |
+| `--resource-query` | Optional | Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. |
 |`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|

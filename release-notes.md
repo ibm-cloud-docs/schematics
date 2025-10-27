@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-10-27"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,26 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## October 2025
+{: #October-2025}
+
+Review the release notes for October 2025.
+{: shortdesc}
+
+### 27 October 2025
+{: #schematics-oct2725}
+{: release-note}
+
+Enhanced Ansible management in {{site.data.keyword.bpshort}} Action
+:   The enhancement introduces enabling seamless automation through GitHub and GitLab repositories by [create](/docs/schematics?topic=schematics-action-working), [update](/docs/schematics?topic=schematics-action-working-update), and [delete](/docs/schematics?topic=schematics-delete-ansible-actions) {{site.data.keyword.bpshort}} Action. Enhanced monitoring features provide detailed [action states](/docs/schematics?topic=schematics-action-state-diagram) and [job histories](/docs/schematics?topic=schematics-action-jobs), improving visibility and control over Ansible workflows.
+
+Secure credential and variable management
+:   You can now securely [manage credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials), [variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable), and [inventories](/docs/schematics?topic=schematics-inventories-setup), ensuring robust configuration and streamlined execution of automation tasks.
+
+Inventory management
+:   Define target hosts by using [resource inventories](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv), supporting both [static](/docs/schematics?topic=schematics-inventories-setup#static-inv) and [dynamic](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv) inventory creation methods.
+
 
 ## September 2025
 {: #September-2025}

@@ -53,10 +53,19 @@ toc:
           topics:
           - sc-about-actions.md
           - ansible-roles.md
-          - action-setup.md
           - create-ansible-playbook.md
-          - autodeploy_actionsamples.md
-          - autodeploy_template.md
+          - action-create.md
+          - action-update.md
+          - action-delete.md
+          - topicgroup:
+              label: Managing Ansible
+              topics:
+              - inventories.md
+              - action-manage-multihosts.md
+              - autodeploy_actionsamples.md
+              - autodeploy_template.md
+              - action-manage-state.md
+              - action-manage-job.md
       - topicgroup:
           label: Working with Extensions
           topics:
@@ -75,7 +84,6 @@ toc:
               - sc-agentb1-health.md
               - sc-agentb1-proxy.md
               - sc-agentb1-registry.md
-          - inventories.md
           - integration-kms.md
           - integration-secretsmanager.md
       - topicgroup:
