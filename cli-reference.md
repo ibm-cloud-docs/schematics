@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-28"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1549,9 +1549,7 @@ Update an existing resource inventory.
 Syntax
 
 ```sh
-ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
-
-update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--connection-type CONNECTION_TYPE] [--bastion-ip-address BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--inventory-view-json INVENTORY_VIEW_JSON_FILE]  [--inventory-ini-file INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--connection-type CONNECTION_TYPE] [--bastion-ip-address BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--inventory-view-json INVENTORY_VIEW_JSON_FILE]  [--inventory-ini-file INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
