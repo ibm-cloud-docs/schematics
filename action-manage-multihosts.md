@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-29"
 
 keywords: schematics multihost, ansible multihost credentials, multihost variables, multihost credentials, ansible multihost inventories, multihost
 
@@ -55,7 +55,7 @@ To manage credentials and variables by using the {{site.data.keyword.bpshort}} U
 2. Click the **Menu** icon ![Hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > **Ansible**.
 3. Select your playbook and click **Inventory** from the left pane.
 4. Click the three dots next to the inventory name and choose **Manage Credentials**.
-5. To add new credentials, click **Add credentials**. Enter the required details (for example, the username and password for Common Credentials) and click **Add**. You can edit or delete existing credentials as needed.
+5. To add new credentials, click **Add credentials**. Enter the required details. For example, the username and password for [Common Credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credential-types) and click **Add**. You can edit or delete existing credentials as needed.
 6. For managing variables, click **Add variables**. Choose the **Host or Hostgroup**, specify the **Variable** name, **value**, and mark it as sensitive if necessary. You can also edit or delete existing variables.
 7. After configuring credentials and variables, return to the **Overview** panel, review your actions, and make any necessary edits.
 8. Finally, click **Run your action** and monitor the logs for successful execution.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-29"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action,
 
@@ -64,22 +64,22 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
       1. Click **Create Inventory**.
       2. Enter a name for your inventory.
       3. Choose **Connection type** as `SSH` or `WinRM`, verify your location, and select your `Resource group` where you want to create an inventory. Connection type supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
-       - Select the **SSH** tab to enter the **username** and **{{site.data.keyword.cloud_notm}} resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook.
+       - Select the **SSH** tab to enter the **username** and **{{site.data.keyword.cloud_notm}} resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. When configuring an SSH connection type in {{site.data.keyword.bpshort}} actions, ensure that bastion host details are provided. Failing to include this information will result in an error.
          * Select the **Bastion host access is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
        - Select the **WinRM** tab, for the communication between the client and the server. Currently, WinRM supports only Windows system with the public `IPs` and do not support Bastion host.
        * Provide the **Username** and the **Password** of your Windows system with the public IP.
       4. Select the **Host groups** tab.
       5. Click **Create host group**.
       6. Enter a name for your host group and select the {{site.data.keyword.bpshort}} workspace that provisioned the target hosts that you want to add to your host group.
-      7. Optional: Click **Add query** to add another condition to your query and limit the number of target hosts that are added to your host group. You can choose to identify your hosts by using the resource name or a tag. For more information, see [supported resource queries](#supported-queries).
+      7. Optional: Click **Add query** to add another condition to your query and limit the number of target hosts that are added to your host group. You can choose to identify your hosts by using the resource name or a tag. For more information, see [supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
       8. Click **Add another condition** and repeat step 6-8 to add more host groups.
       9. Optional: Click **Define manually** tab to define the hosts and group of hosts upon which your playbook operates.
       10. Enter the host details by using [.ini file format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format) in **File** option.
       11. From the table list, select the host groups that you want to include in your resource inventory.
       12. Click **Create inventory** to define an inventory file that defines the hosts and group of hosts upon which your playbook operates.
 4. From the resource inventory table, select an existing resource inventory. Click the **Edit icon** against the inventory.
-        - Click **Manage Credentials** to configure the inventory credentials. For more information, see [Managing credentials in {{site.data.keywword.bpshort}} Actions](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials).
-        - Click **Manage Variables** to configure the inventory credentials. For more information, see [Managing variables in {{site.data.keywword.bpshort}} Actions](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable).
+        - Click **Manage Credentials** to configure the inventory credentials. For more information, see [Managing credentials in Schematics Actions](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials).
+        - Click **Manage Variables** to configure the inventory credentials. For more information, see [Managing variables in Schematics Actions](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable).
         - Click **Delete** to remove the inventory.
 5. Click **Create**. Your action is created with a `Normal` state, and you are directed to the `Details` section.
 6. Click **Check action** to verify the tasks you are trying to run, and ensure that your resources are properly linked to your playbook. You can monitor the **Action history** section to view the results in the logs. This check verifies the tasks that you are trying to run, and ensure that your resources are properly linked to your playbook.
@@ -92,4 +92,4 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 ## Next steps
 {: #create-action-working-nextsteps}
 
-After creating and configuring your {{site.data.keyword.bpshort}} Ansible action, the subsequent step is to [update the action](/docs/schematics?topic=schematics-sch-action-working-update#action-settings) settings as needed. It involves modifying the playbook, inventory, credentials, or variables to adapt to changes in your environment or requirements.
+After setting up your {{site.data.keyword.bpshort}} Ansible action, the next step is to [update its settings](/docs/schematics?topic=schematics-action-working-update&interface=ui) as required. This may involve adjusting the playbook, inventory, credentials, or variables to accommodate changes in your environment or needs. Focus on modifying these components to ensure your action remains aligned with your current requirements.

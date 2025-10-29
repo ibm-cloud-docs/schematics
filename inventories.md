@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-29"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -48,7 +48,7 @@ The use of (short form) hostnames is not supported.
 6. Select the **Define manually** tab.
 7. In the **File** field, enter the target hosts where you want to run the Ansible playbook. Make sure to specify your hosts in an `INI` syntax. For a sample syntax, see [File format](#inv-file-format). Review the [limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation) to ensure that your inventory definition is supported in {{site.data.keyword.bpshort}}.
 8. Click **Create inventory**.
-9. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create a {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
+9. Follow the [steps](/docs/schematics?topic=schematics-action-working&interface=ui) to create a {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
 
 ### File format
 {: #inv-file-format}
@@ -103,11 +103,11 @@ Dynamic resource inventories references Cloud resources that you provisioned wit
 6. Select the **Host groups** tab.
 7. Click **Create host group**.
 8. Enter a name for your host group and select the {{site.data.keyword.bpshort}} workspace that provisioned the target hosts that you want to add to your host group.
-9. Optional: Click **Add query** to add another condition to your query and limit the number of target hosts that are added to your host group. You can choose to identify your hosts by using the resource name or a tag. For more information, see [supported resource queries](#supported-queries).
+9. Optional: Click **Add query** to add another condition to your query and limit the number of target hosts that are added to your host group. You can choose to identify your hosts by using the resource name or a tag. For more information, see [supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 10. Repeat step 5-8 to add more host groups.
 11. From the table list, select the host groups that you want to include in your resource inventory.
 12. Click **Create inventory**.
-13. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create the {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
+13. Follow the [steps](/docs/schematics?topic=schematics-action-working&interface=ui) to create the {{site.data.keyword.bpshort}} actions and use the resource inventory that you created.
 
 ### Supported resource queries
 {: #supported-queries}
@@ -124,6 +124,6 @@ Dynamic resource inventories references Cloud resources that you provisioned wit
 
 Review the following limitations of dynamic inventories in {{site.data.keyword.bpshort}}:
 
-- You can choose among the [supported queries](#supported-queries) to select the target virtual server instances to include in your resource inventory.
+- You can choose among the [supported queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries) to select the target virtual server instances to include in your resource inventory.
 - {{site.data.keyword.bpshort}} retrieves the IP address of a target {{site.data.keyword.vsi_is_short}}s and adds the IP address to the resource inventory. If the target {{site.data.keyword.vsi_is_short}} has a public IP address, the public IP address is used for the resource inventory. If there is no public IP address, the private IP address is used for the resource inventory.
 - All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-04"
+lastupdated: "2025-10-29"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up the CLI 
+# Setting up the CLI
 {: #setup-cli}
 
 Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the infrastructure provisioning process, the configuration of your resources, and the deployment of app workloads. The {{site.data.keyword.bpfull}} command-line supports the following platform architectures:
@@ -27,13 +27,13 @@ Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the i
 - PowerLinux&trade; 64-bit
 - System/390 Linux&trade; 64-bit
 
-## Installing the {{site.data.keyword.cloud_notm}} command-line 
+## Installing the {{site.data.keyword.cloud_notm}} command-line
 {: #install-schematics-cli}
 
-Install the required command-line to start using {{site.data.keyword.bplong_notm}}. 
+Install the required command-line to start using {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). 
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
     Plan to use the command-line often? Try [Enabling shell auto completion for {{site.data.keyword.cloud_notm}} command-line (Linux/MacOS only)](/docs/cli?topic=cli-shell-autocomplete#shell-autocomplete-linux).
     {: tip}
@@ -71,8 +71,8 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     ```text
     Listing installed plug-ins...
 
-    Plugin Name                             Version      Status             Private endpoints supported   
-    schematics[sch]                           1.12.28   Update Available                     true  
+    Plugin Name                             Version      Status             Private endpoints supported
+    schematics[sch]                           1.12.28   Update Available                     true
     ```
     {: screen}
 
@@ -121,7 +121,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
 Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in periodically to get access to new features.
 {: shortdesc}
 
-1. [Update the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#update-ibmcloud-cli). 
+1. [Update the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#update-ibmcloud-cli).
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
 
@@ -133,13 +133,13 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command-line output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
     {: tip}
 
-3. Check if an update is available for the {{site.data.keyword.bpshort}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output. 
+3. Check if an update is available for the {{site.data.keyword.bpshort}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output.
     ```sh
     ibmcloud plugin list | grep schematics
     ```
     {: pre}
 
-    Example output 
+    Example output
 
     ```text
     schematics                      1.12.28        Update Available           false
@@ -147,7 +147,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     {: screen}
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
-    
+
     For {{site.data.keyword.bpshort}} Agent, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.12` version.
     {: note}
 
@@ -164,7 +164,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output
 
     ```text
-    schematics[sch]                      1.12.28        true
+    schematics[sch]                      1.12.29        true
     ```
     {: screen}
 
@@ -177,11 +177,8 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output
 
     ```text
-    Plugin Name                              schematics[sch]
-    Plugin Version                           1.12.28
-    Plugin SDK Version                       1.7.3
-    Minimal IBM Cloud CLI version required   0.15.1
-    Private endpoints supported              true
+    Plugin Name              Version   Status   Private endpoints supported
+    schematics[sch]          1.12.29            true
 
     Commands:
     schematics,sch                                 Automate the deployment and management of IBM Cloud resources using Infrastructure as Code
@@ -250,7 +247,7 @@ Uninstall the {{site.data.keyword.bplong_notm}} plug-in to remove the {{site.dat
     {: screen}
 
 2. Verify that the {{site.data.keyword.bplong_notm}} command-line plug-in is uninstalled successfully.
-    
+
     ```sh
     ibmcloud plugin list | grep schematics
     ```

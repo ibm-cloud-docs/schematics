@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-29"
 
 keywords: schematics
 subcollection: schematics
@@ -180,6 +180,8 @@ subcollection: schematics
         * Secure credential and variable management
 
         * Inventory management
+
+        * Release {{site.data.keyword.bpshort}} CLI plug-in to manage multihost credentials and variables during the creation and update of inventories.
 
 * [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#September-2025)
 

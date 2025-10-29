@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-10-29"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -71,7 +71,7 @@ Command options
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--bastion-credential-json` or `--bj` | Optional | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
-| `--inventory-connection-type` or `--it` | Optional | Type of inventory connection. Supported values are  `ssh`, or `winrm`. Currently, WinRM supports only Windows system with the public `IPs` and do not support Bastion host.|
+| `--inventory-connection-type` or `--it` | Optional | Type of inventory connection. Supported values are  `ssh`, or `winrm`. Default is `SSH`. Currently, `WinRM` supports only Windows system with the public `IPs` and do not support Bastion host.|
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file by using the `--input-file` command option.|
 |`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
@@ -192,7 +192,7 @@ Command options
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--bastion-credential-json` or `--bj` | Optional | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
-| `--inventory-connection-type` or `--it`| Optional | Type of inventory connection. Supported values are `ssh`, or `winrm`. Currently, WinRM supports only Windows system with the public `IPs` and do not support Bastion host.|
+| `--inventory-connection-type` or `--it`| Optional | Type of inventory connection. Supported values are `ssh`, or `winrm`. Default is `SSH`. Currently, `WinRM` supports only Windows system with the public `IPs` and do not support Bastion host.|
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file in the `--input-file` command option.|
 |`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
@@ -1306,17 +1306,14 @@ Command Options
 | `--connection-type` or `--ct` | Optional | Type of an inventory connection. Supports both `ssh` and `winrm`. |
 | `--bastion-ip-address` or `-b` | Optional | Enter the IP address of the Bastion host. |
 | `--bastion-credential-json` or `--bj` | Optional | Provide the path of the JSON file that contains the Bastion credential payload to access the Bastion host. |
-| `--credential-json` or `--cj` | Optional | Provide the JSON file path that contains the common credential JSON payload to access the target hosts. |
-| `--inventory-view-json` or `--inv` | Optional | Path to JSON file that contains the host details. |
-| `--inventories-ini-file` or `-y` | Optional | The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. |
-| `--resource-query` | Optional | Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. |
+| `--credential-json` or `--cj` | Optional | Provide the JSON file path containing the common credential payload for accessing target hosts. Credentials hierarchy in {{site.data.keyword.bpshort}} follows this order: Host-level credentials (highest priority), Group-level credentials (next priority), and Common credentials (lowest priority). |
+| `--inventory-view-json` or `--inv` | Optional | Path to JSON file that contains the host details. You must pass either `--inventories-ini-file` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error.|
+| `--inventories-ini-file` or `-y` | Optional | The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. You must pass either `--inventories-ini-file` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error.|
+| `--resource-query` | Optional | Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. You must pass either `--inventories-ini-file` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error. |
 | `--file` or `-f` | Optional | The path to the JSON file where you specified the resource inventory that you want to create. |
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported. |
 | `--no-prompt` | Optional | Set this flag to create an inventory without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} inventory create flags" caption-side="top"}
-
-You must pass either `--inventories-ini` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error.
-{: note}
 
 #### Using the payload file
 {: #inv-create-payload}
@@ -1327,7 +1324,7 @@ You can provide a payload file to specify certain parameters for the `inventory 
 You need to replace the `<...>` placeholders with the actual values. For example, `"<INVENTORY_NAME>"` as `"myinventory"`.
 {: note}
 
-Syntax
+Syntax for an inventory_view_example.json
 
 ```json
 {
@@ -1418,6 +1415,36 @@ Syntax
 ```
 {: codeblock}
 
+Syntax for an common_credentials_example.json
+
+```json
+{
+"common_credential": [
+        {
+            "name": "inventory_username",
+            "value": "-----BEGIN RSA PRIVATE KEY-----\nINVENTORY SSH KEY\n-----END RSA PRIVATE KEY-----\n",
+            "metadata": {
+                "secure": true
+            }
+        }
+    ]
+}
+```
+{: codeblock}
+
+Syntax for an bastion_credentials_example.json
+
+```json
+{
+    "bastion_credential":{
+        "name": "root_updated",
+        "value": "somevalue_updated",
+        "metadata": {}
+    }
+
+}
+```
+{: codeblock}
 
 ```sh
 ibmcloud schematics inventory create --file inventory.json
@@ -1564,16 +1591,132 @@ Command options
 |`resource-group` or `-r`| Optional | The resource group name for an action.|
 | `--connection-type` or `--ct` | Optional | Type of an inventory connection. Supports both `ssh` and `winrm`. |
 | `--bastion-ip-address` or `-b` | Optional | Enter the IP address of the Bastion host. |
-| `--bastion-credential-json` or `--bj` | Optional | Provide the path of the JSON file that contains the Bastion credential payload to access the Bastion host. |
-| `--credential-json` or `--cj` | Optional | Provide the JSON file path that contains the common credential JSON payload to access the target hosts. |
-| `--inventory-view-json` or `--inv` | Optional | Path to JSON file that contains the host details. |
-| `--inventories-ini-file` or `-y` | Optional | File path of `INI` format file that contains the host details. |
-| `--resource-query` | Optional | Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. |
-|`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|
+| `--bastion-credential-json` or `--bj` | Optional | Provide the path of the JSON file that contains the Bastion credential payload to access the Bastion host.  |
+| `--credential-json` or `--cj` | Optional | Provide the JSON file path containing the common credential payload for accessing target hosts. Credentials hierarchy in {{site.data.keyword.bpshort}} follows this order: Host-level credentials (highest priority), Group-level credentials (next priority), and Common credentials (lowest priority). |
+| `--inventory-view-json` or `--inv` | Optional | Path to JSON file that contains the host details. You must pass either `--inventories-ini-file` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error. |
+| `--inventories-ini-file` or `-y` | Optional | File path of `INI` format file that contains the host details. You must pass either `--inventories-ini-file` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error. |
+| `--resource-query` | Optional | Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the Cloud resources that you created with a {{site.data.keyword.bpshort}} workspace. You must pass either `--inventories-ini-file` file path, `--resource-query` ID, or `--inventory-view-json` for the inventory to use the target host details. Providing any two or all three arguments must throw an error.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} inventory update flags" caption-side="top"}
+
+
+#### Using the payload file
+{: #inv-update-payload}
+
+You can provide a payload file to specify certain parameters for the `inventory update` command. Then, you pass the file name to the command by using the `--file` command option.
+{: shortdesc}
+
+Syntax for an inventory_view_example.json
+
+```json
+{
+    "name": "S23",
+    "id": "us-south.INVENTORY.S1.66e3f32a",
+    "location": "us-south",
+    "resource_group": "d2a073de9b834b1cad0eb0a27e6cef36",
+    "description": "Updated Description",
+    "inventories_ini": "[g1]\naliasname ansible_host=web1.com\nweb2.com\nweb3.com\n[group2]\ngroup.com1\ngroup.com2\n",
+    "connection_type": "ssh",
+    "common_credential": {
+        "name": "somevalUser",
+        "value": "newvalue",
+        "metadata": {}
+    },
+    "bastion": {
+        "name": "name",
+        "host": "hostname"
+    },
+    "bastion_credential": {
+        "metadata": {}
+    },
+    "inventory_view": {
+        "groups": [
+            {
+                "name": "g1",
+                "vars": [
+                    {
+                        "name": "varforweb2bvhewbvhei3GGGGG",
+                        "value": "varvalueforw2vrehbqiovrybuipqvebipqvrqpbibrv hvprqe",
+                        "metadata": {}
+                    }
+                ],
+                "credentials": {
+                    "name": "somevalUserG1",
+                    "value": "newvalueG1",
+                    "metadata": {}
+                },
+                "hosts": [
+                    {
+                        "alias": "aliasname",
+                        "name": "web1.com",
+                        "credential": {
+                            "metadata": {}
+                        }
+                    },
+                    {
+                        "alias": "web2.com",
+                        "name": "web2.com",
+                        "credential": {
+                            "metadata": {}
+                        },
+                        "vars": [
+                            {
+                                "name": "varforweb2",
+                                "value": "varvalueforw2vrehbqiovrybuipqvebipqvrqpbibrv hvprqe",
+                                "metadata": {}
+                            }
+                        ]
+                    },
+                    {
+                        "alias": "web3.com",
+                        "name": "web3.com",
+                        "credential": {
+                            "metadata": {}
+                        },
+                        "vars": [
+                            {
+                                "name": "varforwe23f",
+                                "value": "vqe",
+                                "metadata": {}
+                            },
+                            {
+                                "name": "varforweb233333",
+                                "value": "varvalueforw2vrehbqcecee",
+                                "metadata": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "group2",
+                "credentials": {
+                    "metadata": {}
+                },
+                "hosts": [
+                    {
+                        "alias": "group.com1",
+                        "name": "group.com1",
+                        "credential": {
+                            "metadata": {}
+                        }
+                    },
+                    {
+                        "alias": "group.com2",
+                        "name": "group.com2",
+                        "credential": {
+                            "metadata": {}
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+{: codeblock}
 
 Example
 
@@ -1581,6 +1724,14 @@ Example
 ibmcloud schematics inventory update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121  --output OUTPUT
 ```
 {: pre}
+
+Example2
+
+```sh
+ibmcloud sch inventory update --file inventory_view_example.json --id us-south.INVENTORY.S1.66e00002a
+```
+{: pre}
+
 
 ## Inventory resource query commands
 {: #rq-commands}
@@ -3079,6 +3230,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.29 | 27 October 2025 | {{site.data.keyword.bpshort}} CLI plugin introduces [multihost credentials](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-credentials) and [variables](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-variable) during the creation and update of inventories. This update streamlines the process of handling authentication details and configuration settings for numerous target systems, ensuring a more efficient and secure automation experience. |
 | 1.12.28 | 1 August 2025 | {{site.data.keyword.bpshort}} CLI plugin to update subnamespaces and subcommands in the metadata.|
 | 1.12.27 | 31 July 2025 | {{site.data.keyword.bpshort}} CLI plugin supports to target [Montreal (`ca-mon`) region](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).|
 | 1.12.26 | 07 April 2025 | {{site.data.keyword.bpshort}} CLI plugin enhanced [ibmcloud schematics destroy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-destroy) preview, updated one pipeline base image, fixed `nil pointer exception` in [ibmcloud schematics action create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-create-action), [ibmcloud schematics action update](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-update-action), and [ibmcloud schematics action get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-get-action) operations.|

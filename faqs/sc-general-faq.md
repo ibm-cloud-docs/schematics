@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-10-29"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
@@ -425,7 +425,7 @@ Branch name contains `/` (backslash) are not supported.
 
 Action creation
 
-In the action creation page, the URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. For more details about working with an action, see [Creating an action](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working) to run multiple playbooks you must create a separate action for each playbook.
+In the action creation page, the URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. For more details about working with an action, see [Creating an action](/docs/schematics?topic=schematics-action-working&interface=ui) to run multiple playbooks you must create a separate action for each playbook.
         - Example for master branch - `https://github.com/myorg/myrepo`
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
         - Example for subdirectory - `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
@@ -457,7 +457,7 @@ Yes, the {{site.data.keyword.bpshort}} supports region-based access. For more in
 {: faq}
 {: support}
 
-Yes, Workspace and Action support {{site.data.keyword.secrets-manager_short}} when you [create a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#import-template), and [update input variable](/docs/schematics?topic=schematics-sch-update-wks&interface=ui) workspace. Also you can set the {{site.data.keyword.secrets-manager_short}} while [creating a playbook](/docs/schematics?topic=schematics-action-working&interface=ui), and [editing action settings](/docs/schematics?topic=schematics-action-working&interface=ui#action-settings).
+Yes, Workspace and Action support {{site.data.keyword.secrets-manager_short}} when you [create a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#import-template), and [update input variable](/docs/schematics?topic=schematics-sch-update-wks&interface=ui) workspace. Also you can set the {{site.data.keyword.secrets-manager_short}} while [creating a playbook](/docs/schematics?topic=schematics-action-working&interface=ui), and [editing action settings](/docs/schematics?topic=schematics-action-working-update&interface=ui).
 
 You can enter the personal access token, or can use {{site.data.keyword.secrets-manager_short}} by using the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance). The key value of the {{site.data.keyword.secrets-manager_short}} is used during the runtime to clone the templates from the Git repository.
 

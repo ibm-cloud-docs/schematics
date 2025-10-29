@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-29"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -25,7 +25,7 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 - Develop your Ansible playbook. Use one of the [IBM-provided playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or explore existing roles and collections in [Ansible Galaxy](https://galaxy.ansible.com/){: external}. Reference these [roles](/docs/schematics?topic=schematics-ansible-roles-galaxy#main-file) and collections](/docs/schematics?topic=schematics-create-playbook#schematics-collections) in your playbook as needed.
 - Establish a GitHub or GitLab repository, and organize your Ansible playbook, modules, roles, and collections according to the required directory structure. A sample structure can be found in this [sample playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external}.
 - Upload your Ansible playbook, modules, roles, and collections to your GitHub repository.
-- [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action) by using the uploaded playbook.
+- [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working&interface=ui) by using the uploaded playbook.
 
 Ensure that your playbook adheres to the necessary structure and references any required roles and collections for seamless execution in {{site.data.keyword.bpshort}}. For more information, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html){: external} or [playbook creation](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html){: external}.
 

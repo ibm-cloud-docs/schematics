@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-10-29"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -60,4 +60,4 @@ About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Dat
 
 {{site.data.keyword.IBM_notm}} provides a Service Organization Controls (SOC) two Type 2 report for {{site.data.keyword.bpshort}}. The reports evaluate IBM's operational controls according to the criteria set by the American Institute of Certified Public Accountants (AICPA) Trust Services Principles. The Trust Services Principles define adequate control systems and establish industry standards for service providers such as {{site.data.keyword.cloud_notm}} to safeguard their clients data and information.
 
-You can request an SOC 2 Type 2 report from the Client portal or contact your sales representative. Alternatively, you can open a support ticket with [{{site.data.keyword.cloud_notm}} Support](https://www.ibm.com/cloud/support).
+You can request an SOC 2 Type 2 report from the Client portal or contact your sales representative. Alternatively, you can open a support ticket with [{{site.data.keyword.cloud_notm}} Support](https://www.ibm.com/products/cloud/support){: external}.
