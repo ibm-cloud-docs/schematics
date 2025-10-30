@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-10-30"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -57,11 +57,11 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Variables** section. Click the **Edit** from the overflow menu to edit the variables. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
     - Click **Save**.
 
-### Verifying workspace update 
+### Verifying workspace update
 {: #verify-wks-update-ui}
 
-1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the workspace details. 
-2. Click **Jobs** tab to see the workspace logs. 
+1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the workspace details.
+2. Click **Jobs** tab to see the workspace logs.
 3. Click **Jobs history** tab view the result of the update job operation that were run by the automation modules.
 4. Click **Settings** tab to view the summary of the configuration.
 
@@ -119,7 +119,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         ```
         {: pre}
 
-2. Update the workspace details for an existing workspace, such as the workspace name, variables, or source control URL. 
+2. Update the workspace details for an existing workspace, such as the workspace name, variables, or source control URL.
 
         ```sh
         ibmcloud schematics workspace update --id <WORKSPACE_ID>
@@ -135,17 +135,17 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
 4. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting Cloud resources with Terraform.
 
-### Verifying workspace update 
+### Verifying workspace update
 {: #verify-wks-update-cli}
 
 Confirm the details using the CLI command update where the parameters of your workspace were updated successfully that has been created earlier.
 
     ```text
-    ibmcloud schematics workspace update --id us-east.workspace.testwspace03jan.811182d2 --target vpc_name --target vpc_tags
+    ibmcloud schematics workspace update --id <WORKSPACE_ID> --target <TARGET_RESOURCE_NAME>
     Do you really want to perform this action? [y/N]> y
-                    
-    Activity ID   c10fc92ddfd2d9ec645fc5dbece5e341   
-                    
+
+    Activity ID   c10fc92ddfd2d9ec645fc5dbece5e341
+
     OK
 
     ```

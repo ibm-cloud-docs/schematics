@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-30"
 
 keywords: HA for Schematics, DR for Schematics, Schematics recovery time objective, Schematics recovery point objective
 
@@ -94,7 +94,7 @@ You need to follow these steps to manually back up your workspace in {{site.data
 2. Retrieve the template ID of your workspace. To template ID is shown as a string after the `Template Variables for: <template_ID>` section of your CLI output.
 
     ```sh
-    ibmcloud schematics workspace get --id <workspace_ID>
+    ibmcloud schematics workspace get --id <WORKSPACE_ID>
     ```
     {: pre}
 

@@ -47,7 +47,7 @@ The following image shows the cloud architecture components that you provision a
 {: caption="Cloud architecture components" caption-side="bottom"}
 
 You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
-{: note} 
+{: note}
 
 The costs are incurred based on your resource usage. For more information about the VPC pricing, see [VPC pricing](https://cloud.ibm.com/infrastructure/provision/vs){: external}.
 {: important}
@@ -57,8 +57,8 @@ The costs are incurred based on your resource usage. For more information about 
 
 In this tutorial, you can perform the following.
 
-- Learn how to use an IBM-provided Terraform template to create a Virtual Private Cloud (VPC) and provision an {{site.data.keyword.containerlong_notm}} cluster that runs on {{site.data.keyword.vsi_is_short}}. 
-- Create an {{site.data.keyword.cos_full_notm}} service instance and bind the service to your {{site.data.keyword.containerlong_notm}} cluster. 
+- Learn how to use an IBM-provided Terraform template to create a Virtual Private Cloud (VPC) and provision an {{site.data.keyword.containerlong_notm}} cluster that runs on {{site.data.keyword.vsi_is_short}}.
+- Create an {{site.data.keyword.cos_full_notm}} service instance and bind the service to your {{site.data.keyword.containerlong_notm}} cluster.
 - Explore how to create an {{site.data.keyword.bplong_notm}} workspace.
 - Create a Terraform execution plan and apply your Terraform template in {{site.data.keyword.cloud_notm}}.
 - Review the {{site.data.keyword.cloud}} resources that you create.
@@ -73,17 +73,17 @@ In this tutorial, you can perform the following.
 
 This tutorial is intended for developers and system administrators who want to learn how to use Terraform templates to create and manage cloud infrastructure services by using {{site.data.keyword.bplong_notm}}.
 
-## Prerequisites
+## Before you begin
 {: #provisioning-tut-prereq}
 
 Before you begin, complete the following prerequisites.
 {: shortdesc}
 
-- [Create the {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
-- [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli). 
+- [Create the {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
+- [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli).
 - Make sure you set environment variables for [`IBMCLOUD_API_KEY`](/docs/cli?topic=cli-ibmcloud_env_var).
 - Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace.
-- Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources. 
+- Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources.
 - Follow the [steps](/docs/containers?topic=containers-clusters#cluster_prepare) to get the required permissions to create an {{site.data.keyword.containerlong_notm}} cluster and to prepare your account for your cluster setup.
 - Make sure that you have the required permissions to create an instance of [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-manage-access) and [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-fgac-iam-access-conditions).
 
@@ -283,7 +283,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     {: pre}
 
     Sample example output
-    
+
     ```text
     Do you really want to perform this action? [y/N]> y
 

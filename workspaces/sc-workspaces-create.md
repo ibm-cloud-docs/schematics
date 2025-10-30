@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-10-30"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -59,9 +59,9 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
         - **Tags** as `my-tags`. Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
-        - **Resource group** as `default` or other resource group for this workspace. 
+        - **Resource group** as `default` or other resource group for this workspace.
         - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. Decide where you want to create your workspace? The location determines where your {{site.data.keyword.bpshort}} jobs run?, and where your workspace data is stored? You can choose between a location, such as North America, or a metro city, such as Frankfurt or London. If you select a location, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)? The location that you choose is independent from the region or regions where you want to provision your Cloud resources. The console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-workspace) instead.
-        - Optional, enter a descriptive name for your workspace.
+        - Optional: enter a descriptive name for your workspace.
         - Click `Next`.
     - Click `Create`. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 
@@ -69,13 +69,13 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #import-template}
 {: ui}
 
-If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API. 
+If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API.
 {: tip}
 
-1. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. 
+1. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory.
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
-    - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
+    - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
 2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [Creating a personal access token for the command-line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). And to securely validate and clone the template, you can click the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
 3. Select the `Terraform version` that your Terraform configuration files are written in.
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
@@ -84,7 +84,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
     {: tip}
 
-6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Workspace actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
+6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Workspace actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type.
 
     | Type | Example  |
     | --- | -- |
@@ -158,8 +158,8 @@ You can [Manage Cloud resources with {{site.data.keyword.bpshort}}](/docs/schema
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. |
-    | `variable_name` | Optional, enter the name for the input variable that you declared in your Terraform configuration files. |
-    | `variable_type` | Optional, enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
+    | `variable_name` | Optional: enter the name for the input variable that you declared in your Terraform configuration files. |
+    | `variable_type` | Optional: enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
     {: caption="JSON file component description" caption-side="bottom"}
 
 2. Create the workspace.
@@ -201,9 +201,9 @@ You can [Manage Cloud resources with {{site.data.keyword.bpshort}}](/docs/schema
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are store |
-    | `variable_name` | Optional, enter the name for the input variable that you declared in your Terraform configuration files. |
-    | `variable_value` | Optional, enter the value for your input variable. |
-    | `variable_type` | Optional, enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
+    | `variable_name` | Optional: enter the name for the input variable that you declared in your Terraform configuration files. |
+    | `variable_value` | Optional: enter the value for your input variable. |
+    | `variable_type` | Optional: enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
     {: caption="JSON file component description" caption-side="bottom"}
 
 3. Verify that the workspace is created successfully.
@@ -217,7 +217,7 @@ You can [Manage Cloud resources with {{site.data.keyword.bpshort}}](/docs/schema
 
 
 
-## Creating workspace using Terraform 
+## Creating workspace using Terraform
 {: #create-wks-terraform}
 {: terraform}
 

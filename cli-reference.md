@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-10-30"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -23,7 +23,7 @@ Run these commands to work with {{site.data.keyword.bplong_notm}} workspaces, ac
 
 To run {{site.data.keyword.bpshort}} commands, use `ibmcloud schematics` or `ibmcloud sch`. {: tip}
 
-## Prerequisites
+## Before you begin
 {: #cli-prerequisites}
 
 - Set up your [CLI](/docs/schematics?topic=schematics-setup-cli).
@@ -1031,7 +1031,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics policy get --id policy-101.soP.282e
+ibmcloud schematics policy get --id <POLICY_ID>
 ```
 {: pre}
 
@@ -1103,10 +1103,10 @@ ibmcloud schematics policy update --id <AGENT_ID> --description PolicyDescriptio
 You can use your encryption keys from the {{site.data.keyword.cloud_notm}} key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure your data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
 
-### Prerequisites
+### Before you begin
 {: #key-prerequisites}
 
-The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
+The following prerequisites must be ensured for the key management system to list the instance that are created from your specific location and region.
 
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
@@ -1141,7 +1141,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics kms instances ls --location US --scheme byok
+ibmcloud schematics kms instances ls --location <LOCATION_VALUE> --scheme <SCHEMA_VALUE>
 ```
 {: pre}
 
@@ -1180,7 +1180,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics kms enable -l US -s byok -g Default -pn Key-Protect-south -pc crn:v1:bluemix:public:kms:us-south:lalalalal -pe https://private.us-south.kms.cloud.ibm.com
+ibmcloud schematics kms enable -l <LOCATION_VALUE> -s <SCHEMA_VALUE>> -g Default -pn Key-Protect-south -pc crn:v1:bluemix:public:kms:us-south:lalalalal -pe https://private.us-south.kms.cloud.ibm.com
 ```
 {: pre}
 
@@ -1228,7 +1228,7 @@ View the supported {{site.data.keyword.bplong_notm}} command-line commands.
 Syntax
 
 ```sh
-ibmcloud schematics help [command]
+ibmcloud schematics --help
 ```
 {: pre}
 
@@ -1994,7 +1994,7 @@ Command options
 
 Example
 ```sh
-ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
+ibmcloud schematics workspace action --id <WORKSPACE_ID>
 ```
 {: pre}
 
@@ -2033,7 +2033,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11
+ibmcloud schematics workspace delete --id <WORKSPACE_ID>
 ```
 {: pre}
 
@@ -2061,7 +2061,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11
+ibmcloud schematics workspace get --id <WORKSPACE_ID>
 ```
 {: pre}
 
@@ -2069,8 +2069,6 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11
 {: #schematics-workspace-import}
 
 You can import an existing resource with an valid resource address into your workspace state file. You need to ensure that the resource is only imported once and to a single workspace. Otherwise, you may see unwanted behavior if the resource is defined in multiple workspaces. Review the [Terraform documentation](https://developer.hashicorp.com/terraform/cli/commands/import#usage){: external} for details on how to use the `import` command.
-
-
 {: shortdesc}
 
 Syntax
@@ -2127,7 +2125,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace list --limit 10 --offset 20
+ibmcloud schematics workspace list --limit <LIMIT_NUMBER> --offset <OFFSET_NUMBER>
 ```
 {: pre}
 
@@ -3052,7 +3050,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep
+ibmcloud schematics workspace show --id <WORSKPACE_ID> --address <SINGLE_RESOURCE_DETAILS>
 ```
 {: pre}
 
@@ -3079,7 +3077,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s testsourceresource -d null_resource.sleep
+ibmcloud schematics workspace state mv --id <WORKSPACE_ID> -s <ENTER_SOURCE_ADDRESS>> -d <ENTER_DESTINATION_ADDRESS>
 ```
 {: pre}
 
@@ -3108,7 +3106,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept
+ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --address <TAINT_RESOURCE_ADDRESS>
 ```
 {: pre}
 

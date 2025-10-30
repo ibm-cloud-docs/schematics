@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-30"
 
 keywords: schematics, schematics action update, update schematics actions, update ansible playbooks, update action,
 
@@ -18,10 +18,10 @@ subcollection: schematics
 Updating {{site.data.keyword.bpshort}} actions involves modifying the action definition to incorporate new configurations or automation logic. After making changes, validate and reapply the updated action to ensure the revised workflow functions correctly across targeted resources, enabling the deployment of complex multitiered applications to your cloud infrastructure.
 {: shortdesc}
 
-## Prerequisites
+## Before you begin
 {: #action-working-prereq}
 
-Before creating a {{site.data.keyword.bpshort}} action for Ansible playbooks, can ensure that you have the following prerequisites.
+Before initiating the updation of a {{site.data.keyword.bpshort}} action for Ansible playbooks, confirm that you meet the following prerequisites:
 
 - Create an Ansible playbook and store it in a GitHub or GitLab repository. Alternatively, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
 - Verify that you possess the required [permissions](/docs/schematics?topic=schematics-access) to create a {{site.data.keyword.bpshort}} action.

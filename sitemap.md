@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-10-30"
 
 keywords: schematics
 subcollection: schematics
@@ -1041,7 +1041,7 @@ subcollection: schematics
 
 * [Audience](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
 
 * [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
 
@@ -1066,7 +1066,7 @@ subcollection: schematics
 
 * [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
 
     * [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-continuous-deployment#wks-preqre-abt-sch)
 
@@ -1099,7 +1099,7 @@ subcollection: schematics
 
 * [Audience](/docs/schematics?topic=schematics-private-catalog#private-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
 
 * [Prepare your Terraform template for the private catalog](/docs/schematics?topic=schematics-private-catalog#prepare-tf-templates)
 
@@ -1169,17 +1169,17 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-create-playbook#create-playbook-nextsteps)
 
-[Creating {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-working#action-working)
+[Creating {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-action-working#action-working)
 
-* [Prerequisites](/docs/schematics?topic=schematics-action-working#action-working-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-action-working#action-working-prereq)
 
-* [Creating an action by using UI](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-ui)
+* [Creating an action by using Console](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-ui)
 
 * [Next steps](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-nextsteps)
 
 [Updating a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working-update#action-working-update)
 
-* [Prerequisites](/docs/schematics?topic=schematics-action-working-update#action-working-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-action-working-update#action-working-prereq)
 
 * [Updating an action by using UI](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-settings)
 
@@ -1222,7 +1222,7 @@ subcollection: schematics
 
 * [Managing credentials and variables by using UI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-mange)
 
-* [Managing credentials and variables by using CLI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-manage-cli)
+* [Managing credentials and variables by using CLI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=cli#sch-multihost-manage-cli)
 
 [Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
@@ -1279,7 +1279,7 @@ subcollection: schematics
 
 [Deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview#agent-infrastructure-overview)
 
-* [Prerequisites](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-prereq)
 
 * [Provisioning agent infrastructure using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-infra-workspace)
 
@@ -1446,7 +1446,7 @@ subcollection: schematics
 
 * [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
 
-    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
+    * [Before you begin](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
 
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration&interface=ui#integrate-byok-ui)
 
@@ -1834,7 +1834,7 @@ subcollection: schematics
 
 [Logging for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-logging#logging)
 
-    * [Locations where logs are sent to {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
+* [Locations where logs are sent to {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
 
 * [Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}](/docs/schematics?topic=schematics-logging#lr-locations)
 
@@ -2095,7 +2095,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
 
-* [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
 
 * [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
@@ -2159,7 +2159,7 @@ subcollection: schematics
 
 * [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
-    * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
+    * [Before you begin](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
 
     * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-list)
 

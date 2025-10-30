@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-10-30"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -97,7 +97,6 @@ Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and F
 
 New {{site.data.keyword.bpshort}} locations
 :   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
-
 
 Logging and monitoring in Montreal region
 :   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.
@@ -206,7 +205,7 @@ Review the release notes for January 2025.
 {: release-note}
 
 {{site.data.keyword.bpshort}} releases Open reference picker in Git repository URL
-:    To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](docs/schematics?topic=schematics-action-working&interface=ui) action, and [update](/docs/schematics?topic=schematics-action-working-update&interface=ui) action.
+:    To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working&interface=ui) action, and [update](/docs/schematics?topic=schematics-action-working-update&interface=ui) action.
 
 ### 10 January 2025
 {: #schematics-jan1025}
@@ -1071,7 +1070,7 @@ Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in you
 :   To create and associate access tags for the {{site.data.keyword.bpshort}} workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](docs/schematics?topic=schematics-action-working&interface=ui) for {{site.data.keyword.bpshort}} actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-working&interface=ui) for {{site.data.keyword.bpshort}} actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
 : You can now manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in the catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).

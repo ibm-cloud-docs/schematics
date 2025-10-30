@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-10-30"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -18,7 +18,7 @@ subcollection: schematics
 Agents for {{site.data.keyword.bplong}} extend its ability to work directly to cloud infrastructure on the private network or in any isolated network zones.
 {: shortdesc}
 
-## Prerequisites
+## Before you begin
 {: #agents-setup-prereq}
 
 The following prerequisites must be met before you begin deploying the agent infrastructure.
@@ -93,7 +93,7 @@ Follow the steps to view the Agent infrastructure workspace setup.
     - **Services and Software** > `<agent_prefix>-logdna` the status as **Active**.
     - **Clusters** > `<agent_prefix>-iks` the status as **Normal**.
 
-    Optional, you can search the provisioned resources with the user tag you specified in the [Resources list](https://cloud.ibm.com/resources/){: external} page.
+    Optional: you can search the provisioned resources with the user tag you specified in the [Resources list](https://cloud.ibm.com/resources/){: external} page.
     {: note}
 
 ## Next steps

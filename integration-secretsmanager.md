@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-30"
 
 keywords: secrets manager, s2s authentication, schematics integration
 
@@ -99,7 +99,17 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 3. Apply the {{site.data.keyword.bpshort}} workspace
 
    ```sh
-   ibmcloud schematics workspace apply --id <workspace-id>
+   ibmcloud schematics workspace apply --id 00000xxxx
+   ```
+   {: pre}
+
+   ```sh
+   ibmcloud schematics workspace apply --id <WORKSPACE_ID>
+   ```
+   {: pre}
+
+   ```sh
+   ibmcloud schematics workspace apply --id "xxxxxx"
    ```
    {: pre}
 

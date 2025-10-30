@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-10-30"
 
 keywords: schematics actions, actions, schematics
 
@@ -55,4 +55,4 @@ To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create an acti
 So far you have learned about {{site.data.keyword.bpshort}} actions. The following are some next steps to explore.
 {: shortdesc}
 
-- See [Creating actions](docs/schematics?topic=schematics-action-working&interface=ui) to create an action.
+- See [Creating actions](/docs/schematics?topic=schematics-action-working&interface=ui) to create an action.
