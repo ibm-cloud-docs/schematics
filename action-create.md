@@ -23,7 +23,7 @@ For a comprehensive understanding of {{site.data.keyword.bpshort}} actions and t
 ## Before you begin
 {: #action-working-prereq}
 
-Before you begin, ensure the following requirements are set to proceed with creating the {site.data.keyword.bpshort}} action.
+Before you begin, ensure the following requirements are set to proceed with creating the {{site.data.keyword.bpshort}} action.
 
 - Create an Ansible playbook and store it in GitHub or GitLab repository. Alternatively, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
 - Confirm that you have the [permissions](/docs/schematics?topic=schematics-access) to create the {{site.data.keyword.bpshort}} action.

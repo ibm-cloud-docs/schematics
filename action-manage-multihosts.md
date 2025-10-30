@@ -8,10 +8,12 @@ keywords: schematics multihost, ansible multihost credentials, multihost variabl
 
 subcollection: schematics
 
+ai-gen-assist: wca
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-ai-gen-assist: wca
+
 
 # Secure and streamline Ansible automation with {{site.data.keyword.bpshort}} multihost credentials and variables
 {: #sch-multihost-setup}
@@ -45,7 +47,7 @@ Managing variables simplifies updates, reduces inconsistencies, minimizes sensit
 Both managing credentials and variables are applicable to static inventory in {{site.data.keyword.bpshort}}. You can define and securely store access details (credentials) and configuration settings (variables) for your hosts within a static inventory file, ensuring consistent and secure automation task execution across your infrastructure. For more information about static inventory, see [static inventory](/docs/schematics?topic=schematics-inventories-setup#static-inv).
 {: note}
 
-## Managing credentials and variables by using UI
+## Managing credentials and variables by using Console
 {: #sch-multihost-mange}
 {: ui}
 

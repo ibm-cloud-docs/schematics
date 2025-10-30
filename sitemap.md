@@ -1181,13 +1181,13 @@ subcollection: schematics
 
 * [Before you begin](/docs/schematics?topic=schematics-action-working-update#action-working-prereq)
 
-* [Updating an action by using UI](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-settings)
+* [Updating an action by using Console](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-settings)
 
 * [Next steps](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-working-update-nextsteps)
 
 [Deleting {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-delete-ansible-actions#delete-ansible-actions)
 
-* [Deleting an action using UI](/docs/schematics?topic=schematics-delete-ansible-actions&interface=ui#create-action-working-ui)
+* [Deleting an action using Console](/docs/schematics?topic=schematics-delete-ansible-actions&interface=ui#create-action-working-ui)
 
 
 ### Managing Ansible
@@ -1220,7 +1220,7 @@ subcollection: schematics
 
 * [Managing variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable)
 
-* [Managing credentials and variables by using UI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-mange)
+* [Managing credentials and variables by using Console](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-mange)
 
 * [Managing credentials and variables by using CLI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=cli#sch-multihost-manage-cli)
 

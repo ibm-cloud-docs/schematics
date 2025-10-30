@@ -18,7 +18,7 @@ subcollection: schematics
 If you no longer need your {{site.data.keyword.bpshort}} action, you can delete it. Deleting an action removes the Ansible playbook and your action data. However, any configurations applied to your target hosts using the action are not removed.
 {: shortdesc}
 
-## Deleting an action using UI
+## Deleting an action using Console
 {: #create-action-working-ui}
 {: ui}
 

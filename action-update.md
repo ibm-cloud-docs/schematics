@@ -29,7 +29,7 @@ Before initiating the updation of a {{site.data.keyword.bpshort}} action for Ans
 Make sure that the `location` and the `url` endpoint are consistent when creating or updating {{site.data.keyword.bpshort}} workspaces and actions, as they must point to the same region. This helps ensure [proper data storage](/docs/schematics?topic=schematics-secure-data#pi-location) and access for your automation tasks.
 {: note}
 
-## Updating an action by using UI
+## Updating an action by using Console
 {: #action-settings}
 {: ui}
 
