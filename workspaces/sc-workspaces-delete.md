@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-10-31"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -60,7 +60,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 1. Delete workspace configuration. For more about deleting the workspace, see the [`ibmcloud schematics workspace delete` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete).
 
     ```sh
-    ibmcloud schematics workspace delete  --id <WORKSPACE_ID>
+    ibmcloud schematics workspace delete --id <WORKSPACE_ID>
     ```
     {: pre}
 
