@@ -2,9 +2,9 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-10-31"
 
-keywords: HA for Schematics, DR for Schematics, Schematics recovery time objective, Schematics recovery point objective
+keywords: HA for schematics, DR for schematics, schematics recovery time objective, schematics recovery point objective
 
 subcollection: schematics
 

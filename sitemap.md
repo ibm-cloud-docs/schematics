@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-10-31"
 
 keywords: schematics
 subcollection: schematics
@@ -1175,7 +1175,11 @@ subcollection: schematics
 
 * [Creating an action by using Console](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-ui)
 
-* [Next steps](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-nextsteps)
+* [Creating an action by using CLI](/docs/schematics?topic=schematics-action-working&interface=cli#create-action-working-cli)
+
+* [Creating an action by using API](/docs/schematics?topic=schematics-action-working&interface=api#create-action-working-api)
+
+* [Next steps](/docs/schematics?topic=schematics-action-working&interface=api#create-action-working-nextsteps)
 
 [Updating a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working-update#action-working-update)
 

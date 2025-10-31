@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-10-31"
 
 keywords: schematics, schematics action update, update schematics actions, update ansible playbooks, update action,
 
@@ -47,7 +47,7 @@ Update a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
       You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To change your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again.
       {: note}
 
-8. Finally, click **Run action** to run the action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs are automatically refreshed.
+8. Click **Run action** to run the action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs are automatically refreshed.
 
     In the console, there is no limit to the number of job logs displayed. The logs are automatically refreshed every `30 seconds`. For a complete view of your action's job logs, use the [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command.
     {: note}
