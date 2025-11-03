@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-31"
+lastupdated: "2025-11-03"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -78,9 +78,12 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
 Verify that the workspace are created successfully. When you destroy the resource by using the CLI, the command deletes the workspace completely.
 
-```text
-  ibmcloud schematics workspace delete  --id us-east.workspace.testwspace03jan.811182d2
+```sh
+ibmcloud schematics workspace delete  --id <WORKSPACE_ID>
+```
+{: pre}
 
+```text
   Do you really want to delete the workspace us-east.workspace.testwspace03jan.811182d2? [y/N]> y
   Successfully deleted the workspace.
   OK
@@ -151,19 +154,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
    {: codeblock}
 
 3. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to deploy, update, or delete Cloud resources with Terraform.
-
-### Verifying workspace delete
-{: #verify-wks-delete-api}
-
-Verify that the workspace gets deleted successfully as shown in the output.
-{: shortdesc}
-
-Output
-
-```text
-""
-```
-{: screen}
 
 ## Deleting the workspace with Terraform
 {: #delete-wks-terraform}

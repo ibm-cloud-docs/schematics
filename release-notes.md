@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-11-03"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -96,7 +96,7 @@ Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and F
 {: release-note}
 
 New {{site.data.keyword.bpshort}} locations
-:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 
 Logging and monitoring in Montreal region
 :   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.

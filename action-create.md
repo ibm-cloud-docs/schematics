@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-31"
+lastupdated: "2025-11-03"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action,
 
@@ -96,22 +96,21 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 {: #create-action-working-cli}
 {: cli}
 
-1. From your [local command line interface](/docs/schematics?topic=schematics-setup-cli){: external} setup your CLI and {{site.data.keyword.bpshort}} plug-in.
+1. From your [local command line interface](/docs/schematics?topic=schematics-setup-cli){: external} setup, your CLI and {{site.data.keyword.bpshort}} plug-in.
 2. Create an action by using the [ibmcloud schematics action create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-create-action) command.
 3. Create an inventory by using the [ibmcloud schematics inventory create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-create-inv) command.
 4. Check the logs to verify that the creation was successful.
-
 
 ## Creating an action by using API
 {: #create-action-working-api}
 {: api}
 
 1. Retrieve your [IAM access token and authenticate](/docs/schematics?topic=schematics-setup-api#cs_api) with {{site.data.keyword.bpshort}} using the API.
-2. Create an action by sending a [POST request](/apidocs/schematics/schematics#create-action).
+2. Optional: Create an action by sending a [POST request](/apidocs/schematics/schematics#create-action).
 3. Create an inventory by sending a [POST request](/apidocs/schematics/schematics#create-inventory).
 4. Check the response status to verify that the creation was successful.
 
 ## Next steps
 {: #create-action-working-nextsteps}
 
-After setting up your {{site.data.keyword.bpshort}} Ansible action, the next step is to [update its settings](/docs/schematics?topic=schematics-action-working-update&interface=ui) as required. This might involve adjusting the playbook, inventory, credentials, or variables to accommodate changes in your environment or needs. Focus on updating these components to ensure that your action remains aligned with your current requirements.
+After setting up your {{site.data.keyword.bpshort}} Ansible action, the next step is to [update its settings](/docs/schematics?topic=schematics-action-working-update&interface=ui) as required. Update involves adjusting the playbook, inventory, credentials, or variables to accommodate changes in your environment or needs. Focus on updating these components to ensure that your action remains aligned with your current requirements.

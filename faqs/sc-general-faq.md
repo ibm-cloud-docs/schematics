@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-11-03"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
@@ -375,7 +375,7 @@ To reduce the number of IAM access policies that are assigned to individual user
 
 The following image shows how you can use IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account.
 
-<img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
+    <img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
 
 1. The account owner or an authorized administrator defines a team and creates an IAM access group for each team.
 2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-31"
+lastupdated: "2025-11-03"
 
 keywords: schematics
 subcollection: schematics
@@ -1187,11 +1187,21 @@ subcollection: schematics
 
 * [Updating an action by using Console](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-settings)
 
-* [Next steps](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-working-update-nextsteps)
+* [Updating an action by using CLI](/docs/schematics?topic=schematics-action-working-update&interface=cli#update-action-settings-cli)
+
+* [Updating an action by using API](/docs/schematics?topic=schematics-action-working-update&interface=api#update-action-settings-api)
+
+* [Next steps](/docs/schematics?topic=schematics-action-working-update&interface=api#action-working-update-nextsteps)
 
 [Deleting {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-delete-ansible-actions#delete-ansible-actions)
 
-* [Deleting an action using Console](/docs/schematics?topic=schematics-delete-ansible-actions&interface=ui#create-action-working-ui)
+* [Deleting an action by using Console](/docs/schematics?topic=schematics-delete-ansible-actions&interface=ui#create-action-working-ui)
+
+* [Deleting an action by using CLI](/docs/schematics?topic=schematics-delete-ansible-actions&interface=cli#delete-action-working-cli)
+
+* [Deleting an action by using API](/docs/schematics?topic=schematics-delete-ansible-actions&interface=api#delete-action-settings-api)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-ansible-actions&interface=api#action-working-update-nextsteps)
 
 
 ### Managing Ansible
@@ -1227,6 +1237,10 @@ subcollection: schematics
 * [Managing credentials and variables by using Console](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-mange)
 
 * [Managing credentials and variables by using CLI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=cli#sch-multihost-manage-cli)
+
+* [Managing credentials and variables by using API](/docs/schematics?topic=schematics-sch-multihost-setup&interface=api#sch-multihost-manage-api)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-multihost-setup&interface=api#sch-multihost-manage-nextsteps)
 
 [Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
@@ -1655,8 +1669,6 @@ subcollection: schematics
     * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks&interface=cli#verify-wks-delete-cli)
 
 * [Deleting the workspace through API](/docs/schematics?topic=schematics-sch-delete-wks&interface=api#delete-wks-api)
-
-    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks&interface=api#verify-wks-delete-api)
 
 * [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#delete-wks-terraform)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-31"
+lastupdated: "2025-11-03"
 
 keywords: schematics, schematics action update, update schematics actions, update ansible playbooks, update action,
 
@@ -21,7 +21,7 @@ Updating {{site.data.keyword.bpshort}} actions involves modifying the action def
 ## Before you begin
 {: #action-working-prereq}
 
-Before initiating the updation of a {{site.data.keyword.bpshort}} action for Ansible playbooks, confirm that you meet the following prerequisites:
+Before initiating the update of a {{site.data.keyword.bpshort}} action for Ansible playbooks, confirm that you meet the following prerequisites:
 
 - Create an Ansible playbook and store it in a GitHub or GitLab repository. Alternatively, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
 - Verify that you possess the required [permissions](/docs/schematics?topic=schematics-access) to create a {{site.data.keyword.bpshort}} action.
@@ -51,6 +51,25 @@ Update a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 
     In the console, there is no limit to the number of job logs displayed. The logs are automatically refreshed every `30 seconds`. For a complete view of your action's job logs, use the [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command.
     {: note}
+
+## Updating an action by using CLI
+{: #update-action-settings-cli}
+{: cli}
+
+1. From your local command line interface{: external}, setup your CLI and {{site.data.keyword.bpshort}} plug-in.
+2. Update an action by using the [ibmcloud schematics action update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) command.
+3. Update an inventory by using the [ibmcloud schematics inventory update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv) command.
+4. Check the logs to verify that the updation is successful.
+
+
+## Updating an action by using API
+{: #update-action-settings-api}
+{: api}
+
+1. Retrieve your [IAM access token and authenticate](/docs/schematics?topic=schematics-setup-api#cs_api) with {{site.data.keyword.bpshort}} using the API.
+2. Update an inventory by sending a [PUT request](/apidocs/schematics/schematics#replace-inventory).
+3. Check the response status to verify that the updation is successful.
+
 
 ## Next steps
 {: #action-working-update-nextsteps}
