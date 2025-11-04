@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-11-04"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -18,11 +18,8 @@ subcollection: schematics
 List the workspaces in your {{site.data.keyword.cloud}} account and optionally, show the details for your workspace.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
-
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
-{: important}
 
 ## Before you begin
 {: #display-prerequisites}
@@ -38,7 +35,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Click the **Menu** icon ![hamburger icon](../images/icon_hamburger.svg) > **Platform Automation** > **Schematics** > [**Terraform**](https://cloud.ibm.com/automation/schematics/terraform){: external}.
 3. Search with name for required workspace with specific to location selecting North America or Europe.
 
-### Verifying workspace display 
+### Verifying workspace display
 {: #verify-wks-list-ui}
 
 1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the workspace details.
@@ -61,34 +58,34 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```sh
     ibmcloud schematics workspace list
     ```
-    {: pre}   
+    {: pre}
 
 3. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting Cloud resources with Terraform.
 
-### Verifying workspace list 
+### Verifying workspace list
 {: #verify-wks-list-cli}
 
 Confirm the details using the CLI command update where the parameters of your workspace were updated successfully that has been created earlier.
 
     ```text
-    ibmcloud schematics workspace list  
+    ibmcloud schematics workspace list
     Retrieving workspaces...
-    Name                                          ID                                                                       Description                                   Version             Status           Frozen   
-    workspacecos-module                           us-south.workspace.workspacecos-module.f39f5247                          test-cos-module-workspace                 Terraform v1.0.11   TEMPLATE_ERROR   False   
-    testwspace03jan                               us-east.workspace.testwspace03jan.cf74cc48                               terraform workspace updated successfully      Terraform v1.0.11   INACTIVE         True   
-    teststagews-sleepy12                          us-east.workspace.teststagews-sleepy12.a92d1471                          terraform workspace stage test                Terraform v1.0.11   INACTIVE         False   
-    newname                                       us-east.workspace.test.fb3cc39b                                          terraformworkspacetest                        Terraform v1.2.6    ACTIVE           False   
-    test-remote                                   us-east.workspace.test-remote.455ecb7a                                   terraform workspace                           Terraform v0.13.7   INACTIVE         True   
-    test-remote-msk                               us-east.workspace.test-remote-msk.bcbff09f                               terraform workspace                           Terraform v0.13.7   CONNECTING       False   
-    test-remote-msk-may18                         us-east.workspace.test-remote-msk-may18.102cc13d                         terraform workspace                           Terraform v0.13.7   CONNECTING       False   
-    test-hpcs                                     us-east.workspace.test-hpcs.fd2f331d                                                                                   Terraform v1.2.6    INACTIVE         False   
-    terraform_module1                             us-east.workspace.terraform_module1.e7cb92a3                             myblueprint                                   Terraform v1.0.11   DRAFT            False   
-    terraform_module1                             us-east.workspace.terraform_module1.a11f46b9                             complex-delete                                Terraform v1.0.11   DRAFT            False   
-    terraform_module1                             us-east.workspace.terraform_module1.647e4d4f                             myblueprint3                                  Terraform v1.0.11   DRAFT            False   
-    smulampa-wsgroup                              us-east.workspace.smulampa-wsgroup.95a4d82d                              Sample workspace testing                      Terraform v1.0.11   FAILED           False   
-    smulampa-schematics-agent-service-workspace   us-east.workspace.smulampa-schematics-agent-service-workspace.6936524b   schematics agents service workspace           Terraform v1.0.11   DRAFT            False   
-    smulampa-cos-module-workspace                 us-east.workspace.smulampa-cos-module-workspace.b77841ac                 smulampa-cos-module-workspace                 Terraform v1.0.11   INACTIVE         False   
-                                                
+    Name                                          ID                                                                       Description                                   Version             Status           Frozen
+    workspacecos-module                           us-south.workspace.workspacecos-module.f39f5247                          test-cos-module-workspace                 Terraform v1.0.11   TEMPLATE_ERROR   False
+    testwspace03jan                               us-east.workspace.testwspace03jan.cf74cc48                               terraform workspace updated successfully      Terraform v1.0.11   INACTIVE         True
+    teststagews-sleepy12                          us-east.workspace.teststagews-sleepy12.a92d1471                          terraform workspace stage test                Terraform v1.0.11   INACTIVE         False
+    newname                                       us-east.workspace.test.fb3cc39b                                          terraformworkspacetest                        Terraform v1.2.6    ACTIVE           False
+    test-remote                                   us-east.workspace.test-remote.455ecb7a                                   terraform workspace                           Terraform v0.13.7   INACTIVE         True
+    test-remote-msk                               us-east.workspace.test-remote-msk.bcbff09f                               terraform workspace                           Terraform v0.13.7   CONNECTING       False
+    test-remote-msk-may18                         us-east.workspace.test-remote-msk-may18.102cc13d                         terraform workspace                           Terraform v0.13.7   CONNECTING       False
+    test-hpcs                                     us-east.workspace.test-hpcs.fd2f331d                                                                                   Terraform v1.2.6    INACTIVE         False
+    terraform_module1                             us-east.workspace.terraform_module1.e7cb92a3                             myblueprint                                   Terraform v1.0.11   DRAFT            False
+    terraform_module1                             us-east.workspace.terraform_module1.a11f46b9                             complex-delete                                Terraform v1.0.11   DRAFT            False
+    terraform_module1                             us-east.workspace.terraform_module1.647e4d4f                             myblueprint3                                  Terraform v1.0.11   DRAFT            False
+    smulampa-wsgroup                              us-east.workspace.smulampa-wsgroup.95a4d82d                              Sample workspace testing                      Terraform v1.0.11   FAILED           False
+    smulampa-schematics-agent-service-workspace   us-east.workspace.smulampa-schematics-agent-service-workspace.6936524b   schematics agents service workspace           Terraform v1.0.11   DRAFT            False
+    smulampa-cos-module-workspace                 us-east.workspace.smulampa-cos-module-workspace.b77841ac                 smulampa-cos-module-workspace                 Terraform v1.0.11   INACTIVE         False
+
     OK
     ```
     {: screen}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-03"
+lastupdated: "2025-11-04"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,11 +20,8 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation are grouped month-wise.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
-
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
-{: important}
 
 ## October 2025
 {: #October-2025}
