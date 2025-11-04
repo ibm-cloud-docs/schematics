@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-11-03"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
@@ -375,7 +375,7 @@ To reduce the number of IAM access policies that are assigned to individual user
 
 The following image shows how you can use IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account.
 
-<img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
+    <img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
 
 1. The account owner or an authorized administrator defines a team and creates an IAM access group for each team.
 2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B.
@@ -425,7 +425,7 @@ Branch name contains `/` (backslash) are not supported.
 
 Action creation
 
-In the action creation page, the URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. For more details about working with an action, see [Creating an action](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working) to run multiple playbooks you must create a separate action for each playbook.
+In the action creation page, the URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. For more details about working with an action, see [Creating an action](/docs/schematics?topic=schematics-action-working&interface=ui) to run multiple playbooks you must create a separate action for each playbook.
         - Example for master branch - `https://github.com/myorg/myrepo`
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
         - Example for subdirectory - `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
@@ -457,7 +457,7 @@ Yes, the {{site.data.keyword.bpshort}} supports region-based access. For more in
 {: faq}
 {: support}
 
-Yes, Workspace and Action support {{site.data.keyword.secrets-manager_short}} when you [create a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#import-template), and [update input variable](/docs/schematics?topic=schematics-sch-update-wks&interface=ui) workspace. Also you can set the {{site.data.keyword.secrets-manager_short}} while [creating a playbook](/docs/schematics?topic=schematics-action-working&interface=ui), and [editing action settings](/docs/schematics?topic=schematics-action-working&interface=ui#action-settings).
+Yes, Workspace and Action support {{site.data.keyword.secrets-manager_short}} when you [create a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#import-template), and [update input variable](/docs/schematics?topic=schematics-sch-update-wks&interface=ui) workspace. Also you can set the {{site.data.keyword.secrets-manager_short}} while [creating a playbook](/docs/schematics?topic=schematics-action-working&interface=ui), and [editing action settings](/docs/schematics?topic=schematics-action-working-update&interface=ui).
 
 You can enter the personal access token, or can use {{site.data.keyword.secrets-manager_short}} by using the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance). The key value of the {{site.data.keyword.secrets-manager_short}} is used during the runtime to clone the templates from the Git repository.
 

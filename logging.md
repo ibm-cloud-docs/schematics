@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-08-07"
+lastupdated: "2025-10-30"
 
 keywords: schematics logging, schematics events, schematics audit, schematics audit events, schematics audit logs, logging
 
@@ -25,12 +25,12 @@ You can use {{site.data.keyword.logs_full}} to visualize and alert on platform l
 As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.la_full}} along with {{site.data.keyword.logs_full_notm}}. Logging is the same for both services. For information about migrating from {{site.data.keyword.la_full}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-getting-started).
 {: important}
 
-### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
+## Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
 {: #la-legacy-locations}
 
 {{site.data.keyword.bpshort}} sends platform logs to {{site.data.keyword.logs_full_notm}} in the regions indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | 
+| Dallas (`us-south`) | Washington (`us-east`)  |
 |---------------------|-------------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
@@ -50,9 +50,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Toronto (`ca-tor`)  | 
+| Toronto (`ca-tor`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Toronto locations" caption-side="top"}
 {: #at-table-3}
 {: tab-title="Toronto"}
@@ -60,9 +60,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Montreal (`ca-mon`)  | 
+| Montreal (`ca-mon`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Montreal locations" caption-side="top"}
 {: #at-table-4}
 {: tab-title="Montreal"}
@@ -76,7 +76,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 {{site.data.keyword.bpshort}} sends logs by {{site.data.keyword.logs_routing_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | 
+| Dallas (`us-south`) | Washington (`us-east`)  |
 |---------------------|-------------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
@@ -96,9 +96,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Toronto (`ca-tor`)  | 
+| Toronto (`ca-tor`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Toronto locations" caption-side="top"}
 {: #loc-table-3}
 {: tab-title="Toronto"}
@@ -106,9 +106,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Montreal (`ca-mon`)  | 
+| Montreal (`ca-mon`)  |
 |---------------|
-| [Yes]{: tag-green} | 
+| [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Montreal locations" caption-side="top"}
 {: #loc-table-4}
 {: tab-title="Montreal"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-11-03"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,28 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
 {: important}
+
+## October 2025
+{: #October-2025}
+
+Review the release notes for October 2025.
+{: shortdesc}
+
+### 27 October 2025
+{: #schematics-oct2725}
+{: release-note}
+
+Enhanced Ansible management in {{site.data.keyword.bpshort}} Action
+:   The enhancement introduces enabling seamless automation through GitHub and GitLab repositories by [create](/docs/schematics?topic=schematics-action-working), [update](/docs/schematics?topic=schematics-action-working-update), and [delete](/docs/schematics?topic=schematics-delete-ansible-actions) {{site.data.keyword.bpshort}} Action. Enhanced monitoring features provide detailed [action states](/docs/schematics?topic=schematics-action-state-diagram) and [job histories](/docs/schematics?topic=schematics-action-jobs), improving visibility and control over Ansible workflows.
+
+Secure credential and variable management
+:   You can now securely [manage credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials), [variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable), and [inventories](/docs/schematics?topic=schematics-inventories-setup), ensuring robust configuration and streamlined execution of automation tasks.
+
+Inventory management
+:   Define target hosts by using [resource inventories](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv), supporting both [static](/docs/schematics?topic=schematics-inventories-setup#static-inv) and [dynamic](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv) inventory creation methods.
+
+Release {{site.data.keyword.bpshort}} CLI plug-in to manage multihost credentials and variables during the creation and update of inventories.
+:   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.12.29](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#cli_version-releases).
 
 ## September 2025
 {: #September-2025}
@@ -74,8 +96,7 @@ Additional IP addresses for {{site.data.keyword.bpshort}} London (`eu-gb`) and F
 {: release-note}
 
 New {{site.data.keyword.bpshort}} locations
-:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
-
+:   You can create {{site.data.keyword.bpshort}} service instances in the Montreal (`ca-mon`) region by using the {{site.data.keyword.bpshort}} console location selector or by targeting the region through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference), or [API](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints){:external}. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 
 Logging and monitoring in Montreal region
 :   {{site.data.keyword.bpshort}} now supports [Activity Tracker events](/docs/schematics?topic=schematics-at_events), [logging](/docs/schematics?topic=schematics-logging), and [monitoring](/docs/schematics?topic=schematics-monitoring) metrics in the Montreal region.
@@ -184,7 +205,7 @@ Review the release notes for January 2025.
 {: release-note}
 
 {{site.data.keyword.bpshort}} releases Open reference picker in Git repository URL
-:    To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working#create-action-working) action, and [update](/docs/schematics?topic=schematics-action-working#action-settings) action.
+:    To securely validate and clone the template from your Git repository URL, you can use the `Open reference picker` to select your {{site.data.keyword.secrets-manager_short}} key reference in the [create](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) workspace, [update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui) workspace, [create](/docs/schematics?topic=schematics-action-working&interface=ui) action, and [update](/docs/schematics?topic=schematics-action-working-update&interface=ui) action.
 
 ### 10 January 2025
 {: #schematics-jan1025}
@@ -230,7 +251,7 @@ Review the release notes for November 2024.
 {: release-note}
 
 {{site.data.keyword.bpshort}} in Platform automation UI
-:   Platform automation includes Terraform, Ansible, and Extensions. For more details about exploring Terraform, Ansible, and Extension, see [Working with Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [Working with Ansible](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working), and [Working with Extensions](/docs/schematics?topic=schematics-agent-infrastructure-overview&interface=ui#agents-infra-workspace).
+:   Platform automation includes Terraform, Ansible, and Extensions. For more details about exploring Terraform, Ansible, and Extension, see [Working with Terraform](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [Working with Ansible](/docs/schematics?topic=schematics-action-working&interface=ui), and [Working with Extensions](/docs/schematics?topic=schematics-agent-infrastructure-overview&interface=ui#agents-infra-workspace).
 
 ## October 2024
 {: #October-2024}
@@ -1049,7 +1070,7 @@ Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in you
 :   To create and associate access tags for the {{site.data.keyword.bpshort}} workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-working#create-action-working) for {{site.data.keyword.bpshort}} actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-working&interface=ui) for {{site.data.keyword.bpshort}} actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
 : You can now manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in the catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
@@ -1099,7 +1120,7 @@ Inventory target feature support in {{site.data.keyword.bpshort}} actions API
 :   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool/9.2.0) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
-:   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `winrm`.
+:   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `WinRM`.
 
 {{site.data.keyword.bpshort}} actions API enhancement to support bastion host connection with non-root user
 :   The {{site.data.keyword.bpshort}} actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-10-30"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -21,12 +21,12 @@ subcollection: schematics
 ## Launching key management
 {: #key-mgt-ui}
 
-By default the data that you store in {{site.data.keyword.bpshort}} workspaces using the Enterprise plan is encrypted by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources. 
+By default the data that you store in {{site.data.keyword.bpshort}} workspaces using the Enterprise plan is encrypted by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources.
 {: shortdesc}
 
 You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 
-### Prerequisites
+### Before you begin
 {: #kms-key-prerequisites}
 
 The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
@@ -83,7 +83,7 @@ Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to en
 3. Integrate the root key with {{site.data.keyword.bpshort}} to encrypt your data in the specified location.
 
     ```sh
-    ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHEME --group RESOURCE_GROUP --primary_name PRIMARY_KMS_NAME --primary_crn PRIMARY_KEY_CRN --primary_endpoint PRIMARY_KMSPRIVATEENDPOINT --secondary_name SECONDARY_KMS_NAME --secondary_crn SECONDARY_KEY_CRN --secondary_endpoint SECONDARY_KMSPRIVATEENDPOINT 
+    ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHEME --group RESOURCE_GROUP --primary_name PRIMARY_KMS_NAME --primary_crn PRIMARY_KEY_CRN --primary_endpoint PRIMARY_KMSPRIVATEENDPOINT --secondary_name SECONDARY_KMS_NAME --secondary_crn SECONDARY_KEY_CRN --secondary_endpoint SECONDARY_KMSPRIVATEENDPOINT
     ```
     {: pre}
 

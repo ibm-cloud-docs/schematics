@@ -1,63 +1,61 @@
 {
-    "version": 2,
-    "title": "IBM Cloud Schematics docs",
-    "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
-    "product_page": "https://www.ibm.com/products/schematics",
-    "console_page": "/schematics/overview",
-    "section_topics": {
-      "links": [
-        {
-          "title": "Automate cloud operations with actions",
-          "href": "/docs/schematics?topic=schematics-getting-started-ansible"
-        },
-        {
-          "title": "Extend provisioning through agents",
-          "href": "/docs/schematics?topic=schematics-agent-about-intro"
-        },
-        {
-          "title": "Deploy cloud services with workspaces",
-          "href": "/docs/schematics?topic=schematics-get-started-terraform"
-        },
-        {
-          "title": "Explore the IBM Cloud software catalog",
-          "href": "/docs/schematics?topic=schematics-get-started-software"
-        },
-        {
-          "title": "Learn more about Schematics",
-          "href": "/docs/schematics?topic=schematics-learn-about-schematics"
-        },
-        {
-          "title": "Browse Terraform templates",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template"
-        },
-        {
-          "title": "Set up the Schematics CLI",
-          "href": "/docs/schematics?topic=schematics-setup-cli"
-        }
-      ]
-    },
-    "section_highlights": [
+  "version": 2,
+  "title": "IBM Cloud Schematics docs",
+  "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
+  "product_page": "https://www.ibm.com/products/schematics",
+  "console_page": "/schematics/overview",
+  "section_topics": {
+    "links": [
       {
-        "title": "IBM Developer",
-        "description": "Visit IBM Developer for technical articles, code patterns, tutorials, and more. ",
-        "href": "https://developer.ibm.com/?q=schematics",
-        "type": "training"
-      },   
+        "title": "Automate cloud operations with actions",
+        "href": "/docs/schematics?topic=schematics-getting-started-ansible"
+      },
       {
-        "title": "Training",
-        "description": "Build your skill with IBM Cloud training. ",
-        "href": "https://www.ibm.com/training/cloud",
-        "type": "training"
-      } 
-    ],
-    "section_devtools": {
-      "api": "/apidocs/schematics",
-      "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
+        "title": "Extend provisioning through agents",
+        "href": "/docs/schematics?topic=schematics-agent-about-intro"
+      },
+      {
+        "title": "Deploy cloud services with workspaces",
+        "href": "/docs/schematics?topic=schematics-get-started-terraform"
+      },
+      {
+        "title": "Explore the IBM Cloud software catalog",
+        "href": "/docs/schematics?topic=schematics-get-started-software"
+      },
+      {
+        "title": "Learn more about Schematics",
+        "href": "/docs/schematics?topic=schematics-learn-about-schematics"
+      },
+      {
+        "title": "Browse Terraform templates",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template"
+      },
+      {
+        "title": "Set up the Schematics CLI",
+        "href": "/docs/schematics?topic=schematics-setup-cli"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "IBM Developer",
+      "description": "Visit IBM Developer for technical articles, code patterns, tutorials, and more. ",
+      "href": "https://developer.ibm.com/?q=schematics",
+      "type": "training"
     },
-    "section_updates": {
-      "view_more": "/docs/schematics?topic=schematics-schematics-relnotes"
+    {
+      "title": "Training",
+      "description": "Build your skill with IBM Cloud training. ",
+      "href": "https://www.ibm.com/training/cloud",
+      "type": "training"
     }
+  ],
+  "section_devtools": {
+    "api": "/apidocs/schematics",
+    "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
+  },
+  "section_updates": {
+    "view_more": "/docs/schematics?topic=schematics-schematics-relnotes"
   }
-  
-  
+}

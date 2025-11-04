@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-10-31"
 
 keywords: secrets manager, s2s authentication, schematics integration
 
@@ -90,8 +90,8 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 2. Reference the secret in your Terraform code.
 
    ```terraform
-   variable "my_secret" {
-   default = "ic://secrets-manager/<secret-id>"
+    variable "my_secret" {
+    default = "ic://secrets-manager/secret-id"
    }
    ```
    {: pre}
@@ -99,7 +99,7 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 3. Apply the {{site.data.keyword.bpshort}} workspace
 
    ```sh
-   ibmcloud schematics workspace apply --id <workspace-id>
+   ibmcloud schematics workspace apply --id <WORKSPACE_ID>
    ```
    {: pre}
 
@@ -159,7 +159,7 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 
     ```terraform
      variable "git_token" {
-     default = "ic://secrets-manager/<secret-id>"
+     default = "ic://secrets-manager/secret-id"
     }
     ```
     {: codeblock}
@@ -187,11 +187,11 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 1. Define the [{{site.data.keyword.secrets-manager_short}} Instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
 2. Create a Secret in {{site.data.keyword.secrets-manager_short}}. You can use the CLI or manually create secrets. In Terraform, secrets are typically referenced, not created directly.
 3. Create [IAM Service-to-Service Policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy){: external}.
-4. Reference the Secret in Terraform Variables. Replace <secret-id> with the actual ID of the secret stored in {{site.data.keyword.secrets-manager_short}}.
+4. Reference the Secret in Terraform Variables. Replace `secret-id` with the actual ID of the secret stored in {{site.data.keyword.secrets-manager_short}}.
 
     ```terraform
      variable "git_token" {
-     default = "ic://secrets-manager/<secret-id>"
+     default = "ic://secrets-manager/secret-id"
     }
     ```
     {: codeblock}

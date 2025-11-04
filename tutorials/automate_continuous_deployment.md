@@ -54,7 +54,7 @@ In this tutorial, you can:
 
 This tutorial is intended for the developer and system administrators who want to learn how to use Terraform templates to create. And automate the continuous deployment of resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 
-## Prerequisites
+## Before you begin
 {: #workspace-prereq}
 
 ### About {{site.data.keyword.bplong_notm}}
@@ -75,7 +75,7 @@ Complete the following prerequisites for the tutorial:
 
 - If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account, and pay as you use. For more information about managing {{site.data.keyword.cloud_notm}} account, see [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
 - Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and the [{{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin). For more information about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
-- Ensure you are assigned the needed permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. see [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
+- Ensure you are assigned the needed permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. see [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance.
 - Follow the instructions to ensure you are assigned the needed permissions in {{site.data.keyword.iamshort}} to create resources. For more information about create {{site.data.keyword.cos_full_notm}}, see [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
 
 ## Accessing the {{site.data.keyword.cloud_notm}} and GitHub
@@ -101,15 +101,14 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
 {: shortdesc}
 
 1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/automation/schematics/terraform){: external}, click **Create workspace**.
-2. In **Specify template** section. Enter **`GitHub, GitLab, or Bitbucket Repository URL`** as 
+2. In **Specify template** section. Enter **`GitHub, GitLab, or Bitbucket Repository URL`** as
 
     ```text
     https://github.com/IBM-Cloud/terraform-provider-ibm/blob/master/examples/ibm-cos-bucket
     ```
     {: pre}
 
-3. For the private repository, provide your **GitHub personal access token**. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance).
- See the steps to fetch the [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}.
+3. For the private repository, provide your **GitHub personal access token**. You can click the `Open reference picker` to select a your {{site.data.keyword.secrets-manager_short}} key reference. For more information, see [creating a {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance). See the steps to fetch the [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}.
 4. Select `terraform_v1.4` from the **Terraform version** drop-down.
 5. Click **Next**.
 6. In the **workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
@@ -145,10 +144,10 @@ The GitHub Server type parameter expects the authorization. You need to provide 
 
 1. On the variable page, click `Enable continuous delivery` link option to view {{site.data.keyword.bpshort}} Infrastructure as Code Tekton Toolchain page.
 2. Click `Delivery Pipeline Required` tab.
-3. Enter your `{{site.data.keyword.cloud_notm}} API key`. 
+3. Enter your `{{site.data.keyword.cloud_notm}} API key`.
 4. Click **Authorize** > **Authorize IBM-Cloud** and enter your GitHub password to get authorized.
 5. Click `Create` to view Toolchains page.
-6. Click `Deliver Pipeline` pane to view {{site.data.keyword.bpshort}}-deploy Dashboard page. 
+6. Click `Deliver Pipeline` pane to view {{site.data.keyword.bpshort}}-deploy Dashboard page.
 7. Click **Run Pipeline**
 
     Observe the `UPDATE` is in `STAGE RUNNING` state, without the click.

@@ -45,7 +45,7 @@ In this tutorial, you import the {{site.data.keyword.IBM_notm}} provided Observa
 
 This tutorial is intended for developers and system administrators who want to learn how to use Terraform templates to create and manage cloud infrastructure services by using {{site.data.keyword.bplong_notm}}.
 
-## Prerequisites
+## Before you begin
 {: #private-prerequisites}
 
 Before you begin, make sure that you are assigned the following permissions:
@@ -80,7 +80,7 @@ To upload a Terraform template to a private catalog, you must first compress all
     ```
     {: pre}
 
-3. Optional: Review the `readme.md` file and the Terraform configuration files. 
+3. Optional: Review the `readme.md` file and the Terraform configuration files.
 4. Compress your Terraform configuration files to create the `TGZ` file. The `TGZ` file is required to upload your Terraform template as a product to the private catalog.
 
     To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level preceding. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory.
@@ -124,18 +124,18 @@ To upload a Terraform template to a private catalog, you must first compress all
 Create a release in your source code repository to deliver and manage versions of your software. You can create new releases with release notes.
 
 1. Find your existing repository in GitHub to upload your `TGZ` file.
-2. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example. 
+2. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example.
     ```sh
     https://github.com/<gh_org>/<gh_repo>/releases
     ```
     {: codeblock}
 
-3. Click **Draft a new release**. 
-4. Click **Choose a tag**, type a version number, a title, and an optional description for your release. Use the tagging suggestions in the GitHub UI to find a supported tag version. 
+3. Click **Draft a new release**.
+4. Click **Choose a tag**, type a version number, a title, and an optional description for your release. Use the tagging suggestions in the GitHub UI to find a supported tag version.
 5. If you had created a tag, use the drop-down menu to select the branch that contains the project you want to release.
-6. Drag your `TGZ` file from your local machine to the **Attach binary file by dropping them here or selecting them** section. 
+6. Drag your `TGZ` file from your local machine to the **Attach binary file by dropping them here or selecting them** section.
 7. Click **Publish release** to view your published releases feed for your repository.
-8. Optional: Right-click on your `TGZ` file and copy the link to the file. 
+8. Optional: Right-click on your `TGZ` file and copy the link to the file.
 9. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine.
 10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the `subfolder`.
 
@@ -147,7 +147,7 @@ Create a release in your source code repository to deliver and manage versions o
 2. Import your {{site.data.keyword.bpshort}} template as a product into your private catalog.
     1. From the **Private catalogs** page, select the private catalog that you created.
     2. Click **Add**.
-    3. Enter the URL to your `TGZ` file that you verified earlier. 
+    3. Enter the URL to your `TGZ` file that you verified earlier.
     4. Click **Add**.
 3. From the **Version list** of your product, select the product that you uploaded.
 4. Go to the **Configure product** tab.

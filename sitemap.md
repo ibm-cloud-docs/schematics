@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-13"
+lastupdated: "2025-11-03"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,20 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [October 2025](/docs/schematics?topic=schematics-schematics-relnotes#October-2025)
+
+    * Review the release notes for October 2025.
+
+    * [27 October 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2725)
+
+        * Enhanced Ansible management in {{site.data.keyword.bpshort}} Action
+
+        * Secure credential and variable management
+
+        * Inventory management
+
+        * Release {{site.data.keyword.bpshort}} CLI plug-in to manage multihost credentials and variables during the creation and update of inventories.
 
 * [September 2025](/docs/schematics?topic=schematics-schematics-relnotes#September-2025)
 
@@ -1027,7 +1041,7 @@ subcollection: schematics
 
 * [Audience](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
 
 * [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
 
@@ -1052,7 +1066,7 @@ subcollection: schematics
 
 * [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
 
     * [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-continuous-deployment#wks-preqre-abt-sch)
 
@@ -1085,7 +1099,7 @@ subcollection: schematics
 
 * [Audience](/docs/schematics?topic=schematics-private-catalog#private-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
 
 * [Prepare your Terraform template for the private catalog](/docs/schematics?topic=schematics-private-catalog#prepare-tf-templates)
 
@@ -1147,29 +1161,86 @@ subcollection: schematics
 
 * [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
 
-[Working with Ansible](/docs/schematics?topic=schematics-action-working#action-working)
-
-* [Creating and running a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-action-working#action-working-prereq)
-
-    * [To create an Ansible playbook](/docs/schematics?topic=schematics-action-working#create-action-working)
-
-* [Updating the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
-
-* [Deleting an action](/docs/schematics?topic=schematics-action-working#delete-ansible-actions)
-
-* [Action state](/docs/schematics?topic=schematics-action-working#action-state-diagram)
-
-    * [State diagram flow](/docs/schematics?topic=schematics-action-working#state-diagram-flow)
-
-* [Reviewing actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
-
 [Creating an Ansible playbook](/docs/schematics?topic=schematics-create-playbook#create-playbook)
 
 * [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections)
 
-* [Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
+* [Preparing Your Ansible Playbook for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
+
+* [Next steps](/docs/schematics?topic=schematics-create-playbook#create-playbook-nextsteps)
+
+[Creating {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-action-working#action-working)
+
+* [Before you begin](/docs/schematics?topic=schematics-action-working#action-working-prereq)
+
+* [Creating an action by using Console](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working-ui)
+
+* [Creating an action by using CLI](/docs/schematics?topic=schematics-action-working&interface=cli#create-action-working-cli)
+
+* [Creating an action by using API](/docs/schematics?topic=schematics-action-working&interface=api#create-action-working-api)
+
+* [Next steps](/docs/schematics?topic=schematics-action-working&interface=api#create-action-working-nextsteps)
+
+[Updating a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working-update#action-working-update)
+
+* [Before you begin](/docs/schematics?topic=schematics-action-working-update#action-working-prereq)
+
+* [Updating an action by using Console](/docs/schematics?topic=schematics-action-working-update&interface=ui#action-settings)
+
+* [Updating an action by using CLI](/docs/schematics?topic=schematics-action-working-update&interface=cli#update-action-settings-cli)
+
+* [Updating an action by using API](/docs/schematics?topic=schematics-action-working-update&interface=api#update-action-settings-api)
+
+* [Next steps](/docs/schematics?topic=schematics-action-working-update&interface=api#action-working-update-nextsteps)
+
+[Deleting {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-delete-ansible-actions#delete-ansible-actions)
+
+* [Deleting an action by using Console](/docs/schematics?topic=schematics-delete-ansible-actions&interface=ui#create-action-working-ui)
+
+* [Deleting an action by using CLI](/docs/schematics?topic=schematics-delete-ansible-actions&interface=cli#delete-action-working-cli)
+
+* [Deleting an action by using API](/docs/schematics?topic=schematics-delete-ansible-actions&interface=api#delete-action-settings-api)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-ansible-actions&interface=api#action-working-update-nextsteps)
+
+
+### Managing Ansible
+{: #sitemap_managing_ansible}
+
+
+[Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
+
+* [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
+
+    * [Defining static hosts](/docs/schematics?topic=schematics-inventories-setup#static-host-defs)
+
+    * [Creating the host file](/docs/schematics?topic=schematics-inventories-setup#static-inv-create)
+
+    * [File format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format)
+
+    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
+
+* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
+
+    * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
+
+    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
+
+[Secure and streamline Ansible automation with {{site.data.keyword.bpshort}} multihost credentials and variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-setup)
+
+* [Managing Credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials)
+
+* [Types of credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credential-types)
+
+* [Managing variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable)
+
+* [Managing credentials and variables by using Console](/docs/schematics?topic=schematics-sch-multihost-setup&interface=ui#sch-multihost-mange)
+
+* [Managing credentials and variables by using CLI](/docs/schematics?topic=schematics-sch-multihost-setup&interface=cli#sch-multihost-manage-cli)
+
+* [Managing credentials and variables by using API](/docs/schematics?topic=schematics-sch-multihost-setup&interface=api#sch-multihost-manage-api)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-multihost-setup&interface=api#sch-multihost-manage-nextsteps)
 
 [Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
@@ -1194,6 +1265,12 @@ subcollection: schematics
     * [Adding the button in Markdown](/docs/schematics?topic=schematics-auto-deploy-url#add-button-markdown)
 
 * [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
+
+[Managing {{site.data.keyword.bpshort}} Action state](/docs/schematics?topic=schematics-action-state-diagram#action-state-diagram)
+
+* [State diagram flow](/docs/schematics?topic=schematics-action-state-diagram#state-diagram-flow)
+
+[Reviewing actions job](/docs/schematics?topic=schematics-action-jobs#action-jobs)
 
 
 ## Working with Extensions
@@ -1220,7 +1297,7 @@ subcollection: schematics
 
 [Deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview#agent-infrastructure-overview)
 
-* [Prerequisites](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-prereq)
 
 * [Provisioning agent infrastructure using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-infra-workspace)
 
@@ -1383,29 +1460,11 @@ subcollection: schematics
 
     * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_3)
 
-[Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
-
-* [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
-
-    * [Defining static hosts](/docs/schematics?topic=schematics-inventories-setup#static-host-defs)
-
-    * [Creating the host file](/docs/schematics?topic=schematics-inventories-setup#static-inv-create)
-
-    * [File format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format)
-
-    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
-
-* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
-
-    * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
-
-    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
-
 [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#kms-integration)
 
 * [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
 
-    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
+    * [Before you begin](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
 
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration&interface=ui#integrate-byok-ui)
 
@@ -1611,8 +1670,6 @@ subcollection: schematics
 
 * [Deleting the workspace through API](/docs/schematics?topic=schematics-sch-delete-wks&interface=api#delete-wks-api)
 
-    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks&interface=api#verify-wks-delete-api)
-
 * [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#delete-wks-terraform)
 
 * [Next steps](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#sch-delete-wks-nextsteps)
@@ -1793,7 +1850,7 @@ subcollection: schematics
 
 [Logging for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-logging#logging)
 
-    * [Locations where logs are sent to {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
+* [Locations where logs are sent to {{site.data.keyword.logs_full_notm}}](/docs/schematics?topic=schematics-logging#la-legacy-locations)
 
 * [Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}](/docs/schematics?topic=schematics-logging#lr-locations)
 
@@ -2009,8 +2066,6 @@ subcollection: schematics
 
     * [Live synchorization](/docs/schematics?topic=schematics-ha-dr#features-live-sync-feature)
 
-    * [Planning for disaster recovery](/docs/schematics?topic=schematics-ha-dr#features-for-disaster-recovery-feature)
-
 * [Your responsibilities for HA and DR](/docs/schematics?topic=schematics-ha-dr#feature-responsibilities)
 
 * [Recovery time objective (RTO) and recovery point objective (RPO)](/docs/schematics?topic=schematics-ha-dr#rto-rpo-features)
@@ -2056,7 +2111,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
 
-* [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
 
 * [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
@@ -2120,7 +2175,7 @@ subcollection: schematics
 
 * [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
-    * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
+    * [Before you begin](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
 
     * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-list)
 

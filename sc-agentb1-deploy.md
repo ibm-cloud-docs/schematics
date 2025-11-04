@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-24"
+lastupdated: "2025-10-30"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -452,7 +452,7 @@ You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://r
 ## Note
 {: #agent-create-note}
 
-After the Agent deployment is completed for `ca-mon`, it will initially show an error status. To resolve this, you need to [create a  Virtual Private Endpoint Gateway (VPE Gateway)](/docs/vpc?topic=vpc-vpc-reference#command-examples-endpoint-gateway-create) for the Schematics `private` region by targeting the `kube-vpeg-<cluster_IDxxxx>` security group in the `schematics-runtime` namespace. This process takes around 5 minutes. Once completed, the Agent deployment status changes to complete.
+After the Agent deployment is completed for `ca-mon`, it will initially show an error status. To resolve this, you need to [create a  Virtual Private Endpoint Gateway (VPE Gateway)](/docs/vpc?topic=vpc-vpc-reference#command-examples-endpoint-gateway-create) for the {{site.data.keyword.bpshort}} `private` region by targeting the `kube-vpeg-<cluster_IDxxxx>` security group in the `schematics-runtime` namespace. This process takes around 5 minutes. Once completed, the Agent deployment status changes to complete.
 
 
 ## Next steps
