@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-11-04"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,9 +15,9 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`,  `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`, `Terraform_v1.10.5`. `Terraform_v1.9.2` is set as default version.
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`,  `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`, `Terraform_v1.10.5`, `Terraform_v1.11`, `Terraform_v1.11`. `Terraform_v1.9.2` is set as default version.
 
-The `Terraform_v1.4.6` is deprecated, but the creation and execution of workspace by using this version is still allowed. For more information, see [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+For more information about supported versions and the deprecation of workspace creation and executions, see the [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: note}
 
 It is advisable to always upgrade to the current Terraform release supported by {{site.data.keyword.bpshort}}. For compliance and security considerations, remain on a Terraform release with HashiCorp Configuration Language (HCL) provided maintenance and security fixes. For more information about Terraform fix support, {{site.data.keyword.bpshort}} end of marketing dates for Terraform releases, and end of support, see the [deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
@@ -93,6 +93,7 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.10 | 30 May 2024 | 30 December 2025 | 30 June 2026 | 29 January 2027 |
 | Terraform v1.11 | 31 July 2024 | 30 January 2026 | 31 July 2026 | 29 January 2027 |
 | Terraform v1.12 | 31 July 2024 | 30 January 2026 | 31 July 2026 | 29 January 2027 |
+| Terraform v1.13 | 08 December 2025 | 30 May 2027 | 31 November 2027 | 29 May 2027 |
 {: caption="Deprecation timeline" caption-side="top"}
 
 ## User actions

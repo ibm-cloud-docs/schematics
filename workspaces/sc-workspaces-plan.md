@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-11-04"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -18,11 +18,8 @@ subcollection: schematics
 A workspace plan, performs a Terraform plan to determine the {{site.data.keyword.cloud}} resources that are created, modified or deleted on any subsequent workspace apply operation. Run the {{site.data.keyword.bpshort}} plan job against your workspace. You can use the plan summary logs to verify any resource changes before the template is applied.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
-
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
-{: important}
 
 ## Before you begin
 {: #plan-prerequisites}
@@ -37,7 +34,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 During workspace plan execution, you cannot edit your workspace.
 {: note}
 
-## Generate a workspace plan using the UI 
+## Generate a workspace plan using the UI
 {: #plan-wks-ui}
 {: ui}
 
@@ -46,10 +43,10 @@ During workspace plan execution, you cannot edit your workspace.
 3. Click your workspace name.
 4. Click **Generate Plan** to create a plan for the workspace.
 
-### Verifying workspace plan 
+### Verifying workspace plan
 {: #verify-wks-plan-ui}
 
-1. Click on your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} 
+1. Click on your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external}
 2. Click **Jobs** to see the job execution results. It are listed under the heading `Generate Plan`
 3. On a successful plan, the cost for the proposed changes is reviewed by clicking on the `Cost Estimate` button. For more information, see [Infrastructure cost estimation](/docs/schematics?topic=schematics-cost-estimation).
 
@@ -148,7 +145,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
-2. Generate plan for the existing workspace. 
+2. Generate plan for the existing workspace.
 
 	Example
 
@@ -202,7 +199,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 3. See [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete Cloud resources with Terraform.
 
 ### Verifying workspace plan execution
-{: #verify-wks-plan-api} 
+{: #verify-wks-plan-api}
 
 Verify that the workspace plan is successfully listed with the list of workspace jobs that were created.
 {: shortdesc}

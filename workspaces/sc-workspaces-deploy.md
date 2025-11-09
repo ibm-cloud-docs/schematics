@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-11-04"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -22,11 +22,8 @@ subcollection: schematics
 
 {{site.data.keyword.bplong_notm}} runs your jobs from the {{site.data.keyword.bpshort}} region hosting the workspace and remotely accesses services to provision resources in the target regions determined by your Terraform templates. Workspace operations in remote regions are unaffected by network latency between the management and target regions.
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
-
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
-{: important}
 
 ## Before you begin
 {: #deploy-prerequisites}
@@ -39,7 +36,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 - Run a {{site.data.keyword.bpshort}} apply job against your workspace. An apply job provisions, modifies, or removes the Cloud resources that you describe in the Terraform template that your workspace points. Depending on the type and number of resources that you want to provision or modify, this process might take a few minutes, or hours to complete. During this time, you cannot edit your workspace. After all updates are applied, the state of the files persists to determine what resources exist in your {{site.data.keyword.cloud_notm}} account.
 {: note}
 
-## Perform a workspace apply using the UI 
+## Perform a workspace apply using the UI
 {: #deploy-wks-ui}
 {: ui}
 
@@ -48,7 +45,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 3. Search your workspace in specific location and click your workspace name.
 4. Click **Apply plan** to provision the configured resources.
 
-### Verifying workspace apply 
+### Verifying workspace apply
 {: #verify-wks-deploy-ui}
 
 1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the workspace apply job.
@@ -125,7 +122,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
 4. Refer to, [Managing Cloud resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs .
 
-### Verifying workspace deploy 
+### Verifying workspace deploy
 {: #verify-wks-deploy-cli}
 
 Execute CLI command to check the status of the workspace deploy is success.
@@ -134,7 +131,7 @@ Execute CLI command to check the status of the workspace deploy is success.
 	ibmcloud schematics apply --id us-east.workspace.testwspace01feb.b5e8fdaa
 	Do you really want to perform this action? [y/N]> Y
 
-	Activity ID   df51c0e61a020592d3403a05d08692d7   
+	Activity ID   df51c0e61a020592d3403a05d08692d7
 
 	OK
 	```
@@ -178,7 +175,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 		"template_data": [{
 			"folder": ".",
 			"type": "terraform_v1.4",
-		
+
 		"variablestore": [
 		{
 		"value": "12",

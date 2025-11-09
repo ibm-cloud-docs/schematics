@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-11-04"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -18,11 +18,8 @@ subcollection: schematics
 Remove the {{site.data.keyword.cloud}} resources that you provisioned with your {{site.data.keyword.bpshort}} workspace, even if these resources are active.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
-
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3 template from 2nd week of April 2024.
-{: important}
 
 ## Before you begin
 {: #prerequisites-destroy}
@@ -45,7 +42,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Workspace list** section. Click workspace name and click **Actions** dropdown. Click `Destroy resources` and enter workspace name for confirmation before delete. Enter the name while creation and click destroy.
     - Click `Destroy`. Your resource of workspace are destroyed.
 
-### Verifying a workspace destroy operation 
+### Verifying a workspace destroy operation
 {: #verify-wks-destroy-ui}
 
 1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/automation/schematics/terraform){: external} to view the results of the destroy operation.
@@ -85,9 +82,9 @@ Verify that the workspace was created successfully. When you destroy the resourc
 ```text
    ibmcloud schematics destroy --id us-east.workspace.testwspace03jan.811182d2 --target vpc_name --target vpc_tags
    Do you really want to perform this action? [y/N]> y
-                     
-   Activity ID   c10fc92ddfd2d9ec645fc5dbece5e341   
-                     
+
+   Activity ID   c10fc92ddfd2d9ec645fc5dbece5e341
+
    OK
 ```
 {: screen}
@@ -102,7 +99,7 @@ For more information, see [workspace FAQs](/docs/schematics?topic=schematics-wor
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
-2. Destroy the workspace. 
+2. Destroy the workspace.
 
    Example:
 
