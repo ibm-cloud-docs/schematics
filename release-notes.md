@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-04"
+lastupdated: "2025-11-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,22 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+## November 2025
+{: #November-2025}
+
+Review the release notes for November 2025.
+{: shortdesc}
+
+
+
+
+### 05 November 2025
+{: #schematics-nov0525}
+{: release-note}
+
+Upcoming Terraform version updates in {{site.data.keyword.bpshort}}
+:   The updated plan outlines the [deprecation timeline for the current Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline), guiding you towards the next supported version. An announcement to [support Terraform v1.13.4 and set Terraform v1.12 as the default](https://cloud.ibm.com/status/announcement?component=schematics){: external} starting  December 8, 2025.
 
 ## October 2025
 {: #October-2025}

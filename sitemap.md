@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-03"
+lastupdated: "2025-11-18"
 
 keywords: schematics
 subcollection: schematics
@@ -168,6 +168,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [November 2025](/docs/schematics?topic=schematics-schematics-relnotes#November-2025)
+
+    * Review the release notes for November 2025.
+
+    * [05 November 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0525)
+
+        * Upcoming Terraform version updates in {{site.data.keyword.bpshort}}
 
 * [October 2025](/docs/schematics?topic=schematics-schematics-relnotes#October-2025)
 
@@ -2329,7 +2337,7 @@ subcollection: schematics
 {: #sitemap_ansible}
 
 
-[Ansible documentation](https://docs.ansible.com/ansible/latest/index.html){: external}
+[Ansible documentation](https://docs.ansible.com/projects/ansible/latest/index.html){: external}
 
 
 ## {{site.data.keyword.bpshort}} worker runtime

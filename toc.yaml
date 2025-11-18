@@ -182,7 +182,7 @@ toc:
           links:
           - link:
               label: Ansible documentation
-              href: https://docs.ansible.com/ansible/latest/index.html
+              href: https://docs.ansible.com/projects/ansible/latest/index.html
       - sc-tools.md
       - locations.md
       - limitations.md

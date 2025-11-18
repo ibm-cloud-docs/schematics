@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-04"
+lastupdated: "2025-11-18"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1228,7 +1228,7 @@ View the supported {{site.data.keyword.bplong_notm}} command-line commands.
 Syntax
 
 ```sh
-ibmcloud schematics <command> --help
+ibmcloud schematics help
 ```
 {: pre}
 
@@ -1243,7 +1243,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics <commandname> --help
+ibmcloud schematics help
 ```
 {: pre}
 
