@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-11-18"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -53,7 +53,7 @@ The use of (short form) hostnames is not supported.
 ### File format
 {: #inv-file-format}
 
-Review the following sample `hosts.ini` file to see the structure of the static host inventory list. For more information about `hosts.ini` file structures, see [Ansible documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#how-to-build-your-inventory){: external}.
+Review the following sample `hosts.ini` file to see the structure of the static host inventory list. For more information about `hosts.ini` file structures, see [Ansible documentation](https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html#how-to-build-your-inventory){: external}.
 
 This example references both publicly accessible hosts through host name and private hosts through IP address.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-11-18"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -27,7 +27,7 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 - Upload your Ansible playbook, modules, roles, and collections to your GitHub repository.
 - [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working&interface=ui) by using the uploaded playbook.
 
-Ensure that your playbook adheres to the necessary structure and references any required roles and collections for seamless execution in {{site.data.keyword.bpshort}}. For more information, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html){: external} or [playbook creation](https://docs.ansible.com/ansible/latest/getting_started/get_started_playbook.html){: external}.
+Ensure that your playbook adheres to the necessary structure and references any required roles and collections for seamless execution in {{site.data.keyword.bpshort}}. For more information, see the [Ansible documentation](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_intro.html){: external} or [playbook creation](https://docs.ansible.com/projects/ansible/latest/getting_started/get_started_playbook.html){: external}.
 
 ## Referencing Ansible collections in your playbook
 {: #schematics-collections}
@@ -40,7 +40,7 @@ Similar to [Ansible roles](/docs/schematics?topic=schematics-ansible-roles-galax
 Follow these steps to use collections in your {{site.data.keyword.bpshort}} playbook
 
 1. Browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find the collection that you want to use in your playbook.
-2. Create a `requirements.yml` file to specify the collections you want to install from Ansible Galaxy. The file structure should follow the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-collections). Here's an example by using the `community.kubernetes` collection.
+2. Create a `requirements.yml` file to specify the collections you want to install from Ansible Galaxy. The file structure should follow the [Ansible documentation](https://docs.ansible.com/projects/ansible/latest/galaxy/user_guide.html#installing-collections). Here's an example by using the `community.kubernetes` collection.
 
     ```yaml
     collections:
@@ -59,7 +59,7 @@ Follow these steps to use collections in your {{site.data.keyword.bpshort}} play
     ```
     {: screen}
 
-4. Reference a resource from your collection in your playbook. For more information, see the [Ansible documentation](https://docs.ansible.com/ansible/2.9/user_guide/collections_using.html#using-collections-in-a-playbook){: external}. Ensure your playbook's folder structure adheres to the requirements and properly references the collections for seamless execution in {{site.data.keyword.bpshort}}.
+4. Reference a resource from your collection in your playbook. For more information, see the [Ansible documentation](https://docs.ansible.com/projects/ansible/2.9/user_guide/collections_using.html#using-collections-in-a-playbook){: external}. Ensure your playbook's folder structure adheres to the requirements and properly references the collections for seamless execution in {{site.data.keyword.bpshort}}.
 
 ## Preparing Your Ansible Playbook for {{site.data.keyword.bpshort}}
 {: #plan-ansible-playbook}

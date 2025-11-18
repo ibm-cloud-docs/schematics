@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-04"
+lastupdated: "2025-11-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -28,6 +28,21 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for October 2025.
 {: shortdesc}
+
+### 18 November 2025
+{: #schematics-nov1825}
+{: release-note}
+
+Update the {{site.data.keyword.bpshort}} Terraform v1.13 release plan
+:   {{site.data.keyword.bpshort}} announces the [restriction and end of marketing on {{site.data.keyword.bpshort}} workspace creation](https://cloud.ibm.com/status/announcement?component=schematics){: external} for Terraform versions v1.7 through v1.9 gets deprecated from 28 January 2026. For more information about supported versions and the deprecation of workspace creation and executions, see the [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+
+### 05 November 2025
+{: #schematics-nov0525}
+{: release-note}
+
+Update the {{site.data.keyword.bpshort}} Terraform v1.13 release plan
+:   The updated plan outlines the [deprecation timeline for the current Terraform version](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline), guiding you towards the next supported version.
+
 
 ### 27 October 2025
 {: #schematics-oct2725}
