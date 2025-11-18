@@ -175,11 +175,11 @@ subcollection: schematics
 
     * [18 November 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1825)
 
-        * Update the {{site.data.keyword.bpshort}} Terraform v1.13 release plan
+        * {{site.data.keyword.bpshort}} deprecates Terraform `v1.7, v1.8, and v1.9` workspace creation from 28 January 2026
 
     * [05 November 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0525)
 
-        * Update the {{site.data.keyword.bpshort}} Terraform v1.13 release plan
+        * Upcoming Terraform version updates in {{site.data.keyword.bpshort}}
 
     * [27 October 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2725)
 

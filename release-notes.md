@@ -33,15 +33,16 @@ Review the release notes for October 2025.
 {: #schematics-nov1825}
 {: release-note}
 
-Update the {{site.data.keyword.bpshort}} Terraform v1.13 release plan
-:   {{site.data.keyword.bpshort}} announces the [restriction and end of marketing on {{site.data.keyword.bpshort}} workspace creation](https://cloud.ibm.com/status/announcement?component=schematics){: external} for Terraform versions v1.7 through v1.9 gets deprecated from 28 January 2026. For more information about supported versions and the deprecation of workspace creation and executions, see the [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+{{site.data.keyword.bpshort}} deprecates Terraform `v1.7, v1.8, and v1.9` workspace creation from 28 January 2026
+:   {{site.data.keyword.bpshort}} announces the [restriction and end of marketing for {{site.data.keyword.bpshort}} workspace creation](https://cloud.ibm.com/status/announcement?component=schematics){: external} for Terraform v1.7 through v1.9 effective 28 January 2026. For more information about supported versions and the deprecation of workspace creation and executions, see the [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+
 
 ### 05 November 2025
 {: #schematics-nov0525}
 {: release-note}
 
-Update the {{site.data.keyword.bpshort}} Terraform v1.13 release plan
-:   The updated plan outlines the [deprecation timeline for the current Terraform version](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline), guiding you towards the next supported version.
+Upcoming Terraform version updates in {{site.data.keyword.bpshort}}
+:   The updated plan outlines the [deprecation timeline for the current Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline), guiding you towards the next supported version. An announcement to [support Terraform v1.13.4 and set Terraform v1.12 as the default](https://cloud.ibm.com/status/announcement?component=schematics){: external} starting  December 8, 2025.
 
 
 ### 27 October 2025
