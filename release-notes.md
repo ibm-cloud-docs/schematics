@@ -29,12 +29,7 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for October 2025.
 {: shortdesc}
 
-### 18 November 2025
-{: #schematics-nov1825}
-{: release-note}
 
-{{site.data.keyword.bpshort}} deprecates Terraform `v1.7, v1.8, and v1.9` workspace creation from 28 January 2026
-:   {{site.data.keyword.bpshort}} announces the [restriction and end of marketing for {{site.data.keyword.bpshort}} workspace creation](https://cloud.ibm.com/status/announcement?component=schematics){: external} for Terraform v1.7 through v1.9 effective 28 January 2026. For more information about supported versions and the deprecation of workspace creation and executions, see the [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 
 ### 05 November 2025
