@@ -169,13 +169,17 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
-* [October 2025](/docs/schematics?topic=schematics-schematics-relnotes#October-2025)
+* [November 2025](/docs/schematics?topic=schematics-schematics-relnotes#November-2025)
 
-    * Review the release notes for October 2025.
+    * Review the release notes for November 2025.
 
     * [05 November 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0525)
 
         * Upcoming Terraform version updates in {{site.data.keyword.bpshort}}
+
+* [October 2025](/docs/schematics?topic=schematics-schematics-relnotes#October-2025)
+
+    * Review the release notes for October 2025.
 
     * [27 October 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2725)
 
