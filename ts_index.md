@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-20"
+lastupdated: "2025-11-19"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
@@ -22,7 +22,7 @@ If you have problems or questions about {{site.data.keyword.bplong_notm}}, you c
 
 * Review the [FAQs](/docs/schematics?topic=schematics-workspaces-faq) in the product documentation.
 * Review the [troubleshooting](/docs/schematics?topic=schematics-wks-create-api) documentation to troubleshoot and resolve common issues.
-* Post your question on [Stack Overflow ![External link icon](../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/ibm-cloud-infrastructure) and tag your question with `ibm-cloud-schematics`.
+* Post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud-infrastructure){: external} and tag your question with `ibm-cloud-schematics`.
 * Get help from the open source community by searching in the internet or by asking questions in forums, and on websites that support these tools.
 * You can also contact {{site.data.keyword.IBM}} support by opening a case. To learn about opening an IBM support case, or about support levels and case severities, see [Contacting support](/docs/account?topic=account-using-avatar){: external}.
 
