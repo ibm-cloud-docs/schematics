@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-19"
+lastupdated: "2025-11-20"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action,
 
@@ -17,7 +17,6 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} actions provide Ansible-as-a-Service capabilities, enables you to automate the configuration and management of your {{site.data.keyword.cloud_notm}} environment. This service allows you to deploy complex, multitier applications to your cloud infrastructure efficiently.
 {: shortdesc}
-
 
 For a comprehensive understanding of {{site.data.keyword.bpshort}} actions and their integration with Red Hat Ansible, see the dedicated section on [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions). This section describes the fundamentals and key aspects of using {{site.data.keyword.bpshort}} actions for Ansible automation.
 
@@ -78,17 +77,17 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
       10. Enter the host details by using [.ini file format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format) in **File** option.
       11. From the table list, select the host groups that you want to include in your resource inventory.
       12. Click **Create inventory** to define an inventory file that defines the hosts and group of hosts upon which your playbook operates.
-4. From the resource inventory table, select an existing resource inventory and click the **Edit icon**.
+3. From the resource inventory table, select an existing resource inventory and click the **Edit icon**.
       - Click **Manage Credentials** to configure the inventory credentials. For more information, see [Managing credentials](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-credentials).
       - Click **Manage Variables** to configure the inventory variables. For more information, see [Managing variables](/docs/schematics?topic=schematics-sch-multihost-setup#sch-multihost-variable).
       - Click **Delete** to remove the inventory.
-5. Click **Create**. Your action is created with a `Normal` state, and you are directed to the **Details** section.
-6. Click **Check action** to verify the tasks you are trying to run, and your resources are linked to your playbook. You can monitor the **Action history** section to view the results in the logs. This check verifies the tasks that you are trying to run, and your resources are properly linked to your playbook.
+4. Click **Create**. Your action is created with a `Normal` state, and you are directed to the **Details** section.
+5. Click **Check action** to verify the tasks you are trying to run, and your resources are linked to your playbook. You can monitor the **Action history** section to view the results in the logs. This check verifies the tasks that you are trying to run, and your resources are properly linked to your playbook.
 
       You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To change your action, wait for the job to complete, and change your settings, and then click **Check action** or **Run action** again.
       {: note}
 
-7. Click **Run action** to run the action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs are automatically refreshed.
+6. Click **Run action** to run the action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs are automatically refreshed.
 
 ## Creating an action by using CLI
 {: #create-action-working-cli}
