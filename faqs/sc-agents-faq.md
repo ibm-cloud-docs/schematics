@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-11-26"
 
-keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
+keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider
 
 subcollection: schematics
 
@@ -46,7 +46,7 @@ The prerequisite infrastructure required to deploy and run an agent is chargeabl
 
 Agent service execution:
 
-- There is no cost to running jobs on agents.  
+- There is no cost to running jobs on agents.
 - The {{site.data.keyword.bpshort}} version 1 agent capability is a non-chargeable feature. Future versions may be chargeable.
 
 ## Is it possible to install more than one Agent on a cluster?
@@ -56,7 +56,7 @@ Agent service execution:
 
 You can install only one agent on the {{site.data.keyword.containerlong_notm}} cluster. Additional clusters are required to deploy additional agents. If you attempt to install more than one agent on a cluster, the deploy job fails with a namespace conflict error.
 
-## What Terraform versions are supported with agents? 
+## What Terraform versions are supported with agents?
 {: #faqs-agent-terraform-versions}
 {: faq}
 {: support}
@@ -126,7 +126,7 @@ It is recommended to use a service such as [Continuous Delivery](/docs/Continuou
 {: faq}
 {: support}
 
-The `--agent-location` parameter is a variable that specifies the region of the cluster where an agent service is deployed. For example, `us-south`. This must match the cluster region. 
+The `--agent-location` parameter is a variable that specifies the region of the cluster where an agent service is deployed. For example, `us-south`. This must match the cluster region.
 
 The `--location` parameter is a variable that specifies the region that is supported by the {{site.data.keyword.bpshort}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. The agent polls {{site.data.keyword.bpshort}} service instance from this location, for workspace or action jobs for processing.
 
@@ -144,7 +144,7 @@ Yes, an agent can run workspace or actions jobs associated with any resource gro
 
 Agents deployments are associated with a {{site.data.keyword.bpshort}} home region for job execution. They can only execute workspace or action jobs defined in the same region such as, `North America`, or `Europe`.
 
-The Agent periodically polls its home {{site.data.keyword.bpshort}} region to fetch and run jobs. It can only execute workspace or action jobs defined for the region containing its home region. For example, an agent is deployed on a user cluster in Sydney is configured to with `eu-de` as it’s home location. The agent polls for jobs in the Europe region, containing both the `eu-de` and `eu-gb` regions. To deploy resources using the Sydney agent, workspaces or actions must be created in the `eu-de` or `eu-gb` regions. 
+The Agent periodically polls its home {{site.data.keyword.bpshort}} region to fetch and run jobs. It can only execute workspace or action jobs defined for the region containing its home region. For example, an agent is deployed on a user cluster in Sydney is configured to with `eu-de` as it’s home location. The agent polls for jobs in the Europe region, containing both the `eu-de` and `eu-gb` regions. To deploy resources using the Sydney agent, workspaces or actions must be created in the `eu-de` or `eu-gb` regions.
 
 ## Is it possible to use an agent to execute jobs for multiple accounts?
 {: #faqs-agent-register}
@@ -182,23 +182,23 @@ In the four `.cer` extension file names ensure that you modify to replace the sp
 1. Create a config map by using `.cer` file as shown in the `kubectrl` command.
 
     ```sh
-    kubectl -n schematics-runtime create configmap bnpp-root —-from-file 2014-2044_BNPP_Root.cer
+    kubectl -n schematics-runtime create configmap xyz-root —-from-file 2014-2044_xyz_Root.cer
     ```
     {: pre}
 
     ```sh
-    kubectl -n schematics-runtime create configmap bnpp-authentication —-from-file 2014-2029 BNPP_Users_Authentication.cer
+    kubectl -n schematics-runtime create configmap xyz-authentication —-from-file 2014-2029 xyz_Users_Authentication.cer
     ```
     {: pre}
 
     ```sh
-    kubectl -n schematics-runtime create configmap bnpp-infrastructure —-from-file 2014-2029 BNPP_Infrastructure.cer
+    kubectl -n schematics-runtime create configmap xyz-infrastructure —-from-file 2014-2029 xyz_Infrastructure.cer
     ```
     {: pre}
 
-2. Mount config map file as a volume in a directory `/etc/ssl/certs/` as file `agent-runtime-deployment-certs.yaml` in a shared `bnpp_agent_deployment_files` directory.
+2. Mount config map file as a volume in a directory `/etc/ssl/certs/` as file `agent-runtime-deployment-certs.yaml` in a shared `xyz_agent_deployment_files` directory.
 
-The Shared directory `bnpp_agent_deployment_files` has two yaml files named 
+The Shared directory `xyz_agent_deployment_files` has two yaml files named
     - `agent-runtime-deployment-certs.yaml` and
     - `agent-runtime-deployment.yaml`.
 
@@ -230,7 +230,7 @@ If your organization has three different network isolation zones (such as `Dev`,
 You can follow these steps to enable or disable the debug mode of an agent.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Click **Kubernetes** from the navigator window, then click **Clusters** 
+2. Click **Kubernetes** from the navigator window, then click **Clusters**
 3. On the **Kubernetes Clusters** page, click your **cluster** > **Kubernetes dashboard**.
     - Click the **default** drop down to view the list of **Namespaces**:
         - In the drop down, type the **{{site.data.keyword.bpshort}}-job-runtime** namespaces.
@@ -306,7 +306,7 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
      {: pre}
 
    - Use configmap as volume and mount as shared in the deployment file in `Jobrunner`, `Sandbox`, and `Runtime-ws` microservices.
-   
+
      ```text
         apiVersion: apps/v1
         kind: Deployment
@@ -335,7 +335,7 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
                 path: /var/log/schematics
                 type: ""
                 name: ext-logs
-        - name: mytestcert  #### added as a volume 
+        - name: mytestcert  #### added as a volume
                 configMap:
                 name: mytestcert
                 status:
@@ -357,7 +357,7 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
                 readyReplicas: 1
                 replicas: 1
                 updatedReplicas: 1
-                
+
      ```
      {: screen}
 
@@ -380,11 +380,11 @@ curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id>'
 "agent_metadata": [
         {
             "name": "purpose",
-            "value": ["git"] 
+            "value": ["git"]
         },
         {
             "name": "git_endpoints",
-            "value": ["https://myprivate-gitinstance/testrepo"] 
+            "value": ["https://myprivate-gitinstance/testrepo"]
         }
       ]
     }'
