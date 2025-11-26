@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-18"
+lastupdated: "2025-11-26"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -3265,7 +3265,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.6.1 | 21 October 2021 | Supports `winrm` for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json` and `--credential-json` option value to the create and config updates. Updated non-English translations for the command-line. Fixed duplication display of `command-object` argument in `ibmcloud schematics jobs run` interactive mode.|
 | 1.6.0 | 29 September 2021 | Support for `linux-ppc64le`, and `linux-s390x` binaries. Lists `Terraform v1.0` in the details panel. Display `Terraform v0.11` deprecation message in {{site.data.keyword.bpshort}} workspace page. Fixed the resource query list command returns values as empty string.|
 | 1.5.12 | 02 September 2021 | Suppress status message for `--output json` flag.|
-| 1.5.11 | 27 August 2021 | Added a flag `--pull-latest` to existing workspace **update** command. Fixed `BNPP` issue. Fixed the locale translations.|
+| 1.5.11 | 27 August 2021 | Added a flag `--pull-latest` to existing workspace **update** command. Fixed issue. Fixed the locale translations.|
 | 1.5.10 | 11 August 2021 | Supports `Terraform v0.15`. Fixed locale translations.|
 | 1.5.9 | 13 July 2021 | Fixed locale translations.|
 | 1.5.8 | 08 July 2021 | Fixed shared data sets API path. Disabled shared data sets commands.|
