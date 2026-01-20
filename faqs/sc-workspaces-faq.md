@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-04"
+  years: 2017, 2026
+lastupdated: "2026-01-19"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -147,7 +147,7 @@ The unexpected impact due to maintenance results in the failure of the running a
 
 ```text
 2021/11/08 12:34:06 -----  New Action  -----
- 2021/11/08 12:34:06 Request: RepoURL=https://github.ibm.com/wh-hp-insights/hi-cloud-automation, workspaceSource=Schematics, Branch=2021.10, Release=, Folder=terraform-v2/workspace-hi-qa-automation-app
+ 2021/11/08 12:34:06 Request: RepoURL=https://xxxxxxxxxx/wh-hp-insights/hi-cloud-automation, workspaceSource=Schematics, Branch=2021.10, Release=, Folder=terraform-v2/workspace-hi-qa-automation-app
  2021/11/08 12:34:06 Related Activity: action=UPDATE_WORKSPACE,processedBy=sandbox-6bcf8bffcd-rxbww_2478
  2021/11/08 12:34:06 Getting download command
  2021/11/08 12:34:11 Fatal, could not download repo, Failed to clone git repository, couldn't find remote ref "refs/heads/2021.10" (most likely invalid branch name is passed)
@@ -417,6 +417,9 @@ Removing Cloud resources cannot be undone. Make sure that you have backed up any
 {: support}
 
 You can set `env values` for a workspace by using the CLI and API. For more information, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism).
+
+If your workspace was created by the [{{site.data.keyword.cloud_notm}} projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) service, see [Enabling Terraform logs by using the CLI](/docs/secure-enterprise?topic=secure-enterprise-da-env-vars) as a reference on how to set environment variables.
+{: important}
 
 Sample payload
 

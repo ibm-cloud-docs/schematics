@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-01-17"
+  years: 2017, 2026
+lastupdated: "2026-01-19"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -22,6 +22,9 @@ For example, parallelism is one of the environment variable with a number flag r
 
 Environment variables can only be set using the workspace update API and the CLI passing a JSON file. See the [Workspace update CLI command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) for more details.
 
+If your workspace was created by the [{{site.data.keyword.cloud_notm}} projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects) service, see [Enabling Terraform logs by using the CLI](/docs/secure-enterprise?topic=secure-enterprise-da-env-vars) as a reference on how to set environment variables.
+{: important}
+
 ## Usage
 {: #env-var-usage}
 
@@ -32,10 +35,10 @@ You can pass Terraform command-line arguments `TF_CLI_ARGS` as environment varia
 
 Terraform reads these environment variables and applies them runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}.
 
-### Example setting parallelism or TF_LOGS 
+### Example setting parallelism or TF_LOGS
 {: #parallelism-example}
 
-The examples shown here can be used to set any environment variable to be passed to Terraform. 
+The examples shown here can be used to set any environment variable to be passed to Terraform.
 
 #### Setting parallelism at create time
 {: #parallelism-example-create}

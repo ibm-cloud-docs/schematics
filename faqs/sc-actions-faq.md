@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-03-13"
+  years: 2017, 2026
+lastupdated: "2026-01-19"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -20,14 +20,14 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bplong_notm}} actions are classified into following section.
 {: shortdesc}
 
-## Are Classic VSIs supported for use with actions? 
+## Are Classic VSIs supported for use with actions?
 {: #Classic-vsi-faq}
 {: faq}
 {: support}
 
 Classic VSI environments are not supported with actions.  Only {{site.data.keyword.cloud_notm}} VPC VSIs have been tested and are supported with actions.
 
-## What network configuration is suggested for use with actions? 
+## What network configuration is suggested for use with actions?
 {: #network-faq}
 {: faq}
 {: support}
@@ -80,7 +80,7 @@ In the action settings page you, need to set the input variable as `ansible_pyth
   2021/12/06 10:15:49 Terraform apply |
   2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
   2021/12/06 10:15:50 Could not execute action
-  
+
 ```
 {: screen}
 
