@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-01-17"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -79,6 +79,14 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 - Changes are easier to make and test at a module level.
 - The risk of change reduces as configuration changes are localized.
 
+### Leveraging Terraform IBM Modules
+{: #iac-tim-modules}
+
+[Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) provide production-ready, reusable infrastructure components specifically designed for IBM Cloud. These modules follow best practices for infrastructure-as-code and significantly reduce the complexity of deploying common IBM Cloud services.
+{: shortdesc}
+
+Explore the [Terraform IBM Modules](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external} to discover pre-built modules for VPC infrastructure, security services, observability, and more. Each module is thoroughly tested and maintained by IBM Cloud experts, ensuring reliability and adherence to security best practices.
+
 ### Declarative versus imperative approaches to IaC
 {: #iac-declarative}
 
@@ -121,3 +129,4 @@ To ensure immutability and eliminate drift, all changes should be made through t
 Now you understand more about IaC, why not review the use of IaC in {{site.data.keyword.bpshort}}: 
 - Learn more about the [Open-source tools in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects)
 - Explore these [use cases](/docs/schematics?topic=schematics-how-it-works).
+- Accelerate deployments with [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-03"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
@@ -35,7 +35,14 @@ For more information about how {{site.data.keyword.bpshort}} Works, see [About {
 {: #what-is-iac}
 {: faq}
 
-Infrastructure as Code (IaC) helps you codify your cloud environment so that you can automate the provisioning and management of your resources in the cloud. Rather than manually provisioning and configuring infrastructure resources or by using scripts to adjust your cloud environment, you use a high-level scripting language to specify your resource and its configuration. Then, you use tools like Terraform to provision the resource in the cloud by using its API. Your infrastructure code is treated the same way as your app code so that you can apply DevOps core practices such as version control, testing, and continuous monitoring.
+Infrastructure as Code (IaC) enables you to codify your cloud environment so that you can automate the provisioning and management of cloud resources. Instead of manually provisioning and configuring infrastructure resources or using scripts to adjust your cloud environment, you use a high-level scripting language to define your resources and their configurations. Tools like Terraform provision those resources in the cloud through its API. Because your infrastructure code is treated the same way as your application code, you can apply DevOps practices such as version control, testing, and continuous monitoring.
+
+## Can I use Terraform IBM Modules with {{site.data.keyword.bpshort}} to provision the required infrastructure?
+{: #use-terraform-ibm-modules}
+{: faq}
+{: support}
+
+Yes, you can use [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) with {{site.data.keyword.bpshort}} to provision infrastructure. Terraform IBM Modules are pre-built, validated, and enterprise-ready modules that follow IBM Cloud best practices. These modules can be referenced directly in your Terraform configurations and used with {{site.data.keyword.bpshort}} workspaces to provision IBM Cloud resources efficiently. For more information and available modules, check the [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}.
 
 ## What is the cost charged for using {{site.data.keyword.bpshort}}?
 {: #charges}

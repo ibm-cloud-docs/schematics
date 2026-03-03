@@ -20,7 +20,8 @@ Learn how to create Terraform templates that are well-structured, reusable, and 
 
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud}} resources. To successfully work with your resources, you must [configure {{site.data.keyword.IBM_notm}} as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider) and [add resources to your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config#configure-resources). Optionally, you can use [input variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) to customize your resources.
 
-You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format.
+You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format. You can also use [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) which offer pre‑built infrastructure components that help standardize and simplify the deployment process.
+{: shortdesc}
 
 Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limitations](/docs/schematics?topic=schematics-schematics-limitations).
 {: tip}
@@ -230,6 +231,34 @@ resource ibm_container_cluster "test_cluster" {
 }
 ```
 {: codeblock}
+
+## Leveraging Terraform IBM Modules for faster development
+{: #using-tim-modules}
+
+Optionally, you can use [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to create your templates. It helps to build complex infrastructure quickly, helps simplify resource dependencies, applies {{site.data.keyword.cloud_notm}} best practices and evolves through contributions from the {{site.data.keyword.cloud_notm}} community.
+
+### Example: Using the VPC module from TIM
+
+```terraform
+module "vpc" {
+  source  = "terraform-ibm-modules/vpc/ibm"
+  version = "1.1.0"
+  
+  vpc_name                    = "my-production-vpc"
+  resource_group_id           = "Default"
+  classic_access              = false
+  default_address_prefix      = "auto"
+  default_network_acl_name    = "my-default-acl"
+  default_security_group_name = "my-default-sg"
+  default_routing_table_name  = "my-default-rt"
+}
+```
+{: codeblock}
+
+**Explore available modules:**
+
+- [TIM GitHub](https://github.com/terraform-ibm-modules)
+- [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}
 
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}

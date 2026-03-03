@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-05-23"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -14,7 +14,7 @@ subcollection: schematics
 # Using workspaces to deploy infrastructure and cloud services
 {: #get-started-terraform}
 
-Use one of the IBM provided templates to create an [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage){: external} service instance that you can use to store your data in {{site.data.keyword.cloud_notm}}.
+Use one of the IBM provided templates to create an [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage){: external} service instance that you can use to store your data in {{site.data.keyword.cloud_notm}} or you can use pre-built and open-source [Terraform IBM Cloud Object Storage](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest){: external} module to provision [{{site.data.keyword.cos_full}}] resources.
 {: shortdesc}
 
 The {{site.data.keyword.bplong_notm}} template is a set of files that define the Cloud resources that you want to create, update, or delete. You create a {{site.data.keyword.bpshort}} workspace that points to your template and use the built-in capabilities of the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision your Cloud resources. For more information about the provider and how {{site.data.keyword.bpshort}} spins up your Cloud resources, see [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces){: external}.
@@ -68,7 +68,7 @@ View the provisioned {{site.data.keyword.cos_full_notm}} instance.
 
 You used the built-in Terraform capabilities of {{site.data.keyword.bpshort}} to create an {{site.data.keyword.cos_full_notm}} service instance in your {{site.data.keyword.cloud_notm}} account.
 
-## What's next? 
+## What's next?
 {: #whats-next-gs}
 
 Now that you created your first Cloud resource with {{site.data.keyword.bpshort}}, you can explore the following options.
@@ -76,4 +76,5 @@ Now that you created your first Cloud resource with {{site.data.keyword.bpshort}
 - Try out this [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external} to create a bucket in the {{site.data.keyword.cos_full_notm}} instance that you created with {{site.data.keyword.bpshort}}.
 - Learn how to [create your own Terraform template](/docs/schematics?topic=schematics-create-tf-config).
 - Explore other [IBM-provided templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}.
+- Explore [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for pre-built, enterprise-ready infrastructure automation modules.
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating Cloud resources.

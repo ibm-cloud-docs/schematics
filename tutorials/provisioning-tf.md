@@ -101,6 +101,9 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     - **versions.tf**: This file includes the Terraform version that this template requires.
 2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace.
 
+You can use a pre-built, open-source and enterprise-ready [Terraform IBM modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision infrastructure.
+{: tip}
+
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
 {: #create-tut-wks}
 {: step}
@@ -312,6 +315,9 @@ During the creation of the Terraform execution plan, you are not allowed to make
     {: pre}
 
     You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard workspace jobs status.
+    {: note}
+
+You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard workspace jobs status.
     {: note}
 
 ## What's next?

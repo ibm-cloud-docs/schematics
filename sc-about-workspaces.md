@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-05-23"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -50,4 +50,5 @@ So far you have learned about {{site.data.keyword.bpshort}} workspaces. The foll
 
 - [Getting started use case](/docs/schematics?topic=schematics-get-started-terraform) to understand how to use workspaces to deploy and manage your Infrastructure as Code (IaC), in the cloud, environments.
 - [Sample Terraform templates](/docs/schematics?topic=schematics-create-tf-config) to provide you how to create well-structured, and reusable Terraform templates.
+- Accelerate infrastructure provisioning with [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), providing production-ready modules for common IBM Cloud services.
 - See [Creating workspaces](/docs/schematics?topic=schematics-sch-create-wks) to dig into how to create workspace using the Terraform templates.
