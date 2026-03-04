@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-18"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 keywords: schematics
 subcollection: schematics
@@ -61,6 +61,8 @@ subcollection: schematics
     * [Testing](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-testings)
 
     * [Modular Infrastructure](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)
+
+    * [Leveraging Terraform IBM Modules](/docs/schematics?topic=schematics-infrastructure-as-code#iac-tim-modules)
 
     * [Declarative versus imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
 
@@ -1547,6 +1549,10 @@ subcollection: schematics
 
     * [Referencing variables](/docs/schematics?topic=schematics-create-tf-config#reference-variables)
 
+* [Leveraging Terraform IBM Modules for faster development](/docs/schematics?topic=schematics-create-tf-config#using-tim-modules)
+
+    * [Example: Using the VPC module from TIM](/docs/schematics?topic=schematics-create-tf-config#example-using-the-vpc-module-from-tim)
+
 * [Providing values to {{site.data.keyword.bplong_notm}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable)
 
     * [Example for list of Strings](/docs/schematics?topic=schematics-create-tf-config#example-list-strings)
@@ -2512,6 +2518,8 @@ subcollection: schematics
 
 * [What is Infrastructure as Code?](/docs/schematics?topic=schematics-general-faq#what-is-iac)
 
+* [Can I use Terraform IBM Modules with {{site.data.keyword.bpshort}} to provision the required infrastructure?](/docs/schematics?topic=schematics-general-faq#use-terraform-ibm-modules)
+
 * [What is the cost charged for using {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#charges)
 
 * [How do I save files between operations?](/docs/schematics?topic=schematics-general-faq#saving-files)
@@ -2619,6 +2627,10 @@ subcollection: schematics
 * [How can I fix Git token issues when creating workspaces by using the CLI](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
 * [How do I fix authorization issues when creating or updating a workspace?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
+
+* [How can I use Terraform IBM Modules with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#terraform-ibm-modules)
+
+* [What are the benefits of using Terraform IBM Modules?](/docs/schematics?topic=schematics-workspaces-faq#terraform-ibm-modules-benefits)
 
 * [How to use {{site.data.keyword.bpshort}} services with a test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 

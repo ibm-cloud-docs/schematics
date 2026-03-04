@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-01-19"
+lastupdated: "2026-03-03"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -96,6 +96,29 @@ You need to check your [authentication](/docs/schematics?topic=schematics-setup-
 {: support}
 
 You see authorization issues when the role and permission access is insufficient while updating the workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
+
+
+## How can I use Terraform IBM Modules with {{site.data.keyword.bpshort}}?
+{: #terraform-ibm-modules}
+{: faq}
+{: support}
+
+You can use pre-built, open-source and enterprise-ready [Terraform IBM modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) with {{site.data.keyword.bpshort}} workspaces. These modules provide best practices for provisioning IBM Cloud resources and can be referenced directly in your Terraform configurations. For example, you can use the [terraform-ibm-modules](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external} to provision resources with built-in best practices.
+
+## What are the benefits of using Terraform IBM Modules?
+{: #terraform-ibm-modules-benefits}
+{: faq}
+{: support}
+
+Terraform IBM Modules (TIM) provide several benefits:
+- Pre-built, tested, and maintained by IBM.
+- Follow IBM Cloud best practices and security guidelines.
+- Reduce development time and complexity.
+- Ensure consistency across deployments.
+- Support for enterprise-grade infrastructure patterns.
+- Regular updates and community support.
+
+For more information, see [About Terraform IBM modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 ## How to use {{site.data.keyword.bpshort}} services with a test ID?
 {: #global-catalog-faq}

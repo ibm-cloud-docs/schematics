@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-01-17"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 subcollection: schematics
 
@@ -101,6 +101,8 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     ```
     {: codeblock}
 
+
+
     The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information about the detailed parameters to create workspace, see [`ibm_schematics_workspace`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
 
     | Parameter | Description |
@@ -115,7 +117,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
     | `template_type` |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
     {: caption="Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
 
-3. Initialize the Terraform CLI. 
+3. Initialize the Terraform CLI.
 
     ```sh
     terraform init
@@ -154,3 +156,4 @@ Now that you successfully created your first {{site.data.keyword.bpshort}} works
 - Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
 - To run `Ansible playbooks` in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
 - Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or checkout other arguments and attributes that you can use for the Terraform resources that were used in the example.
+- Simplify provisioning by using open source, secure-by-default and enterprise-ready [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).

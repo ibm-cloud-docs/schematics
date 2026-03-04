@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-10-30"
+  years: 2017, 2026
+lastupdated: "2026-03-03"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -391,7 +391,7 @@ Output
 {: #create-agent-terraform}
 {: terraform}
 
-To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, define the `ibm_schematics_agent_deploy` resource in your Terraform configuration file. Complete the following steps to create the {{site.data.keyword.bpshort}} Agent.
+To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, define the `ibm_schematics_agent_deploy` resource in your Terraform configuration file. Complete the following steps to create the {{site.data.keyword.bpshort}} Agent. Optionally, you can refer to the [terraform-ibm-schematics-agent](https://registry.terraform.io/modules/terraform-ibm-modules/schematics-agent/ibm/latest){: external} module for related infrastructure code and usage examples.
 
 1. Install the [Terrafrom CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 2. [Configure the {{site.data.keyword.terraform-provider_full_notm}} plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step).
@@ -419,6 +419,28 @@ To create the {{site.data.keyword.bpshort}} Agent deployment using Terraform, de
     schematics_location = "us-south"
     tags = ["agent-MyDevAgent"]
     version = "1.0.0"
+    }
+    ```
+    {: codeblock}
+
+    Or use the Terraform IBM module for schematics agent as shown:
+
+    ```terraform
+    module "schematics_agent" {
+        source                      = "terraform-ibm-modules/schematics-agent/ibm"
+        version                     = "1.4.0"
+        infra_type                  = "ibm_openshift"
+        cluster_id                  = "cluster-id"
+        cluster_resource_group_name = "Default"
+        cos_instance_name           = "cos-instance-name"
+        cos_bucket_name             = "cos-bucket-name"
+        cos_bucket_region           = "cos-bucket-region"
+        agent_location              = "us-south"
+        agent_description           = "schematics agent description"
+        agent_name                  = "k8s-schematics-agent"
+        agent_resource_group_name   = "Default"
+        schematics_location         = "us-south"
+        agent_version               = "1.5.0"
     }
     ```
     {: codeblock}
@@ -453,7 +475,6 @@ You can check the [{{site.data.keyword.terraform-provider_full_notm}}](https://r
 {: #agent-create-note}
 
 After the Agent deployment is completed for `ca-mon`, it will initially show an error status. To resolve this, you need to [create a  Virtual Private Endpoint Gateway (VPE Gateway)](/docs/vpc?topic=vpc-vpc-reference#command-examples-endpoint-gateway-create) for the {{site.data.keyword.bpshort}} `private` region by targeting the `kube-vpeg-<cluster_IDxxxx>` security group in the `schematics-runtime` namespace. This process takes around 5 minutes. Once completed, the Agent deployment status changes to complete.
-
 
 ## Next steps
 {: #agent-create-nextsteps}

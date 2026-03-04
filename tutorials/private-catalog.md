@@ -173,3 +173,4 @@ In this tutorial, you learned how to create a private catalog in {{site.data.key
 - [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user&interface=ui#prereq-restrict-ui).
 - [Assign users access to your private catalog](/docs/account?topic=account-catalog-access).
 - [Explore other settings that you can apply to your private catalog](/docs/account?topic=account-filter-account).
+- [Explore Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for pre-built, enterprise-ready infrastructure modules that can be imported into your private catalog.
