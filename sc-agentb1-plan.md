@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-09-23"
+  years: 2017, 2026
+lastupdated: "2026-03-16"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -39,6 +39,9 @@ To support agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data
 
 You need to define any security group rules and ACLs at the VPC level before deploying an agent on the cluster. For more information, see the [Terraform script to define security groups and ACLs on a VPC](https://github.com/Cloud-Schematics/schematics-agents/blob/main/templates/infrastructure/vpc/network_acl.tf){: external}.
 {: note}
+
+If you are installing an agent on a cluster where the public endpoint is disabled and the OAuth access type for the cluster is `vpegw`, you must create a service-to-service (S2S) authorization policy between {{site.data.keyword.bpshort}} and Kubernetes with the Viewer role. The agent version must be 1.7.0 or later. For more information about creating S2S policies, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
+{: important}
 
 {{site.data.keyword.cos_full_notm}}
 :   The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster.
