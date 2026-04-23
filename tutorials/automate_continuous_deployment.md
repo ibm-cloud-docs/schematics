@@ -128,7 +128,7 @@ Click `...` to configure the variables as described in the table to authenticate
 |Name|Value|
 |-----|-----|
 |`iaas_classic_username`|Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. |
-|`iaas_classic_api_key`|Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information, see [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
+|`iaas_classic_api_key`|Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information, see [Classic infrastructure API keys](/docs/iam?topic=iam-classic_keys#create-classic-infrastructure-key).|
 |`ibmcloud_api_key`|Enter your {{site.data.keyword.cloud_notm}} API Key, for more information, see [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys).|
 |`resource_group_name`| Keep as default.|
 {: caption="Variables" caption-side="bottom"}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-26"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1110,10 +1110,10 @@ The following prerequisites must be ensured for the key management system to lis
 
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
-- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
+- You need to configure [service to service authorization](/docs/iam?topic=iam-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
 
-KMS setting is a one time settings. You need to open a [support ticket](/docs/account?topic=account-using-avatar) to update KMS settings.
+KMS setting is a one time settings. You need to open a [support ticket](/docs/support?topic=support-using-avatar) to update KMS settings.
 {: note}
 
 ### `ibmcloud schematics kms instance ls`

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-07-30"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -109,6 +109,6 @@ To remove your data from {{site.data.keyword.bplong_notm}}, choose among the fol
 Delete the workspace
 :   When you delete your workspace, all the data related to the workspace is permanently deleted.
 Open an {{site.data.keyword.cloud_notm}} support case
-:   Contact {{site.data.keyword.IBM_notm}} Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/account?topic=account-using-avatar).
+:   Contact {{site.data.keyword.IBM_notm}} Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/support?topic=support-using-avatar).
 End your {{site.data.keyword.cloud_notm}} subscription
 :   A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored by IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated stored data is deleted.

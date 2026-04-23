@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-10-31"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: secrets manager, s2s authentication, schematics integration
 
@@ -26,7 +26,7 @@ To integrate {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.
 {: #sm-integration-prerequisites}
 
 - You must have your key-value secrets. To create the secrets, see [create {{site.data.keyword.secrets-manager_short}} instance](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui).
-- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}} service.
+- You need to configure [service to service authorization](/docs/iam?topic=iam-serviceauth&interface=ui#create-auth) to integrate {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.bpshort}} service.
 - Follow these steps to grant service to service authorization access to {{site.data.keyword.bpshort}} service.
 
 1. Log in to [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.

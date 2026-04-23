@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-18"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -1446,7 +1446,7 @@ Ansible provisioner support
 {: release-note}
 
 Version 1.8.0 of the {{site.data.keyword.cloud_notm}} Provider plug-in available
-:   The {{site.data.keyword.terraform-provider_full_notm}} version 1.8.0 is now enabled in {{site.data.keyword.bplong_notm}}. For more information about the version, see the [release notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.8.0){: external}. For an overview of supported Cloud resources and data sources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
+:   The {{site.data.keyword.terraform-provider_full_notm}} version 1.8.0 is now enabled in {{site.data.keyword.bplong_notm}}. For more information about the version, see the [release notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.8.0){: external}. For an overview of supported Cloud resources and data sources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#provider-resources-datasource-list).
 
 ### 22 June 2020
 {: #schematics-jun222020}

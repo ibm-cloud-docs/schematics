@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-08-25"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 
@@ -31,7 +31,7 @@ This getting started tutorial incurs costs. You must have an [{{site.data.keywor
 Before you can use this template, you must complete the following tasks.
 
 - Make sure that you have the permissions to [create classic virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-device-access).
-- [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure.
+- [Create a classic API key](/docs/iam?topic=iam-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure.
 - Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full_notm}} instance](/docs/databases-for-postgresql?topic=databases-for-postgresql-pgadmin-code-engine-icd-postgresql#pgadmin-code-engine-icd-postgresql-before-start).
 
 ## Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}
@@ -54,7 +54,7 @@ Use one of the IBM provided software templates to set up and configure a classic
       The `admin-password` and `db-user-password` must be between 10 and 32 characters long and do not support any special characters.
       {: note}
 
-    - Enter the **iaas_classic_username** as `<your classic_username>` that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).
+    - Enter the **iaas_classic_username** as `<your classic_username>` that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/iam?topic=iam-classic_keys#create-classic-infrastructure-key).
     - Select the resource group where you want to provision your virtual server and `PostgresSQL` instance.
 
 6. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete.

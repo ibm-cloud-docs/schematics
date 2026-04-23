@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-31"
+  years: 2026
+lastupdated: "2026-04-23"
 
 keywords: HA for schematics, DR for schematics, schematics recovery time objective, schematics recovery point objective
 
@@ -183,4 +183,4 @@ All upgrades follow the {{site.data.keyword.IBM_notm}} service and have a recove
 
 Complex changes are enabled and disabled with feature flags to control exposure.
 
-Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](/docs/account?topic=account-viewing-cloud-status) for planned maintenance, announcements, and release notes that impact this service.
+Changes that impact customer workloads are detailed in notifications. For more information, see [Viewing Notifications](/docs/support?topic=support-viewing-notifications) for planned maintenance, announcements, and release notes that impact this service.
