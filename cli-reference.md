@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-04-29"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1100,17 +1100,21 @@ ibmcloud schematics policy update --id <AGENT_ID> --description PolicyDescriptio
 ## Configure BYOK or KYOK commands
 {: #kms-commands}
 
-You can use your encryption keys from the {{site.data.keyword.cloud_notm}} key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure your data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+You can use your encryption keys from {{site.data.keyword.keymanagementservicelong_notm}} (available as Multi-Tenant for BYOK or Dedicated for KYOK) to encrypt and secure your data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
+
+Hyper Protect Crypto Services (HPCS) has been deprecated for new integrations. Existing HPCS integrations will continue to function, but new integrations with HPCS are no longer supported. For new integrations, use Key Protect Dedicated for KYOK capabilities.
+{: deprecated}
 
 ### Before you begin
 {: #key-prerequisites}
 
 The following prerequisites must be ensured for the key management system to list the instance that are created from your specific location and region.
 
-- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect).
+- You should have your BYOK or KYOK. To create {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create Key Protect instance](https://cloud.ibm.com/catalog/services/key-protect). Choose Multi-Tenant for BYOK or Dedicated for KYOK deployment.
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
 - You need to configure [service to service authorization](/docs/iam?topic=iam-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
+
 
 
 KMS setting is a one time settings. You need to open a [support ticket](/docs/support?topic=support-using-avatar) to update KMS settings.

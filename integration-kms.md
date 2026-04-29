@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-04-29"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -24,20 +24,25 @@ subcollection: schematics
 By default the data that you store in {{site.data.keyword.bpshort}} workspaces using the Enterprise plan is encrypted by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources.
 {: shortdesc}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+You can use your encryption keys from {{site.data.keyword.keymanagementservicelong_notm}} (available as Multi-Tenant for BYOK or Dedicated for KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+
+Hyper Protect Crypto Services (HPCS) has been deprecated. If you are currently using HPCS, migrate to Key Protect Dedicated for KYOK capabilities.
+{: deprecated}
 
 ### Before you begin
 {: #kms-key-prerequisites}
 
 The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
-- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect).
-- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to your `KYOK`, or `BYOK` instance.
-- You need to configure [service to service authorization](/docs/iam?topic=iam-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
+
+- You should have your BYOK or KYOK. To create {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create Key Protect instance](https://cloud.ibm.com/catalog/services/key-protect). Choose Multi-Tenant for BYOK or Dedicated for KYOK deployment.
+- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to your Key Protect instance.
+- You need to configure [service to service authorization](/docs/iam?topic=iam-serviceauth&interface=ui#create-auth) to integrate Key Protect in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
+
 
     1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
     2. Select a **Source Service** as **{{site.data.keyword.bpshort}}**.
-    3. Select **Target Service** as **{{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}**. Select the instance you want to provide authorization.
+    3. Select **Target Service** as **{{site.data.keyword.keymanagementserviceshort}}**. Select the instance you want to provide authorization.
     4. Select the **Role** as **Reader**.
     5. Click **Authorize**.
 
