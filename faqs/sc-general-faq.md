@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-04-23"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
@@ -378,7 +378,7 @@ For example, you have a team A that is responsible to manage an {{site.data.keyw
 {: faq}
 {: support}
 
-To reduce the number of IAM access policies that are assigned to individual users, you can create an [IAM access group](/docs/account?topic=account-groups) for each team and grant the group all necessary permissions to work with the resources in a resource group.
+To reduce the number of IAM access policies that are assigned to individual users, you can create an [IAM access group](/docs/iam?topic=iam-groups&interface=ui) for each team and grant the group all necessary permissions to work with the resources in a resource group.
 
 The following image shows how you can use IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account.
 

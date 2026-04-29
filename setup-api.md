@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-04-07"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, cli, setting up, api
 
@@ -31,8 +31,8 @@ To work with {{site.data.keyword.bplong_notm}} API, you must provide an {{site.d
 
 |Authentication option  | Description|
 |-----------------------------------|---------- |
-| {{site.data.keyword.cloud_notm}} username and password | You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token. If you authenticate with {{site.data.keyword.cloud_notm}} using [MFA](/docs/account?topic=account-types), you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because MFA requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must use an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
-| {{site.data.keyword.cloud_notm}} API key | As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are specific to the {{site.data.keyword.cloud_notm}} account they are generated for. To access workspaces that were created in a different account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must generate an API key for that account. </ul>|
+| {{site.data.keyword.cloud_notm}} username and password | You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token. If you authenticate with {{site.data.keyword.cloud_notm}} using [MFA](/docs/iam?topic=iam-types), you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because MFA requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must use an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
+| {{site.data.keyword.cloud_notm}} API key | As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/iam?topic=iam-userapikey&interface=ui#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are specific to the {{site.data.keyword.cloud_notm}} account they are generated for. To access workspaces that were created in a different account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must generate an API key for that account. </ul>|
 {: caption="ID types and options" caption-side="top"}
 
 1. Create your {{site.data.keyword.cloud_notm}} IAM access token.

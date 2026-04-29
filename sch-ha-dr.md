@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-31"
+  years: 2026
+lastupdated: "2026-04-29"
 
 keywords: HA for schematics, DR for schematics, schematics recovery time objective, schematics recovery point objective
 
@@ -130,11 +130,14 @@ For more information about responsibility ownership between you and {{site.data.
 If you accidentally deleted the root key, open a support case for the respective service, and include the following information:
 
 - Your service instance's CRN
-- Your backup Key Protect or HPCS instance's CRN
-- The new Key Protect or HPCS root key ID
-- The original Key Protect or HPCS instance's CRN and key ID, if available
+- Your backup Key Protect instance's CRN (or HPCS instance's CRN if using existing HPCS integration)
+- The new Key Protect root key ID (or HPCS root key ID if using existing HPCS integration)
+- The original Key Protect instance's CRN and key ID, if available (or HPCS instance's CRN and key ID if using existing HPCS integration)
 
-See recovering from an accidental key loss for authorization in the Key Protect and [HPCS](/docs/hs-crypto?topic=hs-crypto-restore-keys&interface=ui) docs.
+See [recovering from an accidental key loss](/docs/key-protect?topic=key-protect-restore-keys) for authorization in the Key Protect documentation. For existing HPCS integrations, see [HPCS key restoration](/docs/hs-crypto?topic=hs-crypto-restore-keys&interface=ui).
+
+Hyper Protect Crypto Services (HPCS) has been deprecated for new integrations. Existing HPCS integrations will continue to function, but new integrations with HPCS are no longer supported. For new integrations, use Key Protect Dedicated for KYOK capabilities.
+{: deprecated}
 
 ## Change management
 {: #change-management}
@@ -183,4 +186,4 @@ All upgrades follow the {{site.data.keyword.IBM_notm}} service and have a recove
 
 Complex changes are enabled and disabled with feature flags to control exposure.
 
-Changes that impact customer workloads are detailed in notifications. For more information, see [monitoring notifications and status](/docs/account?topic=account-viewing-cloud-status) for planned maintenance, announcements, and release notes that impact this service.
+Changes that impact customer workloads are detailed in notifications. For more information, see [Viewing Notifications](/docs/support?topic=support-viewing-notifications) for planned maintenance, announcements, and release notes that impact this service.

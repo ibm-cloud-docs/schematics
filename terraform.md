@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-04-23"
 
 subcollection: schematics
 
@@ -55,7 +55,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
 
     `terraform.tfvars`
 
-    The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey&interface=ui#create_user_key).
+    The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/iam?topic=iam-userapikey&interface=ui#create_user_key).
 
     ```terraform
     schematics_workspace_name="tf-testwks-apigwy"
@@ -146,7 +146,7 @@ Complete the following steps to create a {{site.data.keyword.bpshort}} workspace
 
 6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
 
-7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/iam?topic=iam-assign-access-resources&interface=ui#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-next}

@@ -21,7 +21,7 @@ Context-based restrictions give account owners and administrators the ability to
 ## Managing CBR settings
 {: #manage-cbr-settings}
 
-With [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis), you can define and enforce user and service access restrictions to {{site.data.keyword.bpshort}} based on specified criteria, for example IP address or {{site.data.keyword.cloud}} resources or services.
+With [context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis), you can define and enforce user and service access restrictions to {{site.data.keyword.bpshort}} based on specified criteria, for example IP address or {{site.data.keyword.cloud}} resources or services.
 {: shortdesc}
 
 To restrict access, you must be the account owner or have an access policy with the administrator role on all account management services.
@@ -60,12 +60,12 @@ After you create a network zone, you can add it to a rule.
 The CBR API supports defining [network zones](/apidocs/context-based-restrictions#introduction).
 {: shortdesc}
 
-Use `GET /v1/zones` to list the zones. By using `POST /v1/zones`, you can create a new zone with the appropriate information. For more information about the API request, see [Creating network zones by using the API](/docs/account?topic=account-context-restrictions-create&interface=api#network-zones-create-api).
+Use `GET /v1/zones` to list the zones. By using `POST /v1/zones`, you can create a new zone with the appropriate information. For more information about the API request, see [Creating network zones by using the API](/docs/iam?topic=iam-context-restrictions-create&interface=ui#network-zones-create-api).
 
 You can determine which services are available to include in a zone by checking the [reference targets](/apidocs/context-based-restrictions#list-available-serviceref-targets).
 {: note}
 
-After you create zones, you can [update](/apidocs/context-based-restrictions#replace-zone) or [delete](/docs/account?topic=account-context-restrictions-update&interface=ui#context-restrictions-remove-rules) them.
+After you create zones, you can [update](/apidocs/context-based-restrictions#replace-zone) or [delete](/docs/iam?topic=iam-context-restrictions-update&interface=ui#context-restrictions-remove-rules) them.
 
 ### Creating network zones by using the CBR UI
 {: #cbr-create-zone-ui}
@@ -74,12 +74,12 @@ After you create zones, you can [update](/apidocs/context-based-restrictions#rep
 After you set the prerequisites and requirements, you can create zones in the UI. For more information about the steps to follow, see [Creating context-based restrictions](/docs/account?topic=account-context-restrictions-create&interface=ui#network-zones-create).
 {: shortdesc}
 
-After you create zones, they can also be [updated](/apidocs/context-based-restrictions#replace-zone) and [deleted](/docs/account?topic=account-context-restrictions-update&interface=ui#context-restrictions-remove-rules).
+After you create zones, they can also be [updated](/apidocs/context-based-restrictions#replace-zone) and [deleted](/docs/iam?topic=iam-context-restrictions-update&interface=ui#context-restrictions-remove-rules).
 
 ## Understanding network rules
 {: #cbr-network-rules}
 
-After you create your zones, you can apply the zones to {{site.data.keyword.bpshort}} to control access by creating rules. When you add zones to a rule, you can choose from the available [types of endpoints](/docs/account?topic=account-context-restrictions-whatis#context-restrictions-endpint-type) that are relevant to how you access {{site.data.keyword.bpshort}}.
+After you create your zones, you can apply the zones to {{site.data.keyword.bpshort}} to control access by creating rules. When you add zones to a rule, you can choose from the available [types of endpoints](/docs/iam?topic=iam-context-restrictions-whatis#context-restrictions-endpint-type) that are relevant to how you access {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 ### Create network rules by using the CBR API

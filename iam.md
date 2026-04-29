@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-03-13"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: schematics, automation, terraform
 
@@ -15,10 +15,10 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} workspaces and actions.
+Use [{{site.data.keyword.iamlong}}](/docs/iam?topic=iam-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} workspaces and actions.
 {: shortdesc}
 
-As the {{site.data.keyword.cloud}} account owner, you need to make sure that you control user access to {{site.data.keyword.bpshort}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to the resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works? And how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team? See [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
+As the {{site.data.keyword.cloud}} account owner, you need to make sure that you control user access to {{site.data.keyword.bpshort}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to the resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works? And how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team? See [What is {{site.data.keyword.iamlong}}?](/docs/iam?topic=iam-iamoverview)
 
 ## Overview of {{site.data.keyword.bpshort}} service access roles and permissions
 {: #access-roles}
@@ -30,7 +30,7 @@ Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keywo
 
 Who must grant access to {{site.data.keyword.bplong_notm}}?
 
-As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can work on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can work on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups&interface=ui).
 
 Is access to {{site.data.keyword.bplong_notm}} sufficient to manage {{site.data.keyword.cloud_notm}} resources?
 
@@ -39,7 +39,7 @@ No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role
 ## Region-based access
 {: #rba-role}
 
-Region-based access is a {{site.data.keyword.bpshort}} feature that enables you to securely authenticate invited users and consistently control access to the {{site.data.keyword.bpshort}} entities such as workspace, action, agent, and so on. To assign access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+Region-based access is a {{site.data.keyword.bpshort}} feature that enables you to securely authenticate invited users and consistently control access to the {{site.data.keyword.bpshort}} entities such as workspace, action, agent, and so on. To assign access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups&interface=ui).
 {: short}
 
 For example, if an account owner wanted to restrict the Region-based access is a {{site.data.keyword.bpshort}} resource access to the invited users only for a specific region, like `eu-de`. Then, an account owner can define the region-based access policy that are applied to the {{site.data.keyword.bpshort}} service, so that the invited user can access the resources only from `eu-de` region. For more information, see the [setting up region-based access to invite a user](/docs/schematics?topic=schematics-access#rba-access-setup).
@@ -50,7 +50,7 @@ For example, if an account owner wanted to restrict the Region-based access is a
 As the {{site.data.keyword.cloud_notm}} account owner or authorized account administrator. Create a region-based access policy for your users to the {{site.data.keyword.bplong_notm}} resources that you want your users to access.
 {: shortdesc}
 
-1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv&interface=ui#invitations).
+1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv&interface=ui&interface=ui#invitations).
 
 2. From the invited users list, click the **User** name that you want to apply region-based access control.
 
@@ -171,7 +171,7 @@ Following are the maximum permission and roles that services must deploy an agen
 Consider the following access are provided for an agent to connect with {{site.data.keyword.bpshort}}.
 
 * You need administrator permission to access the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
-* You need Manager service role access, Operator role permission, and [assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
+* You need Manager service role access, Operator role permission, and [assign access to the trusted profile](/docs/iam?topic=iam-create-trusted-profile&interface=ui#tp-access) to connect.
 
 #### Permission for users to manage agents
 {: #agent-manage-permission}
@@ -215,13 +215,13 @@ Review the following table to see what permissions you need to work with {{site.
 As the {{site.data.keyword.cloud_notm}} account owner or authorized account administrator. Create an IAM access group for your users and assign service access policies to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with. 
 {: shortdesc}
 
-1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv).
+1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv&interface=ui).
 
-2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups&interface=ui#create_ag) for each team.
+2. Define your teams and [create an IAM access group](/docs/iam?topic=iam-groups&interface=ui&interface=ui#create_ag) for each team.
 
 3. [Create a resource group](/docs/account?topic=account-rgs&interface=ui#create_rgs) for each team. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} workspaces and actions separate from the Cloud resources, you must create multiple resource groups.
 
-4. [Assign access to your IAM access group](/docs/account?topic=account-groups&interface=ui#access_ag). Consider the following guidelines when you assign access to an IAM access group:
+4. [Assign access to your IAM access group](/docs/iam?topic=iam-groups&interface=ui&interface=ui#access_ag). Consider the following guidelines when you assign access to an IAM access group:
 
     * Make sure to scope access of your group to the resource group that you created for this team.
     * If you want your team to have access to multiple resource groups. For example, the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies.

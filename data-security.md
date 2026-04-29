@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-07-30"
+  years: 2017, 2026
+lastupdated: "2026-04-29"
 
-keywords: byok and kyok, schematics byok, schematics kyok, key management service 
+keywords: byok and kyok, schematics byok, schematics kyok, key management service
 
 subcollection: schematics
 
@@ -24,15 +24,22 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## How your data is stored and encrypted in {{site.data.keyword.bpshort}}
 {: #data-storage}
 
-All data, user inputs and the data generated at runtime during execution of Terraform or Ansible automation code is stored in {{site.data.keyword.cos_full_notm}}. Data is encrypted at rest with AES GCM 256 encryption using an [envelope encryption](/docs/key-protect?topic=key-protect-envelope-encryption) technique with {{site.data.keyword.cloud_notm}} managed root keys. {{site.data.keyword.keymanagementserviceshort}} managed root keys are secured by `FIPS 140-2 Level 3` certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. 
+All data, user inputs and the data generated at runtime during execution of Terraform or Ansible automation code is stored in {{site.data.keyword.cos_full_notm}}. Data is encrypted at rest with AES GCM 256 encryption using an [envelope encryption](/docs/key-protect?topic=key-protect-envelope-encryption) technique with {{site.data.keyword.cloud_notm}} managed root keys. {{site.data.keyword.keymanagementserviceshort}} managed root keys are secured by `FIPS 140-2 Level 3` certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}.
 
 {{site.data.keyword.bpshort}} supports three types of root key management:
 
 1. {{site.data.keyword.bpshort}} owned root key managed by {{site.data.keyword.keymanagementserviceshort}}. (The default)
-2. Bring your own key (BYOK), managed by Key Protect.
-3. Keep your own key (KYOK), managed by {{site.data.keyword.hscrypto}} (HPCS)
+2. Bring your own key (BYOK), managed by Key Protect Multi-Tenant.
+3. Keep your own key (KYOK), managed by Key Protect Dedicated.
 
-Refer to [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration) for details on using user managed keys.  
+{{site.data.keyword.keymanagementserviceshort}} is available in two deployment options:
+- **Key Protect Multi-Tenant (BYOK):** A shared key management service with FIPS 140-2 Level 3 certified HSMs. This option provides Bring Your Own Key (BYOK) capability.
+- **Key Protect Dedicated (KYOK):** A single-tenant service with dedicated FIPS 140-2 Level 3 certified HSMs for enhanced security and compliance. This option provides Keep Your Own Key (KYOK) capability with exclusive control over your encryption keys.
+
+Hyper Protect Crypto Services (HPCS) has been deprecated. If you are currently using HPCS, migrate to Key Protect Dedicated for KYOK capabilities.
+{: deprecated}
+
+Refer to [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration) for details on using user managed keys.
 
 
 
@@ -51,7 +58,7 @@ Key Deletion is a destructive action. When you disable or delete a root key that
 
 
 
-When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that is inaccessible due to disabled or deleted root key is now accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.at_short}}. 
+When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that is inaccessible due to disabled or deleted root key is now accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.logs_full_notm}} {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 
@@ -70,8 +77,8 @@ The following technical data is encrypted and stored when you create and use a {
 ## Where is my information stored?
 {: #pi-location}
 
-By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To ensure resiliency and high availability, all data stored in the US and EU geographies is replicated across multiple locations in the same geography. When choosing a {{site.data.keyword.bpshort}} location to work with, verify that your data can be stored in these geographic locations. 
-{: shortdesc} 
+By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To ensure resiliency and high availability, all data stored in the US and EU geographies is replicated across multiple locations in the same geography. When choosing a {{site.data.keyword.bpshort}} location to work with, verify that your data can be stored in these geographic locations.
+{: shortdesc}
 
 |Geography/ location| API endpoint|Data stored|Data replicated|
 |------------|----------------|------|--------|
@@ -88,16 +95,16 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 ## How is my information encrypted?
 {: #pi-encrypt}
 
-The following image shows the main {{site.data.keyword.bplong_notm}} components and operational data flows. The interactions for encrypting user data using customer-managed Key Protect and {{site.data.keyword.hscrypto}}, and storage in {{site.data.keyword.cos_full_notm}} are depicted.  
+The following image shows the main {{site.data.keyword.bplong_notm}} components and operational data flows. The interactions for encrypting user data using customer-managed Key Protect and {{site.data.keyword.hscrypto}}, and storage in {{site.data.keyword.cos_full_notm}} are depicted.
 {: shortdesc}
 
 ![{{site.data.keyword.bplong_notm}} architecture and data encryption process](images/schematics_architecture.png){: caption="{{site.data.keyword.bplong_notm}} architecture and data encryption process" caption-side="bottom"}
 
-1. A user sends a request to create a {{site.data.keyword.bpshort}} workspace to the {{site.data.keyword.bpshort}} API server. An IAM request is made to check if the user is authorized to perform {{site.data.keyword.bpshort}} operations for the workspace. 
-2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or a tape archive file (`.tar`) that you uploaded from your local machine. User data in transit is protected with TLS.  
-3. All user-initiated actions, creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. The {{site.data.keyword.bpshort}} engine retrieves requests from RabbitMQ and executes the actions. User data in transit is protected with TLS.  
+1. A user sends a request to create a {{site.data.keyword.bpshort}} workspace to the {{site.data.keyword.bpshort}} API server. An IAM request is made to check if the user is authorized to perform {{site.data.keyword.bpshort}} operations for the workspace.
+2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or a tape archive file (`.tar`) that you uploaded from your local machine. User data in transit is protected with TLS.
+3. All user-initiated actions, creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. The {{site.data.keyword.bpshort}} engine retrieves requests from RabbitMQ and executes the actions. User data in transit is protected with TLS.
 4. The {{site.data.keyword.bpshort}} engine runs the tasks to provision, modify, or delete Cloud resources.
-5. To protect user data at rest, {{site.data.keyword.bplong_notm}} encrypts data with AES GCM 256 encryption. Envelope encryption with root keys managed with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} is used to generate and encrypt unique data encryption keys (DEK) for the data objects. 
+5. To protect user data at rest, {{site.data.keyword.bplong_notm}} encrypts data with AES GCM 256 encryption. Envelope encryption with root keys managed with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} is used to generate and encrypt unique data encryption keys (DEK) for the data objects.
 6. Workspace transactional data is encrypted using the DEKs, including logs and the Terraform `tf.state` file at rest. The encrypted data stored in an {{site.data.keyword.cos_full_notm}} bucket .
 7. Workspace operational data, workspace and job names, pointers to user data in {{site.data.keyword.cos_full_notm}} and search keys, are stored in {{site.data.keyword.cloudant}}. All information stored in Cloudant is encrypted with AES 256. For more information on Cloudant data security and encryption, see [Cloudant Security](/docs/Cloudant?topic=Cloudant-security).
 
@@ -109,6 +116,6 @@ To remove your data from {{site.data.keyword.bplong_notm}}, choose among the fol
 Delete the workspace
 :   When you delete your workspace, all the data related to the workspace is permanently deleted.
 Open an {{site.data.keyword.cloud_notm}} support case
-:   Contact {{site.data.keyword.IBM_notm}} Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/account?topic=account-using-avatar).
+:   Contact {{site.data.keyword.IBM_notm}} Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/support?topic=support-using-avatar).
 End your {{site.data.keyword.cloud_notm}} subscription
 :   A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored by IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated stored data is deleted.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-03-13"
+  years: 2017, 2026
+lastupdated: "2026-04-23"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -69,7 +69,7 @@ You need to set the variable or output parameter as sensitive to make sure that 
 ### How can you protect the access to workspaces and its data?
 {: #bp-security-wks-data}
 
-As the account owner or an authorized account administrator, you can assign {{site.data.keyword.iamlong}} (IAM) service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign {{site.data.keyword.iamlong}} (IAM) service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups&interface=ui).
 
 Your workspaces and actions data store depends on the location where you create your workspace or an action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
@@ -95,12 +95,12 @@ For more information about {{site.data.keyword.bpshort}} service access roles an
 Follow these practices in creating a {{site.data.keyword.bpshort}} action for the Ansible template.
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information about location and endpoint, see [Where is the information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 - You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. Wait for the job to complete, then change your settings, and click **Check action**, or **Run action** again.
-- As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+- As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups&interface=ui).
 
 ### How can you protect the access to actions and its data?
 {: #bp-security-action-data}
 
-As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups&interface=ui).
 
 Your workspaces and actions data store depends on the location where you create your workspace or an action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
