@@ -2,11 +2,13 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-01"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
 subcollection: schematics
+
+content-type: cli-docs
 
 ---
 
