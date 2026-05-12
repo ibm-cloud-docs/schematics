@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-12"
 
 keywords: schematics
 subcollection: schematics
@@ -175,11 +175,23 @@ subcollection: schematics
 
     * Review the release notes for March 2026.
 
+    * [05 March 2026](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0526)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
+
     * [20 March 2026](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2026)
 
         * Hyper Protect Crypto Services (HPCS) integration deprecated
 
         * Migration to Key Protect recommended
+
+* [December 2025](/docs/schematics?topic=schematics-schematics-relnotes#December-2025)
+
+    * Review the release notes for December 2025.
+
+    * [15 December 2025](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1525)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
 
 * [November 2025](/docs/schematics?topic=schematics-schematics-relnotes#November-2025)
 
