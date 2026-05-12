@@ -29,14 +29,6 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2026.
 {: shortdesc}
 
-### 05 March 2026
-{: #schematics-mar0526}
-{: release-note}
-
-Release {{site.data.keyword.bpshort}} Agents version
-:   The {{site.data.keyword.bpshort}} [agent version v1.7.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) release includes the following enhancements:
-    - **Added support for Virtual Private Endpoints (VPE) way of deployments**: Enabled agent deployment using Virtual Private Endpoints (VPE).
-    
 ### 20 March 2026
 {: #schematics-mar2026}
 {: release-note}
@@ -50,6 +42,14 @@ Migration to Key Protect recommended
    - **Key Protect Dedicated (KYOK):** A single-tenant service with dedicated FIPS 140-2 Level 3 certified HSMs that provides Keep Your Own Key (KYOK) capability for enhanced security and exclusive control
 
    Both Key Protect deployment options provide suitable alternatives to HPCS. For more information about integrating with Key Protect, see [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration) and [Data security](/docs/schematics?topic=schematics-secure-data#data-storage).
+
+### 05 March 2026
+{: #schematics-mar0526}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.7.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) release includes the following enhancements:
+    - **Added support for Virtual Private Endpoints (VPE) way of deployments**: Enabled agent deployment using Virtual Private Endpoints (VPE).
 
 ## December 2025
 {: #December-2025}
