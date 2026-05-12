@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -29,6 +29,14 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2026.
 {: shortdesc}
 
+### 05 March 2026
+{: #schematics-mar0526}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.7.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) release includes the following enhancements:
+    - **Added support for Virtual Private Endpoints (VPE) way of deployments**: Enabled agent deployment using Virtual Private Endpoints (VPE).
+    
 ### 20 March 2026
 {: #schematics-mar2026}
 {: release-note}
@@ -42,6 +50,24 @@ Migration to Key Protect recommended
    - **Key Protect Dedicated (KYOK):** A single-tenant service with dedicated FIPS 140-2 Level 3 certified HSMs that provides Keep Your Own Key (KYOK) capability for enhanced security and exclusive control
 
    Both Key Protect deployment options provide suitable alternatives to HPCS. For more information about integrating with Key Protect, see [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration) and [Data security](/docs/schematics?topic=schematics-secure-data#data-storage).
+
+## December 2025
+{: #December-2025}
+
+Review the release notes for December 2025.
+{: shortdesc}
+
+### 15 December 2025
+{: #schematics-dec1525}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.6.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) release includes the following enhancements:
+    - **Platform alignment (Replatforming)**: Updated to support the replatformed {{site.data.keyword.bpshort}} environment. Announced IP address changes as part of the migration. Users must update COS `endpoint_type` from `private` to `direct` in their Terraform code. For more information about the public and private IP addresses, refer to [Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
+    - **Security fixes**: Resolved vulnerabilities in agent components (log-collector and operator).
+    - **Log collection fix**: Fixed an issue where the log collector failed to gather logs from microservices.
+    - **Multi-credential support**: Agents now support multiple credentials across multiple hosts.
+
 
 ## November 2025
 {: #November-2025}
