@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-10-29"
+  years: 2017, 2026
+lastupdated: "2026-05-13"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -14,7 +14,7 @@ subcollection: schematics
 # Understanding compliance with Schematics
 {: #compliance}
 
-{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As compliance focal, you can use the {{site.data.keyword.bpshort}} goals to check that your organization is adhering to the external and internal standards for your industry. For more information about monitoring compliance, see [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As compliance focal, you can use the {{site.data.keyword.bpshort}} goals to check that your organization is adhering to the external and internal standards for your industry. For more information about monitoring compliance, see [Getting started with Security and Compliance Center](/docs/workload-protection?topic=workload-protection-getting-started).
 {: shortdesc}
 
 As a security or compliance focal, you can use the {{site.data.keyword.bplong_notm}} goals to help ensure that your organization is adhering to the external and internal standards for your industry. By using the {{site.data.keyword.compliance_short}} to validate the resource configurations in your account against a [profile](#x2034950){: term}, you can identify potential issues as they arise.
@@ -22,7 +22,7 @@ As a security or compliance focal, you can use the {{site.data.keyword.bplong_no
 All the goals for {{site.data.keyword.bplong_notm}} are added to the {{site.data.keyword.cloud}} Control Library but can also be mapped to other profiles.
 {: note}
 
-To start monitoring your resources, check out [Getting started with {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-getting-started).
+To start monitoring your resources, check out [Getting started with {{site.data.keyword.compliance_short}}](/docs/workload-protection?topic=workload-protection-getting-started).
 
 ## Available goals for {{site.data.keyword.bplong_notm}}
 {: #schematics-available-goals}
