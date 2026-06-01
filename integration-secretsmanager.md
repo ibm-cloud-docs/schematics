@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-05-27"
 
 keywords: secrets manager, s2s authentication, schematics integration
 
@@ -35,7 +35,7 @@ To integrate {{site.data.keyword.secrets-manager_short}} in {{site.data.keyword.
 4. Select **Service** as **{{site.data.keyword.bpshort}}**.
 5. Select **Resources** as **All resources** or **Specific resources**.
 6. Select Target **Service** as {{site.data.keyword.secrets-manager_short}}.
-7. Select the **Role** as **Reader** and **Secret Reader**.
+7. Select the **Role** as **Viewer** and **Secret Reader**.
 8. Select **Authorize dependent services** to enable authorization to be delegated by source and dependent services.
 9. Click **Authorize**.
 
@@ -67,7 +67,7 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 3. Click your workspace to edit.
 4. Click **Settings**. In **Variables** click **Edit** icon to edit the `api_key` parameters.
 5. In **Edit Variable**, click the `Open reference picker` to view the Select a reference page, add **, **Service instance**, and **Secret**.
-6. Click **Save** to view the secret reference parameter as `ref://secrets-manager.eu-gb.Default.Secrets-Manager-POC/Default/xxx-test-apikey`.
+6. Click **Save** to view the secret reference parameter as `ref://secrets-manager.<REGION>.<INSTANCE_NAME>/<SECRET_GROUP>/SECRET_NAME`.
 
 Observe the secret reference for an input variable that is stored as a reference.
 
@@ -91,7 +91,7 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 
    ```terraform
     variable "my_secret" {
-    default = "ic://secrets-manager/secret-id"
+    default = "ref://secrets-manager.<REGION>.<INSTANCE_NAME>/<SECRET_GROUP>/SECRET_NAME"
    }
    ```
    {: pre}
@@ -159,7 +159,7 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 
     ```terraform
      variable "git_token" {
-     default = "ic://secrets-manager/secret-id"
+     default = "ref://secrets-manager.<REGION>.<INSTANCE_NAME>/<SECRET_GROUP>/SECRET_NAME"
     }
     ```
     {: codeblock}
@@ -191,7 +191,7 @@ Follow the steps to enable {{site.data.keyword.secrets-manager_short}} in {{site
 
     ```terraform
      variable "git_token" {
-     default = "ic://secrets-manager/secret-id"
+     default = "ref://secrets-manager.<REGION>.<INSTANCE_NAME>/<SECRET_GROUP>/SECRET_NAME"
     }
     ```
     {: codeblock}
