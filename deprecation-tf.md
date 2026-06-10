@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-25"
+  years: 2017, 2026
+lastupdated: "2026-06-10"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Terraform version support and deprecation lifecycle
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`, `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`, `Terraform_v1.10.5`, `Terraform_v1.11`, `Terraform_v1.12`. `Terraform_v1.9.2` is set as default version.
+{{site.data.keyword.bpshort}} service supports `Terraform_v1.4.6`, `Terraform_v1.5.7`, `Terraform_v1.6.6`, `Terraform_v1.7.5`, `Terraform_v1.8.5`, `Terraform_v1.9.2`, `Terraform_v1.10.5`, `Terraform_v1.11`, `Terraform_v1.12`, `Terraform_v1.13` and `Terraform_v.1.14`. `Terraform_v1.12` is set as default version.
 
 {{site.data.keyword.bpshort}} announces to [support Terraform v1.13.4](https://cloud.ibm.com/status/announcement?component=schematics) and keep `Terraform v1.12` as the default version from 08 December 2025. Additionally, the [restriction and end of marketing on {{site.data.keyword.bpshort}} workspace creation](https://cloud.ibm.com/status/announcement?component=schematics) for Terraform versions v1.7 and v1.8 effective from 28 January 2026. For more information about supported versions and the deprecation of workspace creation and executions, see the [Deprecation schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: important}
