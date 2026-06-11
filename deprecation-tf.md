@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-10"
+lastupdated: "2026-06-11"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -75,7 +75,8 @@ You are suggested always to migrate from your in-use version of Terraform to the
 
 | Versions | Terraform support | Terraform end of maintenance and security support | Phase 1: Restrict workspace creation </br>(`End of marketing`)|    Phase 2: Restrict workspace execution </br>(`End of support`)|
 | -- | -- | --| --| -- |
-| Terraform v1.13 | 08 December 2025 | 30 May 2027 | 31 November 2027 | 29 May 2027 |
+| Terraform v1.14 | May 2026 | 30 November 2027 | 31 May 2028 | 30 November 2028 |
+| Terraform v1.13 | 08 December 2025 | 30 May 2027 | 30 November 2027 | 29 May 2028 |
 | Terraform v1.12 | 31 July 2024 | 30 January 2026 | 31 July 2026 | 29 January 2027 |
 | Terraform v1.11 | 31 July 2024 | 30 January 2026 | 31 July 2026 | 29 January 2027 |
 | Terraform v1.10 | 30 May 2024 | 30 December 2025 | 30 June 2026 | 29 January 2027 |
@@ -95,6 +96,7 @@ You are suggested always to migrate from your in-use version of Terraform to the
 | Terraform v0.12 | Deprecated  | 2021 and earlier | May 2022 |  September 2021 |
 | Terraform v0.11 | Deprecated  | 2021 and earlier | May 2022 |  September 2021 |
 {: caption="Deprecation timeline" caption-side="top"}
+
 
 ## User actions
 {: #user-action}
