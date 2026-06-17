@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-06-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -134,7 +134,7 @@ The test IDs are considered as a valid `IBM ID` to set the global catalog or res
 
 By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all sub directory. De-select the `Use full repository` flag to limit the folders that are cloned and improve download performance.
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `sub directories` in Git repositories. If the compact flag is set to **true** it downloads and save `sub directories` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apis/schematics/schematics#create-workspace) and [update workspace](/apis/schematics/schematics#replace-workspace) API to download the `sub directories` in Git repositories. If the compact flag is set to **true** it downloads and save `sub directories` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
 
 You can get the response by starting `get workspace API` to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but the URL is passed, the download is compact.
 
@@ -181,7 +181,7 @@ The unexpected impact due to maintenance results in the failure of the running a
 If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
-{{site.data.keyword.bpshort}} does not support `release` tag, as it's difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace).
+{{site.data.keyword.bpshort}} does not support `release` tag, as it's difficult to identify if it's a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apis/schematics/schematics#create-workspace).
 
 ## Why do I get a 403 error instead of a 404 error when using an invalid workspace ID?
 {: #invalidwspid-warn-faq}
@@ -276,7 +276,7 @@ Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more info
 {: faq}
 {: support}
 
- No, you cannot set an environment variable value in the {{site.data.keyword.bpshort}} workspaces console directly. Instead, you can use a CURL by using the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+ No, you cannot set an environment variable value in the {{site.data.keyword.bpshort}} workspaces console directly. Instead, you can use a CURL by using the [{{site.data.keyword.bpshort}} API](/apis/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
  ```json
    "env_values": [
@@ -524,7 +524,7 @@ Error
 ```
 {: screen}
 
-The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environment. Therefore, you need to use [regional endpoints](/apidocs/schematics/schematics#api-endpoints) to point your location to a `eu-de` region.
+The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environment. Therefore, you need to use [regional endpoints](/apis/schematics/schematics#api-endpoints) to point your location to a `eu-de` region.
 
 ## How can I view workspace resources?
 {: #clicmdresource-job-faq}
@@ -632,14 +632,14 @@ The `terraform.tfstate` file must be less than 16 MB. When you create workspace 
 {: faq}
 {: support}
 
-You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, see [Get token password](/apidocs/iam-identity-token-api#gettoken-password){: external}. You can see the following sample error message and the solution for the authentication error.
+You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, see [Get token password](/apis/iam-identity-token-api#gettoken-password){: external}. You can see the following sample error message and the solution for the authentication error.
 
 ```text
 Error: Request fails with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
 ```
 {: screen}
 
-The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
+The [IAM API](/apis/iam-identity-token-api#gettoken-apikey){: external} documentation shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
 
 1. You need to create `access_token` and `refresh_token`.
 

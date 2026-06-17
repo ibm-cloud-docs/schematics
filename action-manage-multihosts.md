@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-03"
+  years: 2017, 2026
+lastupdated: "2026-06-17"
 
 keywords: schematics multihost, ansible multihost credentials, multihost variables, multihost credentials, ansible multihost inventories, multihost
 
@@ -79,7 +79,7 @@ To manage credentials and variables by using the {{site.data.keyword.bpshort}} C
 To manage credentials and variables by using the {{site.data.keyword.bpshort}} API, follow these steps:
 
 1. Retrieve your [IAM access token and authenticate](/docs/schematics?topic=schematics-setup-api#cs_api) with {{site.data.keyword.bpshort}} using the API.
-2. Create an inventory by sending a [POST request](/apidocs/schematics/schematics#create-inventory).
+2. Create an inventory by sending a [POST request](/apis/schematics/schematics#create-inventory).
 3. Check the response status to verify that the creation was successful.
 
 ## Next steps

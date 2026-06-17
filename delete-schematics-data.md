@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-10-31"
+  years: 2017, 2026
+lastupdated: "2026-06-17"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -124,8 +124,8 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run `curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_token>"` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} workspaces list](/apidocs/schematics/schematics#list-workspaces) API.
-3. Run `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/{id} -H "Authorization: <iam_token>"` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} workspace delete](/apidocs/schematics/schematics#delete-workspace) API.
+2. Run `curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_token>"` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} workspaces list](/apis/schematics/schematics#list-workspaces) API.
+3. Run `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/{id} -H "Authorization: <iam_token>"` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} workspace delete](/apis/schematics/schematics#delete-workspace) API.
 
 ### Actions
 {: #delete-schematics-data-apiactions}
@@ -133,8 +133,8 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header "Authorization:  <access_token>"` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} actions list](/apidocs/schematics/schematics#list-actions) API.
-3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/actions/{action_id} --header "Authorization:  <access_token> "` to delete an action. For more information about {{site.data.keyword.bpshort}} actions delete, see [{{site.data.keyword.bpshort}} actions delete](/apidocs/schematics/schematics#delete-action) API.
+2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header "Authorization:  <access_token>"` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} actions list](/apis/schematics/schematics#list-actions) API.
+3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/actions/{action_id} --header "Authorization:  <access_token> "` to delete an action. For more information about {{site.data.keyword.bpshort}} actions delete, see [{{site.data.keyword.bpshort}} actions delete](/apis/schematics/schematics#delete-action) API.
 
 ### Inventories
 {: #delete-schematics-data-apicategory}
@@ -142,5 +142,5 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/inventories --header "Content-Type: application/json" --header "Authorization: <access_token> " --data-raw "{"name": "dev-inventory538","description": "My dev env inventory","location": "us-east","resource_group": "Default",,"inventories_ini": "[windows] \n 158.177.7.181"}` to list and select the inventory ID that you want to delete. For more information about listing the inventories, see [{{site.data.keyword.bpshort}} inventory list](/apidocs/schematics/schematics#list-inventories) API.
-3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/inventories/us-east.INVENTORY.dev-inventory523.244223cf/  --header "Content-Type: application/json" --header "Authorization: <access_token> " --data-raw "{"name": "dev-inventory538","description": "My dev env inventory","location": "us-east","resource_group": "Default","resource_queries": ["default.RESOURCEQUERY.string.dxxx8a47"]}` to delete an inventory. For more information about {{site.data.keyword.bpshort}} inventory delete, see [{{site.data.keyword.bpshort}} inventory delete](/apidocs/schematics/schematics#delete-inventory) API.
+2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/inventories --header "Content-Type: application/json" --header "Authorization: <access_token> " --data-raw "{"name": "dev-inventory538","description": "My dev env inventory","location": "us-east","resource_group": "Default",,"inventories_ini": "[windows] \n 158.177.7.181"}` to list and select the inventory ID that you want to delete. For more information about listing the inventories, see [{{site.data.keyword.bpshort}} inventory list](/apis/schematics/schematics#list-inventories) API.
+3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/inventories/us-east.INVENTORY.dev-inventory523.244223cf/  --header "Content-Type: application/json" --header "Authorization: <access_token> " --data-raw "{"name": "dev-inventory538","description": "My dev env inventory","location": "us-east","resource_group": "Default","resource_queries": ["default.RESOURCEQUERY.string.dxxx8a47"]}` to delete an inventory. For more information about {{site.data.keyword.bpshort}} inventory delete, see [{{site.data.keyword.bpshort}} inventory delete](/apis/schematics/schematics#delete-inventory) API.
