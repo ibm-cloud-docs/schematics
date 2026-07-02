@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-06-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq,
 
@@ -136,7 +136,7 @@ curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: applic
 ```
 {: pre}
 
-For more information, see [IAM access token](/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](/apidocs/iam-identity-token-api#create-api-key). You can set the environment values `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`.
+For more information, see [IAM access token](/apis/iam-identity-token-api#gettoken-password) and [Create API key](/apis/iam-identity-token-api#create-api-key). You can set the environment values `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`.
 
 ## How to rectify failed to clone Git repository, might not find remote reference or heads or master most likely invalid branch name is passed?
 {: #template-errors}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-06-17"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, cli, setting up, api
 
@@ -18,7 +18,7 @@ subcollection: schematics
 You can use the {{site.data.keyword.bplong}} API to automate {{site.data.keyword.bpshort}} capabilities in {{site.data.keyword.cloud_notm}}. To use the CLI, see [Preparing to use the CLI](/docs/schematics?topic=schematics-setup-cli).
 {: shortdesc}
 
-To find an overview of supported {{site.data.keyword.bplong}} `APIs`, API endpoints, and required API header and body information, see the [{{site.data.keyword.bpshort}} API documentation](/apidocs/schematics){: external}.
+To find an overview of supported {{site.data.keyword.bplong}} `APIs`, API endpoints, and required API header and body information, see the [{{site.data.keyword.bpshort}} API documentation](/apis/schematics){: external}.
 {: tip}
 
 ## Working with the {{site.data.keyword.bpshort}} API
@@ -168,7 +168,7 @@ GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
 | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the workspace ID, run `ibmcloud schematics workspace list` |
 {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
-5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics/schematics#introduction){: external} for a list of supported `APIs`.
+5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apis/schematics/schematics#introduction){: external} for a list of supported `APIs`.
 
 ## Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API
 {: #api_refresh}
@@ -219,4 +219,4 @@ Example API output
 
 You can find your new {{site.data.keyword.cloud_notm}} IAM token in the `access_token`, and the refresh token in the `refresh_token` field of your API output.
 
-2. Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics){: external} using the token from the previous step.
+2. Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](/apis/schematics){: external} using the token from the previous step.

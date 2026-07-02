@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-01-17"
+  years: 2017, 2026
+lastupdated: "2026-06-17"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -133,7 +133,7 @@ Review the CURL commands to create and view the drift through API.
 {: shortdesc}
 
 1. Retrieve your IAM access [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to authenticate with the {{site.data.keyword.bplong_notm}}.
-2. [Create the workspace](/apidocs/schematics/schematics#create-workspace). As part of the payload you need to add the following drift configuration.
+2. [Create the workspace](/apis/schematics/schematics#create-workspace). As part of the payload you need to add the following drift configuration.
 
     ```terraform
     {
@@ -150,10 +150,10 @@ Review the CURL commands to create and view the drift through API.
     ```
     {: codeblock}
 
-3. [Get the workspace details](/apidocs/schematics/schematics#get-workspace).
-4. Run the [{{site.data.keyword.bpshort}} job plan](/apidocs/schematics/schematics#plan-workspace-command).
-5. Fetch the [`ibmcloud schematics job logs`](/apidocs/schematics/schematics#get-template-activity-log).
-6. Run the [`ibmcloud schematics apply`](/apidocs/schematics/schematics#apply-workspace-command).
-7. Run the [`ibmcloud schematics job run`](/apidocs/schematics/schematics#run-workspace-commands) to create a job for your workspace.
-8. Run the [`ibmcloud schematics workspace action`](/apidocs/schematics/schematics#create-job) to retrieve all activities of your workspace.
-9. Fetch the [`ibmcloud schematics job logs`](/apidocs/schematics/schematics#get-template-activity-log).
+3. [Get the workspace details](/apis/schematics/schematics#get-workspace).
+4. Run the [{{site.data.keyword.bpshort}} job plan](/apis/schematics/schematics#plan-workspace-command).
+5. Fetch the [`ibmcloud schematics job logs`](/apis/schematics/schematics#get-template-activity-log).
+6. Run the [`ibmcloud schematics apply`](/apis/schematics/schematics#apply-workspace-command).
+7. Run the [`ibmcloud schematics job run`](/apis/schematics/schematics#run-workspace-commands) to create a job for your workspace.
+8. Run the [`ibmcloud schematics workspace action`](/apis/schematics/schematics#create-job) to retrieve all activities of your workspace.
+9. Fetch the [`ibmcloud schematics job logs`](/apis/schematics/schematics#get-template-activity-log).

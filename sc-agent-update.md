@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-09-23"
+  years: 2017, 2026
+lastupdated: "2026-06-17"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -78,7 +78,7 @@ ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 {: #update-agent-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to update an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Update an agent](/apidocs/schematics/schematics#update-agent-data).
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to update an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Update an agent](/apis/schematics/schematics#update-agent-data).
 
 You can use the `refresh_token` to get a new IAM access token if you IAM token is expired.
 {: important}

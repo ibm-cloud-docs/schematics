@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-05-12"
+lastupdated: "2026-06-17"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -696,7 +696,7 @@ The `terraform.tfstate` state file with maximum limit is less than 2 MB.
 :   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent beta-1 releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).
-    - {{site.data.keyword.bpshort}} Agent beta-1 is supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
+    - {{site.data.keyword.bpshort}} Agent beta-1 is supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apis/schematics/schematics#create-agent-data).
     - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by
       - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
@@ -884,7 +884,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
 :   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
     - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro).
-    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent-data), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui), `APIs` related to [agents](/apis/schematics/schematics#list-agent-data), and [Policy](/apis/schematics/schematics#list-policy).
     - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-plan-agent-overview) through UI.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
 
@@ -996,7 +996,7 @@ Release {{site.data.keyword.bpshort}} CLI plug-in
 {: release-note}
 
 Support array of injectable Terraform blocks in create workspace API
-:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apis/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.9.1](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases).
@@ -1035,12 +1035,12 @@ Support deleting {{site.data.keyword.bpshort}} data objects
 :   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro) for workspace, action, and inventories objects.
 
 Fixes related to {{site.data.keyword.bpshort}} actions and workspace
-:   - Now, you can create actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
-:   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
-:   - [Get an inventory definition](/apidocs/schematics/schematics#get-inventory) supports `detailed` profile type.
+:   - Now, you can create actions with an [empty resource group](/apis/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
+:   - [List workspace API](/apis/schematics/schematics#list-workspaces) supports `summary` profile type.
+:   - [Get an inventory definition](/apis/schematics/schematics#get-inventory) supports `detailed` profile type.
 
 Get job files API supports `plan_json` file type
-:   The {{site.data.keyword.bpshort}} supports `plan_json` file type in the [Get job output API](/apidocs/schematics/schematics#get-job-files).
+:   The {{site.data.keyword.bpshort}} supports `plan_json` file type in the [Get job output API](/apis/schematics/schematics#get-job-files).
 :   PATCH inventory definition in the inventories API is removed from the documentation.
 
 
@@ -1049,7 +1049,7 @@ Get job files API supports `plan_json` file type
 {: release-note}
 
 Support `__netrc__` environment values in private Git repository
-:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [`APIs`](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [`APIs`](/apis/schematics/schematics#create-workspace).
 
 
 ### 4 March 2022
@@ -1057,7 +1057,7 @@ Support `__netrc__` environment values in private Git repository
 {: release-note}
 
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}}
-:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [command-line, and [`APIs`](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [command-line, and [`APIs`](/apis/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} CLI plug-in
 :   The {{site.data.keyword.bpshort}} releases [CLI plug-in v1.7.3](/docs/schematics?topic=schematics-schematics-cli-reference#cli_version-releases) on 4 March 2022.
@@ -1138,10 +1138,10 @@ About `compact` download
 :   You can download the relevant files from the Git repository for your workspaces. For more information, see [Compact download for {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-compact-download).
 
 About {{site.data.keyword.bpshort}} Job files
-:   You can now download the state-file at every job level, with the current state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+:   You can now download the state-file at every job level, with the current state-file of a workspace by using the existing [Get Job API](/apis/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated
-:   The ResourceQuery attribute is replaced as [`resource_queries`](/apidocs/schematics/schematics#list-resource-query) in the API.
+:   The ResourceQuery attribute is replaced as [`resource_queries`](/apis/schematics/schematics#list-resource-query) in the API.
 
 ## October 2021
 {: #schematics-oct21}
@@ -1176,19 +1176,19 @@ Review the release notes for September 2021.
 {: release-note}
 
 Inventory target feature support in {{site.data.keyword.bpshort}} actions API
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool/9.2.0) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool/9.2.0) port as `inventory_connection_type` parameter in the [create](/apis/schematics/schematics#create-action) and [update](/apis/schematics/schematics#update-action) action `APIs`.
 
 Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
-:   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `WinRM`.
+:   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apis/schematics/schematics#create-action) and [update](/apis/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `WinRM`.
 
 {{site.data.keyword.bpshort}} actions API enhancement to support bastion host connection with non-root user
-:   The {{site.data.keyword.bpshort}} actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+:   The {{site.data.keyword.bpshort}} actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apis/schematics/schematics#create-action) and [update](/apis/schematics/schematics#update-action) action `APIs`.
 
 {{site.data.keyword.bplong_notm}} job queue process
 :   For more information about job queue process, see the [running process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process) and [FAQ](/docs/schematics?topic=schematics-general-faq#job-queue-faq).
 
 {{site.data.keyword.bpshort}} actions `APIs` enhances the credentials parameter
-:   You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+:   You can now access the inventory username through the credentials parameter in the [create](/apis/schematics/schematics#create-action) and [update](/apis/schematics/schematics#update-action) action `APIs`.
 
 {{site.data.keyword.bpshort}} introduces a compact flag in the workspace create and update API
 :   You can now download the `sub directory` from the Git repositories through {{site.data.keyword.bpshort}}. For more information, see [How to download `sub directory` from the Git repositories through {{site.data.keyword.bpshort}}?
@@ -1269,7 +1269,7 @@ One-page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` s
 :   For more information about {{site.data.keyword.bplong_notm}} workspaces creation, see [Setting up workspaces](/docs/schematics?topic=schematics-sch-create-wks&interface=ui).
 
 Temporarily {{site.data.keyword.bplong_notm}} workspaces stop activity API is deactivated
-:   For more information, see [Stop an apply job](/apidocs/schematics/schematics#delete-workspace-activity) API.
+:   For more information, see [Stop an apply job](/apis/schematics/schematics#delete-workspace-activity) API.
 
 ## May 2021
 {: #may-2021}
@@ -1360,7 +1360,7 @@ Virtual Private Endpoint Gateways support
 {: release-note}
 
 Terraform commands API support
-:   {{site.data.keyword.bplong_notm}} supports Terraform commands API. For more information, see [Commands API](/apidocs/schematics/schematics).
+:   {{site.data.keyword.bplong_notm}} supports Terraform commands API. For more information, see [Commands API](/apis/schematics/schematics).
 
 Terraform commands command-line support
 :   {{site.data.keyword.bplong_notm}} supports Terraform command-line commands. For more information, see [Terraform command-line commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds).
@@ -1373,7 +1373,7 @@ Command-line commands
 {: release-note}
 
 Multiple SDK support
-:   {{site.data.keyword.bplong_notm}} supports `Java`, `Node`, `Python`, and `Go` SDK for the `APIs`. For more information, see [{{site.data.keyword.bpshort}} API documentation](/apidocs/schematics/schematics?code=go).
+:   {{site.data.keyword.bplong_notm}} supports `Java`, `Node`, `Python`, and `Go` SDK for the `APIs`. For more information, see [{{site.data.keyword.bpshort}} API documentation](/apis/schematics/schematics?code=go).
 
 ## December 2020
 {: #dec-2020}
@@ -1469,7 +1469,7 @@ Review the release notes for July 2020.
 {: release-note}
 
 Stop apply support
-:   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource lifecycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#delete-action) API.
+:   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource lifecycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apis/schematics/schematics#delete-action) API.
 
 New {{site.data.keyword.bpshort}} locations
 :   You can now create {{site.data.keyword.bpshort}} workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is your data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
@@ -1485,7 +1485,7 @@ Review the release notes for June 2020.
 {: release-note}
 
 Ansible provisioner support
-:   You can now use the Ansible provisioner with {{site.data.keyword.bplong_notm}} to deploy software on Cloud resources or perform actions against your resources, such as shutting down a virtual server instance. For more information about how to use the Ansible provisioner, see [Discover the VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/), and [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/).
+:   You can now use the Ansible provisioner with {{site.data.keyword.bplong_notm}} to deploy software on Cloud resources or perform actions against your resources, such as shutting down a virtual server instance. For more information about how to use the Ansible provisioner, see [Discover the VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
 
 ### 25 June 2020
 {: #schematics-jun252020}
@@ -1499,7 +1499,7 @@ Version 1.8.0 of the {{site.data.keyword.cloud_notm}} Provider plug-in available
 {: release-note}
 
 Upload Terraform templates as `TAR` files
-:   You can now provide your Terraform template by uploading a tap archive file from your local system. This feature is supported from the command-line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command or [`PUT /v1/workspaces/{id}/templates/{template_id}/template_repo_upload`](/apidocs/schematics/schematics#template-repo-upload) API.
+:   You can now provide your Terraform template by uploading a tap archive file from your local system. This feature is supported from the command-line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command or [`PUT /v1/workspaces/{id}/templates/{template_id}/template_repo_upload`](/apis/schematics/schematics#template-repo-upload) API.
 
 ## May 2020
 {: #may-2020}

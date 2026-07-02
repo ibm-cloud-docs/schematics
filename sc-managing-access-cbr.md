@@ -57,15 +57,15 @@ After you create a network zone, you can add it to a rule.
 {: #cbr-create-zones-api}
 {: api}
 
-The CBR API supports defining [network zones](/apidocs/context-based-restrictions#introduction).
+The CBR API supports defining [network zones](/apis/context-based-restrictions#introduction).
 {: shortdesc}
 
 Use `GET /v1/zones` to list the zones. By using `POST /v1/zones`, you can create a new zone with the appropriate information. For more information about the API request, see [Creating network zones by using the API](/docs/iam?topic=iam-context-restrictions-create&interface=ui#network-zones-create-api).
 
-You can determine which services are available to include in a zone by checking the [reference targets](/apidocs/context-based-restrictions#list-available-serviceref-targets).
+You can determine which services are available to include in a zone by checking the [reference targets](/apis/context-based-restrictions#list-available-serviceref-targets).
 {: note}
 
-After you create zones, you can [update](/apidocs/context-based-restrictions#replace-zone) or [delete](/docs/iam?topic=iam-context-restrictions-update&interface=ui#context-restrictions-remove-rules) them.
+After you create zones, you can [update](/apis/context-based-restrictions#replace-zone) or [delete](/docs/iam?topic=iam-context-restrictions-update&interface=ui#context-restrictions-remove-rules) them.
 
 ### Creating network zones by using the CBR UI
 {: #cbr-create-zone-ui}
@@ -74,7 +74,7 @@ After you create zones, you can [update](/apidocs/context-based-restrictions#rep
 After you set the prerequisites and requirements, you can create zones in the UI. For more information about the steps to follow, see [Creating context-based restrictions](/docs/iam?topic=iam-context-restrictions-create&interface=ui#network-zones-create).
 {: shortdesc}
 
-After you create zones, they can also be [updated](/apidocs/context-based-restrictions#replace-zone) and [deleted](/docs/iam?topic=iam-context-restrictions-update&interface=ui#context-restrictions-remove-rules).
+After you create zones, they can also be [updated](/apis/context-based-restrictions#replace-zone) and [deleted](/docs/iam?topic=iam-context-restrictions-update&interface=ui#context-restrictions-remove-rules).
 
 ## Understanding network rules
 {: #cbr-network-rules}
@@ -91,7 +91,7 @@ You can define network rules with the API by using the information that you coll
 
 By using `GET /v1/rules` with the endpoints that you chose, you can view a list of current rules. Use `POST /v1/rules` to create new rules. For more information about a request example, see [Creating rules by using the API](/docs/iam?topic=iam-context-restrictions-create&interface=ui#context-restrictions-create-rules-api).
 
-After you create rules, you can [update](/apidocs/context-based-restrictions#replace-rule) and [delete](/apidocs/context-based-restrictions#delete-rule) them.
+After you create rules, you can [update](/apis/context-based-restrictions#replace-rule) and [delete](/apis/context-based-restrictions#delete-rule) them.
 
 ### Creating network rules by using the CBR UI
 {: #cbr-create-rules-ui}
@@ -105,7 +105,7 @@ You can use the CBR UI to [add resources and contexts](/docs/iam?topic=iam-conte
 Unlike IAM policies, context-based restrictions do not assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Also, the rules might not take effect immediately due to synchronization and resource availability.
 {: important}
 
-After you create rules, you can [update](/apidocs/context-based-restrictions#replace-rule) and [delete](/apidocs/context-based-restrictions#delete-rule) them. 
+After you create rules, you can [update](/apis/context-based-restrictions#replace-rule) and [delete](/apis/context-based-restrictions#delete-rule) them.
 
 ## Next steps
 {: #cbr-next-steps}
