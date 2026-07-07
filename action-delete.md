@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-03"
+  years: 2017, 2026
+lastupdated: "2026-07-07"
 
 keywords: schematics, schematics action delete, delete schematics actions, delete ansible playbooks, delete action,
 
@@ -42,8 +42,8 @@ If you no longer need your {{site.data.keyword.bpshort}} action, you can delete 
 {: api}
 
 1. Retrieve your [IAM access token and authenticate](/docs/schematics?topic=schematics-setup-api#cs_api) with {{site.data.keyword.bpshort}} by using the API.
-2. Delete an action by sending a [DELETE](/apidocs/schematics/schematics#delete-action) request.
-3. Delete an inventory by sending a [DELETE](/apidocs/schematics/schematics#delete-inventory) request.
+2. Delete an action by sending a [DELETE](/apis/schematics#delete-action) request.
+3. Delete an inventory by sending a [DELETE](/apis/schematics#delete-inventory) request.
 3. Check the response status to verify that the deletion was successful.
 
 ## Next steps

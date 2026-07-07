@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-01-17"
+  years: 2017, 2026
+lastupdated: "2026-07-07"
 
 keywords: compact, subdirectory, schematics, download, directory
 
@@ -24,7 +24,7 @@ However, sometimes, the user may be aware that the Terraform templates are isola
 
 You can activate **compact download** feature through `console` by unchecking the `Download entire repo` checkbox on the [Create a {{site.data.keyword.bpshort}} workspace page](https://cloud.ibm.com/schematics/workspaces/create). By default, the checkbox is selected to download the full Git repository.
 
-You can also activate **compact download** through the `API or CLI` by using `compact` field in the workspace [create](/apidocs/schematics/schematics#create-workspace), or [update](/apidocs/schematics/schematics#replace-workspace) payload, as illustrated in the code block.
+You can also activate **compact download** through the `API or CLI` by using `compact` field in the workspace [create](/apis/schematics#create-workspace), or [update](/apis/schematics#replace-workspace) payload, as illustrated in the code block.
 
 ```json
 {
@@ -54,6 +54,6 @@ You can also activate **compact download** through the `API or CLI` by using `co
 
 - In case the **compact** field is not specified in the workspace create request payload, the default execution is `full repository download` or `compact : false`.
 - In case the **compact** field is absent in the workspace update request payload, the default execution uses the previous `compact` setting.
-- Git repository URL is mandatory in both [create](/apidocs/schematics/schematics#create-workspace), or [update](/apidocs/schematics/schematics#replace-workspace) workspace request payload only if compact flag is set.
-- The [GET workspace](/apidocs/schematics/schematics#get-workspace) response includes the compact field, only if the **compact** download mode is enabled.
+- Git repository URL is mandatory in both [create](/apis/schematics#create-workspace), or [update](/apis/schematics#replace-workspace) workspace request payload only if compact flag is set.
+- The [GET workspace](/apis/schematics#get-workspace) response includes the compact field, only if the **compact** download mode is enabled.
 - If the Git repository URL is the root of the repository, as stated in this [template](https://github.com/Cloud-Schematics/LEMP), the compact download, and full download are the exact same thing. It doesn't matter if the compact checkbox is `checked` or `unchecked`.

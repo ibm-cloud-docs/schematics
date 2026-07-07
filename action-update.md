@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-03"
+  years: 2017, 2026
+lastupdated: "2026-07-07"
 
 keywords: schematics, schematics action update, update schematics actions, update ansible playbooks, update action,
 
@@ -67,7 +67,7 @@ Update a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 {: api}
 
 1. Retrieve your [IAM access token and authenticate](/docs/schematics?topic=schematics-setup-api#cs_api) with {{site.data.keyword.bpshort}} using the API.
-2. Update an inventory by sending a [PUT request](/apidocs/schematics/schematics#replace-inventory).
+2. Update an inventory by sending a [PUT request](/apis/schematics#replace-inventory).
 3. Check the response status to verify that the updation is successful.
 
 
