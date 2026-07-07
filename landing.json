@@ -51,7 +51,7 @@
     }
   ],
   "section_devtools": {
-    "api": "/apis/schematics",
+    "api": "/apidocs/schematics",
     "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
   },
