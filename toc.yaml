@@ -150,7 +150,7 @@ toc:
           links:
           - link:
               label: IBM Cloud Schematics API
-              href: https://cloud.ibm.com/apidocs/schematics
+              href: https://cloud.ibm.com/apis/schematics
       - topicgroup:
           label: IBM Cloud Schematics CLI
           topics:

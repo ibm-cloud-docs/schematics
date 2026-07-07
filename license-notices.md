@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-01-17"
+  years: 2017, 2026
+lastupdated: "2026-07-07"
 
 keywords: schematics license, schematics notices, schematics license notices
 
@@ -84,5 +84,5 @@ VIETNAMESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-val
 The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by-sa/4.0/legalcode. 
 
-- HYDRATION [facebook/react](https://github.com/facebook/react/releases)
+- HYDRATION [react/react](https://github.com/react/react/releases)
 - DATA.GO [go-openapi/runtime](https://github.com/go-openapi/runtime/releases/tag/v0.19.15)

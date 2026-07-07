@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-05-12"
+lastupdated: "2026-07-07"
 
 keywords: schematics
 subcollection: schematics
@@ -2138,7 +2138,7 @@ subcollection: schematics
 {: #sitemap_api_reference}
 
 
-[IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
+[IBM Cloud Schematics API](https://cloud.ibm.com/apis/schematics){: external}
 
 
 ## IBM Cloud Schematics CLI

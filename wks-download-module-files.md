@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-09-08"
+  years: 2017, 2026
+lastupdated: "2026-07-07"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token
 
@@ -35,7 +35,7 @@ To download modules from a private Git repository, an {{site.data.keyword.cloud_
 2. Git token defined by using `netrc`.
 
 
-When using {{site.data.keyword.bpshort}}, `netrc`support for module credentials can be configured using the `__netrc__` environment variable to the pass credentials. The `__netrc__` environment variable accepts the list of `hostname`, `username` and the `password` argument. The setting of environment variables is supported only using the {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided using the `env_values` parameter in the JSON payload file.
+When using {{site.data.keyword.bpshort}}, `netrc`support for module credentials can be configured using the `__netrc__` environment variable to the pass credentials. The `__netrc__` environment variable accepts the list of `hostname`, `username` and the `password` argument. The setting of environment variables is supported only using the {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apis/schematics#create-workspace). The syntax is provided using the `env_values` parameter in the JSON payload file.
 
 The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax.
 {: important}
