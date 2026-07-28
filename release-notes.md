@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,20 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} is deprecating older versions of Terraform and introducing support for newer Terraform version. For more information, see the [Schematics Terraform deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase) and the [Deprecation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+## July 2026
+{: #July-2026}
+
+Review the release notes for July 2026.
+{: shortdesc}
+
+### 24 July 2026
+{: #schematics-jul2426}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents version
+:   The {{site.data.keyword.bpshort}} [agent version v1.8.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) release includes the following enhancements:
+    - **Added support for Terraform v1.13 and v1.14**: Agent v1.8.0 now supports Terraform versions `1.13` and `1.14`.
 
 ## March 2026
 {: #March-2026}
