@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-28"
 
 keywords: schematics
 subcollection: schematics
@@ -170,6 +170,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [July 2026](/docs/schematics?topic=schematics-schematics-relnotes#July-2026)
+
+    * Review the release notes for July 2026.
+
+    * [24 July 2026](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2426)
+
+        * Release {{site.data.keyword.bpshort}} Agents version
 
 * [March 2026](/docs/schematics?topic=schematics-schematics-relnotes#March-2026)
 

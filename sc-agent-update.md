@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-07-28"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -159,14 +159,17 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agen
 
 | Version | Release date | Changes  |
 | ----- | ------- | -------------- |
-| 1.5.0 | 31 July 2025 | {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-mon` region and supports Terraform version `1.10`, `1.11`, `1.12`.|
-| 1.4.0 | 25 April 2025 | {{site.data.keyword.bpshort}} [agent version v1.4.0](/docs/schematics?topic=schematics-update-agent-overview#agent_version-releases) is now supported in the `ca-tor` region.|
-| 1.3.1 | 28 February 2025 | Fixes the Ansible inventory generation in the UI for Windows system credentials.|
-| 1.3.0 | 30 October 2024 | Supports `schematics-agent-ansible-job` instead of an existing `schematics-ansible-job` and Terraform version 1.9 |
-| 1.2.0 | 23 September 2024 | Supports Terraform `version 1.5` and `version 1.6` |
-| 1.1.1 | 23 July 2024 | Enhanced the agent deletion timeout period and agent deploy issues are fixed. |
-| 1.1.0 | 19 March 2024 | Added support for the {{site.data.keyword.bpshort}} Agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}. |
-| 1.0.0 | 10 January 2024 | {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support. For more information, see [Release note](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524). |
+| 1.8.0 | 24 July 2026 | {{site.data.keyword.bpshort}} [agent version v1.8.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2426) supports Terraform versions `1.13` and `1.14`.|
+| 1.7.0 | 05 March 2026 | {{site.data.keyword.bpshort}} [agent version v1.7.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0526) added support for Virtual Private Endpoints (VPE) way of deployments.|
+| 1.6.0 | 15 December 2025 | {{site.data.keyword.bpshort}} [agent version v1.6.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1525) platform alignment (Replatforming), security fixes, log collection fix, and multi-credential support.|
+| 1.5.0 | 31 July 2025 | {{site.data.keyword.bpshort}} [agent version v1.5.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul3125) is now supported in the `ca-mon` region and supports Terraform version `1.10`, `1.11`, `1.12`.|
+| 1.4.0 | 25 April 2025 | {{site.data.keyword.bpshort}} [agent version v1.4.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2525) is now supported in the `ca-tor` region.|
+| 1.3.1 | 28 February 2025 | {{site.data.keyword.bpshort}} [agent version v1.3.1](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2025) fixes the Ansible inventory generation in the UI for Windows system credentials.|
+| 1.3.0 | 30 October 2024 | {{site.data.keyword.bpshort}} [agent version v1.3.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct3024) supports `schematics-agent-ansible-job` instead of an existing `schematics-ansible-job` and Terraform version 1.9.|
+| 1.2.0 | 23 September 2024 | {{site.data.keyword.bpshort}} [agent version v1.2.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept2324) supports Terraform `version 1.5` and `version 1.6`.|
+| 1.1.1 | 23 July 2024 | {{site.data.keyword.bpshort}} [agent version v1.1.1](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2324) enhanced the agent deletion timeout period and agent deploy issues are fixed.|
+| 1.1.0 | 19 March 2024 | {{site.data.keyword.bpshort}} [agent version v1.1.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524) added support for the {{site.data.keyword.bpshort}} Agents on the {{site.data.keyword.redhat_openshift_notm}} {{site.data.keyword.containershort_notm}}.|
+| 1.0.0 | 10 January 2024 | {{site.data.keyword.bpshort}} [agent version v1.0.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2524) support for agent is generally available (GA) with full production support.|
 {: caption="{{site.data.keyword.bpshort}} Agents version history" caption-side="bottom"}
 
 ## Next steps
