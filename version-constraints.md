@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-18"
+  years: 2017, 2026
+lastupdated: "2026-08-14"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -53,7 +53,7 @@ ibmcloud schematics version
   Additional terraform Providers   Version
   Red Hat OpenShift client         v3.11.0
   Provider for REST API            v1.10.0
-  ansible                          v2.9.23
+  ansible                          v2.9.27
   Ansible Provisioner              v2.3.3
   IBM Cloud Provider               v1.38.2
 
@@ -64,7 +64,7 @@ ibmcloud schematics version
   Ansible Provisioner              v2.3.3
   Red Hat OpenShift client         v3.11.0
   Provider for REST API            v1.10.0
-  ansible                          v2.9.23
+  ansible                          v2.9.27
 
   Template Type   Version
   terraform       terraform_v1.6
@@ -73,13 +73,13 @@ ibmcloud schematics version
   IBM Cloud Provider               v1.38.2
   Red Hat OpenShift client         v3.11.0
   Provider for REST API            v1.10.0
-  ansible                          v2.9.23
+  ansible                          v2.9.27
 
   Template Type   Version
   terraform       terraform_v1.7
   Additional terraform Providers   Version
   Provider for REST API            v1.10.0
-  ansible                          v2.9.23
+  ansible                          v2.9.27
   IBM Cloud Provider               v1.38.2
   Red Hat OpenShift client         v3.11.0
   Ansible Provisioner              v2.3.3
@@ -87,7 +87,7 @@ ibmcloud schematics version
   Template Type   Version
   terraform       terraform_v1.8
   Additional terraform Providers   Version
-  ansible                          v2.9.23
+  ansible                          v2.9.27
   IBM Cloud Provider               v1.38.2
   Ansible Provisioner              v2.3.3
   Red Hat OpenShift client         v3.11.0
@@ -96,7 +96,7 @@ ibmcloud schematics version
   Template Type   Version
   terraform       terraform_v1.9
   Additional terraform Providers   Version
-  ansible                          v2.9.23
+  ansible                          v2.9.27
   Ansible Provisioner              v2.3.3
   IBM Cloud Provider               v1.38.2
   Red Hat OpenShift client         v3.11.0
@@ -109,7 +109,7 @@ ibmcloud schematics version
   Red Hat OpenShift client         v3.11.0
   Provider for REST API            v1.10.0
   Ansible Provisioner              v2.3.3
-  ansible                          v2.9.23
+  ansible                          v2.9.27
 
   Template Type   Version
   terraform       terraform_v1.11
@@ -117,13 +117,31 @@ ibmcloud schematics version
   IBM Cloud Provider               v1.38.2
   Red Hat OpenShift client         v3.11.0
   Provider for REST API            v1.10.0
-  ansible                          v2.9.23
+  ansible                          v2.9.27
   Ansible Provisioner              v2.3.3
 
   Template Type   Version
   terraform       terraform_v1.12
   Additional terraform Providers   Version
-  ansible                          v2.9.23
+  ansible                          v2.9.27
+  Ansible Provisioner              v2.3.3
+  Red Hat OpenShift client         v3.11.0
+  IBM Cloud Provider               v1.38.2
+  Provider for REST API            v1.10.0
+
+  Template Type   Version
+  terraform       terraform_v1.13
+  Additional terraform Providers   Version
+  ansible                          v2.9.27
+  Ansible Provisioner              v2.3.3
+  Red Hat OpenShift client         v3.11.0
+  IBM Cloud Provider               v1.38.2
+  Provider for REST API            v1.10.0
+
+  Template Type   Version
+  terraform       terraform_v1.14
+  Additional terraform Providers   Version
+  ansible                          v2.9.27
   Ansible Provisioner              v2.3.3
   Red Hat OpenShift client         v3.11.0
   IBM Cloud Provider               v1.38.2
@@ -216,7 +234,7 @@ terraform {
 ## Specifying version constraints in Ansible
 {: #version-constraints-ansible}
 
-{{site.data.keyword.bpshort}} currently supports the latest Ansible version v2.9.23 only. When you create a {{site.data.keyword.bpshort}} action, you must ensure that your Ansible playbooks can be run with this version. You cannot specify a specific Ansible version for your playbook.
+{{site.data.keyword.bpshort}} currently supports the latest Ansible version v2.9.27 only. When you create a {{site.data.keyword.bpshort}} action, you must ensure that your Ansible playbooks can be run with this version. You cannot specify a specific Ansible version for your playbook.
 
 However, if you use existing Ansible roles or collections in your playbook, you can specify the version of the role or collection that you want to run by using a `requirements.yml` file. For more information about how to reference roles and collections in your playbook, see [Referencing Ansible roles in your playbook](/docs/schematics?topic=schematics-ansible-roles-galaxy) and [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections). To learn more about how to specify versions for roles and collections, see the [Ansible documentation](https://docs.ansible.com/projects/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}.
 

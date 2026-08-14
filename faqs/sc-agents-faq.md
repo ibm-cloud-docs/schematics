@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-11-26"
+  years: 2017, 2026
+lastupdated: "2026-08-14"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider
 
@@ -61,14 +61,14 @@ You can install only one agent on the {{site.data.keyword.containerlong_notm}} c
 {: faq}
 {: support}
 
-Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents, for example, `Terraform v1.4` and `Terraform v1.5`. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions before using agents. See the instructions [Upgrading to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version) to upgrade before using agents.
+Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents, for example, `Terraform v1.13` and `Terraform v1.14`. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions before using agents. See the instructions [Upgrading to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version) to upgrade before using agents.
 
 ## Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`
 {: #faqs-agent-terraform-version-old}
 {: faq}
 {: support}
 
-The version of Terraform used by the workspace is not supported with agents. Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+The version of Terraform used by the workspace is not supported with agents. Agent supports the workspace using Terraform `v1.13`, and `v1.14` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 ## What type of jobs can be run in an agent?
 {: #faqs-agent-jobs}
