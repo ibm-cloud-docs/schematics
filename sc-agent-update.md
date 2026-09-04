@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-07-28"
+lastupdated: "2026-09-04"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -159,6 +159,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} Agen
 
 | Version | Release date | Changes  |
 | ----- | ------- | -------------- |
+| 1.9.0 | 26 August 2026 | {{site.data.keyword.bpshort}} [agent version v1.9.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2626) supports Terraform versions `1.12`, `1.13`, and `1.14`.|
 | 1.8.0 | 24 July 2026 | {{site.data.keyword.bpshort}} [agent version v1.8.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2426) supports Terraform versions `1.13` and `1.14`.|
 | 1.7.0 | 05 March 2026 | {{site.data.keyword.bpshort}} [agent version v1.7.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar0526) added support for Virtual Private Endpoints (VPE) way of deployments.|
 | 1.6.0 | 15 December 2025 | {{site.data.keyword.bpshort}} [agent version v1.6.0](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1525) platform alignment (Replatforming), security fixes, log collection fix, and multi-credential support.|
