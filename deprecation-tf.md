@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-09-24"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -40,7 +40,7 @@ The table outlines the timetable of support that is provided by {{site.data.keyw
 ### Terraform maintenance and fixes
 {: #deprecate-maintenance}
 
-{{site.data.keyword.bpshort}} supports Terraform releases in line with [Terraform support and end-of-life policy](https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy){: external}. {{site.data.keyword.bpshort}} always supports at least one Terraform release with maintenance and security fix support.
+{{site.data.keyword.bpshort}} supports Terraform releases in line with [Terraform support and end-of-life policy](https://www.ibm.com/mysupport/s/){: external}. {{site.data.keyword.bpshort}} always supports at least one Terraform release with maintenance and security fix support.
 
 After the end of Terraform maintenance and security fixes, {{site.data.keyword.bpshort}} maintains full operational support for 24 months from release GA. If an issue is identified in Terraform that requires a fix, the user is required to update to a release with the latest maintenance and security fixes.
 
